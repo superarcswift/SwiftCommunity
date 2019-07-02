@@ -14,9 +14,15 @@
 		F6CAFA7B22CBFAE6007476D4 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA7A22CBFAE6007476D4 /* Engine.swift */; };
 		F6CAFA8622CC0373007476D4 /* ServiceContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA8522CC0373007476D4 /* ServiceContext.swift */; };
 		F6CAFA8822CC039F007476D4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA8722CC039F007476D4 /* Service.swift */; };
-		F6CAFA9122CC0C34007476D4 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9022CC0C34007476D4 /* ServiceAssembly.swift */; };
+		F6CAFA9122CC0C34007476D4 /* ServiceRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9022CC0C34007476D4 /* ServiceRegistry.swift */; };
 		F6CAFA9522CC0D7A007476D4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9422CC0D7A007476D4 /* ViewModel.swift */; };
 		F6CAFA9722CC0F0D007476D4 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9622CC0F0D007476D4 /* CommonViewController.swift */; };
+		F6CAFA9922CC1316007476D4 /* ViewControllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9822CC1316007476D4 /* ViewControllerContext.swift */; };
+		F6CAFA9B22CC13FB007476D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9A22CC13FB007476D4 /* ViewController.swift */; };
+		F6CAFA9D22CC1471007476D4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9C22CC1471007476D4 /* TableViewController.swift */; };
+		F6CAFA9F22CC147C007476D4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */; };
+		F6CAFAA122CC1494007476D4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFAA022CC1494007476D4 /* NavigationController.swift */; };
+		F6CAFAA322CC1592007476D4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFAA222CC1592007476D4 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +46,15 @@
 		F6CAFA7A22CBFAE6007476D4 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		F6CAFA8522CC0373007476D4 /* ServiceContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContext.swift; sourceTree = "<group>"; };
 		F6CAFA8722CC039F007476D4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		F6CAFA9022CC0C34007476D4 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		F6CAFA9022CC0C34007476D4 /* ServiceRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRegistry.swift; sourceTree = "<group>"; };
 		F6CAFA9422CC0D7A007476D4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F6CAFA9622CC0F0D007476D4 /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
+		F6CAFA9822CC1316007476D4 /* ViewControllerContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContext.swift; sourceTree = "<group>"; };
+		F6CAFA9A22CC13FB007476D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6CAFA9C22CC1471007476D4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		F6CAFAA022CC1494007476D4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		F6CAFAA222CC1592007476D4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				F6CAFA8522CC0373007476D4 /* ServiceContext.swift */,
-				F6CAFA9022CC0C34007476D4 /* ServiceAssembly.swift */,
+				F6CAFA9022CC0C34007476D4 /* ServiceRegistry.swift */,
 				F6CAFA8722CC039F007476D4 /* Service.swift */,
 			);
 			path = Service;
@@ -167,7 +179,13 @@
 		F6CAFA9322CC0D63007476D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F6CAFAA022CC1494007476D4 /* NavigationController.swift */,
+				F6CAFAA222CC1592007476D4 /* PageViewController.swift */,
+				F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */,
+				F6CAFA9C22CC1471007476D4 /* TableViewController.swift */,
+				F6CAFA9A22CC13FB007476D4 /* ViewController.swift */,
 				F6CAFA9622CC0F0D007476D4 /* CommonViewController.swift */,
+				F6CAFA9822CC1316007476D4 /* ViewControllerContext.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -281,11 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6CAFAA122CC1494007476D4 /* NavigationController.swift in Sources */,
 				F6CAFA9522CC0D7A007476D4 /* ViewModel.swift in Sources */,
 				F6CAFA7B22CBFAE6007476D4 /* Engine.swift in Sources */,
-				F6CAFA9122CC0C34007476D4 /* ServiceAssembly.swift in Sources */,
+				F6CAFAA322CC1592007476D4 /* PageViewController.swift in Sources */,
+				F6CAFA9122CC0C34007476D4 /* ServiceRegistry.swift in Sources */,
+				F6CAFA9922CC1316007476D4 /* ViewControllerContext.swift in Sources */,
+				F6CAFA9F22CC147C007476D4 /* CollectionViewController.swift in Sources */,
 				F6CAFA9722CC0F0D007476D4 /* CommonViewController.swift in Sources */,
 				F6CAFA8622CC0373007476D4 /* ServiceContext.swift in Sources */,
+				F6CAFA9B22CC13FB007476D4 /* ViewController.swift in Sources */,
+				F6CAFA9D22CC1471007476D4 /* TableViewController.swift in Sources */,
 				F6CAFA8822CC039F007476D4 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

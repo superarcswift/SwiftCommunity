@@ -4,7 +4,7 @@
 
 import SuperArcFoundation
 
-public class ServiceAssembly: Registry {
+public class ServiceRegistry: Registry {
 
     public var container: Container<Service>
 

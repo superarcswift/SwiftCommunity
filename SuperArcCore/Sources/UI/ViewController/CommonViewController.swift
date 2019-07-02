@@ -4,7 +4,7 @@
 
 import Foundation
 
-public protocol CommonViewController {
+public protocol CommonViewController: HasViewControllerContext {
 
     var storedViewModel: ViewModel? { get set }
 }

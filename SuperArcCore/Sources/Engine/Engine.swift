@@ -6,7 +6,7 @@ import Foundation
 
 public protocol Engine {
     var serviceContext: ServiceContext { get }
-    var serviceAssembly: ServiceAssembly { get }
+    var serviceAssembly: ServiceRegistry { get }
 }
 
 public class StandardEngine: Engine {
@@ -15,7 +15,7 @@ public class StandardEngine: Engine {
 
     public let serviceContext: ServiceContext
 
-    public let serviceAssembly = ServiceAssembly()
+    public let serviceAssembly = ServiceRegistry()
 
     // MARK: Initialization
 
