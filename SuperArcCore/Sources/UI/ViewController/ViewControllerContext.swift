@@ -4,15 +4,6 @@
 
 import Foundation
 
-extension UIViewController {
-
-    public func setViewControllerContext(_ context: ViewControllerContext!) {
-        if let contextHolder = self as? HasViewControllerContext {
-            contextHolder.context = context
-        }
-    }
-}
-
 public protocol HasViewControllerContext: class {
     var context: ViewControllerContext! { get set }
 }

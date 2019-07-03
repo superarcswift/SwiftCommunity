@@ -106,6 +106,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F6D57A6522CD304000BC3DBC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F6D57A6622CD304900BC3DBC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F6D57A6522CD304000BC3DBC /* Scenes */,
+				F6E8D16122CA9EC900213675 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F6D57A6722CD30E300BC3DBC /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		F6D57A6822CD30F400BC3DBC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		F6E8D15522CA9EC900213675 = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +160,9 @@
 		F6E8D16022CA9EC900213675 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F6E8D16122CA9EC900213675 /* AppDelegate.swift */,
+				F6D57A6622CD304900BC3DBC /* Application */,
+				F6D57A6722CD30E300BC3DBC /* Platform */,
+				F6D57A6822CD30F400BC3DBC /* Domain */,
 				F6E8D16322CA9EC900213675 /* ViewController.swift */,
 				F6E8D16522CA9EC900213675 /* Main.storyboard */,
 				F6E8D16822CA9ECA00213675 /* Assets.xcassets */,

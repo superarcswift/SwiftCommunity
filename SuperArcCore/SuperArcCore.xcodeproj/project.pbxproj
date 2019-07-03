@@ -23,6 +23,8 @@
 		F6CAFA9F22CC147C007476D4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */; };
 		F6CAFAA122CC1494007476D4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFAA022CC1494007476D4 /* NavigationController.swift */; };
 		F6CAFAA322CC1592007476D4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFAA222CC1592007476D4 /* PageViewController.swift */; };
+		F6D57A6222CD2DC100BC3DBC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D57A6122CD2DC100BC3DBC /* TabBarController.swift */; };
+		F6D57A6422CD2E4E00BC3DBC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D57A6322CD2E4E00BC3DBC /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		F6CAFAA022CC1494007476D4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		F6CAFAA222CC1592007476D4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		F6D57A6122CD2DC100BC3DBC /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F6D57A6322CD2E4E00BC3DBC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 		F6CAFA9322CC0D63007476D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F6D57A6122CD2DC100BC3DBC /* TabBarController.swift */,
 				F6CAFAA022CC1494007476D4 /* NavigationController.swift */,
 				F6CAFAA222CC1592007476D4 /* PageViewController.swift */,
 				F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */,
@@ -186,6 +191,7 @@
 				F6CAFA9A22CC13FB007476D4 /* ViewController.swift */,
 				F6CAFA9622CC0F0D007476D4 /* CommonViewController.swift */,
 				F6CAFA9822CC1316007476D4 /* ViewControllerContext.swift */,
+				F6D57A6322CD2E4E00BC3DBC /* UIViewController+Extensions.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6CAFAA122CC1494007476D4 /* NavigationController.swift in Sources */,
+				F6D57A6222CD2DC100BC3DBC /* TabBarController.swift in Sources */,
 				F6CAFA9522CC0D7A007476D4 /* ViewModel.swift in Sources */,
 				F6CAFA7B22CBFAE6007476D4 /* Engine.swift in Sources */,
 				F6CAFAA322CC1592007476D4 /* PageViewController.swift in Sources */,
@@ -308,6 +315,7 @@
 				F6CAFA9F22CC147C007476D4 /* CollectionViewController.swift in Sources */,
 				F6CAFA9722CC0F0D007476D4 /* CommonViewController.swift in Sources */,
 				F6CAFA8622CC0373007476D4 /* ServiceContext.swift in Sources */,
+				F6D57A6422CD2E4E00BC3DBC /* UIViewController+Extensions.swift in Sources */,
 				F6CAFA9B22CC13FB007476D4 /* ViewController.swift in Sources */,
 				F6CAFA9D22CC1471007476D4 /* TableViewController.swift in Sources */,
 				F6CAFA8822CC039F007476D4 /* Service.swift in Sources */,
