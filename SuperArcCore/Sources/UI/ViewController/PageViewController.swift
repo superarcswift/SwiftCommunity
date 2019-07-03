@@ -4,7 +4,7 @@
 
 import UIKit
 
-class PageViewController: UIPageViewController, CommonViewController {
+open class PageViewController: UIPageViewController, CommonViewController {
 
     public var context: ViewControllerContext!
     public var storedViewModel: ViewModel?

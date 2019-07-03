@@ -4,7 +4,7 @@
 
 import UIKit
 
-class CollectionViewController: UICollectionViewController, CommonViewController {
+open class CollectionViewController: UICollectionViewController, CommonViewController {
 
     public var context: ViewControllerContext!
     public var storedViewModel: ViewModel?

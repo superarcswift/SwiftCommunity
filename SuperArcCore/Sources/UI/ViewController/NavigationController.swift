@@ -6,7 +6,7 @@ import UIKit
 
 open class NavigationController: UINavigationController, HasViewControllerContext {
 
-    open var context: ViewControllerContext! {
+    public var context: ViewControllerContext! {
         didSet {
             topViewController?.setViewControllerContext(context)
         }

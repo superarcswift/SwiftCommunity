@@ -4,11 +4,11 @@
 
 import UIKit
 
-class TabBarController: UITabBarController, HasViewControllerContext {
+open class TabBarController: UITabBarController, HasViewControllerContext {
 
     // MARK: Properties
 
-    var context: ViewControllerContext!
+    public var context: ViewControllerContext!
 
     // MARK: Initialization
 
@@ -17,13 +17,13 @@ class TabBarController: UITabBarController, HasViewControllerContext {
         self.context = context
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
     // MARK: Overwritten
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         guard let viewControllers = viewControllers else {
@@ -40,7 +40,7 @@ class TabBarController: UITabBarController, HasViewControllerContext {
 // MARK: - UITabBarControllerDelegate
 
 extension TabBarController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+    public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         viewController.setViewControllerContext(context)
     }
 }

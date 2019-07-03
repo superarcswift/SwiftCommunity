@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F64238A022CD338A000F5CE3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642389F22CD338A000F5CE3 /* Video.swift */; };
+		F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A222CD34E6000F5CE3 /* Conference.swift */; };
+		F64238A722CD3C2F000F5CE3 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A622CD3C2F000F5CE3 /* Author.swift */; };
+		F64238AD22CD42DA000F5CE3 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238AC22CD42DA000F5CE3 /* ContentService.swift */; };
+		F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B022CD451E000F5CE3 /* PromiseKit.framework */; };
+		F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B322CD4838000F5CE3 /* Kingfisher.framework */; };
+		F64238B822CD4A54000F5CE3 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238B722CD4A54000F5CE3 /* DashboardViewController.swift */; };
+		F64238BD22CD4E93000F5CE3 /* Conferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64238BC22CD4E93000F5CE3 /* Conferences.storyboard */; };
+		F64238BF22CD4F41000F5CE3 /* Videos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64238BE22CD4F41000F5CE3 /* Videos.storyboard */; };
+		F64238C122CD4F4B000F5CE3 /* Authors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64238C022CD4F4B000F5CE3 /* Authors.storyboard */; };
+		F64238C422CD4FDB000F5CE3 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238C322CD4FDB000F5CE3 /* VideoListViewController.swift */; };
+		F64238C722CD4FEC000F5CE3 /* AuthorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238C622CD4FEC000F5CE3 /* AuthorListViewController.swift */; };
 		F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; };
 		F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; };
 		F6CAFA8122CC02DE007476D4 /* SuperArcFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16122CA9EC900213675 /* AppDelegate.swift */; };
-		F6E8D16422CA9EC900213675 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16322CA9EC900213675 /* ViewController.swift */; };
-		F6E8D16722CA9EC900213675 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16522CA9EC900213675 /* Main.storyboard */; };
+		F6E8D16422CA9EC900213675 /* ConferenceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16322CA9EC900213675 /* ConferenceListViewController.swift */; };
+		F6E8D16722CA9EC900213675 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16522CA9EC900213675 /* Dashboard.storyboard */; };
 		F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16822CA9ECA00213675 /* Assets.xcassets */; };
 		F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */; };
 		F6E8D17722CA9ECA00213675 /* SwiftVideosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D17622CA9ECA00213675 /* SwiftVideosTests.swift */; };
@@ -53,12 +65,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F642389F22CD338A000F5CE3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		F64238A222CD34E6000F5CE3 /* Conference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conference.swift; sourceTree = "<group>"; };
+		F64238A622CD3C2F000F5CE3 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		F64238AC22CD42DA000F5CE3 /* ContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
+		F64238B022CD451E000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F64238B322CD4838000F5CE3 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		F64238B722CD4A54000F5CE3 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		F64238BC22CD4E93000F5CE3 /* Conferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conferences.storyboard; sourceTree = "<group>"; };
+		F64238BE22CD4F41000F5CE3 /* Videos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Videos.storyboard; sourceTree = "<group>"; };
+		F64238C022CD4F4B000F5CE3 /* Authors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authors.storyboard; sourceTree = "<group>"; };
+		F64238C322CD4FDB000F5CE3 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
+		F64238C622CD4FEC000F5CE3 /* AuthorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorListViewController.swift; sourceTree = "<group>"; };
 		F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D15E22CA9EC900213675 /* SwiftVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D16122CA9EC900213675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6E8D16322CA9EC900213675 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F6E8D16622CA9EC900213675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F6E8D16322CA9EC900213675 /* ConferenceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListViewController.swift; sourceTree = "<group>"; };
+		F6E8D16622CA9EC900213675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
 		F6E8D16822CA9ECA00213675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6E8D16B22CA9ECA00213675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6E8D16D22CA9ECA00213675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */,
+				F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */,
 				F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */,
 				F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */,
 			);
@@ -97,9 +123,105 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F642389A22CD32CB000F5CE3 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8D16122CA9EC900213675 /* AppDelegate.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		F642389B22CD32E5000F5CE3 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				F64238BE22CD4F41000F5CE3 /* Videos.storyboard */,
+				F64238C222CD4FC6000F5CE3 /* ViewController */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		F642389C22CD32EB000F5CE3 /* Authors */ = {
+			isa = PBXGroup;
+			children = (
+				F64238C022CD4F4B000F5CE3 /* Authors.storyboard */,
+				F64238C522CD4FDE000F5CE3 /* ViewController */,
+			);
+			path = Authors;
+			sourceTree = "<group>";
+		};
+		F642389D22CD32F2000F5CE3 /* Conferences */ = {
+			isa = PBXGroup;
+			children = (
+				F64238BC22CD4E93000F5CE3 /* Conferences.storyboard */,
+				F64238B522CD4A00000F5CE3 /* ViewController */,
+				F64238B622CD4A05000F5CE3 /* ViewModel */,
+			);
+			path = Conferences;
+			sourceTree = "<group>";
+		};
+		F642389E22CD3372000F5CE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F64238A222CD34E6000F5CE3 /* Conference.swift */,
+				F642389F22CD338A000F5CE3 /* Video.swift */,
+				F64238A622CD3C2F000F5CE3 /* Author.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F64238A922CD4252000F5CE3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F64238AC22CD42DA000F5CE3 /* ContentService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F64238B522CD4A00000F5CE3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8D16322CA9EC900213675 /* ConferenceListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F64238B622CD4A05000F5CE3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F64238B922CD4AFA000F5CE3 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8D16522CA9EC900213675 /* Dashboard.storyboard */,
+				F64238B722CD4A54000F5CE3 /* DashboardViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		F64238C222CD4FC6000F5CE3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F64238C322CD4FDB000F5CE3 /* VideoListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F64238C522CD4FDE000F5CE3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F64238C622CD4FEC000F5CE3 /* AuthorListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F64238B322CD4838000F5CE3 /* Kingfisher.framework */,
+				F64238B022CD451E000F5CE3 /* PromiseKit.framework */,
 				F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */,
 				F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */,
 			);
@@ -109,6 +231,10 @@
 		F6D57A6522CD304000BC3DBC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F64238B922CD4AFA000F5CE3 /* Root */,
+				F642389D22CD32F2000F5CE3 /* Conferences */,
+				F642389B22CD32E5000F5CE3 /* Videos */,
+				F642389C22CD32EB000F5CE3 /* Authors */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -116,8 +242,8 @@
 		F6D57A6622CD304900BC3DBC /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				F642389A22CD32CB000F5CE3 /* Top */,
 				F6D57A6522CD304000BC3DBC /* Scenes */,
-				F6E8D16122CA9EC900213675 /* AppDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -132,6 +258,8 @@
 		F6D57A6822CD30F400BC3DBC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				F64238A922CD4252000F5CE3 /* Services */,
+				F642389E22CD3372000F5CE3 /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -163,8 +291,6 @@
 				F6D57A6622CD304900BC3DBC /* Application */,
 				F6D57A6722CD30E300BC3DBC /* Platform */,
 				F6D57A6822CD30F400BC3DBC /* Domain */,
-				F6E8D16322CA9EC900213675 /* ViewController.swift */,
-				F6E8D16522CA9EC900213675 /* Main.storyboard */,
 				F6E8D16822CA9ECA00213675 /* Assets.xcassets */,
 				F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */,
 				F6E8D16D22CA9ECA00213675 /* Info.plist */,
@@ -201,6 +327,7 @@
 				F6E8D15B22CA9EC900213675 /* Frameworks */,
 				F6E8D15C22CA9EC900213675 /* Resources */,
 				F6CAFA4822CBEEE5007476D4 /* Embed Frameworks */,
+				F64238B222CD4522000F5CE3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -295,9 +422,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64238BD22CD4E93000F5CE3 /* Conferences.storyboard in Resources */,
+				F64238BF22CD4F41000F5CE3 /* Videos.storyboard in Resources */,
 				F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */,
+				F64238C122CD4F4B000F5CE3 /* Authors.storyboard in Resources */,
 				F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */,
-				F6E8D16722CA9EC900213675 /* Main.storyboard in Resources */,
+				F6E8D16722CA9EC900213675 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,13 +447,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F64238B222CD4522000F5CE3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PromiseKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F6E8D15A22CA9EC900213675 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6E8D16422CA9EC900213675 /* ViewController.swift in Sources */,
+				F6E8D16422CA9EC900213675 /* ConferenceListViewController.swift in Sources */,
+				F64238B822CD4A54000F5CE3 /* DashboardViewController.swift in Sources */,
+				F64238C422CD4FDB000F5CE3 /* VideoListViewController.swift in Sources */,
+				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
+				F64238AD22CD42DA000F5CE3 /* ContentService.swift in Sources */,
+				F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */,
+				F64238C722CD4FEC000F5CE3 /* AuthorListViewController.swift in Sources */,
+				F64238A722CD3C2F000F5CE3 /* Author.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,12 +520,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F6E8D16522CA9EC900213675 /* Main.storyboard */ = {
+		F6E8D16522CA9EC900213675 /* Dashboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F6E8D16622CA9EC900213675 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Dashboard.storyboard;
 			sourceTree = "<group>";
 		};
 		F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */ = {
@@ -415,6 +576,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -476,6 +638,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

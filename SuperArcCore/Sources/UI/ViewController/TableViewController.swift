@@ -4,7 +4,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController, CommonViewController {
+open class TableViewController: UITableViewController, CommonViewController {
 
     public var context: ViewControllerContext!
     public var storedViewModel: ViewModel?

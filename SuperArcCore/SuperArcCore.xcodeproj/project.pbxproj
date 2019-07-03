@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F64238AF22CD44C6000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */; };
 		F6CAFA3522CBEEC8007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */; };
 		F6CAFA3A22CBEEC8007476D4 /* SuperArcCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA3922CBEEC8007476D4 /* SuperArcCoreTests.swift */; };
 		F6CAFA3C22CBEEC8007476D4 /* SuperArcCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCore.h; sourceTree = "<group>"; };
 		F6CAFA2F22CBEEC7007476D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64238AF22CD44C6000F5CE3 /* PromiseKit.framework in Frameworks */,
 				F6CAFA7222CBF1A5007476D4 /* SuperArcFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +84,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F64238A822CD3F7A000F5CE3 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		F6CAFA2122CBEEC7007476D4 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		F6CAFA4A22CBEF2F007476D4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F64238A822CD3F7A000F5CE3 /* Coordinator */,
 				F6CAFA9322CC0D63007476D4 /* ViewController */,
 				F6CAFA9222CC0D5A007476D4 /* ViewModel */,
 			);
@@ -142,6 +153,7 @@
 		F6CAFA7022CBF1A5007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */,
 				F6CAFA7122CBF1A5007476D4 /* SuperArcFoundation.framework */,
 			);
 			name = Frameworks;
@@ -474,6 +486,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,6 +517,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
