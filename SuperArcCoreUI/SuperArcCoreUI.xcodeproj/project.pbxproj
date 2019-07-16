@@ -10,6 +10,7 @@
 		F675C31922DDD3A900FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C30F22DDD3A900FA77DD /* SuperArcCoreUI.framework */; };
 		F675C31E22DDD3A900FA77DD /* SuperArcCoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */; };
 		F675C32022DDD3A900FA77DD /* SuperArcCoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F675C33122DDD49C00FA77DD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C33022DDD49C00FA77DD /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		F675C31822DDD3A900FA77DD /* SuperArcCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcCoreUITests.swift; sourceTree = "<group>"; };
 		F675C31F22DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F675C33022DDD49C00FA77DD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		F675C31122DDD3A900FA77DD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F675C32F22DDD48D00FA77DD /* Coordinator */,
 				F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */,
 				F675C31322DDD3A900FA77DD /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				F675C31F22DDD3A900FA77DD /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		F675C32F22DDD48D00FA77DD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F675C33022DDD49C00FA77DD /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 				TargetAttributes = {
 					F675C30E22DDD3A900FA77DD = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					F675C31722DDD3A900FA77DD = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F675C33122DDD49C00FA77DD /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		F675C32422DDD3A900FA77DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,9 +369,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SuperArcCoreUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.coreui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +381,7 @@
 		F675C32522DDD3A900FA77DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -380,7 +396,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SuperArcCoreUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.coreui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -391,6 +407,7 @@
 		F675C32722DDD3A900FA77DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				INFOPLIST_FILE = SuperArcCoreUITests/Info.plist;
@@ -409,6 +426,7 @@
 		F675C32822DDD3A900FA77DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				INFOPLIST_FILE = SuperArcCoreUITests/Info.plist;
