@@ -23,6 +23,8 @@
 		F642C68222D2627F0005B0AF /* ConferenceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C68122D2627F0005B0AF /* ConferenceListViewModel.swift */; };
 		F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */; };
 		F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */; };
+		F675C32A22DDD3E400FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C32922DDD3E400FA77DD /* SuperArcCoreUI.framework */; };
+		F675C32B22DDD3E400FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C32922DDD3E400FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F689EC3722CE206300CE3996 /* MockContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC3622CE206300CE3996 /* MockContentService.swift */; };
 		F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; };
 		F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -68,6 +70,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F6CAFA8122CC02DE007476D4 /* SuperArcFoundation.framework in Embed Frameworks */,
+				F675C32B22DDD3E400FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */,
 				F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -92,6 +95,8 @@
 		F642C68122D2627F0005B0AF /* ConferenceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListViewModel.swift; sourceTree = "<group>"; };
 		F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		F675C32922DDD3E400FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F675C32C22DDD3EB00FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SuperArcCoreUI.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/SwiftVideos-amlznwkbpwfrsxfipdyygpidkoof/Build/Products/Debug-iphoneos/SuperArcCoreUI.framework"; sourceTree = "<group>"; };
 		F689EC3622CE206300CE3996 /* MockContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContentService.swift; sourceTree = "<group>"; };
 		F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F675C32A22DDD3E400FA77DD /* SuperArcCoreUI.framework in Frameworks */,
 				F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */,
 				F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */,
 				F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */,
@@ -288,6 +294,7 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F675C32C22DDD3EB00FA77DD /* SuperArcCoreUI.framework */,
 				F64238B322CD4838000F5CE3 /* Kingfisher.framework */,
 				F64238B022CD451E000F5CE3 /* PromiseKit.framework */,
 				F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */,
@@ -348,6 +355,7 @@
 		F6E8D15522CA9EC900213675 = {
 			isa = PBXGroup;
 			children = (
+				F675C32922DDD3E400FA77DD /* SuperArcCoreUI.framework */,
 				F6E8D16022CA9EC900213675 /* Sources */,
 				F6E8D17522CA9ECA00213675 /* Tests */,
 				F6E8D18022CA9ECA00213675 /* UITests */,
