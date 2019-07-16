@@ -6,5 +6,7 @@ import SuperArcCore
 import PromiseKit
 
 protocol ContentService: Service {
-    func fetchAllConferences() -> Promise<[Conference]>
+    associatedtype ContentType
+
+    func fetch() -> Promise<[ContentType]>
 }

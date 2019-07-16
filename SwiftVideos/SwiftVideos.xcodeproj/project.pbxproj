@@ -19,10 +19,21 @@
 		F64238C122CD4F4B000F5CE3 /* Authors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64238C022CD4F4B000F5CE3 /* Authors.storyboard */; };
 		F64238C422CD4FDB000F5CE3 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238C322CD4FDB000F5CE3 /* VideoListViewController.swift */; };
 		F64238C722CD4FEC000F5CE3 /* AuthorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238C622CD4FEC000F5CE3 /* AuthorListViewController.swift */; };
+		F642C68022D2626F0005B0AF /* conferences.json in Resources */ = {isa = PBXBuildFile; fileRef = F642C67F22D2626E0005B0AF /* conferences.json */; };
+		F642C68222D2627F0005B0AF /* ConferenceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C68122D2627F0005B0AF /* ConferenceListViewModel.swift */; };
+		F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */; };
+		F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */; };
+		F689EC3722CE206300CE3996 /* MockContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC3622CE206300CE3996 /* MockContentService.swift */; };
 		F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; };
 		F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; };
 		F6CAFA8122CC02DE007476D4 /* SuperArcFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CF4AB222D349300026F84F /* ConferenceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6CF4AB122D349300026F84F /* ConferenceCollectionViewCell.xib */; };
+		F6CF4AB922D34B800026F84F /* swiftandfika.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CF4AB422D34B800026F84F /* swiftandfika.png */; };
+		F6CF4ABA22D34B800026F84F /* swiftheroes.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CF4AB522D34B800026F84F /* swiftheroes.png */; };
+		F6CF4ABB22D34B800026F84F /* appbuilders.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CF4AB622D34B800026F84F /* appbuilders.png */; };
+		F6CF4ABC22D34B800026F84F /* frenchkit.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CF4AB722D34B800026F84F /* frenchkit.png */; };
+		F6CF4ABD22D34B800026F84F /* nsspain.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CF4AB822D34B800026F84F /* nsspain.png */; };
 		F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16122CA9EC900213675 /* AppDelegate.swift */; };
 		F6E8D16422CA9EC900213675 /* ConferenceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16322CA9EC900213675 /* ConferenceListViewController.swift */; };
 		F6E8D16722CA9EC900213675 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16522CA9EC900213675 /* Dashboard.storyboard */; };
@@ -77,8 +88,19 @@
 		F64238C022CD4F4B000F5CE3 /* Authors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authors.storyboard; sourceTree = "<group>"; };
 		F64238C322CD4FDB000F5CE3 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
 		F64238C622CD4FEC000F5CE3 /* AuthorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorListViewController.swift; sourceTree = "<group>"; };
+		F642C67F22D2626E0005B0AF /* conferences.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
+		F642C68122D2627F0005B0AF /* ConferenceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListViewModel.swift; sourceTree = "<group>"; };
+		F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		F689EC3622CE206300CE3996 /* MockContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContentService.swift; sourceTree = "<group>"; };
 		F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CF4AB122D349300026F84F /* ConferenceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceCollectionViewCell.xib; sourceTree = "<group>"; };
+		F6CF4AB422D34B800026F84F /* swiftandfika.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swiftandfika.png; sourceTree = "<group>"; };
+		F6CF4AB522D34B800026F84F /* swiftheroes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swiftheroes.png; sourceTree = "<group>"; };
+		F6CF4AB622D34B800026F84F /* appbuilders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbuilders.png; sourceTree = "<group>"; };
+		F6CF4AB722D34B800026F84F /* frenchkit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frenchkit.png; sourceTree = "<group>"; };
+		F6CF4AB822D34B800026F84F /* nsspain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nsspain.png; sourceTree = "<group>"; };
 		F6E8D15E22CA9EC900213675 /* SwiftVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D16122CA9EC900213675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E8D16322CA9EC900213675 /* ConferenceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +177,7 @@
 				F64238BC22CD4E93000F5CE3 /* Conferences.storyboard */,
 				F64238B522CD4A00000F5CE3 /* ViewController */,
 				F64238B622CD4A05000F5CE3 /* ViewModel */,
+				F689EC3022CE1FD500CE3996 /* View */,
 			);
 			path = Conferences;
 			sourceTree = "<group>";
@@ -188,6 +211,7 @@
 		F64238B622CD4A05000F5CE3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F642C68122D2627F0005B0AF /* ConferenceListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +241,50 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		F6451B6D22D1442E0091E147 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F6CF4AB322D34B750026F84F /* Images */,
+				F642C67F22D2626E0005B0AF /* conferences.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F689EC3022CE1FD500CE3996 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */,
+				F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */,
+				F6CF4AB122D349300026F84F /* ConferenceCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F689EC3522CE201E00CE3996 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F689EC3822CE206F00CE3996 /* Content */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F689EC3822CE206F00CE3996 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				F689EC3922CE207B00CE3996 /* Mock */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		F689EC3922CE207B00CE3996 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F689EC3622CE206300CE3996 /* MockContentService.swift */,
+				F6451B6D22D1442E0091E147 /* Data */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +294,18 @@
 				F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6CF4AB322D34B750026F84F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F6CF4AB622D34B800026F84F /* appbuilders.png */,
+				F6CF4AB722D34B800026F84F /* frenchkit.png */,
+				F6CF4AB822D34B800026F84F /* nsspain.png */,
+				F6CF4AB422D34B800026F84F /* swiftandfika.png */,
+				F6CF4AB522D34B800026F84F /* swiftheroes.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		F6D57A6522CD304000BC3DBC /* Scenes */ = {
@@ -251,6 +331,7 @@
 		F6D57A6722CD30E300BC3DBC /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				F689EC3522CE201E00CE3996 /* Services */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -422,12 +503,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6CF4AB222D349300026F84F /* ConferenceCollectionViewCell.xib in Resources */,
+				F6CF4ABA22D34B800026F84F /* swiftheroes.png in Resources */,
+				F6CF4ABD22D34B800026F84F /* nsspain.png in Resources */,
 				F64238BD22CD4E93000F5CE3 /* Conferences.storyboard in Resources */,
 				F64238BF22CD4F41000F5CE3 /* Videos.storyboard in Resources */,
 				F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */,
 				F64238C122CD4F4B000F5CE3 /* Authors.storyboard in Resources */,
+				F6CF4ABC22D34B800026F84F /* frenchkit.png in Resources */,
+				F6CF4AB922D34B800026F84F /* swiftandfika.png in Resources */,
+				F6CF4ABB22D34B800026F84F /* appbuilders.png in Resources */,
 				F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */,
 				F6E8D16722CA9EC900213675 /* Dashboard.storyboard in Resources */,
+				F642C68022D2626F0005B0AF /* conferences.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,15 +564,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F642C68222D2627F0005B0AF /* ConferenceListViewModel.swift in Sources */,
 				F6E8D16422CA9EC900213675 /* ConferenceListViewController.swift in Sources */,
 				F64238B822CD4A54000F5CE3 /* DashboardViewController.swift in Sources */,
+				F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */,
 				F64238C422CD4FDB000F5CE3 /* VideoListViewController.swift in Sources */,
 				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
+				F689EC3722CE206300CE3996 /* MockContentService.swift in Sources */,
 				F64238AD22CD42DA000F5CE3 /* ContentService.swift in Sources */,
 				F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */,
 				F64238C722CD4FEC000F5CE3 /* AuthorListViewController.swift in Sources */,
 				F64238A722CD3C2F000F5CE3 /* Author.swift in Sources */,
+				F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

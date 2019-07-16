@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F64238AF22CD44C6000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */; };
+		F6451B7222D14B5A0091E147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B7122D14B5A0091E147 /* Endpoint.swift */; };
 		F6CAFA3522CBEEC8007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */; };
 		F6CAFA3A22CBEEC8007476D4 /* SuperArcCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA3922CBEEC8007476D4 /* SuperArcCoreTests.swift */; };
 		F6CAFA3C22CBEEC8007476D4 /* SuperArcCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +25,7 @@
 		F6CAFA9F22CC147C007476D4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */; };
 		F6CAFAA122CC1494007476D4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFAA022CC1494007476D4 /* NavigationController.swift */; };
 		F6CAFAA322CC1592007476D4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFAA222CC1592007476D4 /* PageViewController.swift */; };
+		F6CF4AB022D283CD0026F84F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CF4AAF22D283CD0026F84F /* Model.swift */; };
 		F6D57A6222CD2DC100BC3DBC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D57A6122CD2DC100BC3DBC /* TabBarController.swift */; };
 		F6D57A6422CD2E4E00BC3DBC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D57A6322CD2E4E00BC3DBC /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F6451B7122D14B5A0091E147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCore.h; sourceTree = "<group>"; };
 		F6CAFA2F22CBEEC7007476D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		F6CAFAA022CC1494007476D4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		F6CAFAA222CC1592007476D4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		F6CF4AAF22D283CD0026F84F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F6D57A6122CD2DC100BC3DBC /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F6D57A6322CD2E4E00BC3DBC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +93,14 @@
 			children = (
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F6451B7022D14B450091E147 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F6451B7122D14B5A0091E147 /* Endpoint.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		F6CAFA2122CBEEC7007476D4 = {
@@ -146,6 +158,7 @@
 				F6CAFA7A22CBFAE6007476D4 /* Engine.swift */,
 				F6CAFA8222CC032E007476D4 /* DomainLogic */,
 				F6CAFA8322CC033F007476D4 /* DataAccess */,
+				F6451B7022D14B450091E147 /* Configuration */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -163,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				F6CAFA8422CC036A007476D4 /* Service */,
+				F6CF4AAE22D283920026F84F /* Model */,
 			);
 			path = DomainLogic;
 			sourceTree = "<group>";
@@ -206,6 +220,14 @@
 				F6D57A6322CD2E4E00BC3DBC /* UIViewController+Extensions.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F6CF4AAE22D283920026F84F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6CF4AAF22D283CD0026F84F /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +343,10 @@
 				F6D57A6222CD2DC100BC3DBC /* TabBarController.swift in Sources */,
 				F6CAFA9522CC0D7A007476D4 /* ViewModel.swift in Sources */,
 				F6CAFA7B22CBFAE6007476D4 /* Engine.swift in Sources */,
+				F6451B7222D14B5A0091E147 /* Endpoint.swift in Sources */,
 				F6CAFAA322CC1592007476D4 /* PageViewController.swift in Sources */,
 				F6CAFA9122CC0C34007476D4 /* ServiceRegistry.swift in Sources */,
+				F6CF4AB022D283CD0026F84F /* Model.swift in Sources */,
 				F6CAFA9922CC1316007476D4 /* ViewControllerContext.swift in Sources */,
 				F6CAFA9F22CC147C007476D4 /* CollectionViewController.swift in Sources */,
 				F6CAFA9722CC0F0D007476D4 /* CommonViewController.swift in Sources */,

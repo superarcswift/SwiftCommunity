@@ -17,11 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="B4E-hc-H1T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eIp-aW-8g1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Kgr-l6-MbK" customClass="ConferenceCollectionViewFlowLayout" customModule="SwiftVideos" customModuleProvider="target"/>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eIp-aW-8g1" firstAttribute="top" secondItem="HZD-VK-4y9" secondAttribute="top" id="HjC-hJ-ggN"/>
+                            <constraint firstItem="eIp-aW-8g1" firstAttribute="leading" secondItem="HZD-VK-4y9" secondAttribute="leading" id="W65-c9-1nf"/>
+                            <constraint firstItem="HZD-VK-4y9" firstAttribute="bottom" secondItem="eIp-aW-8g1" secondAttribute="bottom" id="Yxf-5n-Sdy"/>
+                            <constraint firstItem="HZD-VK-4y9" firstAttribute="trailing" secondItem="eIp-aW-8g1" secondAttribute="trailing" id="u8l-ix-E4U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HZD-VK-4y9"/>
                     </view>
                     <navigationItem key="navigationItem" title="Conferences" id="b19-Yp-MSc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="eIp-aW-8g1" id="OCc-K5-MJ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvA-AP-iTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

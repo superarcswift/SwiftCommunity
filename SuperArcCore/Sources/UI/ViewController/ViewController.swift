@@ -4,8 +4,12 @@
 
 import UIKit
 
-public class ViewController: UIViewController, CommonViewController {
+open class ViewController: UIViewController, CommonViewController {
 
     public var context: ViewControllerContext!
     public var storedViewModel: ViewModel?
+
+    open func setupViewModel() -> ViewModel! {
+        return nil
+    }
 }

@@ -5,6 +5,6 @@
 import Foundation
 
 struct Conference: Codable {
-    let uuid: UUID
+    let id: UUID
     let name: String
 }

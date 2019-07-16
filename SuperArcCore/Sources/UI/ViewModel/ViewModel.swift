@@ -2,7 +2,15 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-public protocol ViewModel {
-
+public protocol ViewModelProtocol {
     var engine: Engine { get }
+}
+
+open class ViewModel: NSObject, ViewModelProtocol {
+
+    public let engine: Engine
+
+    public init(engine: Engine) {
+        self.engine = engine
+    }
 }
