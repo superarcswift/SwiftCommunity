@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F64238AF22CD44C6000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */; };
 		F6451B7222D14B5A0091E147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B7122D14B5A0091E147 /* Endpoint.swift */; };
+		F66C903722DF381E006CA2BB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903622DF381E006CA2BB /* Kingfisher.framework */; };
+		F66C903922DF382C006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903822DF382C006CA2BB /* RxSwift.framework */; };
+		F66C903B22DF3836006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903A22DF3836006CA2BB /* RxCocoa.framework */; };
+		F675C35522DEFDA500FA77DD /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35422DEFDA500FA77DD /* Core.swift */; };
 		F6CAFA3522CBEEC8007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */; };
 		F6CAFA3A22CBEEC8007476D4 /* SuperArcCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA3922CBEEC8007476D4 /* SuperArcCoreTests.swift */; };
 		F6CAFA3C22CBEEC8007476D4 /* SuperArcCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,6 +47,10 @@
 /* Begin PBXFileReference section */
 		F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6451B7122D14B5A0091E147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		F66C903622DF381E006CA2BB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		F66C903822DF382C006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F66C903A22DF3836006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F675C35422DEFDA500FA77DD /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCore.h; sourceTree = "<group>"; };
 		F6CAFA2F22CBEEC7007476D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66C903B22DF3836006CA2BB /* RxCocoa.framework in Frameworks */,
+				F66C903922DF382C006CA2BB /* RxSwift.framework in Frameworks */,
+				F66C903722DF381E006CA2BB /* Kingfisher.framework in Frameworks */,
 				F64238AF22CD44C6000F5CE3 /* PromiseKit.framework in Frameworks */,
 				F6CAFA7222CBF1A5007476D4 /* SuperArcFoundation.framework in Frameworks */,
 			);
@@ -125,6 +136,7 @@
 		F6CAFA2D22CBEEC7007476D4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F675C35422DEFDA500FA77DD /* Core.swift */,
 				F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */,
 				F6CAFA2F22CBEEC7007476D4 /* Info.plist */,
 				F6CAFA4A22CBEF2F007476D4 /* UI */,
@@ -166,6 +178,9 @@
 		F6CAFA7022CBF1A5007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F66C903A22DF3836006CA2BB /* RxCocoa.framework */,
+				F66C903822DF382C006CA2BB /* RxSwift.framework */,
+				F66C903622DF381E006CA2BB /* Kingfisher.framework */,
 				F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */,
 				F6CAFA7122CBF1A5007476D4 /* SuperArcFoundation.framework */,
 			);
@@ -352,6 +367,7 @@
 				F6CAFA9722CC0F0D007476D4 /* CommonViewController.swift in Sources */,
 				F6CAFA8622CC0373007476D4 /* ServiceContext.swift in Sources */,
 				F6D57A6422CD2E4E00BC3DBC /* UIViewController+Extensions.swift in Sources */,
+				F675C35522DEFDA500FA77DD /* Core.swift in Sources */,
 				F6CAFA9B22CC13FB007476D4 /* ViewController.swift in Sources */,
 				F6CAFA9D22CC1471007476D4 /* TableViewController.swift in Sources */,
 				F6CAFA8822CC039F007476D4 /* Service.swift in Sources */,

@@ -4,19 +4,29 @@
 
 import Foundation
 
-public protocol CommonViewController: HasViewControllerContext {
+public protocol CommonViewControllerProtocol: HasViewControllerContext {
+
+    // MARK: Properties
 
     var storedViewModel: ViewModel? { get set }
+
+    // MARK: Lifecycles
+
+    func commonViewDidLoad()
+
+    // MARK: Setup
 
     func setupViewModel() -> ViewModel!
     func setupViews()
     func setupBindings()
     func loadData()
 
-    func commonViewDidLoad()
+    // MARK: APIs
+
+    func commonPrepare(for segue: UIStoryboardSegue, sender: Any?)
 }
 
-extension CommonViewController where Self: UIViewController {
+extension CommonViewControllerProtocol where Self: UIViewController {
 
     public func commonViewDidLoad() {
         if storedViewModel == nil {
@@ -30,17 +40,8 @@ extension CommonViewController where Self: UIViewController {
         loadData()
     }
 
-    public func setupViewModel() -> ViewModel! {
-        return nil
-    }
-
-    public func setupViews() {
-    }
-
-    public func setupBindings() {
-    }
-
-    public func loadData() {
+    public func commonPrepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.setViewControllerContext(context)
     }
 
 }

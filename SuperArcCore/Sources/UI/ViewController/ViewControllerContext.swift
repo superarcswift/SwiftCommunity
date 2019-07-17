@@ -8,12 +8,12 @@ public protocol HasViewControllerContext: class {
     var context: ViewControllerContext! { get set }
 }
 
-public protocol ViewControllerContext {
+public protocol ViewControllerContextProtocol {
 
     var engine: Engine { get }
 }
 
-public class StandardViewControllerContext: ViewControllerContext {
+public class ViewControllerContext: ViewControllerContextProtocol {
 
     // MARK: Properties
 

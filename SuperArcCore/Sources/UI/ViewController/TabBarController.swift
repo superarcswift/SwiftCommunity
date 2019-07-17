@@ -2,13 +2,22 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
-open class TabBarController: UITabBarController, HasViewControllerContext {
+open class TabBarController: UITabBarController, CommonViewControllerProtocol {
+
 
     // MARK: Properties
 
+    // Public
+
     public var context: ViewControllerContext!
+    public var storedViewModel: ViewModel?
+
+    // Private
+
+    private let disposeBag = DisposeBag()
 
     // MARK: Initialization
 
@@ -21,20 +30,28 @@ open class TabBarController: UITabBarController, HasViewControllerContext {
         super.init(coder: aDecoder)
     }
 
-    // MARK: Overwritten
+    // MARK: Lifecycles
 
     override open func viewDidLoad() {
         super.viewDidLoad()
+        commonViewDidLoad()
 
-        guard let viewControllers = viewControllers else {
-            return
-        }
-
-        for viewController in viewControllers {
-            viewController.setViewControllerContext(context)
+        for child in children {
+            child.setViewControllerContext(context)
         }
     }
 
+    // MARK: Setup
+
+    open func setupViewModel() -> ViewModel! {
+        return nil
+    }
+
+    open func setupViews() {}
+
+    open func setupBindings() {}
+
+    open func loadData() {}
 }
 
 // MARK: - UITabBarControllerDelegate

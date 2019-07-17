@@ -19,4 +19,12 @@ extension Registry {
             fatalError(error.localizedDescription)
         }
     }
+
+    public func resolve<T>(type: T.Type) -> T {
+        do {
+            return try container.resolve(type)
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
 }

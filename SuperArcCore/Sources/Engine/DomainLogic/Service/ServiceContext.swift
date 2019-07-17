@@ -5,15 +5,10 @@
 import Foundation
 
 public protocol ServiceContextProtocol {
-    var realm: String { get }
-    
 }
 
 public class ServiceContext: ServiceContextProtocol {
 
-    public let realm: String
-
-    public init(realm: String) {
-        self.realm = realm
+    public init() {
     }
 }

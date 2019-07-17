@@ -2,29 +2,59 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcCore
 import SuperArcFoundation
+import RxSwift
 import UIKit
 
-class ConferenceListViewController: UIViewController {
+class ConferenceListViewController: ViewController, StoryboardInitiable {
 
     // MARK: Properties
+
+    // Static
+
+    static var storyboardName = "Conferences"
 
     // IBOutlets
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // Private
+
+    private var viewModel: ConferenceListViewModel {
+        return storedViewModel as! ConferenceListViewModel
+    }
+
+    private let disposeBag = DisposeBag()
+
     // MARK: Lifecycles
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func setupViewModel() -> ViewModel! {
+        return ConferenceListViewModel(engine: context.engine)
+    }
+
+    override func setupViews() {
+        super.setupViews()
 
         collectionView.delegate = self
         collectionView.dataSource = self
 
-//        collectionView.register(ConferenceCollectionViewCell.self, forCellWithReuseIdentifier: ConferenceCollectionViewCell.className)
         collectionView.registerNib(ConferenceCollectionViewCell.className, bundle: Bundle(for: ConferenceCollectionViewCell.self))
     }
 
+    override func setupBindings() {
+        super.setupBindings()
+
+        viewModel.conferences.subscribe(
+            onNext: { conferences in
+                self.collectionView.reloadData()
+            }
+        ).disposed(by: disposeBag)
+    }
+
+    override func loadData() {
+        viewModel.loadData()
+    }
 }
 
 // MARK: - UICollectionViewDelegate
@@ -45,7 +75,7 @@ extension ConferenceListViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.conferences.value.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

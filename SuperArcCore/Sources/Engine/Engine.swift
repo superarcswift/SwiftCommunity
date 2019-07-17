@@ -4,18 +4,18 @@
 
 import Foundation
 
-public protocol Engine {
+public protocol EngineProtocol {
     var serviceContext: ServiceContext { get }
-    var serviceAssembly: ServiceRegistry { get }
+    var serviceRegistry: ServiceRegistry { get }
 }
 
-public class StandardEngine: Engine {
+public class Engine: EngineProtocol {
 
     // MARK: Properties
 
     public let serviceContext: ServiceContext
 
-    public let serviceAssembly = ServiceRegistry()
+    public let serviceRegistry = ServiceRegistry()
 
     // MARK: Initialization
 

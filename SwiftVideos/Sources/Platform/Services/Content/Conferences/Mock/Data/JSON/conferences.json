@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "name": "SwiftConf"
+    },
+    {
+        "id": "2",
+        "name": "WWDC"
+    },
+    {
+        "id": "3",
+        "name": "AppBuilder"
+    },
+    {
+        "id": "4",
+        "name": "FrenchKit"
+    },
+    {
+        "id": "5",
+        "name": "UIConf"
+    },
+    {
+        "id": "6",
+        "name": "Swift Heroes"
+    }
+]

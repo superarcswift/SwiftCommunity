@@ -19,14 +19,19 @@
 		F64238C122CD4F4B000F5CE3 /* Authors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64238C022CD4F4B000F5CE3 /* Authors.storyboard */; };
 		F64238C422CD4FDB000F5CE3 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238C322CD4FDB000F5CE3 /* VideoListViewController.swift */; };
 		F64238C722CD4FEC000F5CE3 /* AuthorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238C622CD4FEC000F5CE3 /* AuthorListViewController.swift */; };
-		F642C68022D2626F0005B0AF /* conferences.json in Resources */ = {isa = PBXBuildFile; fileRef = F642C67F22D2626E0005B0AF /* conferences.json */; };
 		F642C68222D2627F0005B0AF /* ConferenceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C68122D2627F0005B0AF /* ConferenceListViewModel.swift */; };
 		F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */; };
 		F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */; };
+		F66C903D22DF38A2006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903C22DF38A2006CA2BB /* RxSwift.framework */; };
+		F66C903F22DF38B0006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903E22DF38B0006CA2BB /* RxCocoa.framework */; };
+		F66C904122DF3B14006CA2BB /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904022DF3B14006CA2BB /* RxRelay.framework */; };
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34522DDD5B600FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F689EC3722CE206300CE3996 /* MockContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F689EC3622CE206300CE3996 /* MockContentService.swift */; };
+		F675C34822DE27A700FA77DD /* ConferenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C34722DE27A700FA77DD /* ConferenceService.swift */; };
+		F675C34C22DE2DE100FA77DD /* conferences.json in Resources */ = {isa = PBXBuildFile; fileRef = F675C34B22DE2DE100FA77DD /* conferences.json */; };
+		F675C35122DE2EEB00FA77DD /* FilesystemConferenceContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35022DE2EEB00FA77DD /* FilesystemConferenceContentProvider.swift */; };
+		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
 		F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; };
 		F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; };
@@ -92,12 +97,17 @@
 		F64238C022CD4F4B000F5CE3 /* Authors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authors.storyboard; sourceTree = "<group>"; };
 		F64238C322CD4FDB000F5CE3 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
 		F64238C622CD4FEC000F5CE3 /* AuthorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorListViewController.swift; sourceTree = "<group>"; };
-		F642C67F22D2626E0005B0AF /* conferences.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
 		F642C68122D2627F0005B0AF /* ConferenceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListViewModel.swift; sourceTree = "<group>"; };
 		F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		F66C903C22DF38A2006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F66C903E22DF38B0006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F66C904022DF3B14006CA2BB /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F689EC3622CE206300CE3996 /* MockContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContentService.swift; sourceTree = "<group>"; };
+		F675C34722DE27A700FA77DD /* ConferenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceService.swift; sourceTree = "<group>"; };
+		F675C34B22DE2DE100FA77DD /* conferences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
+		F675C35022DE2EEB00FA77DD /* FilesystemConferenceContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemConferenceContentProvider.swift; sourceTree = "<group>"; };
+		F675C35222DE2F4600FA77DD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CF4AB122D349300026F84F /* ConferenceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -126,6 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66C904122DF3B14006CA2BB /* RxRelay.framework in Frameworks */,
+				F66C903F22DF38B0006CA2BB /* RxCocoa.framework in Frameworks */,
+				F66C903D22DF38A2006CA2BB /* RxSwift.framework in Frameworks */,
 				F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */,
 				F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */,
 				F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */,
@@ -156,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				F6E8D16122CA9EC900213675 /* AppDelegate.swift */,
+				F675C35222DE2F4600FA77DD /* AppManager.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -202,6 +216,7 @@
 		F64238A922CD4252000F5CE3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F675C34922DE2A9900FA77DD /* Conferences */,
 				F64238AC22CD42DA000F5CE3 /* ContentService.swift */,
 			);
 			path = Services;
@@ -248,11 +263,35 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		F6451B6D22D1442E0091E147 /* Data */ = {
+		F675C34922DE2A9900FA77DD /* Conferences */ = {
 			isa = PBXGroup;
 			children = (
+				F675C34722DE27A700FA77DD /* ConferenceService.swift */,
+			);
+			path = Conferences;
+			sourceTree = "<group>";
+		};
+		F675C34D22DE2E9700FA77DD /* Conferences */ = {
+			isa = PBXGroup;
+			children = (
+				F689EC3922CE207B00CE3996 /* Mock */,
+			);
+			path = Conferences;
+			sourceTree = "<group>";
+		};
+		F675C34E22DE2EB000FA77DD /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F675C34B22DE2DE100FA77DD /* conferences.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		F675C34F22DE2ED600FA77DD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F675C34E22DE2EB000FA77DD /* JSON */,
 				F6CF4AB322D34B750026F84F /* Images */,
-				F642C67F22D2626E0005B0AF /* conferences.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -278,7 +317,7 @@
 		F689EC3822CE206F00CE3996 /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				F689EC3922CE207B00CE3996 /* Mock */,
+				F675C34D22DE2E9700FA77DD /* Conferences */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -286,8 +325,8 @@
 		F689EC3922CE207B00CE3996 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				F689EC3622CE206300CE3996 /* MockContentService.swift */,
-				F6451B6D22D1442E0091E147 /* Data */,
+				F675C35022DE2EEB00FA77DD /* FilesystemConferenceContentProvider.swift */,
+				F675C34F22DE2ED600FA77DD /* Data */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -295,6 +334,9 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F66C904022DF3B14006CA2BB /* RxRelay.framework */,
+				F66C903E22DF38B0006CA2BB /* RxCocoa.framework */,
+				F66C903C22DF38A2006CA2BB /* RxSwift.framework */,
 				F64238B322CD4838000F5CE3 /* Kingfisher.framework */,
 				F64238B022CD451E000F5CE3 /* PromiseKit.framework */,
 				F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */,
@@ -523,7 +565,7 @@
 				F6CF4ABB22D34B800026F84F /* appbuilders.png in Resources */,
 				F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */,
 				F6E8D16722CA9EC900213675 /* Dashboard.storyboard in Resources */,
-				F642C68022D2626F0005B0AF /* conferences.json in Resources */,
+				F675C34C22DE2DE100FA77DD /* conferences.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,12 +596,18 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PromiseKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -578,11 +626,13 @@
 				F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */,
 				F64238C422CD4FDB000F5CE3 /* VideoListViewController.swift in Sources */,
 				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
+				F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
-				F689EC3722CE206300CE3996 /* MockContentService.swift in Sources */,
 				F64238AD22CD42DA000F5CE3 /* ContentService.swift in Sources */,
 				F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */,
+				F675C35122DE2EEB00FA77DD /* FilesystemConferenceContentProvider.swift in Sources */,
 				F64238C722CD4FEC000F5CE3 /* AuthorListViewController.swift in Sources */,
+				F675C34822DE27A700FA77DD /* ConferenceService.swift in Sources */,
 				F64238A722CD3C2F000F5CE3 /* Author.swift in Sources */,
 				F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */,
 			);
@@ -763,6 +813,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -781,6 +835,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
