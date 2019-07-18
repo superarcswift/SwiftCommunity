@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F66C904822E0823F006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904322E0823F006CA2BB /* RxCocoa.framework */; };
+		F66C904922E0823F006CA2BB /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904422E0823F006CA2BB /* RxRelay.framework */; };
+		F66C904A22E0823F006CA2BB /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904522E0823F006CA2BB /* PromiseKit.framework */; };
+		F66C904B22E0823F006CA2BB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904622E0823F006CA2BB /* Kingfisher.framework */; };
+		F66C904C22E0823F006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904722E0823F006CA2BB /* RxSwift.framework */; };
+		F66C904E22E08253006CA2BB /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904D22E08253006CA2BB /* SuperArcFoundation.framework */; };
+		F66C905022E08257006CA2BB /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904F22E08257006CA2BB /* SuperArcCore.framework */; };
 		F675C31922DDD3A900FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C30F22DDD3A900FA77DD /* SuperArcCoreUI.framework */; };
 		F675C31E22DDD3A900FA77DD /* SuperArcCoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */; };
 		F675C32022DDD3A900FA77DD /* SuperArcCoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F675C33122DDD49C00FA77DD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C33022DDD49C00FA77DD /* Coordinator.swift */; };
+		F675C33122DDD49C00FA77DD /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C33022DDD49C00FA77DD /* BaseCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +31,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F66C904322E0823F006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F66C904422E0823F006CA2BB /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		F66C904522E0823F006CA2BB /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F66C904622E0823F006CA2BB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		F66C904722E0823F006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F66C904D22E08253006CA2BB /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F66C904F22E08257006CA2BB /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C30F22DDD3A900FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCoreUI.h; sourceTree = "<group>"; };
 		F675C31322DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F675C31822DDD3A900FA77DD /* SuperArcCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcCoreUITests.swift; sourceTree = "<group>"; };
 		F675C31F22DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F675C33022DDD49C00FA77DD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F675C33022DDD49C00FA77DD /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +52,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66C905022E08257006CA2BB /* SuperArcCore.framework in Frameworks */,
+				F66C904E22E08253006CA2BB /* SuperArcFoundation.framework in Frameworks */,
+				F66C904822E0823F006CA2BB /* RxCocoa.framework in Frameworks */,
+				F66C904922E0823F006CA2BB /* RxRelay.framework in Frameworks */,
+				F66C904A22E0823F006CA2BB /* PromiseKit.framework in Frameworks */,
+				F66C904B22E0823F006CA2BB /* Kingfisher.framework in Frameworks */,
+				F66C904C22E0823F006CA2BB /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,12 +73,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F66C904222E0823E006CA2BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F66C904F22E08257006CA2BB /* SuperArcCore.framework */,
+				F66C904D22E08253006CA2BB /* SuperArcFoundation.framework */,
+				F66C904622E0823F006CA2BB /* Kingfisher.framework */,
+				F66C904522E0823F006CA2BB /* PromiseKit.framework */,
+				F66C904322E0823F006CA2BB /* RxCocoa.framework */,
+				F66C904422E0823F006CA2BB /* RxRelay.framework */,
+				F66C904722E0823F006CA2BB /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F675C30522DDD3A900FA77DD = {
 			isa = PBXGroup;
 			children = (
 				F675C31122DDD3A900FA77DD /* Sources */,
 				F675C31C22DDD3A900FA77DD /* Tests */,
 				F675C31022DDD3A900FA77DD /* Products */,
+				F66C904222E0823E006CA2BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,7 +128,7 @@
 		F675C32F22DDD48D00FA77DD /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				F675C33022DDD49C00FA77DD /* Coordinator.swift */,
+				F675C33022DDD49C00FA77DD /* BaseCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -206,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F675C33122DDD49C00FA77DD /* Coordinator.swift in Sources */,
+				F675C33122DDD49C00FA77DD /* BaseCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +398,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,6 +429,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

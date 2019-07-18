@@ -10,9 +10,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: Properties
 
+    // Public
+
     let appManager: AppManager
 
     var window: UIWindow?
+
+    // Private
+
+    private var appCoordinator: AppCoordinator!
 
     // MARK: Initialization
 
@@ -27,10 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        let dashboardViewController = DashboardViewController.instantiate()
-        dashboardViewController.setViewControllerContext(appManager.core.viewControllerContext)
-        window?.rootViewController = dashboardViewController
-        window?.makeKeyAndVisible()
+        appCoordinator = AppCoordinator(window: window!, viewControllerContext: appManager.core.viewControllerContext)
+        appCoordinator.start()
 
         return true
     }

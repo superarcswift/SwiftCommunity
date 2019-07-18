@@ -25,6 +25,8 @@
 		F66C903D22DF38A2006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903C22DF38A2006CA2BB /* RxSwift.framework */; };
 		F66C903F22DF38B0006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903E22DF38B0006CA2BB /* RxCocoa.framework */; };
 		F66C904122DF3B14006CA2BB /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904022DF3B14006CA2BB /* RxRelay.framework */; };
+		F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C905122E084BC006CA2BB /* AppCoordinator.swift */; };
+		F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C905322E09DF2006CA2BB /* DashboardCoordinator.swift */; };
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34522DDD5B600FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -103,6 +105,8 @@
 		F66C903C22DF38A2006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F66C903E22DF38B0006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		F66C904022DF3B14006CA2BB /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		F66C905122E084BC006CA2BB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F66C905322E09DF2006CA2BB /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C34722DE27A700FA77DD /* ConferenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceService.swift; sourceTree = "<group>"; };
 		F675C34B22DE2DE100FA77DD /* conferences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			children = (
 				F6E8D16122CA9EC900213675 /* AppDelegate.swift */,
 				F675C35222DE2F4600FA77DD /* AppManager.swift */,
+				F66C905122E084BC006CA2BB /* AppCoordinator.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -242,7 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				F6E8D16522CA9EC900213675 /* Dashboard.storyboard */,
-				F64238B722CD4A54000F5CE3 /* DashboardViewController.swift */,
+				F66C905622E09E06006CA2BB /* Coordinator */,
+				F66C905522E09DF8006CA2BB /* ViewController */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -261,6 +267,22 @@
 				F64238C622CD4FEC000F5CE3 /* AuthorListViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F66C905522E09DF8006CA2BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F64238B722CD4A54000F5CE3 /* DashboardViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F66C905622E09E06006CA2BB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F66C905322E09DF2006CA2BB /* DashboardCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		F675C34922DE2A9900FA77DD /* Conferences */ = {
@@ -624,10 +646,12 @@
 				F6E8D16422CA9EC900213675 /* ConferenceListViewController.swift in Sources */,
 				F64238B822CD4A54000F5CE3 /* DashboardViewController.swift in Sources */,
 				F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */,
+				F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */,
 				F64238C422CD4FDB000F5CE3 /* VideoListViewController.swift in Sources */,
 				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
 				F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
+				F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */,
 				F64238AD22CD42DA000F5CE3 /* ContentService.swift in Sources */,
 				F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */,
 				F675C35122DE2EEB00FA77DD /* FilesystemConferenceContentProvider.swift in Sources */,

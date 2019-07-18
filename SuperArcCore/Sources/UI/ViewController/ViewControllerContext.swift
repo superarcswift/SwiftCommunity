@@ -5,7 +5,7 @@
 import Foundation
 
 public protocol HasViewControllerContext: class {
-    var context: ViewControllerContext! { get set }
+    var context: ViewControllerContextProtocol! { get set }
 }
 
 public protocol ViewControllerContextProtocol {

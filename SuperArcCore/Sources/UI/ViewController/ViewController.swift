@@ -10,7 +10,7 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
 
     // Public
 
-    public var context: ViewControllerContext!
+    public var context: ViewControllerContextProtocol!
     public var storedViewModel: ViewModel?
 
     // MARK: Lifecycles
