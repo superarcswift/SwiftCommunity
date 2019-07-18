@@ -12,6 +12,8 @@
 		F66C903722DF381E006CA2BB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903622DF381E006CA2BB /* Kingfisher.framework */; };
 		F66C903922DF382C006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903822DF382C006CA2BB /* RxSwift.framework */; };
 		F66C903B22DF3836006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903A22DF3836006CA2BB /* RxCocoa.framework */; };
+		F66C906322E0BB0B006CA2BB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C906222E0BB0B006CA2BB /* ViewModel.swift */; };
+		F66C908C22E0BB96006CA2BB /* ViewControllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C908B22E0BB95006CA2BB /* ViewControllerContext.swift */; };
 		F675C35522DEFDA500FA77DD /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35422DEFDA500FA77DD /* Core.swift */; };
 		F6CAFA3522CBEEC8007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */; };
 		F6CAFA3A22CBEEC8007476D4 /* SuperArcCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA3922CBEEC8007476D4 /* SuperArcCoreTests.swift */; };
@@ -21,17 +23,7 @@
 		F6CAFA8622CC0373007476D4 /* ServiceContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA8522CC0373007476D4 /* ServiceContext.swift */; };
 		F6CAFA8822CC039F007476D4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA8722CC039F007476D4 /* Service.swift */; };
 		F6CAFA9122CC0C34007476D4 /* ServiceRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9022CC0C34007476D4 /* ServiceRegistry.swift */; };
-		F6CAFA9522CC0D7A007476D4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9422CC0D7A007476D4 /* ViewModel.swift */; };
-		F6CAFA9722CC0F0D007476D4 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9622CC0F0D007476D4 /* CommonViewController.swift */; };
-		F6CAFA9922CC1316007476D4 /* ViewControllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9822CC1316007476D4 /* ViewControllerContext.swift */; };
-		F6CAFA9B22CC13FB007476D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9A22CC13FB007476D4 /* ViewController.swift */; };
-		F6CAFA9D22CC1471007476D4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9C22CC1471007476D4 /* TableViewController.swift */; };
-		F6CAFA9F22CC147C007476D4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */; };
-		F6CAFAA122CC1494007476D4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFAA022CC1494007476D4 /* NavigationController.swift */; };
-		F6CAFAA322CC1592007476D4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFAA222CC1592007476D4 /* PageViewController.swift */; };
 		F6CF4AB022D283CD0026F84F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CF4AAF22D283CD0026F84F /* Model.swift */; };
-		F6D57A6222CD2DC100BC3DBC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D57A6122CD2DC100BC3DBC /* TabBarController.swift */; };
-		F6D57A6422CD2E4E00BC3DBC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D57A6322CD2E4E00BC3DBC /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +42,8 @@
 		F66C903622DF381E006CA2BB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F66C903822DF382C006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F66C903A22DF3836006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F66C906222E0BB0B006CA2BB /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F66C908B22E0BB95006CA2BB /* ViewControllerContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContext.swift; sourceTree = "<group>"; };
 		F675C35422DEFDA500FA77DD /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCore.h; sourceTree = "<group>"; };
@@ -62,17 +56,7 @@
 		F6CAFA8522CC0373007476D4 /* ServiceContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContext.swift; sourceTree = "<group>"; };
 		F6CAFA8722CC039F007476D4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		F6CAFA9022CC0C34007476D4 /* ServiceRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRegistry.swift; sourceTree = "<group>"; };
-		F6CAFA9422CC0D7A007476D4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		F6CAFA9622CC0F0D007476D4 /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
-		F6CAFA9822CC1316007476D4 /* ViewControllerContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContext.swift; sourceTree = "<group>"; };
-		F6CAFA9A22CC13FB007476D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F6CAFA9C22CC1471007476D4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		F6CAFAA022CC1494007476D4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		F6CAFAA222CC1592007476D4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F6CF4AAF22D283CD0026F84F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		F6D57A6122CD2DC100BC3DBC /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		F6D57A6322CD2E4E00BC3DBC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,19 +83,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F64238A822CD3F7A000F5CE3 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 		F6451B7022D14B450091E147 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
 				F6451B7122D14B5A0091E147 /* Endpoint.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		F66C906122E0BB0B006CA2BB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F66C908A22E0BB7F006CA2BB /* ViewController */,
+				F66C906422E0BB17006CA2BB /* ViewModel */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F66C906422E0BB17006CA2BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F66C906222E0BB0B006CA2BB /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F66C908A22E0BB7F006CA2BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F66C908B22E0BB95006CA2BB /* ViewControllerContext.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F6CAFA2122CBEEC7007476D4 = {
@@ -139,7 +141,7 @@
 				F675C35422DEFDA500FA77DD /* Core.swift */,
 				F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */,
 				F6CAFA2F22CBEEC7007476D4 /* Info.plist */,
-				F6CAFA4A22CBEF2F007476D4 /* UI */,
+				F66C906122E0BB0B006CA2BB /* UI */,
 				F6CAFA4B22CBF0AB007476D4 /* Engine */,
 			);
 			path = Sources;
@@ -152,16 +154,6 @@
 				F6CAFA3B22CBEEC8007476D4 /* Info.plist */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		F6CAFA4A22CBEF2F007476D4 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				F64238A822CD3F7A000F5CE3 /* Coordinator */,
-				F6CAFA9322CC0D63007476D4 /* ViewController */,
-				F6CAFA9222CC0D5A007476D4 /* ViewModel */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		F6CAFA4B22CBF0AB007476D4 /* Engine */ = {
@@ -211,30 +203,6 @@
 				F6CAFA8722CC039F007476D4 /* Service.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		F6CAFA9222CC0D5A007476D4 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F6CAFA9422CC0D7A007476D4 /* ViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F6CAFA9322CC0D63007476D4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F6D57A6122CD2DC100BC3DBC /* TabBarController.swift */,
-				F6CAFAA022CC1494007476D4 /* NavigationController.swift */,
-				F6CAFAA222CC1592007476D4 /* PageViewController.swift */,
-				F6CAFA9E22CC147C007476D4 /* CollectionViewController.swift */,
-				F6CAFA9C22CC1471007476D4 /* TableViewController.swift */,
-				F6CAFA9A22CC13FB007476D4 /* ViewController.swift */,
-				F6CAFA9622CC0F0D007476D4 /* CommonViewController.swift */,
-				F6CAFA9822CC1316007476D4 /* ViewControllerContext.swift */,
-				F6D57A6322CD2E4E00BC3DBC /* UIViewController+Extensions.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F6CF4AAE22D283920026F84F /* Model */ = {
@@ -354,22 +322,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6CAFAA122CC1494007476D4 /* NavigationController.swift in Sources */,
-				F6D57A6222CD2DC100BC3DBC /* TabBarController.swift in Sources */,
-				F6CAFA9522CC0D7A007476D4 /* ViewModel.swift in Sources */,
 				F6CAFA7B22CBFAE6007476D4 /* Engine.swift in Sources */,
 				F6451B7222D14B5A0091E147 /* Endpoint.swift in Sources */,
-				F6CAFAA322CC1592007476D4 /* PageViewController.swift in Sources */,
+				F66C908C22E0BB96006CA2BB /* ViewControllerContext.swift in Sources */,
 				F6CAFA9122CC0C34007476D4 /* ServiceRegistry.swift in Sources */,
 				F6CF4AB022D283CD0026F84F /* Model.swift in Sources */,
-				F6CAFA9922CC1316007476D4 /* ViewControllerContext.swift in Sources */,
-				F6CAFA9F22CC147C007476D4 /* CollectionViewController.swift in Sources */,
-				F6CAFA9722CC0F0D007476D4 /* CommonViewController.swift in Sources */,
 				F6CAFA8622CC0373007476D4 /* ServiceContext.swift in Sources */,
-				F6D57A6422CD2E4E00BC3DBC /* UIViewController+Extensions.swift in Sources */,
 				F675C35522DEFDA500FA77DD /* Core.swift in Sources */,
-				F6CAFA9B22CC13FB007476D4 /* ViewController.swift in Sources */,
-				F6CAFA9D22CC1471007476D4 /* TableViewController.swift in Sources */,
+				F66C906322E0BB0B006CA2BB /* ViewModel.swift in Sources */,
 				F6CAFA8822CC039F007476D4 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

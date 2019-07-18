@@ -243,14 +243,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F64238B922CD4AFA000F5CE3 /* Root */ = {
+		F64238B922CD4AFA000F5CE3 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
 				F6E8D16522CA9EC900213675 /* Dashboard.storyboard */,
 				F66C905622E09E06006CA2BB /* Coordinator */,
 				F66C905522E09DF8006CA2BB /* ViewController */,
 			);
-			path = Root;
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		F64238C222CD4FC6000F5CE3 /* ViewController */ = {
@@ -383,7 +383,7 @@
 		F6D57A6522CD304000BC3DBC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F64238B922CD4AFA000F5CE3 /* Root */,
+				F64238B922CD4AFA000F5CE3 /* Dashboard */,
 				F642389D22CD32F2000F5CE3 /* Conferences */,
 				F642389B22CD32E5000F5CE3 /* Videos */,
 				F642389C22CD32EB000F5CE3 /* Authors */,

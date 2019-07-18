@@ -47,7 +47,7 @@
         <!--Conferences-->
         <scene sceneID="4dc-Yw-383">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X36-z5-jmX" customClass="NavigationController" customModule="SuperArcCore" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X36-z5-jmX" customClass="NavigationController" customModule="SuperArcCoreUI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Conferences" id="iod-T6-EbN"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

@@ -30,7 +30,7 @@
         <!--Videos-->
         <scene sceneID="uZX-d1-qj2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xI1-cs-DQC" customClass="NavigationController" customModule="SuperArcCore" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xI1-cs-DQC" customClass="NavigationController" customModule="SuperArcCoreUI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Videos" id="BcF-uE-6d8"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

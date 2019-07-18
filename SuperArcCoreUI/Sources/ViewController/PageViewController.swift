@@ -2,13 +2,10 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcCore
 import UIKit
 
-open class ViewController: UIViewController, CommonViewControllerProtocol {
-
-    // MARK: Properties
-
-    // Public
+open class PageViewController: UIPageViewController, CommonViewControllerProtocol {
 
     public var context: ViewControllerContextProtocol!
     public var storedViewModel: ViewModel?

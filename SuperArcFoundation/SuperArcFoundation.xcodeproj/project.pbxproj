@@ -10,6 +10,7 @@
 		F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */; };
 		F64238BB22CD4B53000F5CE3 /* StoryboardInitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238BA22CD4B53000F5CE3 /* StoryboardInitiable.swift */; };
 		F6543DC522DD1D1800A52B6F /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6543DC422DD1D1800A52B6F /* UICollectionView+Extensions.swift */; };
+		F66C905922E0B6A1006CA2BB /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C905822E0B6A1006CA2BB /* Dependency.swift */; };
 		F6CAFA6022CBF13F007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */; };
 		F6CAFA6522CBF13F007476D4 /* SuperArcFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA6422CBF13F007476D4 /* SuperArcFoundationTests.swift */; };
 		F6CAFA6722CBF13F007476D4 /* SuperArcFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +37,7 @@
 		F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameDerivable.swift; sourceTree = "<group>"; };
 		F64238BA22CD4B53000F5CE3 /* StoryboardInitiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitiable.swift; sourceTree = "<group>"; };
 		F6543DC422DD1D1800A52B6F /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		F66C905822E0B6A1006CA2BB /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcFoundation.h; sourceTree = "<group>"; };
 		F6CAFA5A22CBF13F007476D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F66C905722E0B672006CA2BB /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F66C905822E0B6A1006CA2BB /* Dependency.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		F6CAFA4C22CBF13F007476D4 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 			children = (
 				F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */,
 				F6CAFA5A22CBF13F007476D4 /* Info.plist */,
+				F66C905722E0B672006CA2BB /* DI */,
 				F6CAFA8922CC0599007476D4 /* Container */,
 				F6CAFA7322CBF209007476D4 /* Storage */,
 				F6CAFA7C22CBFC81007476D4 /* Runtime */,
@@ -255,6 +266,7 @@
 				F6CAFA7722CBF3E6007476D4 /* MemoryStorage.swift in Sources */,
 				F6CAFA8B22CC0930007476D4 /* Container.swift in Sources */,
 				F6CAFA8F22CC0B82007476D4 /* Registry.swift in Sources */,
+				F66C905922E0B6A1006CA2BB /* Dependency.swift in Sources */,
 				F6CAFA8D22CC097C007476D4 /* NSObject+Extensions.swift in Sources */,
 				F6CAFA7922CBFAD5007476D4 /* FilesystemStorage.swift in Sources */,
 				F64238BB22CD4B53000F5CE3 /* StoryboardInitiable.swift in Sources */,
