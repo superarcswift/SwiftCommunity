@@ -3,6 +3,7 @@
 //
 
 import SuperArcFoundation
+import RxSwift
 import UIKit
 
 @UIApplicationMain
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Private
 
     private var appCoordinator: AppCoordinator!
+    private let disposeBag = DisposeBag()
 
     // MARK: Initialization
 
@@ -34,7 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator(window: window!, viewControllerContext: appManager.core.viewControllerContext)
-        appCoordinator.start()
+        appCoordinator
+            .start()
+            .subscribe()
+            .disposed(by: disposeBag)
 
         return true
     }

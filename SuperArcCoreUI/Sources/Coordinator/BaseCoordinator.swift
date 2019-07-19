@@ -12,9 +12,10 @@ open class BaseCoordinator<ResultType>: ClassNameDerivable {
 
     // Public
 
-    // Internal
-
     public var viewControllerContext: ViewControllerContextProtocol
+
+
+    // Internal
 
     /// Utility `DisposeBag` used by the subclasses.
     let disposeBag = DisposeBag()
@@ -40,7 +41,7 @@ open class BaseCoordinator<ResultType>: ClassNameDerivable {
     public func coordinate<T>(to coordinator: BaseCoordinator<T>) -> Observable<T> {
         store(coordinator: coordinator)
         return coordinator.start()
-            .do(onNext: { [weak self] _ in
+            .do(onNext: { [weak self, weak coordinator] _ in
                 self?.free(coordinator: coordinator)
             })
     }
@@ -52,13 +53,18 @@ open class BaseCoordinator<ResultType>: ClassNameDerivable {
         fatalError("Start method should be implmented by subclasses")
     }
 
-    // MARK: Private helpers
-
-    private func store<T>(coordinator: BaseCoordinator<T>) {
-        childCoordinators[name] = coordinator
+    public func store<T>(coordinator: BaseCoordinator<T>) {
+        childCoordinators[coordinator.name] = coordinator
     }
 
-    private func free<T>(coordinator: BaseCoordinator<T>) {
-        childCoordinators[name] = nil
+    public func free<T>(coordinator: BaseCoordinator<T>?) {
+        guard let coordinator = coordinator else {
+            return
+        }
+        childCoordinators[coordinator.name] = nil
+    }
+
+    public func childCoordinator<T>(with key: String) -> BaseCoordinator<T>? {
+        return childCoordinators[key] as? BaseCoordinator<T>
     }
 }

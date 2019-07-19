@@ -10,4 +10,16 @@ class DashboardViewController: TabBarController, StoryboardInitiable {
 
     static var storyboardName = "Dashboard"
 
+    // MARK: Setup
+
+    override func setupViews() {
+        super.setupViews()
+
+        
+    }
+
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print(item)
+    }
+
 }

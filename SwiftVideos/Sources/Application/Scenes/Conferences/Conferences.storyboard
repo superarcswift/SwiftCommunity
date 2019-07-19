@@ -13,7 +13,7 @@
         <!--Conferences-->
         <scene sceneID="9dN-gO-cIr">
             <objects>
-                <viewController id="w1d-5l-EgH" customClass="ConferenceListViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w1d-5l-EgH" customClass="ConferencesCollectionViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B4E-hc-H1T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,12 +37,28 @@
                     <navigationItem key="navigationItem" title="Conferences" id="b19-Yp-MSc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="collectionView" destination="eIp-aW-8g1" id="OCc-K5-MJ6"/>
+                        <outlet property="collectionView" destination="eIp-aW-8g1" id="5LR-Sz-erH"/>
+                        <segue destination="zES-3U-LVX" kind="show" id="MWj-EZ-z5n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvA-AP-iTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="72.991071428571431"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ogj-ws-W5V">
+            <objects>
+                <viewController id="zES-3U-LVX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="flW-R4-W3P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0xi-o1-gHp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saQ-I1-WGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1799" y="73"/>
         </scene>
         <!--Conferences-->
         <scene sceneID="4dc-Yw-383">

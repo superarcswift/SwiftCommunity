@@ -8,7 +8,7 @@ import SuperArcFoundation
 import RxSwift
 import UIKit
 
-class ConferenceListViewController: ViewController, StoryboardInitiable {
+class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
 
     // MARK: Properties
 
@@ -60,7 +60,7 @@ class ConferenceListViewController: ViewController, StoryboardInitiable {
 
 // MARK: - UICollectionViewDelegate
 
-extension ConferenceListViewController: UICollectionViewDelegate {
+extension ConferencesCollectionViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
@@ -69,7 +69,7 @@ extension ConferenceListViewController: UICollectionViewDelegate {
 
 // MARK: - UICollectionViewDataSource
 
-extension ConferenceListViewController: UICollectionViewDataSource {
+extension ConferencesCollectionViewController: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -89,7 +89,9 @@ extension ConferenceListViewController: UICollectionViewDataSource {
 
 }
 
-extension ConferenceListViewController: UICollectionViewDelegateFlowLayout {
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension ConferencesCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)

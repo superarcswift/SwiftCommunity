@@ -13,6 +13,8 @@ class DashboardCoordinator: BaseCoordinator<Void> {
 
     private let window: UIWindow
 
+    private let disposeBag = DisposeBag()
+
     // MARK: Intialization
 
     init(window: UIWindow, viewControllerContext: ViewControllerContextProtocol) {
@@ -27,6 +29,23 @@ class DashboardCoordinator: BaseCoordinator<Void> {
         dashboardViewController.setViewControllerContext(viewControllerContext)
         window.rootViewController = dashboardViewController
         window.makeKeyAndVisible()
-        return Observable.just(())
+
+        let conferencesCoordinator = ConferencesCoordinator(navigationController: dashboardViewController.children[0] as! NavigationController)
+        let videosCoordinator = VideosCoordinator(viewControllerContext: viewControllerContext)
+        let authorsCoordinator = AuthorsCoordinator(viewControllerContext: viewControllerContext)
+
+        coordinate(to: conferencesCoordinator)
+            .subscribe()
+            .disposed(by: disposeBag)
+
+        coordinate(to: videosCoordinator)
+            .subscribe()
+            .disposed(by: disposeBag)
+
+        coordinate(to: authorsCoordinator)
+            .subscribe()
+            .disposed(by: disposeBag)
+
+        return Observable.never()
     }
 }

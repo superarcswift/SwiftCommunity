@@ -4,5 +4,5 @@
 
 import UIKit
 
-class AuthorListViewController: UIViewController {
+class VideosCollectionViewCell: UITableViewCell {
 }

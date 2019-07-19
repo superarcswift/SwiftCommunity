@@ -29,6 +29,7 @@ public protocol CommonViewControllerProtocol: HasViewControllerContext {
 extension CommonViewControllerProtocol where Self: UIViewController {
 
     public func commonViewDidLoad() {
+
         if storedViewModel == nil {
             storedViewModel = setupViewModel()
         }
