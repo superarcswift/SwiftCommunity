@@ -97,6 +97,16 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		F66C916722E6692C006CA2BB /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				F675C35422DEFDA500FA77DD /* Core.swift */,
+				F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */,
+				F6CAFA2F22CBEEC7007476D4 /* Info.plist */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
 		F6CAFA2122CBEEC7007476D4 = {
 			isa = PBXGroup;
 			children = (
@@ -119,9 +129,7 @@
 		F6CAFA2D22CBEEC7007476D4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F675C35422DEFDA500FA77DD /* Core.swift */,
-				F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */,
-				F6CAFA2F22CBEEC7007476D4 /* Info.plist */,
+				F66C916722E6692C006CA2BB /* Top */,
 				F66C90EB22E5ED46006CA2BB /* UI */,
 				F6CAFA4B22CBF0AB007476D4 /* Engine */,
 			);
@@ -470,7 +478,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,7 +509,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

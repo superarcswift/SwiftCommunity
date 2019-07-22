@@ -27,7 +27,6 @@
 		F675C31922DDD3A900FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C30F22DDD3A900FA77DD /* SuperArcCoreUI.framework */; };
 		F675C31E22DDD3A900FA77DD /* SuperArcCoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */; };
 		F675C32022DDD3A900FA77DD /* SuperArcCoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F675C33122DDD49C00FA77DD /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C33022DDD49C00FA77DD /* BaseCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		F675C31822DDD3A900FA77DD /* SuperArcCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcCoreUITests.swift; sourceTree = "<group>"; };
 		F675C31F22DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F675C33022DDD49C00FA77DD /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +136,24 @@
 			path = Runtime;
 			sourceTree = "<group>";
 		};
+		F66C916422E6690E006CA2BB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F66C907722E0BB75006CA2BB /* ViewController */,
+				F66C90E422E5ECA1006CA2BB /* ViewModel */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F66C916522E6691B006CA2BB /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */,
+				F675C31322DDD3A900FA77DD /* Info.plist */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
 		F675C30522DDD3A900FA77DD = {
 			isa = PBXGroup;
 			children = (
@@ -160,12 +176,9 @@
 		F675C31122DDD3A900FA77DD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F675C32F22DDD48D00FA77DD /* Coordinator */,
-				F66C907722E0BB75006CA2BB /* ViewController */,
-				F66C90E422E5ECA1006CA2BB /* ViewModel */,
+				F66C916522E6691B006CA2BB /* Top */,
+				F66C916422E6690E006CA2BB /* Base */,
 				F66C90FD22E64C34006CA2BB /* Runtime */,
-				F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */,
-				F675C31322DDD3A900FA77DD /* Info.plist */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -177,14 +190,6 @@
 				F675C31F22DDD3A900FA77DD /* Info.plist */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		F675C32F22DDD48D00FA77DD /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				F675C33022DDD49C00FA77DD /* BaseCoordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +311,6 @@
 				F66C908322E0BB75006CA2BB /* CommonViewController.swift in Sources */,
 				F66C908222E0BB75006CA2BB /* UIViewController+Extensions.swift in Sources */,
 				F66C908422E0BB75006CA2BB /* TableViewController.swift in Sources */,
-				F675C33122DDD49C00FA77DD /* BaseCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +470,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -497,7 +501,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

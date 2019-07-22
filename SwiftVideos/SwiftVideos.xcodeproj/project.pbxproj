@@ -58,6 +58,7 @@
 		F66C910222E661D6006CA2BB /* AuthorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910122E661D6006CA2BB /* AuthorDetailViewController.swift */; };
 		F66C910622E6620A006CA2BB /* VideoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910522E6620A006CA2BB /* VideoDetailViewModel.swift */; };
 		F66C910822E66239006CA2BB /* AuthorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */; };
+		F66C916922E66995006CA2BB /* SuperArcCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C916822E66995006CA2BB /* SuperArcCoordinator.framework */; };
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34522DDD5B600FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -169,6 +170,7 @@
 		F66C910122E661D6006CA2BB /* AuthorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewController.swift; sourceTree = "<group>"; };
 		F66C910522E6620A006CA2BB /* VideoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailViewModel.swift; sourceTree = "<group>"; };
 		F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewModel.swift; sourceTree = "<group>"; };
+		F66C916822E66995006CA2BB /* SuperArcCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C34722DE27A700FA77DD /* ConferencesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesService.swift; sourceTree = "<group>"; };
 		F675C34B22DE2DE100FA77DD /* conferences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */,
 				F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */,
 				F675C34522DDD5B600FA77DD /* SuperArcCoreUI.framework in Frameworks */,
+				F66C916922E66995006CA2BB /* SuperArcCoordinator.framework in Frameworks */,
 				F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -728,6 +731,7 @@
 				F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */,
 				F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */,
 				F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */,
+				F66C916822E66995006CA2BB /* SuperArcCoordinator.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
