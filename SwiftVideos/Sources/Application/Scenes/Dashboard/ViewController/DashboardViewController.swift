@@ -5,10 +5,13 @@
 import SuperArcCoreUI
 import SuperArcCore
 import SuperArcFoundation
+import RxSwift
 
 class DashboardViewController: TabBarController, StoryboardInitiable {
 
     static var storyboardName = "Dashboard"
+
+    var didSelect = PublishSubject<DashboardTabItem>()
 
     // MARK: Setup
 
@@ -17,7 +20,10 @@ class DashboardViewController: TabBarController, StoryboardInitiable {
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        print(item)
+        guard let tabItem = DashboardTabItem(rawValue: item.tag) else {
+            return
+        }
+        didSelect.on(.next(tabItem))
     }
 }
 
@@ -39,9 +45,9 @@ extension DashboardViewController {
         return rootViewController(with: MoreTableViewController.self)
     }
 
-    private func rootViewController(with type: UIViewController.Type) -> NavigationController {
+    private func rootViewController<T>(with type: T.Type) -> NavigationController {
         let filter = children.filter { viewController in
-            guard ((viewController as? NavigationController)?.topViewController as? ConferencesCollectionViewController) != nil else {
+            guard ((viewController as? NavigationController)?.topViewController as? T) != nil else {
                 return false
             }
 
@@ -49,9 +55,16 @@ extension DashboardViewController {
         }
 
         guard let navigationController = filter.first as? NavigationController else {
-            fatalError("conferences controller not found")
+            fatalError("top controller not found")
         }
 
         return navigationController
     }
+}
+
+enum DashboardTabItem: Int {
+    case conferences
+    case videos
+    case authors
+    case more
 }

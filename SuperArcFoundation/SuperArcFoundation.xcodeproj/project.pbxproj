@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */; };
-		F64238BB22CD4B53000F5CE3 /* StoryboardInitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238BA22CD4B53000F5CE3 /* StoryboardInitiable.swift */; };
 		F6543DC522DD1D1800A52B6F /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6543DC422DD1D1800A52B6F /* UICollectionView+Extensions.swift */; };
 		F66C905922E0B6A1006CA2BB /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C905822E0B6A1006CA2BB /* Dependency.swift */; };
 		F6CAFA6022CBF13F007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */; };
@@ -35,7 +34,6 @@
 
 /* Begin PBXFileReference section */
 		F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameDerivable.swift; sourceTree = "<group>"; };
-		F64238BA22CD4B53000F5CE3 /* StoryboardInitiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitiable.swift; sourceTree = "<group>"; };
 		F6543DC422DD1D1800A52B6F /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		F66C905822E0B6A1006CA2BB /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,7 +134,6 @@
 				F6CAFA7D22CBFC99007476D4 /* String+Extensions.swift */,
 				F6CAFA8C22CC097C007476D4 /* NSObject+Extensions.swift */,
 				F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */,
-				F64238BA22CD4B53000F5CE3 /* StoryboardInitiable.swift */,
 				F6543DC422DD1D1800A52B6F /* UICollectionView+Extensions.swift */,
 			);
 			path = Runtime;
@@ -269,7 +266,6 @@
 				F66C905922E0B6A1006CA2BB /* Dependency.swift in Sources */,
 				F6CAFA8D22CC097C007476D4 /* NSObject+Extensions.swift in Sources */,
 				F6CAFA7922CBFAD5007476D4 /* FilesystemStorage.swift in Sources */,
-				F64238BB22CD4B53000F5CE3 /* StoryboardInitiable.swift in Sources */,
 				F6CAFA7522CBF21C007476D4 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -43,17 +43,33 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Gra-YP-foe" id="P93-J0-kzW"/>
+                        <segue destination="VKq-uO-Gse" kind="show" identifier="showDetail" id="ONz-1l-bm9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZQ-6L-NJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="72.991071428571431"/>
         </scene>
+        <!--Author Detail View Controller-->
+        <scene sceneID="V50-Ft-zNX">
+            <objects>
+                <viewController storyboardIdentifier="AuthorDetailViewController" id="VKq-uO-Gse" customClass="AuthorDetailViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uvr-oH-Brj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="G04-ly-vUB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6q-lZ-QVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="73"/>
+        </scene>
         <!--Authors-->
         <scene sceneID="Q2l-K0-bp6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y8S-hU-Ddj" customClass="NavigationController" customModule="SuperArcCoreUI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Authors" id="Fsp-ro-ffJ"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Authors" id="Fsp-ro-ffJ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3c9-Ap-Upp">

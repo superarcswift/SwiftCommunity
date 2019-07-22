@@ -19,7 +19,7 @@ class ConferencesCollectionViewModel: ViewModel {
     // MARK: APIs
 
     func loadData() {
-        conferenceService.fetch()
+        conferencesService.fetch()
             .done { [weak self] conferences in
                 self?.conferences.accept(conferences)
             }
@@ -36,6 +36,8 @@ class ConferencesCollectionViewModel: ViewModel {
 
         let conference = conferences.value[index]
 
+        print(conference)
+
         didSelect.on(.next(conference))
     }
 }
@@ -44,7 +46,7 @@ class ConferencesCollectionViewModel: ViewModel {
 
 extension ConferencesCollectionViewModel {
 
-    var conferenceService: ConferenceService {
-        return engine.serviceRegistry.resolve(type: ConferenceService.self)
+    var conferencesService: ConferencesService {
+        return engine.serviceRegistry.resolve(type: ConferencesService.self)
     }
 }

@@ -10,6 +10,8 @@ class ConferencesCoordinator: BaseCoordinator<Void> {
 
     // MARK: Properties
 
+    // Private
+
     // MARK: Initialization
 
     init(rootViewController: NavigationController) {
@@ -20,10 +22,13 @@ class ConferencesCoordinator: BaseCoordinator<Void> {
     // MARK: APIs
 
     override func start() -> Observable<Void> {
-        _ = conferencesCollectionViewController.view
+        conferencesCollectionViewController.loadViewIfNeeded()
         let viewModel = conferencesCollectionViewController.viewModel
-        viewModel.didSelect.subscribe { conference in
-            print(conference)
+        viewModel.didSelect.subscribe { [weak self] conferenceEvent in
+            guard let conference = conferenceEvent.element else {
+                return
+            }
+            self?.navigateToDetail(for: conference)
         }.disposed(by: disposeBag)
 
         return Observable.never()
@@ -31,7 +36,13 @@ class ConferencesCoordinator: BaseCoordinator<Void> {
 
     // MARK: Private helpers
 
+    private func navigateToDetail(for conference: Conference) {
+        let conferenceDetailViewController = ConferencesDetailViewController.instantiate()
+        conferenceDetailViewController.setViewControllerContext(viewControllerContext)
+        rootViewController?.pushViewController(conferenceDetailViewController, animated: true)
+    }
+
     private var conferencesCollectionViewController: ConferencesCollectionViewController {
-        return (rootViewController as! NavigationController).topViewController as! ConferencesCollectionViewController
+        return rootViewController?.topViewController as! ConferencesCollectionViewController
     }
 }

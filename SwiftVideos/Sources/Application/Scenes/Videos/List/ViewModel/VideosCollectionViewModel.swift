@@ -11,24 +11,38 @@ class VideosCollectionViewModel: ViewModel {
 
     // MARK: Properties
 
-    var conferences = BehaviorRelay<[Conference]>(value: [])
+    var videos = BehaviorRelay<[Video]>(value: [])
+    var didSelect = PublishSubject<Video>()
 
     // MARK: APIs
 
     func loadData() {
-        conferenceService.fetch()
-            .done { [weak self] conferences in
-                self?.conferences.accept(conferences)
+        videosService.fetch()
+            .done { [weak self] videos in
+                self?.videos.accept(videos)
             }
             .catch { error in
                 print(error)
         }
     }
+
+    func selectAt(_ index: Int) {
+        guard index < videos.value.count else {
+            print("no element found at \(index)")
+            return
+        }
+
+        let video = videos.value[index]
+
+        didSelect.on(.next(video))
+    }
 }
+
+// MARK: - Dependencies
 
 extension VideosCollectionViewModel {
 
-    var conferenceService: ConferenceService {
-        return engine.serviceRegistry.resolve(type: ConferenceService.self)
+    var videosService: VideosService {
+        return engine.serviceRegistry.resolve(type: VideosService.self)
     }
 }

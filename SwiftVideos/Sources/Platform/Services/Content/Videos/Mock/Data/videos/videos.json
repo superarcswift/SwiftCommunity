@@ -1,26 +1,50 @@
 [
     {
         "id": "swiftconf-2018-a-better-mvc",
-        "name": "A Better MVC"
+        "name": "A Better MVC",
+        "source": {
+            "rawValue": 0,
+            "associatedValue": "https://www.youtube.com"
+        }
     },
     {
         "id": "wwdc-2019-swiftui",
-        "name": "SwiftUI"
+        "name": "SwiftUI",
+        "source": {
+            "rawValue": 0,
+            "associatedValue": "https://www.youtube.com"
+        }
     },
     {
         "id": "appbuilder",
-        "name": "AppBuilder"
+        "name": "AppBuilder",
+        "source": {
+            "rawValue": 1,
+            "associatedValue": "https://www.youtube.com"
+        }
     },
     {
         "id": "frenchkit",
-        "name": "FrenchKit"
+        "name": "FrenchKit",
+        "source": {
+            "rawValue": 2,
+            "associatedValue": "https://www.youtube.com"
+        }
     },
     {
         "id": "uiconf",
-        "name": "UIConf"
+        "name": "UIConf",
+        "source": {
+            "rawValue": 1,
+            "associatedValue": "https://www.youtube.com"
+        }
     },
     {
         "id": "swiftheroes",
-        "name": "Swift Heroes"
+        "name": "Swift Heroes",
+        "source": {
+            "rawValue": 0,
+            "associatedValue": "https://www.youtube.com"
+        }
     }
 ]

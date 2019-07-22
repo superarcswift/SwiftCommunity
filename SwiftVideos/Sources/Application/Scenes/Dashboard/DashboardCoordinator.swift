@@ -27,19 +27,29 @@ class DashboardCoordinator: BaseCoordinator<Void> {
     override func start() -> Observable<Void> {
         let dashboardViewController = DashboardViewController.instantiate()
         dashboardViewController.setViewControllerContext(viewControllerContext)
-        rootViewController = dashboardViewController.navigationController
+        rootViewController = dashboardViewController.navigationController as? NavigationController
 
         window.rootViewController = dashboardViewController
         window.makeKeyAndVisible()
 
+        dashboardViewController.didSelect.subscribe { [weak self] event in
+            guard let tabItem = event.element else {
+                return
+            }
+            self?.navigateTo(tabItem)
+        }.disposed(by: disposeBag)
+
         setupConferencesCoordinator(with: dashboardViewController)
-//        setupVideosCoordinator(with: dashboardViewController)
-//        setupAuthorsCoordinator(with: dashboardViewController)
+        setupVideosCoordinator(with: dashboardViewController)
+        setupAuthorsCoordinator(with: dashboardViewController)
 
         return Observable.never()
     }
 
     // MARK: Private helpers
+
+    private func navigateTo(_ tabItem: DashboardTabItem) {
+    }
 
     private func setupConferencesCoordinator(with dashboardViewController: DashboardViewController) {
         let conferencesCoordinator = ConferencesCoordinator(rootViewController: dashboardViewController.conferencesRootViewController)

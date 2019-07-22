@@ -35,7 +35,7 @@ public class Container<T> {
     }
 
     public func resolve<T>(_ type: T.Type) throws -> T {
-        let key = String(describing: T.self)
+        let key = String(describing: type)
         guard let instance = dict[key] as? T else {
             throw ContainerError.notFound
         }

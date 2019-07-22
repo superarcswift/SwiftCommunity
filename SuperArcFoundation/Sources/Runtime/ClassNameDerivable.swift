@@ -3,11 +3,11 @@
 //
 
 public protocol ClassNameDerivable: class {
-    var name: String { get }
+    var className: String { get }
 }
 
 extension ClassNameDerivable {
-    public var name: String {
-        return "\(Self.self)"
+    public var className: String {
+        return String(describing: self)
     }
 }

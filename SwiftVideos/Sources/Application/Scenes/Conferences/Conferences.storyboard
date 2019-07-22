@@ -38,7 +38,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="eIp-aW-8g1" id="5LR-Sz-erH"/>
-                        <segue destination="zES-3U-LVX" kind="show" id="MWj-EZ-z5n"/>
+                        <segue destination="zES-3U-LVX" kind="show" identifier="showDetail" id="MWj-EZ-z5n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvA-AP-iTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,7 +48,7 @@
         <!--Conferences Detail View Controller-->
         <scene sceneID="ogj-ws-W5V">
             <objects>
-                <viewController id="zES-3U-LVX" customClass="ConferencesDetailViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConferencesDetailViewController" id="zES-3U-LVX" customClass="ConferencesDetailViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="flW-R4-W3P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

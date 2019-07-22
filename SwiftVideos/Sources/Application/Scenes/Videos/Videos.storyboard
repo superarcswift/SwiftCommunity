@@ -43,17 +43,33 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Ydn-en-Obo" id="8na-SO-ET2"/>
+                        <segue destination="2SW-ls-gll" kind="show" identifier="showDetail" id="jRd-lk-KSN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19d-Bp-One" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="72.991071428571431"/>
         </scene>
+        <!--Video Detail View Controller-->
+        <scene sceneID="us3-6k-wiS">
+            <objects>
+                <viewController storyboardIdentifier="VideoDetailViewController" id="2SW-ls-gll" customClass="VideoDetailViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1yE-bk-1jy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HkW-YH-3qI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47T-Wk-8h7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="70"/>
+        </scene>
         <!--Videos-->
         <scene sceneID="uZX-d1-qj2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xI1-cs-DQC" customClass="NavigationController" customModule="SuperArcCoreUI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Videos" id="BcF-uE-6d8"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Videos" id="BcF-uE-6d8"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8O2-Yu-oN9">

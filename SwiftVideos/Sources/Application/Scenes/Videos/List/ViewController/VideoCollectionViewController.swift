@@ -21,7 +21,7 @@ class VideosCollectionViewController: ViewController {
 
     // Private
 
-    private var viewModel: VideosCollectionViewModel {
+    var viewModel: VideosCollectionViewModel {
         return storedViewModel as! VideosCollectionViewModel
     }
 
@@ -45,11 +45,11 @@ class VideosCollectionViewController: ViewController {
     override func setupBindings() {
         super.setupBindings()
 
-        viewModel.conferences.subscribe(
+        viewModel.videos.subscribe(
             onNext: { conferences in
                 self.collectionView.reloadData()
-        }
-            ).disposed(by: disposeBag)
+            }
+        ).disposed(by: disposeBag)
     }
 
     override func loadData() {
@@ -62,7 +62,7 @@ class VideosCollectionViewController: ViewController {
 extension VideosCollectionViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+        viewModel.selectAt(indexPath.row)
     }
 }
 
@@ -75,7 +75,7 @@ extension VideosCollectionViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.conferences.value.count
+        return viewModel.videos.value.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

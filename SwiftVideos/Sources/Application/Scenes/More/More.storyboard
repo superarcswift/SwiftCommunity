@@ -79,7 +79,7 @@
         <scene sceneID="eqE-Dy-a6m">
             <objects>
                 <navigationController id="c9h-b5-d2T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" id="I3L-Xi-jt0"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="More" id="I3L-Xi-jt0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u5f-ah-Y9p">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

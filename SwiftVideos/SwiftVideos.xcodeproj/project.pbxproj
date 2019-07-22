@@ -50,6 +50,14 @@
 		F66C90DF22E202E4006CA2BB /* AuthorsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90DE22E202E4006CA2BB /* AuthorsService.swift */; };
 		F66C90E122E20412006CA2BB /* FilesystemAuthorsContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90E022E20412006CA2BB /* FilesystemAuthorsContentProvider.swift */; };
 		F66C90E322E5A9ED006CA2BB /* authors.json in Resources */ = {isa = PBXBuildFile; fileRef = F66C90E222E5A9ED006CA2BB /* authors.json */; };
+		F66C90F222E5F938006CA2BB /* AuthorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90F022E5F938006CA2BB /* AuthorsCollectionViewCell.swift */; };
+		F66C90F322E5F938006CA2BB /* AuthorsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66C90F122E5F938006CA2BB /* AuthorsCollectionViewCell.xib */; };
+		F66C90F522E5F94A006CA2BB /* AuthorsCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90F422E5F94A006CA2BB /* AuthorsCollectionViewFlowLayout.swift */; };
+		F66C90F722E5FAF3006CA2BB /* AuthorsCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90F622E5FAF3006CA2BB /* AuthorsCollectionViewModel.swift */; };
+		F66C90FC22E6052C006CA2BB /* VideoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90FB22E6052C006CA2BB /* VideoDetailViewController.swift */; };
+		F66C910222E661D6006CA2BB /* AuthorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910122E661D6006CA2BB /* AuthorDetailViewController.swift */; };
+		F66C910622E6620A006CA2BB /* VideoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910522E6620A006CA2BB /* VideoDetailViewModel.swift */; };
+		F66C910822E66239006CA2BB /* AuthorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */; };
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34522DDD5B600FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -153,6 +161,14 @@
 		F66C90DE22E202E4006CA2BB /* AuthorsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsService.swift; sourceTree = "<group>"; };
 		F66C90E022E20412006CA2BB /* FilesystemAuthorsContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemAuthorsContentProvider.swift; sourceTree = "<group>"; };
 		F66C90E222E5A9ED006CA2BB /* authors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authors.json; sourceTree = "<group>"; };
+		F66C90F022E5F938006CA2BB /* AuthorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F66C90F122E5F938006CA2BB /* AuthorsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorsCollectionViewCell.xib; sourceTree = "<group>"; };
+		F66C90F422E5F94A006CA2BB /* AuthorsCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		F66C90F622E5FAF3006CA2BB /* AuthorsCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsCollectionViewModel.swift; sourceTree = "<group>"; };
+		F66C90FB22E6052C006CA2BB /* VideoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailViewController.swift; sourceTree = "<group>"; };
+		F66C910122E661D6006CA2BB /* AuthorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewController.swift; sourceTree = "<group>"; };
+		F66C910522E6620A006CA2BB /* VideoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailViewModel.swift; sourceTree = "<group>"; };
+		F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewModel.swift; sourceTree = "<group>"; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C34722DE27A700FA77DD /* ConferencesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesService.swift; sourceTree = "<group>"; };
 		F675C34B22DE2DE100FA77DD /* conferences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
@@ -231,6 +247,7 @@
 				F64238BE22CD4F41000F5CE3 /* Videos.storyboard */,
 				F66C909F22E0FD6D006CA2BB /* VideosCoordinator.swift */,
 				F66C909D22E0FD51006CA2BB /* List */,
+				F66C90F822E60503006CA2BB /* Detail */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -241,6 +258,7 @@
 				F64238C022CD4F4B000F5CE3 /* Authors.storyboard */,
 				F66C90A322E0FDA3006CA2BB /* AuthorsCoordinator.swift */,
 				F66C90A122E0FD83006CA2BB /* List */,
+				F66C910022E661BB006CA2BB /* Detail */,
 			);
 			path = Authors;
 			sourceTree = "<group>";
@@ -411,6 +429,7 @@
 		F66C90AD22E19E1E006CA2BB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F66C90F622E5FAF3006CA2BB /* AuthorsCollectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -418,6 +437,9 @@
 		F66C90AE22E19E23006CA2BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F66C90F422E5F94A006CA2BB /* AuthorsCollectionViewFlowLayout.swift */,
+				F66C90F022E5F938006CA2BB /* AuthorsCollectionViewCell.swift */,
+				F66C90F122E5F938006CA2BB /* AuthorsCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -573,6 +595,56 @@
 				F66C90DE22E202E4006CA2BB /* AuthorsService.swift */,
 			);
 			path = Authors;
+			sourceTree = "<group>";
+		};
+		F66C90F822E60503006CA2BB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F66C90F922E60513006CA2BB /* ViewController */,
+				F66C90FA22E6051A006CA2BB /* ViewModel */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F66C90F922E60513006CA2BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F66C90FB22E6052C006CA2BB /* VideoDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F66C90FA22E6051A006CA2BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F66C910522E6620A006CA2BB /* VideoDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F66C910022E661BB006CA2BB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F66C910322E661DA006CA2BB /* ViewController */,
+				F66C910422E661E2006CA2BB /* ViewModel */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F66C910322E661DA006CA2BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F66C910122E661D6006CA2BB /* AuthorDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F66C910422E661E2006CA2BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F675C34922DE2A9900FA77DD /* Conferences */ = {
@@ -875,6 +947,7 @@
 				F64238BD22CD4E93000F5CE3 /* Conferences.storyboard in Resources */,
 				F66C90B922E1ADF9006CA2BB /* More.storyboard in Resources */,
 				F66C90E322E5A9ED006CA2BB /* authors.json in Resources */,
+				F66C90F322E5F938006CA2BB /* AuthorsCollectionViewCell.xib in Resources */,
 				F64238BF22CD4F41000F5CE3 /* Videos.storyboard in Resources */,
 				F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */,
 				F64238C122CD4F4B000F5CE3 /* Authors.storyboard in Resources */,
@@ -942,7 +1015,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66C910822E66239006CA2BB /* AuthorDetailViewModel.swift in Sources */,
 				F642C68222D2627F0005B0AF /* ConferencesCollectionViewModel.swift in Sources */,
+				F66C90F522E5F94A006CA2BB /* AuthorsCollectionViewFlowLayout.swift in Sources */,
 				F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */,
 				F66C90B022E19E4A006CA2BB /* VideosCollectionViewFlowLayout.swift in Sources */,
 				F66C909C22E0FAC2006CA2BB /* ConferencesCoordinator.swift in Sources */,
@@ -957,15 +1032,20 @@
 				F66C90E122E20412006CA2BB /* FilesystemAuthorsContentProvider.swift in Sources */,
 				F66C90AA22E11DF2006CA2BB /* ConferencesDetailViewController.swift in Sources */,
 				F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */,
+				F66C910222E661D6006CA2BB /* AuthorDetailViewController.swift in Sources */,
 				F66C90BE22E1AF21006CA2BB /* MoreTableViewController.swift in Sources */,
+				F66C910622E6620A006CA2BB /* VideoDetailViewModel.swift in Sources */,
 				F66C90C622E1FC25006CA2BB /* VideosCollectionViewModel.swift in Sources */,
 				F64238C422CD4FDB000F5CE3 /* VideoCollectionViewController.swift in Sources */,
 				F66C90B622E1AD90006CA2BB /* ConferencesDetailViewModel.swift in Sources */,
+				F66C90F222E5F938006CA2BB /* AuthorsCollectionViewCell.swift in Sources */,
 				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
+				F66C90FC22E6052C006CA2BB /* VideoDetailViewController.swift in Sources */,
 				F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
 				F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */,
 				F64238AD22CD42DA000F5CE3 /* ContentService.swift in Sources */,
+				F66C90F722E5FAF3006CA2BB /* AuthorsCollectionViewModel.swift in Sources */,
 				F66C90A022E0FD6D006CA2BB /* VideosCoordinator.swift in Sources */,
 				F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */,
 				F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */,

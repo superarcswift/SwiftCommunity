@@ -5,7 +5,7 @@
 import SuperArcCore
 import PromiseKit
 
-class ConferenceService: ContentService {
+class ConferencesService: ContentService {
 
     // MARK: Properties
 

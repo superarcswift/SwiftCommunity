@@ -2,7 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public protocol StoryboardInitiable: class {
     static var storyboardName: String { get }
