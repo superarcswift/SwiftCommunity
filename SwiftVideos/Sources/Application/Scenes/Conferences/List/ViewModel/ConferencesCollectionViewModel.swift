@@ -36,8 +36,6 @@ class ConferencesCollectionViewModel: ViewModel {
 
         let conference = conferences.value[index]
 
-        print(conference)
-
         didSelect.on(.next(conference))
     }
 }
