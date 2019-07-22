@@ -19,7 +19,7 @@
 		F64238C122CD4F4B000F5CE3 /* Authors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64238C022CD4F4B000F5CE3 /* Authors.storyboard */; };
 		F64238C422CD4FDB000F5CE3 /* VideoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238C322CD4FDB000F5CE3 /* VideoCollectionViewController.swift */; };
 		F64238C722CD4FEC000F5CE3 /* AuthorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238C622CD4FEC000F5CE3 /* AuthorCollectionViewController.swift */; };
-		F642C68222D2627F0005B0AF /* ConferenceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C68122D2627F0005B0AF /* ConferenceListViewModel.swift */; };
+		F642C68222D2627F0005B0AF /* ConferencesCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642C68122D2627F0005B0AF /* ConferencesCollectionViewModel.swift */; };
 		F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */; };
 		F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */; };
 		F66C903D22DF38A2006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903C22DF38A2006CA2BB /* RxSwift.framework */; };
@@ -122,7 +122,7 @@
 		F64238C022CD4F4B000F5CE3 /* Authors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authors.storyboard; sourceTree = "<group>"; };
 		F64238C322CD4FDB000F5CE3 /* VideoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewController.swift; sourceTree = "<group>"; };
 		F64238C622CD4FEC000F5CE3 /* AuthorCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCollectionViewController.swift; sourceTree = "<group>"; };
-		F642C68122D2627F0005B0AF /* ConferenceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListViewModel.swift; sourceTree = "<group>"; };
+		F642C68122D2627F0005B0AF /* ConferencesCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesCollectionViewModel.swift; sourceTree = "<group>"; };
 		F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F66C903C22DF38A2006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -288,7 +288,7 @@
 		F64238B622CD4A05000F5CE3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F642C68122D2627F0005B0AF /* ConferenceListViewModel.swift */,
+				F642C68122D2627F0005B0AF /* ConferencesCollectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -942,7 +942,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F642C68222D2627F0005B0AF /* ConferenceListViewModel.swift in Sources */,
+				F642C68222D2627F0005B0AF /* ConferencesCollectionViewModel.swift in Sources */,
 				F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */,
 				F66C90B022E19E4A006CA2BB /* VideosCollectionViewFlowLayout.swift in Sources */,
 				F66C909C22E0FAC2006CA2BB /* ConferencesCoordinator.swift in Sources */,

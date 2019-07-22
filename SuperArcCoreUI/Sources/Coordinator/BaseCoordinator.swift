@@ -14,11 +14,8 @@ open class BaseCoordinator<ResultType>: ClassNameDerivable {
 
     public var viewControllerContext: ViewControllerContextProtocol
     public var rootViewController: UIViewController?
-
-    // Internal
-
     /// Utility `DisposeBag` used by the subclasses.
-    let disposeBag = DisposeBag()
+    public let disposeBag = DisposeBag()
 
     // Private
 

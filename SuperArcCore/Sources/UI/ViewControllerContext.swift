@@ -2,8 +2,6 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import Foundation
-
 public protocol HasViewControllerContext: class {
     var context: ViewControllerContextProtocol! { get set }
 }

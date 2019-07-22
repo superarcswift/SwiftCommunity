@@ -22,6 +22,7 @@
 		F66C908722E0BB75006CA2BB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C907E22E0BB75006CA2BB /* NavigationController.swift */; };
 		F66C908822E0BB75006CA2BB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C907F22E0BB75006CA2BB /* CollectionViewController.swift */; };
 		F66C908922E0BB75006CA2BB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C908022E0BB75006CA2BB /* TabBarController.swift */; };
+		F66C90E622E5ECB9006CA2BB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90E522E5ECB9006CA2BB /* ViewModel.swift */; };
 		F675C31922DDD3A900FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C30F22DDD3A900FA77DD /* SuperArcCoreUI.framework */; };
 		F675C31E22DDD3A900FA77DD /* SuperArcCoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */; };
 		F675C32022DDD3A900FA77DD /* SuperArcCoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -54,6 +55,7 @@
 		F66C907E22E0BB75006CA2BB /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		F66C907F22E0BB75006CA2BB /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		F66C908022E0BB75006CA2BB /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F66C90E522E5ECB9006CA2BB /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F675C30F22DDD3A900FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCoreUI.h; sourceTree = "<group>"; };
 		F675C31322DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		F66C90E422E5ECA1006CA2BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F66C90E522E5ECB9006CA2BB /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F675C30522DDD3A900FA77DD = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 			children = (
 				F675C32F22DDD48D00FA77DD /* Coordinator */,
 				F66C907722E0BB75006CA2BB /* ViewController */,
+				F66C90E422E5ECA1006CA2BB /* ViewModel */,
 				F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */,
 				F675C31322DDD3A900FA77DD /* Info.plist */,
 			);
@@ -274,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66C90E622E5ECB9006CA2BB /* ViewModel.swift in Sources */,
 				F66C908822E0BB75006CA2BB /* CollectionViewController.swift in Sources */,
 				F66C908122E0BB75006CA2BB /* ViewController.swift in Sources */,
 				F66C908722E0BB75006CA2BB /* NavigationController.swift in Sources */,

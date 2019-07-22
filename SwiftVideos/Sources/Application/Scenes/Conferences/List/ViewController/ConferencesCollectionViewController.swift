@@ -20,11 +20,13 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    // Private
+    // Public
 
-    private var viewModel: ConferencesCollectionViewModel {
+    var viewModel: ConferencesCollectionViewModel {
         return storedViewModel as! ConferencesCollectionViewModel
     }
+
+    // Private
 
     private let disposeBag = DisposeBag()
 
@@ -63,7 +65,7 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
 extension ConferencesCollectionViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+        viewModel.selectAt(indexPath.row)
     }
 }
 

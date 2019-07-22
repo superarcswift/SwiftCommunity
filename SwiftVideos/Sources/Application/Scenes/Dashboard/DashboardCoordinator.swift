@@ -11,9 +11,9 @@ class DashboardCoordinator: BaseCoordinator<Void> {
 
     // MARK: Properties
 
-    private let window: UIWindow
+    // Private
 
-    private let disposeBag = DisposeBag()
+    private let window: UIWindow
 
     // MARK: Intialization
 
@@ -22,7 +22,7 @@ class DashboardCoordinator: BaseCoordinator<Void> {
         super.init(viewControllerContext: viewControllerContext)
     }
 
-    // MARK: Overriden
+    // MARK: APIs
 
     override func start() -> Observable<Void> {
         let dashboardViewController = DashboardViewController.instantiate()
@@ -33,8 +33,8 @@ class DashboardCoordinator: BaseCoordinator<Void> {
         window.makeKeyAndVisible()
 
         setupConferencesCoordinator(with: dashboardViewController)
-        setupVideosCoordinator(with: dashboardViewController)
-        setupAuthorsCoordinator(with: dashboardViewController)
+//        setupVideosCoordinator(with: dashboardViewController)
+//        setupAuthorsCoordinator(with: dashboardViewController)
 
         return Observable.never()
     }
