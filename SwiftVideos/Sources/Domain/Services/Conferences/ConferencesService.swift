@@ -15,11 +15,11 @@ class ConferenceService: ContentService {
 
     // Private
 
-    private var contentProvider: ConferenceDataProvider
+    private var contentProvider: ConferencesDataProvider
 
     // MARK: Intialization
 
-    init(context: ServiceContext, contentProvider: ConferenceDataProvider) {
+    init(context: ServiceContext, contentProvider: ConferencesDataProvider) {
         self.context = context
         self.contentProvider = contentProvider
     }
@@ -33,8 +33,8 @@ class ConferenceService: ContentService {
     // MARK: Private helpers
 }
 
-// MARK: ConferenceDataProvider
+// MARK: - ConferencesDataProvider
 
-protocol ConferenceDataProvider {
+protocol ConferencesDataProvider {
     func load() -> Promise<[Conference]>
 }

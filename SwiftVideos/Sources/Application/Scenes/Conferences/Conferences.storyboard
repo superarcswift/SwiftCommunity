@@ -45,16 +45,31 @@
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="72.991071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Conferences Detail View Controller-->
         <scene sceneID="ogj-ws-W5V">
             <objects>
-                <viewController id="zES-3U-LVX" sceneMemberID="viewController">
+                <viewController id="zES-3U-LVX" customClass="ConferencesDetailViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="flW-R4-W3P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBg-4u-cB7">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KBg-4u-cB7" firstAttribute="centerX" secondItem="flW-R4-W3P" secondAttribute="centerX" id="93a-79-J4c"/>
+                            <constraint firstItem="KBg-4u-cB7" firstAttribute="centerY" secondItem="flW-R4-W3P" secondAttribute="centerY" id="EnZ-dF-JII"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0xi-o1-gHp"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="KBg-4u-cB7" id="FvV-An-FeN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saQ-I1-WGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

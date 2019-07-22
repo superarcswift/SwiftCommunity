@@ -6,7 +6,7 @@ import SuperArcCore
 import RxSwift
 import RxCocoa
 
-class ConferencesCollectionViewModel: ViewModel {
+class VideosCollectionViewModel: ViewModel {
 
     // MARK: Properties
 
@@ -21,11 +21,11 @@ class ConferencesCollectionViewModel: ViewModel {
             }
             .catch { error in
                 print(error)
-            }
+        }
     }
 }
 
-extension ConferencesCollectionViewModel {
+extension VideosCollectionViewModel {
 
     var conferenceService: ConferenceService {
         return engine.serviceRegistry.resolve(type: ConferenceService.self)

@@ -5,7 +5,7 @@
 import Foundation
 
 struct Video: Codable {
-    let id: UUID
+    let id: String
     let name: String
     let source: VideoSource
 }

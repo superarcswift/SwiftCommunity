@@ -13,7 +13,7 @@ open class BaseCoordinator<ResultType>: ClassNameDerivable {
     // Public
 
     public var viewControllerContext: ViewControllerContextProtocol
-
+    public var rootViewController: UIViewController?
 
     // Internal
 

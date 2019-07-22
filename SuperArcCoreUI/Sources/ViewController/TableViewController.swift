@@ -28,13 +28,13 @@ open class TableViewController: UITableViewController, CommonViewControllerProto
 
     // MARK: Setup
 
-    public func setupViewModel() -> ViewModel! {
+    open func setupViewModel() -> ViewModel! {
         return nil
     }
 
-    public func setupViews() {}
+    open func setupViews() {}
 
-    public func setupBindings() {}
+    open func setupBindings() {}
 
-    public func loadData() {}
+    open func loadData() {}
 }

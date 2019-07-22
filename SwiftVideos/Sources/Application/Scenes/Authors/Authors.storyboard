@@ -49,11 +49,11 @@
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="72.991071428571431"/>
         </scene>
-        <!--Item-->
+        <!--Authors-->
         <scene sceneID="Q2l-K0-bp6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y8S-hU-Ddj" customClass="NavigationController" customModule="SuperArcCoreUI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Fsp-ro-ffJ"/>
+                    <tabBarItem key="tabBarItem" title="Authors" id="Fsp-ro-ffJ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3c9-Ap-Upp">

@@ -19,7 +19,7 @@ class AppManager {
     // MARK: Intialization
 
     init() {
-        let conferenceService = ConferenceService(context: core.engine.serviceContext, contentProvider: FilesystemConferenceContentProvider())
+        let conferenceService = ConferenceService(context: core.engine.serviceContext, contentProvider: FilesystemConferencesContentProvider())
         core.engine.serviceRegistry.register(conferenceService, for: ConferenceService.self)
     }
 }

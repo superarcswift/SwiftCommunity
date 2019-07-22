@@ -27,25 +27,39 @@ class DashboardCoordinator: BaseCoordinator<Void> {
     override func start() -> Observable<Void> {
         let dashboardViewController = DashboardViewController.instantiate()
         dashboardViewController.setViewControllerContext(viewControllerContext)
+        rootViewController = dashboardViewController.navigationController
+
         window.rootViewController = dashboardViewController
         window.makeKeyAndVisible()
 
-        let conferencesCoordinator = ConferencesCoordinator(navigationController: dashboardViewController.children[0] as! NavigationController)
-        let videosCoordinator = VideosCoordinator(viewControllerContext: viewControllerContext)
-        let authorsCoordinator = AuthorsCoordinator(viewControllerContext: viewControllerContext)
-
-        coordinate(to: conferencesCoordinator)
-            .subscribe()
-            .disposed(by: disposeBag)
-
-        coordinate(to: videosCoordinator)
-            .subscribe()
-            .disposed(by: disposeBag)
-
-        coordinate(to: authorsCoordinator)
-            .subscribe()
-            .disposed(by: disposeBag)
+        setupConferencesCoordinator(with: dashboardViewController)
+        setupVideosCoordinator(with: dashboardViewController)
+        setupAuthorsCoordinator(with: dashboardViewController)
 
         return Observable.never()
     }
+
+    // MARK: Private helpers
+
+    private func setupConferencesCoordinator(with dashboardViewController: DashboardViewController) {
+        let conferencesCoordinator = ConferencesCoordinator(rootViewController: dashboardViewController.conferencesRootViewController)
+        coordinate(to: conferencesCoordinator)
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+
+    private func setupVideosCoordinator(with dashboardViewController: DashboardViewController) {
+        let videosCoordinator = VideosCoordinator(rootViewController: dashboardViewController.videosRootViewController)
+        coordinate(to: videosCoordinator)
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+
+    private func setupAuthorsCoordinator(with dashboardViewController: DashboardViewController) {
+        let authorsCoordinator = AuthorsCoordinator(rootViewController: dashboardViewController.authorsRootViewController)
+        coordinate(to: authorsCoordinator)
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+
 }

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "swiftconf-2018-a-better-mvc",
+        "name": "A Better MVC"
+    },
+    {
+        "id": "wwdc-2019-swiftui",
+        "name": "SwiftUI"
+    },
+    {
+        "id": "appbuilder",
+        "name": "AppBuilder"
+    },
+    {
+        "id": "frenchkit",
+        "name": "FrenchKit"
+    },
+    {
+        "id": "uiconf",
+        "name": "UIConf"
+    },
+    {
+        "id": "swiftheroes",
+        "name": "Swift Heroes"
+    }
+]

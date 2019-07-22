@@ -10,13 +10,11 @@ class ConferencesCoordinator: BaseCoordinator<Void> {
 
     // MARK: Properties
 
-    private var navigationController: NavigationController
-
     // MARK: Initialization
 
-    init(navigationController: NavigationController) {
-        self.navigationController = navigationController
-        super.init(viewControllerContext: navigationController.context)
+    init(rootViewController: NavigationController) {
+        super.init(viewControllerContext: rootViewController.context)
+        self.rootViewController = rootViewController
     }
 
     // MARK: APIs

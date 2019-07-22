@@ -4,7 +4,7 @@
 
 import PromiseKit
 
-class FilesystemConferenceContentProvider: ConferenceDataProvider {
+class FilesystemConferencesContentProvider: ConferencesDataProvider {
 
     func load() -> Promise<[Conference]> {
         do {

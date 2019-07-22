@@ -22,8 +22,8 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
 
     // Private
 
-    private var viewModel: ConferenceListViewModel {
-        return storedViewModel as! ConferenceListViewModel
+    private var viewModel: ConferencesCollectionViewModel {
+        return storedViewModel as! ConferencesCollectionViewModel
     }
 
     private let disposeBag = DisposeBag()
@@ -31,7 +31,7 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
     // MARK: Lifecycles
 
     override func setupViewModel() -> ViewModel! {
-        return ConferenceListViewModel(engine: context.engine)
+        return ConferencesCollectionViewModel(engine: context.engine)
     }
 
     override func setupViews() {

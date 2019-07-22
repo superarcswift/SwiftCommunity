@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct Author {
-    let id: UUID
+struct Author: Codable {
+    let id: String
     let name: String
 }
