@@ -32,7 +32,7 @@ extension DashboardViewController {
     }
 
     var authorsRootViewController: NavigationController {
-        return rootViewController(with: AuthorCollectionViewController.self)
+        return rootViewController(with: AuthorsCollectionViewController.self)
     }
 
     var moreRootViewController: NavigationController {

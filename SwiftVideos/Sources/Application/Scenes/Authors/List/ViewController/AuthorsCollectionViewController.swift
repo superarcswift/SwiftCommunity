@@ -4,7 +4,7 @@
 
 import UIKit
 
-class AuthorCollectionViewController: UIViewController {
+class AuthorsCollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 }

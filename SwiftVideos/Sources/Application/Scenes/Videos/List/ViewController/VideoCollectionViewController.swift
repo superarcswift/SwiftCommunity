@@ -39,7 +39,7 @@ class VideosCollectionViewController: ViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
 
-        collectionView.registerNib(ConferenceCollectionViewCell.className, bundle: Bundle(for: ConferenceCollectionViewCell.self))
+        collectionView.registerNib(VideosCollectionViewCell.className, bundle: Bundle(for: VideosCollectionViewCell.self))
     }
 
     override func setupBindings() {
@@ -79,7 +79,7 @@ extension VideosCollectionViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ConferenceCollectionViewCell.className, for: indexPath) as? ConferenceCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VideosCollectionViewCell.className, for: indexPath) as? VideosCollectionViewCell else {
             fatalError("wrong cell type")
         }
 

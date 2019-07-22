@@ -4,6 +4,5 @@
 
 import SuperArcCoreUI
 
-class AboutViewController: ViewController {
-    
+class AboutViewController: ViewController {    
 }

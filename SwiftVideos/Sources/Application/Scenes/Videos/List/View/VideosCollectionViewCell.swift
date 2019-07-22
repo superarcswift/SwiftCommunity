@@ -4,5 +4,5 @@
 
 import UIKit
 
-class VideosCollectionViewCell: UITableViewCell {
+class VideosCollectionViewCell: UICollectionViewCell {
 }
