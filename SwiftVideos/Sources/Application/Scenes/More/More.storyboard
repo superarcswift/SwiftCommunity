@@ -13,7 +13,7 @@
         <!--More-->
         <scene sceneID="VoG-jH-Rjk">
             <objects>
-                <tableViewController title="More" id="lK0-AI-wU8" customClass="MoreTableViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MoreTableViewController" title="More" id="lK0-AI-wU8" customClass="MoreTableViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2xH-tj-zag">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="cVU-5p-Y9A" kind="show" id="tqK-eJ-ViP"/>
+                                            <segue destination="cVU-5p-Y9A" kind="show" id="c0u-E3-3Qc"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -63,7 +63,7 @@
         <!--About View Controller-->
         <scene sceneID="SAu-8x-uXh">
             <objects>
-                <viewController id="cVU-5p-Y9A" customClass="AboutViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutViewController" id="cVU-5p-Y9A" customClass="AboutViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F6Z-II-KIT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,6 +78,7 @@
         <!--More-->
         <scene sceneID="eqE-Dy-a6m">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2WD-fP-S2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="c9h-b5-d2T" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="3" title="More" id="I3L-Xi-jt0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -89,7 +90,6 @@
                         <segue destination="lK0-AI-wU8" kind="relationship" relationship="rootViewController" id="2C4-cq-b2j"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2WD-fP-S2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-545" y="148"/>
         </scene>

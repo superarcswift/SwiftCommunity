@@ -4,5 +4,7 @@
 
 import SuperArcCoreUI
 
-class AboutViewController: ViewController {    
+class AboutViewController: ViewController, StoryboardInitiable {
+
+    static var storyboardName = "More"
 }

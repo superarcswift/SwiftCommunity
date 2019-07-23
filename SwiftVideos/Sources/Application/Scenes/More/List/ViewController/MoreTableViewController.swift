@@ -6,6 +6,7 @@ import SuperArcCoreUI
 import SuperArcCore
 import UIKit
 
-class MoreTableViewController: TableViewController {
-    
+class MoreTableViewController: TableViewController, StoryboardInitiable {
+
+    static var storyboardName = "More"
 }

@@ -57,7 +57,6 @@
 		F66C910222E661D6006CA2BB /* AuthorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910122E661D6006CA2BB /* AuthorDetailViewController.swift */; };
 		F66C910622E6620A006CA2BB /* VideoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910522E6620A006CA2BB /* VideoDetailViewModel.swift */; };
 		F66C910822E66239006CA2BB /* AuthorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */; };
-		F66C916922E66995006CA2BB /* SuperArcCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C916822E66995006CA2BB /* SuperArcCoordinator.framework */; };
 		F66C916B22E66C20006CA2BB /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C916A22E66C20006CA2BB /* XCoordinator.framework */; };
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34522DDD5B600FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
@@ -67,6 +66,7 @@
 		F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */; };
 		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
 		F6C4C05422E79C4100C0636E /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C4C05322E79C4100C0636E /* Action.framework */; };
+		F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */; };
 		F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; };
 		F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; };
@@ -169,7 +169,6 @@
 		F66C910122E661D6006CA2BB /* AuthorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewController.swift; sourceTree = "<group>"; };
 		F66C910522E6620A006CA2BB /* VideoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailViewModel.swift; sourceTree = "<group>"; };
 		F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewModel.swift; sourceTree = "<group>"; };
-		F66C916822E66995006CA2BB /* SuperArcCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C916A22E66C20006CA2BB /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C34722DE27A700FA77DD /* ConferencesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesService.swift; sourceTree = "<group>"; };
@@ -177,6 +176,7 @@
 		F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemConferencesContentProvider.swift; sourceTree = "<group>"; };
 		F675C35222DE2F4600FA77DD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		F6C4C05322E79C4100C0636E /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
+		F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
 		F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CF4AB122D349300026F84F /* ConferenceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -214,7 +214,6 @@
 				F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */,
 				F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */,
 				F675C34522DDD5B600FA77DD /* SuperArcCoreUI.framework in Frameworks */,
-				F66C916922E66995006CA2BB /* SuperArcCoordinator.framework in Frameworks */,
 				F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				F66C90B822E1ADF9006CA2BB /* More.storyboard */,
+				F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */,
 				F66C90C722E1FE82006CA2BB /* List */,
 				F66C90C822E1FE8F006CA2BB /* About */,
 			);
@@ -740,7 +740,6 @@
 				F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */,
 				F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */,
 				F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */,
-				F66C916822E66995006CA2BB /* SuperArcCoordinator.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1047,6 +1046,7 @@
 				F66C90C022E1AF29006CA2BB /* MoreViewModel.swift in Sources */,
 				F66C90E122E20412006CA2BB /* FilesystemAuthorsContentProvider.swift in Sources */,
 				F66C90AA22E11DF2006CA2BB /* ConferenceDetailViewController.swift in Sources */,
+				F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */,
 				F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */,
 				F66C910222E661D6006CA2BB /* AuthorDetailViewController.swift in Sources */,
 				F66C90BE22E1AF21006CA2BB /* MoreTableViewController.swift in Sources */,

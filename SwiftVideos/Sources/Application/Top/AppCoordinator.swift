@@ -28,11 +28,6 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
     override func prepareTransition(for route: AppRoute) -> NavigationTransition {
         switch route {
         case .dashboard:
-//            let viewController = DashboardViewController.instantiate()
-//            viewController.setViewControllerContext(viewControllerContext)
-//            let viewModel = DashboardViewModel(router: anyRouter, engine: viewControllerContext.engine)
-//            viewController.storedViewModel = viewModel
-
             return .present(dashboardCoordinator)
         }
     }

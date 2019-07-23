@@ -7,7 +7,7 @@ import SuperArcCore
 import RxSwift
 import UIKit
 
-class AuthorsCollectionViewController: ViewController {
+class AuthorsCollectionViewController: ViewController, StoryboardInitiable {
 
     // MARK: Properties
 
@@ -29,15 +29,10 @@ class AuthorsCollectionViewController: ViewController {
 
     // MARK: Lifecycles
 
-    override func setupViewModel() -> ViewModel! {
-        return AuthorsCollectionViewModel(engine: context.engine)
-    }
-
     override func setupViews() {
         super.setupViews()
 
         collectionView.delegate = self
-        collectionView.dataSource = self
 
         collectionView.registerNib(AuthorsCollectionViewCell.className, bundle: Bundle(for: AuthorsCollectionViewCell.self))
     }
@@ -45,47 +40,19 @@ class AuthorsCollectionViewController: ViewController {
     override func setupBindings() {
         super.setupBindings()
 
-        viewModel.authors.subscribe(
-            onNext: { conferences in
-                self.collectionView.reloadData()
-        }
-            ).disposed(by: disposeBag)
+        viewModel.authors
+            .bind(to: collectionView.rx.items(cellIdentifier: AuthorsCollectionViewCell.className)) { _, element, cell in
+
+            }.disposed(by: disposeBag)
+
+        collectionView.rx.modelSelected(Author.self)
+            .bind(to: viewModel.didSelectAuthor)
+            .disposed(by: disposeBag)
     }
 
     override func loadData() {
         viewModel.loadData()
     }
-}
-
-// MARK: - UICollectionViewDelegate
-
-extension AuthorsCollectionViewController: UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.selectAt(indexPath.row)
-    }
-}
-
-// MARK: - UICollectionViewDataSource
-
-extension AuthorsCollectionViewController: UICollectionViewDataSource {
-
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.authors.value.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AuthorsCollectionViewCell.className, for: indexPath) as? AuthorsCollectionViewCell else {
-            fatalError("wrong cell type")
-        }
-
-        return cell
-    }
-
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

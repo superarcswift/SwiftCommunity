@@ -13,7 +13,7 @@
         <!--Authors-->
         <scene sceneID="N4U-sM-R2P">
             <objects>
-                <viewController id="xyg-ap-S5T" customClass="AuthorsCollectionViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthorsCollectionViewController" id="xyg-ap-S5T" customClass="AuthorsCollectionViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ux-O9-hO1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -17,32 +17,46 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
     private var viewControllerContext: ViewControllerContext
     private let conferencesRouter: AnyRouter<ConferencesRoute>
     private let videosRouter: AnyRouter<VideosRoute>
+    private let authorsRouter: AnyRouter<AuthorsRoute>
+    private let moreRouter: AnyRouter<MoreRoute>
 
     // MARK: Initialization
 
     convenience init(viewControllerContext: ViewControllerContext) {
         let conferencesCoordinator = ConferencesCoordinator(viewControllerContext: viewControllerContext)
-        conferencesCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
+        conferencesCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Conferences", image: nil, tag: 0)
 
         let videosCoordinator = VideosCoordinator(viewControllerContext: viewControllerContext)
-        videosCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+        videosCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Videos", image: nil, tag: 1)
+
+        let authorsCoordinator = AuthorsCoordinator(viewControllerContext: viewControllerContext)
+        authorsCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Authors", image: nil, tag: 2)
+
+        let moreCoordinator = MoreCoordinator(viewControllerContext: viewControllerContext)
+        moreCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "More", image: nil, tag: 2)
 
         self.init(
             viewControllerContext: viewControllerContext,
             conferencesRouter: conferencesCoordinator.anyRouter,
-            videosRouter: videosCoordinator.anyRouter
+            videosRouter: videosCoordinator.anyRouter,
+            authorsRouter: authorsCoordinator.anyRouter,
+            moreRouter: moreCoordinator.anyRouter
         )
     }
 
     init(viewControllerContext: ViewControllerContext,
          conferencesRouter: AnyRouter<ConferencesRoute>,
-         videosRouter: AnyRouter<VideosRoute>) {
+         videosRouter: AnyRouter<VideosRoute>,
+         authorsRouter: AnyRouter<AuthorsRoute>,
+         moreRouter: AnyRouter<MoreRoute>) {
 
         self.viewControllerContext = viewControllerContext
         self.conferencesRouter = conferencesRouter
         self.videosRouter = videosRouter
+        self.authorsRouter = authorsRouter
+        self.moreRouter = moreRouter
 
-        super.init(tabs: [conferencesRouter, videosRouter], select: conferencesRouter)
+        super.init(tabs: [conferencesRouter, videosRouter, authorsRouter, moreRouter], select: conferencesRouter)
     }
 
     // MARK: Overrides
@@ -53,6 +67,10 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
             return .select(conferencesRouter)
         case .videos:
             return .select(videosRouter)
+        case .authors:
+            return .select(authorsRouter)
+        case .more:
+            return .select(moreRouter)
         }
     }
 
@@ -61,6 +79,6 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 enum DashboardRoute: Route {
     case conferences
     case videos
-//    case authors
-//    case more
+    case authors
+    case more
 }

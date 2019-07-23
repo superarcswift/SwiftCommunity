@@ -4,6 +4,8 @@
 
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
+import Action
 import RxSwift
 import RxCocoa
 
@@ -11,10 +13,22 @@ class AuthorsCollectionViewModel: ViewModel {
 
     // MARK: Properties
 
+    private let router: AnyRouter<AuthorsRoute>
+    private lazy var showAuthorAction = Action<Author, Void> { [unowned self] video in
+        self.router.rx.trigger(.authorDetail(video))
+    }
+
     // Public
 
+    lazy var didSelectAuthor: AnyObserver<Author> = showAuthorAction.inputs
     var authors = BehaviorRelay<[Author]>(value: [])
-    var didSelect = PublishSubject<Author>()
+
+    // MARK: Initialization
+
+    init(router: AnyRouter<AuthorsRoute>, engine: Engine) {
+        self.router = router
+        super.init(engine: engine)
+    }
 
     // MARK: APIs
 
@@ -27,20 +41,9 @@ class AuthorsCollectionViewModel: ViewModel {
                 print(error)
         }
     }
-
-    func selectAt(_ index: Int) {
-        guard index < authors.value.count else {
-            print("no author found at \(index)")
-            return
-        }
-
-        let conference = authors.value[index]
-
-        didSelect.on(.next(conference))
-    }
 }
 
-// MARK: Dependencies
+// MARK: - Dependencies
 
 extension AuthorsCollectionViewModel {
 
