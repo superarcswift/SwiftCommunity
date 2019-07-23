@@ -20,10 +20,6 @@ public protocol CommonViewControllerProtocol: ViewModelBindable, HasViewControll
     func setupViews()
     func setupBindings()
     func loadData()
-
-    // MARK: APIs
-
-    func commonPrepare(for segue: UIStoryboardSegue, sender: Any?)
 }
 
 extension CommonViewControllerProtocol where Self: UIViewController {
@@ -40,9 +36,4 @@ extension CommonViewControllerProtocol where Self: UIViewController {
 
         loadData()
     }
-
-    public func commonPrepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination.setViewControllerContext(context)
-    }
-
 }

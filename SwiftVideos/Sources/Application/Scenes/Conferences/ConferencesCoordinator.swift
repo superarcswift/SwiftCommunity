@@ -2,12 +2,12 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import SuperArcCoordinator
+import XCoordinator
 import SuperArcCoreUI
 import SuperArcCore
 import RxSwift
 
-class ConferencesCoordinator: BaseCoordinator<Void> {
+class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
     // MARK: Properties
 
@@ -15,35 +15,33 @@ class ConferencesCoordinator: BaseCoordinator<Void> {
 
     // MARK: Initialization
 
-    init(rootViewController: NavigationController) {
-        super.init(viewControllerContext: rootViewController.context)
-        self.rootViewController = rootViewController
+    init() {
+        super.init(initialRoute: .conferences)
     }
 
-    // MARK: APIs
+    // MARK: Overrides
 
-    override func start() -> Observable<Void> {
-        conferencesCollectionViewController.loadViewIfNeeded()
-        let viewModel = conferencesCollectionViewController.viewModel
-        viewModel.didSelect.subscribe { [weak self] conferenceEvent in
-            guard let conference = conferenceEvent.element else {
-                return
-            }
-            self?.navigateToDetail(for: conference)
-        }.disposed(by: disposeBag)
+    override func prepareTransition(for route: ConferencesRoute) -> NavigationTransition {
+        switch route {
+        case .conferences:
+            let viewController = ConferencesCollectionViewController.instantiate()
+            return .push(viewController)
 
-        return Observable.never()
+        case .conferenceDetail(let conference):
+            let viewController = ConferencesDetailViewController.instantiate()
+            let viewModel = ConferencesDetailViewModel(conference: conference, router: anyRouter, engine: viewController.context.engine)
+            viewController.storedViewModel = viewModel
+            return .push(viewController)
+
+        case .close:
+            return .dismissToRoot()
+        }
     }
 
-    // MARK: Private helpers
+}
 
-    private func navigateToDetail(for conference: Conference) {
-        let conferenceDetailViewController = ConferencesDetailViewController.instantiate()
-        conferenceDetailViewController.setViewControllerContext(viewControllerContext)
-        rootViewController?.pushViewController(conferenceDetailViewController, animated: true)
-    }
-
-    private var conferencesCollectionViewController: ConferencesCollectionViewController {
-        return rootViewController?.topViewController as! ConferencesCollectionViewController
-    }
+enum ConferencesRoute: Route {
+    case conferences
+    case conferenceDetail(Conference)
+    case close
 }

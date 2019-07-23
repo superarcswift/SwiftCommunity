@@ -2,31 +2,40 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import SuperArcCoordinator
+import XCoordinator
 import SuperArcCoreUI
 import SuperArcCore
 import RxSwift
 import UIKit
 
-class AppCoordinator: BaseCoordinator<Void> {
+class AppCoordinator: NavigationCoordinator<AppRoute> {
 
     // MARK: Properties
 
-    private let window: UIWindow
+    private let viewControllerContext: ViewControllerContext
 
     // MARK: Initialization
 
-    init(window: UIWindow, viewControllerContext: ViewControllerContextProtocol) {
-        self.window = window
-
-        super.init(viewControllerContext: viewControllerContext)
+    init(viewControllerContext: ViewControllerContext) {
+        self.viewControllerContext = viewControllerContext
+        super.init(initialRoute: .dashboard)
     }
 
-    // MARK: Overriden
+    // MARK: Overrides
 
-    @discardableResult
-    override func start() -> Observable<Void> {
-        let dashboardCoordinator = DashboardCoordinator(window: window, viewControllerContext: viewControllerContext)
-        return coordinate(to: dashboardCoordinator)
+    override func prepareTransition(for route: AppRoute) -> NavigationTransition {
+        switch route {
+        case .dashboard:
+            let viewController = DashboardViewController.instantiate()
+            viewController.setViewControllerContext(viewControllerContext)
+            let viewModel = DashboardViewModel(router: anyRouter, engine: viewControllerContext.engine)
+            viewController.storedViewModel = viewModel
+
+            return .push(viewController)
+        }
     }
+}
+
+enum AppRoute: Route {
+    case dashboard
 }

@@ -2,7 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import SuperArcFoundation
+import XCoordinator
 import RxSwift
 import UIKit
 
@@ -15,18 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let appManager: AppManager
 
-    var window: UIWindow?
+    var window: UIWindow? = UIWindow()
 
     // Private
 
-    private var appCoordinator: AppCoordinator!
-    private let disposeBag = DisposeBag()
+    private lazy var router = AppCoordinator(viewControllerContext: appManager.core.viewControllerContext).anyRouter
 
     // MARK: Initialization
 
     override init() {
         appManager = AppManager()
-
         super.init()
     }
 
@@ -34,12 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-        appCoordinator = AppCoordinator(window: window!, viewControllerContext: appManager.core.viewControllerContext)
-        appCoordinator
-            .start()
-            .subscribe()
-            .disposed(by: disposeBag)
+        router.setRoot(for: window!)
 
         return true
     }

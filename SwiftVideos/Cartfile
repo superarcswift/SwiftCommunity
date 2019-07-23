@@ -2,4 +2,5 @@ github "SwiftGit2/SwiftGit2"
 github "ReactiveX/RxSwift" ~> 5.0
 github "mxcl/PromiseKit" ~> 6.0
 github "onevcat/Kingfisher" ~> 5.0
-github "quickbirdstudios/XCoordinator" ~> 1.0
+github "peacemoon/XCoordinator" "master"
+github "RxSwiftCommunity/Action" ~> 4.0

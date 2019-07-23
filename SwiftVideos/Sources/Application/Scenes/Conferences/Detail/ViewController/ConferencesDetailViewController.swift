@@ -21,11 +21,5 @@ class ConferencesDetailViewController: ViewController, StoryboardInitiable {
     var viewModel: ConferencesDetailViewModel {
         return storedViewModel as! ConferencesDetailViewModel
     }
-
-    // MARK: Lifecycles
-
-    override func setupViewModel() -> ViewModel! {
-        return ConferencesDetailViewModel(engine: context.engine)
-    }
 }
 

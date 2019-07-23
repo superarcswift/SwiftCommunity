@@ -2,75 +2,47 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import SuperArcCoordinator
+import XCoordinator
 import SuperArcCoreUI
 import SuperArcCore
 import RxSwift
 import UIKit
 
-class DashboardCoordinator: BaseCoordinator<Void> {
+class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
     // MARK: Properties
 
     // Private
 
-    private let window: UIWindow
+    private let conferencesRouter: AnyRouter<ConferencesRoute>
 
-    // MARK: Intialization
+    // MARK: Initialization
 
-    init(window: UIWindow, viewControllerContext: ViewControllerContextProtocol) {
-        self.window = window
-        super.init(viewControllerContext: viewControllerContext)
+    convenience init() {
+        let conferencesCoordinator = ConferencesCoordinator()
+        self.init(conferencesRouter: conferencesCoordinator.anyRouter)
     }
 
-    // MARK: APIs
+    init(conferencesRouter: AnyRouter<ConferencesRoute>) {
+        self.conferencesRouter = conferencesRouter
 
-    override func start() -> Observable<Void> {
-        let dashboardViewController = DashboardViewController.instantiate()
-        dashboardViewController.setViewControllerContext(viewControllerContext)
-        rootViewController = dashboardViewController.navigationController as? NavigationController
-
-        window.rootViewController = dashboardViewController
-        window.makeKeyAndVisible()
-
-        dashboardViewController.didSelect.subscribe { [weak self] event in
-            guard let tabItem = event.element else {
-                return
-            }
-            self?.navigateTo(tabItem)
-        }.disposed(by: disposeBag)
-
-        setupConferencesCoordinator(with: dashboardViewController)
-        setupVideosCoordinator(with: dashboardViewController)
-        setupAuthorsCoordinator(with: dashboardViewController)
-
-        return Observable.never()
+        super.init(tabs: [conferencesRouter], select: conferencesRouter)
     }
 
-    // MARK: Private helpers
+    // MARK: Overrides
 
-    private func navigateTo(_ tabItem: DashboardTabItem) {
+    override func prepareTransition(for route: DashboardRoute) -> TabBarTransition {
+        switch route {
+        case .conferences:
+            return .select(conferencesRouter)
+        }
     }
 
-    private func setupConferencesCoordinator(with dashboardViewController: DashboardViewController) {
-        let conferencesCoordinator = ConferencesCoordinator(rootViewController: dashboardViewController.conferencesRootViewController)
-        coordinate(to: conferencesCoordinator)
-            .subscribe()
-            .disposed(by: disposeBag)
-    }
+}
 
-    private func setupVideosCoordinator(with dashboardViewController: DashboardViewController) {
-        let videosCoordinator = VideosCoordinator(rootViewController: dashboardViewController.videosRootViewController)
-        coordinate(to: videosCoordinator)
-            .subscribe()
-            .disposed(by: disposeBag)
-    }
-
-    private func setupAuthorsCoordinator(with dashboardViewController: DashboardViewController) {
-        let authorsCoordinator = AuthorsCoordinator(rootViewController: dashboardViewController.authorsRootViewController)
-        coordinate(to: authorsCoordinator)
-            .subscribe()
-            .disposed(by: disposeBag)
-    }
-
+enum DashboardRoute: Route {
+    case conferences
+//    case videos
+//    case authors
+//    case more
 }
