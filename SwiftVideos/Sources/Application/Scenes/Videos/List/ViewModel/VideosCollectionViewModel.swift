@@ -4,6 +4,8 @@
 
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
+import Action
 import RxSwift
 import RxCocoa
 
@@ -11,8 +13,22 @@ class VideosCollectionViewModel: ViewModel {
 
     // MARK: Properties
 
+    private let router: AnyRouter<VideosRoute>
+    private lazy var showVideoAction = Action<Video, Void> { [unowned self] video in
+        self.router.rx.trigger(.videoDetail(video))
+    }
+
+    // Public
+
+    lazy var showVideoTrigger: AnyObserver<Video> = showVideoAction.inputs
     var videos = BehaviorRelay<[Video]>(value: [])
-    var didSelect = PublishSubject<Video>()
+
+    // MARK: Initialization
+
+    init(router: AnyRouter<VideosRoute>, engine: Engine) {
+        self.router = router
+        super.init(engine: engine)
+    }
 
     // MARK: APIs
 
@@ -24,17 +40,6 @@ class VideosCollectionViewModel: ViewModel {
             .catch { error in
                 print(error)
         }
-    }
-
-    func selectAt(_ index: Int) {
-        guard index < videos.value.count else {
-            print("no element found at \(index)")
-            return
-        }
-
-        let video = videos.value[index]
-
-        didSelect.on(.next(video))
     }
 }
 

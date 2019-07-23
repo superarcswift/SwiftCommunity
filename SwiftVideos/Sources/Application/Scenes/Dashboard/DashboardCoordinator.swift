@@ -14,19 +14,35 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
     // Private
 
+    private var viewControllerContext: ViewControllerContext
     private let conferencesRouter: AnyRouter<ConferencesRoute>
+    private let videosRouter: AnyRouter<VideosRoute>
 
     // MARK: Initialization
 
-    convenience init() {
-        let conferencesCoordinator = ConferencesCoordinator()
-        self.init(conferencesRouter: conferencesCoordinator.anyRouter)
+    convenience init(viewControllerContext: ViewControllerContext) {
+        let conferencesCoordinator = ConferencesCoordinator(viewControllerContext: viewControllerContext)
+        conferencesCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
+
+        let videosCoordinator = VideosCoordinator(viewControllerContext: viewControllerContext)
+        videosCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+
+        self.init(
+            viewControllerContext: viewControllerContext,
+            conferencesRouter: conferencesCoordinator.anyRouter,
+            videosRouter: videosCoordinator.anyRouter
+        )
     }
 
-    init(conferencesRouter: AnyRouter<ConferencesRoute>) {
-        self.conferencesRouter = conferencesRouter
+    init(viewControllerContext: ViewControllerContext,
+         conferencesRouter: AnyRouter<ConferencesRoute>,
+         videosRouter: AnyRouter<VideosRoute>) {
 
-        super.init(tabs: [conferencesRouter], select: conferencesRouter)
+        self.viewControllerContext = viewControllerContext
+        self.conferencesRouter = conferencesRouter
+        self.videosRouter = videosRouter
+
+        super.init(tabs: [conferencesRouter, videosRouter], select: conferencesRouter)
     }
 
     // MARK: Overrides
@@ -35,6 +51,8 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
         switch route {
         case .conferences:
             return .select(conferencesRouter)
+        case .videos:
+            return .select(videosRouter)
         }
     }
 
@@ -42,7 +60,7 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
 enum DashboardRoute: Route {
     case conferences
-//    case videos
+    case videos
 //    case authors
 //    case more
 }

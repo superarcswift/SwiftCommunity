@@ -12,7 +12,7 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
     // Public
 
     public var context: ViewControllerContextProtocol!
-    public var storedViewModel: ViewModel?
+    public var storedViewModel: ViewModel!
 
     // MARK: Lifecycles
 

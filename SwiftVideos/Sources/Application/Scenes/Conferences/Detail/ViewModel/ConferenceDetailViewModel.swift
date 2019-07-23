@@ -6,7 +6,7 @@ import XCoordinator
 import SuperArcCoreUI
 import SuperArcCore
 
-class ConferencesDetailViewModel: ViewModel {
+class ConferenceDetailViewModel: ViewModel {
 
     // MARK: Properties
 

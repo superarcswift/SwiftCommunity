@@ -8,7 +8,7 @@ import UIKit
 open class PageViewController: UIPageViewController, CommonViewControllerProtocol {
 
     public var context: ViewControllerContextProtocol!
-    public var storedViewModel: ViewModel?
+    public var storedViewModel: ViewModel!
 
     // MARK: Lifecycles
 

@@ -8,7 +8,7 @@ public protocol CommonViewControllerProtocol: ViewModelBindable, HasViewControll
 
     // MARK: Properties
 
-    var storedViewModel: ViewModel? { get set }
+    var storedViewModel: ViewModel! { get set }
 
     // MARK: Lifecycles
 

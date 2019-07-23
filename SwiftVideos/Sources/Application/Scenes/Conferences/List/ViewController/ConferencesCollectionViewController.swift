@@ -32,15 +32,10 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
 
     // MARK: Lifecycles
 
-    override func setupViewModel() -> ViewModel! {
-        return ConferencesCollectionViewModel(engine: context.engine)
-    }
-
     override func setupViews() {
         super.setupViews()
 
         collectionView.delegate = self
-        collectionView.dataSource = self
 
         collectionView.registerNib(ConferenceCollectionViewCell.className, bundle: Bundle(for: ConferenceCollectionViewCell.self))
     }
@@ -48,47 +43,19 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
     override func setupBindings() {
         super.setupBindings()
 
-        viewModel.conferences.subscribe(
-            onNext: { conferences in
-                self.collectionView.reloadData()
-            }
-        ).disposed(by: disposeBag)
+        viewModel.conferences
+            .bind(to: collectionView.rx.items(cellIdentifier: ConferenceCollectionViewCell.className)) { _, element, cell in
+
+            }.disposed(by: disposeBag)
+
+        collectionView.rx.modelSelected(Conference.self)
+            .bind(to: viewModel.didSelectConferenceTrigger)
+            .disposed(by: disposeBag)
     }
 
     override func loadData() {
         viewModel.loadData()
     }
-}
-
-// MARK: - UICollectionViewDelegate
-
-extension ConferencesCollectionViewController: UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.selectAt(indexPath.row)
-    }
-}
-
-// MARK: - UICollectionViewDataSource
-
-extension ConferencesCollectionViewController: UICollectionViewDataSource {
-
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.conferences.value.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ConferenceCollectionViewCell.className, for: indexPath) as? ConferenceCollectionViewCell else {
-            fatalError("wrong cell type")
-        }
-
-        return cell
-    }
-
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

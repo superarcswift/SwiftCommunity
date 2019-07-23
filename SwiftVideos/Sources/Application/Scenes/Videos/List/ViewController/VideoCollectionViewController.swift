@@ -7,7 +7,7 @@ import SuperArcCore
 import RxSwift
 import UIKit
 
-class VideosCollectionViewController: ViewController {
+class VideosCollectionViewController: ViewController, StoryboardInitiable {
     
     // MARK: Properties
 
@@ -28,10 +28,6 @@ class VideosCollectionViewController: ViewController {
     private let disposeBag = DisposeBag()
 
     // MARK: Lifecycles
-
-    override func setupViewModel() -> ViewModel! {
-        return VideosCollectionViewModel(engine: context.engine)
-    }
 
     override func setupViews() {
         super.setupViews()
@@ -62,7 +58,6 @@ class VideosCollectionViewController: ViewController {
 extension VideosCollectionViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.selectAt(indexPath.row)
     }
 }
 

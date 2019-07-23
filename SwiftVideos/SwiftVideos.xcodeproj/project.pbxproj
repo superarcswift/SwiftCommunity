@@ -13,7 +13,6 @@
 		F64238AD22CD42DA000F5CE3 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238AC22CD42DA000F5CE3 /* ContentService.swift */; };
 		F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B022CD451E000F5CE3 /* PromiseKit.framework */; };
 		F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B322CD4838000F5CE3 /* Kingfisher.framework */; };
-		F64238B822CD4A54000F5CE3 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238B722CD4A54000F5CE3 /* DashboardViewController.swift */; };
 		F64238BD22CD4E93000F5CE3 /* Conferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64238BC22CD4E93000F5CE3 /* Conferences.storyboard */; };
 		F64238BF22CD4F41000F5CE3 /* Videos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64238BE22CD4F41000F5CE3 /* Videos.storyboard */; };
 		F64238C122CD4F4B000F5CE3 /* Authors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64238C022CD4F4B000F5CE3 /* Authors.storyboard */; };
@@ -32,11 +31,11 @@
 		F66C909C22E0FAC2006CA2BB /* ConferencesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C909B22E0FAC2006CA2BB /* ConferencesCoordinator.swift */; };
 		F66C90A022E0FD6D006CA2BB /* VideosCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C909F22E0FD6D006CA2BB /* VideosCoordinator.swift */; };
 		F66C90A422E0FDA3006CA2BB /* AuthorsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90A322E0FDA3006CA2BB /* AuthorsCoordinator.swift */; };
-		F66C90AA22E11DF2006CA2BB /* ConferencesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90A922E11DF2006CA2BB /* ConferencesDetailViewController.swift */; };
+		F66C90AA22E11DF2006CA2BB /* ConferenceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90A922E11DF2006CA2BB /* ConferenceDetailViewController.swift */; };
 		F66C90B022E19E4A006CA2BB /* VideosCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90AF22E19E4A006CA2BB /* VideosCollectionViewFlowLayout.swift */; };
 		F66C90B322E19E64006CA2BB /* VideosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90B122E19E64006CA2BB /* VideosCollectionViewCell.swift */; };
 		F66C90B422E19E64006CA2BB /* VideosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66C90B222E19E64006CA2BB /* VideosCollectionViewCell.xib */; };
-		F66C90B622E1AD90006CA2BB /* ConferencesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90B522E1AD90006CA2BB /* ConferencesDetailViewModel.swift */; };
+		F66C90B622E1AD90006CA2BB /* ConferenceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90B522E1AD90006CA2BB /* ConferenceDetailViewModel.swift */; };
 		F66C90B922E1ADF9006CA2BB /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66C90B822E1ADF9006CA2BB /* More.storyboard */; };
 		F66C90BE22E1AF21006CA2BB /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90BD22E1AF21006CA2BB /* MoreTableViewController.swift */; };
 		F66C90C022E1AF29006CA2BB /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90BF22E1AF29006CA2BB /* MoreViewModel.swift */; };
@@ -60,7 +59,6 @@
 		F66C910822E66239006CA2BB /* AuthorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */; };
 		F66C916922E66995006CA2BB /* SuperArcCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C916822E66995006CA2BB /* SuperArcCoordinator.framework */; };
 		F66C916B22E66C20006CA2BB /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C916A22E66C20006CA2BB /* XCoordinator.framework */; };
-		F66C917122E6F222006CA2BB /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C917022E6F222006CA2BB /* DashboardViewModel.swift */; };
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34522DDD5B600FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -68,6 +66,7 @@
 		F675C34C22DE2DE100FA77DD /* conferences.json in Resources */ = {isa = PBXBuildFile; fileRef = F675C34B22DE2DE100FA77DD /* conferences.json */; };
 		F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */; };
 		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
+		F6C4C05422E79C4100C0636E /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C4C05322E79C4100C0636E /* Action.framework */; };
 		F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; };
 		F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; };
@@ -80,7 +79,6 @@
 		F6CF4ABD22D34B800026F84F /* nsspain.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CF4AB822D34B800026F84F /* nsspain.png */; };
 		F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16122CA9EC900213675 /* AppDelegate.swift */; };
 		F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */; };
-		F6E8D16722CA9EC900213675 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16522CA9EC900213675 /* Dashboard.storyboard */; };
 		F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16822CA9ECA00213675 /* Assets.xcassets */; };
 		F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */; };
 		F6E8D17722CA9ECA00213675 /* SwiftVideosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D17622CA9ECA00213675 /* SwiftVideosTests.swift */; };
@@ -127,7 +125,6 @@
 		F64238AC22CD42DA000F5CE3 /* ContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
 		F64238B022CD451E000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F64238B322CD4838000F5CE3 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		F64238B722CD4A54000F5CE3 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F64238BC22CD4E93000F5CE3 /* Conferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conferences.storyboard; sourceTree = "<group>"; };
 		F64238BE22CD4F41000F5CE3 /* Videos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Videos.storyboard; sourceTree = "<group>"; };
 		F64238C022CD4F4B000F5CE3 /* Authors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authors.storyboard; sourceTree = "<group>"; };
@@ -146,11 +143,11 @@
 		F66C909B22E0FAC2006CA2BB /* ConferencesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesCoordinator.swift; sourceTree = "<group>"; };
 		F66C909F22E0FD6D006CA2BB /* VideosCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosCoordinator.swift; sourceTree = "<group>"; };
 		F66C90A322E0FDA3006CA2BB /* AuthorsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsCoordinator.swift; sourceTree = "<group>"; };
-		F66C90A922E11DF2006CA2BB /* ConferencesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesDetailViewController.swift; sourceTree = "<group>"; };
+		F66C90A922E11DF2006CA2BB /* ConferenceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailViewController.swift; sourceTree = "<group>"; };
 		F66C90AF22E19E4A006CA2BB /* VideosCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F66C90B122E19E64006CA2BB /* VideosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosCollectionViewCell.swift; sourceTree = "<group>"; };
 		F66C90B222E19E64006CA2BB /* VideosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosCollectionViewCell.xib; sourceTree = "<group>"; };
-		F66C90B522E1AD90006CA2BB /* ConferencesDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesDetailViewModel.swift; sourceTree = "<group>"; };
+		F66C90B522E1AD90006CA2BB /* ConferenceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailViewModel.swift; sourceTree = "<group>"; };
 		F66C90B822E1ADF9006CA2BB /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		F66C90BD22E1AF21006CA2BB /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		F66C90BF22E1AF29006CA2BB /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
@@ -174,12 +171,12 @@
 		F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewModel.swift; sourceTree = "<group>"; };
 		F66C916822E66995006CA2BB /* SuperArcCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C916A22E66C20006CA2BB /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
-		F66C917022E6F222006CA2BB /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C34722DE27A700FA77DD /* ConferencesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesService.swift; sourceTree = "<group>"; };
 		F675C34B22DE2DE100FA77DD /* conferences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
 		F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemConferencesContentProvider.swift; sourceTree = "<group>"; };
 		F675C35222DE2F4600FA77DD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		F6C4C05322E79C4100C0636E /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CF4AB122D349300026F84F /* ConferenceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -191,7 +188,6 @@
 		F6E8D15E22CA9EC900213675 /* SwiftVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D16122CA9EC900213675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesCollectionViewController.swift; sourceTree = "<group>"; };
-		F6E8D16622CA9EC900213675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
 		F6E8D16822CA9ECA00213675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6E8D16B22CA9ECA00213675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6E8D16D22CA9ECA00213675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C4C05422E79C4100C0636E /* Action.framework in Frameworks */,
 				F66C916B22E66C20006CA2BB /* XCoordinator.framework in Frameworks */,
 				F66C904122DF3B14006CA2BB /* RxRelay.framework in Frameworks */,
 				F66C903F22DF38B0006CA2BB /* RxCocoa.framework in Frameworks */,
@@ -322,10 +319,7 @@
 		F64238B922CD4AFA000F5CE3 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				F6E8D16522CA9EC900213675 /* Dashboard.storyboard */,
 				F66C905322E09DF2006CA2BB /* DashboardCoordinator.swift */,
-				F66C905522E09DF8006CA2BB /* ViewController */,
-				F66C916F22E6F1E8006CA2BB /* ViewModel */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -342,14 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				F64238C622CD4FEC000F5CE3 /* AuthorsCollectionViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		F66C905522E09DF8006CA2BB /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F64238B722CD4A54000F5CE3 /* DashboardViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -404,7 +390,7 @@
 		F66C90A722E11D9F006CA2BB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F66C90B522E1AD90006CA2BB /* ConferencesDetailViewModel.swift */,
+				F66C90B522E1AD90006CA2BB /* ConferenceDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -412,7 +398,7 @@
 		F66C90A822E11DA4006CA2BB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F66C90A922E11DF2006CA2BB /* ConferencesDetailViewController.swift */,
+				F66C90A922E11DF2006CA2BB /* ConferenceDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -671,14 +657,6 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		F66C916F22E6F1E8006CA2BB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F66C917022E6F222006CA2BB /* DashboardViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		F675C34922DE2A9900FA77DD /* Conferences */ = {
 			isa = PBXGroup;
 			children = (
@@ -752,6 +730,7 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6C4C05322E79C4100C0636E /* Action.framework */,
 				F66C916A22E66C20006CA2BB /* XCoordinator.framework */,
 				F66C904022DF3B14006CA2BB /* RxRelay.framework */,
 				F66C903E22DF38B0006CA2BB /* RxCocoa.framework */,
@@ -994,7 +973,6 @@
 				F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */,
 				F66C909622E0F805006CA2BB /* conference-1.json in Resources */,
 				F66C909822E0F8E2006CA2BB /* conference-2.json in Resources */,
-				F6E8D16722CA9EC900213675 /* Dashboard.storyboard in Resources */,
 				F675C34C22DE2DE100FA77DD /* conferences.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1030,6 +1008,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/XCoordinator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -1040,6 +1019,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XCoordinator.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Action.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1059,7 +1039,6 @@
 				F66C90B022E19E4A006CA2BB /* VideosCollectionViewFlowLayout.swift in Sources */,
 				F66C909C22E0FAC2006CA2BB /* ConferencesCoordinator.swift in Sources */,
 				F66C90B322E19E64006CA2BB /* VideosCollectionViewCell.swift in Sources */,
-				F64238B822CD4A54000F5CE3 /* DashboardViewController.swift in Sources */,
 				F66C90DF22E202E4006CA2BB /* AuthorsService.swift in Sources */,
 				F66C90DD22E202DA006CA2BB /* VideosService.swift in Sources */,
 				F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */,
@@ -1067,19 +1046,18 @@
 				F66C90C322E1AF3B006CA2BB /* MoreTableViewCell.swift in Sources */,
 				F66C90C022E1AF29006CA2BB /* MoreViewModel.swift in Sources */,
 				F66C90E122E20412006CA2BB /* FilesystemAuthorsContentProvider.swift in Sources */,
-				F66C90AA22E11DF2006CA2BB /* ConferencesDetailViewController.swift in Sources */,
+				F66C90AA22E11DF2006CA2BB /* ConferenceDetailViewController.swift in Sources */,
 				F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */,
 				F66C910222E661D6006CA2BB /* AuthorDetailViewController.swift in Sources */,
 				F66C90BE22E1AF21006CA2BB /* MoreTableViewController.swift in Sources */,
 				F66C910622E6620A006CA2BB /* VideoDetailViewModel.swift in Sources */,
 				F66C90C622E1FC25006CA2BB /* VideosCollectionViewModel.swift in Sources */,
 				F64238C422CD4FDB000F5CE3 /* VideoCollectionViewController.swift in Sources */,
-				F66C90B622E1AD90006CA2BB /* ConferencesDetailViewModel.swift in Sources */,
+				F66C90B622E1AD90006CA2BB /* ConferenceDetailViewModel.swift in Sources */,
 				F66C90F222E5F938006CA2BB /* AuthorsCollectionViewCell.swift in Sources */,
 				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
 				F66C90FC22E6052C006CA2BB /* VideoDetailViewController.swift in Sources */,
 				F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */,
-				F66C917122E6F222006CA2BB /* DashboardViewModel.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
 				F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */,
 				F64238AD22CD42DA000F5CE3 /* ContentService.swift in Sources */,
@@ -1128,14 +1106,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F6E8D16522CA9EC900213675 /* Dashboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6E8D16622CA9EC900213675 /* Base */,
-			);
-			name = Dashboard.storyboard;
-			sourceTree = "<group>";
-		};
 		F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

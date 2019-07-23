@@ -13,9 +13,12 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
     // Private
 
+    private var viewControllerContext: ViewControllerContext
+
     // MARK: Initialization
 
-    init() {
+    init(viewControllerContext: ViewControllerContext) {
+        self.viewControllerContext = viewControllerContext
         super.init(initialRoute: .conferences)
     }
 
@@ -25,11 +28,13 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
         switch route {
         case .conferences:
             let viewController = ConferencesCollectionViewController.instantiate()
+            let viewModel = ConferencesCollectionViewModel(router: anyRouter, engine: viewControllerContext.engine)
+            viewController.storedViewModel = viewModel
             return .push(viewController)
 
         case .conferenceDetail(let conference):
-            let viewController = ConferencesDetailViewController.instantiate()
-            let viewModel = ConferencesDetailViewModel(conference: conference, router: anyRouter, engine: viewController.context.engine)
+            let viewController = ConferenceDetailViewController.instantiate()
+            let viewModel = ConferenceDetailViewModel(conference: conference, router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 

@@ -13,7 +13,7 @@
         <!--Conferences-->
         <scene sceneID="9dN-gO-cIr">
             <objects>
-                <viewController id="w1d-5l-EgH" customClass="ConferencesCollectionViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConferencesCollectionViewController" id="w1d-5l-EgH" customClass="ConferencesCollectionViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B4E-hc-H1T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="72.991071428571431"/>
         </scene>
-        <!--Conferences Detail View Controller-->
+        <!--Conference Detail View Controller-->
         <scene sceneID="ogj-ws-W5V">
             <objects>
-                <viewController storyboardIdentifier="ConferencesDetailViewController" id="zES-3U-LVX" customClass="ConferencesDetailViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConferenceDetailViewController" id="zES-3U-LVX" customClass="ConferenceDetailViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="flW-R4-W3P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

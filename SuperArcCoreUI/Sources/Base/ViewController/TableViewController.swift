@@ -13,7 +13,7 @@ open class TableViewController: UITableViewController, CommonViewControllerProto
     // Public
 
     public var context: ViewControllerContextProtocol!
-    public var storedViewModel: ViewModel?
+    public var storedViewModel: ViewModel!
 
     // Private
 

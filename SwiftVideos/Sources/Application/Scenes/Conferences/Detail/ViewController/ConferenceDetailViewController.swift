@@ -7,19 +7,22 @@ import SuperArcCore
 import SuperArcFoundation
 import UIKit
 
-class ConferencesDetailViewController: ViewController, StoryboardInitiable {
+class ConferenceDetailViewController: ViewController, StoryboardInitiable {
 
     // MARK: Properties
 
     // Static
+
     static var storyboardName = "Conferences"
 
     // IBOutlets
     
     @IBOutlet weak var titleLabel: UILabel!
 
-    var viewModel: ConferencesDetailViewModel {
-        return storedViewModel as! ConferencesDetailViewModel
+    // Private
+
+    var viewModel: ConferenceDetailViewModel {
+        return storedViewModel as! ConferenceDetailViewModel
     }
 }
 

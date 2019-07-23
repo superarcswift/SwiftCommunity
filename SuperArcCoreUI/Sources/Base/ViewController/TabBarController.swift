@@ -14,7 +14,7 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
     // Public
 
     public var context: ViewControllerContextProtocol!
-    public var storedViewModel: ViewModel?
+    public var storedViewModel: ViewModel!
 
     // Private
 

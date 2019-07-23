@@ -8,7 +8,7 @@ import UIKit
 open class CollectionViewController: UICollectionViewController, CommonViewControllerProtocol {
 
     public var context: ViewControllerContextProtocol!
-    public var storedViewModel: ViewModel?
+    public var storedViewModel: ViewModel!
 
     // MARK: Lifecycles
 
