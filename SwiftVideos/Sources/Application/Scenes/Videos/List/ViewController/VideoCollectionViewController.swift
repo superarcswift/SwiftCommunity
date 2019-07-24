@@ -33,7 +33,6 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
         super.setupViews()
 
         collectionView.delegate = self
-        collectionView.dataSource = self
 
         collectionView.registerNib(VideosCollectionViewCell.className, bundle: Bundle(for: VideosCollectionViewCell.self))
     }
@@ -41,46 +40,19 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
     override func setupBindings() {
         super.setupBindings()
 
-        viewModel.videos.subscribe(
-            onNext: { conferences in
-                self.collectionView.reloadData()
-            }
-        ).disposed(by: disposeBag)
+        viewModel.videos
+            .bind(to: collectionView.rx.items(cellIdentifier: VideosCollectionViewCell.className)) { _, element, cell in
+
+            }.disposed(by: disposeBag)
+
+        collectionView.rx.modelSelected(Video.self)
+            .bind(to: viewModel.didSelectVideo)
+            .disposed(by: disposeBag)
     }
 
     override func loadData() {
         viewModel.loadData()
     }
-}
-
-// MARK: - UICollectionViewDelegate
-
-extension VideosCollectionViewController: UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    }
-}
-
-// MARK: - UICollectionViewDataSource
-
-extension VideosCollectionViewController: UICollectionViewDataSource {
-
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.videos.value.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VideosCollectionViewCell.className, for: indexPath) as? VideosCollectionViewCell else {
-            fatalError("wrong cell type")
-        }
-
-        return cell
-    }
-
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

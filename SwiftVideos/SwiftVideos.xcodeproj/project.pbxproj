@@ -67,6 +67,9 @@
 		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
 		F6C4C05422E79C4100C0636E /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C4C05322E79C4100C0636E /* Action.framework */; };
 		F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */; };
+		F6C4C05922E7C70200C0636E /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05822E7C70200C0636E /* VideoPlayerViewController.swift */; };
+		F6C4C05D22E7CB4B00C0636E /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05C22E7CB4B00C0636E /* VideoPlayerViewModel.swift */; };
+		F6C4C06322E7D41E00C0636E /* YoutubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C4C06222E7D41E00C0636E /* YoutubeKit.framework */; };
 		F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; };
 		F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; };
@@ -177,6 +180,9 @@
 		F675C35222DE2F4600FA77DD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		F6C4C05322E79C4100C0636E /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
+		F6C4C05822E7C70200C0636E /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		F6C4C05C22E7CB4B00C0636E /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		F6C4C06222E7D41E00C0636E /* YoutubeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YoutubeKit.framework; path = Carthage/Build/iOS/YoutubeKit.framework; sourceTree = "<group>"; };
 		F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CF4AB122D349300026F84F /* ConferenceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C4C06322E7D41E00C0636E /* YoutubeKit.framework in Frameworks */,
 				F6C4C05422E79C4100C0636E /* Action.framework in Frameworks */,
 				F66C916B22E66C20006CA2BB /* XCoordinator.framework in Frameworks */,
 				F66C904122DF3B14006CA2BB /* RxRelay.framework in Frameworks */,
@@ -252,6 +259,7 @@
 				F66C909F22E0FD6D006CA2BB /* VideosCoordinator.swift */,
 				F66C909D22E0FD51006CA2BB /* List */,
 				F66C90F822E60503006CA2BB /* Detail */,
+				F6C4C05722E7C6ED00C0636E /* Player */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -727,9 +735,35 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		F6C4C05722E7C6ED00C0636E /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				F6C4C05A22E7CB3000C0636E /* ViewController */,
+				F6C4C05B22E7CB3800C0636E /* ViewModel */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		F6C4C05A22E7CB3000C0636E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6C4C05822E7C70200C0636E /* VideoPlayerViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F6C4C05B22E7CB3800C0636E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6C4C05C22E7CB4B00C0636E /* VideoPlayerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6C4C06222E7D41E00C0636E /* YoutubeKit.framework */,
 				F6C4C05322E79C4100C0636E /* Action.framework */,
 				F66C916A22E66C20006CA2BB /* XCoordinator.framework */,
 				F66C904022DF3B14006CA2BB /* RxRelay.framework */,
@@ -1008,6 +1042,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/XCoordinator.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/YoutubeKit.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -1019,6 +1054,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XCoordinator.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Action.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/YoutubeKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1044,6 +1080,7 @@
 				F66C90D622E20235006CA2BB /* FilesystemVideosContentProvider.swift in Sources */,
 				F66C90C322E1AF3B006CA2BB /* MoreTableViewCell.swift in Sources */,
 				F66C90C022E1AF29006CA2BB /* MoreViewModel.swift in Sources */,
+				F6C4C05922E7C70200C0636E /* VideoPlayerViewController.swift in Sources */,
 				F66C90E122E20412006CA2BB /* FilesystemAuthorsContentProvider.swift in Sources */,
 				F66C90AA22E11DF2006CA2BB /* ConferenceDetailViewController.swift in Sources */,
 				F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */,
@@ -1051,6 +1088,7 @@
 				F66C910222E661D6006CA2BB /* AuthorDetailViewController.swift in Sources */,
 				F66C90BE22E1AF21006CA2BB /* MoreTableViewController.swift in Sources */,
 				F66C910622E6620A006CA2BB /* VideoDetailViewModel.swift in Sources */,
+				F6C4C05D22E7CB4B00C0636E /* VideoPlayerViewModel.swift in Sources */,
 				F66C90C622E1FC25006CA2BB /* VideosCollectionViewModel.swift in Sources */,
 				F64238C422CD4FDB000F5CE3 /* VideoCollectionViewController.swift in Sources */,
 				F66C90B622E1AD90006CA2BB /* ConferenceDetailViewModel.swift in Sources */,

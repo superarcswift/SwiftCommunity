@@ -38,6 +38,12 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
+        case .videoPlayer(let video):
+            let viewController = VideoDetailViewController.instantiate()
+            let viewModel = VideoDetailViewModel(video: video, router: anyRouter, engine: viewControllerContext.engine)
+            viewController.storedViewModel = viewModel
+            return .push(viewController)
+
         case .close:
             return .dismissToRoot()
         }
@@ -48,5 +54,6 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 enum VideosRoute: Route {
     case videos
     case videoDetail(Video)
+    case videoPlayer(Video)
     case close
 }

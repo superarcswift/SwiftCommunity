@@ -20,7 +20,7 @@ class VideosCollectionViewModel: ViewModel {
 
     // Public
 
-    lazy var showVideoTrigger: AnyObserver<Video> = showVideoAction.inputs
+    lazy var didSelectVideo: AnyObserver<Video> = showVideoAction.inputs
     var videos = BehaviorRelay<[Video]>(value: [])
 
     // MARK: Initialization
