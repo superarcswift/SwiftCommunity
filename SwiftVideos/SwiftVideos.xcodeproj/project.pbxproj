@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3322E8316000EDB601 /* OnboardingViewController.swift */; };
+		F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */; };
+		F640BC3822E8318800EDB601 /* CoordinatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */; };
 		F64238A022CD338A000F5CE3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642389F22CD338A000F5CE3 /* Video.swift */; };
 		F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A222CD34E6000F5CE3 /* Conference.swift */; };
 		F64238A722CD3C2F000F5CE3 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A622CD3C2F000F5CE3 /* Author.swift */; };
@@ -122,6 +125,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F640BC3322E8316000EDB601 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedViewModel.swift; sourceTree = "<group>"; };
 		F642389F22CD338A000F5CE3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		F64238A222CD34E6000F5CE3 /* Conference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conference.swift; sourceTree = "<group>"; };
 		F64238A622CD3C2F000F5CE3 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
@@ -242,6 +248,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F640BC3022E8313F00EDB601 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F640BC3122E8314A00EDB601 /* ViewController */,
+				F640BC3222E8314F00EDB601 /* ViewModel */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F640BC3122E8314A00EDB601 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F640BC3322E8316000EDB601 /* OnboardingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F640BC3222E8314F00EDB601 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F642389A22CD32CB000F5CE3 /* Top */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,6 +692,7 @@
 		F66C916E22E66EAA006CA2BB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -793,6 +825,7 @@
 		F6D57A6522CD304000BC3DBC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F640BC3022E8313F00EDB601 /* Onboarding */,
 				F64238B922CD4AFA000F5CE3 /* Dashboard */,
 				F642389D22CD32F2000F5CE3 /* Conferences */,
 				F642389B22CD32E5000F5CE3 /* Videos */,
@@ -1086,8 +1119,10 @@
 				F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */,
 				F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */,
 				F66C910222E661D6006CA2BB /* AuthorDetailViewController.swift in Sources */,
+				F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */,
 				F66C90BE22E1AF21006CA2BB /* MoreTableViewController.swift in Sources */,
 				F66C910622E6620A006CA2BB /* VideoDetailViewModel.swift in Sources */,
+				F640BC3822E8318800EDB601 /* CoordinatedViewModel.swift in Sources */,
 				F6C4C05D22E7CB4B00C0636E /* VideoPlayerViewModel.swift in Sources */,
 				F66C90C622E1FC25006CA2BB /* VideosCollectionViewModel.swift in Sources */,
 				F64238C422CD4FDB000F5CE3 /* VideoCollectionViewController.swift in Sources */,
@@ -1095,6 +1130,7 @@
 				F66C90F222E5F938006CA2BB /* AuthorsCollectionViewCell.swift in Sources */,
 				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
 				F66C90FC22E6052C006CA2BB /* VideoDetailViewController.swift in Sources */,
+				F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */,
 				F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
 				F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */,

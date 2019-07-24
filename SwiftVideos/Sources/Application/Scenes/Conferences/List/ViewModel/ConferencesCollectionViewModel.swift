@@ -17,13 +17,12 @@ protocol ConferencesCollectionViewModelOutput {
     var conferences: BehaviorRelay<[Conference]> { get set }
 }
 
-class ConferencesCollectionViewModel: ViewModel, ConferencesCollectionViewModelOutput, ConferencesCollectionViewModelInput {
+class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, ConferencesCollectionViewModelOutput, ConferencesCollectionViewModelInput {
 
     // MARK: Properties
 
     // Private
 
-    private let router: AnyRouter<ConferencesRoute>
     private lazy var showConferenceAction = Action<Conference, Void> { [unowned self] conference in
         self.router.rx.trigger(.conferenceDetail(conference))
     }
@@ -32,13 +31,6 @@ class ConferencesCollectionViewModel: ViewModel, ConferencesCollectionViewModelO
 
     lazy var didSelectConferenceTrigger: AnyObserver<Conference> = showConferenceAction.inputs
     var conferences = BehaviorRelay<[Conference]>(value: [])
-
-    // MARK: Initialization
-
-    init(router: AnyRouter<ConferencesRoute>, engine: Engine) {
-        self.router = router
-        super.init(engine: engine)
-    }
 
     // MARK: APIs
 
