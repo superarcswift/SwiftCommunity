@@ -4,7 +4,7 @@
 
 import PromiseKit
 
-public class FilesystemConferencesContentProvider: ConferencesDataProvider {
+public class FilesystemConferencesContentProvider: ConferencesDataProvider, FilesystemContentProvider {
 
     // MARK: Properties
 
@@ -25,22 +25,29 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider {
 
     // MARK: APIs
 
-    public func load() -> Promise<[Conference]> {
-        do {
-            let conferecesFileURL = rootDocumentURL.appendingPathComponent("conferences.json")
-            print(conferecesFileURL.absoluteString)
-            let jsonDecoder = JSONDecoder()
-            let fileData = try Data(contentsOf: conferecesFileURL)
-            let conferenceList = try jsonDecoder.decode([Conference].self, from: fileData)
+    public func load() -> Promise<[ConferenceMetaData]> {
+        return Promise { resolver in
+            do {
+                let conferecesFileURL = rootDocumentURL.appendingPathComponent("conferences.json")
+                let conferenceList = try decode([ConferenceMetaData].self, from: conferecesFileURL)
 
-            return Promise.value(conferenceList)
-        } catch {
-            print(error.localizedDescription)
-            return Promise.value([])
+                resolver.fulfill(conferenceList)
+            } catch {
+                resolver.reject(error)
+            }
         }
     }
 
-    public func bannerImageURL(for conference: Conference) -> URL? {
+    public func conference(with conferenceMetaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
+        return Promise { resolver in
+            let conferenceFileURL = rootDocumentURL.appendingPathComponent(conferenceMetaData.id, isDirectory: true).appendingPathComponent("conference.json")
+            let conferenceDetail = try decode(ConferenceDetail.self, from: conferenceFileURL)
+
+            return resolver.fulfill(conferenceDetail)
+        }
+    }
+
+    public func bannerImageURL(for conference: ConferenceMetaData) -> URL? {
         let conferenceFolderURL = rootDocumentURL.appendingPathComponent(conference.id, isDirectory: true)
         let bannerFileURL = conferenceFolderURL.appendingPathComponent("cover.png")
 

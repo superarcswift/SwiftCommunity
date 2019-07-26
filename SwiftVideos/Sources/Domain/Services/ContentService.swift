@@ -7,6 +7,5 @@ import PromiseKit
 
 protocol ContentService: Service {
     associatedtype ContentType
-
     func fetch() -> Promise<[ContentType]>
 }

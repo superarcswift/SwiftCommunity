@@ -4,34 +4,32 @@
 
 import PromiseKit
 
-class FilesystemAuthorsContentProvider: AuthorsDataProvider {
+class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentProvider {
 
     // MARK: Properties
 
     // Public
 
-    var rootFolderPath: String
+    var baseFolderPath: String
 
     // MARK: Initialization
 
     init(rootFolderPath: String) {
-        self.rootFolderPath = rootFolderPath
+        self.baseFolderPath = rootFolderPath
     }
 
     // MARK: APIs
 
     func load() -> Promise<[Author]> {
-        do {
-            let url = Bundle.main.url(forResource: "authors", withExtension: "json")!
-            let jsonDecoder = JSONDecoder()
-            let fileData = try Data(contentsOf: url)
-            let authorsList = try jsonDecoder.decode([Author].self, from: fileData)
+        return Promise { resolver in
+            do {
+                let authorsFileURL = Bundle.main.url(forResource: "authors", withExtension: "json")!
+                let authorsList = try decode([Author].self, from: authorsFileURL)
 
-            return Promise.value(authorsList)
-        } catch {
-            print(error.localizedDescription)
-            return Promise.value([])
+                resolver.fulfill(authorsList)
+            } catch {
+                resolver.reject(error)
+            }
         }
-
     }
 }

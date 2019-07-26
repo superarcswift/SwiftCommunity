@@ -32,9 +32,9 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
-        case .conferenceDetail(let conference):
+        case .conferenceDetail(let conferenceMetaData):
             let viewController = ConferenceDetailViewController.instantiate()
-            let viewModel = ConferenceDetailViewModel(conference: conference, router: anyRouter, engine: viewControllerContext.engine)
+            let viewModel = ConferenceDetailViewModel(conferenceMetaData: conferenceMetaData, router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
@@ -45,8 +45,8 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
 }
 
-enum ConferencesRoute: Route {
+public enum ConferencesRoute: Route {
     case conferences
-    case conferenceDetail(Conference)
+    case conferenceDetail(ConferenceMetaData)
     case close
 }

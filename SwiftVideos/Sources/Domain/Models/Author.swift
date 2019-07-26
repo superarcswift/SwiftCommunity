@@ -2,7 +2,8 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import Foundation
+
+typealias AuthorID = String
 
 struct Author: Codable {
     let id: String

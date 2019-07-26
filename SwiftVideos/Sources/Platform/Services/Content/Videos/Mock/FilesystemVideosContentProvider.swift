@@ -4,34 +4,31 @@
 
 import PromiseKit
 
-class FilesystemVideosContentProvider: VideosDataProvider {
+class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProvider {
 
     // MARK: Properties
 
     // Public
 
-    var rootFolderPath: String
+    var baseFolderPath: String
 
     // MARK: Initialization
 
     init(rootFolderPath: String) {
-        self.rootFolderPath = rootFolderPath
+        self.baseFolderPath = rootFolderPath
     }
 
     // MARK: APIs
 
     func load() -> Promise<[Video]> {
-        do {
-            let url = Bundle.main.url(forResource: "videos", withExtension: "json")!
-            let jsonDecoder = JSONDecoder()
-            let fileData = try Data(contentsOf: url)
-            let videosList = try jsonDecoder.decode([Video].self, from: fileData)
-
-            return Promise.value(videosList)
-        } catch {
-            print(error.localizedDescription)
-            return Promise.value([])
+        return Promise { resolver in
+            do {
+                let videoFileURL = Bundle.main.url(forResource: "videos", withExtension: "json")!
+                let videosList = try decode([Video].self, from: videoFileURL)
+                resolver.fulfill(videosList)
+            } catch {
+                resolver.reject(error)
+            }
         }
-
     }
 }

@@ -26,11 +26,15 @@ class ConferencesService: ContentService {
 
     // MARK: APIs
 
-    func fetch() -> Promise<[Conference]> {
+    func fetch() -> Promise<[ConferenceMetaData]> {
         return contentProvider.load()
     }
 
-    func bannerImageURL(for conference: Conference) -> URL? {
+    func conference(with metaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
+        return contentProvider.conference(with: metaData)
+    }
+
+    func bannerImageURL(for conference: ConferenceMetaData) -> URL? {
         return contentProvider.bannerImageURL(for: conference)
     }
 
@@ -39,7 +43,8 @@ class ConferencesService: ContentService {
 
 // MARK: - ConferencesDataProvider
 
-protocol ConferencesDataProvider {
-    func load() -> Promise<[Conference]>
-    func bannerImageURL(for conference: Conference) -> URL?
+protocol ConferencesDataProvider: ContentDataProvider {
+    func load() -> Promise<[ConferenceMetaData]>
+    func conference(with metaData: ConferenceMetaData) -> Promise<ConferenceDetail>
+    func bannerImageURL(for conference: ConferenceMetaData) -> URL?
 }

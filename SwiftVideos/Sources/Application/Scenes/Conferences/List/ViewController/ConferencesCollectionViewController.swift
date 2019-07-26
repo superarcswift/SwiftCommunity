@@ -53,10 +53,11 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
                     cell.bannerImageView.image = bannerImage
                 } else {
                     cell.bannerImageView.isHidden = true
+                    cell.backgroundColor = .red
                 }
             }.disposed(by: disposeBag)
 
-        collectionView.rx.modelSelected(Conference.self)
+        collectionView.rx.modelSelected(ConferenceMetaData.self)
             .bind(to: viewModel.didSelectConferenceTrigger)
             .disposed(by: disposeBag)
     }

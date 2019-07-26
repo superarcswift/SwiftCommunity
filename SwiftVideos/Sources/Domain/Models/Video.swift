@@ -4,8 +4,10 @@
 
 import Foundation
 
+typealias VideoID = String
+
 struct Video: Codable {
-    let id: String
+    let id: VideoID
     let name: String
     let source: VideoSource
 }
@@ -19,25 +21,25 @@ enum VideoSource {
 extension VideoSource: Codable {
 
     enum Key: CodingKey {
-        case rawValue
-        case associatedValue
+        case type
+        case value
     }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Key.self)
-        let rawValue = try container.decode(Int.self, forKey: .rawValue)
+        let rawValue = try container.decode(Int.self, forKey: .type)
 
         switch rawValue {
         case 0:
-            let id = try container.decode(String.self, forKey: .associatedValue)
+            let id = try container.decode(String.self, forKey: .value)
             self = .youtube(id: id)
 
         case 1:
-            let url = try container.decode(String.self, forKey: .associatedValue)
+            let url = try container.decode(String.self, forKey: .value)
             self = .wwdc(url: url)
 
         case 2:
-            let url = try container.decode(String.self, forKey: .associatedValue)
+            let url = try container.decode(String.self, forKey: .value)
             self = .url(url: url)
 
         default:
@@ -50,16 +52,16 @@ extension VideoSource: Codable {
 
         switch self {
         case .youtube(let id):
-            try container.encode(0, forKey: .rawValue)
-            try container.encode(id, forKey: .associatedValue)
+            try container.encode(0, forKey: .type)
+            try container.encode(id, forKey: .value)
 
         case .wwdc(let url):
-            try container.encode(1, forKey: .rawValue)
-            try container.encode(url, forKey: .associatedValue)
+            try container.encode(1, forKey: .type)
+            try container.encode(url, forKey: .value)
 
         case .url(let url):
-            try container.encode(2, forKey: .rawValue)
-            try container.encode(url, forKey: .associatedValue)
+            try container.encode(2, forKey: .type)
+            try container.encode(url, forKey: .value)
 
         }
     }

@@ -35,6 +35,6 @@ class AuthorsService: ContentService {
 
 // MARK: - AuthorsDataProvider
 
-protocol AuthorsDataProvider {
+protocol AuthorsDataProvider: ContentDataProvider {
     func load() -> Promise<[Author]>
 }

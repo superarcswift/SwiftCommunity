@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F62DB63222EA45A90089C620 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DB63122EA45A90089C620 /* ObjectiveGit.framework */; };
+		F63712F922EB952F0071C2DC /* FilesystemContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712F822EB952F0071C2DC /* FilesystemContentProvider.swift */; };
+		F63712FB22EB98440071C2DC /* ContentDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FA22EB98440071C2DC /* ContentDataProvider.swift */; };
 		F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3322E8316000EDB601 /* OnboardingViewController.swift */; };
 		F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */; };
 		F640BC3822E8318800EDB601 /* CoordinatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */; };
@@ -131,6 +133,8 @@
 
 /* Begin PBXFileReference section */
 		F62DB63122EA45A90089C620 /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
+		F63712F822EB952F0071C2DC /* FilesystemContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemContentProvider.swift; sourceTree = "<group>"; };
+		F63712FA22EB98440071C2DC /* ContentDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDataProvider.swift; sourceTree = "<group>"; };
 		F640BC3322E8316000EDB601 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedViewModel.swift; sourceTree = "<group>"; };
@@ -364,6 +368,7 @@
 				F66C90DA22E202C8006CA2BB /* Videos */,
 				F675C34922DE2A9900FA77DD /* Conferences */,
 				F64238AC22CD42DA000F5CE3 /* ContentService.swift */,
+				F63712FA22EB98440071C2DC /* ContentDataProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -774,6 +779,7 @@
 			isa = PBXGroup;
 			children = (
 				F689EC3822CE206F00CE3996 /* Content */,
+				F63712F822EB952F0071C2DC /* FilesystemContentProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1143,6 +1149,7 @@
 				F66C90F522E5F94A006CA2BB /* AuthorsCollectionViewFlowLayout.swift in Sources */,
 				F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */,
 				F66C90B022E19E4A006CA2BB /* VideosCollectionViewFlowLayout.swift in Sources */,
+				F63712F922EB952F0071C2DC /* FilesystemContentProvider.swift in Sources */,
 				F66C909C22E0FAC2006CA2BB /* ConferencesCoordinator.swift in Sources */,
 				F66C90B322E19E64006CA2BB /* VideosCollectionViewCell.swift in Sources */,
 				F66C90DF22E202E4006CA2BB /* AuthorsService.swift in Sources */,
@@ -1181,6 +1188,7 @@
 				F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */,
 				F64238C722CD4FEC000F5CE3 /* AuthorsCollectionViewController.swift in Sources */,
 				F675C34822DE27A700FA77DD /* ConferencesService.swift in Sources */,
+				F63712FB22EB98440071C2DC /* ContentDataProvider.swift in Sources */,
 				F66C90A422E0FDA3006CA2BB /* AuthorsCoordinator.swift in Sources */,
 				F66C90CB22E1FEA8006CA2BB /* AboutViewController.swift in Sources */,
 				F64238A722CD3C2F000F5CE3 /* Author.swift in Sources */,

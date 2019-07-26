@@ -35,6 +35,6 @@ class VideosService: ContentService {
 
 // MARK: - VideosDataProvider
 
-protocol VideosDataProvider {
+protocol VideosDataProvider: ContentDataProvider {
     func load() -> Promise<[Video]>
 }

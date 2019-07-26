@@ -10,11 +10,11 @@ import RxSwift
 import RxCocoa
 
 protocol ConferencesCollectionViewModelInput {
-    var didSelectConferenceTrigger: AnyObserver<Conference> { get }
+    var didSelectConferenceTrigger: AnyObserver<ConferenceMetaData> { get }
 }
 
 protocol ConferencesCollectionViewModelOutput {
-    var conferences: BehaviorRelay<[Conference]> { get set }
+    var conferences: BehaviorRelay<[ConferenceMetaData]> { get set }
 }
 
 class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, ConferencesCollectionViewModelOutput, ConferencesCollectionViewModelInput {
@@ -23,14 +23,14 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
 
     // Private
 
-    private lazy var showConferenceAction = Action<Conference, Void> { [unowned self] conference in
+    private lazy var showConferenceAction = Action<ConferenceMetaData, Void> { [unowned self] conference in
         self.router.rx.trigger(.conferenceDetail(conference))
     }
 
     // Public
 
-    lazy var didSelectConferenceTrigger: AnyObserver<Conference> = showConferenceAction.inputs
-    var conferences = BehaviorRelay<[Conference]>(value: [])
+    lazy var didSelectConferenceTrigger: AnyObserver<ConferenceMetaData> = showConferenceAction.inputs
+    var conferences = BehaviorRelay<[ConferenceMetaData]>(value: [])
 
     // MARK: APIs
 
@@ -44,7 +44,7 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
             }
     }
 
-    func bannerImage(for conference: Conference) -> UIImage? {
+    func bannerImage(for conference: ConferenceMetaData) -> UIImage? {
         guard let bannerImageURL = conferencesService.bannerImageURL(for: conference) else {
             return nil
         }
