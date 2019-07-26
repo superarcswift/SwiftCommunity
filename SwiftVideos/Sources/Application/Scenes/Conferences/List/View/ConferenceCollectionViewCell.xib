@@ -18,17 +18,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHN-xq-wU4">
+                        <rect key="frame" x="8" y="8" width="304" height="104"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appbuilders.png" translatesAutoresizingMaskIntoConstraints="NO" id="qdq-la-XTP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="QHN-xq-wU4" secondAttribute="trailing" constant="8" id="Bda-eG-6Dh"/>
                 <constraint firstAttribute="bottom" secondItem="qdq-la-XTP" secondAttribute="bottom" id="Fjt-rH-FZd"/>
+                <constraint firstItem="QHN-xq-wU4" firstAttribute="leading" secondItem="8Hf-o3-iy6" secondAttribute="leading" constant="8" id="HJC-fF-oXN"/>
+                <constraint firstAttribute="bottom" secondItem="QHN-xq-wU4" secondAttribute="bottom" constant="8" id="Mu1-VG-xIy"/>
                 <constraint firstAttribute="trailing" secondItem="qdq-la-XTP" secondAttribute="trailing" id="POb-RC-z7U"/>
+                <constraint firstItem="QHN-xq-wU4" firstAttribute="top" secondItem="8Hf-o3-iy6" secondAttribute="top" constant="8" id="e0w-gP-dAH"/>
                 <constraint firstItem="qdq-la-XTP" firstAttribute="leading" secondItem="8Hf-o3-iy6" secondAttribute="leading" id="jfH-YC-X3S"/>
                 <constraint firstItem="qdq-la-XTP" firstAttribute="top" secondItem="8Hf-o3-iy6" secondAttribute="top" id="yK8-ey-fhb"/>
             </constraints>
+            <connections>
+                <outlet property="bannerImageView" destination="qdq-la-XTP" id="oOu-Q6-QuY"/>
+                <outlet property="nameLabel" destination="QHN-xq-wU4" id="l7h-r0-ofu"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>

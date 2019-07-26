@@ -43,6 +43,18 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
                 print(error)
             }
     }
+
+    func bannerImage(for conference: Conference) -> UIImage? {
+        guard let bannerImageURL = conferencesService.bannerImageURL(for: conference) else {
+            return nil
+        }
+
+        guard let bannerImage = UIImage(contentsOfFile: bannerImageURL.path) else {
+            return nil
+        }
+
+        return bannerImage
+    }
 }
 
 // MARK: Dependencies

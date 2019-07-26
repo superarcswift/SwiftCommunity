@@ -44,8 +44,16 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
         super.setupBindings()
 
         viewModel.conferences
-            .bind(to: collectionView.rx.items(cellIdentifier: ConferenceCollectionViewCell.className)) { _, element, cell in
-
+            .bind(to: collectionView.rx.items(cellIdentifier: ConferenceCollectionViewCell.className)) { [weak self] _, conference, cell in
+                guard let cell = cell as? ConferenceCollectionViewCell else {
+                    fatalError("wrong cell type")
+                }
+                cell.nameLabel.text = conference.name
+                if let bannerImage = self?.viewModel.bannerImage(for: conference) {
+                    cell.bannerImageView.image = bannerImage
+                } else {
+                    cell.bannerImageView.isHidden = true
+                }
             }.disposed(by: disposeBag)
 
         collectionView.rx.modelSelected(Conference.self)

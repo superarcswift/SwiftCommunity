@@ -1,23 +1,23 @@
 [
     {
-        "id": "swiftconf",
-        "name": "SwiftConf"
+        "id": "app-builders",
+        "name": "App Builders"
     },
     {
         "id": "wwdc",
         "name": "WWDC"
     },
     {
-        "id": "appbuilder",
-        "name": "AppBuilder"
+        "id": "swift-and-fika",
+        "name": "Swift & Fika"
     },
     {
         "id": "frenchkit",
         "name": "FrenchKit"
     },
     {
-        "id": "uiconf",
-        "name": "UIConf"
+        "id": "uikonf",
+        "name": "UIKonf"
     },
     {
         "id": "swiftheroes",

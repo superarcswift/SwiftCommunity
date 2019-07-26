@@ -9,5 +9,8 @@ class ConferenceCollectionViewCell: UICollectionViewCell {
     // MARK: Properties
 
     // IBOutlets
-
+    
+    @IBOutlet weak var bannerImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
 }

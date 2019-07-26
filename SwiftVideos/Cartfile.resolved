@@ -1,6 +1,7 @@
 github "ReactiveX/RxSwift" "5.0.1"
 github "RxSwiftCommunity/Action" "4.0.1"
 github "SwiftGit2/SwiftGit2" "0.6.0"
+github "libgit2/objective-git" "0.14.2"
 github "mxcl/PromiseKit" "6.10.0"
 github "onevcat/Kingfisher" "5.7.0"
 github "peacemoon/XCoordinator" "a29291f08415110d6b78fdbb2f81d7742fc7aee1"

@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct Conference: Codable {
+public struct Conference: Codable {
     let id: String
     let name: String
 }

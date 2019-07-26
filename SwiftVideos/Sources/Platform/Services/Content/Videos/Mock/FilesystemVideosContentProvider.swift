@@ -6,6 +6,20 @@ import PromiseKit
 
 class FilesystemVideosContentProvider: VideosDataProvider {
 
+    // MARK: Properties
+
+    // Public
+
+    var rootFolderPath: String
+
+    // MARK: Initialization
+
+    init(rootFolderPath: String) {
+        self.rootFolderPath = rootFolderPath
+    }
+
+    // MARK: APIs
+
     func load() -> Promise<[Video]> {
         do {
             let url = Bundle.main.url(forResource: "videos", withExtension: "json")!

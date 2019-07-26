@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="SZo-Xh-u5u">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="SnS-rs-NjN" customClass="OnboardingViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w9F-oK-3sp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOg-Ay-kct">
+                                <rect key="frame" x="124" y="463" width="166" height="30"/>
+                                <state key="normal" title="Clone remote repository"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuJ-tL-pmA">
+                                <rect key="frame" x="147.5" y="403" width="119" height="30"/>
+                                <state key="normal" title="Reset local folder"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vuJ-tL-pmA" firstAttribute="centerY" secondItem="w9F-oK-3sp" secondAttribute="centerY" constant="-30" id="8mr-4e-dFI"/>
+                            <constraint firstItem="vuJ-tL-pmA" firstAttribute="centerX" secondItem="w9F-oK-3sp" secondAttribute="centerX" id="FHr-Ha-cSV"/>
+                            <constraint firstItem="SOg-Ay-kct" firstAttribute="centerX" secondItem="w9F-oK-3sp" secondAttribute="centerX" id="ekO-aZ-zGy"/>
+                            <constraint firstItem="SOg-Ay-kct" firstAttribute="centerY" secondItem="w9F-oK-3sp" secondAttribute="centerY" constant="30" id="uM3-an-fBZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CTh-5j-rzS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UQR-IL-ohf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHh-nT-sZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771.01449275362324" y="185.49107142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YCN-gv-nWb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="om7-iy-VNE" customClass="NavigationController" customModule="SuperArcCoreUI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VF7-An-tQA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SnS-rs-NjN" kind="relationship" relationship="rootViewController" id="GgX-6T-1yB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYT-4P-2bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-139.13043478260872" y="185.49107142857142"/>
+        </scene>
+    </scenes>
+</document>

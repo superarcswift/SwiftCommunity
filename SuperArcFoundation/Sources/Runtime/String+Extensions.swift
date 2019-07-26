@@ -6,7 +6,7 @@ import Foundation
 
 extension String {
     
-    func combinePath(_ component: String) -> String {
+    public func combinePath(_ component: String) -> String {
         return NSString(string: self).appendingPathComponent(component)
     }
 }

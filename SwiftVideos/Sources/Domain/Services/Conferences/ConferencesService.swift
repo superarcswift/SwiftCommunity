@@ -30,6 +30,10 @@ class ConferencesService: ContentService {
         return contentProvider.load()
     }
 
+    func bannerImageURL(for conference: Conference) -> URL? {
+        return contentProvider.bannerImageURL(for: conference)
+    }
+
     // MARK: Private helpers
 }
 
@@ -37,4 +41,5 @@ class ConferencesService: ContentService {
 
 protocol ConferencesDataProvider {
     func load() -> Promise<[Conference]>
+    func bannerImageURL(for conference: Conference) -> URL?
 }
