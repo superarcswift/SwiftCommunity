@@ -33,7 +33,7 @@ class AuthorsCollectionViewModel: ViewModel {
     // MARK: APIs
 
     func loadData() {
-        authorsService.fetch()
+        authorsService.fetchList()
             .done { [weak self] authors in
                 self?.authors.accept(authors)
             }

@@ -5,15 +5,17 @@
 import XCoordinator
 import SuperArcCoreUI
 import SuperArcCore
+import Action
 import RxSwift
 import RxCocoa
 
 protocol ConferenceDetailViewModelInput {
     var conferenceMetaData: ConferenceMetaData { get }
+    var didSelectConferenceEditionTrigger: AnyObserver<ConferenceEdition> { get }
 }
 
 protocol ConferenceDetailViewModelOutput {
-    var conference: BehaviorRelay<ConferenceDetail?> { get set }
+    var conferenceEditions: BehaviorRelay<[ConferenceEdition]> { get set }
 }
 
 public class ConferenceDetailViewModel: ViewModel, ConferenceDetailViewModelInput, ConferenceDetailViewModelOutput {
@@ -23,9 +25,14 @@ public class ConferenceDetailViewModel: ViewModel, ConferenceDetailViewModelInpu
     // Public
 
     let conferenceMetaData: ConferenceMetaData
-    var conference = BehaviorRelay<ConferenceDetail?>(value: nil)
+    var conferenceEditions = BehaviorRelay<[ConferenceEdition]>(value: [])
+    lazy var didSelectConferenceEditionTrigger: AnyObserver<ConferenceEdition> = showConferenceEditionAction.inputs
 
     // Private
+
+    private lazy var showConferenceEditionAction = Action<ConferenceEdition, Void> { [unowned self] conferenceEdition in
+        self.router.rx.trigger(.conferenceEditionDetail(self.conferenceMetaData, conferenceEdition))
+    }
 
     private let router: AnyRouter<ConferencesRoute>
 
@@ -39,10 +46,10 @@ public class ConferenceDetailViewModel: ViewModel, ConferenceDetailViewModelInpu
 
     // MARK: APIs
 
-    public func fetchData() {
+    public func loadData() {
         conferencesService.conference(with: conferenceMetaData)
             .done { conferenceDetail in
-                self.conference.accept(conferenceDetail)
+                self.conferenceEditions.accept(conferenceDetail.editions)
             }.catch { error in
                 print(error)
             }

@@ -3,48 +3,48 @@
         "id": "swiftconf-2018-a-better-mvc",
         "name": "A Better MVC",
         "source": {
-            "rawValue": 0,
-            "associatedValue": "https://www.youtube.com"
+            "type": 0,
+            "value": "https://www.youtube.com"
         }
     },
     {
         "id": "wwdc-2019-swiftui",
         "name": "SwiftUI",
         "source": {
-            "rawValue": 0,
-            "associatedValue": "https://www.youtube.com"
+            "type": 0,
+            "value": "https://www.youtube.com"
         }
     },
     {
         "id": "appbuilder",
         "name": "AppBuilder",
         "source": {
-            "rawValue": 1,
-            "associatedValue": "https://www.youtube.com"
+            "type": 1,
+            "value": "https://www.youtube.com"
         }
     },
     {
         "id": "frenchkit",
         "name": "FrenchKit",
         "source": {
-            "rawValue": 2,
-            "associatedValue": "https://www.youtube.com"
+            "type": 2,
+            "value": "https://www.youtube.com"
         }
     },
     {
         "id": "uiconf",
         "name": "UIConf",
         "source": {
-            "rawValue": 1,
-            "associatedValue": "https://www.youtube.com"
+            "type": 1,
+            "value": "https://www.youtube.com"
         }
     },
     {
         "id": "swiftheroes",
         "name": "Swift Heroes",
         "source": {
-            "rawValue": 0,
-            "associatedValue": "https://www.youtube.com"
+            "type": 0,
+            "value": "https://www.youtube.com"
         }
     }
 ]

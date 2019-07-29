@@ -19,6 +19,10 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // Public
+
+    var hasCloseButton: Bool = false
+
     // Private
 
     var viewModel: VideosCollectionViewModel {
@@ -35,23 +39,37 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
         collectionView.delegate = self
 
         collectionView.registerNib(VideosCollectionViewCell.className, bundle: Bundle(for: VideosCollectionViewCell.self))
+
+        if hasCloseButton {
+           navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(VideosCollectionViewController.close))
+        }
     }
 
     override func setupBindings() {
         super.setupBindings()
 
         viewModel.videos
-            .bind(to: collectionView.rx.items(cellIdentifier: VideosCollectionViewCell.className)) { _, element, cell in
+            .bind(to: collectionView.rx.items(cellIdentifier: VideosCollectionViewCell.className)) { _, video, cell in
+                guard let videoCell = cell as? VideosCollectionViewCell else {
+                    fatalError("invalid cell type")
+                }
 
+                videoCell.nameLabel.text = video.name
             }.disposed(by: disposeBag)
 
         collectionView.rx.modelSelected(Video.self)
-            .bind(to: viewModel.didSelectVideo)
+            .bind(to: viewModel.didSelectVideoTrigger)
             .disposed(by: disposeBag)
     }
 
     override func loadData() {
         viewModel.loadData()
+    }
+
+    // MARK: Actions
+
+    @objc func close() {
+        viewModel.close()
     }
 }
 

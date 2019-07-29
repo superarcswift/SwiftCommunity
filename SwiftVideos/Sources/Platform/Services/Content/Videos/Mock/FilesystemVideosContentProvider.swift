@@ -12,19 +12,44 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
 
     var baseFolderPath: String
 
+    // Private
+
+    private lazy var baseFolderURL = URL(fileURLWithPath: baseFolderPath)
+    private var fileManager = FileManager.default
+
     // MARK: Initialization
 
-    init(rootFolderPath: String) {
-        self.baseFolderPath = rootFolderPath
+    init(rootContentFolderPath: String) {
+        self.baseFolderPath = rootContentFolderPath
     }
 
     // MARK: APIs
 
-    func load() -> Promise<[Video]> {
+    public func fetchList() -> Promise<[Video]> {
         return Promise { resolver in
             do {
-                let videoFileURL = Bundle.main.url(forResource: "videos", withExtension: "json")!
-                let videosList = try decode([Video].self, from: videoFileURL)
+                let videosFileURL = baseFolderURL
+                                        .appendingPathComponent("videos", isDirectory: true)
+                                        .appendingPathComponent("videos.json")
+                let videosList = try decode([Video].self, from: videosFileURL)
+
+                resolver.fulfill(videosList)
+            } catch {
+                resolver.reject(error)
+            }
+        }
+    }
+
+    public func fetchList(of conference: ConferenceMetaData, in edition: ConferenceEdition) -> Promise<[Video]> {
+        return Promise { resolver in
+            do {
+                let videosFileURL = baseFolderURL
+                                        .appendingPathComponent("conferences", isDirectory: true)
+                                        .appendingPathComponent("\(conference.id)", isDirectory: true)
+                                        .appendingPathComponent("\(edition.year)", isDirectory: true)
+                                        .appendingPathComponent("videos.json")
+                let videosList = try decode([Video].self, from: videosFileURL)
+
                 resolver.fulfill(videosList)
             } catch {
                 resolver.reject(error)

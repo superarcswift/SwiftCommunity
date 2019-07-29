@@ -27,18 +27,18 @@ extension VideoSource: Codable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Key.self)
-        let rawValue = try container.decode(Int.self, forKey: .type)
+        let rawValue = try container.decode(String.self, forKey: .type)
 
         switch rawValue {
-        case 0:
+        case "youtube":
             let id = try container.decode(String.self, forKey: .value)
             self = .youtube(id: id)
 
-        case 1:
+        case "wwdc":
             let url = try container.decode(String.self, forKey: .value)
             self = .wwdc(url: url)
 
-        case 2:
+        case "url":
             let url = try container.decode(String.self, forKey: .value)
             self = .url(url: url)
 

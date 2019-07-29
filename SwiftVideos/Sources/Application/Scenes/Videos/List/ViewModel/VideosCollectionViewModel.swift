@@ -9,7 +9,19 @@ import Action
 import RxSwift
 import RxCocoa
 
-class VideosCollectionViewModel: ViewModel {
+protocol VideosCollectionViewModelInput {
+    var conferenceMetaData: ConferenceMetaData? { get }
+    var conferenceEdition: ConferenceEdition? { get }
+    var didSelectVideoTrigger: AnyObserver<Video> { get }
+}
+
+protocol VideosCollectionViewModelOutput {
+    var videos: BehaviorRelay<[Video]> { get set }
+}
+
+
+class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, VideosCollectionViewModelOutput {
+
 
     // MARK: Properties
 
@@ -20,26 +32,57 @@ class VideosCollectionViewModel: ViewModel {
 
     // Public
 
-    lazy var didSelectVideo: AnyObserver<Video> = showVideoAction.inputs
+    lazy var didSelectVideoTrigger: AnyObserver<Video> = showVideoAction.inputs
     var videos = BehaviorRelay<[Video]>(value: [])
+
+    // Private
+
+    var conferenceMetaData: ConferenceMetaData?
+    var conferenceEdition: ConferenceEdition?
 
     // MARK: Initialization
 
-    init(router: AnyRouter<VideosRoute>, engine: Engine) {
+    init(router: AnyRouter<VideosRoute>, engine: Engine, conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?) {
         self.router = router
+        self.conferenceMetaData = conferenceMetaData
+        self.conferenceEdition = conferenceEdition
         super.init(engine: engine)
     }
 
     // MARK: APIs
 
     func loadData() {
-        videosService.fetch()
+        if let conferenceMetaData = conferenceMetaData, let conferenceEdition = conferenceEdition {
+            fetchVideosList(of: conferenceMetaData, in: conferenceEdition)
+        } else {
+            fetchVideosList()
+        }
+    }
+
+    // MARK: Private helpers
+
+    func fetchVideosList() {
+        videosService.fetchList()
             .done { [weak self] videos in
                 self?.videos.accept(videos)
             }
             .catch { error in
                 print(error)
-        }
+            }
+    }
+
+    func fetchVideosList(of conference: ConferenceMetaData, in edition: ConferenceEdition) {
+        videosService.fetchList(of: conference, in: edition)
+            .done { [weak self] videos in
+                self?.videos.accept(videos)
+            }
+            .catch { error in
+                print(error)
+            }
+    }
+
+    func close() {
+        router.trigger(.close)
     }
 }
 

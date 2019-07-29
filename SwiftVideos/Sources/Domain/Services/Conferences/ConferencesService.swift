@@ -26,8 +26,8 @@ class ConferencesService: ContentService {
 
     // MARK: APIs
 
-    func fetch() -> Promise<[ConferenceMetaData]> {
-        return contentProvider.load()
+    func fetchList() -> Promise<[ConferenceMetaData]> {
+        return contentProvider.fetchList()
     }
 
     func conference(with metaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
@@ -44,7 +44,7 @@ class ConferencesService: ContentService {
 // MARK: - ConferencesDataProvider
 
 protocol ConferencesDataProvider: ContentDataProvider {
-    func load() -> Promise<[ConferenceMetaData]>
+    func fetchList() -> Promise<[ConferenceMetaData]>
     func conference(with metaData: ConferenceMetaData) -> Promise<ConferenceDetail>
     func bannerImageURL(for conference: ConferenceMetaData) -> URL?
 }

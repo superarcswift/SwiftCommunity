@@ -26,8 +26,8 @@ class AuthorsService: ContentService {
 
     // MARK: APIs
 
-    func fetch() -> Promise<[Author]> {
-        return contentProvider.load()
+    func fetchList() -> Promise<[Author]> {
+        return contentProvider.fetchList()
     }
 
     // MARK: Private helpers
@@ -36,5 +36,5 @@ class AuthorsService: ContentService {
 // MARK: - AuthorsDataProvider
 
 protocol AuthorsDataProvider: ContentDataProvider {
-    func load() -> Promise<[Author]>
+    func fetchList() -> Promise<[Author]>
 }

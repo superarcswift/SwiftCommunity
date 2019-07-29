@@ -10,6 +10,9 @@
 		F62DB63222EA45A90089C620 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DB63122EA45A90089C620 /* ObjectiveGit.framework */; };
 		F63712F922EB952F0071C2DC /* FilesystemContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712F822EB952F0071C2DC /* FilesystemContentProvider.swift */; };
 		F63712FB22EB98440071C2DC /* ContentDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FA22EB98440071C2DC /* ContentDataProvider.swift */; };
+		F63712FE22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */; };
+		F637130122EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FF22EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift */; };
+		F637130222EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F637130022EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib */; };
 		F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3322E8316000EDB601 /* OnboardingViewController.swift */; };
 		F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */; };
 		F640BC3822E8318800EDB601 /* CoordinatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */; };
@@ -135,6 +138,9 @@
 		F62DB63122EA45A90089C620 /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
 		F63712F822EB952F0071C2DC /* FilesystemContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemContentProvider.swift; sourceTree = "<group>"; };
 		F63712FA22EB98440071C2DC /* ContentDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDataProvider.swift; sourceTree = "<group>"; };
+		F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		F63712FF22EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailEditionCollectionViewCell.swift; sourceTree = "<group>"; };
+		F637130022EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceDetailEditionCollectionViewCell.xib; sourceTree = "<group>"; };
 		F640BC3322E8316000EDB601 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedViewModel.swift; sourceTree = "<group>"; };
@@ -456,6 +462,9 @@
 		F66C90A622E11D9A006CA2BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */,
+				F63712FF22EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift */,
+				F637130022EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -965,7 +974,7 @@
 				F6E8D15B22CA9EC900213675 /* Frameworks */,
 				F6E8D15C22CA9EC900213675 /* Resources */,
 				F6CAFA4822CBEEE5007476D4 /* Embed Frameworks */,
-				F64238B222CD4522000F5CE3 /* ShellScript */,
+				F64238B222CD4522000F5CE3 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -1082,6 +1091,7 @@
 				F66C909822E0F8E2006CA2BB /* conference-2.json in Resources */,
 				F6453BA022EB304800392F93 /* README.md in Resources */,
 				F675C34C22DE2DE100FA77DD /* conferences.json in Resources */,
+				F637130222EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,7 +1112,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F64238B222CD4522000F5CE3 /* ShellScript */ = {
+		F64238B222CD4522000F5CE3 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1120,6 +1130,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/YoutubeKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectiveGit.framework",
 			);
+			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -1162,6 +1173,7 @@
 				F640BC4122E86CF800EDB601 /* GitService.swift in Sources */,
 				F6C4C05922E7C70200C0636E /* VideoPlayerViewController.swift in Sources */,
 				F66C90E122E20412006CA2BB /* FilesystemAuthorsContentProvider.swift in Sources */,
+				F637130122EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift in Sources */,
 				F66C90AA22E11DF2006CA2BB /* ConferenceDetailViewController.swift in Sources */,
 				F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */,
 				F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */,
@@ -1191,6 +1203,7 @@
 				F63712FB22EB98440071C2DC /* ContentDataProvider.swift in Sources */,
 				F66C90A422E0FDA3006CA2BB /* AuthorsCoordinator.swift in Sources */,
 				F66C90CB22E1FEA8006CA2BB /* AboutViewController.swift in Sources */,
+				F63712FE22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */,
 				F64238A722CD3C2F000F5CE3 /* Author.swift in Sources */,
 				F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */,
 			);

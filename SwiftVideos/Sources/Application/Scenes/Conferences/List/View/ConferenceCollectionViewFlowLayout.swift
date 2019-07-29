@@ -4,6 +4,4 @@
 
 import UIKit
 
-class ConferenceCollectionViewFlowLayout: UICollectionViewFlowLayout {
-    
-}
+class ConferenceCollectionViewFlowLayout: UICollectionViewFlowLayout {}

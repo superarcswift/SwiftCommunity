@@ -14,13 +14,13 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
 
     // MARK: Initialization
 
-    init(rootFolderPath: String) {
-        self.baseFolderPath = rootFolderPath
+    init(rootContentFolderPath: String) {
+        self.baseFolderPath = rootContentFolderPath
     }
 
     // MARK: APIs
 
-    func load() -> Promise<[Author]> {
+    func fetchList() -> Promise<[Author]> {
         return Promise { resolver in
             do {
                 let authorsFileURL = Bundle.main.url(forResource: "authors", withExtension: "json")!

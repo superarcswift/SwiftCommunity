@@ -26,8 +26,12 @@ class VideosService: ContentService {
 
     // MARK: APIs
 
-    func fetch() -> Promise<[Video]> {
-        return contentProvider.load()
+    func fetchList() -> Promise<[Video]> {
+        return contentProvider.fetchList()
+    }
+
+    func fetchList(of conference: ConferenceMetaData, in edition: ConferenceEdition) -> Promise<[Video]> {
+        return contentProvider.fetchList(of: conference, in: edition)
     }
 
     // MARK: Private helpers
@@ -36,5 +40,6 @@ class VideosService: ContentService {
 // MARK: - VideosDataProvider
 
 protocol VideosDataProvider: ContentDataProvider {
-    func load() -> Promise<[Video]>
+    func fetchList() -> Promise<[Video]>
+    func fetchList(of conference: ConferenceMetaData, in edition: ConferenceEdition) -> Promise<[Video]>
 }

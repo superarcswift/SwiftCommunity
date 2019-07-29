@@ -4,7 +4,11 @@
 
 import UIKit
 
-class VideosCollectionViewCell: UICollectionViewCell {
+class ConferenceDetailEditionCollectionViewCell: UICollectionViewCell {
+
+    // MARK: Properties
+
+    // IBOutlets
 
     @IBOutlet weak var nameLabel: UILabel!
 }

@@ -14,24 +14,24 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider, File
 
     // Private
 
-    private lazy var rootDocumentURL = URL(fileURLWithPath: baseFolderPath)
+    private lazy var baseFoldelURL = URL(fileURLWithPath: baseFolderPath)
     private var fileManager = FileManager.default
 
     // MARK: Initialization
 
-    public init(rootFolderPath: String) {
-        self.baseFolderPath = rootFolderPath.combinePath("conferences")
+    public init(rootContentFolderPath: String) {
+        self.baseFolderPath = rootContentFolderPath.combinePath("conferences")
     }
 
     // MARK: APIs
 
-    public func load() -> Promise<[ConferenceMetaData]> {
+    public func fetchList() -> Promise<[ConferenceMetaData]> {
         return Promise { resolver in
             do {
-                let conferecesFileURL = rootDocumentURL.appendingPathComponent("conferences.json")
-                let conferenceList = try decode([ConferenceMetaData].self, from: conferecesFileURL)
+                let conferecesFileURL = baseFoldelURL.appendingPathComponent("conferences.json")
+                let conferencesList = try decode([ConferenceMetaData].self, from: conferecesFileURL)
 
-                resolver.fulfill(conferenceList)
+                resolver.fulfill(conferencesList)
             } catch {
                 resolver.reject(error)
             }
@@ -40,7 +40,7 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider, File
 
     public func conference(with conferenceMetaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
         return Promise { resolver in
-            let conferenceFileURL = rootDocumentURL.appendingPathComponent(conferenceMetaData.id, isDirectory: true).appendingPathComponent("conference.json")
+            let conferenceFileURL = baseFoldelURL.appendingPathComponent(conferenceMetaData.id, isDirectory: true).appendingPathComponent("conference.json")
             let conferenceDetail = try decode(ConferenceDetail.self, from: conferenceFileURL)
 
             return resolver.fulfill(conferenceDetail)
@@ -48,7 +48,7 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider, File
     }
 
     public func bannerImageURL(for conference: ConferenceMetaData) -> URL? {
-        let conferenceFolderURL = rootDocumentURL.appendingPathComponent(conference.id, isDirectory: true)
+        let conferenceFolderURL = baseFoldelURL.appendingPathComponent(conference.id, isDirectory: true)
         let bannerFileURL = conferenceFolderURL.appendingPathComponent("cover.png")
 
         guard fileManager.fileExists(atPath: conferenceFolderURL.path) else {

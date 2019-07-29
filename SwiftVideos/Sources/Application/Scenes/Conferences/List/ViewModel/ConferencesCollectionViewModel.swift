@@ -35,7 +35,7 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
     // MARK: APIs
 
     func loadData() {
-        conferencesService.fetch()
+        conferencesService.fetchList()
             .done { [weak self] conferences in
                 self?.conferences.accept(conferences)
             }

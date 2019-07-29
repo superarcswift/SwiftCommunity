@@ -17,18 +17,21 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
     // MARK: Initialization
 
-    init(viewControllerContext: ViewControllerContext) {
+    init(viewControllerContext: ViewControllerContext, conferenceMetaData: ConferenceMetaData? = nil, conferenceEdition: ConferenceEdition? = nil) {
         self.viewControllerContext = viewControllerContext
-        super.init(initialRoute: .videos)
+        super.init(initialRoute: .videos(conferenceMetaData, conferenceEdition))
     }
 
     // MARK: Overrides
 
     override func prepareTransition(for route: VideosRoute) -> NavigationTransition {
         switch route {
-        case .videos:
+        case .videos(let conferenceMetaData, let conferenceEdition):
             let viewController = VideosCollectionViewController.instantiate()
-            let viewModel = VideosCollectionViewModel(router: anyRouter, engine: viewControllerContext.engine)
+            if conferenceMetaData != nil {
+                viewController.hasCloseButton = true
+            }
+            let viewModel = VideosCollectionViewModel(router: anyRouter, engine: viewControllerContext.engine, conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
@@ -52,7 +55,7 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 }
 
 enum VideosRoute: Route {
-    case videos
+    case videos(ConferenceMetaData?, ConferenceEdition?)
     case videoDetail(Video)
     case videoPlayer(Video)
     case close

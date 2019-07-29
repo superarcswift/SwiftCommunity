@@ -38,6 +38,10 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
+        case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):
+            let videosCoordinator = VideosCoordinator(viewControllerContext: viewControllerContext, conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition)
+            return .present(videosCoordinator)
+
         case .close:
             return .dismissToRoot()
         }
@@ -48,5 +52,6 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 public enum ConferencesRoute: Route {
     case conferences
     case conferenceDetail(ConferenceMetaData)
+    case conferenceEditionDetail(ConferenceMetaData, ConferenceEdition)
     case close
 }
