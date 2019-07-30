@@ -15,6 +15,8 @@ class OnboardingViewModel: CoordinatedViewModel<OnboardingRoute> {
     // Public
 
     var isReady = PublishSubject<Bool>()
+    var isUpdated = PublishSubject<Bool>()
+    var isCloned = PublishSubject<Bool>()
 
     // Private
 
@@ -54,6 +56,8 @@ class OnboardingViewModel: CoordinatedViewModel<OnboardingRoute> {
     private func updateLocalRepository() {
         gitService.update()
             .done { [weak self] _ in
+                self?.isUpdated.onNext(true)
+            }.ensure { [weak self] in
                 self?.isReady.onNext(true)
             }.catch { error in
                 print(error)

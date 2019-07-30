@@ -5,7 +5,15 @@
 
 typealias AuthorID = String
 
-struct Author: Codable {
+// MARK: - AuthorMetaData
+
+struct AuthorMetaData: Codable {
     let id: String
     let name: String
+}
+
+// MARK: - Author Detail
+
+struct AuthorDetail {
+    let metaData: AuthorMetaData
 }

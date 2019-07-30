@@ -6,9 +6,19 @@ import SuperArcCoreUI
 import SuperArcCore
 import YoutubeKit
 
-class VideoPlayerViewController: ViewController {
+class VideoPlayerViewController: ViewController, StoryboardInitiable {
 
-    var player: YTSwiftyPlayer!
+    // MARK: Properties
+
+    // Static
+
+    static var storyboardName: String = "Videos"
+
+    // Private
+
+    private var player: YTSwiftyPlayer!
+
+    // MARK: Lifecycles
 
     override func viewDidLoad() {
         super.viewDidLoad()

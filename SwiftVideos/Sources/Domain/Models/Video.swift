@@ -6,16 +6,31 @@ import Foundation
 
 typealias VideoID = String
 
-struct Video: Codable {
+// MARK: - VideoMetaData
+
+public struct VideoMetaData: Codable {
     let id: VideoID
+    let authorMetaData: AuthorMetaData
+    let conferenceMetaData: ConferenceMetaData
+    let conferenceEdition: ConferenceEdition
     let name: String
     let source: VideoSource
 }
 
+// MARK: - VideoDetail
+
+public struct VideoDetail: Codable {
+    let metaData: VideoMetaData
+    let description: String?
+    let resources: [VideoResource]?
+}
+
+// MARK: - VideoSource
+
 enum VideoSource {
     case youtube(id: String)
     case wwdc(url: String)
-    case url(url: String)
+    case website(url: String)
 }
 
 extension VideoSource: Codable {
@@ -38,9 +53,9 @@ extension VideoSource: Codable {
             let url = try container.decode(String.self, forKey: .value)
             self = .wwdc(url: url)
 
-        case "url":
+        case "website":
             let url = try container.decode(String.self, forKey: .value)
-            self = .url(url: url)
+            self = .website(url: url)
 
         default:
             throw CodingError.unknownValue
@@ -52,15 +67,63 @@ extension VideoSource: Codable {
 
         switch self {
         case .youtube(let id):
-            try container.encode(0, forKey: .type)
+            try container.encode("youtube", forKey: .type)
             try container.encode(id, forKey: .value)
 
         case .wwdc(let url):
-            try container.encode(1, forKey: .type)
+            try container.encode("wwdc", forKey: .type)
             try container.encode(url, forKey: .value)
 
-        case .url(let url):
-            try container.encode(2, forKey: .type)
+        case .website(let url):
+            try container.encode("website", forKey: .type)
+            try container.encode(url, forKey: .value)
+
+        }
+    }
+}
+
+// MARK: - VideoResource
+
+enum VideoResource {
+    case pdf(url: String)
+    case website(url: String)
+}
+
+extension VideoResource: Codable {
+
+    enum Key: CodingKey {
+        case type
+        case value
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: Key.self)
+        let rawValue = try container.decode(String.self, forKey: .type)
+
+        switch rawValue {
+        case "pdf":
+            let url = try container.decode(String.self, forKey: .value)
+            self = .pdf(url: url)
+
+        case "website":
+            let url = try container.decode(String.self, forKey: .value)
+            self = .website(url: url)
+
+        default:
+            throw CodingError.unknownValue
+        }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: Key.self)
+
+        switch self {
+        case .pdf(let url):
+            try container.encode("pdf", forKey: .type)
+            try container.encode(url, forKey: .value)
+
+        case .website(let url):
+            try container.encode("website", forKey: .type)
             try container.encode(url, forKey: .value)
 
         }

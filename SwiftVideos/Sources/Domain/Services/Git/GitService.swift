@@ -55,7 +55,7 @@ public class GitService: Service, GitServiceProtocol {
 
     // MARK: APIs
 
-    /// Prepare the repository on local disk for displaying content
+    /// Prepare the repository on local disk for displaying content.
     /// - Result: bool
     public func open() -> Bool {
 
@@ -74,7 +74,7 @@ public class GitService: Service, GitServiceProtocol {
         return true
     }
 
-    /// Clone the content repository to disk.222
+    /// Clone the content repository to disk.
     /// - Returns: Promise<Void>
     public func clone() -> Promise<Void> {
         return Promise { resolver in

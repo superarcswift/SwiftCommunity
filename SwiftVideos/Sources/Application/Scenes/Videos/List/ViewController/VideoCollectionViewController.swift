@@ -57,7 +57,7 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
                 videoCell.nameLabel.text = video.name
             }.disposed(by: disposeBag)
 
-        collectionView.rx.modelSelected(Video.self)
+        collectionView.rx.modelSelected(VideoMetaData.self)
             .bind(to: viewModel.didSelectVideoTrigger)
             .disposed(by: disposeBag)
     }

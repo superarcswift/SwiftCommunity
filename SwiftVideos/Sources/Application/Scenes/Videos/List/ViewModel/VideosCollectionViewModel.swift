@@ -12,11 +12,11 @@ import RxCocoa
 protocol VideosCollectionViewModelInput {
     var conferenceMetaData: ConferenceMetaData? { get }
     var conferenceEdition: ConferenceEdition? { get }
-    var didSelectVideoTrigger: AnyObserver<Video> { get }
+    var didSelectVideoTrigger: AnyObserver<VideoMetaData> { get }
 }
 
 protocol VideosCollectionViewModelOutput {
-    var videos: BehaviorRelay<[Video]> { get set }
+    var videos: BehaviorRelay<[VideoMetaData]> { get set }
 }
 
 
@@ -26,14 +26,14 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
     // MARK: Properties
 
     private let router: AnyRouter<VideosRoute>
-    private lazy var showVideoAction = Action<Video, Void> { [unowned self] video in
+    private lazy var showVideoAction = Action<VideoMetaData, Void> { [unowned self] video in
         self.router.rx.trigger(.videoDetail(video))
     }
 
     // Public
 
-    lazy var didSelectVideoTrigger: AnyObserver<Video> = showVideoAction.inputs
-    var videos = BehaviorRelay<[Video]>(value: [])
+    lazy var didSelectVideoTrigger: AnyObserver<VideoMetaData> = showVideoAction.inputs
+    var videos = BehaviorRelay<[VideoMetaData]>(value: [])
 
     // Private
 

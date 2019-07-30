@@ -6,10 +6,15 @@ import SuperArcCoreUI
 import SuperArcCore
 
 class VideoPlayerViewModel: ViewModel {
-    var video: Video
 
-    init(video: Video, engine: Engine) {
-        self.video = video
+    // MARK: Properties
+
+    var videoMetaData: VideoMetaData
+
+    // MARK: Initialization
+
+    init(videoMetaData: VideoMetaData, engine: Engine) {
+        self.videoMetaData = videoMetaData
         super.init(engine: engine)
     }
 }

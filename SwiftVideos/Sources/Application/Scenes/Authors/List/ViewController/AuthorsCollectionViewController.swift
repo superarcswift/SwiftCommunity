@@ -45,7 +45,7 @@ class AuthorsCollectionViewController: ViewController, StoryboardInitiable {
 
             }.disposed(by: disposeBag)
 
-        collectionView.rx.modelSelected(Author.self)
+        collectionView.rx.modelSelected(AuthorMetaData.self)
             .bind(to: viewModel.didSelectAuthor)
             .disposed(by: disposeBag)
     }

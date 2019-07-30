@@ -14,13 +14,13 @@ class AuthorDetailViewModel: ViewModel {
 
     // Private
 
-    private var author: Author
+    private var authorMetaData: AuthorMetaData
     private let router: AnyRouter<AuthorsRoute>
 
     // MARK: Initialization
 
-    init(author: Author, router: AnyRouter<AuthorsRoute>, engine: Engine) {
-        self.author = author
+    init(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>, engine: Engine) {
+        self.authorMetaData = authorMetaData
         self.router = router
         super.init(engine: engine)
     }

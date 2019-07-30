@@ -32,9 +32,9 @@ class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
-        case .authorDetail(let author):
+        case .authorDetail(let authorMetaData):
             let viewController = AuthorDetailViewController.instantiate()
-            let viewModel = AuthorDetailViewModel(author: author, router: anyRouter, engine: viewControllerContext.engine)
+            let viewModel = AuthorDetailViewModel(authorMetaData: authorMetaData, router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
@@ -47,6 +47,6 @@ class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 
 enum AuthorsRoute: Route {
     case authors
-    case authorDetail(Author)
+    case authorDetail(AuthorMetaData)
     case close
 }

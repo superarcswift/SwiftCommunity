@@ -20,11 +20,11 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
 
     // MARK: APIs
 
-    func fetchList() -> Promise<[Author]> {
+    func fetchList() -> Promise<[AuthorMetaData]> {
         return Promise { resolver in
             do {
                 let authorsFileURL = Bundle.main.url(forResource: "authors", withExtension: "json")!
-                let authorsList = try decode([Author].self, from: authorsFileURL)
+                let authorsList = try decode([AuthorMetaData].self, from: authorsFileURL)
 
                 resolver.fulfill(authorsList)
             } catch {

@@ -35,15 +35,15 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
-        case .videoDetail(let video):
+        case .videoDetail(let videoMetaData):
             let viewController = VideoDetailViewController.instantiate()
-            let viewModel = VideoDetailViewModel(video: video, router: anyRouter, engine: viewControllerContext.engine)
+            let viewModel = VideoDetailViewModel(videoMetaData: videoMetaData, router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
-        case .videoPlayer(let video):
-            let viewController = VideoDetailViewController.instantiate()
-            let viewModel = VideoDetailViewModel(video: video, router: anyRouter, engine: viewControllerContext.engine)
+        case .videoPlayer(let videoMetaData):
+            let viewController = VideoPlayerViewController.instantiate()
+            let viewModel = VideoPlayerViewModel(videoMetaData: videoMetaData, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
@@ -54,9 +54,9 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
 }
 
-enum VideosRoute: Route {
+public enum VideosRoute: Route {
     case videos(ConferenceMetaData?, ConferenceEdition?)
-    case videoDetail(Video)
-    case videoPlayer(Video)
+    case videoDetail(VideoMetaData)
+    case videoPlayer(VideoMetaData)
     case close
 }

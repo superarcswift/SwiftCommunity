@@ -24,9 +24,9 @@ public class ConferenceDetailViewModel: ViewModel, ConferenceDetailViewModelInpu
 
     // Public
 
-    let conferenceMetaData: ConferenceMetaData
-    var conferenceEditions = BehaviorRelay<[ConferenceEdition]>(value: [])
-    lazy var didSelectConferenceEditionTrigger: AnyObserver<ConferenceEdition> = showConferenceEditionAction.inputs
+    public let conferenceMetaData: ConferenceMetaData
+    public var conferenceEditions = BehaviorRelay<[ConferenceEdition]>(value: [])
+    public lazy var didSelectConferenceEditionTrigger: AnyObserver<ConferenceEdition> = showConferenceEditionAction.inputs
 
     // Private
 

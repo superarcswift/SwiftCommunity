@@ -25,13 +25,13 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
 
     // MARK: APIs
 
-    public func fetchList() -> Promise<[Video]> {
+    public func fetchList() -> Promise<[VideoMetaData]> {
         return Promise { resolver in
             do {
                 let videosFileURL = baseFolderURL
                                         .appendingPathComponent("videos", isDirectory: true)
                                         .appendingPathComponent("videos.json")
-                let videosList = try decode([Video].self, from: videosFileURL)
+                let videosList = try decode([VideoMetaData].self, from: videosFileURL)
 
                 resolver.fulfill(videosList)
             } catch {
@@ -40,7 +40,7 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
         }
     }
 
-    public func fetchList(of conference: ConferenceMetaData, in edition: ConferenceEdition) -> Promise<[Video]> {
+    public func fetchList(of conference: ConferenceMetaData, in edition: ConferenceEdition) -> Promise<[VideoMetaData]> {
         return Promise { resolver in
             do {
                 let videosFileURL = baseFolderURL
@@ -48,9 +48,23 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
                                         .appendingPathComponent("\(conference.id)", isDirectory: true)
                                         .appendingPathComponent("\(edition.year)", isDirectory: true)
                                         .appendingPathComponent("videos.json")
-                let videosList = try decode([Video].self, from: videosFileURL)
+                let videosList = try decode([VideoMetaData].self, from: videosFileURL)
 
                 resolver.fulfill(videosList)
+            } catch {
+                resolver.reject(error)
+            }
+        }
+    }
+
+    public func video(with metaData: VideoMetaData) -> Promise<VideoDetail> {
+        return Promise { resolver in
+            do {
+                let videoFileURL = baseFolderURL
+                                        .appendingPathComponent("conferences", isDirectory: true)
+                                        .appendingPathComponent("\(metaData.conferenceMetaData.id)", isDirectory: true)
+                                        .appendingPathComponent("\(metaData.conferenceEdition.year)", isDirectory: true)
+                                        .appendingPathComponent("video-\(metaData.id).json")
             } catch {
                 resolver.reject(error)
             }

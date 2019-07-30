@@ -14,14 +14,14 @@ class AuthorsCollectionViewModel: ViewModel {
     // MARK: Properties
 
     private let router: AnyRouter<AuthorsRoute>
-    private lazy var showAuthorAction = Action<Author, Void> { [unowned self] video in
+    private lazy var showAuthorAction = Action<AuthorMetaData, Void> { [unowned self] video in
         self.router.rx.trigger(.authorDetail(video))
     }
 
     // Public
 
-    lazy var didSelectAuthor: AnyObserver<Author> = showAuthorAction.inputs
-    var authors = BehaviorRelay<[Author]>(value: [])
+    lazy var didSelectAuthor: AnyObserver<AuthorMetaData> = showAuthorAction.inputs
+    var authors = BehaviorRelay<[AuthorMetaData]>(value: [])
 
     // MARK: Initialization
 
