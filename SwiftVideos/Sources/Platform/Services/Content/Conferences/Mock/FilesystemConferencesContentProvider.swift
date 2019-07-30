@@ -14,7 +14,7 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider, File
 
     // Private
 
-    private lazy var baseFoldelURL = URL(fileURLWithPath: baseFolderPath)
+    private lazy var baseFolderURL = URL(fileURLWithPath: baseFolderPath)
     private var fileManager = FileManager.default
 
     // MARK: Initialization
@@ -28,7 +28,7 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider, File
     public func fetchList() -> Promise<[ConferenceMetaData]> {
         return Promise { resolver in
             do {
-                let conferecesFileURL = baseFoldelURL.appendingPathComponent("conferences.json")
+                let conferecesFileURL = baseFolderURL.appendingPathComponent("conferences.json")
                 let conferencesList = try decode([ConferenceMetaData].self, from: conferecesFileURL)
 
                 resolver.fulfill(conferencesList)
@@ -40,7 +40,7 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider, File
 
     public func conference(with conferenceMetaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
         return Promise { resolver in
-            let conferenceFileURL = baseFoldelURL.appendingPathComponent(conferenceMetaData.id, isDirectory: true).appendingPathComponent("conference.json")
+            let conferenceFileURL = baseFolderURL.appendingPathComponent(conferenceMetaData.id, isDirectory: true).appendingPathComponent("conference.json")
             let conferenceDetail = try decode(ConferenceDetail.self, from: conferenceFileURL)
 
             return resolver.fulfill(conferenceDetail)
@@ -48,7 +48,7 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider, File
     }
 
     public func bannerImageURL(for conference: ConferenceMetaData) -> URL? {
-        let conferenceFolderURL = baseFoldelURL.appendingPathComponent(conference.id, isDirectory: true)
+        let conferenceFolderURL = baseFolderURL.appendingPathComponent(conference.id, isDirectory: true)
         let bannerFileURL = conferenceFolderURL.appendingPathComponent("cover.png")
 
         guard fileManager.fileExists(atPath: conferenceFolderURL.path) else {

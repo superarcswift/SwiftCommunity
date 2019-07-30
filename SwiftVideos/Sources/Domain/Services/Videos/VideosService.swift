@@ -34,6 +34,9 @@ class VideosService: ContentService {
         return contentProvider.fetchList(of: conference, in: edition)
     }
 
+    func previewImageURL(for video: VideoMetaData) -> URL? {
+        return contentProvider.previewImageURL(for: video)
+    }
     // MARK: Private helpers
 }
 
@@ -43,4 +46,5 @@ protocol VideosDataProvider: ContentDataProvider {
     func fetchList() -> Promise<[VideoMetaData]>
     func fetchList(of conference: ConferenceMetaData, in edition: ConferenceEdition) -> Promise<[VideoMetaData]>
     func video(with metaData: VideoMetaData) -> Promise<VideoDetail>
+    func previewImageURL(for video: VideoMetaData) -> URL?
 }

@@ -21,8 +21,6 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
 
     // Public
 
-    var hasCloseButton: Bool = false
-
     // Private
 
     var viewModel: VideosCollectionViewModel {
@@ -49,12 +47,20 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
         super.setupBindings()
 
         viewModel.videos
-            .bind(to: collectionView.rx.items(cellIdentifier: VideosCollectionViewCell.className)) { _, video, cell in
+            .bind(to: collectionView.rx.items(cellIdentifier: VideosCollectionViewCell.className)) { [weak self] _, video, cell in
                 guard let videoCell = cell as? VideosCollectionViewCell else {
                     fatalError("invalid cell type")
                 }
 
                 videoCell.nameLabel.text = video.name
+
+                if let previewImage = self?.viewModel.previewImage(for: video) {
+                    videoCell.previewImageView.image = previewImage
+                } else {
+                    videoCell.previewImageView.isHidden = true
+                    videoCell.backgroundColor = .red
+                }
+
             }.disposed(by: disposeBag)
 
         collectionView.rx.modelSelected(VideoMetaData.self)

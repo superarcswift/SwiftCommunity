@@ -16,6 +16,8 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
     public var context: ViewControllerContextProtocol!
     public var storedViewModel: ViewModel!
 
+    public var prefersLargeTitles: Bool = true
+    
     // Private
 
     private let disposeBag = DisposeBag()

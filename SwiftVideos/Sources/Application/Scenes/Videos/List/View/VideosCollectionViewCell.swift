@@ -7,4 +7,5 @@ import UIKit
 class VideosCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var previewImageView: UIImageView!
 }

@@ -5,7 +5,9 @@
 import SuperArcCore
 import UIKit
 
+/// The base class for all UIViewControllers.
 open class ViewController: UIViewController, CommonViewControllerProtocol {
+
 
     // MARK: Properties
 
@@ -13,6 +15,11 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
 
     public var context: ViewControllerContextProtocol!
     public var storedViewModel: ViewModel!
+
+    // IBInspectable
+
+    @IBInspectable open var hasCloseButton: Bool = false
+    @IBInspectable open var prefersLargeTitles: Bool = true
 
     // MARK: Lifecycles
 
@@ -27,7 +34,10 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
         return nil
     }
 
-    open func setupViews() {}
+    /// Setup ViewController after loading.
+    open func setupViews() {
+        commonSetupView()
+    }
 
     open func setupBindings() {}
 

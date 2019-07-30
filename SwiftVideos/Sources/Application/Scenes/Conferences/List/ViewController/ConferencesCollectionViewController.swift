@@ -45,15 +45,15 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
 
         viewModel.conferences
             .bind(to: collectionView.rx.items(cellIdentifier: ConferenceCollectionViewCell.className)) { [weak self] _, conference, cell in
-                guard let cell = cell as? ConferenceCollectionViewCell else {
+                guard let conferenceCell = cell as? ConferenceCollectionViewCell else {
                     fatalError("wrong cell type")
                 }
-                cell.nameLabel.text = conference.name
+                conferenceCell.nameLabel.text = conference.name
                 if let bannerImage = self?.viewModel.bannerImage(for: conference) {
-                    cell.bannerImageView.image = bannerImage
+                    conferenceCell.bannerImageView.image = bannerImage
                 } else {
-                    cell.bannerImageView.isHidden = true
-                    cell.backgroundColor = .red
+                    conferenceCell.bannerImageView.isHidden = true
+                    conferenceCell.backgroundColor = .red
                 }
             }.disposed(by: disposeBag)
 

@@ -14,14 +14,19 @@ class VideoPlayerViewController: ViewController, StoryboardInitiable {
 
     static var storyboardName: String = "Videos"
 
+    // Public
+
     // Private
 
     private var player: YTSwiftyPlayer!
 
     // MARK: Lifecycles
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func setupViews() {
+
+        prefersLargeTitles = false
+
+        super.setupViews()
 
         // Create a new player
         player = YTSwiftyPlayer(

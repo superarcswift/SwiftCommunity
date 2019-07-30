@@ -7,8 +7,12 @@ import UIKit
 
 open class CollectionViewController: UICollectionViewController, CommonViewControllerProtocol {
 
+    // MARK: Properties
+
     public var context: ViewControllerContextProtocol!
     public var storedViewModel: ViewModel!
+
+    public var prefersLargeTitles: Bool = true
 
     // MARK: Lifecycles
 

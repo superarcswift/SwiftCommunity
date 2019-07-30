@@ -7,8 +7,14 @@ import UIKit
 
 open class PageViewController: UIPageViewController, CommonViewControllerProtocol {
 
+    // MARK: Properties
+
+    // Public
+
     public var context: ViewControllerContextProtocol!
     public var storedViewModel: ViewModel!
+
+    public var prefersLargeTitles: Bool = true
 
     // MARK: Lifecycles
 

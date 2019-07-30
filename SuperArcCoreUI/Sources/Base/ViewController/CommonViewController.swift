@@ -8,11 +8,16 @@ public protocol CommonViewControllerProtocol: ViewModelBindable, HasViewControll
 
     // MARK: Properties
 
+    // ViewModel
     var storedViewModel: ViewModel! { get set }
+
+    // View Configuration
+    var prefersLargeTitles: Bool { get }
 
     // MARK: Lifecycles
 
     func commonViewDidLoad()
+    func commonSetupView()
 
     // MARK: Setup
 
@@ -35,5 +40,12 @@ extension CommonViewControllerProtocol where Self: UIViewController {
         setupBindings()
 
         loadData()
+    }
+
+    public func commonSetupView() {
+        navigationController?.navigationBar.prefersLargeTitles = prefersLargeTitles
+        if !prefersLargeTitles {
+            navigationController?.navigationItem.largeTitleDisplayMode = .never
+        }
     }
 }

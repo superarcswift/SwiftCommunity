@@ -64,10 +64,28 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
                                         .appendingPathComponent("conferences", isDirectory: true)
                                         .appendingPathComponent("\(metaData.conferenceMetaData.id)", isDirectory: true)
                                         .appendingPathComponent("\(metaData.conferenceEdition.year)", isDirectory: true)
-                                        .appendingPathComponent("video-\(metaData.id).json")
+                                        .appendingPathComponent("\(metaData.id).json")
+                let videoDetail = try decode(VideoDetail.self, from: videoFileURL)
+
+                resolver.fulfill(videoDetail)
             } catch {
                 resolver.reject(error)
             }
         }
     }
+
+    public func previewImageURL(for metaData: VideoMetaData) -> URL? {
+        let videoFolderURL = baseFolderURL
+                                .appendingPathComponent("conferences", isDirectory: true)
+                                .appendingPathComponent("\(metaData.conferenceMetaData.id)", isDirectory: true)
+                                .appendingPathComponent("\(metaData.conferenceEdition.year)", isDirectory: true)
+        let previewFileURL = videoFolderURL.appendingPathComponent("\(metaData.id).jpg")
+
+        guard fileManager.fileExists(atPath: videoFolderURL.path) else {
+            return nil
+        }
+
+        return previewFileURL
+    }
+
 }

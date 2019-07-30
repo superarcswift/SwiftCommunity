@@ -17,7 +17,9 @@ class VideoDetailViewController: ViewController, StoryboardInitiable {
 
     // IBOutlets
 
+    @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var startVideoPlayerButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
 
     // Private
 

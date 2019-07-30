@@ -38,6 +38,8 @@ class ConferenceDetailViewController: ViewController, StoryboardInitiable {
         collectionView.delegate = self
 
         collectionView.registerNib(ConferenceDetailEditionCollectionViewCell.className, bundle: Bundle(for: ConferenceDetailEditionCollectionViewCell.self))
+
+        title = viewModel.conferenceMetaData.name
     }
 
     override func setupBindings() {
