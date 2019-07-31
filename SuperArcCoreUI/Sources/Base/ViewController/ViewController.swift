@@ -20,16 +20,18 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
     // IBInspectable
 
     @IBInspectable open var hasCloseButton: Bool = false
-    @IBInspectable open var prefersLargeTitles: Bool = true {
-        didSet {
-        }
-    }
+    @IBInspectable open var prefersLargeTitles: Bool = true
 
     // MARK: Lifecycles
 
     open override func viewDidLoad() {
         super.viewDidLoad()
         commonViewDidLoad()
+    }
+
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        commonViewWillAppear()
     }
 
     // MARK: Setup

@@ -17,9 +17,11 @@ public protocol CommonViewControllerProtocol: ViewModelBindable, HasViewControll
     // MARK: Lifecycles
 
     func commonViewDidLoad()
-    func commonSetupView()
+    func commonViewWillAppear()
 
     // MARK: Setup
+
+    func commonSetupView()
 
     func setupViewModel() -> ViewModel!
     func setupViews()
@@ -42,10 +44,14 @@ extension CommonViewControllerProtocol where Self: UIViewController {
         loadData()
     }
 
-    public func commonSetupView() {
+    public func commonViewWillAppear() {
         navigationController?.navigationBar.prefersLargeTitles = prefersLargeTitles
         if !prefersLargeTitles {
             navigationController?.navigationItem.largeTitleDisplayMode = .never
         }
     }
+
+    public func commonSetupView() {
+    }
+
 }
