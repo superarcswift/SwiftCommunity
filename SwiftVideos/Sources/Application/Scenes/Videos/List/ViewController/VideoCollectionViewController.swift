@@ -38,8 +38,8 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
 
         collectionView.registerNib(VideosCollectionViewCell.className, bundle: Bundle(for: VideosCollectionViewCell.self))
 
-        if hasCloseButton {
-           navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(VideosCollectionViewController.close))
+        if hasLeftCloseButton {
+           navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(VideosCollectionViewController.close))
         }
 
         title = viewModel.title

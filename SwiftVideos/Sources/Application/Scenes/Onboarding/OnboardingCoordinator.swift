@@ -23,11 +23,13 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
 
     override func prepareTransition(for route: OnboardingRoute) -> NavigationTransition {
         switch route {
+
         case .onboarding:
             let viewController = OnboardingViewController.instantiate()
             let viewModel = OnboardingViewModel(router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
+
         case .dashboard:
             let dashboardCoordinator = DashboardCoordinator(viewControllerContext: viewControllerContext)
             return .present(dashboardCoordinator, animation: .fade)

@@ -19,7 +19,8 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
 
     // IBInspectable
 
-    @IBInspectable open var hasCloseButton: Bool = false
+    @IBInspectable open var hasRightCloseButton: Bool = false
+    @IBInspectable open var hasLeftCloseButton: Bool = false
     @IBInspectable open var prefersLargeTitles: Bool = true
 
     // MARK: Lifecycles

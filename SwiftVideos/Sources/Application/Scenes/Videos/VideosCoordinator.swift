@@ -29,7 +29,7 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
         case .videos(let conferenceMetaData, let conferenceEdition):
             let viewController = VideosCollectionViewController.instantiate()
             if conferenceMetaData != nil {
-                viewController.hasCloseButton = true
+                viewController.hasLeftCloseButton = true
             }
             let viewModel = VideosCollectionViewModel(router: anyRouter, engine: viewControllerContext.engine, conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition)
             viewController.storedViewModel = viewModel
