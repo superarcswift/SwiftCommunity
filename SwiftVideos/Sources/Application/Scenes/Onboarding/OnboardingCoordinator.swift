@@ -30,7 +30,7 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
             return .push(viewController)
         case .dashboard:
             let dashboardCoordinator = DashboardCoordinator(viewControllerContext: viewControllerContext)
-            return .present(dashboardCoordinator)
+            return .present(dashboardCoordinator, animation: .fade)
         }
     }
 }

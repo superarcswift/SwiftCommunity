@@ -4,7 +4,7 @@
 
 import SuperArcCoreUI
 import SuperArcCore
-import Action
+import RxCocoa
 import RxSwift
 import UIKit
 
@@ -37,7 +37,9 @@ class VideoDetailViewController: ViewController, StoryboardInitiable {
     override func setupBindings() {
         super.setupBindings()
 
-        startVideoPlayerButton.rx.bind(to: viewModel.showVideoPlayerAction, input: viewModel.videoMetaData)
+        startVideoPlayerButton.rx.tap
+            .bind(to: viewModel.startVideoPlayerTrigger)
+            .disposed(by: disposeBag)
 
         viewModel.previewVideoImage.asObservable()
             .bind(to: previewImageView.rx.image)

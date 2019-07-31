@@ -11,7 +11,7 @@ import RxCocoa
 
 protocol VideoDetailViewModelInput {
     var videoMetaData: VideoMetaData { get }
-    var showVideoPlayerAction: Action<VideoMetaData, Void> { get }
+    var startVideoPlayerTrigger: AnyObserver<Void> { get }
 }
 
 protocol VideoDetailViewModelOutput {
@@ -28,15 +28,17 @@ public class VideoDetailViewModel: ViewModel, VideoDetailViewModelInput, VideoDe
     public var videoDetail = BehaviorRelay<VideoDetail?>(value: nil)
     public var previewVideoImage = BehaviorRelay<UIImage?>(value: nil)
 
-    public lazy var showVideoPlayerAction = Action<VideoMetaData, Void> { [unowned self] videoMetaData in
-        self.router.rx.trigger(.videoPlayer(videoMetaData))
-    }
-
     // Internal
 
     var videoMetaData: VideoMetaData
 
     // Private
+
+    private(set) lazy var startVideoPlayerTrigger: AnyObserver<Void> = startVideoPlayerAction.inputs
+
+    private lazy var startVideoPlayerAction = Action<Void, Void> { [unowned self] _ in
+        self.router.rx.trigger(.videoPlayer(self.videoMetaData))
+    }
 
     private let router: AnyRouter<VideosRoute>
 

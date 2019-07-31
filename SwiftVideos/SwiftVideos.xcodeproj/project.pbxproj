@@ -13,6 +13,7 @@
 		F63712FE22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */; };
 		F637130122EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FF22EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift */; };
 		F637130222EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F637130022EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib */; };
+		F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F122F220CC005D0778 /* Animation+Fade.swift */; };
 		F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3322E8316000EDB601 /* OnboardingViewController.swift */; };
 		F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */; };
 		F640BC3822E8318800EDB601 /* CoordinatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */; };
@@ -141,6 +142,7 @@
 		F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F63712FF22EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailEditionCollectionViewCell.swift; sourceTree = "<group>"; };
 		F637130022EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceDetailEditionCollectionViewCell.xib; sourceTree = "<group>"; };
+		F63A71F122F220CC005D0778 /* Animation+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Fade.swift"; sourceTree = "<group>"; };
 		F640BC3322E8316000EDB601 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedViewModel.swift; sourceTree = "<group>"; };
@@ -275,6 +277,14 @@
 			children = (
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		F63A71F022F220BB005D0778 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				F63A71F122F220CC005D0778 /* Animation+Fade.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		F640BC3022E8313F00EDB601 /* Onboarding */ = {
@@ -736,6 +746,7 @@
 		F66C916E22E66EAA006CA2BB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F63A71F022F220BB005D0778 /* Animations */,
 				F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */,
 			);
 			path = UI;
@@ -1185,6 +1196,7 @@
 				F6C4C05D22E7CB4B00C0636E /* VideoPlayerViewModel.swift in Sources */,
 				F66C90C622E1FC25006CA2BB /* VideosCollectionViewModel.swift in Sources */,
 				F64238C422CD4FDB000F5CE3 /* VideoCollectionViewController.swift in Sources */,
+				F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */,
 				F66C90B622E1AD90006CA2BB /* ConferenceDetailViewModel.swift in Sources */,
 				F66C90F222E5F938006CA2BB /* AuthorsCollectionViewCell.swift in Sources */,
 				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
