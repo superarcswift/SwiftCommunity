@@ -21,6 +21,7 @@ class VideoDetailViewController: ViewController, StoryboardInitiable {
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var startVideoPlayerButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
 
     // Private
 
@@ -48,6 +49,7 @@ class VideoDetailViewController: ViewController, StoryboardInitiable {
             }
 
             self?.nameLabel.text = video?.metaData.name
+            self?.descriptionLabel.text = video?.description
 
         }.disposed(by: disposeBag)
 

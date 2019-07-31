@@ -58,17 +58,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AX-VV-ZIR">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-wM-14i">
                                 <rect key="frame" x="0.0" y="88" width="414" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="fz2-M0-Kap"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ5-fV-dds">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ5-fV-dds">
                                 <rect key="frame" x="8" y="246" width="398" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="D1T-SV-Xb8"/>
@@ -77,21 +73,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXE-hb-Wxi">
+                                <rect key="frame" x="8" y="298" width="398" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="bJx-kP-66X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AX-VV-ZIR">
+                                <rect key="frame" x="167" y="775" width="80" height="30"/>
+                                <state key="normal" title="Start Player"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tCa-wM-14i" firstAttribute="top" secondItem="HkW-YH-3qI" secondAttribute="top" id="FT5-aR-Pat"/>
-                            <constraint firstItem="3AX-VV-ZIR" firstAttribute="centerX" secondItem="1yE-bk-1jy" secondAttribute="centerX" id="MKa-vp-bU0"/>
                             <constraint firstItem="tCa-wM-14i" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" id="QfI-9F-lLe"/>
+                            <constraint firstItem="HkW-YH-3qI" firstAttribute="bottom" secondItem="3AX-VV-ZIR" secondAttribute="bottom" constant="8" id="R9U-tJ-HXY"/>
+                            <constraint firstItem="TXE-hb-Wxi" firstAttribute="top" secondItem="ZJ5-fV-dds" secondAttribute="bottom" constant="8" id="Tbk-jv-UIo"/>
                             <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="ZJ5-fV-dds" secondAttribute="trailing" constant="8" id="awH-cv-Tes"/>
-                            <constraint firstItem="3AX-VV-ZIR" firstAttribute="centerY" secondItem="1yE-bk-1jy" secondAttribute="centerY" id="daX-cb-2gi"/>
+                            <constraint firstItem="TXE-hb-Wxi" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" constant="8" id="cgP-1S-n4N"/>
                             <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="tCa-wM-14i" secondAttribute="trailing" id="eHW-Yg-lyf"/>
                             <constraint firstItem="ZJ5-fV-dds" firstAttribute="top" secondItem="tCa-wM-14i" secondAttribute="bottom" constant="8" id="fsC-dX-pA3"/>
+                            <constraint firstItem="3AX-VV-ZIR" firstAttribute="centerX" secondItem="1yE-bk-1jy" secondAttribute="centerX" id="hO3-OD-nnj"/>
+                            <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="TXE-hb-Wxi" secondAttribute="trailing" constant="8" id="iq3-46-Gar"/>
                             <constraint firstItem="ZJ5-fV-dds" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" constant="8" id="ssB-Iq-FWS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HkW-YH-3qI"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="TXE-hb-Wxi" id="AsL-FX-ltn"/>
                         <outlet property="nameLabel" destination="ZJ5-fV-dds" id="Osp-kb-Vva"/>
                         <outlet property="previewImageView" destination="tCa-wM-14i" id="J9E-L6-0e8"/>
                         <outlet property="startVideoPlayerButton" destination="3AX-VV-ZIR" id="xLe-a2-YIV"/>

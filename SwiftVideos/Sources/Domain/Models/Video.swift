@@ -27,7 +27,7 @@ public struct VideoDetail: Codable {
 
 // MARK: - VideoSource
 
-enum VideoSource {
+enum VideoSource {  
     case youtube(id: String)
     case wwdc(url: String)
     case website(url: String)
