@@ -48,12 +48,12 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
                 guard let conferenceCell = cell as? ConferenceCollectionViewCell else {
                     fatalError("wrong cell type")
                 }
-                conferenceCell.nameLabel.text = conference.name
+                conferenceCell.conferenceView.titleLabel.text = conference.name
                 if let bannerImage = self?.viewModel.bannerImage(for: conference) {
-                    conferenceCell.bannerImageView.image = bannerImage
+                    conferenceCell.conferenceView.previewImageView.image = bannerImage
                 } else {
-                    conferenceCell.bannerImageView.isHidden = true
-                    conferenceCell.backgroundColor = .red
+                    conferenceCell.conferenceView.previewImageView.isHidden = true
+                    conferenceCell.conferenceView.backgroundColor = .red
                 }
             }.disposed(by: disposeBag)
 

@@ -10,7 +10,6 @@ class ConferenceCollectionViewCell: UICollectionViewCell {
 
     // IBOutlets
     
-    @IBOutlet weak var bannerImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var conferenceView: ConferenceView!
     
 }

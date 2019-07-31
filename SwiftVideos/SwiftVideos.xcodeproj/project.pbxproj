@@ -14,6 +14,8 @@
 		F637130122EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FF22EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift */; };
 		F637130222EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F637130022EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib */; };
 		F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F122F220CC005D0778 /* Animation+Fade.swift */; };
+		F63A71FB22F228F1005D0778 /* ConferenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63A71FA22F228F1005D0778 /* ConferenceView.xib */; };
+		F63A71FD22F22928005D0778 /* ConferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71FC22F22928005D0778 /* ConferenceView.swift */; };
 		F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3322E8316000EDB601 /* OnboardingViewController.swift */; };
 		F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */; };
 		F640BC3822E8318800EDB601 /* CoordinatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */; };
@@ -143,6 +145,8 @@
 		F63712FF22EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailEditionCollectionViewCell.swift; sourceTree = "<group>"; };
 		F637130022EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceDetailEditionCollectionViewCell.xib; sourceTree = "<group>"; };
 		F63A71F122F220CC005D0778 /* Animation+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Fade.swift"; sourceTree = "<group>"; };
+		F63A71FA22F228F1005D0778 /* ConferenceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceView.xib; sourceTree = "<group>"; };
+		F63A71FC22F22928005D0778 /* ConferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceView.swift; sourceTree = "<group>"; };
 		F640BC3322E8316000EDB601 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedViewModel.swift; sourceTree = "<group>"; };
@@ -285,6 +289,39 @@
 				F63A71F122F220CC005D0778 /* Animation+Fade.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		F63A71F622F22839005D0778 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F63A71F922F22895005D0778 /* AuthorView */,
+				F63A71F822F2288E005D0778 /* VideoView */,
+				F63A71F722F22887005D0778 /* ConferenceView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F63A71F722F22887005D0778 /* ConferenceView */ = {
+			isa = PBXGroup;
+			children = (
+				F63A71FA22F228F1005D0778 /* ConferenceView.xib */,
+				F63A71FC22F22928005D0778 /* ConferenceView.swift */,
+			);
+			path = ConferenceView;
+			sourceTree = "<group>";
+		};
+		F63A71F822F2288E005D0778 /* VideoView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VideoView;
+			sourceTree = "<group>";
+		};
+		F63A71F922F22895005D0778 /* AuthorView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AuthorView;
 			sourceTree = "<group>";
 		};
 		F640BC3022E8313F00EDB601 /* Onboarding */ = {
@@ -746,6 +783,7 @@
 		F66C916E22E66EAA006CA2BB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F63A71F622F22839005D0778 /* Views */,
 				F63A71F022F220BB005D0778 /* Animations */,
 				F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */,
 			);
@@ -1086,6 +1124,7 @@
 				F6CF4ABD22D34B800026F84F /* nsspain.png in Resources */,
 				F64238BD22CD4E93000F5CE3 /* Conferences.storyboard in Resources */,
 				F66C90B922E1ADF9006CA2BB /* More.storyboard in Resources */,
+				F63A71FB22F228F1005D0778 /* ConferenceView.xib in Resources */,
 				F66C90E322E5A9ED006CA2BB /* authors.json in Resources */,
 				F66C90F322E5F938006CA2BB /* AuthorsCollectionViewCell.xib in Resources */,
 				F64238BF22CD4F41000F5CE3 /* Videos.storyboard in Resources */,
@@ -1200,6 +1239,7 @@
 				F66C90B622E1AD90006CA2BB /* ConferenceDetailViewModel.swift in Sources */,
 				F66C90F222E5F938006CA2BB /* AuthorsCollectionViewCell.swift in Sources */,
 				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
+				F63A71FD22F22928005D0778 /* ConferenceView.swift in Sources */,
 				F66C90FC22E6052C006CA2BB /* VideoDetailViewController.swift in Sources */,
 				F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */,
 				F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */,

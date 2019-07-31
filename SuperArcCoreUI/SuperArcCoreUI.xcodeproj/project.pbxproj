@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F63A71F522F226FC005D0778 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F422F226FC005D0778 /* UIView+Extensions.swift */; };
+		F63A720022F22996005D0778 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71FF22F22996005D0778 /* View.swift */; };
 		F66C904822E0823F006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904322E0823F006CA2BB /* RxCocoa.framework */; };
 		F66C904922E0823F006CA2BB /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904422E0823F006CA2BB /* RxRelay.framework */; };
 		F66C904A22E0823F006CA2BB /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904522E0823F006CA2BB /* PromiseKit.framework */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F63A71F422F226FC005D0778 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		F63A71FF22F22996005D0778 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		F66C904322E0823F006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		F66C904422E0823F006CA2BB /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		F66C904522E0823F006CA2BB /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
@@ -93,6 +97,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F63A71F322F226EB005D0778 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F63A71F422F226FC005D0778 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F63A71FE22F2298B005D0778 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F63A71FF22F22996005D0778 /* View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F66C904222E0823E006CA2BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +154,7 @@
 		F66C90FD22E64C34006CA2BB /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
+				F63A71F322F226EB005D0778 /* Extensions */,
 				F66C90FE22E64C42006CA2BB /* StoryboardInitiable.swift */,
 			);
 			path = Runtime;
@@ -142,6 +163,7 @@
 		F66C916422E6690E006CA2BB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F63A71FE22F2298B005D0778 /* View */,
 				F66C907722E0BB75006CA2BB /* ViewController */,
 				F66C90E422E5ECA1006CA2BB /* ViewModel */,
 			);
@@ -305,12 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63A720022F22996005D0778 /* View.swift in Sources */,
 				F66C90E622E5ECB9006CA2BB /* ViewModel.swift in Sources */,
 				F66C908822E0BB75006CA2BB /* CollectionViewController.swift in Sources */,
 				F66C908122E0BB75006CA2BB /* ViewController.swift in Sources */,
 				F66C90FF22E64C42006CA2BB /* StoryboardInitiable.swift in Sources */,
 				F6C4C05F22E7CCF600C0636E /* ViewModelBindable.swift in Sources */,
 				F66C908722E0BB75006CA2BB /* NavigationController.swift in Sources */,
+				F63A71F522F226FC005D0778 /* UIView+Extensions.swift in Sources */,
 				F66C908922E0BB75006CA2BB /* TabBarController.swift in Sources */,
 				F66C908622E0BB75006CA2BB /* PageViewController.swift in Sources */,
 				F66C908322E0BB75006CA2BB /* CommonViewController.swift in Sources */,
