@@ -57,7 +57,7 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
         }
     }
 
-    public func video(with metaData: VideoMetaData) -> Promise<VideoDetail> {
+    public func fetchVideo(with metaData: VideoMetaData) -> Promise<VideoDetail> {
         return Promise { resolver in
             do {
                 let videoFileURL = baseFolderURL

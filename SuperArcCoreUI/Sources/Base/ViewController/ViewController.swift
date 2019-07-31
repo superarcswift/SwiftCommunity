@@ -3,6 +3,7 @@
 //
 
 import SuperArcCore
+import RxSwift
 import UIKit
 
 /// The base class for all UIViewControllers.

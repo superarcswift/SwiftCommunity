@@ -5,6 +5,7 @@
 import SuperArcCoreUI
 import SuperArcCore
 import Action
+import RxSwift
 import UIKit
 
 class VideoDetailViewController: ViewController, StoryboardInitiable {
@@ -27,11 +28,36 @@ class VideoDetailViewController: ViewController, StoryboardInitiable {
         return storedViewModel as! VideoDetailViewModel
     }
 
+    private let disposeBag = DisposeBag()
+
+
     // MARK: Overrides
 
     override func setupBindings() {
         super.setupBindings()
 
         startVideoPlayerButton.rx.bind(to: viewModel.showVideoPlayerAction, input: viewModel.videoMetaData)
+
+        viewModel.previewVideoImage.asObservable()
+            .bind(to: previewImageView.rx.image)
+            .disposed(by: disposeBag)
+
+        viewModel.videoDetail.subscribe { [weak self] event in
+            guard let video = event.element else {
+                return
+            }
+
+            self?.nameLabel.text = video?.metaData.name
+
+        }.disposed(by: disposeBag)
+
+    }
+
+    override func setupViews() {
+        super.setupViews()
+    }
+
+    override func loadData() {
+        viewModel.loadData()
     }
 }

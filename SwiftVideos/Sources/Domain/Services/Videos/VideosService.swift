@@ -34,6 +34,10 @@ class VideosService: ContentService {
         return contentProvider.fetchList(of: conference, in: edition)
     }
 
+    func fetchVideo(with metaData: VideoMetaData) -> Promise<VideoDetail> {
+        return contentProvider.fetchVideo(with: metaData)
+    }
+
     func previewImageURL(for video: VideoMetaData) -> URL? {
         return contentProvider.previewImageURL(for: video)
     }
@@ -45,6 +49,6 @@ class VideosService: ContentService {
 protocol VideosDataProvider: ContentDataProvider {
     func fetchList() -> Promise<[VideoMetaData]>
     func fetchList(of conference: ConferenceMetaData, in edition: ConferenceEdition) -> Promise<[VideoMetaData]>
-    func video(with metaData: VideoMetaData) -> Promise<VideoDetail>
+    func fetchVideo(with metaData: VideoMetaData) -> Promise<VideoDetail>
     func previewImageURL(for video: VideoMetaData) -> URL?
 }
