@@ -121,9 +121,33 @@
                     <view key="view" contentMode="scaleToFill" id="xrh-k6-LIH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VV8-fl-R4j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFQ-c2-KWz">
+                                <rect key="frame" x="359" y="60" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="didTapClose:" destination="a2w-Bj-9KY" eventType="touchUpInside" id="0VB-6g-zNL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VV8-fl-R4j" secondAttribute="trailing" id="17v-A6-Bqo"/>
+                            <constraint firstAttribute="bottom" secondItem="VV8-fl-R4j" secondAttribute="bottom" id="DK7-xA-75V"/>
+                            <constraint firstItem="2ac-L2-GPv" firstAttribute="trailing" secondItem="hFQ-c2-KWz" secondAttribute="trailing" constant="16" id="DVo-Dd-zaS"/>
+                            <constraint firstItem="hFQ-c2-KWz" firstAttribute="top" secondItem="2ac-L2-GPv" secondAttribute="top" constant="16" id="DW6-hB-TIh"/>
+                            <constraint firstItem="VV8-fl-R4j" firstAttribute="top" secondItem="xrh-k6-LIH" secondAttribute="top" id="rDv-za-WpS"/>
+                            <constraint firstItem="VV8-fl-R4j" firstAttribute="leading" secondItem="xrh-k6-LIH" secondAttribute="leading" id="sbj-we-i9k"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2ac-L2-GPv"/>
                     </view>
+                    <connections>
+                        <outlet property="playerContainerView" destination="VV8-fl-R4j" id="SoU-aP-uea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnK-nd-85C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

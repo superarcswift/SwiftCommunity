@@ -14,6 +14,10 @@ class VideoPlayerViewController: ViewController, StoryboardInitiable {
 
     static var storyboardName: String = "Videos"
 
+    // IBOutlet
+
+    @IBOutlet weak var playerContainerView: UIView!
+
     // Public
 
     // Private
@@ -24,7 +28,15 @@ class VideoPlayerViewController: ViewController, StoryboardInitiable {
 
     private var player: YTSwiftyPlayer!
 
-    // MARK: Lifecycles
+    // MARK: Overrides
+
+    override var shouldAutorotate: Bool {
+        return true
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscapeLeft
+    }
 
     override func setupViews() {
 
@@ -35,10 +47,22 @@ class VideoPlayerViewController: ViewController, StoryboardInitiable {
             print(id)
             player = YTSwiftyPlayer(frame: view.frame, playerVars: [.videoID("pn7Gr9zn3cs")])
             player.autoplay = false
-            view = player
+            playerContainerView.addAndStretchSubView(player)
             player.delegate = self
             player.loadPlayer()
+
+            navigationController?.setNavigationBarHidden(true, animated: false)
+//            let value = UIInterfaceOrientation.landscapeLeft.rawValue
+//            UIDevice.current.setValue(value, forKey: "orientation")
         }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+
+    @IBAction func didTapClose(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 }
 

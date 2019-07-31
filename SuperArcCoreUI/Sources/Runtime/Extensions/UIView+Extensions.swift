@@ -89,6 +89,21 @@ public extension UIView {
 
 // MARK: - Methods
 
+public extension UIView {
+
+    /// Add a subview and stretch the subview to cover the current view.
+    func addAndStretchSubView(_ subView: UIView) {
+        subView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(subView)
+        NSLayoutConstraint.activate([
+            subView.topAnchor.constraint(equalTo: topAnchor),
+            subView.leftAnchor.constraint(equalTo: leftAnchor),
+            subView.rightAnchor.constraint(equalTo: rightAnchor),
+            subView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            ])
+    }
+}
+
 public extension ClassNameDerivable where Self: UIView {
 
     /// Instantiate a view from its nib.
@@ -100,16 +115,5 @@ public extension ClassNameDerivable where Self: UIView {
         let nib = UINib(nibName: nibName, bundle: Bundle(for: self))
         return nib.instantiate(withOwner: owner, options: nil).first as? ViewClass
     }
-
-    /// Add a subview and stretch the subview to cover the current view.
-    func addAndStretchSubView(_ subView: UIView) {
-        subView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(subView)
-        NSLayoutConstraint.activate([
-            subView.topAnchor.constraint(equalTo: topAnchor),
-            subView.leftAnchor.constraint(equalTo: leftAnchor),
-            subView.rightAnchor.constraint(equalTo: rightAnchor),
-            subView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-    }
 }
+
