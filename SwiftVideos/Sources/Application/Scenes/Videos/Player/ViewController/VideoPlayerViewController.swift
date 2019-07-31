@@ -18,31 +18,30 @@ class VideoPlayerViewController: ViewController, StoryboardInitiable {
 
     // Private
 
+    private var viewModel: VideoPlayerViewModel {
+        return storedViewModel as! VideoPlayerViewModel
+    }
+
     private var player: YTSwiftyPlayer!
 
     // MARK: Lifecycles
 
     override func setupViews() {
 
-        prefersLargeTitles = false
-
         super.setupViews()
 
-        // Create a new player
-        player = YTSwiftyPlayer(
-            frame: view.frame,
-            playerVars: [.videoID("8WDzlcunouY")])
-
-        // Enable auto playback when video is loaded
-        player.autoplay = true
-
-        // Set player view.
-        view = player
-
-        // Set delegate for detect callback information from the player.
-//        player.delegate = self
-
         // Load the video.
-        player.loadPlayer()
+        if case let .youtube(id) = viewModel.videoMetaData.source {
+            print(id)
+            player = YTSwiftyPlayer(frame: view.frame, playerVars: [.videoID("pn7Gr9zn3cs")])
+            player.autoplay = false
+            view = player
+            player.delegate = self
+            player.loadPlayer()
+        }
     }
+}
+
+extension VideoPlayerViewController: YTSwiftyPlayerDelegate {
+
 }

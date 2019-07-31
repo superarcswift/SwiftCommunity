@@ -12,7 +12,7 @@ open class CollectionViewController: UICollectionViewController, CommonViewContr
     public var context: ViewControllerContextProtocol!
     public var storedViewModel: ViewModel!
 
-    public var prefersLargeTitles: Bool = true
+    public var prefersLargeTitles: Bool = false
 
     // MARK: Lifecycles
 

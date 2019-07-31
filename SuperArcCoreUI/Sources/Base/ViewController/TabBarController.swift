@@ -16,7 +16,7 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
     public var context: ViewControllerContextProtocol!
     public var storedViewModel: ViewModel!
 
-    public var prefersLargeTitles: Bool = true
+    public var prefersLargeTitles: Bool = false
     
     // Private
 

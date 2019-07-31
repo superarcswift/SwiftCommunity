@@ -56,12 +56,7 @@ class VideoDetailViewController: ViewController, StoryboardInitiable {
         }.disposed(by: disposeBag)
 
     }
-
-    override func setupViews() {
-        prefersLargeTitles = false
-        super.setupViews()
-    }
-
+    
     override func loadData() {
         viewModel.loadData()
     }
