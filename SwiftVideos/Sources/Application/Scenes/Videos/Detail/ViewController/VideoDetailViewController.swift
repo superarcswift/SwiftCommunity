@@ -56,6 +56,7 @@ class VideoDetailViewController: ViewController, StoryboardInitiable {
     }
 
     override func setupViews() {
+        prefersLargeTitles = false
         super.setupViews()
     }
 

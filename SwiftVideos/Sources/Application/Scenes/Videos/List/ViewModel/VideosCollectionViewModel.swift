@@ -17,6 +17,7 @@ protocol VideosCollectionViewModelInput {
 
 protocol VideosCollectionViewModelOutput {
     var videos: BehaviorRelay<[VideoMetaData]> { get set }
+    var title: String { get }
 }
 
 
@@ -34,6 +35,12 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
 
     lazy var didSelectVideoTrigger: AnyObserver<VideoMetaData> = showVideoAction.inputs
     var videos = BehaviorRelay<[VideoMetaData]>(value: [])
+    var title: String {
+        guard let conferenceMetaData = conferenceMetaData, let conferenceEdition = conferenceEdition else {
+            return "Videos"
+        }
+        return "\(conferenceMetaData.name) - \(conferenceEdition.year)"
+    }
 
     // Private
 

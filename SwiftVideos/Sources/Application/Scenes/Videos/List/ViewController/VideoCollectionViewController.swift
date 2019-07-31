@@ -41,6 +41,8 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
         if hasCloseButton {
            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(VideosCollectionViewController.close))
         }
+
+        title = viewModel.title
     }
 
     override func setupBindings() {

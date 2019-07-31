@@ -20,7 +20,10 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
     // IBInspectable
 
     @IBInspectable open var hasCloseButton: Bool = false
-    @IBInspectable open var prefersLargeTitles: Bool = true
+    @IBInspectable open var prefersLargeTitles: Bool = true {
+        didSet {
+        }
+    }
 
     // MARK: Lifecycles
 
