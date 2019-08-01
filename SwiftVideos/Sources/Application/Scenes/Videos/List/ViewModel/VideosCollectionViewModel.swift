@@ -89,12 +89,13 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
     }
 
     func previewImage(for video: VideoMetaData) -> UIImage? {
+
         guard let previewImageURL = videosService.previewImageURL(for: video) else {
-            return nil
+            return UIImage(named: "video_preview_default")
         }
 
         guard let previewImage = UIImage(contentsOfFile: previewImageURL.path) else {
-            return nil
+            return UIImage(named: "video_preview_default")
         }
 
         return previewImage

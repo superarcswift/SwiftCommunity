@@ -6,6 +6,9 @@ import UIKit
 
 class VideosCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var previewImageView: UIImageView!
+    // MARK: Properties
+
+    // IBOutlet
+
+    @IBOutlet weak var videoView: VideoView!
 }

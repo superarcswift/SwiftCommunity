@@ -54,13 +54,14 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
                     fatalError("invalid cell type")
                 }
 
-                videoCell.nameLabel.text = video.name
+                videoCell.videoView.titleLabel.text = video.name
+
+                videoCell.videoView.authorNameLabel.text = video.authors.first?.name
 
                 if let previewImage = self?.viewModel.previewImage(for: video) {
-                    videoCell.previewImageView.image = previewImage
+                    videoCell.videoView.previewImageView.image = previewImage
                 } else {
-                    videoCell.previewImageView.isHidden = true
-                    videoCell.backgroundColor = .red
+                    videoCell.videoView.previewImageView.isHidden = true
                 }
 
             }.disposed(by: disposeBag)
@@ -86,12 +87,12 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
 extension VideosCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
+        return UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = screenSize.width - 16*2
-        return CGSize(width: cellWidth, height: 200)
+        return CGSize(width: cellWidth, height: 280)
     }
 }
