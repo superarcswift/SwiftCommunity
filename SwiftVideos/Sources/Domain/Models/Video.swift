@@ -10,11 +10,17 @@ typealias VideoID = String
 
 public struct VideoMetaData: Codable {
     let id: VideoID
-    let authorMetaData: AuthorMetaData
-    let conferenceMetaData: ConferenceMetaData
-    let conferenceEdition: ConferenceEdition
+    let authors: [AuthorMetaData]
+    let conference: VideoConferenceInfo
     let name: String
     let source: VideoSource
+}
+
+// MARK: - VideoConferenceInfo
+
+public struct VideoConferenceInfo: Codable {
+    let metaData: ConferenceMetaData
+    let edition: ConferenceEdition
 }
 
 // MARK: - VideoDetail

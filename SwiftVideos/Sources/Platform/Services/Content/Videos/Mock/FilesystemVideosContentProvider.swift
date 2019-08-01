@@ -62,8 +62,8 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
             do {
                 let videoFileURL = baseFolderURL
                                         .appendingPathComponent("conferences", isDirectory: true)
-                                        .appendingPathComponent("\(metaData.conferenceMetaData.id)", isDirectory: true)
-                                        .appendingPathComponent("\(metaData.conferenceEdition.year)", isDirectory: true)
+                                        .appendingPathComponent("\(metaData.conference.metaData.id)", isDirectory: true)
+                                        .appendingPathComponent("\(metaData.conference.edition.year)", isDirectory: true)
                                         .appendingPathComponent("\(metaData.id).json")
                 let videoDetail = try decode(VideoDetail.self, from: videoFileURL)
 
@@ -77,8 +77,8 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
     public func previewImageURL(for metaData: VideoMetaData) -> URL? {
         let videoFolderURL = baseFolderURL
                                 .appendingPathComponent("conferences", isDirectory: true)
-                                .appendingPathComponent("\(metaData.conferenceMetaData.id)", isDirectory: true)
-                                .appendingPathComponent("\(metaData.conferenceEdition.year)", isDirectory: true)
+                                .appendingPathComponent("\(metaData.conference.metaData.id)", isDirectory: true)
+                                .appendingPathComponent("\(metaData.conference.edition.year)", isDirectory: true)
         let previewFileURL = videoFolderURL.appendingPathComponent("\(metaData.id).jpg")
 
         guard fileManager.fileExists(atPath: videoFolderURL.path) else {
