@@ -30,36 +30,26 @@ class VideoPlayerViewController: ViewController, StoryboardInitiable {
 
     // MARK: Overrides
 
-    override var shouldAutorotate: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .landscapeLeft
-    }
-
     override func setupViews() {
 
         super.setupViews()
 
-        // Load the video.
         if case let .youtube(id) = viewModel.videoMetaData.source {
-            print(id)
-            player = YTSwiftyPlayer(frame: view.frame, playerVars: [.videoID("pn7Gr9zn3cs")])
+            player = YTSwiftyPlayer(frame: view.frame, playerVars: [.videoID(id)])
             player.autoplay = false
             playerContainerView.addAndStretchSubView(player)
             player.delegate = self
             player.loadPlayer()
 
             navigationController?.setNavigationBarHidden(true, animated: false)
-//            let value = UIInterfaceOrientation.landscapeLeft.rawValue
-//            UIDevice.current.setValue(value, forKey: "orientation")
         }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
+
+    // MARK: Actions
 
     @IBAction func didTapClose(_ sender: Any) {
         navigationController?.popViewController(animated: true)

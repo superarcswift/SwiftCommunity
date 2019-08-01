@@ -54,14 +54,15 @@ class OnboardingViewModel: CoordinatedViewModel<OnboardingRoute> {
     // MARK: Private helpers
 
     private func updateLocalRepository() {
-        gitService.update()
-            .done { [weak self] _ in
-                self?.isUpdated.onNext(true)
-            }.ensure { [weak self] in
-                self?.isReady.onNext(true)
-            }.catch { error in
-                print(error)
-            }
+        isReady.onNext(true)
+//        gitService.update()
+//            .done { [weak self] _ in
+//                self?.isUpdated.onNext(true)
+//            }.ensure { [weak self] in
+//                self?.isReady.onNext(true)
+//            }.catch { error in
+//                print(error)
+//            }
     }
 
     private func cloneRemoteRepository() {
