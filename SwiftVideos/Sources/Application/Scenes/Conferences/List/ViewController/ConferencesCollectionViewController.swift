@@ -53,7 +53,6 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
                     conferenceCell.conferenceView.previewImageView.image = bannerImage
                 } else {
                     conferenceCell.conferenceView.previewImageView.isHidden = true
-                    conferenceCell.conferenceView.backgroundColor = .red
                 }
             }.disposed(by: disposeBag)
 

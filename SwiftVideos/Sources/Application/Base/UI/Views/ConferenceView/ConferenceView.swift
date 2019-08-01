@@ -13,6 +13,7 @@ import SuperArcFoundation
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var previewImageView: UIImageView!
+    @IBOutlet weak var backgroundView: UIView!
 
     // MARK: Overrides
 

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConferenceView" customModule="SwiftVideos" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundView" destination="YBW-0B-IIB" id="vwg-X7-PPj"/>
                 <outlet property="previewImageView" destination="rvK-wt-Cvo" id="EpH-lX-OGV"/>
                 <outlet property="titleLabel" destination="DGU-fy-Uyi" id="UXw-Fc-Lz5"/>
             </connections>
@@ -20,6 +21,10 @@
             <rect key="frame" x="0.0" y="0.0" width="457" height="322"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBW-0B-IIB">
+                    <rect key="frame" x="0.0" y="0.0" width="457" height="322"/>
+                    <color key="backgroundColor" red="1" green="0.10828446164418293" blue="0.12986338343053061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGU-fy-Uyi">
                     <rect key="frame" x="8" y="8" width="441" height="306"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -43,15 +48,19 @@
                 <constraint firstAttribute="trailing" secondItem="DGU-fy-Uyi" secondAttribute="trailing" constant="8" id="eNA-LS-3Uj"/>
                 <constraint firstAttribute="bottom" secondItem="DGU-fy-Uyi" secondAttribute="bottom" constant="8" id="i7F-EF-cid"/>
                 <constraint firstItem="DGU-fy-Uyi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ilG-nG-K5h"/>
+                <constraint firstItem="YBW-0B-IIB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jgc-VX-BNC"/>
+                <constraint firstAttribute="bottom" secondItem="YBW-0B-IIB" secondAttribute="bottom" id="l1T-Hd-Tev"/>
+                <constraint firstItem="YBW-0B-IIB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nEY-qI-GFH"/>
                 <constraint firstItem="rvK-wt-Cvo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ozU-uZ-2JQ"/>
                 <constraint firstAttribute="trailing" secondItem="rvK-wt-Cvo" secondAttribute="trailing" id="tjN-eb-AnR"/>
+                <constraint firstAttribute="trailing" secondItem="YBW-0B-IIB" secondAttribute="trailing" id="xSJ-WA-3YW"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                    <real key="value" value="15"/>
+                    <real key="value" value="10"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="163.04347826086959" y="-38.839285714285715"/>
