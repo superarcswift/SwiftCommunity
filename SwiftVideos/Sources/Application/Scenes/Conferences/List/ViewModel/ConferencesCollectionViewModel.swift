@@ -32,6 +32,8 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
     lazy var didSelectConferenceTrigger: AnyObserver<ConferenceMetaData> = showConferenceAction.inputs
     var conferences = BehaviorRelay<[ConferenceMetaData]>(value: [])
 
+    var isEmpty = PublishSubject<Bool>()
+
     // MARK: APIs
 
     func loadData() {
@@ -39,8 +41,9 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
             .done { [weak self] conferences in
                 self?.conferences.accept(conferences)
             }
-            .catch { error in
+            .catch { [weak self] error in
                 print(error)
+                self?.isEmpty.on(.next(true))
             }
     }
 

@@ -42,6 +42,8 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
         return "\(conferenceMetaData.name) - \(conferenceEdition.year)"
     }
 
+    var isEmpty = PublishSubject<Bool>()
+
     // Private
 
     var conferenceMetaData: ConferenceMetaData?
@@ -73,8 +75,9 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
             .done { [weak self] videos in
                 self?.videos.accept(videos)
             }
-            .catch { error in
+            .catch { [weak self] error in
                 print(error)
+                self?.isEmpty.onNext(true)
             }
     }
 
@@ -83,8 +86,9 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
             .done { [weak self] videos in
                 self?.videos.accept(videos)
             }
-            .catch { error in
+            .catch { [weak self] error in
                 print(error)
+                self?.isEmpty.onNext(true)
             }
     }
 

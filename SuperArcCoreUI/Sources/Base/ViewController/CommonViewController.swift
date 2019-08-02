@@ -9,15 +9,22 @@ public protocol CommonViewControllerProtocol: ViewModelBindable, HasViewControll
     // MARK: Properties
 
     // ViewModel
+
     var storedViewModel: ViewModel! { get set }
 
     // View Configuration
+
+    var hasRightCloseButton: Bool { get }
+    var hasLeftCloseButton: Bool { get }
+
     var prefersLargeTitles: Bool { get }
 
     // MARK: Lifecycles
 
     func commonViewDidLoad()
     func commonViewWillAppear()
+
+    func close()
 
     // MARK: Setup
 
@@ -51,7 +58,5 @@ extension CommonViewControllerProtocol where Self: UIViewController {
         }
     }
 
-    public func commonSetupView() {
-    }
-
+    public func commonSetupView() {}
 }

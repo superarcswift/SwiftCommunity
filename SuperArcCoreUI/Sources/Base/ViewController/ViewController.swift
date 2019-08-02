@@ -7,7 +7,7 @@ import RxSwift
 import UIKit
 
 /// The base class for all UIViewControllers.
-open class ViewController: UIViewController, CommonViewControllerProtocol {
+open class ViewController: UIViewController, CommonViewControllerProtocol, StateViewDisplayable {
 
 
     // MARK: Properties
@@ -35,6 +35,10 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
         commonViewWillAppear()
     }
 
+    @objc open func close() {
+        dismiss(animated: true, completion: nil)
+    }
+
     // MARK: Setup
 
     open func setupViewModel() -> ViewModel! {
@@ -44,6 +48,10 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
     /// Setup ViewController after loading.
     open func setupViews() {
         commonSetupView()
+
+        if hasLeftCloseButton {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(self.close))
+        }
     }
 
     open func setupBindings() {}

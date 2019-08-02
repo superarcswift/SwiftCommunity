@@ -20,6 +20,7 @@
 		F63A720422F379A1005D0778 /* VideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63A720322F379A1005D0778 /* VideoView.xib */; };
 		F63A720622F379BC005D0778 /* AuthorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63A720522F379BC005D0778 /* AuthorView.xib */; };
 		F63A720822F379D5005D0778 /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A720722F379D5005D0778 /* AuthorView.swift */; };
+		F63A720B22F4179B005D0778 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A720A22F4179B005D0778 /* Constants.swift */; };
 		F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3322E8316000EDB601 /* OnboardingViewController.swift */; };
 		F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */; };
 		F640BC3822E8318800EDB601 /* CoordinatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */; };
@@ -155,6 +156,7 @@
 		F63A720322F379A1005D0778 /* VideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoView.xib; sourceTree = "<group>"; };
 		F63A720522F379BC005D0778 /* AuthorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorView.xib; sourceTree = "<group>"; };
 		F63A720722F379D5005D0778 /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
+		F63A720A22F4179B005D0778 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F640BC3322E8316000EDB601 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedViewModel.swift; sourceTree = "<group>"; };
@@ -788,6 +790,7 @@
 			isa = PBXGroup;
 			children = (
 				F66C916E22E66EAA006CA2BB /* UI */,
+				F63A720A22F4179B005D0778 /* Constants.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1258,6 +1261,7 @@
 				F66C90FC22E6052C006CA2BB /* VideoDetailViewController.swift in Sources */,
 				F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */,
 				F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */,
+				F63A720B22F4179B005D0778 /* Constants.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
 				F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */,
 				F64238AD22CD42DA000F5CE3 /* ContentService.swift in Sources */,

@@ -14,13 +14,24 @@ open class PageViewController: UIPageViewController, CommonViewControllerProtoco
     public var context: ViewControllerContextProtocol!
     public var storedViewModel: ViewModel!
 
-    public var prefersLargeTitles: Bool = false
+    @IBInspectable public var hasRightCloseButton = false
+    @IBInspectable public var hasLeftCloseButton = false
+    @IBInspectable public var prefersLargeTitles = false
 
     // MARK: Lifecycles
 
     open override func viewDidLoad() {
         super.viewDidLoad()
         commonViewDidLoad()
+    }
+
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        commonViewWillAppear()
+    }
+
+    @objc open func close() {
+        dismiss(animated: true, completion: nil)
     }
 
     // MARK: Setup

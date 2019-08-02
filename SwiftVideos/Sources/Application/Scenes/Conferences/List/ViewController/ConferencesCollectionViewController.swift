@@ -43,6 +43,10 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
     override func setupBindings() {
         super.setupBindings()
 
+        viewModel.isEmpty
+            .bind(to: self.rx.isEmpty)
+            .disposed(by: disposeBag)
+
         viewModel.conferences
             .bind(to: collectionView.rx.items(cellIdentifier: ConferenceCollectionViewCell.className)) { [weak self] _, conference, cell in
                 guard let conferenceCell = cell as? ConferenceCollectionViewCell else {

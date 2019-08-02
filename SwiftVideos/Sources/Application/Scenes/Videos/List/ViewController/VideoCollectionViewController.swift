@@ -38,15 +38,15 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
 
         collectionView.registerNib(VideosCollectionViewCell.className, bundle: Bundle(for: VideosCollectionViewCell.self))
 
-        if hasLeftCloseButton {
-           navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(VideosCollectionViewController.close))
-        }
-
         title = viewModel.title
     }
 
     override func setupBindings() {
         super.setupBindings()
+
+        viewModel.isEmpty
+            .bind(to: self.rx.isEmpty)
+            .disposed(by: disposeBag)
 
         viewModel.videos
             .bind(to: collectionView.rx.items(cellIdentifier: VideosCollectionViewCell.className)) { [weak self] _, video, cell in
@@ -77,7 +77,7 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
 
     // MARK: Actions
 
-    @objc func close() {
+    @objc override func close() {
         viewModel.close()
     }
 }
