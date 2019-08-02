@@ -4,30 +4,13 @@
 
 import UIKit
 
-// MAKR: - StateViewContext
-
-public protocol StateViewContext {
-    var headline: String { get }
-    var subline: String? { get }
-}
-
-public struct StandardStateViewContext: StateViewContext {
-    public var headline: String
-    public var subline: String?
-
-    public init(headline: String, subline: String?) {
-        self.headline = headline
-        self.subline = subline
-    }
-}
-
 // MARK: - StateViewDisplayable
 
 public protocol StateViewDisplayable {
-    func showStateView()
+    func showStateView(_ context: StateViewContext)
     func hideStateView()
 
-    func makeStateView() -> UIView
+    func makeStateView(_ context: StateViewContext) -> UIView
     func setStateView(_ view: UIView?)
 }
 
@@ -35,17 +18,20 @@ public protocol StateViewDisplayable {
 
 extension StateViewDisplayable {
 
-    public func showStateView() {
+    public func showStateView(_ context: StateViewContext) {
         hideStateView()
-        setStateView(makeStateView())
+        setStateView(makeStateView(context))
     }
 
     public func hideStateView() {
         setStateView(nil)
     }
 
-    public func makeStateView() -> UIView {
-        return StateView()
+    public func makeStateView(_ context: StateViewContext) -> UIView {
+        let stateView = StateView()
+        stateView.headlineLabel.text = context.headline
+
+        return stateView
     }
 }
 

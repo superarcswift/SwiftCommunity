@@ -2,6 +2,9 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+#if canImport(RxCocoa) && canImport(RxSwift)
+
+import SuperArcCoreUI
 import RxCocoa
 import RxSwift
 
@@ -10,24 +13,20 @@ import RxSwift
 /// Convenience binding to show and hide the state view.
 extension Reactive where Base: UIViewController {
 
-    public var isEmpty: Binder<Bool> {
-        return Binder<Bool>(self.base) { viewController, isEmpty in
+    public var toogleStateView: Binder<StandardStateViewContext?> {
+        return Binder<StandardStateViewContext?>(self.base) { viewController, stateViewContext in
             guard let stateViewPresentable = viewController as? StateViewDisplayable else {
                 return
             }
 
-            isEmpty ? stateViewPresentable.showStateView() : stateViewPresentable.hideStateView()
+            stateViewContext.isEmpty ? stateViewPresentable.showStateView(stateViewContext!) : stateViewPresentable.hideStateView()
         }
     }
 }
 
 // MARK: - StateViewBindingValue
 
-protocol StateViewBindingValue {
-    var isEmpty: Bool { get }
-}
-
-extension Optional: StateViewBindingValue where Wrapped: StateViewContext {
+extension Optional where Wrapped: StateViewContext {
 
     public var isEmpty: Bool {
         switch self {
@@ -38,3 +37,5 @@ extension Optional: StateViewBindingValue where Wrapped: StateViewContext {
         }
     }
 }
+
+#endif

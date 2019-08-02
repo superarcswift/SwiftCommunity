@@ -2,8 +2,6 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import Foundation
-
 public class Container<T> {
 
     // MARK: Properties

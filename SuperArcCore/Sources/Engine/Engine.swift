@@ -2,8 +2,6 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import Foundation
-
 public protocol EngineProtocol {
     var serviceContext: ServiceContext { get }
     var serviceRegistry: ServiceRegistry { get }

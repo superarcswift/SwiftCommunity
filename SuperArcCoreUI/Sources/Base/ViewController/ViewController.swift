@@ -3,11 +3,10 @@
 //
 
 import SuperArcCore
-import RxSwift
 import UIKit
 
 /// The base class for all UIViewControllers.
-open class ViewController: UIViewController, CommonViewControllerProtocol, StateViewDisplayable {
+open class ViewController: UIViewController, CommonViewControllerProtocol {
 
 
     // MARK: Properties

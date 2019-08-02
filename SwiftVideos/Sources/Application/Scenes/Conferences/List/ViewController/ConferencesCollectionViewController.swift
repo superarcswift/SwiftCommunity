@@ -43,8 +43,8 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
     override func setupBindings() {
         super.setupBindings()
 
-        viewModel.isEmpty
-            .bind(to: self.rx.isEmpty)
+        viewModel.toggleEmptyState
+            .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
 
         viewModel.conferences

@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcStateView
 import SuperArcCoreUI
 import SuperArcCore
 import XCoordinator
@@ -32,7 +33,7 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
     lazy var didSelectConferenceTrigger: AnyObserver<ConferenceMetaData> = showConferenceAction.inputs
     var conferences = BehaviorRelay<[ConferenceMetaData]>(value: [])
 
-    var isEmpty = PublishSubject<Bool>()
+    var toggleEmptyState = PublishSubject<StandardStateViewContext?>()
 
     // MARK: APIs
 
@@ -43,7 +44,7 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
             }
             .catch { [weak self] error in
                 print(error)
-                self?.isEmpty.on(.next(true))
+                self?.toggleEmptyState.on(.next(StandardStateViewContext(headline: "No conference found")))
             }
     }
 

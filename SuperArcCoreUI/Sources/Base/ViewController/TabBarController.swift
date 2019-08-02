@@ -3,7 +3,6 @@
 //
 
 import SuperArcCore
-import RxSwift
 import UIKit
 
 open class TabBarController: UITabBarController, CommonViewControllerProtocol {
@@ -21,8 +20,6 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
     @IBInspectable public var prefersLargeTitles = false
 
     // Private
-
-    private let disposeBag = DisposeBag()
 
     // MARK: Initialization
 

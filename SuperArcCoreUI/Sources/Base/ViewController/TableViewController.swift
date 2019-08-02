@@ -3,7 +3,6 @@
 //
 
 import SuperArcCore
-import RxSwift
 import UIKit
 
 open class TableViewController: UITableViewController, CommonViewControllerProtocol {
@@ -22,8 +21,6 @@ open class TableViewController: UITableViewController, CommonViewControllerProto
     @IBInspectable public var prefersLargeTitles = false
     
     // Private
-
-    private let disposeBag = DisposeBag()
 
     // MARK: Lifecycles
 

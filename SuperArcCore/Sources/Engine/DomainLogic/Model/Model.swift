@@ -2,8 +2,6 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import Foundation
-
 open class Model<T:Codable>: Codable {
 
     // MARK: Properties

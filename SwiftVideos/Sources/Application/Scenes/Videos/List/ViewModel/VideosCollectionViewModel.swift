@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcStateView
 import SuperArcCoreUI
 import SuperArcCore
 import XCoordinator
@@ -42,7 +43,7 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
         return "\(conferenceMetaData.name) - \(conferenceEdition.year)"
     }
 
-    var isEmpty = PublishSubject<Bool>()
+    var toogleStateView = PublishSubject<StandardStateViewContext?>()
 
     // Private
 
@@ -77,7 +78,7 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
             }
             .catch { [weak self] error in
                 print(error)
-                self?.isEmpty.onNext(true)
+                self?.toogleStateView.onNext(StandardStateViewContext(headline: "No videos found"))
             }
     }
 
@@ -88,7 +89,7 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
             }
             .catch { [weak self] error in
                 print(error)
-                self?.isEmpty.onNext(true)
+                self?.toogleStateView.onNext(StandardStateViewContext(headline: "No videos found for conference \(conference.name)"))
             }
     }
 
