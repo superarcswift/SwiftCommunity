@@ -1,8 +1,4 @@
 //
-//  SuperArcCoordinator.h
-//  SuperArcCoordinator
-//
-//  Created by An Tran on 22.07.19.
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 

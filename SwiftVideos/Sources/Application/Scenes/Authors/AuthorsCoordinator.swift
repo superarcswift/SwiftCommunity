@@ -27,13 +27,13 @@ class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
     override func prepareTransition(for route: AuthorsRoute) -> NavigationTransition {
         switch route {
         case .authors:
-            let viewController = AuthorsCollectionViewController.instantiate()
+            let viewController = AuthorsCollectionViewController.instantiate(with: viewControllerContext)
             let viewModel = AuthorsCollectionViewModel(router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
         case .authorDetail(let authorMetaData):
-            let viewController = AuthorDetailViewController.instantiate()
+            let viewController = AuthorDetailViewController.instantiate(with: viewControllerContext)
             let viewModel = AuthorDetailViewModel(authorMetaData: authorMetaData, router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)

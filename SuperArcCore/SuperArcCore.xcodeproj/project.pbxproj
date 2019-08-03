@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F63A729122F47BC6005D0778 /* ViewControllerDependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729022F47BC6005D0778 /* ViewControllerDependencyRegistry.swift */; };
+		F63A729322F47C14005D0778 /* ViewControllerDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729222F47C14005D0778 /* ViewControllerDependency.swift */; };
 		F64238AF22CD44C6000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */; };
 		F6451B7222D14B5A0091E147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B7122D14B5A0091E147 /* Endpoint.swift */; };
 		F66C903722DF381E006CA2BB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903622DF381E006CA2BB /* Kingfisher.framework */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F63A729022F47BC6005D0778 /* ViewControllerDependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDependencyRegistry.swift; sourceTree = "<group>"; };
+		F63A729222F47C14005D0778 /* ViewControllerDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDependency.swift; sourceTree = "<group>"; };
 		F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6451B7122D14B5A0091E147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F66C903622DF381E006CA2BB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				F66C90EE22E5ED5E006CA2BB /* ViewControllerContext.swift */,
+				F63A729022F47BC6005D0778 /* ViewControllerDependencyRegistry.swift */,
+				F63A729222F47C14005D0778 /* ViewControllerDependency.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -319,7 +325,9 @@
 				F6CF4AB022D283CD0026F84F /* Model.swift in Sources */,
 				F6CAFA8622CC0373007476D4 /* ServiceContext.swift in Sources */,
 				F675C35522DEFDA500FA77DD /* Core.swift in Sources */,
+				F63A729322F47C14005D0778 /* ViewControllerDependency.swift in Sources */,
 				F6CAFA8822CC039F007476D4 /* Service.swift in Sources */,
+				F63A729122F47BC6005D0778 /* ViewControllerDependencyRegistry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +494,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.core;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -517,7 +525,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.core;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

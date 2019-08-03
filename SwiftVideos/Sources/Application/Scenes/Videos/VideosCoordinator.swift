@@ -27,7 +27,8 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
     override func prepareTransition(for route: VideosRoute) -> NavigationTransition {
         switch route {
         case .videos(let conferenceMetaData, let conferenceEdition):
-            let viewController = VideosCollectionViewController.instantiate()
+            let viewController = VideosCollectionViewController.instantiate(with: viewControllerContext)
+            viewController.setViewControllerContext(viewControllerContext)
             if conferenceMetaData != nil {
                 viewController.hasLeftCloseButton = true
             }
@@ -36,13 +37,15 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
             return .push(viewController)
 
         case .videoDetail(let videoMetaData):
-            let viewController = VideoDetailViewController.instantiate()
+            let viewController = VideoDetailViewController.instantiate(with: viewControllerContext)
+            viewController.setViewControllerContext(viewControllerContext)
             let viewModel = VideoDetailViewModel(videoMetaData: videoMetaData, router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
         case .videoPlayer(let videoMetaData):
-            let viewController = VideoPlayerViewController.instantiate()
+            let viewController = VideoPlayerViewController.instantiate(with: viewControllerContext)
+            viewController.setViewControllerContext(viewControllerContext)
             let viewModel = VideoPlayerViewModel(videoMetaData: videoMetaData, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)

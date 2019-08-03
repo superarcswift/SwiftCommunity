@@ -5,6 +5,9 @@
       location = "group:SwiftVideos/SwiftVideos.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:SuperArcNotificationBanner/SuperArcNotificationBanner.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SuperArcStateView/SuperArcStateView.xcodeproj">
    </FileRef>
    <FileRef

@@ -12,7 +12,7 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
 
     // Public
 
-    public var context: ViewControllerContextProtocol!
+    public var context: ViewControllerContext!
     public var storedViewModel: ViewModel!
 
     @IBInspectable public var hasRightCloseButton = false

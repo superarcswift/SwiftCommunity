@@ -1,8 +1,4 @@
 //
-//  SuperArcCoreUI.h
-//  SuperArcCoreUI
-//
-//  Created by An Tran on 16.07.19.
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 

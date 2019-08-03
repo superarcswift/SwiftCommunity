@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcNotificationBanner
 import SuperArcCore
 
 class AppManager {
@@ -19,7 +20,17 @@ class AppManager {
     // MARK: Intialization
 
     init() {
+        setupServices()
+        setupViewControllerContext()
+    }
 
+    // MARK: Private helpers
+
+    private func setupViewControllerContext() {
+        core.viewControllerContext.dependencyRegistry.register(NotificationPresenter(), for: NotificationPresenter.self)
+    }
+
+    private func setupServices() {
         let gitService = GitService(context: core.engine.serviceContext)
         core.engine.serviceRegistry.register(gitService, for: GitService.self)
 

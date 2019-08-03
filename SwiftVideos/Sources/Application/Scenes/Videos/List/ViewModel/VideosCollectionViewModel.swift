@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcNotificationBanner
 import SuperArcStateView
 import SuperArcCoreUI
 import SuperArcCore
@@ -44,6 +45,7 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
     }
 
     var toogleStateView = PublishSubject<StandardStateViewContext?>()
+    var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
 
     // Private
 
@@ -77,8 +79,8 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
                 self?.videos.accept(videos)
             }
             .catch { [weak self] error in
-                print(error)
                 self?.toogleStateView.onNext(StandardStateViewContext(headline: "No videos found"))
+                self?.notification.onNext(StandardNotification(error: error))
             }
     }
 
@@ -88,8 +90,8 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
                 self?.videos.accept(videos)
             }
             .catch { [weak self] error in
-                print(error)
                 self?.toogleStateView.onNext(StandardStateViewContext(headline: "No videos found for conference \(conference.name)"))
+                self?.notification.onNext(StandardNotification(error: error))
             }
     }
 

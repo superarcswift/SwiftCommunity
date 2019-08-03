@@ -27,13 +27,13 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
     override func prepareTransition(for route: ConferencesRoute) -> NavigationTransition {
         switch route {
         case .conferences:
-            let viewController = ConferencesCollectionViewController.instantiate()
+            let viewController = ConferencesCollectionViewController.instantiate(with: viewControllerContext)
             let viewModel = ConferencesCollectionViewModel(router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
         case .conferenceDetail(let conferenceMetaData):
-            let viewController = ConferenceDetailViewController.instantiate()
+            let viewController = ConferenceDetailViewController.instantiate(with: viewControllerContext)
             let viewModel = ConferenceDetailViewModel(conferenceMetaData: conferenceMetaData, router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)

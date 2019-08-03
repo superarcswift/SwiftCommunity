@@ -27,7 +27,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
     override func prepareTransition(for route: MoreRoute) -> NavigationTransition {
         switch route {
         case .list:
-            let viewController = MoreTableViewController.instantiate()
+            let viewController = MoreTableViewController.instantiate(with: viewControllerContext)
             return .push(viewController)
 
         case .close:

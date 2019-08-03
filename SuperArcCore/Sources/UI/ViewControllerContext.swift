@@ -3,21 +3,25 @@
 //
 
 public protocol HasViewControllerContext: class {
-    var context: ViewControllerContextProtocol! { get set }
+    var context: ViewControllerContext! { get set }
 }
 
-public protocol ViewControllerContextProtocol {
+public protocol ViewControllerContext {
 
     var engine: Engine { get }
+    var dependencyRegistry: ViewControllerDependencyRegistry { get }
 }
 
-public class ViewControllerContext: ViewControllerContextProtocol {
+public class StandardViewControllerContext: ViewControllerContext {
 
     // MARK: Properties
 
     // Public
 
     public private(set) var engine: Engine
+    public let dependencyRegistry = ViewControllerDependencyRegistry()
+
+    // Private
 
     // MARK: Initialization
 

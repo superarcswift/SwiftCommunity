@@ -5,3 +5,5 @@
 import SuperArcCoreUI
 
 extension ViewController: StateViewDisplayable {}
+extension TableViewController: StateViewDisplayable {}
+extension CollectionViewController: StateViewDisplayable {}

@@ -11,7 +11,7 @@ open class TableViewController: UITableViewController, CommonViewControllerProto
 
     // Public
 
-    public var context: ViewControllerContextProtocol!
+    public var context: ViewControllerContext!
     public var storedViewModel: ViewModel!
 
     // IBInspectable

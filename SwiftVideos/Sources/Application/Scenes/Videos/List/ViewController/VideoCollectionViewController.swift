@@ -44,6 +44,10 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
     override func setupBindings() {
         super.setupBindings()
 
+        viewModel.notification
+            .bind(to: self.rx.notification)
+            .disposed(by: disposeBag)
+
         viewModel.toogleStateView
             .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)

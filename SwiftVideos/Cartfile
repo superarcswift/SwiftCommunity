@@ -5,3 +5,4 @@ github "peacemoon/XCoordinator" "master"
 github "RxSwiftCommunity/Action" ~> 4.0
 github "rinov/YoutubeKit" "master"
 github "libgit2/objective-git"
+github "Daltron/NotificationBanner" "master"
