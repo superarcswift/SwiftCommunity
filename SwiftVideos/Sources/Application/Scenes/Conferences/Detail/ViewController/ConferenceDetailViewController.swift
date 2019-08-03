@@ -14,7 +14,7 @@ class ConferenceDetailViewController: ViewController, StoryboardInitiable {
 
     // Static
 
-    static var storyboardName = "Conferences"
+    public static var storyboardName = "Conferences"
 
     // IBOutlets
     
@@ -45,6 +45,10 @@ class ConferenceDetailViewController: ViewController, StoryboardInitiable {
     override func setupBindings() {
         super.setupBindings()
 
+        viewModel.notification
+            .bind(to: self.rx.notification)
+            .disposed(by: disposeBag)
+
         viewModel.conferenceEditions
             .bind(to: collectionView.rx.items(cellIdentifier: ConferenceDetailEditionCollectionViewCell.className)) { _, conferenceEdition, cell in
                 guard let cell = cell as? ConferenceDetailEditionCollectionViewCell else {
@@ -62,7 +66,7 @@ class ConferenceDetailViewController: ViewController, StoryboardInitiable {
             .disposed(by: disposeBag)
     }
 
-    override func loadData() {
+    override public func loadData() {
         viewModel.loadData()
     }
 }
@@ -71,11 +75,11 @@ class ConferenceDetailViewController: ViewController, StoryboardInitiable {
 
 extension ConferenceDetailViewController: UICollectionViewDelegateFlowLayout {
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = screenSize.width - 16*2
         return CGSize(width: cellWidth, height: 100)

@@ -22,9 +22,7 @@ protocol VideosCollectionViewModelOutput {
     var title: String { get }
 }
 
-
 class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, VideosCollectionViewModelOutput {
-
 
     // MARK: Properties
 

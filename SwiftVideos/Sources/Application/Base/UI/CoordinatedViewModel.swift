@@ -13,7 +13,7 @@ protocol CoordinatedViewModelProtocol {
 }
 
 /// Base class can be used to create ViewModels with Coordinator.
-class CoordinatedViewModel<T: Route>: ViewModel, CoordinatedViewModelProtocol {
+public class CoordinatedViewModel<T: Route>: ViewModel, CoordinatedViewModelProtocol {
 
     // MARK: Properties
 
@@ -21,7 +21,7 @@ class CoordinatedViewModel<T: Route>: ViewModel, CoordinatedViewModelProtocol {
 
     // MARK: Initialization
 
-    init(router: AnyRouter<T>, engine: Engine) {
+    public init(router: AnyRouter<T>, engine: Engine) {
         self.router = router
         super.init(engine: engine)
     }

@@ -48,7 +48,6 @@ public final class NotificationPresenter: NotificationSink {
             title = "Error"
             subtitle = error.localizedDescription
         }
-        
 
         return GrowingNotificationBanner(title: title, subtitle: subtitle, leftView: nil, rightView: nil, style: style, colors: nil)
 

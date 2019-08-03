@@ -57,5 +57,4 @@ class VideoPlayerViewController: ViewController, StoryboardInitiable {
 }
 
 extension VideoPlayerViewController: YTSwiftyPlayerDelegate {
-
 }

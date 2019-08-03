@@ -2,9 +2,11 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import XCoordinator
+import SuperArcNotificationBanner
+import SuperArcStateView
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
 import Action
 import RxSwift
 import RxCocoa
@@ -19,7 +21,7 @@ protocol VideoDetailViewModelOutput {
     var previewVideoImage: BehaviorRelay<UIImage?> { get set }
 }
 
-public class VideoDetailViewModel: ViewModel, VideoDetailViewModelInput, VideoDetailViewModelOutput {
+class VideoDetailViewModel: ViewModel, VideoDetailViewModelInput, VideoDetailViewModelOutput {
 
     // MARK: Properties
 
@@ -27,6 +29,9 @@ public class VideoDetailViewModel: ViewModel, VideoDetailViewModelInput, VideoDe
 
     public var videoDetail = BehaviorRelay<VideoDetail?>(value: nil)
     public var previewVideoImage = BehaviorRelay<UIImage?>(value: nil)
+
+    public var toogleStateView = PublishSubject<StandardStateViewContext?>()
+    public var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
 
     // Internal
 
@@ -44,7 +49,7 @@ public class VideoDetailViewModel: ViewModel, VideoDetailViewModelInput, VideoDe
 
     // MARK: Initialization
 
-    public init(videoMetaData: VideoMetaData, router: AnyRouter<VideosRoute>, engine: Engine) {
+    init(videoMetaData: VideoMetaData, router: AnyRouter<VideosRoute>, engine: Engine) {
         self.videoMetaData = videoMetaData
         self.router = router
         super.init(engine: engine)

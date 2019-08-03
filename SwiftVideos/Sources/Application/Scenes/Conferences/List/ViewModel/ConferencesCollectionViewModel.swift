@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcNotificationBanner
 import SuperArcStateView
 import SuperArcCoreUI
 import SuperArcCore
@@ -34,6 +35,7 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
     var conferences = BehaviorRelay<[ConferenceMetaData]>(value: [])
 
     var toggleEmptyState = PublishSubject<StandardStateViewContext?>()
+    var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
 
     // MARK: APIs
 
@@ -48,7 +50,7 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
             }
     }
 
-    func bannerImage(for conference: ConferenceMetaData) -> UIImage? {
+    public func bannerImage(for conference: ConferenceMetaData) -> UIImage? {
         guard let bannerImageURL = conferencesService.bannerImageURL(for: conference) else {
             return nil
         }

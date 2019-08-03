@@ -32,7 +32,7 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
 
     // MARK: Lifecycles
 
-    override func setupViews() {
+    override public func setupViews() {
         super.setupViews()
 
         collectionView.delegate = self
@@ -42,6 +42,10 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
 
     override func setupBindings() {
         super.setupBindings()
+
+        viewModel.notification
+            .bind(to: self.rx.notification)
+            .disposed(by: disposeBag)
 
         viewModel.toggleEmptyState
             .bind(to: self.rx.toogleStateView)
@@ -74,11 +78,11 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
 
 extension ConferencesCollectionViewController: UICollectionViewDelegateFlowLayout {
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = screenSize.width - 16*2
         return CGSize(width: cellWidth, height: 200)

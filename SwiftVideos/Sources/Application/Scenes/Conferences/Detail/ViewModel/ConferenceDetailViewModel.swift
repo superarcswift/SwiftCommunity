@@ -2,19 +2,21 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import XCoordinator
+import SuperArcNotificationBanner
+import SuperArcStateView
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
 import Action
 import RxSwift
 import RxCocoa
 
-protocol ConferenceDetailViewModelInput {
+public protocol ConferenceDetailViewModelInput {
     var conferenceMetaData: ConferenceMetaData { get }
     var didSelectConferenceEditionTrigger: AnyObserver<ConferenceEdition> { get }
 }
 
-protocol ConferenceDetailViewModelOutput {
+public protocol ConferenceDetailViewModelOutput {
     var conferenceEditions: BehaviorRelay<[ConferenceEdition]> { get set }
 }
 
@@ -27,6 +29,9 @@ public class ConferenceDetailViewModel: ViewModel, ConferenceDetailViewModelInpu
     public let conferenceMetaData: ConferenceMetaData
     public var conferenceEditions = BehaviorRelay<[ConferenceEdition]>(value: [])
     public lazy var didSelectConferenceEditionTrigger: AnyObserver<ConferenceEdition> = showConferenceEditionAction.inputs
+
+    public var toogleStateView = PublishSubject<StandardStateViewContext?>()
+    public var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
 
     // Private
 
