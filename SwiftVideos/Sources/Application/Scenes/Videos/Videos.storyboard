@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xI1-cs-DQC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ydn-en-Obo">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dE1-8q-Yyb">
                                     <size key="itemSize" width="50" height="50"/>
@@ -39,6 +39,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="imR-zs-edJ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Videos" image="videos" id="HsW-29-oLl"/>
                     <navigationItem key="navigationItem" title="Videos" id="Xck-ld-RAK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -59,13 +60,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-wM-14i">
-                                <rect key="frame" x="0.0" y="88" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="fz2-M0-Kap"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ5-fV-dds">
-                                <rect key="frame" x="8" y="246" width="398" height="44"/>
+                                <rect key="frame" x="8" y="202" width="398" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="D1T-SV-Xb8"/>
                                 </constraints>
@@ -74,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXE-hb-Wxi">
-                                <rect key="frame" x="8" y="298" width="398" height="300"/>
+                                <rect key="frame" x="8" y="254" width="398" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="bJx-kP-66X"/>
                                 </constraints>
@@ -83,7 +84,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AX-VV-ZIR">
-                                <rect key="frame" x="167" y="775" width="80" height="30"/>
+                                <rect key="frame" x="167" y="824" width="80" height="30"/>
                                 <state key="normal" title="Start Player"/>
                             </button>
                         </subviews>
@@ -153,25 +154,8 @@
             </objects>
             <point key="canvasLocation" x="2577" y="73"/>
         </scene>
-        <!--Videos-->
-        <scene sceneID="uZX-d1-qj2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xI1-cs-DQC" customClass="NavigationController" customModule="SuperArcCoreUI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Videos" id="BcF-uE-6d8"/>
-                    <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8O2-Yu-oN9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="v9z-IN-dbz" kind="relationship" relationship="rootViewController" id="3HK-ie-ktw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tad-DG-9jc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-26.086956521739133" y="72.991071428571431"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="videos" width="24" height="24"/>
+    </resources>
 </document>

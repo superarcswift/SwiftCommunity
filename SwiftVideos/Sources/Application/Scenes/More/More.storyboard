@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c9h-b5-d2T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -54,7 +54,9 @@
                             <outlet property="delegate" destination="lK0-AI-wU8" id="isO-75-LXe"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="More" image="more" id="Beq-ck-wg6"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Yk7-F4-RMT"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpB-41-dfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,23 +77,8 @@
             </objects>
             <point key="canvasLocation" x="1065" y="148"/>
         </scene>
-        <!--More-->
-        <scene sceneID="eqE-Dy-a6m">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2WD-fP-S2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="c9h-b5-d2T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="3" title="More" id="I3L-Xi-jt0"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u5f-ah-Y9p">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="lK0-AI-wU8" kind="relationship" relationship="rootViewController" id="2C4-cq-b2j"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-545" y="148"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="more" width="24" height="24"/>
+    </resources>
 </document>

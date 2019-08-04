@@ -41,6 +41,7 @@ class VideosService: ContentService {
     func previewImageURL(for video: VideoMetaData) -> URL? {
         return contentProvider.previewImageURL(for: video)
     }
+
     // MARK: Private helpers
 }
 

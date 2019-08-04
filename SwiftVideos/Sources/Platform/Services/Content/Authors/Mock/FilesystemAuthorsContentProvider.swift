@@ -12,6 +12,11 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
 
     var baseFolderPath: String
 
+    // Private
+
+    private lazy var baseFolderURL = URL(fileURLWithPath: baseFolderPath)
+    private var fileManager = FileManager.default
+
     // MARK: Initialization
 
     init(rootContentFolderPath: String) {
@@ -23,7 +28,9 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
     func fetchList() -> Promise<[AuthorMetaData]> {
         return Promise { resolver in
             do {
-                let authorsFileURL = Bundle.main.url(forResource: "authors", withExtension: "json")!
+                let authorsFileURL = baseFolderURL
+                    .appendingPathComponent("authors", isDirectory: true)
+                    .appendingPathComponent("authors.json")
                 let authorsList = try decode([AuthorMetaData].self, from: authorsFileURL)
 
                 resolver.fulfill(authorsList)
@@ -32,4 +39,17 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
             }
         }
     }
+
+    public func avatar(of authorMetaData: AuthorMetaData) -> URL? {
+        let authorFolderURL = baseFolderURL
+            .appendingPathComponent("authors", isDirectory: true)
+        let previewFileURL = authorFolderURL.appendingPathComponent("\(authorMetaData.id).jpg")
+
+        guard fileManager.fileExists(atPath: authorFolderURL.path) else {
+            return nil
+        }
+
+        return previewFileURL
+    }
+
 }

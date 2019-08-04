@@ -30,6 +30,10 @@ class AuthorsService: ContentService {
         return contentProvider.fetchList()
     }
 
+    func avatar(of author: AuthorMetaData) -> URL? {
+        return contentProvider.avatar(of: author)
+    }
+
     // MARK: Private helpers
 }
 
@@ -37,4 +41,5 @@ class AuthorsService: ContentService {
 
 protocol AuthorsDataProvider: ContentDataProvider {
     func fetchList() -> Promise<[AuthorMetaData]>
+    func avatar(of author: AuthorMetaData) -> URL?
 }

@@ -41,8 +41,17 @@ class AuthorsCollectionViewController: ViewController, StoryboardInitiable {
         super.setupBindings()
 
         viewModel.authors
-            .bind(to: collectionView.rx.items(cellIdentifier: AuthorsCollectionViewCell.className)) { _, element, cell in
+            .bind(to: collectionView.rx.items(cellIdentifier: AuthorsCollectionViewCell.className)) { [weak self] _, author, cell in
 
+                guard let authorCell = cell as? AuthorsCollectionViewCell else {
+                    fatalError("invalid cell type")
+                }
+
+                authorCell.authorView.nameLabel.text = author.name
+
+                if let avatarImage = self?.viewModel.avatarImage(of: author) {
+                    authorCell.authorView.avatarImageView.image = avatarImage
+                }
             }.disposed(by: disposeBag)
 
         collectionView.rx.modelSelected(AuthorMetaData.self)
@@ -64,8 +73,6 @@ extension AuthorsCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let screenSize = UIScreen.main.bounds.size
-        let cellWidth = (screenSize.width - 16*2 - 16*2) / 2
-        return CGSize(width: cellWidth, height: 150)
+        return CGSize(width: 100, height: 170)
     }
 }

@@ -41,6 +41,19 @@ class AuthorsCollectionViewModel: ViewModel {
                 print(error)
         }
     }
+
+    func avatarImage(of author: AuthorMetaData) -> UIImage? {
+
+        guard let avatarImageURL = authorsService.avatar(of: author) else {
+            return nil
+        }
+
+        guard let avatarImage = UIImage(contentsOfFile: avatarImageURL.path) else {
+            return nil
+        }
+
+        return avatarImage
+    }
 }
 
 // MARK: - Dependencies

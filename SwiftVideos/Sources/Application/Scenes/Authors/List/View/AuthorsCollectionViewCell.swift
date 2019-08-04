@@ -6,5 +6,9 @@ import UIKit
 
 class AuthorsCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    // MARK: Properties
+
+    // IBOutlet
+
+    @IBOutlet weak var authorView: AuthorView!
 }
