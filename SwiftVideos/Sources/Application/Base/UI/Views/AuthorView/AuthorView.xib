@@ -23,6 +23,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video_author_default" translatesAutoresizingMaskIntoConstraints="NO" id="U4R-89-gYf">
                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="100" id="FON-Vu-0jc"/>
                         <constraint firstAttribute="width" secondItem="U4R-89-gYf" secondAttribute="height" multiplier="1:1" id="HU5-7b-uHe"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -52,9 +53,8 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="U4R-89-gYf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4mt-p4-xdA"/>
                 <constraint firstItem="jqD-Ji-hQ8" firstAttribute="top" secondItem="U4R-89-gYf" secondAttribute="bottom" constant="16" id="Cff-j4-LEJ"/>
-                <constraint firstItem="U4R-89-gYf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KdK-82-bJS"/>
-                <constraint firstAttribute="trailing" secondItem="U4R-89-gYf" secondAttribute="trailing" id="PJO-jp-j9v"/>
                 <constraint firstAttribute="trailing" secondItem="jqD-Ji-hQ8" secondAttribute="trailing" id="Tos-bW-vWu"/>
                 <constraint firstItem="jqD-Ji-hQ8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nVl-2A-UQk"/>
                 <constraint firstItem="U4R-89-gYf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wkO-4Y-ZKc"/>

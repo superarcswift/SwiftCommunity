@@ -2,6 +2,8 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcNotificationBanner
+import SuperArcStateView
 import SuperArcCoreUI
 import SuperArcCore
 import XCoordinator
@@ -23,6 +25,9 @@ class AuthorsCollectionViewModel: ViewModel {
     lazy var didSelectAuthor: AnyObserver<AuthorMetaData> = showAuthorAction.inputs
     var authors = BehaviorRelay<[AuthorMetaData]>(value: [])
 
+    var toogleStateView = PublishSubject<StandardStateViewContext?>()
+    var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
+
     // MARK: Initialization
 
     init(router: AnyRouter<AuthorsRoute>, engine: Engine) {
@@ -37,9 +42,10 @@ class AuthorsCollectionViewModel: ViewModel {
             .done { [weak self] authors in
                 self?.authors.accept(authors)
             }
-            .catch { error in
-                print(error)
-        }
+            .catch { [weak self] error in
+                self?.toogleStateView.onNext(StandardStateViewContext(headline: "No authors found"))
+                self?.notification.onNext(StandardNotification(error: error))
+            }
     }
 
     func avatarImage(of author: AuthorMetaData) -> UIImage? {

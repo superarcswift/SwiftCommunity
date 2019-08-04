@@ -30,6 +30,10 @@ class AuthorsService: ContentService {
         return contentProvider.fetchList()
     }
 
+    func fetchAuthor(with metaData: AuthorMetaData) -> Promise<AuthorDetail> {
+        return contentProvider.fetchAuthor(with: metaData)
+    }
+
     func avatar(of author: AuthorMetaData) -> URL? {
         return contentProvider.avatar(of: author)
     }
@@ -41,5 +45,6 @@ class AuthorsService: ContentService {
 
 protocol AuthorsDataProvider: ContentDataProvider {
     func fetchList() -> Promise<[AuthorMetaData]>
+    func fetchAuthor(with metaData: AuthorMetaData) -> Promise<AuthorDetail>
     func avatar(of author: AuthorMetaData) -> URL?
 }

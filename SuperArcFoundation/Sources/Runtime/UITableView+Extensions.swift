@@ -4,15 +4,15 @@
 
 import UIKit
 
-extension UICollectionView {
+extension UITableView {
 
-    public func registerNib(_ cellClass: UICollectionViewCell.Type) {
+    public func registerNib(_ cellClass: UITableViewCell.Type) {
         let identifier = cellClass.className
         registerNib(identifier, bundle: Bundle(for: cellClass))
     }
 
     public func registerNib(_ identifierAndNibName: String, bundle: Bundle) {
         let nib = UINib(nibName: identifierAndNibName, bundle: bundle)
-        register(nib, forCellWithReuseIdentifier: identifierAndNibName)
+        register(nib, forCellReuseIdentifier: identifierAndNibName)
     }
 }

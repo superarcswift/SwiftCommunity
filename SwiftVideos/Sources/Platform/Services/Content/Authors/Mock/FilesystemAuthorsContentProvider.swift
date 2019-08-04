@@ -40,6 +40,21 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
         }
     }
 
+    func fetchAuthor(with metaData: AuthorMetaData) -> Promise<AuthorDetail> {
+        return Promise { resolver in
+            do {
+                let authorFileURL = baseFolderURL
+                    .appendingPathComponent("authors", isDirectory: true)
+                    .appendingPathComponent("\(metaData.id).json")
+                let author = try decode(AuthorDetail.self, from: authorFileURL)
+
+                resolver.fulfill(author)
+            } catch {
+                resolver.reject(error)
+            }
+        }
+    }
+
     public func avatar(of authorMetaData: AuthorMetaData) -> URL? {
         let authorFolderURL = baseFolderURL
             .appendingPathComponent("authors", isDirectory: true)

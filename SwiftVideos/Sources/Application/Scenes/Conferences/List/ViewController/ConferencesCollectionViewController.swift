@@ -37,7 +37,7 @@ class ConferencesCollectionViewController: ViewController, StoryboardInitiable {
 
         collectionView.delegate = self
 
-        collectionView.registerNib(ConferenceCollectionViewCell.className, bundle: Bundle(for: ConferenceCollectionViewCell.self))
+        collectionView.registerNib(ConferenceCollectionViewCell.self)
     }
 
     override func setupBindings() {

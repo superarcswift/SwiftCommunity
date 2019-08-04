@@ -58,13 +58,91 @@
                     <view key="view" contentMode="scaleToFill" id="Uvr-oH-Brj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oso-f2-N2j">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuthorAvatarTableViewCell" rowHeight="150" id="xYn-hs-0gA" customClass="AuthorAvatarTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xYn-hs-0gA" id="C3f-fq-rtA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qn-dc-I3c" customClass="AuthorView" customModule="SwiftVideos" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="16" width="414" height="118"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="7qn-dc-I3c" secondAttribute="bottom" constant="16" id="1BI-42-iWh"/>
+                                                <constraint firstItem="7qn-dc-I3c" firstAttribute="top" secondItem="C3f-fq-rtA" secondAttribute="top" constant="16" id="E4O-oC-Y86"/>
+                                                <constraint firstItem="7qn-dc-I3c" firstAttribute="leading" secondItem="C3f-fq-rtA" secondAttribute="leading" id="HWd-uf-WZ1"/>
+                                                <constraint firstAttribute="trailing" secondItem="7qn-dc-I3c" secondAttribute="trailing" id="Qi2-OF-1ZA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorView" destination="7qn-dc-I3c" id="LQn-os-lB2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuthorResourcesTableViewCell" id="TPH-0g-vwi" customClass="AuthorResourcesTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="178" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TPH-0g-vwi" id="44m-WQ-F8i">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYi-eK-bhy">
+                                                    <rect key="frame" x="16" y="0.0" width="100" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="v8P-1Y-orE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ok-RI-GZ6">
+                                                    <rect key="frame" x="124" y="0.0" width="282" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NYi-eK-bhy" firstAttribute="top" secondItem="44m-WQ-F8i" secondAttribute="top" id="0Nl-Ua-SRr"/>
+                                                <constraint firstItem="NYi-eK-bhy" firstAttribute="leading" secondItem="44m-WQ-F8i" secondAttribute="leading" constant="16" id="Dc2-iU-lyV"/>
+                                                <constraint firstAttribute="trailing" secondItem="8Ok-RI-GZ6" secondAttribute="trailing" constant="8" id="I21-8H-5v0"/>
+                                                <constraint firstAttribute="bottom" secondItem="NYi-eK-bhy" secondAttribute="bottom" id="e8E-Gm-hUB"/>
+                                                <constraint firstItem="8Ok-RI-GZ6" firstAttribute="leading" secondItem="NYi-eK-bhy" secondAttribute="trailing" constant="8" id="i8w-Bm-q9h"/>
+                                                <constraint firstItem="8Ok-RI-GZ6" firstAttribute="top" secondItem="44m-WQ-F8i" secondAttribute="top" id="jhj-Ys-yZe"/>
+                                                <constraint firstAttribute="bottom" secondItem="8Ok-RI-GZ6" secondAttribute="bottom" id="vXm-PA-7ad"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="typeLabel" destination="NYi-eK-bhy" id="kpK-19-9cl"/>
+                                            <outlet property="valueLabel" destination="8Ok-RI-GZ6" id="dmi-g7-vg0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oso-f2-N2j" firstAttribute="top" secondItem="G04-ly-vUB" secondAttribute="top" id="Arc-bh-fyY"/>
+                            <constraint firstItem="G04-ly-vUB" firstAttribute="trailing" secondItem="Oso-f2-N2j" secondAttribute="trailing" id="fxG-q1-Gic"/>
+                            <constraint firstItem="G04-ly-vUB" firstAttribute="bottom" secondItem="Oso-f2-N2j" secondAttribute="bottom" id="gby-0z-fEY"/>
+                            <constraint firstItem="Oso-f2-N2j" firstAttribute="leading" secondItem="G04-ly-vUB" secondAttribute="leading" id="tMs-Fs-hW2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="G04-ly-vUB"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Oso-f2-N2j" id="k8R-Je-V2b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6q-lZ-QVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1803" y="73"/>
+            <point key="canvasLocation" x="1802.8985507246377" y="72.991071428571431"/>
         </scene>
     </scenes>
     <resources>

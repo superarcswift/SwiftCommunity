@@ -64,7 +64,7 @@ extension VideoSource: Codable {
             self = .website(url: url)
 
         default:
-            throw CodingError.unknownValue
+            throw ModelCodingError.unknownValue
         }
     }
 
@@ -116,7 +116,7 @@ extension VideoResource: Codable {
             self = .website(url: url)
 
         default:
-            throw CodingError.unknownValue
+            throw ModelCodingError.unknownValue
         }
     }
 
@@ -134,8 +134,4 @@ extension VideoResource: Codable {
 
         }
     }
-}
-
-enum CodingError: Error {
-    case unknownValue
 }
