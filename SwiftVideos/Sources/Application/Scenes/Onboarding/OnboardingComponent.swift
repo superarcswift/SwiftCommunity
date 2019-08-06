@@ -4,7 +4,11 @@
 
 import SuperArcCoreUI
 import SuperArcCore
+import SuperArcFoundation
 import XCoordinator
+
+protocol OnboardingDependency: Dependency {
+}
 
 protocol OnboardingComponent {
     static func makeOnboardingCoordinator(viewControllerContext: ViewControllerContext) -> OnboardingCoordinator

@@ -2,11 +2,13 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcFoundation
+
 public protocol HasViewControllerContext: class {
     var context: ViewControllerContext! { get set }
 }
 
-public protocol ViewControllerContext {
+public protocol ViewControllerContext: Dependency {
 
     var engine: Engine { get }
     var dependencyRegistry: ViewControllerDependencyRegistry { get }

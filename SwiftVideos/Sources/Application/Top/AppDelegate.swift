@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Private
 
-    private lazy var router = AppCoordinator(viewControllerContext: appManager.core.viewControllerContext).anyRouter
+    //private lazy var router = AppCoordinator(viewControllerContext: appManager.core.viewControllerContext).anyRouter
+    private lazy var appComponent = AppComponent(viewControllerContext: appManager.core.viewControllerContext)
 
     // MARK: Initialization
 
@@ -32,7 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        router.setRoot(for: window!)
+        //router.setRoot(for: window!)
+        appComponent.setRoot(for: window!)
 
         return true
     }
