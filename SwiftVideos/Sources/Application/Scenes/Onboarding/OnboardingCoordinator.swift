@@ -25,9 +25,7 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
         switch route {
 
         case .onboarding:
-            let viewController = OnboardingViewController.instantiate(with: viewControllerContext)
-            let viewModel = OnboardingViewModel(router: anyRouter, engine: viewControllerContext.engine)
-            viewController.storedViewModel = viewModel
+            let viewController = StandardOnboardingComponent.makeOnboardingViewController(viewControllerContext: viewControllerContext, router: anyRouter)
             return .push(viewController)
 
         case .dashboard:
