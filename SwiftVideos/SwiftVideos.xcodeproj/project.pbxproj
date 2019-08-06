@@ -110,6 +110,8 @@
 		F6CF4ABB22D34B800026F84F /* appbuilders.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CF4AB622D34B800026F84F /* appbuilders.png */; };
 		F6CF4ABC22D34B800026F84F /* frenchkit.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CF4AB722D34B800026F84F /* frenchkit.png */; };
 		F6CF4ABD22D34B800026F84F /* nsspain.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CF4AB822D34B800026F84F /* nsspain.png */; };
+		F6DFE6B722FA02A40091ECE8 /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6B522FA02A40091ECE8 /* VideosTableViewCell.swift */; };
+		F6DFE6B822FA02A40091ECE8 /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6DFE6B622FA02A40091ECE8 /* VideosTableViewCell.xib */; };
 		F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16122CA9EC900213675 /* AppDelegate.swift */; };
 		F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */; };
 		F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16822CA9ECA00213675 /* Assets.xcassets */; };
@@ -250,6 +252,8 @@
 		F6CF4AB622D34B800026F84F /* appbuilders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbuilders.png; sourceTree = "<group>"; };
 		F6CF4AB722D34B800026F84F /* frenchkit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frenchkit.png; sourceTree = "<group>"; };
 		F6CF4AB822D34B800026F84F /* nsspain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nsspain.png; sourceTree = "<group>"; };
+		F6DFE6B522FA02A40091ECE8 /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
+		F6DFE6B622FA02A40091ECE8 /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
 		F6E8D15E22CA9EC900213675 /* SwiftVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D16122CA9EC900213675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -590,6 +594,8 @@
 				F66C90AF22E19E4A006CA2BB /* VideosCollectionViewFlowLayout.swift */,
 				F66C90B122E19E64006CA2BB /* VideosCollectionViewCell.swift */,
 				F66C90B222E19E64006CA2BB /* VideosCollectionViewCell.xib */,
+				F6DFE6B522FA02A40091ECE8 /* VideosTableViewCell.swift */,
+				F6DFE6B622FA02A40091ECE8 /* VideosTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1178,6 +1184,7 @@
 				F64238BF22CD4F41000F5CE3 /* Videos.storyboard in Resources */,
 				F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */,
 				F64238C122CD4F4B000F5CE3 /* Authors.storyboard in Resources */,
+				F6DFE6B822FA02A40091ECE8 /* VideosTableViewCell.xib in Resources */,
 				F6CF4ABC22D34B800026F84F /* frenchkit.png in Resources */,
 				F63A720622F379BC005D0778 /* AuthorView.xib in Resources */,
 				F63A720422F379A1005D0778 /* VideoView.xib in Resources */,
@@ -1286,6 +1293,7 @@
 				F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */,
 				F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */,
 				F66C910222E661D6006CA2BB /* AuthorDetailViewController.swift in Sources */,
+				F6DFE6B722FA02A40091ECE8 /* VideosTableViewCell.swift in Sources */,
 				F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */,
 				F66C90BE22E1AF21006CA2BB /* MoreTableViewController.swift in Sources */,
 				F66C910622E6620A006CA2BB /* VideoDetailViewModel.swift in Sources */,

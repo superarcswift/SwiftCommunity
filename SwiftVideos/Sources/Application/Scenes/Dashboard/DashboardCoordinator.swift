@@ -26,14 +26,14 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
         let conferencesCoordinator = ConferencesCoordinator(viewControllerContext: viewControllerContext)
         conferencesCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Conferences", image: nil, tag: 0)
 
-        let videosCoordinator = VideosCoordinator(viewControllerContext: viewControllerContext)
+        let videosCoordinator = VideosCoordinator(initialRoute: .videos(nil, nil), viewControllerContext: viewControllerContext)
         videosCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Videos", image: nil, tag: 1)
 
         let authorsCoordinator = AuthorsCoordinator(viewControllerContext: viewControllerContext)
         authorsCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Authors", image: nil, tag: 2)
 
         let moreCoordinator = MoreCoordinator(viewControllerContext: viewControllerContext)
-        moreCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "More", image: nil, tag: 2)
+        moreCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "More", image: nil, tag: 3)
 
         self.init(
             viewControllerContext: viewControllerContext,

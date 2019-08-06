@@ -25,12 +25,13 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
 
     // MARK: APIs
 
-    public func fetchList() -> Promise<[VideoMetaData]> {
+    /// Fetch all videos.
+    public func fetchList(page: Int) -> Promise<[VideoMetaData]> {
         return Promise { resolver in
             do {
                 let videosFileURL = baseFolderURL
                                         .appendingPathComponent("videos", isDirectory: true)
-                                        .appendingPathComponent("videos.json")
+                                        .appendingPathComponent("videos-\(page).json")
                 let videosList = try decode([VideoMetaData].self, from: videosFileURL)
 
                 resolver.fulfill(videosList)
@@ -40,7 +41,8 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
         }
     }
 
-    public func fetchList(of conference: ConferenceMetaData, in edition: ConferenceEdition) -> Promise<[VideoMetaData]> {
+    /// Fetch and filter videos by conference.
+    public func fetchList(conference: ConferenceMetaData, edition: ConferenceEdition) -> Promise<[VideoMetaData]> {
         return Promise { resolver in
             do {
                 let videosFileURL = baseFolderURL
@@ -57,7 +59,8 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
         }
     }
 
-    public func fetchVideo(with metaData: VideoMetaData) -> Promise<VideoDetail> {
+    /// Fetch detail information of a specific video.
+    public func fetchVideo(metaData: VideoMetaData) -> Promise<VideoDetail> {
         return Promise { resolver in
             do {
                 let videoFileURL = baseFolderURL
@@ -74,6 +77,14 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
         }
     }
 
+    /// Fetch and filter videos by author.
+    func fetchList(page: Int, author: AuthorMetaData) -> Promise<[VideoMetaData]> {
+        return fetchList(page: page).filterValues { videoMetaData -> Bool in
+            return videoMetaData.authors.contains { $0 == author }
+        }
+    }
+
+    /// Return URL to the preview image of a video.
     public func previewImageURL(for metaData: VideoMetaData) -> URL? {
         let videoFolderURL = baseFolderURL
                                 .appendingPathComponent("conferences", isDirectory: true)

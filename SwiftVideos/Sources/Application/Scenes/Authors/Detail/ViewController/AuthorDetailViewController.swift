@@ -19,7 +19,15 @@ class AuthorDetailViewController: ViewController, StoryboardInitiable {
     enum Section: Int, CaseIterable {
         case avatar
         case resources
-//        case videos
+        case videos
+
+        static func from(rawValue: Int) -> Section {
+            guard let section = Section(rawValue: rawValue) else {
+                fatalError("invalid section")
+            }
+
+            return section
+        }
     }
 
     // IBOutlet
@@ -46,7 +54,7 @@ class AuthorDetailViewController: ViewController, StoryboardInitiable {
 
         tableView.tableFooterView = UIView(frame: .zero)
 
-        //tableView.registerNib(AuthorAvatarTableViewCell.self)
+        tableView.registerNib(VideosTableViewCell.self)
     }
 
     override func setupBindings() {
@@ -62,6 +70,12 @@ class AuthorDetailViewController: ViewController, StoryboardInitiable {
 
         viewModel.authorDetail.bind { [weak self] authorDetail in
             if authorDetail != nil {
+                self?.tableView.reloadData()
+            }
+        }.disposed(by: disposeBag)
+
+        viewModel.videos.subscribe { [weak self] event in
+            if event.element != nil {
                 self?.tableView.reloadData()
             }
         }.disposed(by: disposeBag)
@@ -82,8 +96,13 @@ extension AuthorDetailViewController: UITableViewDataSource {
         switch Section(rawValue: section) {
         case .avatar?:
             return 1
+
         case .resources?:
             return viewModel.authorDetail.value?.resources.count ?? 0
+
+        case .videos?:
+            return viewModel.videos.value?.count ?? 0
+
         default:
             fatalError("invalid section")
         }
@@ -113,6 +132,25 @@ extension AuthorDetailViewController: UITableViewDataSource {
 
             return cell
 
+        case .videos?:
+
+            let videoCell = tableView.dequeueReusableCell(VideosTableViewCell.self, for: indexPath)
+
+            if let video = viewModel.videos.value?[indexPath.row] {
+
+                videoCell.videoView.titleLabel.text = video.name
+
+                videoCell.videoView.authorNameLabel.text = video.authors.first?.name
+
+                if let previewImage = viewModel.previewImage(for: video) {
+                    videoCell.videoView.previewImageView.image = previewImage
+                } else {
+                    videoCell.videoView.previewImageView.isHidden = true
+                }
+            }
+
+            return videoCell
+
         default:
             fatalError("invalid section")
         }
@@ -120,10 +158,16 @@ extension AuthorDetailViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch Section(rawValue: indexPath.section) {
+
         case .avatar?:
             return 170
+
         case .resources?:
             return 44
+
+        case .videos?:
+            return 280
+
         default:
             fatalError("invalid section")
         }
@@ -132,4 +176,18 @@ extension AuthorDetailViewController: UITableViewDataSource {
 
 extension AuthorDetailViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch Section.from(rawValue: indexPath.section) {
+        case .resources:
+            break
+
+        case .videos:
+            if let video = viewModel.videos.value?[indexPath.row] {
+                viewModel.present(video)
+            }
+
+        default:
+            break
+        }
+    }
 }

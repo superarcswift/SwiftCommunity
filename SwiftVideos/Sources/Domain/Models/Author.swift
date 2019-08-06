@@ -93,7 +93,8 @@ extension AuthorResource: Codable {
 
 // MARK: - AuthorMetaData
 
-struct AuthorMetaData: Codable {
+struct AuthorMetaData: Codable, Equatable {
     let id: String
     let name: String
 }
+

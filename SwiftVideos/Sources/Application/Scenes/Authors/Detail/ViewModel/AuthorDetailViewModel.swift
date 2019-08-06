@@ -26,7 +26,9 @@ class AuthorDetailViewModel: ViewModel {
     // Public
 
     var authorDetail = BehaviorRelay<AuthorDetail?>(value: nil)
+    var videos = BehaviorRelay<[VideoMetaData]?>(value: nil)
     var toogleStateView = PublishSubject<StandardStateViewContext?>()
+    var toogleVideosStateView = PublishSubject<StandardStateViewContext?>()
     var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
 
     // Private
@@ -50,8 +52,16 @@ class AuthorDetailViewModel: ViewModel {
                 self?.authorDetail.accept(author)
             }
             .catch { [weak self] error in
-                self?.toogleStateView.onNext(StandardStateViewContext(headline: "Author not found"))
+                self?.toogleStateView.onNext(StandardStateViewContext(headline: error.localizedDescription))
                 self?.notification.onNext(StandardNotification(error: error))
+            }
+
+        videoService.fetchVideo(page: 1, author: authorMetaData)
+            .done { [weak self] videos in
+                self?.videos.accept(videos)
+            }
+            .catch { [weak self] error in
+                self?.toogleVideosStateView.onNext(StandardStateViewContext(headline: error.localizedDescription))
             }
     }
 
@@ -67,6 +77,24 @@ class AuthorDetailViewModel: ViewModel {
 
         return avatarImage
     }
+
+    func previewImage(for video: VideoMetaData) -> UIImage? {
+
+        guard let previewImageURL = videoService.previewImageURL(for: video) else {
+            return UIImage(named: "video_preview_default")
+        }
+
+        guard let previewImage = UIImage(contentsOfFile: previewImageURL.path) else {
+            return UIImage(named: "video_preview_default")
+        }
+
+        return previewImage
+    }
+
+    func present(_ video: VideoMetaData) {
+        router.trigger(.videoDetail(video))
+    }
+
 }
 
 // MARK: - Dependencies
@@ -75,5 +103,9 @@ extension AuthorDetailViewModel {
 
     var authorsService: AuthorsService {
         return engine.serviceRegistry.resolve(type: AuthorsService.self)
+    }
+
+    var videoService: VideosService {
+        return engine.serviceRegistry.resolve(type: VideosService.self)
     }
 }

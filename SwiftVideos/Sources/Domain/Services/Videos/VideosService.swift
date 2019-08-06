@@ -27,15 +27,19 @@ class VideosService: ContentService {
     // MARK: APIs
 
     func fetchList() -> Promise<[VideoMetaData]> {
-        return contentProvider.fetchList()
+        return contentProvider.fetchList(page: 1)
     }
 
-    func fetchList(of conference: ConferenceMetaData, in edition: ConferenceEdition) -> Promise<[VideoMetaData]> {
-        return contentProvider.fetchList(of: conference, in: edition)
+    func fetchList(conference: ConferenceMetaData, edition: ConferenceEdition) -> Promise<[VideoMetaData]> {
+        return contentProvider.fetchList(conference: conference, edition: edition)
     }
 
-    func fetchVideo(with metaData: VideoMetaData) -> Promise<VideoDetail> {
-        return contentProvider.fetchVideo(with: metaData)
+    func fetchVideo(metaData: VideoMetaData) -> Promise<VideoDetail> {
+        return contentProvider.fetchVideo(metaData: metaData)
+    }
+
+    func fetchVideo(page: Int, author: AuthorMetaData) -> Promise<[VideoMetaData]> {
+        return contentProvider.fetchList(page: page, author: author)
     }
 
     func previewImageURL(for video: VideoMetaData) -> URL? {
@@ -48,8 +52,11 @@ class VideosService: ContentService {
 // MARK: - VideosDataProvider
 
 protocol VideosDataProvider: ContentDataProvider {
-    func fetchList() -> Promise<[VideoMetaData]>
-    func fetchList(of conference: ConferenceMetaData, in edition: ConferenceEdition) -> Promise<[VideoMetaData]>
-    func fetchVideo(with metaData: VideoMetaData) -> Promise<VideoDetail>
+
+    func fetchList(page: Int) -> Promise<[VideoMetaData]>
+    func fetchList(conference: ConferenceMetaData, edition: ConferenceEdition) -> Promise<[VideoMetaData]>
+    func fetchVideo(metaData: VideoMetaData) -> Promise<VideoDetail>
+    func fetchList(page: Int, author: AuthorMetaData) -> Promise<[VideoMetaData]>
+
     func previewImageURL(for video: VideoMetaData) -> URL?
 }

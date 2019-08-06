@@ -13,16 +13,12 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
     // MARK: Properties
 
     private let viewControllerContext: ViewControllerContext
-    //private let dashboardCoordinator: DashboardCoordinator
     private let onboardingCoordinator: OnboardingCoordinator
 
     // MARK: Initialization
 
     init(viewControllerContext: ViewControllerContext) {
         self.viewControllerContext = viewControllerContext
-        //dashboardCoordinator = DashboardCoordinator(viewControllerContext: viewControllerContext)
-        //super.init(initialRoute: .dashboard)
-
         onboardingCoordinator = OnboardingCoordinator(viewControllerContext: viewControllerContext)
         super.init(initialRoute: .onboarding)
     }
@@ -31,8 +27,6 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
 
     override func prepareTransition(for route: AppRoute) -> NavigationTransition {
         switch route {
-//        case .dashboard:
-//            return .present(dashboardCoordinator)
         case .onboarding:
             return .present(onboardingCoordinator)
         }
@@ -40,6 +34,5 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
 }
 
 enum AppRoute: Route {
-//    case dashboard
     case onboarding
 }

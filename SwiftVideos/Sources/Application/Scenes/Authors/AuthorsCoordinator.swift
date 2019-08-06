@@ -38,6 +38,10 @@ class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
+        case .videoDetail(let videoMetaData):
+            let videoCoordinator = VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), viewControllerContext: viewControllerContext)
+            return .present(videoCoordinator)
+
         case .close:
             return .dismissToRoot()
         }
@@ -48,5 +52,6 @@ class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 enum AuthorsRoute: Route {
     case authors
     case authorDetail(AuthorMetaData)
+    case videoDetail(VideoMetaData)
     case close
 }

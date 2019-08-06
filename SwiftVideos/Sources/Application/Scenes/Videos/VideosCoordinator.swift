@@ -17,9 +17,9 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
     // MARK: Initialization
 
-    init(viewControllerContext: ViewControllerContext, conferenceMetaData: ConferenceMetaData? = nil, conferenceEdition: ConferenceEdition? = nil) {
+    init(initialRoute: VideosRoute, viewControllerContext: ViewControllerContext) {
         self.viewControllerContext = viewControllerContext
-        super.init(initialRoute: .videos(conferenceMetaData, conferenceEdition))
+        super.init(initialRoute: initialRoute)
     }
 
     // MARK: Overrides
@@ -36,11 +36,12 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
-        case .videoDetail(let videoMetaData):
+        case .videoDetail(let videoMetaData, let hasLeftCloseButton):
             let viewController = VideoDetailViewController.instantiate(with: viewControllerContext)
             viewController.setViewControllerContext(viewControllerContext)
             let viewModel = VideoDetailViewModel(videoMetaData: videoMetaData, router: anyRouter, engine: viewControllerContext.engine)
             viewController.storedViewModel = viewModel
+            viewController.hasLeftCloseButton = hasLeftCloseButton
             return .push(viewController)
 
         case .videoPlayer(let videoMetaData):
@@ -59,7 +60,7 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
 public enum VideosRoute: Route {
     case videos(ConferenceMetaData?, ConferenceEdition?)
-    case videoDetail(VideoMetaData)
+    case videoDetail(VideoMetaData, Bool)
     case videoPlayer(VideoMetaData)
     case close
 }

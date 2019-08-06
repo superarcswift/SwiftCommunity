@@ -28,7 +28,7 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
 
     private let router: AnyRouter<VideosRoute>
     private lazy var showVideoAction = Action<VideoMetaData, Void> { [unowned self] video in
-        self.router.rx.trigger(.videoDetail(video))
+        self.router.rx.trigger(.videoDetail(video, false))
     }
 
     // Public
@@ -83,7 +83,7 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
     }
 
     func fetchVideosList(of conference: ConferenceMetaData, in edition: ConferenceEdition) {
-        videosService.fetchList(of: conference, in: edition)
+        videosService.fetchList(conference: conference, edition: edition)
             .done { [weak self] videos in
                 self?.videos.accept(videos)
             }
@@ -93,6 +93,7 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
             }
     }
 
+    // TODO: This logic must be in a lower level so that we can reuse it everywhere
     func previewImage(for video: VideoMetaData) -> UIImage? {
 
         guard let previewImageURL = videosService.previewImageURL(for: video) else {

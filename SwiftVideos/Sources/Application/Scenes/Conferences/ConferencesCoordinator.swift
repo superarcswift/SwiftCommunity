@@ -39,7 +39,7 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
             return .push(viewController)
 
         case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):
-            let videosCoordinator = VideosCoordinator(viewControllerContext: viewControllerContext, conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition)
+            let videosCoordinator = VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), viewControllerContext: viewControllerContext)
             return .present(videosCoordinator)
 
         case .close:

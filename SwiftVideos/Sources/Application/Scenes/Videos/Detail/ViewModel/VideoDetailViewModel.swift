@@ -65,7 +65,7 @@ class VideoDetailViewModel: ViewModel, VideoDetailViewModelInput, VideoDetailVie
     // MARK: Private helpers
 
     func fetchVideoDetail() {
-        videosService.fetchVideo(with: videoMetaData)
+        videosService.fetchVideo(metaData: videoMetaData)
             .done { [weak self] videoDetail in
                 self?.videoDetail.accept(videoDetail)
             }

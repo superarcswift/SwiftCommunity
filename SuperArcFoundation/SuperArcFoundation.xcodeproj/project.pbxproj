@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */; };
-		F64A058E22F75CAE0085C0B5 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A058D22F75CAE0085C0B5 /* UITableView+Extensions.swift */; };
-		F6543DC522DD1D1800A52B6F /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6543DC422DD1D1800A52B6F /* UICollectionView+Extensions.swift */; };
 		F66C905922E0B6A1006CA2BB /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C905822E0B6A1006CA2BB /* Dependency.swift */; };
 		F6CAFA6022CBF13F007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */; };
 		F6CAFA6522CBF13F007476D4 /* SuperArcFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA6422CBF13F007476D4 /* SuperArcFoundationTests.swift */; };
@@ -35,8 +33,6 @@
 
 /* Begin PBXFileReference section */
 		F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameDerivable.swift; sourceTree = "<group>"; };
-		F64A058D22F75CAE0085C0B5 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
-		F6543DC422DD1D1800A52B6F /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		F66C905822E0B6A1006CA2BB /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcFoundation.h; sourceTree = "<group>"; };
@@ -136,8 +132,6 @@
 				F6CAFA7D22CBFC99007476D4 /* String+Extensions.swift */,
 				F6CAFA8C22CC097C007476D4 /* NSObject+Extensions.swift */,
 				F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */,
-				F6543DC422DD1D1800A52B6F /* UICollectionView+Extensions.swift */,
-				F64A058D22F75CAE0085C0B5 /* UITableView+Extensions.swift */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -261,14 +255,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6543DC522DD1D1800A52B6F /* UICollectionView+Extensions.swift in Sources */,
 				F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */,
 				F6CAFA7E22CBFC99007476D4 /* String+Extensions.swift in Sources */,
 				F6CAFA7722CBF3E6007476D4 /* MemoryStorage.swift in Sources */,
 				F6CAFA8B22CC0930007476D4 /* Container.swift in Sources */,
 				F6CAFA8F22CC0B82007476D4 /* Registry.swift in Sources */,
 				F66C905922E0B6A1006CA2BB /* Dependency.swift in Sources */,
-				F64A058E22F75CAE0085C0B5 /* UITableView+Extensions.swift in Sources */,
 				F6CAFA8D22CC097C007476D4 /* NSObject+Extensions.swift in Sources */,
 				F6CAFA7922CBFAD5007476D4 /* FilesystemStorage.swift in Sources */,
 				F6CAFA7522CBF21C007476D4 /* Storage.swift in Sources */,

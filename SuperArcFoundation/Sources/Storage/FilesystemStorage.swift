@@ -58,7 +58,6 @@ public final class FilesystemStore: Storage {
             fileHandle.truncateFile(atOffset: fileHandle.offsetInFile)
 
         } catch FileErrors.fileNotFound {
-            // MAY-FIX: rewrite using URLs instead of FilePaths
             let nsData = value.data as NSData
             try nsData.write(toFile: makeFilePath(key), options: options)
 

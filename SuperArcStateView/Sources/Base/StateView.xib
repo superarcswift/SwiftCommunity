@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StateView" customModule="SuperArcCoreUI" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StateView" customModule="SuperArcStateView" customModuleProvider="target">
             <connections>
                 <outlet property="headlineLabel" destination="hEk-ZS-dxy" id="YzU-t1-yoN"/>
             </connections>
@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEk-ZS-dxy">
-                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEk-ZS-dxy">
+                    <rect key="frame" x="8" y="438" width="398" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -28,7 +28,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="hEk-ZS-dxy" secondAttribute="trailing" constant="8" id="3zj-bk-IIJ"/>
                 <constraint firstItem="hEk-ZS-dxy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TDY-2m-FyE"/>
+                <constraint firstItem="hEk-ZS-dxy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="bUT-dD-NAc"/>
                 <constraint firstItem="hEk-ZS-dxy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ndG-X4-GdB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -30,6 +30,8 @@
 		F675C31E22DDD3A900FA77DD /* SuperArcCoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */; };
 		F675C32022DDD3A900FA77DD /* SuperArcCoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6C4C05F22E7CCF600C0636E /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05E22E7CCF600C0636E /* ViewModelBindable.swift */; };
+		F6DFE6B022FA00630091ECE8 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6AF22FA00630091ECE8 /* UITableView+Extensions.swift */; };
+		F6DFE6B422FA01EF0091ECE8 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6B322FA01EF0091ECE8 /* UICollectionView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcCoreUITests.swift; sourceTree = "<group>"; };
 		F675C31F22DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6C4C05E22E7CCF600C0636E /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
+		F6DFE6AF22FA00630091ECE8 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		F6DFE6B322FA01EF0091ECE8 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				F63A71F422F226FC005D0778 /* UIView+Extensions.swift */,
+				F6DFE6AF22FA00630091ECE8 /* UITableView+Extensions.swift */,
+				F6DFE6B322FA01EF0091ECE8 /* UICollectionView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,8 +335,10 @@
 			files = (
 				F63A720022F22996005D0778 /* View.swift in Sources */,
 				F66C90E622E5ECB9006CA2BB /* ViewModel.swift in Sources */,
+				F6DFE6B422FA01EF0091ECE8 /* UICollectionView+Extensions.swift in Sources */,
 				F66C908822E0BB75006CA2BB /* CollectionViewController.swift in Sources */,
 				F66C908122E0BB75006CA2BB /* ViewController.swift in Sources */,
+				F6DFE6B022FA00630091ECE8 /* UITableView+Extensions.swift in Sources */,
 				F66C90FF22E64C42006CA2BB /* StoryboardInitiable.swift in Sources */,
 				F6C4C05F22E7CCF600C0636E /* ViewModelBindable.swift in Sources */,
 				F66C908722E0BB75006CA2BB /* NavigationController.swift in Sources */,
