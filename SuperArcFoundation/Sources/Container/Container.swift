@@ -15,7 +15,7 @@ public class Container<T> {
 
     // Private
 
-    private var dict = [String: Any]()
+    private var store = [String: Any]()
 
     // MARK: Initialization
 
@@ -25,16 +25,21 @@ public class Container<T> {
 
     public func register<T>(_ instance: T, for type: T.Type) throws {
         let key = String(describing: type)
-        guard dict[key] == nil else {
+        guard store[key] == nil else {
             throw ContainerError.alreadyRegistered
         }
 
-        dict[key] = instance
+        store[key] = instance
+    }
+
+    public func register<T>(_ type: T.Type, builder: () -> T) throws {
+        let instance = builder()
+        try register(instance, for: type)
     }
 
     public func resolve<T>(_ type: T.Type) throws -> T {
         let key = String(describing: type)
-        guard let instance = dict[key] as? T else {
+        guard let instance = store[key] as? T else {
             throw ContainerError.notFound
         }
 

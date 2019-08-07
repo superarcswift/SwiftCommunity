@@ -18,6 +18,14 @@ extension Registry {
         }
     }
 
+    public func register<T>(type: T.Type, builder: () -> T) {
+        do {
+            try container.register(type, builder: builder)
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+
     public func resolve<T>(type: T.Type) -> T {
         do {
             return try container.resolve(type)

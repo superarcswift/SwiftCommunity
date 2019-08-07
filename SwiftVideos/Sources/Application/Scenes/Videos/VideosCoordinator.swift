@@ -13,12 +13,12 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
     // Private
 
-    private var viewControllerContext: ViewControllerContext
+    private var context: ApplicationContext
 
     // MARK: Initialization
 
-    init(initialRoute: VideosRoute, viewControllerContext: ViewControllerContext) {
-        self.viewControllerContext = viewControllerContext
+    init(initialRoute: VideosRoute, context: ApplicationContext) {
+        self.context = context
         super.init(initialRoute: initialRoute)
     }
 
@@ -27,27 +27,30 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
     override func prepareTransition(for route: VideosRoute) -> NavigationTransition {
         switch route {
         case .videos(let conferenceMetaData, let conferenceEdition):
-            let viewController = VideosCollectionViewController.instantiate(with: viewControllerContext)
-            viewController.setViewControllerContext(viewControllerContext)
+            // TODO: move creating VC to private func
+            let viewController = VideosCollectionViewController.instantiate(with: context)
+            viewController.setApplicationContext(context)
             if conferenceMetaData != nil {
                 viewController.hasLeftCloseButton = true
             }
-            let viewModel = VideosCollectionViewModel(router: anyRouter, engine: viewControllerContext.engine, conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition)
+            let viewModel = VideosCollectionViewModel(router: anyRouter, engine: context.engine, conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
         case .videoDetail(let videoMetaData, let hasLeftCloseButton):
-            let viewController = VideoDetailViewController.instantiate(with: viewControllerContext)
-            viewController.setViewControllerContext(viewControllerContext)
-            let viewModel = VideoDetailViewModel(videoMetaData: videoMetaData, router: anyRouter, engine: viewControllerContext.engine)
+            // TODO: move creating VC to private func
+            let viewController = VideoDetailViewController.instantiate(with: context)
+            viewController.setApplicationContext(context)
+            let viewModel = VideoDetailViewModel(videoMetaData: videoMetaData, router: anyRouter, engine: context.engine)
             viewController.storedViewModel = viewModel
             viewController.hasLeftCloseButton = hasLeftCloseButton
             return .push(viewController)
 
         case .videoPlayer(let videoMetaData):
-            let viewController = VideoPlayerViewController.instantiate(with: viewControllerContext)
-            viewController.setViewControllerContext(viewControllerContext)
-            let viewModel = VideoPlayerViewModel(videoMetaData: videoMetaData, engine: viewControllerContext.engine)
+            // TODO: move creating VC to private func
+            let viewController = VideoPlayerViewController.instantiate(with: context)
+            viewController.setApplicationContext(context)
+            let viewModel = VideoPlayerViewModel(videoMetaData: videoMetaData, engine: context.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 

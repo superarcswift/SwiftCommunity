@@ -11,7 +11,7 @@ open class PageViewController: UIPageViewController, CommonViewControllerProtoco
 
     // Public
 
-    public var context: ViewControllerContext!
+    public var context: ApplicationContext!
     public var storedViewModel: ViewModel!
 
     @IBInspectable public var hasRightCloseButton = false

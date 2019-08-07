@@ -12,14 +12,14 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
 
     // MARK: Properties
 
-    private let viewControllerContext: ViewControllerContext
+    private let context: ApplicationContext
     private let onboardingCoordinator: OnboardingCoordinator
 
     // MARK: Initialization
 
-    init(viewControllerContext: ViewControllerContext) {
-        self.viewControllerContext = viewControllerContext
-        onboardingCoordinator = OnboardingCoordinator(viewControllerContext: viewControllerContext)
+    init(context: ApplicationContext) {
+        self.context = context
+        onboardingCoordinator = OnboardingCoordinator(context: context)
         super.init(initialRoute: .onboarding)
     }
 
@@ -36,3 +36,5 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
 enum AppRoute: Route {
     case onboarding
 }
+
+extension AppCoordinator: OnboardingDependency {}

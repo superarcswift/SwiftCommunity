@@ -4,5 +4,4 @@
 
 import SuperArcFoundation
 
-public protocol ViewControllerDependency: Dependency {
-}
+public protocol ApplicationDependency {}

@@ -5,15 +5,15 @@
 import SuperArcCore
 import UIKit
 
-open class NavigationController: UINavigationController, HasViewControllerContext {
+open class NavigationController: UINavigationController, HasApplicationContext {
 
-    public var context: ViewControllerContext! {
+    public var context: ApplicationContext! {
         didSet {
-            topViewController?.setViewControllerContext(context)
+            topViewController?.setApplicationContext(context)
         }
     }
 
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination.setViewControllerContext(context)
+        segue.destination.setApplicationContext(context)
     }
 }

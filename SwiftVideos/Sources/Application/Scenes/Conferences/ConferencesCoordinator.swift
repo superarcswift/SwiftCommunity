@@ -13,12 +13,12 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
     // Private
 
-    private var viewControllerContext: ViewControllerContext
+    private var context: ApplicationContext
 
     // MARK: Initialization
 
-    init(viewControllerContext: ViewControllerContext) {
-        self.viewControllerContext = viewControllerContext
+    init(context: ApplicationContext) {
+        self.context = context
         super.init(initialRoute: .conferences)
     }
 
@@ -27,19 +27,19 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
     override func prepareTransition(for route: ConferencesRoute) -> NavigationTransition {
         switch route {
         case .conferences:
-            let viewController = ConferencesCollectionViewController.instantiate(with: viewControllerContext)
-            let viewModel = ConferencesCollectionViewModel(router: anyRouter, engine: viewControllerContext.engine)
+            let viewController = ConferencesCollectionViewController.instantiate(with: context)
+            let viewModel = ConferencesCollectionViewModel(router: anyRouter, engine: context.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
         case .conferenceDetail(let conferenceMetaData):
-            let viewController = ConferenceDetailViewController.instantiate(with: viewControllerContext)
-            let viewModel = ConferenceDetailViewModel(conferenceMetaData: conferenceMetaData, router: anyRouter, engine: viewControllerContext.engine)
+            let viewController = ConferenceDetailViewController.instantiate(with: context)
+            let viewModel = ConferenceDetailViewModel(conferenceMetaData: conferenceMetaData, router: anyRouter, engine: context.engine)
             viewController.storedViewModel = viewModel
             return .push(viewController)
 
         case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):
-            let videosCoordinator = VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), viewControllerContext: viewControllerContext)
+            let videosCoordinator = VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), context: context)
             return .present(videosCoordinator)
 
         case .close:

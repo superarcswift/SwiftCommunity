@@ -12,7 +12,7 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
 
     // Public
 
-    public var context: ViewControllerContext!
+    public var context: ApplicationContext!
     public var storedViewModel: ViewModel!
 
     @IBInspectable public var hasRightCloseButton = false
@@ -23,7 +23,7 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
 
     // MARK: Initialization
 
-    init(context: ViewControllerContext) {
+    init(context: ApplicationContext) {
         super.init(nibName: nil, bundle: nil)
         self.context = context
     }
@@ -39,7 +39,7 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
         commonViewDidLoad()
 
         for child in children {
-            child.setViewControllerContext(context)
+            child.setApplicationContext(context)
         }
     }
 
@@ -69,6 +69,6 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
 
 extension TabBarController: UITabBarControllerDelegate {
     public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        viewController.setViewControllerContext(context)
+        viewController.setApplicationContext(context)
     }
 }

@@ -10,12 +10,12 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
 
     // MARK: Properties
 
-    private var viewControllerContext: ViewControllerContext
+    private var context: ApplicationContext
 
     // MARK: Initialization
 
-    init(viewControllerContext: ViewControllerContext) {
-        self.viewControllerContext = viewControllerContext
+    init(context: ApplicationContext) {
+        self.context = context
         super.init(initialRoute: .onboarding)
     }
 
@@ -25,11 +25,13 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
         switch route {
 
         case .onboarding:
-            let viewController = StandardOnboardingComponent.makeOnboardingViewController(viewControllerContext: viewControllerContext, router: anyRouter)
+            let viewController = OnboardingViewController.instantiate(with: context)
+            let viewModel = OnboardingViewModel(router: anyRouter, engine: context.engine)
+            viewController.storedViewModel = viewModel
             return .push(viewController)
 
         case .dashboard:
-            let dashboardCoordinator = DashboardCoordinator(viewControllerContext: viewControllerContext)
+            let dashboardCoordinator = DashboardCoordinator(context: context)
             return .present(dashboardCoordinator, animation: .fade)
         }
     }

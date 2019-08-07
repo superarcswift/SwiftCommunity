@@ -11,6 +11,9 @@
       location = "group:SuperArcStateView/SuperArcStateView.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:SuperArcCoreComponent/SuperArcCoreComponent.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SuperArcCoordinator/SuperArcCoordinator.xcodeproj">
    </FileRef>
    <FileRef

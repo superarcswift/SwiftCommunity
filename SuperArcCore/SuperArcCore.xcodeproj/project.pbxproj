@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F63A729122F47BC6005D0778 /* ViewControllerDependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729022F47BC6005D0778 /* ViewControllerDependencyRegistry.swift */; };
-		F63A729322F47C14005D0778 /* ViewControllerDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729222F47C14005D0778 /* ViewControllerDependency.swift */; };
+		F63A729122F47BC6005D0778 /* ApplicationDependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729022F47BC6005D0778 /* ApplicationDependencyRegistry.swift */; };
+		F63A729322F47C14005D0778 /* ApplicationDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729222F47C14005D0778 /* ApplicationDependency.swift */; };
 		F64238AF22CD44C6000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */; };
 		F6451B7222D14B5A0091E147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B7122D14B5A0091E147 /* Endpoint.swift */; };
 		F66C903722DF381E006CA2BB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903622DF381E006CA2BB /* Kingfisher.framework */; };
 		F66C903922DF382C006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903822DF382C006CA2BB /* RxSwift.framework */; };
 		F66C903B22DF3836006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903A22DF3836006CA2BB /* RxCocoa.framework */; };
-		F66C90EF22E5ED5E006CA2BB /* ViewControllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90EE22E5ED5E006CA2BB /* ViewControllerContext.swift */; };
+		F66C90EF22E5ED5E006CA2BB /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90EE22E5ED5E006CA2BB /* ApplicationContext.swift */; };
 		F675C35522DEFDA500FA77DD /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35422DEFDA500FA77DD /* Core.swift */; };
 		F6CAFA3522CBEEC8007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */; };
 		F6CAFA3A22CBEEC8007476D4 /* SuperArcCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA3922CBEEC8007476D4 /* SuperArcCoreTests.swift */; };
@@ -38,14 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F63A729022F47BC6005D0778 /* ViewControllerDependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDependencyRegistry.swift; sourceTree = "<group>"; };
-		F63A729222F47C14005D0778 /* ViewControllerDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDependency.swift; sourceTree = "<group>"; };
+		F63A729022F47BC6005D0778 /* ApplicationDependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependencyRegistry.swift; sourceTree = "<group>"; };
+		F63A729222F47C14005D0778 /* ApplicationDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependency.swift; sourceTree = "<group>"; };
 		F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6451B7122D14B5A0091E147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F66C903622DF381E006CA2BB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F66C903822DF382C006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F66C903A22DF3836006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		F66C90EE22E5ED5E006CA2BB /* ViewControllerContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerContext.swift; sourceTree = "<group>"; };
+		F66C90EE22E5ED5E006CA2BB /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		F675C35422DEFDA500FA77DD /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCore.h; sourceTree = "<group>"; };
@@ -96,9 +96,9 @@
 		F66C90EB22E5ED46006CA2BB /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				F66C90EE22E5ED5E006CA2BB /* ViewControllerContext.swift */,
-				F63A729022F47BC6005D0778 /* ViewControllerDependencyRegistry.swift */,
-				F63A729222F47C14005D0778 /* ViewControllerDependency.swift */,
+				F66C90EE22E5ED5E006CA2BB /* ApplicationContext.swift */,
+				F63A729022F47BC6005D0778 /* ApplicationDependencyRegistry.swift */,
+				F63A729222F47C14005D0778 /* ApplicationDependency.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -320,14 +320,14 @@
 			files = (
 				F6CAFA7B22CBFAE6007476D4 /* Engine.swift in Sources */,
 				F6451B7222D14B5A0091E147 /* Endpoint.swift in Sources */,
-				F66C90EF22E5ED5E006CA2BB /* ViewControllerContext.swift in Sources */,
+				F66C90EF22E5ED5E006CA2BB /* ApplicationContext.swift in Sources */,
 				F6CAFA9122CC0C34007476D4 /* ServiceRegistry.swift in Sources */,
 				F6CF4AB022D283CD0026F84F /* Model.swift in Sources */,
 				F6CAFA8622CC0373007476D4 /* ServiceContext.swift in Sources */,
 				F675C35522DEFDA500FA77DD /* Core.swift in Sources */,
-				F63A729322F47C14005D0778 /* ViewControllerDependency.swift in Sources */,
+				F63A729322F47C14005D0778 /* ApplicationDependency.swift in Sources */,
 				F6CAFA8822CC039F007476D4 /* Service.swift in Sources */,
-				F63A729122F47BC6005D0778 /* ViewControllerDependencyRegistry.swift in Sources */,
+				F63A729122F47BC6005D0778 /* ApplicationDependencyRegistry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

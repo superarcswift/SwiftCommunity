@@ -8,7 +8,7 @@ public class Core {
 
     // Public
 
-    public var viewControllerContext: ViewControllerContext
+    public var context: ApplicationContext
 
     public var engine: Engine
 
@@ -18,6 +18,6 @@ public class Core {
         let serviceContext = ServiceContext()
         engine = Engine(serviceContext: serviceContext)
 
-        viewControllerContext = StandardViewControllerContext(engine: engine)
+        context = ApplicationContext(engine: engine)
     }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */; };
-		F66C905922E0B6A1006CA2BB /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C905822E0B6A1006CA2BB /* Dependency.swift */; };
 		F6CAFA6022CBF13F007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */; };
 		F6CAFA6522CBF13F007476D4 /* SuperArcFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA6422CBF13F007476D4 /* SuperArcFoundationTests.swift */; };
 		F6CAFA6722CBF13F007476D4 /* SuperArcFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,7 +18,6 @@
 		F6CAFA8B22CC0930007476D4 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA8A22CC0930007476D4 /* Container.swift */; };
 		F6CAFA8D22CC097C007476D4 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA8C22CC097C007476D4 /* NSObject+Extensions.swift */; };
 		F6CAFA8F22CC0B82007476D4 /* Registry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA8E22CC0B82007476D4 /* Registry.swift */; };
-		F6DFE6BC22FA344A0091ECE8 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6BB22FA344A0091ECE8 /* Component.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +32,6 @@
 
 /* Begin PBXFileReference section */
 		F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameDerivable.swift; sourceTree = "<group>"; };
-		F66C905822E0B6A1006CA2BB /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcFoundation.h; sourceTree = "<group>"; };
 		F6CAFA5A22CBF13F007476D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,7 +45,6 @@
 		F6CAFA8A22CC0930007476D4 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		F6CAFA8C22CC097C007476D4 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		F6CAFA8E22CC0B82007476D4 /* Registry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registry.swift; sourceTree = "<group>"; };
-		F6DFE6BB22FA344A0091ECE8 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,15 +66,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F66C905722E0B672006CA2BB /* DI */ = {
-			isa = PBXGroup;
-			children = (
-				F6DFE6BB22FA344A0091ECE8 /* Component.swift */,
-				F66C905822E0B6A1006CA2BB /* Dependency.swift */,
-			);
-			path = DI;
-			sourceTree = "<group>";
-		};
 		F6CAFA4C22CBF13F007476D4 = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +89,6 @@
 			children = (
 				F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */,
 				F6CAFA5A22CBF13F007476D4 /* Info.plist */,
-				F66C905722E0B672006CA2BB /* DI */,
 				F6CAFA8922CC0599007476D4 /* Container */,
 				F6CAFA7322CBF209007476D4 /* Storage */,
 				F6CAFA7C22CBFC81007476D4 /* Runtime */,
@@ -263,11 +249,9 @@
 				F6CAFA7722CBF3E6007476D4 /* MemoryStorage.swift in Sources */,
 				F6CAFA8B22CC0930007476D4 /* Container.swift in Sources */,
 				F6CAFA8F22CC0B82007476D4 /* Registry.swift in Sources */,
-				F66C905922E0B6A1006CA2BB /* Dependency.swift in Sources */,
 				F6CAFA8D22CC097C007476D4 /* NSObject+Extensions.swift in Sources */,
 				F6CAFA7922CBFAD5007476D4 /* FilesystemStorage.swift in Sources */,
 				F6CAFA7522CBF21C007476D4 /* Storage.swift in Sources */,
-				F6DFE6BC22FA344A0091ECE8 /* Component.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

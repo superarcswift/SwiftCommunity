@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcCoreComponent
 import XCoordinator
 import RxSwift
 import UIKit
@@ -19,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Private
 
-    //private lazy var router = AppCoordinator(viewControllerContext: appManager.core.viewControllerContext).anyRouter
-    private lazy var appComponent = AppComponent(viewControllerContext: appManager.core.viewControllerContext)
+    private lazy var appComponent = AppComponent(dependency: EmptyComponent(), context: appManager.core.context)
 
     // MARK: Initialization
 
@@ -33,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        //router.setRoot(for: window!)
         appComponent.setRoot(for: window!)
 
         return true

@@ -13,12 +13,12 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
     // Private
 
-    private var viewControllerContext: ViewControllerContext
+    private var context: ApplicationContext
 
     // MARK: Initialization
 
-    init(viewControllerContext: ViewControllerContext) {
-        self.viewControllerContext = viewControllerContext
+    init(context: ApplicationContext) {
+        self.context = context
         super.init(initialRoute: .list)
     }
 
@@ -27,7 +27,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
     override func prepareTransition(for route: MoreRoute) -> NavigationTransition {
         switch route {
         case .list:
-            let viewController = MoreTableViewController.instantiate(with: viewControllerContext)
+            let viewController = MoreTableViewController.instantiate(with: context)
             return .push(viewController)
 
         case .close:

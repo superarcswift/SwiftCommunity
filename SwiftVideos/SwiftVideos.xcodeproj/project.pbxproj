@@ -95,6 +95,9 @@
 		F675C34C22DE2DE100FA77DD /* conferences.json in Resources */ = {isa = PBXBuildFile; fileRef = F675C34B22DE2DE100FA77DD /* conferences.json */; };
 		F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */; };
 		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
+		F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; };
+		F6ABCB3622FB6CDE00476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; };
+		F6ABCB3722FB6CDE00476F1A /* SuperArcCoreComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6C4C05422E79C4100C0636E /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C4C05322E79C4100C0636E /* Action.framework */; };
 		F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */; };
 		F6C4C05922E7C70200C0636E /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05822E7C70200C0636E /* VideoPlayerViewController.swift */; };
@@ -148,6 +151,7 @@
 			files = (
 				F63A723F22F44E46005D0778 /* SuperArcStateView.framework in Embed Frameworks */,
 				F6CAFA8122CC02DE007476D4 /* SuperArcFoundation.framework in Embed Frameworks */,
+				F6ABCB3722FB6CDE00476F1A /* SuperArcCoreComponent.framework in Embed Frameworks */,
 				F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */,
 				F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */,
 				F63A728D22F471F2005D0778 /* SuperArcNotificationBanner.framework in Embed Frameworks */,
@@ -241,6 +245,7 @@
 		F675C34B22DE2DE100FA77DD /* conferences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
 		F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemConferencesContentProvider.swift; sourceTree = "<group>"; };
 		F675C35222DE2F4600FA77DD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C4C05322E79C4100C0636E /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
 		F6C4C05822E7C70200C0636E /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */,
 				F63A728B22F471E9005D0778 /* SuperArcNotificationBanner.framework in Frameworks */,
 				F63A728C22F471F2005D0778 /* SuperArcNotificationBanner.framework in Frameworks */,
 				F63A723D22F44E3F005D0778 /* SuperArcStateView.framework in Frameworks */,
@@ -289,6 +295,7 @@
 				F66C903F22DF38B0006CA2BB /* RxCocoa.framework in Frameworks */,
 				F66C903D22DF38A2006CA2BB /* RxSwift.framework in Frameworks */,
 				F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */,
+				F6ABCB3622FB6CDE00476F1A /* SuperArcCoreComponent.framework in Frameworks */,
 				F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */,
 				F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */,
 				F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */,
@@ -947,6 +954,7 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */,
 				F63A728A22F471E9005D0778 /* SuperArcNotificationBanner.framework */,
 				F63A723C22F44E3F005D0778 /* SuperArcStateView.framework */,
 				F62DB63122EA45A90089C620 /* ObjectiveGit.framework */,

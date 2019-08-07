@@ -4,11 +4,11 @@
 
 import SuperArcFoundation
 
-public class ViewControllerDependencyRegistry: Registry {
+public class ApplicationDependencyRegistry: Registry {
 
     // MARK: Properties
 
-    public var container: Container<ViewControllerDependency>
+    public var container: Container<ApplicationDependency>
 
     // MARK: Initialization
 

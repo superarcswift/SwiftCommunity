@@ -7,8 +7,8 @@ import UIKit
 
 extension UIViewController {
 
-    public func setViewControllerContext(_ context: ViewControllerContext!) {
-        if let contextHolder = self as? HasViewControllerContext {
+    public func setApplicationContext(_ context: ApplicationContext) {
+        if let contextHolder = self as? HasApplicationContext {
             contextHolder.context = context
         }
     }

@@ -14,7 +14,7 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
     // Private
 
-    private var viewControllerContext: ViewControllerContext
+    private var context: ApplicationContext
     private let conferencesRouter: AnyRouter<ConferencesRoute>
     private let videosRouter: AnyRouter<VideosRoute>
     private let authorsRouter: AnyRouter<AuthorsRoute>
@@ -22,21 +22,21 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
     // MARK: Initialization
 
-    convenience init(viewControllerContext: ViewControllerContext) {
-        let conferencesCoordinator = ConferencesCoordinator(viewControllerContext: viewControllerContext)
+    convenience init(context: ApplicationContext) {
+        let conferencesCoordinator = ConferencesCoordinator(context: context)
         conferencesCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Conferences", image: nil, tag: 0)
 
-        let videosCoordinator = VideosCoordinator(initialRoute: .videos(nil, nil), viewControllerContext: viewControllerContext)
+        let videosCoordinator = VideosCoordinator(initialRoute: .videos(nil, nil), context: context)
         videosCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Videos", image: nil, tag: 1)
 
-        let authorsCoordinator = AuthorsCoordinator(viewControllerContext: viewControllerContext)
+        let authorsCoordinator = AuthorsCoordinator(context: context)
         authorsCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Authors", image: nil, tag: 2)
 
-        let moreCoordinator = MoreCoordinator(viewControllerContext: viewControllerContext)
+        let moreCoordinator = MoreCoordinator(context: context)
         moreCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "More", image: nil, tag: 3)
 
         self.init(
-            viewControllerContext: viewControllerContext,
+            context: context,
             conferencesRouter: conferencesCoordinator.anyRouter,
             videosRouter: videosCoordinator.anyRouter,
             authorsRouter: authorsCoordinator.anyRouter,
@@ -44,13 +44,13 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
         )
     }
 
-    init(viewControllerContext: ViewControllerContext,
+    init(context: ApplicationContext,
          conferencesRouter: AnyRouter<ConferencesRoute>,
          videosRouter: AnyRouter<VideosRoute>,
          authorsRouter: AnyRouter<AuthorsRoute>,
          moreRouter: AnyRouter<MoreRoute>) {
 
-        self.viewControllerContext = viewControllerContext
+        self.context = context
         self.conferencesRouter = conferencesRouter
         self.videosRouter = videosRouter
         self.authorsRouter = authorsRouter

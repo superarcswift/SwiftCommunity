@@ -2,25 +2,17 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcCoreComponent
 import SuperArcCore
 import SuperArcFoundation
 
-class AppComponent: Component<EmptyDependency>, HasViewControllerContext {
+class AppComponent: Component<EmptyDependency> {
 
     // MARK: Properties
 
     // Public
 
-    lazy public var coordinator = AppCoordinator(viewControllerContext: context)
-
-    public var context: ViewControllerContext!
-
-    // MARK: Initialization
-
-    init(viewControllerContext: ViewControllerContext) {
-        self.context = viewControllerContext
-        super.init(dependency: EmptyComponent())
-    }
+    lazy public var coordinator = AppCoordinator(context: context)
 
     // MARK: APIs
 

@@ -18,9 +18,9 @@ extension StoryboardInitiable {
 }
 
 extension StoryboardInitiable where Self: UIViewController {
-    public static func instantiate(with viewControllerContext: ViewControllerContext) -> Self {
+    public static func instantiate(with context: ApplicationContext) -> Self {
         let viewController = instantiate()
-        viewController.setViewControllerContext(viewControllerContext)
+        viewController.setApplicationContext(context)
         return viewController
     }
 }
