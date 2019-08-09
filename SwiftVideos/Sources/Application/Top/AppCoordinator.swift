@@ -2,9 +2,10 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import XCoordinator
+import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
 import RxSwift
 import UIKit
 
@@ -12,14 +13,15 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
 
     // MARK: Properties
 
-    private let context: ApplicationContext
-    private let onboardingCoordinator: OnboardingCoordinator
+    // Private
+
+    private let component: AppComponent
+    lazy private var onboardingCoordinator = OnboardingCoordinator(dependency: component, context: self.component.context)
 
     // MARK: Initialization
 
     init(context: ApplicationContext) {
-        self.context = context
-        onboardingCoordinator = OnboardingCoordinator(context: context)
+        component = AppComponent(dependency: EmptyComponent(), context: context)
         super.init(initialRoute: .onboarding)
     }
 
@@ -36,5 +38,3 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
 enum AppRoute: Route {
     case onboarding
 }
-
-extension AppCoordinator: OnboardingDependency {}

@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
 import XCoordinator
@@ -20,11 +21,14 @@ class OnboardingViewModel: CoordinatedViewModel<OnboardingRoute> {
 
     // Private
 
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
+    private let dependency: OnboardingDependency
 
     // MARK: Setup
 
-    override init(router: AnyRouter<OnboardingRoute>, engine: Engine) {
+    init(router: AnyRouter<OnboardingRoute>, dependency: OnboardingDependency, engine: Engine) {
+        self.dependency = dependency
+
         super.init(router: router, engine: engine)
 
         isReady
@@ -41,13 +45,13 @@ class OnboardingViewModel: CoordinatedViewModel<OnboardingRoute> {
 
     func prepareLocalRepository() {
 
-        // Check if localRepository is existing
-        guard !gitService.open() else {
+        // Check if localRepository is existing.
+        guard !dependency.gitService.open() else {
             updateLocalRepository()
             return
         }
 
-        // If localRepository doesn't exist, clone it
+        // If localRepository doesn't exist, clone it.
         cloneRemoteRepository()
     }
 
@@ -66,18 +70,11 @@ class OnboardingViewModel: CoordinatedViewModel<OnboardingRoute> {
     }
 
     private func cloneRemoteRepository() {
-        gitService.clone()
+        dependency.gitService.clone()
             .done { [weak self] _ in
                 self?.isReady.onNext(true)
             }.catch { error in
                 print(error)
             }
-    }
-}
-
-extension OnboardingViewModel {
-
-    var gitService: GitService {
-        return engine.serviceRegistry.resolve(type: GitService.self)
     }
 }

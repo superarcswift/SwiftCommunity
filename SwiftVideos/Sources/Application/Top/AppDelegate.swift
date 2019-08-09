@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Private
 
-    private lazy var appComponent = AppComponent(dependency: EmptyComponent(), context: appManager.core.context)
+    private lazy var appRouter = AppCoordinator(context: appManager.core.context).anyRouter
 
     // MARK: Initialization
 
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        appComponent.setRoot(for: window!)
+        appRouter.setRoot(for: window!)
 
         return true
     }

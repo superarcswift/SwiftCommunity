@@ -95,6 +95,7 @@
 		F675C34C22DE2DE100FA77DD /* conferences.json in Resources */ = {isa = PBXBuildFile; fileRef = F675C34B22DE2DE100FA77DD /* conferences.json */; };
 		F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */; };
 		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
+		F68F655022FD9B730026604C /* DependencyInjectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F654F22FD9B730026604C /* DependencyInjectedViewModel.swift */; };
 		F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; };
 		F6ABCB3622FB6CDE00476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; };
 		F6ABCB3722FB6CDE00476F1A /* SuperArcCoreComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -245,6 +246,7 @@
 		F675C34B22DE2DE100FA77DD /* conferences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
 		F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemConferencesContentProvider.swift; sourceTree = "<group>"; };
 		F675C35222DE2F4600FA77DD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		F68F654F22FD9B730026604C /* DependencyInjectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectedViewModel.swift; sourceTree = "<group>"; };
 		F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C4C05322E79C4100C0636E /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
@@ -328,22 +330,22 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		F63A71F022F220BB005D0778 /* Animations */ = {
+		F63A71F022F220BB005D0778 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
 				F63A71F122F220CC005D0778 /* Animation+Fade.swift */,
 			);
-			path = Animations;
+			path = Animation;
 			sourceTree = "<group>";
 		};
-		F63A71F622F22839005D0778 /* Views */ = {
+		F63A71F622F22839005D0778 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F63A71F922F22895005D0778 /* AuthorView */,
 				F63A71F822F2288E005D0778 /* VideoView */,
 				F63A71F722F22887005D0778 /* ConferenceView */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		F63A71F722F22887005D0778 /* ConferenceView */ = {
@@ -848,9 +850,9 @@
 		F66C916E22E66EAA006CA2BB /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				F63A71F622F22839005D0778 /* Views */,
-				F63A71F022F220BB005D0778 /* Animations */,
-				F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */,
+				F68F654E22FD9B510026604C /* ViewModel */,
+				F63A71F622F22839005D0778 /* View */,
+				F63A71F022F220BB005D0778 /* Animation */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -924,6 +926,15 @@
 				F675C34F22DE2ED600FA77DD /* Data */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		F68F654E22FD9B510026604C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F640BC3722E8318700EDB601 /* CoordinatedViewModel.swift */,
+				F68F654F22FD9B730026604C /* DependencyInjectedViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F6C4C05722E7C6ED00C0636E /* Player */ = {
@@ -1336,6 +1347,7 @@
 				F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */,
 				F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */,
 				F64238C722CD4FEC000F5CE3 /* AuthorsCollectionViewController.swift in Sources */,
+				F68F655022FD9B730026604C /* DependencyInjectedViewModel.swift in Sources */,
 				F675C34822DE27A700FA77DD /* ConferencesService.swift in Sources */,
 				F63712FB22EB98440071C2DC /* ContentDataProvider.swift in Sources */,
 				F66C90A422E0FDA3006CA2BB /* AuthorsCoordinator.swift in Sources */,

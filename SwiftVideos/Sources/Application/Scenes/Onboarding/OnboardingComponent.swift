@@ -9,27 +9,22 @@ import SuperArcFoundation
 import XCoordinator
 
 /// Protocol defining all dependencies required by this component..
-protocol OnboardingDependency: Dependency {}
+protocol OnboardingDependency: Dependency {
+    var gitService: GitService { get }
+}
 
 /// Protocol used to mock for testing purpose.
 protocol OnboardingBuilder {
-    var coordinator: OnboardingCoordinator { get }
-    static func makeOnboardingViewController(context: ApplicationContext, router: AnyRouter<OnboardingRoute>) -> OnboardingViewController
+    func makeOnboardingViewController(router: AnyRouter<OnboardingRoute>) -> OnboardingViewController
 }
 
 class OnboardingComponent: Component<OnboardingDependency>, OnboardingBuilder {
 
-    // MARK: Properties
-
-    // Public
-
-    lazy public var coordinator = OnboardingCoordinator(context: context)
-
     // MARK: APIs
 
-    static func makeOnboardingViewController(context: ApplicationContext, router: AnyRouter<OnboardingRoute>) -> OnboardingViewController {
+    func makeOnboardingViewController(router: AnyRouter<OnboardingRoute>) -> OnboardingViewController {
         let viewController = OnboardingViewController.instantiate(with: context)
-        let viewModel = OnboardingViewModel(router: router, engine: context.engine)
+        let viewModel = OnboardingViewModel(router: router, dependency: dependency, engine: context.engine)
         viewController.storedViewModel = viewModel
 
         return viewController

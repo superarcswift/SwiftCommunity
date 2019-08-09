@@ -6,17 +6,11 @@ import SuperArcCoreComponent
 import SuperArcCore
 import SuperArcFoundation
 
-class AppComponent: Component<EmptyDependency> {
+class AppComponent: Component<EmptyDependency> {}
 
-    // MARK: Properties
+extension AppComponent: OnboardingDependency {
 
-    // Public
-
-    lazy public var coordinator = AppCoordinator(context: context)
-
-    // MARK: APIs
-
-    func setRoot(for window: UIWindow) {
-        coordinator.anyRouter.setRoot(for: window)
+    var gitService: GitService {
+        return context.engine.serviceRegistry.resolve(type: GitService.self)
     }
 }
