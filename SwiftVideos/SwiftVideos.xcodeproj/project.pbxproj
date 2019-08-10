@@ -96,6 +96,11 @@
 		F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */; };
 		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
 		F68F655022FD9B730026604C /* DependencyInjectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F654F22FD9B730026604C /* DependencyInjectedViewModel.swift */; };
+		F68F655222FEBF220026604C /* ConferencesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655122FEBF220026604C /* ConferencesComponent.swift */; };
+		F68F655422FEC0130026604C /* VideosComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655322FEC0130026604C /* VideosComponent.swift */; };
+		F68F655622FF4A1B0026604C /* AuthorsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655522FF4A1B0026604C /* AuthorsComponent.swift */; };
+		F68F655822FF4A4B0026604C /* DashboardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655722FF4A4B0026604C /* DashboardComponent.swift */; };
+		F6A6B55122FF68B100BFEC40 /* MoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */; };
 		F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; };
 		F6ABCB3622FB6CDE00476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; };
 		F6ABCB3722FB6CDE00476F1A /* SuperArcCoreComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -247,6 +252,11 @@
 		F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemConferencesContentProvider.swift; sourceTree = "<group>"; };
 		F675C35222DE2F4600FA77DD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		F68F654F22FD9B730026604C /* DependencyInjectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectedViewModel.swift; sourceTree = "<group>"; };
+		F68F655122FEBF220026604C /* ConferencesComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesComponent.swift; sourceTree = "<group>"; };
+		F68F655322FEC0130026604C /* VideosComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosComponent.swift; sourceTree = "<group>"; };
+		F68F655522FF4A1B0026604C /* AuthorsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsComponent.swift; sourceTree = "<group>"; };
+		F68F655722FF4A4B0026604C /* DashboardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardComponent.swift; sourceTree = "<group>"; };
+		F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreComponent.swift; sourceTree = "<group>"; };
 		F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C4C05322E79C4100C0636E /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
@@ -378,9 +388,9 @@
 		F640BC3022E8313F00EDB601 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				F640BC3B22E8464D00EDB601 /* OnboardingCoordinator.swift */,
 				F6DFE6B922FA26960091ECE8 /* OnboardingComponent.swift */,
 				F640BC3922E8464100EDB601 /* Onboarding.storyboard */,
-				F640BC3B22E8464D00EDB601 /* OnboardingCoordinator.swift */,
 				F640BC3122E8314A00EDB601 /* ViewController */,
 				F640BC3222E8314F00EDB601 /* ViewModel */,
 			);
@@ -425,8 +435,9 @@
 		F642389B22CD32E5000F5CE3 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				F64238BE22CD4F41000F5CE3 /* Videos.storyboard */,
 				F66C909F22E0FD6D006CA2BB /* VideosCoordinator.swift */,
+				F68F655322FEC0130026604C /* VideosComponent.swift */,
+				F64238BE22CD4F41000F5CE3 /* Videos.storyboard */,
 				F66C909D22E0FD51006CA2BB /* List */,
 				F66C90F822E60503006CA2BB /* Detail */,
 				F6C4C05722E7C6ED00C0636E /* Player */,
@@ -437,8 +448,9 @@
 		F642389C22CD32EB000F5CE3 /* Authors */ = {
 			isa = PBXGroup;
 			children = (
-				F64238C022CD4F4B000F5CE3 /* Authors.storyboard */,
 				F66C90A322E0FDA3006CA2BB /* AuthorsCoordinator.swift */,
+				F68F655522FF4A1B0026604C /* AuthorsComponent.swift */,
+				F64238C022CD4F4B000F5CE3 /* Authors.storyboard */,
 				F66C90A122E0FD83006CA2BB /* List */,
 				F66C910022E661BB006CA2BB /* Detail */,
 			);
@@ -448,8 +460,9 @@
 		F642389D22CD32F2000F5CE3 /* Conferences */ = {
 			isa = PBXGroup;
 			children = (
-				F64238BC22CD4E93000F5CE3 /* Conferences.storyboard */,
 				F66C909B22E0FAC2006CA2BB /* ConferencesCoordinator.swift */,
+				F68F655122FEBF220026604C /* ConferencesComponent.swift */,
+				F64238BC22CD4E93000F5CE3 /* Conferences.storyboard */,
 				F66C909922E0F90C006CA2BB /* List */,
 				F66C90A522E11D83006CA2BB /* Detail */,
 			);
@@ -500,6 +513,7 @@
 			isa = PBXGroup;
 			children = (
 				F66C905322E09DF2006CA2BB /* DashboardCoordinator.swift */,
+				F68F655722FF4A4B0026604C /* DashboardComponent.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -636,8 +650,9 @@
 		F66C90B722E1ADE7006CA2BB /* More */ = {
 			isa = PBXGroup;
 			children = (
-				F66C90B822E1ADF9006CA2BB /* More.storyboard */,
 				F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */,
+				F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */,
+				F66C90B822E1ADF9006CA2BB /* More.storyboard */,
 				F66C90C722E1FE82006CA2BB /* List */,
 				F66C90C822E1FE8F006CA2BB /* About */,
 			);
@@ -1296,11 +1311,13 @@
 				F66C910822E66239006CA2BB /* AuthorDetailViewModel.swift in Sources */,
 				F642C68222D2627F0005B0AF /* ConferencesCollectionViewModel.swift in Sources */,
 				F66C90F522E5F94A006CA2BB /* AuthorsCollectionViewFlowLayout.swift in Sources */,
+				F68F655422FEC0130026604C /* VideosComponent.swift in Sources */,
 				F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */,
 				F66C90B022E19E4A006CA2BB /* VideosCollectionViewFlowLayout.swift in Sources */,
 				F63A720822F379D5005D0778 /* AuthorView.swift in Sources */,
 				F63712F922EB952F0071C2DC /* FilesystemContentProvider.swift in Sources */,
 				F66C909C22E0FAC2006CA2BB /* ConferencesCoordinator.swift in Sources */,
+				F68F655822FF4A4B0026604C /* DashboardComponent.swift in Sources */,
 				F66C90B322E19E64006CA2BB /* VideosCollectionViewCell.swift in Sources */,
 				F66C90DF22E202E4006CA2BB /* AuthorsService.swift in Sources */,
 				F64A059022F762EC0085C0B5 /* ModelCodingError.swift in Sources */,
@@ -1312,6 +1329,7 @@
 				F66C90C022E1AF29006CA2BB /* MoreViewModel.swift in Sources */,
 				F640BC4122E86CF800EDB601 /* GitService.swift in Sources */,
 				F6C4C05922E7C70200C0636E /* VideoPlayerViewController.swift in Sources */,
+				F68F655222FEBF220026604C /* ConferencesComponent.swift in Sources */,
 				F66C90E122E20412006CA2BB /* FilesystemAuthorsContentProvider.swift in Sources */,
 				F637130122EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift in Sources */,
 				F66C90AA22E11DF2006CA2BB /* ConferenceDetailViewController.swift in Sources */,
@@ -1329,6 +1347,7 @@
 				F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */,
 				F64A059222F774210085C0B5 /* AuthorResourcesTableViewCell.swift in Sources */,
 				F66C90B622E1AD90006CA2BB /* ConferenceDetailViewModel.swift in Sources */,
+				F68F655622FF4A1B0026604C /* AuthorsComponent.swift in Sources */,
 				F66C90F222E5F938006CA2BB /* AuthorsCollectionViewCell.swift in Sources */,
 				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
 				F63A71FD22F22928005D0778 /* ConferenceView.swift in Sources */,
@@ -1337,6 +1356,7 @@
 				F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */,
 				F63A720B22F4179B005D0778 /* Constants.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
+				F6A6B55122FF68B100BFEC40 /* MoreComponent.swift in Sources */,
 				F6DFE6BA22FA26970091ECE8 /* OnboardingComponent.swift in Sources */,
 				F6DFE6BE22FA35D90091ECE8 /* AppComponent.swift in Sources */,
 				F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */,

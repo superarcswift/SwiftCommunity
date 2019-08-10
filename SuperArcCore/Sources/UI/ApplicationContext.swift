@@ -5,7 +5,7 @@
 import SuperArcFoundation
 
 public protocol HasApplicationContext: class {
-    var context: ApplicationContext! { get set }
+    var context: ApplicationContext! { get }
 }
 
 public protocol ApplicationContextProtocol {

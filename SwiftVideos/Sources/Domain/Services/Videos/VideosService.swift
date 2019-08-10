@@ -5,6 +5,10 @@
 import SuperArcCore
 import PromiseKit
 
+protocol HasVideosService {
+    var videosService: VideosService { get }
+}
+
 class VideosService: ContentService {
 
     // MARK: Properties

@@ -5,6 +5,10 @@
 import SuperArcCore
 import PromiseKit
 
+protocol HasConferencesService {
+    var conferencesService: ConferencesService { get }
+}
+
 class ConferencesService: ContentService {
 
     // MARK: Properties

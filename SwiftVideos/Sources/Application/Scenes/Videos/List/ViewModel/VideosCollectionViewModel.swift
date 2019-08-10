@@ -22,11 +22,10 @@ protocol VideosCollectionViewModelOutput {
     var title: String { get }
 }
 
-class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, VideosCollectionViewModelOutput {
+class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency>, VideosCollectionViewModelInput, VideosCollectionViewModelOutput {
 
     // MARK: Properties
 
-    private let router: AnyRouter<VideosRoute>
     private lazy var showVideoAction = Action<VideoMetaData, Void> { [unowned self] video in
         self.router.rx.trigger(.videoDetail(video, false))
     }
@@ -52,11 +51,10 @@ class VideosCollectionViewModel: ViewModel, VideosCollectionViewModelInput, Vide
 
     // MARK: Initialization
 
-    init(router: AnyRouter<VideosRoute>, engine: Engine, conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?) {
-        self.router = router
+    init(router: AnyRouter<VideosRoute>, dependency: VideosDependency, engine: Engine, conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?) {
         self.conferenceMetaData = conferenceMetaData
         self.conferenceEdition = conferenceEdition
-        super.init(engine: engine)
+        super.init(router: router, dependency: dependency, engine: engine)
     }
 
     // MARK: APIs

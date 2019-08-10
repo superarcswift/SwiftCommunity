@@ -5,6 +5,10 @@
 import SuperArcCore
 import PromiseKit
 
+protocol HasAuthorsService {
+    var authorsService: AuthorsService { get }
+}
+
 class AuthorsService: ContentService {
 
     // MARK: Properties

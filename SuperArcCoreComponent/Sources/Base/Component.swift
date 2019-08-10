@@ -4,17 +4,64 @@
 
 import SuperArcCore
 
+public protocol ComponentProtocol: Dependency, HasApplicationContext {
+    associatedtype DependencyType
+
+    /// The dependency of this component, which is should be provided by the parent of this component.
+    var dependency: DependencyType { get }
+}
+
+private class _AnyComponentBase<DependencyType>: ComponentProtocol {
+
+    var dependency: DependencyType {
+        fatalError("need to be implemented")
+    }
+    var context: ApplicationContext!
+
+    public init(dependency: DependencyType, context: ApplicationContext) {
+        guard type(of: self) != _AnyComponentBase.self else {
+            fatalError("Cannot initialise, must subclass")
+        }
+    }
+}
+
+private final class _AnyComponentBox<ConcreteComponent: ComponentProtocol>: _AnyComponentBase<ConcreteComponent.DependencyType> {
+
+    var concrete: ConcreteComponent
+
+    override var dependency: DependencyType {
+        return concrete.dependency
+    }
+
+    init(_ concrete: ConcreteComponent, context: ApplicationContext) {
+        self.concrete = concrete
+        super.init(dependency: concrete.dependency, context: context)
+    }
+}
+
+public final class AnyComponent<DependencyType>: ComponentProtocol {
+
+    private let box: _AnyComponentBase<DependencyType>
+
+    public var dependency: DependencyType {
+        return box.dependency
+    }
+
+    public var context: ApplicationContext!
+
+    init<Concrete: ComponentProtocol>(_ concrete: Concrete, context: ApplicationContext) where Concrete.DependencyType == DependencyType {
+        box = _AnyComponentBox(concrete, context: context)
+    }
+}
+
 /// The base class of a dependency injection component.
-open class Component<DependencyType>: Dependency, HasApplicationContext {
+open class Component<DependencyType>: ComponentProtocol {
 
     // MARK: Properties
 
     // Public
 
-    /// The dependency of this component, which is should be provided by the parent of this component.
-    public private(set) var dependency: DependencyType!
-
-    /// Context used to provide dependencies to children.
+    public var dependency: DependencyType
     public var context: ApplicationContext!
 
     // MARK: Intialization

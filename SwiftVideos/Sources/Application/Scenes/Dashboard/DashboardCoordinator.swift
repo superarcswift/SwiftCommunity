@@ -2,9 +2,10 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import XCoordinator
+import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
 import RxSwift
 import UIKit
 
@@ -14,7 +15,8 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
     // Private
 
-    private var context: ApplicationContext
+    private let component: DashboardComponent
+
     private let conferencesRouter: AnyRouter<ConferencesRoute>
     private let videosRouter: AnyRouter<VideosRoute>
     private let authorsRouter: AnyRouter<AuthorsRoute>
@@ -22,39 +24,25 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
     // MARK: Initialization
 
-    convenience init(context: ApplicationContext) {
-        let conferencesCoordinator = ConferencesCoordinator(context: context)
+    init(context: ApplicationContext) {
+
+        component = DashboardComponent(dependency: EmptyComponent(), context: context)
+
+        let conferencesCoordinator = ConferencesCoordinator(dependency: component, context: context)
         conferencesCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Conferences", image: nil, tag: 0)
+        conferencesRouter = conferencesCoordinator.anyRouter
 
-        let videosCoordinator = VideosCoordinator(initialRoute: .videos(nil, nil), context: context)
+        let videosCoordinator = VideosCoordinator(initialRoute: .videos(nil, nil), depedency: component, context: context)
         videosCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Videos", image: nil, tag: 1)
+        videosRouter = videosCoordinator.anyRouter
 
-        let authorsCoordinator = AuthorsCoordinator(context: context)
+        let authorsCoordinator = AuthorsCoordinator(dependency: component, context: context)
         authorsCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Authors", image: nil, tag: 2)
+        authorsRouter = authorsCoordinator.anyRouter
 
         let moreCoordinator = MoreCoordinator(context: context)
         moreCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "More", image: nil, tag: 3)
-
-        self.init(
-            context: context,
-            conferencesRouter: conferencesCoordinator.anyRouter,
-            videosRouter: videosCoordinator.anyRouter,
-            authorsRouter: authorsCoordinator.anyRouter,
-            moreRouter: moreCoordinator.anyRouter
-        )
-    }
-
-    init(context: ApplicationContext,
-         conferencesRouter: AnyRouter<ConferencesRoute>,
-         videosRouter: AnyRouter<VideosRoute>,
-         authorsRouter: AnyRouter<AuthorsRoute>,
-         moreRouter: AnyRouter<MoreRoute>) {
-
-        self.context = context
-        self.conferencesRouter = conferencesRouter
-        self.videosRouter = videosRouter
-        self.authorsRouter = authorsRouter
-        self.moreRouter = moreRouter
+        moreRouter = moreCoordinator.anyRouter
 
         super.init(tabs: [conferencesRouter, videosRouter, authorsRouter, moreRouter], select: conferencesRouter)
     }

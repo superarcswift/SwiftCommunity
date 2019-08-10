@@ -13,12 +13,12 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
     // Private
 
-    private var context: ApplicationContext
+    private let component: ConferencesComponent
 
     // MARK: Initialization
 
-    init(context: ApplicationContext) {
-        self.context = context
+    init(dependency: ConferencesDependency, context: ApplicationContext) {
+        component = ConferencesComponent(dependency: dependency, context: context)
         super.init(initialRoute: .conferences)
     }
 
@@ -27,19 +27,15 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
     override func prepareTransition(for route: ConferencesRoute) -> NavigationTransition {
         switch route {
         case .conferences:
-            let viewController = ConferencesCollectionViewController.instantiate(with: context)
-            let viewModel = ConferencesCollectionViewModel(router: anyRouter, engine: context.engine)
-            viewController.storedViewModel = viewModel
+            let viewController = component.makeConferencesCollectionViewController(router: anyRouter)
             return .push(viewController)
 
         case .conferenceDetail(let conferenceMetaData):
-            let viewController = ConferenceDetailViewController.instantiate(with: context)
-            let viewModel = ConferenceDetailViewModel(conferenceMetaData: conferenceMetaData, router: anyRouter, engine: context.engine)
-            viewController.storedViewModel = viewModel
+            let viewController = component.makeConferenceDetailViewController(conferenceMetaData: conferenceMetaData, router: anyRouter)
             return .push(viewController)
 
         case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):
-            let videosCoordinator = VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), context: context)
+            let videosCoordinator = VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), depedency: component, context: component.context)
             return .present(videosCoordinator)
 
         case .close:

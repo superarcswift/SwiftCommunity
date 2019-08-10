@@ -8,6 +8,10 @@ import PromiseKit
 import ObjectiveGit
 import Foundation
 
+protocol HasGitService {
+    var gitService: GitService { get }
+}
+
 protocol GitServiceProtocol {
 
     var baseLocalRepositoryPath: String { get }
