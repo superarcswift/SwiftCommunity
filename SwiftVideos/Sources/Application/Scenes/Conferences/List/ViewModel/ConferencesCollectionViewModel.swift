@@ -19,7 +19,7 @@ protocol ConferencesCollectionViewModelOutput {
     var conferences: BehaviorRelay<[ConferenceMetaData]> { get set }
 }
 
-class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, ConferencesCollectionViewModelOutput, ConferencesCollectionViewModelInput {
+class ConferencesCollectionViewModel: CoordinatedDIViewModel<ConferencesRoute, ConferencesDependency>, ConferencesCollectionViewModelOutput, ConferencesCollectionViewModelInput {
 
     // MARK: Properties
 
@@ -40,7 +40,7 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
     // MARK: APIs
 
     func loadData() {
-        conferencesService.fetchList()
+        dependency.conferencesService.fetchList()
             .done { [weak self] conferences in
                 self?.conferences.accept(conferences)
             }
@@ -51,7 +51,7 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
     }
 
     public func bannerImage(for conference: ConferenceMetaData) -> UIImage? {
-        guard let bannerImageURL = conferencesService.bannerImageURL(for: conference) else {
+        guard let bannerImageURL = dependency.conferencesService.bannerImageURL(for: conference) else {
             return nil
         }
 
@@ -60,14 +60,5 @@ class ConferencesCollectionViewModel: CoordinatedViewModel<ConferencesRoute>, Co
         }
 
         return bannerImage
-    }
-}
-
-// MARK: Dependencies
-
-extension ConferencesCollectionViewModel {
-
-    var conferencesService: ConferencesService {
-        return engine.serviceRegistry.resolve(type: ConferencesService.self)
     }
 }

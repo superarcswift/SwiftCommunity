@@ -20,7 +20,7 @@ public protocol ConferenceDetailViewModelOutput {
     var conferenceEditions: BehaviorRelay<[ConferenceEdition]> { get set }
 }
 
-public class ConferenceDetailViewModel: ViewModel, ConferenceDetailViewModelInput, ConferenceDetailViewModelOutput {
+class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, ConferencesDependency>, ConferenceDetailViewModelInput, ConferenceDetailViewModelOutput {
 
     // MARK: Properties
 
@@ -39,19 +39,16 @@ public class ConferenceDetailViewModel: ViewModel, ConferenceDetailViewModelInpu
         self.router.rx.trigger(.conferenceEditionDetail(self.conferenceMetaData, conferenceEdition))
     }
 
-    private let router: AnyRouter<ConferencesRoute>
-
     // MARK: Initialization
 
-    public init(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>, engine: Engine) {
+    init(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>, dependency: ConferencesDependency, engine: Engine) {
         self.conferenceMetaData = conferenceMetaData
-        self.router = router
-        super.init(engine: engine)
+        super.init(router: router, dependency: dependency, engine: engine)
     }
 
     // MARK: APIs
 
-    public func loadData() {
+    func loadData() {
         conferencesService.conference(with: conferenceMetaData)
             .done { conferenceDetail in
                 self.conferenceEditions.accept(conferenceDetail.editions)

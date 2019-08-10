@@ -19,7 +19,7 @@ protocol AuthorDetailViewModelOutput {
     var authorDetail: BehaviorRelay<AuthorDetail?> { get }
 }
 
-class AuthorDetailViewModel: ViewModel {
+class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDependency>, AuthorDetailViewModelInput, AuthorDetailViewModelOutput {
 
     // MARK: Properties
 
@@ -33,15 +33,13 @@ class AuthorDetailViewModel: ViewModel {
 
     // Private
 
-    private var authorMetaData: AuthorMetaData
-    private let router: AnyRouter<AuthorsRoute>
+    var authorMetaData: AuthorMetaData
 
     // MARK: Initialization
 
-    init(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>, engine: Engine) {
+    init(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>, dependency: AuthorsDependency, engine: Engine) {
         self.authorMetaData = authorMetaData
-        self.router = router
-        super.init(engine: engine)
+        super.init(router: router, dependency: dependency, engine: engine)
     }
 
     // MARK: APIs

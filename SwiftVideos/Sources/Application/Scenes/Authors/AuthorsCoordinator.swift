@@ -13,12 +13,12 @@ class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 
     // Private
 
-    private var context: ApplicationContext
+    private let component: AuthorsComponent
 
     // MARK: Initialization
 
-    init(context: ApplicationContext) {
-        self.context = context
+    init(dependency: AuthorsDependency, context: ApplicationContext) {
+        component = AuthorsComponent(dependency: dependency, context: context)
         super.init(initialRoute: .authors)
     }
 
@@ -27,19 +27,15 @@ class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
     override func prepareTransition(for route: AuthorsRoute) -> NavigationTransition {
         switch route {
         case .authors:
-            let viewController = AuthorsCollectionViewController.instantiate(with: context)
-            let viewModel = AuthorsCollectionViewModel(router: anyRouter, engine: context.engine)
-            viewController.storedViewModel = viewModel
+            let viewController = component.makeAuthorsCollectionViewController(router: anyRouter)
             return .push(viewController)
 
         case .authorDetail(let authorMetaData):
-            let viewController = AuthorDetailViewController.instantiate(with: context)
-            let viewModel = AuthorDetailViewModel(authorMetaData: authorMetaData, router: anyRouter, engine: context.engine)
-            viewController.storedViewModel = viewModel
+            let viewController = component.makeAuthorDetailViewController(authorMetaData: authorMetaData, router: anyRouter)
             return .push(viewController)
 
         case .videoDetail(let videoMetaData):
-            let videoCoordinator = VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), context: context)
+            let videoCoordinator = VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), depedency: component, context: component.context)
             return .present(videoCoordinator)
 
         case .close:

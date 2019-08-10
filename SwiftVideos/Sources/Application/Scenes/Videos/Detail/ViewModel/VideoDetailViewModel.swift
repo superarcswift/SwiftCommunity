@@ -21,7 +21,7 @@ protocol VideoDetailViewModelOutput {
     var previewVideoImage: BehaviorRelay<UIImage?> { get set }
 }
 
-class VideoDetailViewModel: ViewModel, VideoDetailViewModelInput, VideoDetailViewModelOutput {
+class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency>, VideoDetailViewModelInput, VideoDetailViewModelOutput {
 
     // MARK: Properties
 
@@ -45,14 +45,11 @@ class VideoDetailViewModel: ViewModel, VideoDetailViewModelInput, VideoDetailVie
         self.router.rx.trigger(.videoPlayer(self.videoMetaData))
     }
 
-    private let router: AnyRouter<VideosRoute>
-
     // MARK: Initialization
 
-    init(videoMetaData: VideoMetaData, router: AnyRouter<VideosRoute>, engine: Engine) {
+    init(videoMetaData: VideoMetaData, router: AnyRouter<VideosRoute>, dependency: VideosDependency, engine: Engine) {
         self.videoMetaData = videoMetaData
-        self.router = router
-        super.init(engine: engine)
+        super.init(router: router, dependency: dependency, engine: engine)
     }
 
     // MARK: APIs

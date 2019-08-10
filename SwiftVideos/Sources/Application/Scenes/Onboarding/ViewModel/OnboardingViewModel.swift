@@ -9,7 +9,7 @@ import XCoordinator
 import RxSwift
 import RxCocoa
 
-class OnboardingViewModel: CoordinatedViewModel<OnboardingRoute> {
+class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDependency> {
 
     // MARK: Properties
 
@@ -22,14 +22,11 @@ class OnboardingViewModel: CoordinatedViewModel<OnboardingRoute> {
     // Private
 
     private let disposeBag = DisposeBag()
-    private let dependency: OnboardingDependency
 
-    // MARK: Setup
+    // MARK: Initialization
 
-    init(router: AnyRouter<OnboardingRoute>, dependency: OnboardingDependency, engine: Engine) {
-        self.dependency = dependency
-
-        super.init(router: router, engine: engine)
+    override init(router: AnyRouter<OnboardingRoute>, dependency: OnboardingDependency, engine: Engine) {
+        super.init(router: router, dependency: dependency, engine: engine)
 
         isReady
             .observeOn(MainScheduler.instance)

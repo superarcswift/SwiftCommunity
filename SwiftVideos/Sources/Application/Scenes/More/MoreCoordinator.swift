@@ -2,9 +2,10 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import XCoordinator
+import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
 import RxSwift
 
 class MoreCoordinator: NavigationCoordinator<MoreRoute> {
@@ -13,12 +14,12 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
     // Private
 
-    private var context: ApplicationContext
+    private var component: MoreComponent
 
     // MARK: Initialization
 
     init(context: ApplicationContext) {
-        self.context = context
+        component = MoreComponent(dependency: EmptyComponent(), context: context)
         super.init(initialRoute: .list)
     }
 
@@ -27,7 +28,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
     override func prepareTransition(for route: MoreRoute) -> NavigationTransition {
         switch route {
         case .list:
-            let viewController = MoreTableViewController.instantiate(with: context)
+            let viewController = component.makeMoreTableViewController()
             return .push(viewController)
 
         case .close:

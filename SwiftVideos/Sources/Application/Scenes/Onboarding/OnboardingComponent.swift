@@ -9,9 +9,7 @@ import SuperArcFoundation
 import XCoordinator
 
 /// Protocol defining all dependencies required by this component..
-protocol OnboardingDependency: Dependency {
-    var gitService: GitService { get }
-}
+typealias OnboardingDependency = Dependency & HasGitService
 
 /// Protocol used to mock for testing purpose.
 protocol OnboardingBuilder {

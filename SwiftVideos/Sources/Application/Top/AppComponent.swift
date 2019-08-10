@@ -8,7 +8,7 @@ import SuperArcFoundation
 
 class AppComponent: Component<EmptyDependency> {}
 
-extension AppComponent: OnboardingDependency {
+extension AppComponent: HasGitService {
 
     var gitService: GitService {
         return context.engine.serviceRegistry.resolve(type: GitService.self)
