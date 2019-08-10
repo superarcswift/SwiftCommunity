@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuthorAvatarTableViewCell" rowHeight="150" id="xYn-hs-0gA" customClass="AuthorAvatarTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AuthorAvatarTableViewCell" rowHeight="150" id="xYn-hs-0gA" customClass="AuthorAvatarTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xYn-hs-0gA" id="C3f-fq-rtA">
@@ -86,7 +86,7 @@
                                             <outlet property="authorView" destination="7qn-dc-I3c" id="LQn-os-lB2"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuthorResourcesTableViewCell" id="TPH-0g-vwi" customClass="AuthorResourcesTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AuthorResourcesTableViewCell" id="TPH-0g-vwi" customClass="AuthorResourcesTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="178" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TPH-0g-vwi" id="44m-WQ-F8i">
