@@ -6,7 +6,7 @@ import SuperArcCore
 import UIKit
 
 /// The base class for all UIViewControllers.
-open class ViewController: UIViewController, CommonViewControllerProtocol {
+open class ViewController<VM: ViewModel>: UIViewController, CommonViewControllerProtocol, ViewModelBindable {
 
 
     // MARK: Properties
@@ -14,7 +14,7 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
     // Public
 
     public var context: ApplicationContext!
-    public var storedViewModel: ViewModel!
+    public var viewModel: VM!
 
     // IBInspectable
 
@@ -40,7 +40,7 @@ open class ViewController: UIViewController, CommonViewControllerProtocol {
 
     // MARK: Setup
 
-    open func setupViewModel() -> ViewModel! {
+    open func setupViewModel() -> VM! {
         return nil
     }
 

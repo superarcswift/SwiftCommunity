@@ -6,7 +6,7 @@ import SuperArcCoreUI
 import SuperArcCore
 import RxSwift
 
-class OnboardingViewController: ViewController, StoryboardInitiable {
+class OnboardingViewController: ViewController<OnboardingViewModel>, StoryboardInitiable {
 
     // MARK: Properties
 
@@ -14,15 +14,9 @@ class OnboardingViewController: ViewController, StoryboardInitiable {
 
     static var storyboardName = "Onboarding"
 
-    // Public
-
-    var viewModel: OnboardingViewModel {
-        return storedViewModel as! OnboardingViewModel
-    }
-
     // Private
 
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
 
     // MARK: Overrides
 

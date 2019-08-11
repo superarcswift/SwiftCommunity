@@ -5,14 +5,14 @@
 import SuperArcCore
 import UIKit
 
-open class TableViewController: UITableViewController, CommonViewControllerProtocol {
+open class TableViewController<VM: ViewModel>: UITableViewController, CommonViewControllerProtocol {
 
     // MARK: Properties
 
     // Public
 
     public var context: ApplicationContext!
-    public var storedViewModel: ViewModel!
+    public var viewModel: VM!
 
     // IBInspectable
 
@@ -40,7 +40,7 @@ open class TableViewController: UITableViewController, CommonViewControllerProto
 
     // MARK: Setup
 
-    open func setupViewModel() -> ViewModel! {
+    open func setupViewModel() -> VM! {
         return nil
     }
 

@@ -8,7 +8,7 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class VideoDetailViewController: ViewController, StoryboardInitiable {
+class VideoDetailViewController: ViewController<VideoDetailViewModel>, StoryboardInitiable {
 
     // MARK: Properties
 
@@ -22,12 +22,6 @@ class VideoDetailViewController: ViewController, StoryboardInitiable {
     @IBOutlet weak var startVideoPlayerButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-
-    // Private
-
-    private var viewModel: VideoDetailViewModel {
-        return storedViewModel as! VideoDetailViewModel
-    }
 
     private let disposeBag = DisposeBag()
 

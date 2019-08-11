@@ -7,7 +7,7 @@ import SuperArcCore
 import RxSwift
 import UIKit
 
-class AuthorsCollectionViewController: ViewController, StoryboardInitiable {
+class AuthorsCollectionViewController: ViewController<AuthorsCollectionViewModel>, StoryboardInitiable {
 
     // MARK: Properties
 
@@ -18,12 +18,6 @@ class AuthorsCollectionViewController: ViewController, StoryboardInitiable {
     // IBOutlets
 
     @IBOutlet weak var collectionView: UICollectionView!
-
-    // Public
-
-    var viewModel: AuthorsCollectionViewModel {
-        return storedViewModel as! AuthorsCollectionViewModel
-    }
 
     private let disposeBag = DisposeBag()
 

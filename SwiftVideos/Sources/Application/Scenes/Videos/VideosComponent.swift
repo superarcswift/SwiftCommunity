@@ -30,7 +30,7 @@ class VideosComponent: Component<VideosDependency>, VideosBuilder {
             viewController.hasLeftCloseButton = true
         }
         let viewModel = VideosCollectionViewModel(router: router, dependency: dependency, engine: context.engine, conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition)
-        viewController.storedViewModel = viewModel
+        viewController.viewModel = viewModel
 
         return viewController
     }
@@ -39,7 +39,7 @@ class VideosComponent: Component<VideosDependency>, VideosBuilder {
         let viewController = VideoDetailViewController.instantiate(with: context)
         viewController.setApplicationContext(context)
         let viewModel = VideoDetailViewModel(videoMetaData: videoMetaData, router: router, dependency: dependency, engine: context.engine)
-        viewController.storedViewModel = viewModel
+        viewController.viewModel = viewModel
         viewController.hasLeftCloseButton = hasLeftCloseButton
 
         return viewController
@@ -49,7 +49,7 @@ class VideosComponent: Component<VideosDependency>, VideosBuilder {
         let viewController = VideoPlayerViewController.instantiate(with: context)
         viewController.setApplicationContext(context)
         let viewModel = VideoPlayerViewModel(videoMetaData: videoMetaData, engine: context.engine)
-        viewController.storedViewModel = viewModel
+        viewController.viewModel = viewModel
 
         return viewController
     }

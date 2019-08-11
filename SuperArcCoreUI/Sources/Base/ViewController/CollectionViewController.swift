@@ -5,12 +5,12 @@
 import SuperArcCore
 import UIKit
 
-open class CollectionViewController: UICollectionViewController, CommonViewControllerProtocol {
+open class CollectionViewController<VM: ViewModel>: UICollectionViewController, CommonViewControllerProtocol {
 
     // MARK: Properties
 
     public var context: ApplicationContext!
-    public var storedViewModel: ViewModel!
+    public var viewModel: VM!
 
     @IBInspectable public var hasRightCloseButton = false
     @IBInspectable public var hasLeftCloseButton = false
@@ -34,7 +34,7 @@ open class CollectionViewController: UICollectionViewController, CommonViewContr
 
     // MARK: Setup
 
-    open func setupViewModel() -> ViewModel! {
+    open func setupViewModel() -> VM! {
         return nil
     }
 

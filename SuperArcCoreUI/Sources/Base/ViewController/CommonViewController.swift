@@ -4,13 +4,13 @@
 
 import SuperArcCore
 
-public protocol CommonViewControllerProtocol: ViewModelBindable, HasApplicationContext {
+public protocol CommonViewControllerProtocol: HasApplicationContext, ViewModelBindable {
 
     // MARK: Properties
 
     // ViewModel
 
-    var storedViewModel: ViewModel! { get set }
+    var viewModel: ViewModelType! { get set }
 
     // View Configuration
 
@@ -30,18 +30,19 @@ public protocol CommonViewControllerProtocol: ViewModelBindable, HasApplicationC
 
     func commonSetupView()
 
-    func setupViewModel() -> ViewModel!
+    func setupViewModel() -> ViewModelType!
     func setupViews()
     func setupBindings()
     func loadData()
+    
 }
 
 extension CommonViewControllerProtocol where Self: UIViewController {
 
     public func commonViewDidLoad() {
 
-        if storedViewModel == nil {
-            storedViewModel = setupViewModel()
+        if viewModel == nil {
+            viewModel = setupViewModel()
         }
 
         setupViews()

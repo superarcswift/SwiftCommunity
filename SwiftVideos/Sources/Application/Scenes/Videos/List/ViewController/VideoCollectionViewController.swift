@@ -7,7 +7,7 @@ import SuperArcCore
 import RxSwift
 import UIKit
 
-class VideosCollectionViewController: ViewController, StoryboardInitiable {
+class VideosCollectionViewController: ViewController<VideosCollectionViewModel>, StoryboardInitiable {
     
     // MARK: Properties
 
@@ -20,12 +20,6 @@ class VideosCollectionViewController: ViewController, StoryboardInitiable {
     @IBOutlet weak var collectionView: UICollectionView!
 
     // Public
-
-    // Private
-
-    var viewModel: VideosCollectionViewModel {
-        return storedViewModel as! VideosCollectionViewModel
-    }
 
     private let disposeBag = DisposeBag()
 

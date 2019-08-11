@@ -8,7 +8,7 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class AuthorDetailViewController: ViewController, StoryboardInitiable {
+class AuthorDetailViewController: ViewController<AuthorDetailViewModel>, StoryboardInitiable {
 
     // MARK: Properties
 
@@ -33,12 +33,6 @@ class AuthorDetailViewController: ViewController, StoryboardInitiable {
     // IBOutlet
 
     @IBOutlet weak var tableView: UITableView!
-
-    // Public
-
-    var viewModel: AuthorDetailViewModel {
-        return storedViewModel as! AuthorDetailViewModel
-    }
 
     // Private
 

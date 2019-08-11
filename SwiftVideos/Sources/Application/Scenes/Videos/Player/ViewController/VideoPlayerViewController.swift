@@ -6,7 +6,7 @@ import SuperArcCoreUI
 import SuperArcCore
 import YoutubeKit
 
-class VideoPlayerViewController: ViewController, StoryboardInitiable {
+class VideoPlayerViewController: ViewController<VideoPlayerViewModel>, StoryboardInitiable {
 
     // MARK: Properties
 
@@ -19,12 +19,6 @@ class VideoPlayerViewController: ViewController, StoryboardInitiable {
     @IBOutlet weak var playerContainerView: UIView!
 
     // Public
-
-    // Private
-
-    private var viewModel: VideoPlayerViewModel {
-        return storedViewModel as! VideoPlayerViewModel
-    }
 
     private var player: YTSwiftyPlayer!
 

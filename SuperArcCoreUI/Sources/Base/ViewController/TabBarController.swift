@@ -5,7 +5,7 @@
 import SuperArcCore
 import UIKit
 
-open class TabBarController: UITabBarController, CommonViewControllerProtocol {
+open class TabBarController<VM: ViewModel>: UITabBarController, CommonViewControllerProtocol {
 
 
     // MARK: Properties
@@ -13,7 +13,7 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
     // Public
 
     public var context: ApplicationContext!
-    public var storedViewModel: ViewModel!
+    public var viewModel: VM!
 
     @IBInspectable public var hasRightCloseButton = false
     @IBInspectable public var hasLeftCloseButton = false
@@ -54,7 +54,7 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
 
     // MARK: Setup
 
-    open func setupViewModel() -> ViewModel! {
+    open func setupViewModel() -> VM! {
         return nil
     }
 
@@ -65,10 +65,10 @@ open class TabBarController: UITabBarController, CommonViewControllerProtocol {
     open func loadData() {}
 }
 
-// MARK: - UITabBarControllerDelegate
-
-extension TabBarController: UITabBarControllerDelegate {
-    public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        viewController.setApplicationContext(context)
-    }
-}
+//// MARK: - UITabBarControllerDelegate
+//
+//extension TabBarController: UITabBarControllerDelegate {
+//    public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+//        viewController.setApplicationContext(context)
+//    }
+//}

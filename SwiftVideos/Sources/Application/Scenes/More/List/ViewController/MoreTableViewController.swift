@@ -6,7 +6,7 @@ import SuperArcCoreUI
 import SuperArcCore
 import UIKit
 
-class MoreTableViewController: TableViewController, StoryboardInitiable {
+class MoreTableViewController: TableViewController<ViewModel>, StoryboardInitiable {
 
     // MAK: Properties
 

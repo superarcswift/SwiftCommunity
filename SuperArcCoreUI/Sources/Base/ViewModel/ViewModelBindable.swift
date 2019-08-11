@@ -7,7 +7,7 @@ import SuperArcCore
 public protocol ViewModelBindable: class {
     associatedtype ViewModelType: ViewModelProtocol
 
-    var storedViewModel: ViewModelType! { get set }
+    var viewModel: ViewModelType! { get set }
 
     func setupViewModel() -> ViewModelType!
     func setupBindings()
@@ -15,7 +15,7 @@ public protocol ViewModelBindable: class {
 
 extension ViewModelBindable where Self: CommonViewControllerProtocol {
     func bind(to model: Self.ViewModelType) {
-        storedViewModel = model
+        viewModel = model
         commonViewDidLoad()
         setupBindings()
     }

@@ -8,7 +8,7 @@ import SuperArcFoundation
 import RxSwift
 import UIKit
 
-class ConferenceDetailViewController: ViewController, StoryboardInitiable {
+class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>, StoryboardInitiable {
 
     // MARK: Properties
 
@@ -19,12 +19,6 @@ class ConferenceDetailViewController: ViewController, StoryboardInitiable {
     // IBOutlets
     
     @IBOutlet weak var collectionView: UICollectionView!
-
-    // Public
-
-    var viewModel: ConferenceDetailViewModel {
-        return storedViewModel as! ConferenceDetailViewModel
-    }
 
     // Private
 

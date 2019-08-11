@@ -26,7 +26,7 @@ class AuthorsComponent: Component<AuthorsDependency>, AuthorsBuilder {
         let viewController = AuthorsCollectionViewController.instantiate(with: context)
         viewController.setApplicationContext(context)
         let viewModel = AuthorsCollectionViewModel(router: router, engine: context.engine)
-        viewController.storedViewModel = viewModel
+        viewController.viewModel = viewModel
 
         return viewController
     }
@@ -34,7 +34,7 @@ class AuthorsComponent: Component<AuthorsDependency>, AuthorsBuilder {
     func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController {
         let viewController = AuthorDetailViewController.instantiate(with: context)
         let viewModel = AuthorDetailViewModel(authorMetaData: authorMetaData, router: router, dependency: dependency, engine: context.engine)
-        viewController.storedViewModel = viewModel
+        viewController.viewModel = viewModel
 
         return viewController
     }
