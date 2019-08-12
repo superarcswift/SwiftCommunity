@@ -1,8 +1,9 @@
 github "ReactiveX/RxSwift" ~> 5.0
 github "mxcl/PromiseKit" ~> 6.0
 github "onevcat/Kingfisher" ~> 5.0
-github "peacemoon/XCoordinator" "master"
+github "quickbirdstudios/XCoordinator" "feature/update-pods"
 github "RxSwiftCommunity/Action" ~> 4.0
+github "RxSwiftCommunity/RxDataSources" ~> 4.0
 github "rinov/YoutubeKit" "master"
 github "libgit2/objective-git"
 github "Daltron/NotificationBanner" "master"

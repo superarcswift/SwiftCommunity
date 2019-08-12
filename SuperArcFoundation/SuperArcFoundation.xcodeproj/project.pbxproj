@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */; };
+		F6A6B5532300469A00BFEC40 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B5522300469A00BFEC40 /* Int+Extensions.swift */; };
 		F6CAFA6022CBF13F007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */; };
 		F6CAFA6522CBF13F007476D4 /* SuperArcFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA6422CBF13F007476D4 /* SuperArcFoundationTests.swift */; };
 		F6CAFA6722CBF13F007476D4 /* SuperArcFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameDerivable.swift; sourceTree = "<group>"; };
+		F6A6B5522300469A00BFEC40 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcFoundation.h; sourceTree = "<group>"; };
 		F6CAFA5A22CBF13F007476D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				F6CAFA7D22CBFC99007476D4 /* String+Extensions.swift */,
 				F6CAFA8C22CC097C007476D4 /* NSObject+Extensions.swift */,
 				F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */,
+				F6A6B5522300469A00BFEC40 /* Int+Extensions.swift */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */,
 				F6CAFA7E22CBFC99007476D4 /* String+Extensions.swift in Sources */,
 				F6CAFA7722CBF3E6007476D4 /* MemoryStorage.swift in Sources */,
+				F6A6B5532300469A00BFEC40 /* Int+Extensions.swift in Sources */,
 				F6CAFA8B22CC0930007476D4 /* Container.swift in Sources */,
 				F6CAFA8F22CC0B82007476D4 /* Registry.swift in Sources */,
 				F6CAFA8D22CC097C007476D4 /* NSObject+Extensions.swift in Sources */,

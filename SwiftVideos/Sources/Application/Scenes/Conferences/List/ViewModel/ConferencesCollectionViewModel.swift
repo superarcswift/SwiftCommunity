@@ -46,7 +46,7 @@ class ConferencesCollectionViewModel: CoordinatedDIViewModel<ConferencesRoute, C
             }
             .catch { [weak self] error in
                 print(error)
-                self?.toggleEmptyState.on(.next(StandardStateViewContext(headline: "No conference found")))
+                self?.toggleEmptyState.on(.next(StandardStateViewContext(headline: error.localizedDescription)))
             }
     }
 

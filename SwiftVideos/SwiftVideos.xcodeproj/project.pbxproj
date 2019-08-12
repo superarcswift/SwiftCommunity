@@ -11,8 +11,6 @@
 		F63712F922EB952F0071C2DC /* FilesystemContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712F822EB952F0071C2DC /* FilesystemContentProvider.swift */; };
 		F63712FB22EB98440071C2DC /* ContentDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FA22EB98440071C2DC /* ContentDataProvider.swift */; };
 		F63712FE22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */; };
-		F637130122EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FF22EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift */; };
-		F637130222EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F637130022EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib */; };
 		F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F122F220CC005D0778 /* Animation+Fade.swift */; };
 		F63A71FB22F228F1005D0778 /* ConferenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63A71FA22F228F1005D0778 /* ConferenceView.xib */; };
 		F63A71FD22F22928005D0778 /* ConferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71FC22F22928005D0778 /* ConferenceView.swift */; };
@@ -101,6 +99,11 @@
 		F68F655622FF4A1B0026604C /* AuthorsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655522FF4A1B0026604C /* AuthorsComponent.swift */; };
 		F68F655822FF4A4B0026604C /* DashboardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655722FF4A4B0026604C /* DashboardComponent.swift */; };
 		F6A6B55122FF68B100BFEC40 /* MoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */; };
+		F6A6B55523008F7E00BFEC40 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */; };
+		F6A6B55723014CFF00BFEC40 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A6B55623014CFF00BFEC40 /* Differentiator.framework */; };
+		F6A6B55B23014FE800BFEC40 /* Models+RxDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B55A23014FE800BFEC40 /* Models+RxDataSources.swift */; };
+		F6A6B55F23015D4200BFEC40 /* ConferenceDetailSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B55E23015D4200BFEC40 /* ConferenceDetailSectionHeaderView.swift */; };
+		F6A6B56123015D4A00BFEC40 /* ConferenceDetailSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A6B56023015D4A00BFEC40 /* ConferenceDetailSectionHeaderView.xib */; };
 		F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; };
 		F6ABCB3622FB6CDE00476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; };
 		F6ABCB3722FB6CDE00476F1A /* SuperArcCoreComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -172,8 +175,6 @@
 		F63712F822EB952F0071C2DC /* FilesystemContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemContentProvider.swift; sourceTree = "<group>"; };
 		F63712FA22EB98440071C2DC /* ContentDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDataProvider.swift; sourceTree = "<group>"; };
 		F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		F63712FF22EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailEditionCollectionViewCell.swift; sourceTree = "<group>"; };
-		F637130022EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceDetailEditionCollectionViewCell.xib; sourceTree = "<group>"; };
 		F63A71F122F220CC005D0778 /* Animation+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Fade.swift"; sourceTree = "<group>"; };
 		F63A71FA22F228F1005D0778 /* ConferenceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceView.xib; sourceTree = "<group>"; };
 		F63A71FC22F22928005D0778 /* ConferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceView.swift; sourceTree = "<group>"; };
@@ -257,6 +258,11 @@
 		F68F655522FF4A1B0026604C /* AuthorsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsComponent.swift; sourceTree = "<group>"; };
 		F68F655722FF4A4B0026604C /* DashboardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardComponent.swift; sourceTree = "<group>"; };
 		F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreComponent.swift; sourceTree = "<group>"; };
+		F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		F6A6B55623014CFF00BFEC40 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		F6A6B55A23014FE800BFEC40 /* Models+RxDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models+RxDataSources.swift"; sourceTree = "<group>"; };
+		F6A6B55E23015D4200BFEC40 /* ConferenceDetailSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailSectionHeaderView.swift; sourceTree = "<group>"; };
+		F6A6B56023015D4A00BFEC40 /* ConferenceDetailSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceDetailSectionHeaderView.xib; sourceTree = "<group>"; };
 		F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C4C05322E79C4100C0636E /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
@@ -294,6 +300,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A6B55723014CFF00BFEC40 /* Differentiator.framework in Frameworks */,
+				F6A6B55523008F7E00BFEC40 /* RxDataSources.framework in Frameworks */,
 				F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */,
 				F63A728B22F471E9005D0778 /* SuperArcNotificationBanner.framework in Frameworks */,
 				F63A728C22F471F2005D0778 /* SuperArcNotificationBanner.framework in Frameworks */,
@@ -586,9 +594,8 @@
 		F66C90A622E11D9A006CA2BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F6A6B55D23015CE200BFEC40 /* SectionHeader */,
 				F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */,
-				F63712FF22EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift */,
-				F637130022EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -597,6 +604,7 @@
 			isa = PBXGroup;
 			children = (
 				F66C90B522E1AD90006CA2BB /* ConferenceDetailViewModel.swift */,
+				F6A6B55A23014FE800BFEC40 /* Models+RxDataSources.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -952,6 +960,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F6A6B55D23015CE200BFEC40 /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				F6A6B55E23015D4200BFEC40 /* ConferenceDetailSectionHeaderView.swift */,
+				F6A6B56023015D4A00BFEC40 /* ConferenceDetailSectionHeaderView.xib */,
+			);
+			path = SectionHeader;
+			sourceTree = "<group>";
+		};
 		F6C4C05722E7C6ED00C0636E /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -980,6 +997,8 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6A6B55623014CFF00BFEC40 /* Differentiator.framework */,
+				F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */,
 				F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */,
 				F63A728A22F471E9005D0778 /* SuperArcNotificationBanner.framework */,
 				F63A723C22F44E3F005D0778 /* SuperArcStateView.framework */,
@@ -1236,9 +1255,9 @@
 				F66C909622E0F805006CA2BB /* conference-1.json in Resources */,
 				F640BC3A22E8464100EDB601 /* Onboarding.storyboard in Resources */,
 				F66C909822E0F8E2006CA2BB /* conference-2.json in Resources */,
+				F6A6B56123015D4A00BFEC40 /* ConferenceDetailSectionHeaderView.xib in Resources */,
 				F6453BA022EB304800392F93 /* README.md in Resources */,
 				F675C34C22DE2DE100FA77DD /* conferences.json in Resources */,
-				F637130222EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1279,6 +1298,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/NotificationBanner.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MarqueeLabel.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -1296,6 +1317,8 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/NotificationBanner.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MarqueeLabel.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1314,11 +1337,13 @@
 				F68F655422FEC0130026604C /* VideosComponent.swift in Sources */,
 				F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */,
 				F66C90B022E19E4A006CA2BB /* VideosCollectionViewFlowLayout.swift in Sources */,
+				F6A6B55B23014FE800BFEC40 /* Models+RxDataSources.swift in Sources */,
 				F63A720822F379D5005D0778 /* AuthorView.swift in Sources */,
 				F63712F922EB952F0071C2DC /* FilesystemContentProvider.swift in Sources */,
 				F66C909C22E0FAC2006CA2BB /* ConferencesCoordinator.swift in Sources */,
 				F68F655822FF4A4B0026604C /* DashboardComponent.swift in Sources */,
 				F66C90B322E19E64006CA2BB /* VideosCollectionViewCell.swift in Sources */,
+				F6A6B55F23015D4200BFEC40 /* ConferenceDetailSectionHeaderView.swift in Sources */,
 				F66C90DF22E202E4006CA2BB /* AuthorsService.swift in Sources */,
 				F64A059022F762EC0085C0B5 /* ModelCodingError.swift in Sources */,
 				F66C90DD22E202DA006CA2BB /* VideosService.swift in Sources */,
@@ -1331,7 +1356,6 @@
 				F6C4C05922E7C70200C0636E /* VideoPlayerViewController.swift in Sources */,
 				F68F655222FEBF220026604C /* ConferencesComponent.swift in Sources */,
 				F66C90E122E20412006CA2BB /* FilesystemAuthorsContentProvider.swift in Sources */,
-				F637130122EB9EA00071C2DC /* ConferenceDetailEditionCollectionViewCell.swift in Sources */,
 				F66C90AA22E11DF2006CA2BB /* ConferenceDetailViewController.swift in Sources */,
 				F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */,
 				F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */,
