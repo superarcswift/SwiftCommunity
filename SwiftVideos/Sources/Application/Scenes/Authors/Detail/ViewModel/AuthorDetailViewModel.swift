@@ -19,7 +19,35 @@ protocol AuthorDetailViewModelOutput {
     var authorDetail: BehaviorRelay<AuthorDetail?> { get }
 }
 
-class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDependency>, AuthorDetailViewModelInput, AuthorDetailViewModelOutput {
+protocol AuthorDetailViewModelApi {
+    func loadData()
+    func avatarImage(of author: AuthorMetaData) -> UIImage?
+    func previewImage(for video: VideoMetaData) -> UIImage?
+    func present(_ video: VideoMetaData)
+}
+
+protocol AuthorDetailViewModelType {
+    var inputs: AuthorDetailViewModelInput { get }
+    var outputs: AuthorDetailViewModelOutput { get }
+    var apis: AuthorDetailViewModelApi { get }
+}
+
+extension AuthorDetailViewModelType where Self: AuthorDetailViewModelInput & AuthorDetailViewModelOutput & AuthorDetailViewModelApi {
+
+    var inputs: AuthorDetailViewModelInput {
+        return self
+    }
+
+    var outputs: AuthorDetailViewModelOutput {
+        return self
+    }
+
+    var apis: AuthorDetailViewModelApi {
+        return self
+    }
+}
+
+class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDependency>, AuthorDetailViewModelType, AuthorDetailViewModelInput, AuthorDetailViewModelOutput, AuthorDetailViewModelApi {
 
     // MARK: Properties
 

@@ -32,7 +32,7 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
 
         collectionView.registerNib(VideosCollectionViewCell.className, bundle: Bundle(for: VideosCollectionViewCell.self))
 
-        title = viewModel.title
+        title = viewModel.outputs.title
     }
 
     override func setupBindings() {
@@ -46,7 +46,7 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
             .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
 
-        viewModel.videos
+        viewModel.outputs.videos
             .bind(to: collectionView.rx.items(cellIdentifier: VideosCollectionViewCell.className)) { [weak self] _, video, cell in
                 guard let videoCell = cell as? VideosCollectionViewCell else {
                     fatalError("invalid cell type")
@@ -56,7 +56,7 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
 
                 videoCell.videoView.authorNameLabel.text = video.authors.first?.name
 
-                if let previewImage = self?.viewModel.previewImage(for: video) {
+                if let previewImage = self?.viewModel.apis.previewImage(for: video) {
                     videoCell.videoView.previewImageView.image = previewImage
                 } else {
                     videoCell.videoView.previewImageView.isHidden = true
@@ -65,7 +65,7 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
             }.disposed(by: disposeBag)
 
         collectionView.rx.modelSelected(VideoMetaData.self)
-            .bind(to: viewModel.didSelectVideoTrigger)
+            .bind(to: viewModel.inputs.didSelectVideoTrigger)
             .disposed(by: disposeBag)
     }
 

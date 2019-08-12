@@ -13,7 +13,7 @@ protocol CoordinatedViewModelProtocol where Self: ViewModel {
     var router: AnyRouter<RouteType> { get }
 }
 
-/// Protocol defining dependencies for a viewModel.
+/// Protocol defining dependencies for a ViewModel.
 protocol DependencyInjectedViewModelProtocol where Self: ViewModel {
     associatedtype DependencyType
     var dependency: DependencyType { get }
@@ -34,6 +34,7 @@ public class CoordinatedViewModel<R: Route>: ViewModel, CoordinatedViewModelProt
     }
 }
 
+/// Based class can be used to create dependency-injected ViewModels.
 public class DIViewModel<D>: ViewModel, DependencyInjectedViewModelProtocol {
 
     // MARK: Properties
@@ -48,7 +49,7 @@ public class DIViewModel<D>: ViewModel, DependencyInjectedViewModelProtocol {
     }
 }
 
-
+/// Based class can be used to create ViewModels containing dependencies and coordinator.
 public class CoordinatedDIViewModel<R: Route, D>: DIViewModel<D>, CoordinatedViewModelProtocol {
 
     // MARK: Properties

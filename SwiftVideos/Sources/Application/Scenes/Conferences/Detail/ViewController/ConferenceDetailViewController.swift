@@ -59,7 +59,7 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
 
             videoCell.videoView.authorNameLabel.text = video.authors.first?.name
 
-            if let previewImage = self?.viewModel.previewImage(for: video) {
+            if let previewImage = self?.viewModel.apis.previewImage(for: video) {
                 videoCell.videoView.previewImageView.image = previewImage
             } else {
                 videoCell.videoView.previewImageView.isHidden = true
@@ -70,23 +70,23 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
 
         dataSource.configureSupplementaryView = { [weak self] (dataSource, collectionView, kind, indexPath) in
             guard kind == UICollectionView.elementKindSectionHeader else {
-                fatalError("collectionView doesn't suppoer other type of supplementary view")
+                fatalError("collectionView doesn't support other type of supplementary view")
             }
 
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ConferenceDetailSectionHeaderView.className, for: indexPath) as! ConferenceDetailSectionHeaderView
 
             headerView.backgroundColor = .green
-            headerView.titleLabel.text = self?.viewModel.sectionTitle(for: indexPath.section)
+            headerView.titleLabel.text = self?.viewModel.apis.sectionTitle(for: indexPath.section)
 
             return headerView
         }
 
-        viewModel.conferenceEditions
+        viewModel.outputs.conferenceEditions
             .bind(to: collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
 
-        collectionView.rx.modelSelected(ConferenceEdition.self)
-            .bind(to: viewModel.didSelectConferenceEditionTrigger)
+        collectionView.rx.modelSelected(VideoMetaData.self)
+            .bind(to: viewModel.inputs.didSelectVideoTrigger)
             .disposed(by: disposeBag)
     }
 
