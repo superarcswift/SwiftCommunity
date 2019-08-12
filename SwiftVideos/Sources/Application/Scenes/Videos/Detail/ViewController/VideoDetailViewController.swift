@@ -43,11 +43,11 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
             .bind(to: viewModel.startVideoPlayerTrigger)
             .disposed(by: disposeBag)
 
-        viewModel.previewVideoImage.asObservable()
+        viewModel.outputs.previewVideoImage.asObservable()
             .bind(to: previewImageView.rx.image)
             .disposed(by: disposeBag)
 
-        viewModel.videoDetail.subscribe { [weak self] event in
+        viewModel.outputs.videoDetail.subscribe { [weak self] event in
             guard let video = event.element else {
                 return
             }
@@ -60,6 +60,6 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
     }
     
     override func loadData() {
-        viewModel.loadData()
+        viewModel.apis.loadData()
     }
 }

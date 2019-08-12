@@ -14,14 +14,41 @@ import RxCocoa
 
 protocol ConferenceDetailViewModelInput {
     var conferenceMetaData: ConferenceMetaData { get }
-    var didSelectConferenceEditionTrigger: AnyObserver<ConferenceEdition> { get }
+    var didSelectVideoTrigger: AnyObserver<VideoMetaData> { get }
 }
 
 protocol ConferenceDetailViewModelOutput {
     var conferenceEditions: BehaviorRelay<[ConferenceDetailSectionModel]> { get set }
 }
 
-class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, ConferencesDependency>, ConferenceDetailViewModelInput, ConferenceDetailViewModelOutput {
+protocol ConferenceDetailViewModelApi {
+    func loadData()
+    func sectionTitle(for index: Int) -> String
+    func previewImage(for video: VideoMetaData) -> UIImage?
+}
+
+protocol ConferenceDetailViewModelType {
+    var inputs: ConferenceDetailViewModelInput { get }
+    var outputs: ConferenceDetailViewModelOutput { get }
+    var apis: ConferenceDetailViewModelApi { get }
+}
+
+extension ConferenceDetailViewModelType where Self: ConferenceDetailViewModelInput & ConferenceDetailViewModelOutput & ConferenceDetailViewModelApi {
+
+    var inputs: ConferenceDetailViewModelInput {
+        return self
+    }
+
+    var outputs: ConferenceDetailViewModelOutput {
+        return self
+    }
+
+    var apis: ConferenceDetailViewModelApi {
+        return self
+    }
+}
+
+class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, ConferencesDependency>, ConferenceDetailViewModelType, ConferenceDetailViewModelInput, ConferenceDetailViewModelOutput, ConferenceDetailViewModelApi {
 
     // MARK: Properties
 
@@ -29,7 +56,7 @@ class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, Confer
 
     public let conferenceMetaData: ConferenceMetaData
     public var conferenceEditions = BehaviorRelay<[ConferenceDetailSectionModel]>(value: [])
-    public lazy var didSelectConferenceEditionTrigger: AnyObserver<ConferenceEdition> = showConferenceEditionAction.inputs
+    public lazy var didSelectVideoTrigger: AnyObserver<VideoMetaData> = showVideoAction.inputs
 
     public var toogleStateView = PublishSubject<StandardStateViewContext?>()
     public var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
@@ -38,6 +65,10 @@ class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, Confer
 
     private lazy var showConferenceEditionAction = Action<ConferenceEdition, Void> { [unowned self] conferenceEdition in
         self.router.rx.trigger(.conferenceEditionDetail(self.conferenceMetaData, conferenceEdition))
+    }
+
+    private lazy var showVideoAction = Action<VideoMetaData, Void> { [unowned self] videoMetaData in
+        self.router.rx.trigger(.video(videoMetaData))
     }
 
     // MARK: Initialization

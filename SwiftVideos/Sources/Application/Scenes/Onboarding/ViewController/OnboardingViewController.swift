@@ -21,6 +21,6 @@ class OnboardingViewController: ViewController<OnboardingViewModel>, StoryboardI
     // MARK: Overrides
 
     override func loadData() {
-        viewModel.prepareLocalRepository()
+        viewModel.apis.prepareLocalRepository()
     }
 }

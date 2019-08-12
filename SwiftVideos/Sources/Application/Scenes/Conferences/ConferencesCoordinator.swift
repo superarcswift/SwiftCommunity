@@ -38,6 +38,10 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
             let videosCoordinator = VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), depedency: component, context: component.context)
             return .present(videosCoordinator)
 
+        case .video(let videoMetaData):
+            let videosCoordinator = VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), depedency: component, context: component.context)
+            return .present(videosCoordinator)
+
         case .close:
             return .dismissToRoot()
         }
@@ -49,5 +53,6 @@ public enum ConferencesRoute: Route {
     case conferences
     case conferenceDetail(ConferenceMetaData)
     case conferenceEditionDetail(ConferenceMetaData, ConferenceEdition)
+    case video(VideoMetaData)
     case close
 }

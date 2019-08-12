@@ -62,13 +62,13 @@ class AuthorDetailViewController: ViewController<AuthorDetailViewModel>, Storybo
             .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
 
-        viewModel.authorDetail.bind { [weak self] authorDetail in
+        viewModel.outputs.authorDetail.bind { [weak self] authorDetail in
             if authorDetail != nil {
                 self?.tableView.reloadData()
             }
         }.disposed(by: disposeBag)
 
-        viewModel.videos.subscribe { [weak self] event in
+        viewModel.outputs.videos.subscribe { [weak self] event in
             if event.element != nil {
                 self?.tableView.reloadData()
             }

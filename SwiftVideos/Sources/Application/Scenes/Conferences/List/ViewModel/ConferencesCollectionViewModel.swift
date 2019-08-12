@@ -12,14 +12,47 @@ import RxSwift
 import RxCocoa
 
 protocol ConferencesCollectionViewModelInput {
+
+    /// Triggered when users select a conference.
     var didSelectConferenceTrigger: AnyObserver<ConferenceMetaData> { get }
 }
 
 protocol ConferencesCollectionViewModelOutput {
+
+    /// Emits an array of the ConferenceMetaData that should be displaed.
     var conferences: BehaviorRelay<[ConferenceMetaData]> { get set }
 }
 
-class ConferencesCollectionViewModel: CoordinatedDIViewModel<ConferencesRoute, ConferencesDependency>, ConferencesCollectionViewModelOutput, ConferencesCollectionViewModelInput {
+protocol ConferencesCollectionViewModelApi {
+
+    func loadData()
+
+    func bannerImage(for conference: ConferenceMetaData) -> UIImage?
+}
+
+protocol ConferencesCollectionViewModelType {
+    var inputs: ConferencesCollectionViewModelInput { get }
+    var outputs: ConferencesCollectionViewModelOutput { get }
+    var apis: ConferencesCollectionViewModelApi { get }
+}
+
+extension ConferencesCollectionViewModelType where Self: ConferencesCollectionViewModelInput & ConferencesCollectionViewModelOutput & ConferencesCollectionViewModelApi {
+
+    var inputs: ConferencesCollectionViewModelInput {
+        return self
+    }
+
+    var outputs: ConferencesCollectionViewModelOutput {
+        return self
+    }
+
+    var apis: ConferencesCollectionViewModelApi {
+        return self
+    }
+}
+
+class ConferencesCollectionViewModel: CoordinatedDIViewModel<ConferencesRoute, ConferencesDependency>, ConferencesCollectionViewModelType, ConferencesCollectionViewModelInput, ConferencesCollectionViewModelOutput, ConferencesCollectionViewModelApi {
+
 
     // MARK: Properties
 
@@ -50,7 +83,7 @@ class ConferencesCollectionViewModel: CoordinatedDIViewModel<ConferencesRoute, C
             }
     }
 
-    public func bannerImage(for conference: ConferenceMetaData) -> UIImage? {
+    func bannerImage(for conference: ConferenceMetaData) -> UIImage? {
         guard let bannerImageURL = dependency.conferencesService.bannerImageURL(for: conference) else {
             return nil
         }

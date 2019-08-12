@@ -9,7 +9,40 @@ import XCoordinator
 import RxSwift
 import RxCocoa
 
-class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDependency> {
+protocol OnboardingViewModelInput {}
+
+protocol OnboardingViewModelOutput {
+    var isReady: PublishSubject<Bool> { get set }
+    var isUpdated: PublishSubject<Bool> { get set }
+    var isCloned: PublishSubject<Bool> { get set }
+}
+
+protocol OnboardingViewModelApi {
+    func prepareLocalRepository()
+}
+
+protocol OnboardingViewModelType {
+    var inputs: OnboardingViewModelInput { get }
+    var outputs: OnboardingViewModelOutput { get }
+    var apis: OnboardingViewModelApi { get }
+}
+
+extension OnboardingViewModelType where Self: OnboardingViewModelType & OnboardingViewModelInput & OnboardingViewModelOutput & OnboardingViewModelApi {
+
+    var inputs: OnboardingViewModelInput {
+        return self
+    }
+
+    var outputs: OnboardingViewModelOutput {
+        return self
+    }
+
+    var apis: OnboardingViewModelApi {
+        return self
+    }
+}
+
+class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDependency>, OnboardingViewModelType, OnboardingViewModelInput, OnboardingViewModelOutput, OnboardingViewModelApi {
 
     // MARK: Properties
 

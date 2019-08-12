@@ -45,13 +45,13 @@ class ConferencesCollectionViewController: ViewController<ConferencesCollectionV
             .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
 
-        viewModel.conferences
+        viewModel.outputs.conferences
             .bind(to: collectionView.rx.items(cellIdentifier: ConferenceCollectionViewCell.className)) { [weak self] _, conference, cell in
                 guard let conferenceCell = cell as? ConferenceCollectionViewCell else {
                     fatalError("wrong cell type")
                 }
                 conferenceCell.conferenceView.titleLabel.text = conference.name
-                if let bannerImage = self?.viewModel.bannerImage(for: conference) {
+                if let bannerImage = self?.viewModel.apis.bannerImage(for: conference) {
                     conferenceCell.conferenceView.previewImageView.image = bannerImage
                 } else {
                     conferenceCell.conferenceView.previewImageView.isHidden = true
@@ -59,12 +59,12 @@ class ConferencesCollectionViewController: ViewController<ConferencesCollectionV
             }.disposed(by: disposeBag)
 
         collectionView.rx.modelSelected(ConferenceMetaData.self)
-            .bind(to: viewModel.didSelectConferenceTrigger)
+            .bind(to: viewModel.inputs.didSelectConferenceTrigger)
             .disposed(by: disposeBag)
     }
 
     override func loadData() {
-        viewModel.loadData()
+        viewModel.apis.loadData()
     }
 }
 
