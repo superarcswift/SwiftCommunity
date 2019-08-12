@@ -16,7 +16,8 @@ protocol AuthorDetailViewModelInput {
 }
 
 protocol AuthorDetailViewModelOutput {
-    var authorDetail: BehaviorRelay<AuthorDetail?> { get }
+    var authorDetail: BehaviorRelay<AuthorDetail?> { get set }
+    var videos: BehaviorRelay<[VideoMetaData]?> { get set }
 }
 
 protocol AuthorDetailViewModelApi {

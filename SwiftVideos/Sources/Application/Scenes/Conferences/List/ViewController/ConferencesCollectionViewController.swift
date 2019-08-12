@@ -51,7 +51,7 @@ class ConferencesCollectionViewController: ViewController<ConferencesCollectionV
                     fatalError("wrong cell type")
                 }
                 conferenceCell.conferenceView.titleLabel.text = conference.name
-                if let bannerImage = self?.viewModel.bannerImage(for: conference) {
+                if let bannerImage = self?.viewModel.apis.bannerImage(for: conference) {
                     conferenceCell.conferenceView.previewImageView.image = bannerImage
                 } else {
                     conferenceCell.conferenceView.previewImageView.isHidden = true
@@ -64,7 +64,7 @@ class ConferencesCollectionViewController: ViewController<ConferencesCollectionV
     }
 
     override func loadData() {
-        viewModel.loadData()
+        viewModel.apis.loadData()
     }
 }
 

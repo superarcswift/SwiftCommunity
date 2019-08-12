@@ -23,6 +23,7 @@ protocol VideosCollectionViewModelOutput {
 }
 
 protocol VideosCollectionViewModelApi {
+    func loadData()
     func previewImage(for video: VideoMetaData) -> UIImage?
 }
 

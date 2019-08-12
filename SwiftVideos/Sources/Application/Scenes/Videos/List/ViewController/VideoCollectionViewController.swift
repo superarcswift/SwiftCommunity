@@ -70,7 +70,7 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
     }
 
     override func loadData() {
-        viewModel.loadData()
+        viewModel.apis.loadData()
     }
 
     // MARK: Actions

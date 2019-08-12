@@ -34,7 +34,7 @@ class AuthorsCollectionViewController: ViewController<AuthorsCollectionViewModel
     override func setupBindings() {
         super.setupBindings()
 
-        viewModel.authors
+        viewModel.outputs.authors
             .bind(to: collectionView.rx.items(cellIdentifier: AuthorsCollectionViewCell.className)) { [weak self] _, author, cell in
 
                 guard let authorCell = cell as? AuthorsCollectionViewCell else {
@@ -43,18 +43,18 @@ class AuthorsCollectionViewController: ViewController<AuthorsCollectionViewModel
 
                 authorCell.authorView.nameLabel.text = author.name
 
-                if let avatarImage = self?.viewModel.avatarImage(of: author) {
+                if let avatarImage = self?.viewModel.apis.avatarImage(of: author) {
                     authorCell.authorView.avatarImageView.image = avatarImage
                 }
             }.disposed(by: disposeBag)
 
         collectionView.rx.modelSelected(AuthorMetaData.self)
-            .bind(to: viewModel.didSelectAuthor)
+            .bind(to: viewModel.inputs.didSelectAuthor)
             .disposed(by: disposeBag)
     }
 
     override func loadData() {
-        viewModel.loadData()
+        viewModel.apis.loadData()
     }
 }
 

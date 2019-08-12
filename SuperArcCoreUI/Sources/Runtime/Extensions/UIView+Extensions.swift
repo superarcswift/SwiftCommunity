@@ -9,7 +9,7 @@ import UIKit
 
 public extension UIView {
 
-    ///     Border color of view.
+    /// Border color of view.
     @IBInspectable var borderColor: UIColor? {
         get {
             guard let color = layer.borderColor else { return nil }
