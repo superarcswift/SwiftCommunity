@@ -9,3 +9,7 @@ protocol ContentService: Service {
     associatedtype ContentType
     func fetchList() -> Promise<[ContentType]>
 }
+
+enum ContentServiceError: Error {
+    case parsingException
+}

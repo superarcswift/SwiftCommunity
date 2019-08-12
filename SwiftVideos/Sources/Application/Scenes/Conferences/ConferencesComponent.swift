@@ -9,7 +9,7 @@ import SuperArcFoundation
 import XCoordinator
 
 /// Protocol defining all dependencies required by this component..
-typealias ConferencesDependency = Dependency & HasConferencesService
+typealias ConferencesDependency = HasConferencesService & HasVideosService
 
 /// Protocol used to mock for testing purpose.
 protocol ConferencesBuilder {
