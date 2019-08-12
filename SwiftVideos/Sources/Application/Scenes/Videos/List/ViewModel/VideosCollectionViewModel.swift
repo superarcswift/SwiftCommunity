@@ -51,10 +51,10 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
 
     // MARK: Initialization
 
-    init(router: AnyRouter<VideosRoute>, dependency: VideosDependency, engine: Engine, conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?) {
+    init(router: AnyRouter<VideosRoute>, dependency: VideosDependency, conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?) {
         self.conferenceMetaData = conferenceMetaData
         self.conferenceEdition = conferenceEdition
-        super.init(router: router, dependency: dependency, engine: engine)
+        super.init(router: router, dependency: dependency)
     }
 
     // MARK: APIs
@@ -70,7 +70,7 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
     // MARK: Private helpers
 
     func fetchVideosList() {
-        videosService.fetchList()
+        dependency.videosService.fetchList()
             .done { [weak self] videos in
                 self?.videos.accept(videos)
             }
@@ -81,7 +81,7 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
     }
 
     func fetchVideosList(of conference: ConferenceMetaData, in edition: ConferenceEdition) {
-        videosService.fetchList(conference: conference, edition: edition)
+        dependency.videosService.fetchList(conference: conference, edition: edition)
             .done { [weak self] videos in
                 self?.videos.accept(videos)
             }
@@ -94,7 +94,7 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
     // TODO: This logic must be in a lower level so that we can reuse it everywhere
     func previewImage(for video: VideoMetaData) -> UIImage? {
 
-        guard let previewImageURL = videosService.previewImageURL(for: video) else {
+        guard let previewImageURL = dependency.videosService.previewImageURL(for: video) else {
             return UIImage(named: "video_preview_default")
         }
 
@@ -107,14 +107,5 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
 
     func close() {
         router.trigger(.close)
-    }
-}
-
-// MARK: - Dependencies
-
-extension VideosCollectionViewModel {
-
-    var videosService: VideosService {
-        return engine.serviceRegistry.resolve(type: VideosService.self)
     }
 }
