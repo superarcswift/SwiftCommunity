@@ -9,7 +9,7 @@ import SuperArcFoundation
 import XCoordinator
 
 /// Protocol defining all dependencies required by this component..
-typealias AuthorsDependency = Dependency & HasAuthorsService
+typealias AuthorsDependency = HasAuthorsService & HasVideosService
 
 /// Protocol used to mock for testing purpose.
 protocol AuthorsBuilder {
@@ -25,7 +25,7 @@ class AuthorsComponent: Component<AuthorsDependency>, AuthorsBuilder {
 
         let viewController = AuthorsCollectionViewController.instantiate(with: context)
         viewController.setApplicationContext(context)
-        let viewModel = AuthorsCollectionViewModel(router: router, engine: context.engine)
+        let viewModel = AuthorsCollectionViewModel(router: router, dependency: dependency)
         viewController.viewModel = viewModel
 
         return viewController
@@ -33,7 +33,7 @@ class AuthorsComponent: Component<AuthorsDependency>, AuthorsBuilder {
 
     func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController {
         let viewController = AuthorDetailViewController.instantiate(with: context)
-        let viewModel = AuthorDetailViewModel(authorMetaData: authorMetaData, router: router, dependency: dependency, engine: context.engine)
+        let viewModel = AuthorDetailViewModel(authorMetaData: authorMetaData, router: router, dependency: dependency)
         viewController.viewModel = viewModel
 
         return viewController

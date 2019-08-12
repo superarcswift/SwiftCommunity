@@ -37,15 +37,15 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
 
     // MARK: Initialization
 
-    init(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>, dependency: AuthorsDependency, engine: Engine) {
+    init(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>, dependency: AuthorsDependency) {
         self.authorMetaData = authorMetaData
-        super.init(router: router, dependency: dependency, engine: engine)
+        super.init(router: router, dependency: dependency)
     }
 
     // MARK: APIs
 
     func loadData() {
-        authorsService.fetchAuthor(with: authorMetaData)
+        dependency.authorsService.fetchAuthor(with: authorMetaData)
             .done { [weak self] author in
                 self?.authorDetail.accept(author)
             }
@@ -54,7 +54,7 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
                 self?.notification.onNext(StandardNotification(error: error))
             }
 
-        videoService.fetchVideo(page: 1, author: authorMetaData)
+        dependency.videosService.fetchVideo(page: 1, author: authorMetaData)
             .done { [weak self] videos in
                 self?.videos.accept(videos)
             }
@@ -65,7 +65,7 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
 
     func avatarImage(of author: AuthorMetaData) -> UIImage? {
 
-        guard let avatarImageURL = authorsService.avatar(of: author) else {
+        guard let avatarImageURL = dependency.authorsService.avatar(of: author) else {
             return nil
         }
 
@@ -78,7 +78,7 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
 
     func previewImage(for video: VideoMetaData) -> UIImage? {
 
-        guard let previewImageURL = videoService.previewImageURL(for: video) else {
+        guard let previewImageURL = dependency.videosService.previewImageURL(for: video) else {
             return UIImage(named: "video_preview_default")
         }
 
@@ -93,17 +93,4 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
         router.trigger(.videoDetail(video))
     }
 
-}
-
-// MARK: - Dependencies
-
-extension AuthorDetailViewModel {
-
-    var authorsService: AuthorsService {
-        return engine.serviceRegistry.resolve(type: AuthorsService.self)
-    }
-
-    var videoService: VideosService {
-        return engine.serviceRegistry.resolve(type: VideosService.self)
-    }
 }

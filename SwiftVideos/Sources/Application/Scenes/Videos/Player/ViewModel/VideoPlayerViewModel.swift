@@ -13,8 +13,8 @@ class VideoPlayerViewModel: ViewModel {
 
     // MARK: Initialization
 
-    init(videoMetaData: VideoMetaData, engine: Engine) {
+    init(videoMetaData: VideoMetaData) {
         self.videoMetaData = videoMetaData
-        super.init(engine: engine)
+        super.init()
     }
 }

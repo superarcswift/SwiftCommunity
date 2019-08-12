@@ -42,9 +42,9 @@ class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, Confer
 
     // MARK: Initialization
 
-    init(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>, dependency: ConferencesDependency, engine: Engine) {
+    init(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>, dependency: ConferencesDependency) {
         self.conferenceMetaData = conferenceMetaData
-        super.init(router: router, dependency: dependency, engine: engine)
+        super.init(router: router, dependency: dependency)
     }
 
     // MARK: APIs

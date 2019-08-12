@@ -23,7 +23,7 @@ class ConferencesComponent: Component<ConferencesDependency>, ConferencesBuilder
 
     func makeConferencesCollectionViewController(router: AnyRouter<ConferencesRoute>) -> ConferencesCollectionViewController {
         let viewController = ConferencesCollectionViewController.instantiate(with: context)
-        let viewModel = ConferencesCollectionViewModel(router: router, dependency: dependency, engine: context.engine)
+        let viewModel = ConferencesCollectionViewModel(router: router, dependency: dependency)
         viewController.viewModel = viewModel
 
         return viewController
@@ -31,7 +31,7 @@ class ConferencesComponent: Component<ConferencesDependency>, ConferencesBuilder
 
     func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>) -> ConferenceDetailViewController {
         let viewController = ConferenceDetailViewController.instantiate(with: context)
-        let viewModel = ConferenceDetailViewModel(conferenceMetaData: conferenceMetaData, router: router, dependency: dependency, engine: context.engine)
+        let viewModel = ConferenceDetailViewModel(conferenceMetaData: conferenceMetaData, router: router, dependency: dependency)
         viewController.viewModel = viewModel
 
         return viewController

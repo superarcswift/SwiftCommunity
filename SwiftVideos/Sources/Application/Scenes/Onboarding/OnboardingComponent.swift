@@ -9,7 +9,7 @@ import SuperArcFoundation
 import XCoordinator
 
 /// Protocol defining all dependencies required by this component..
-typealias OnboardingDependency = Dependency & HasGitService
+typealias OnboardingDependency = HasGitService
 
 /// Protocol used to mock for testing purpose.
 protocol OnboardingBuilder {
@@ -22,7 +22,7 @@ class OnboardingComponent: Component<OnboardingDependency>, OnboardingBuilder {
 
     func makeOnboardingViewController(router: AnyRouter<OnboardingRoute>) -> OnboardingViewController {
         let viewController = OnboardingViewController.instantiate(with: context)
-        let viewModel = OnboardingViewModel(router: router, dependency: dependency, engine: context.engine)
+        let viewModel = OnboardingViewModel(router: router, dependency: dependency)
         viewController.viewModel = viewModel
 
         return viewController

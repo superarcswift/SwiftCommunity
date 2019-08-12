@@ -28,9 +28,9 @@ public class CoordinatedViewModel<R: Route>: ViewModel, CoordinatedViewModelProt
 
     // MARK: Initialization
 
-    public init(router: AnyRouter<R>, engine: Engine) {
+    public init(router: AnyRouter<R>) {
         self.router = router
-        super.init(engine: engine)
+        super.init()
     }
 }
 
@@ -42,9 +42,9 @@ public class DIViewModel<D>: ViewModel, DependencyInjectedViewModelProtocol {
 
     // MARK: Initialization
 
-    public init(dependency: D, engine: Engine) {
+    public init(dependency: D) {
         self.dependency = dependency
-        super.init(engine: engine)
+        super.init()
     }
 }
 
@@ -57,8 +57,8 @@ public class CoordinatedDIViewModel<R: Route, D>: DIViewModel<D>, CoordinatedVie
 
     // MARK: Initialization
 
-    public init(router: AnyRouter<R>, dependency: D, engine: Engine) {
+    public init(router: AnyRouter<R>, dependency: D) {
         self.router = router
-        super.init(dependency: dependency, engine: engine)
+        super.init(dependency: dependency)
     }
 }

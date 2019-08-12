@@ -47,9 +47,9 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
 
     // MARK: Initialization
 
-    init(videoMetaData: VideoMetaData, router: AnyRouter<VideosRoute>, dependency: VideosDependency, engine: Engine) {
+    init(router: AnyRouter<VideosRoute>, dependency: VideosDependency, videoMetaData: VideoMetaData) {
         self.videoMetaData = videoMetaData
-        super.init(router: router, dependency: dependency, engine: engine)
+        super.init(router: router, dependency: dependency)
     }
 
     // MARK: APIs
@@ -62,7 +62,7 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
     // MARK: Private helpers
 
     func fetchVideoDetail() {
-        videosService.fetchVideo(metaData: videoMetaData)
+        dependency.videosService.fetchVideo(metaData: videoMetaData)
             .done { [weak self] videoDetail in
                 self?.videoDetail.accept(videoDetail)
             }
@@ -72,7 +72,7 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
     }
 
     func fetchPreviewImage() {
-        guard let previewImageURL = videosService.previewImageURL(for: videoMetaData) else {
+        guard let previewImageURL = dependency.videosService.previewImageURL(for: videoMetaData) else {
             return
         }
 
@@ -81,14 +81,5 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
         }
 
         previewVideoImage.accept(previewImage)
-    }
-}
-
-// MARK: - Dependencies
-
-extension VideoDetailViewModel {
-
-    var videosService: VideosService {
-        return engine.serviceRegistry.resolve(type: VideosService.self)
     }
 }

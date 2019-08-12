@@ -8,10 +8,10 @@ import SuperArcCore
 import SuperArcFoundation
 import XCoordinator
 
-/// Protocol defining all dependencies required by this component..
-typealias VideosDependency = Dependency & HasVideosService
+/// Protocol defining all dependencies required by this component.
+typealias VideosDependency = HasVideosService
 
-/// Protocol used to mock for testing purpose.
+/// Protocol can be used used to mock for testing purpose.
 protocol VideosBuilder {
     func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
@@ -29,7 +29,7 @@ class VideosComponent: Component<VideosDependency>, VideosBuilder {
         if conferenceMetaData != nil {
             viewController.hasLeftCloseButton = true
         }
-        let viewModel = VideosCollectionViewModel(router: router, dependency: dependency, engine: context.engine, conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition)
+        let viewModel = VideosCollectionViewModel(router: router, dependency: dependency, conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition)
         viewController.viewModel = viewModel
 
         return viewController
@@ -38,7 +38,7 @@ class VideosComponent: Component<VideosDependency>, VideosBuilder {
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController {
         let viewController = VideoDetailViewController.instantiate(with: context)
         viewController.setApplicationContext(context)
-        let viewModel = VideoDetailViewModel(videoMetaData: videoMetaData, router: router, dependency: dependency, engine: context.engine)
+        let viewModel = VideoDetailViewModel(router: router, dependency: dependency, videoMetaData: videoMetaData)
         viewController.viewModel = viewModel
         viewController.hasLeftCloseButton = hasLeftCloseButton
 
@@ -48,7 +48,7 @@ class VideosComponent: Component<VideosDependency>, VideosBuilder {
     func makeVideoPlayerViewController(videoMetaData: VideoMetaData) -> VideoPlayerViewController {
         let viewController = VideoPlayerViewController.instantiate(with: context)
         viewController.setApplicationContext(context)
-        let viewModel = VideoPlayerViewModel(videoMetaData: videoMetaData, engine: context.engine)
+        let viewModel = VideoPlayerViewModel(videoMetaData: videoMetaData)
         viewController.viewModel = viewModel
 
         return viewController

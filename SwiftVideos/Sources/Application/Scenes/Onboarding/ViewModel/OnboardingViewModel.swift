@@ -25,8 +25,8 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
 
     // MARK: Initialization
 
-    override init(router: AnyRouter<OnboardingRoute>, dependency: OnboardingDependency, engine: Engine) {
-        super.init(router: router, dependency: dependency, engine: engine)
+    override init(router: AnyRouter<OnboardingRoute>, dependency: OnboardingDependency) {
+        super.init(router: router, dependency: dependency)
 
         isReady
             .observeOn(MainScheduler.instance)

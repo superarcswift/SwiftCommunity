@@ -24,7 +24,7 @@ extension Reactive where Base: UIViewController {
     }
 }
 
-// MARK: - StateViewBindingValue
+// MARK: - Optional extension
 
 extension Optional where Wrapped: StateViewContext {
 

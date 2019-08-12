@@ -68,7 +68,6 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
             return videoCell
         })
 
-        //((RxDataSources.CollectionViewSectionedDataSource<Section>, UICollectionView, String, IndexPath) -> UICollectionReusableView)?
         dataSource.configureSupplementaryView = { [weak self] (dataSource, collectionView, kind, indexPath) in
             guard kind == UICollectionView.elementKindSectionHeader else {
                 fatalError("collectionView doesn't suppoer other type of supplementary view")
