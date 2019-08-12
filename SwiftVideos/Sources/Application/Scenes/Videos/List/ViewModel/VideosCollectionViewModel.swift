@@ -22,7 +22,33 @@ protocol VideosCollectionViewModelOutput {
     var title: String { get }
 }
 
-class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency>, VideosCollectionViewModelInput, VideosCollectionViewModelOutput {
+protocol VideosCollectionViewModelApi {
+    func loadData()
+    func previewImage(for video: VideoMetaData) -> UIImage?
+}
+
+protocol VideosCollectionViewModelType {
+    var inputs: VideosCollectionViewModelInput { get }
+    var outputs: VideosCollectionViewModelOutput { get }
+    var apis: VideosCollectionViewModelApi { get }
+}
+
+extension VideosCollectionViewModelType where Self: VideosCollectionViewModelInput & VideosCollectionViewModelOutput & VideosCollectionViewModelApi {
+
+    var inputs: VideosCollectionViewModelInput {
+        return self
+    }
+
+    var outputs: VideosCollectionViewModelOutput {
+        return self
+    }
+
+    var apis: VideosCollectionViewModelApi {
+        return self
+    }
+}
+
+class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency>, VideosCollectionViewModelType, VideosCollectionViewModelInput, VideosCollectionViewModelOutput, VideosCollectionViewModelApi {
 
     // MARK: Properties
 
@@ -67,6 +93,20 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
         }
     }
 
+    // TODO: This logic must be in a lower level so that we can reuse it everywhere
+    func previewImage(for video: VideoMetaData) -> UIImage? {
+
+        guard let previewImageURL = dependency.videosService.previewImageURL(for: video) else {
+            return UIImage(named: "video_preview_default")
+        }
+
+        guard let previewImage = UIImage(contentsOfFile: previewImageURL.path) else {
+            return UIImage(named: "video_preview_default")
+        }
+
+        return previewImage
+    }
+
     // MARK: Private helpers
 
     func fetchVideosList() {
@@ -89,20 +129,6 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
                 self?.toogleStateView.onNext(StandardStateViewContext(headline: "No videos found for conference \(conference.name)"))
                 self?.notification.onNext(StandardNotification(error: error))
             }
-    }
-
-    // TODO: This logic must be in a lower level so that we can reuse it everywhere
-    func previewImage(for video: VideoMetaData) -> UIImage? {
-
-        guard let previewImageURL = dependency.videosService.previewImageURL(for: video) else {
-            return UIImage(named: "video_preview_default")
-        }
-
-        guard let previewImage = UIImage(contentsOfFile: previewImageURL.path) else {
-            return UIImage(named: "video_preview_default")
-        }
-
-        return previewImage
     }
 
     func close() {

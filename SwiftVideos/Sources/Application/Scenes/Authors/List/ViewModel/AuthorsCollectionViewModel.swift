@@ -11,7 +11,41 @@ import Action
 import RxSwift
 import RxCocoa
 
-class AuthorsCollectionViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDependency> {
+protocol AuthorsCollectionViewModelInput {
+    var didSelectAuthor: AnyObserver<AuthorMetaData> { get }
+}
+
+protocol AuthorsCollectionViewModelOutput {
+    var authors: BehaviorRelay<[AuthorMetaData]> { get set }
+}
+
+protocol AuthorsCollectionViewModelApi {
+    func loadData()
+    func avatarImage(of author: AuthorMetaData) -> UIImage?
+}
+
+protocol AuthorsCollectionViewType {
+    var inputs: AuthorsCollectionViewModelInput { get }
+    var outputs: AuthorsCollectionViewModelOutput { get }
+    var apis: AuthorsCollectionViewModelApi { get }
+}
+
+extension AuthorsCollectionViewType where Self: AuthorsCollectionViewModelInput & AuthorsCollectionViewModelOutput & AuthorsCollectionViewModelApi {
+
+    var inputs: AuthorsCollectionViewModelInput {
+        return self
+    }
+
+    var outputs: AuthorsCollectionViewModelOutput {
+        return self
+    }
+
+    var apis: AuthorsCollectionViewModelApi {
+        return self
+    }
+}
+
+class AuthorsCollectionViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDependency>, AuthorsCollectionViewType, AuthorsCollectionViewModelInput, AuthorsCollectionViewModelOutput, AuthorsCollectionViewModelApi {
 
     // MARK: Properties
 

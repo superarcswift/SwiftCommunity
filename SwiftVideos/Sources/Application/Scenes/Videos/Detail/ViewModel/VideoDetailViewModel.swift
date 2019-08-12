@@ -21,7 +21,32 @@ protocol VideoDetailViewModelOutput {
     var previewVideoImage: BehaviorRelay<UIImage?> { get set }
 }
 
-class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency>, VideoDetailViewModelInput, VideoDetailViewModelOutput {
+protocol VideoDetailViewModelApi {
+    func loadData()
+}
+
+protocol VideoDetailViewModelType {
+    var inputs: VideoDetailViewModelInput { get }
+    var outputs: VideoDetailViewModelOutput { get }
+    var apis: VideoDetailViewModelApi { get }
+}
+
+extension VideoDetailViewModelType where Self: VideoDetailViewModelInput & VideoDetailViewModelOutput & VideoDetailViewModelApi {
+
+    var inputs: VideoDetailViewModelInput {
+        return self
+    }
+
+    var outputs: VideoDetailViewModelOutput {
+        return self
+    }
+
+    var apis: VideoDetailViewModelApi {
+        return self
+    }
+}
+
+class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency>, VideoDetailViewModelType, VideoDetailViewModelInput, VideoDetailViewModelOutput, VideoDetailViewModelApi {
 
     // MARK: Properties
 
@@ -61,7 +86,7 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
 
     // MARK: Private helpers
 
-    func fetchVideoDetail() {
+    private func fetchVideoDetail() {
         dependency.videosService.fetchVideo(metaData: videoMetaData)
             .done { [weak self] videoDetail in
                 self?.videoDetail.accept(videoDetail)
@@ -71,7 +96,7 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
             }
     }
 
-    func fetchPreviewImage() {
+    private func fetchPreviewImage() {
         guard let previewImageURL = dependency.videosService.previewImageURL(for: videoMetaData) else {
             return
         }
