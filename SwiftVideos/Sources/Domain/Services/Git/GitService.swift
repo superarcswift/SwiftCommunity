@@ -43,7 +43,7 @@ public class GitService: Service, GitServiceProtocol {
     // Private
 
     // TODO: This should be come from configuration.
-    let repositoryURL = "https://github.com/peacemoon/SwiftVideosContent"
+    let repositoryURL = "https://github.com/superarcswift/SwiftVideosContent"
 
     lazy var localRepositoryURL = URL(string: "file://\(baseLocalRepositoryPath)/")! // This needs to be prefix with file://
 

@@ -4,8 +4,7 @@
 
 import SuperArcCore
 
-public protocol ViewModelProtocol {
-}
+public protocol ViewModelProtocol {}
 
 open class ViewModel: ViewModelProtocol {
     public init() {}
