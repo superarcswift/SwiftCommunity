@@ -86,6 +86,8 @@
 		F66C910622E6620A006CA2BB /* VideoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910522E6620A006CA2BB /* VideoDetailViewModel.swift */; };
 		F66C910822E66239006CA2BB /* AuthorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */; };
 		F66C916B22E66C20006CA2BB /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C916A22E66C20006CA2BB /* XCoordinator.framework */; };
+		F66D10E423036AEF0017C352 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F66D10E323036AEF0017C352 /* Cartfile */; };
+		F66D10E623036CD80017C352 /* Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66D10E523036CD80017C352 /* Player.framework */; };
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34522DDD5B600FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -247,6 +249,8 @@
 		F66C910522E6620A006CA2BB /* VideoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailViewModel.swift; sourceTree = "<group>"; };
 		F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewModel.swift; sourceTree = "<group>"; };
 		F66C916A22E66C20006CA2BB /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
+		F66D10E323036AEF0017C352 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		F66D10E523036CD80017C352 /* Player.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Player.framework; path = Carthage/Build/iOS/Player.framework; sourceTree = "<group>"; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C34722DE27A700FA77DD /* ConferencesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesService.swift; sourceTree = "<group>"; };
 		F675C34B22DE2DE100FA77DD /* conferences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
@@ -266,8 +270,8 @@
 		F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C4C05322E79C4100C0636E /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
-		F6C4C05822E7C70200C0636E /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
-		F6C4C05C22E7CB4B00C0636E /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		F6C4C05822E7C70200C0636E /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoPlayerViewController.swift; path = ../../ViewController/VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		F6C4C05C22E7CB4B00C0636E /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoPlayerViewModel.swift; path = ../../ViewModel/VideoPlayerViewModel.swift; sourceTree = "<group>"; };
 		F6C4C06222E7D41E00C0636E /* YoutubeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YoutubeKit.framework; path = Carthage/Build/iOS/YoutubeKit.framework; sourceTree = "<group>"; };
 		F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66D10E623036CD80017C352 /* Player.framework in Frameworks */,
 				F6A6B55723014CFF00BFEC40 /* Differentiator.framework in Frameworks */,
 				F6A6B55523008F7E00BFEC40 /* RxDataSources.framework in Frameworks */,
 				F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */,
@@ -983,7 +988,8 @@
 			children = (
 				F6C4C05822E7C70200C0636E /* VideoPlayerViewController.swift */,
 			);
-			path = ViewController;
+			name = ViewController;
+			path = Youtube/ViewController;
 			sourceTree = "<group>";
 		};
 		F6C4C05B22E7CB3800C0636E /* ViewModel */ = {
@@ -991,12 +997,14 @@
 			children = (
 				F6C4C05C22E7CB4B00C0636E /* VideoPlayerViewModel.swift */,
 			);
-			path = ViewModel;
+			name = ViewModel;
+			path = Youtube/ViewModel;
 			sourceTree = "<group>";
 		};
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F66D10E523036CD80017C352 /* Player.framework */,
 				F6A6B55623014CFF00BFEC40 /* Differentiator.framework */,
 				F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */,
 				F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */,
@@ -1075,6 +1083,7 @@
 		F6E8D15522CA9EC900213675 = {
 			isa = PBXGroup;
 			children = (
+				F66D10E323036AEF0017C352 /* Cartfile */,
 				F6453B9F22EB304800392F93 /* README.md */,
 				F6E8D16022CA9EC900213675 /* Sources */,
 				F6E8D17522CA9ECA00213675 /* Tests */,
@@ -1245,6 +1254,7 @@
 				F64238C122CD4F4B000F5CE3 /* Authors.storyboard in Resources */,
 				F6DFE6B822FA02A40091ECE8 /* VideosTableViewCell.xib in Resources */,
 				F6CF4ABC22D34B800026F84F /* frenchkit.png in Resources */,
+				F66D10E423036AEF0017C352 /* Cartfile in Resources */,
 				F63A720622F379BC005D0778 /* AuthorView.xib in Resources */,
 				F63A720422F379A1005D0778 /* VideoView.xib in Resources */,
 				F66C90B422E19E64006CA2BB /* VideosCollectionViewCell.xib in Resources */,
@@ -1300,6 +1310,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Player.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -1319,6 +1330,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Player.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
