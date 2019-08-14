@@ -24,6 +24,16 @@ class VideoPlayerViewController: ViewController<VideoPlayerViewModel>, Storyboar
     private var youtubePlayer: YTSwiftyPlayer!
     private var streamingPlayer: Player!
 
+    // MARK: Setup
+
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .landscapeLeft
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscapeLeft
+    }
+
     // MARK: Overrides
 
     override func setupViews() {
