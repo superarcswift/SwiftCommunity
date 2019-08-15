@@ -62,7 +62,24 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
         case .about:
             performSegue(withIdentifier: SegueIdentifier.showAbout.rawValue, sender: self)
         case .reset:
-            viewModel.reset()
+            confirmReset()
         }
+
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    // MARK: Private helpers
+
+    func confirmReset() {
+        let alert = UIAlertController(title: "Confirmation", message: "Do you really want to reset the local repository?", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Yes", style: .destructive) { [weak self] _ in
+            self?.viewModel.reset()
+        }
+        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+
+        alert.addAction(confirmAction)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true, completion: nil)
     }
 }
