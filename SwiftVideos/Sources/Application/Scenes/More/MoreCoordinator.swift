@@ -18,8 +18,8 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
     // MARK: Initialization
 
-    init(context: ApplicationContext) {
-        component = MoreComponent(dependency: EmptyComponent(), context: context)
+    init(dependency: MoreDependency, context: ApplicationContext) {
+        component = MoreComponent(dependency: dependency, context: context)
         super.init(initialRoute: .list)
     }
 
@@ -28,11 +28,11 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
     override func prepareTransition(for route: MoreRoute) -> NavigationTransition {
         switch route {
         case .list:
-            let viewController = component.makeMoreTableViewController()
+            let viewController = component.makeMoreTableViewController(router: anyRouter)
             return .push(viewController)
 
-        case .close:
-            return .dismissToRoot()
+        case .reset:
+            return .dismiss()
         }
     }
 
@@ -40,5 +40,5 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
 enum MoreRoute: Route {
     case list
-    case close
+    case reset
 }

@@ -75,13 +75,13 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
 
     func prepareLocalRepository() {
 
-        // Check if localRepository is existing.
+        // Check if the local repository is existing.
         guard !dependency.gitService.open() else {
             updateLocalRepository()
             return
         }
 
-        // If localRepository doesn't exist, clone it.
+        // If the local repository doesn't exist, clone it.
         cloneRemoteRepository()
     }
 

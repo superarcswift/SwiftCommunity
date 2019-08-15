@@ -23,4 +23,10 @@ class OnboardingViewController: ViewController<OnboardingViewModel>, StoryboardI
     override func loadData() {
         viewModel.apis.prepareLocalRepository()
     }
+
+    // MARK: IBActions
+
+    @IBAction func didTapCloneButton(_ sender: Any) {
+        loadData()
+    }
 }

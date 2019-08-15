@@ -48,6 +48,7 @@
 		F64A058C22F759F40085C0B5 /* AuthorAvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A058B22F759F40085C0B5 /* AuthorAvatarTableViewCell.swift */; };
 		F64A059022F762EC0085C0B5 /* ModelCodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A058F22F762EC0085C0B5 /* ModelCodingError.swift */; };
 		F64A059222F774210085C0B5 /* AuthorResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A059122F774210085C0B5 /* AuthorResourcesTableViewCell.swift */; };
+		F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E705F2305EB98005D066D /* MoreViewModel.swift */; };
 		F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */; };
 		F66C903D22DF38A2006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903C22DF38A2006CA2BB /* RxSwift.framework */; };
 		F66C903F22DF38B0006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903E22DF38B0006CA2BB /* RxCocoa.framework */; };
@@ -66,7 +67,6 @@
 		F66C90B622E1AD90006CA2BB /* ConferenceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90B522E1AD90006CA2BB /* ConferenceDetailViewModel.swift */; };
 		F66C90B922E1ADF9006CA2BB /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66C90B822E1ADF9006CA2BB /* More.storyboard */; };
 		F66C90BE22E1AF21006CA2BB /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90BD22E1AF21006CA2BB /* MoreTableViewController.swift */; };
-		F66C90C022E1AF29006CA2BB /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90BF22E1AF29006CA2BB /* MoreViewModel.swift */; };
 		F66C90C322E1AF3B006CA2BB /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90C122E1AF3B006CA2BB /* MoreTableViewCell.swift */; };
 		F66C90C422E1AF3B006CA2BB /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66C90C222E1AF3B006CA2BB /* MoreTableViewCell.xib */; };
 		F66C90C622E1FC25006CA2BB /* VideosCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90C522E1FC25006CA2BB /* VideosCollectionViewModel.swift */; };
@@ -209,6 +209,7 @@
 		F64A058B22F759F40085C0B5 /* AuthorAvatarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorAvatarTableViewCell.swift; sourceTree = "<group>"; };
 		F64A058F22F762EC0085C0B5 /* ModelCodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCodingError.swift; sourceTree = "<group>"; };
 		F64A059122F774210085C0B5 /* AuthorResourcesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorResourcesTableViewCell.swift; sourceTree = "<group>"; };
+		F64E705F2305EB98005D066D /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F66C903C22DF38A2006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F66C903E22DF38B0006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -227,7 +228,6 @@
 		F66C90B522E1AD90006CA2BB /* ConferenceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailViewModel.swift; sourceTree = "<group>"; };
 		F66C90B822E1ADF9006CA2BB /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		F66C90BD22E1AF21006CA2BB /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
-		F66C90BF22E1AF29006CA2BB /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		F66C90C122E1AF3B006CA2BB /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		F66C90C222E1AF3B006CA2BB /* MoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
 		F66C90C522E1FC25006CA2BB /* VideosCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosCollectionViewModel.swift; sourceTree = "<group>"; };
@@ -678,7 +678,7 @@
 		F66C90BB22E1AE04006CA2BB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F66C90BF22E1AF29006CA2BB /* MoreViewModel.swift */,
+				F64E705F2305EB98005D066D /* MoreViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1331,7 +1331,6 @@
 				F66C90D622E20235006CA2BB /* FilesystemVideosContentProvider.swift in Sources */,
 				F640BC3C22E8464D00EDB601 /* OnboardingCoordinator.swift in Sources */,
 				F66C90C322E1AF3B006CA2BB /* MoreTableViewCell.swift in Sources */,
-				F66C90C022E1AF29006CA2BB /* MoreViewModel.swift in Sources */,
 				F640BC4122E86CF800EDB601 /* GitService.swift in Sources */,
 				F68F655222FEBF220026604C /* ConferencesComponent.swift in Sources */,
 				F66C90E122E20412006CA2BB /* FilesystemAuthorsContentProvider.swift in Sources */,
@@ -1366,6 +1365,7 @@
 				F66C90F722E5FAF3006CA2BB /* AuthorsCollectionViewModel.swift in Sources */,
 				F63A720222F37981005D0778 /* VideoView.swift in Sources */,
 				F66C90A022E0FD6D006CA2BB /* VideosCoordinator.swift in Sources */,
+				F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */,
 				F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */,
 				F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */,
 				F64238C722CD4FEC000F5CE3 /* AuthorsCollectionViewController.swift in Sources */,

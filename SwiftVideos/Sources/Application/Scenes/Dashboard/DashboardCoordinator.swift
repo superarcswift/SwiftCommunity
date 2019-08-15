@@ -40,7 +40,7 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
         authorsCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Authors", image: nil, tag: 2)
         authorsRouter = authorsCoordinator.anyRouter
 
-        let moreCoordinator = MoreCoordinator(context: context)
+        let moreCoordinator = MoreCoordinator(dependency: component, context: context)
         moreCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "More", image: nil, tag: 3)
         moreRouter = moreCoordinator.anyRouter
 

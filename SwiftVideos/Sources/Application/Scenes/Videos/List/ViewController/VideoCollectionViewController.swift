@@ -19,7 +19,7 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    // Public
+    // Private
 
     private let disposeBag = DisposeBag()
 

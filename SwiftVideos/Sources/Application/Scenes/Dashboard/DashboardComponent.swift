@@ -26,3 +26,10 @@ extension DashboardComponent: HasAuthorsService {
         return context.engine.serviceRegistry.resolve(type: AuthorsService.self)
     }
 }
+
+extension DashboardComponent: HasGitService {
+
+    var gitService: GitService {
+        return context.engine.serviceRegistry.resolve(type: GitService.self)
+    }
+}

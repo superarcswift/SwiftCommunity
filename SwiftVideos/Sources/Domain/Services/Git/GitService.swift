@@ -25,7 +25,7 @@ protocol GitServiceProtocol {
 
     func update() -> Promise<Void>
 
-    func remove() -> Bool
+    func reset() -> Promise<Bool>
 }
 
 public class GitService: Service, GitServiceProtocol {
@@ -117,17 +117,18 @@ public class GitService: Service, GitServiceProtocol {
 
     /// Remove the local repository folder.
     /// - Returns: true or false
-    public func remove() -> Bool {
-        guard fileManager.fileExists(atPath: baseLocalRepositoryPath) else {
-            return false
-        }
+    public func reset() -> Promise<Bool> {
+        return Promise { resolver in
+            guard fileManager.fileExists(atPath: baseLocalRepositoryPath) else {
+                return resolver.fulfill(false)
+            }
 
-        do {
-            try fileManager.removeItem(atPath: baseLocalRepositoryPath)
-            return true
-        } catch {
-            print(error)
-            return false
+            do {
+                try fileManager.removeItem(atPath: baseLocalRepositoryPath)
+                resolver.fulfill(true)
+            } catch {
+                resolver.reject(error)
+            }
         }
     }
 
