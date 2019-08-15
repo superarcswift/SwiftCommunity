@@ -13,9 +13,10 @@ typealias VideosDependency = HasVideosService
 
 /// Protocol can be used used to mock for testing purpose.
 protocol VideosBuilder {
+
     func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController
+
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
-    func makeVideoPlayerViewController(videoMetaData: VideoMetaData) -> VideoPlayerViewController
 }
 
 class VideosComponent: Component<VideosDependency>, VideosBuilder {
@@ -38,18 +39,10 @@ class VideosComponent: Component<VideosDependency>, VideosBuilder {
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController {
         let viewController = VideoDetailViewController.instantiate(with: context)
         viewController.setApplicationContext(context)
+        viewController.videosComponent = self
         let viewModel = VideoDetailViewModel(router: router, dependency: dependency, videoMetaData: videoMetaData)
         viewController.viewModel = viewModel
         viewController.hasLeftCloseButton = hasLeftCloseButton
-
-        return viewController
-    }
-
-    func makeVideoPlayerViewController(videoMetaData: VideoMetaData) -> VideoPlayerViewController {
-        let viewController = VideoPlayerViewController.instantiate(with: context)
-        viewController.setApplicationContext(context)
-        let viewModel = VideoPlayerViewModel(videoMetaData: videoMetaData)
-        viewController.viewModel = viewModel
 
         return viewController
     }

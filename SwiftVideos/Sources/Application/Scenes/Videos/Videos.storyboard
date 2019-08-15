@@ -51,22 +51,22 @@
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="72.991071428571431"/>
         </scene>
-        <!--Video Detail View Controller-->
+        <!--Video-->
         <scene sceneID="us3-6k-wiS">
             <objects>
-                <viewController storyboardIdentifier="VideoDetailViewController" id="2SW-ls-gll" customClass="VideoDetailViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoDetailViewController" title="Video" id="2SW-ls-gll" customClass="VideoDetailViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1yE-bk-1jy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-wM-14i">
-                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="fz2-M0-Kap"/>
-                                </constraints>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXE-hb-Wxi">
+                                <rect key="frame" x="8" y="345" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ5-fV-dds">
-                                <rect key="frame" x="8" y="202" width="398" height="44"/>
+                                <rect key="frame" x="8" y="293" width="398" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="D1T-SV-Xb8"/>
                                 </constraints>
@@ -74,32 +74,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXE-hb-Wxi">
-                                <rect key="frame" x="8" y="254" width="398" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-7t-IT8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="233"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="bJx-kP-66X"/>
+                                    <constraint firstAttribute="width" secondItem="Ckb-7t-IT8" secondAttribute="height" multiplier="16:9" id="iGk-Xt-hJU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AX-VV-ZIR">
-                                <rect key="frame" x="167" y="824" width="80" height="30"/>
-                                <state key="normal" title="Start Player"/>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tCa-wM-14i" firstAttribute="top" secondItem="HkW-YH-3qI" secondAttribute="top" id="FT5-aR-Pat"/>
-                            <constraint firstItem="tCa-wM-14i" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" id="QfI-9F-lLe"/>
-                            <constraint firstItem="HkW-YH-3qI" firstAttribute="bottom" secondItem="3AX-VV-ZIR" secondAttribute="bottom" constant="8" id="R9U-tJ-HXY"/>
                             <constraint firstItem="TXE-hb-Wxi" firstAttribute="top" secondItem="ZJ5-fV-dds" secondAttribute="bottom" constant="8" id="Tbk-jv-UIo"/>
                             <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="ZJ5-fV-dds" secondAttribute="trailing" constant="8" id="awH-cv-Tes"/>
                             <constraint firstItem="TXE-hb-Wxi" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" constant="8" id="cgP-1S-n4N"/>
-                            <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="tCa-wM-14i" secondAttribute="trailing" id="eHW-Yg-lyf"/>
-                            <constraint firstItem="ZJ5-fV-dds" firstAttribute="top" secondItem="tCa-wM-14i" secondAttribute="bottom" constant="8" id="fsC-dX-pA3"/>
-                            <constraint firstItem="3AX-VV-ZIR" firstAttribute="centerX" secondItem="1yE-bk-1jy" secondAttribute="centerX" id="hO3-OD-nnj"/>
+                            <constraint firstItem="Ckb-7t-IT8" firstAttribute="top" secondItem="HkW-YH-3qI" secondAttribute="top" id="e60-zy-MoE"/>
+                            <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="Ckb-7t-IT8" secondAttribute="trailing" id="eun-RT-YBU"/>
                             <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="TXE-hb-Wxi" secondAttribute="trailing" constant="8" id="iq3-46-Gar"/>
+                            <constraint firstItem="Ckb-7t-IT8" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" id="lh1-ij-QOa"/>
+                            <constraint firstItem="ZJ5-fV-dds" firstAttribute="top" secondItem="Ckb-7t-IT8" secondAttribute="bottom" constant="16" id="rta-Pi-vvb"/>
                             <constraint firstItem="ZJ5-fV-dds" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" constant="8" id="ssB-Iq-FWS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HkW-YH-3qI"/>
@@ -107,52 +99,12 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="TXE-hb-Wxi" id="AsL-FX-ltn"/>
                         <outlet property="nameLabel" destination="ZJ5-fV-dds" id="Osp-kb-Vva"/>
-                        <outlet property="previewImageView" destination="tCa-wM-14i" id="J9E-L6-0e8"/>
-                        <outlet property="startVideoPlayerButton" destination="3AX-VV-ZIR" id="xLe-a2-YIV"/>
+                        <outlet property="videoPlayerContainerView" destination="Ckb-7t-IT8" id="F5H-xS-xAL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47T-Wk-8h7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="70"/>
-        </scene>
-        <!--Video Player View Controller-->
-        <scene sceneID="ymx-3P-Jto">
-            <objects>
-                <viewController storyboardIdentifier="VideoPlayerViewController" id="a2w-Bj-9KY" customClass="VideoPlayerViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xrh-k6-LIH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VV8-fl-R4j">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFQ-c2-KWz">
-                                <rect key="frame" x="359" y="60" width="39" height="30"/>
-                                <state key="normal" title="Close"/>
-                                <connections>
-                                    <action selector="didTapClose:" destination="a2w-Bj-9KY" eventType="touchUpInside" id="0VB-6g-zNL"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="VV8-fl-R4j" secondAttribute="trailing" id="17v-A6-Bqo"/>
-                            <constraint firstAttribute="bottom" secondItem="VV8-fl-R4j" secondAttribute="bottom" id="DK7-xA-75V"/>
-                            <constraint firstItem="2ac-L2-GPv" firstAttribute="trailing" secondItem="hFQ-c2-KWz" secondAttribute="trailing" constant="16" id="DVo-Dd-zaS"/>
-                            <constraint firstItem="hFQ-c2-KWz" firstAttribute="top" secondItem="2ac-L2-GPv" secondAttribute="top" constant="16" id="DW6-hB-TIh"/>
-                            <constraint firstItem="VV8-fl-R4j" firstAttribute="top" secondItem="xrh-k6-LIH" secondAttribute="top" id="rDv-za-WpS"/>
-                            <constraint firstItem="VV8-fl-R4j" firstAttribute="leading" secondItem="xrh-k6-LIH" secondAttribute="leading" id="sbj-we-i9k"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="2ac-L2-GPv"/>
-                    </view>
-                    <connections>
-                        <outlet property="playerContainerView" destination="VV8-fl-R4j" id="SoU-aP-uea"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YnK-nd-85C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2577" y="73"/>
+            <point key="canvasLocation" x="1750.7246376811595" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>

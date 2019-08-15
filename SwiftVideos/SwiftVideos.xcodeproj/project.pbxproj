@@ -87,7 +87,6 @@
 		F66C910822E66239006CA2BB /* AuthorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */; };
 		F66C916B22E66C20006CA2BB /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C916A22E66C20006CA2BB /* XCoordinator.framework */; };
 		F66D10E423036AEF0017C352 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F66D10E323036AEF0017C352 /* Cartfile */; };
-		F66D10E623036CD80017C352 /* Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66D10E523036CD80017C352 /* Player.framework */; };
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34522DDD5B600FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -132,8 +131,7 @@
 		F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */; };
 		F6E8D17722CA9ECA00213675 /* SwiftVideosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D17622CA9ECA00213675 /* SwiftVideosTests.swift */; };
 		F6E8D18222CA9ECA00213675 /* SwiftVideosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D18122CA9ECA00213675 /* SwiftVideosUITests.swift */; };
-		F6F031C52304125000BA633D /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F031C42304124F00BA633D /* VideoPlayerViewController.swift */; };
-		F6F031CD2304129700BA633D /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F031CC2304129700BA633D /* VideoPlayerViewModel.swift */; };
+		F6F031D42304A0FE00BA633D /* VersaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F031D32304A0FE00BA633D /* VersaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,7 +248,6 @@
 		F66C910722E66239006CA2BB /* AuthorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewModel.swift; sourceTree = "<group>"; };
 		F66C916A22E66C20006CA2BB /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		F66D10E323036AEF0017C352 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		F66D10E523036CD80017C352 /* Player.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Player.framework; path = Carthage/Build/iOS/Player.framework; sourceTree = "<group>"; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C34722DE27A700FA77DD /* ConferencesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesService.swift; sourceTree = "<group>"; };
 		F675C34B22DE2DE100FA77DD /* conferences.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = conferences.json; sourceTree = "<group>"; };
@@ -295,8 +292,7 @@
 		F6E8D17D22CA9ECA00213675 /* SwiftVideosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVideosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D18122CA9ECA00213675 /* SwiftVideosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVideosUITests.swift; sourceTree = "<group>"; };
 		F6E8D18322CA9ECA00213675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6F031C42304124F00BA633D /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
-		F6F031CC2304129700BA633D /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		F6F031D32304A0FE00BA633D /* VersaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VersaPlayer.framework; path = Carthage/Build/iOS/VersaPlayer.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,7 +300,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F66D10E623036CD80017C352 /* Player.framework in Frameworks */,
+				F6F031D42304A0FE00BA633D /* VersaPlayer.framework in Frameworks */,
 				F6A6B55723014CFF00BFEC40 /* Differentiator.framework in Frameworks */,
 				F6A6B55523008F7E00BFEC40 /* RxDataSources.framework in Frameworks */,
 				F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */,
@@ -453,7 +449,6 @@
 				F64238BE22CD4F41000F5CE3 /* Videos.storyboard */,
 				F66C909D22E0FD51006CA2BB /* List */,
 				F66C90F822E60503006CA2BB /* Detail */,
-				F6C4C05722E7C6ED00C0636E /* Player */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -974,19 +969,10 @@
 			path = SectionHeader;
 			sourceTree = "<group>";
 		};
-		F6C4C05722E7C6ED00C0636E /* Player */ = {
-			isa = PBXGroup;
-			children = (
-				F6F031C32304124F00BA633D /* ViewController */,
-				F6F031CB2304128300BA633D /* ViewModel */,
-			);
-			path = Player;
-			sourceTree = "<group>";
-		};
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F66D10E523036CD80017C352 /* Player.framework */,
+				F6F031D32304A0FE00BA633D /* VersaPlayer.framework */,
 				F6A6B55623014CFF00BFEC40 /* Differentiator.framework */,
 				F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */,
 				F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */,
@@ -1114,22 +1100,6 @@
 				F6E8D18322CA9ECA00213675 /* Info.plist */,
 			);
 			path = UITests;
-			sourceTree = "<group>";
-		};
-		F6F031C32304124F00BA633D /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F6F031C42304124F00BA633D /* VideoPlayerViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		F6F031CB2304128300BA633D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F6F031CC2304129700BA633D /* VideoPlayerViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1308,7 +1278,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Player.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/VersaPlayer.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -1328,7 +1298,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Player.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/VersaPlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1342,7 +1312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F66C910822E66239006CA2BB /* AuthorDetailViewModel.swift in Sources */,
-				F6F031C52304125000BA633D /* VideoPlayerViewController.swift in Sources */,
 				F642C68222D2627F0005B0AF /* ConferencesCollectionViewModel.swift in Sources */,
 				F66C90F522E5F94A006CA2BB /* AuthorsCollectionViewFlowLayout.swift in Sources */,
 				F68F655422FEC0130026604C /* VideosComponent.swift in Sources */,
@@ -1380,7 +1349,6 @@
 				F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */,
 				F64A059222F774210085C0B5 /* AuthorResourcesTableViewCell.swift in Sources */,
 				F66C90B622E1AD90006CA2BB /* ConferenceDetailViewModel.swift in Sources */,
-				F6F031CD2304129700BA633D /* VideoPlayerViewModel.swift in Sources */,
 				F68F655622FF4A1B0026604C /* AuthorsComponent.swift in Sources */,
 				F66C90F222E5F938006CA2BB /* AuthorsCollectionViewCell.swift in Sources */,
 				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
