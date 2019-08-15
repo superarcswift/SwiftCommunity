@@ -16,7 +16,7 @@
 		F63A728822F46C1D005D0778 /* NotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A728522F46C1D005D0778 /* NotificationBanner.framework */; };
 		F63A728922F46C1D005D0778 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A728622F46C1D005D0778 /* RxSwift.framework */; };
 		F63A728F22F47565005D0778 /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A728E22F47565005D0778 /* NotificationPresenter.swift */; };
-		F63A729522F47D85005D0778 /* ViewControllerContext+NotificationSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729422F47D85005D0778 /* ViewControllerContext+NotificationSink.swift */; };
+		F63A729522F47D85005D0778 /* ViewController+NotificationSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729422F47D85005D0778 /* ViewController+NotificationSink.swift */; };
 		F63A729722F5C276005D0778 /* Notification+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729622F5C276005D0778 /* Notification+Rx.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,7 @@
 		F63A728522F46C1D005D0778 /* NotificationBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationBanner.framework; path = Carthage/Build/iOS/NotificationBanner.framework; sourceTree = "<group>"; };
 		F63A728622F46C1D005D0778 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F63A728E22F47565005D0778 /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
-		F63A729422F47D85005D0778 /* ViewControllerContext+NotificationSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerContext+NotificationSink.swift"; sourceTree = "<group>"; };
+		F63A729422F47D85005D0778 /* ViewController+NotificationSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+NotificationSink.swift"; sourceTree = "<group>"; };
 		F63A729622F5C276005D0778 /* Notification+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				F63A729622F5C276005D0778 /* Notification+Rx.swift */,
-				F63A729422F47D85005D0778 /* ViewControllerContext+NotificationSink.swift */,
+				F63A729422F47D85005D0778 /* ViewController+NotificationSink.swift */,
 				F63A727F22F46B71005D0778 /* NotificationSink.swift */,
 				F63A728122F46BAF005D0778 /* Notification.swift */,
 				F63A728E22F47565005D0778 /* NotificationPresenter.swift */,
@@ -249,7 +249,7 @@
 				F63A728222F46BAF005D0778 /* Notification.swift in Sources */,
 				F63A729722F5C276005D0778 /* Notification+Rx.swift in Sources */,
 				F63A728022F46B71005D0778 /* NotificationSink.swift in Sources */,
-				F63A729522F47D85005D0778 /* ViewControllerContext+NotificationSink.swift in Sources */,
+				F63A729522F47D85005D0778 /* ViewController+NotificationSink.swift in Sources */,
 				F63A728F22F47565005D0778 /* NotificationPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,6 +2,8 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcNotificationBanner
+import SuperArcStateView
 import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
@@ -52,6 +54,9 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
     var isUpdated = PublishSubject<Bool>()
     var isCloned = PublishSubject<Bool>()
 
+    var toggleEmptyState = PublishSubject<StandardStateViewContext?>()
+    var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
+
     // Private
 
     private let disposeBag = DisposeBag()
@@ -100,7 +105,13 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
     }
 
     private func cloneRemoteRepository() {
-        dependency.gitService.clone()
+        activity.start()
+        dependency.gitService.clone(progressHandler: { [weak self] isFinished in
+
+            })
+            .ensure { [weak self] in
+                self?.activity.stop()
+            }
             .done { [weak self] _ in
                 self?.isReady.onNext(true)
             }.catch { error in

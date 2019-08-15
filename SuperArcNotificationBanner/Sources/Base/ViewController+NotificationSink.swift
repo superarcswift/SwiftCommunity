@@ -26,4 +26,3 @@ extension TableViewController: HasNotificationSink {
         return context.dependencyRegistry.resolve(type: NotificationPresenter.self)
     }
 }
-

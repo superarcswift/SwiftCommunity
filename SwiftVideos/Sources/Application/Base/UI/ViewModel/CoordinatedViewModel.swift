@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcActivityIndicator
 import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
@@ -50,15 +51,21 @@ public class DIViewModel<D>: ViewModel, DependencyInjectedViewModelProtocol {
 }
 
 /// Based class can be used to create ViewModels containing dependencies and coordinator.
-public class CoordinatedDIViewModel<R: Route, D>: DIViewModel<D>, CoordinatedViewModelProtocol {
+class CoordinatedDIViewModel<R: Route, D>: DIViewModel<D>, CoordinatedViewModelProtocol, ActivityState {
 
     // MARK: Properties
 
-    var router: AnyRouter<R>
+    // Public
+
+    var activity = Activity()
+
+    // Private
+
+    internal var router: AnyRouter<R>
 
     // MARK: Initialization
 
-    public init(router: AnyRouter<R>, dependency: D) {
+    init(router: AnyRouter<R>, dependency: D) {
         self.router = router
         super.init(dependency: dependency)
     }

@@ -49,6 +49,9 @@
 		F64A059022F762EC0085C0B5 /* ModelCodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A058F22F762EC0085C0B5 /* ModelCodingError.swift */; };
 		F64A059222F774210085C0B5 /* AuthorResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A059122F774210085C0B5 /* AuthorResourcesTableViewCell.swift */; };
 		F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E705F2305EB98005D066D /* MoreViewModel.swift */; };
+		F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; };
+		F64E7092230603D1005D066D /* SuperArcActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; };
+		F64E7093230603D1005D066D /* SuperArcActivityIndicator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */; };
 		F66C903D22DF38A2006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903C22DF38A2006CA2BB /* RxSwift.framework */; };
 		F66C903F22DF38B0006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903E22DF38B0006CA2BB /* RxCocoa.framework */; };
@@ -164,6 +167,7 @@
 				F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */,
 				F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */,
 				F63A728D22F471F2005D0778 /* SuperArcNotificationBanner.framework in Embed Frameworks */,
+				F64E7093230603D1005D066D /* SuperArcActivityIndicator.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +214,7 @@
 		F64A058F22F762EC0085C0B5 /* ModelCodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCodingError.swift; sourceTree = "<group>"; };
 		F64A059122F774210085C0B5 /* AuthorResourcesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorResourcesTableViewCell.swift; sourceTree = "<group>"; };
 		F64E705F2305EB98005D066D /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
+		F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcActivityIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F66C903C22DF38A2006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F66C903E22DF38B0006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -300,11 +305,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */,
 				F6F031D42304A0FE00BA633D /* VersaPlayer.framework in Frameworks */,
 				F6A6B55723014CFF00BFEC40 /* Differentiator.framework in Frameworks */,
 				F6A6B55523008F7E00BFEC40 /* RxDataSources.framework in Frameworks */,
 				F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */,
 				F63A728B22F471E9005D0778 /* SuperArcNotificationBanner.framework in Frameworks */,
+				F64E7092230603D1005D066D /* SuperArcActivityIndicator.framework in Frameworks */,
 				F63A728C22F471F2005D0778 /* SuperArcNotificationBanner.framework in Frameworks */,
 				F63A723D22F44E3F005D0778 /* SuperArcStateView.framework in Frameworks */,
 				F62DB63222EA45A90089C620 /* ObjectiveGit.framework in Frameworks */,
@@ -972,6 +979,7 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */,
 				F6F031D32304A0FE00BA633D /* VersaPlayer.framework */,
 				F6A6B55623014CFF00BFEC40 /* Differentiator.framework */,
 				F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */,
