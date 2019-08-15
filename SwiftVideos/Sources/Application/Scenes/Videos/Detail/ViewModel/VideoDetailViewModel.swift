@@ -13,7 +13,6 @@ import RxCocoa
 
 protocol VideoDetailViewModelInput {
     var videoMetaData: VideoMetaData { get }
-    var startVideoPlayerTrigger: AnyObserver<Void> { get }
 }
 
 protocol VideoDetailViewModelOutput {
@@ -63,12 +62,6 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
     var videoMetaData: VideoMetaData
 
     // Private
-
-    private(set) lazy var startVideoPlayerTrigger: AnyObserver<Void> = startVideoPlayerAction.inputs
-
-    private lazy var startVideoPlayerAction = Action<Void, Void> { [unowned self] _ in
-        self.router.rx.trigger(.videoPlayer(self.videoMetaData))
-    }
 
     // MARK: Initialization
 

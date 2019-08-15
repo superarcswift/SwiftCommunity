@@ -7,4 +7,4 @@ github "RxSwiftCommunity/RxDataSources" ~> 4.0
 github "rinov/YoutubeKit" "master"
 github "libgit2/objective-git"
 github "Daltron/NotificationBanner" "master"
-github "piemonte/Player" ~> 0.13.0
+github "josejuanqm/VersaPlayer"

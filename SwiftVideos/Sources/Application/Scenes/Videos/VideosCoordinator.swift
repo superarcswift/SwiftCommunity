@@ -2,9 +2,9 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import XCoordinator
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
 import RxSwift
 
 class VideosCoordinator: NavigationCoordinator<VideosRoute> {
@@ -34,10 +34,6 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
             let viewController = component.makeVideoDetailViewController(videoMetaData: videoMetaData, hasLeftCloseButton: hasLeftCloseButton, router: anyRouter)
             return .push(viewController)
 
-        case .videoPlayer(let videoMetaData):
-            let viewController = component.makeVideoPlayerViewController(videoMetaData: videoMetaData)
-            return .push(viewController)
-
         case .close:
             return .dismissToRoot()
         }
@@ -45,9 +41,8 @@ class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
 }
 
-public enum VideosRoute: Route {
+enum VideosRoute: Route {
     case videos(ConferenceMetaData?, ConferenceEdition?)
     case videoDetail(VideoMetaData, Bool)
-    case videoPlayer(VideoMetaData)
     case close
 }
