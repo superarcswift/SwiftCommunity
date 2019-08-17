@@ -39,10 +39,12 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
         super.setupBindings()
 
         viewModel.notification
+            .observeOn(MainScheduler.instance)
             .bind(to: self.rx.notification)
             .disposed(by: disposeBag)
 
         viewModel.toogleStateView
+            .observeOn(MainScheduler.instance)
             .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
 

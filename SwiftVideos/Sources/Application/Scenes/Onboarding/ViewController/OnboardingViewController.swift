@@ -31,10 +31,12 @@ class OnboardingViewController: ViewController<OnboardingViewModel>, StoryboardI
             .disposed(by: disposeBag)
 
         viewModel.notification
+            .observeOn(MainScheduler.instance)
             .bind(to: self.rx.notification)
             .disposed(by: disposeBag)
 
         viewModel.toggleEmptyState
+            .observeOn(MainScheduler.instance)
             .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
     }
