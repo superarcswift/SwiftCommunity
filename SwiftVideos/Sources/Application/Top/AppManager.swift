@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcActivityIndicator
 import SuperArcNotificationBanner
 import SuperArcCore
 
@@ -19,13 +20,14 @@ class AppManager {
 
     init() {
         setupServices()
-        setupViewControllerContext()
+        setupApplicationContext()
     }
 
     // MARK: Private helpers
 
-    private func setupViewControllerContext() {
+    private func setupApplicationContext() {
         core.context.dependencyRegistry.register(NotificationPresenter(), for: NotificationPresenter.self)
+        core.context.dependencyRegistry.register(ActivityPresenter(), for: ActivityPresenter.self)
     }
 
     private func setupServices() {

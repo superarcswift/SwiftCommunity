@@ -21,7 +21,7 @@ protocol GitServiceProtocol {
 
     /// Clone the content repository to disk.
     /// - Returns: Promise<Void>
-    func clone() -> Promise<Void>
+    func clone(progressHandler: @escaping (Bool) -> Void) -> Promise<Void>
 
     func update() -> Promise<Void>
 
@@ -32,28 +32,32 @@ public class GitService: Service, GitServiceProtocol {
 
     // MARK: Properties
 
+    // Static
+
+    public let baseLocalRepositoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!.combinePath("content")
+
     // Public
 
     public var context: ServiceContext
 
-    var localRepository: GTRepository?
-
-    let baseLocalRepositoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!.combinePath("content")
-
     // Private
 
     // TODO: This should be come from configuration.
-    let repositoryURL = "https://github.com/superarcswift/SwiftVideosContent"
+    private let repositoryURL = "https://github.com/superarcswift/SwiftVideosContent"
 
-    lazy var localRepositoryURL = URL(string: "file://\(baseLocalRepositoryPath)/")! // This needs to be prefix with file://
+    private lazy var localRepositoryURL = URL(string: "file://\(baseLocalRepositoryPath)/")! // This needs to be prefix with file://
+
+    internal var localRepository: GTRepository?
 
     private let fileManager = FileManager.default
+
+    private let queue: DispatchQueue
     
     // MARK: Initialization
 
     init(context: ServiceContext) {
         self.context = context
-
+        queue = DispatchQueue(label: "com.tba.swiftvideos.gitservice", qos: .userInitiated)
         print(baseLocalRepositoryPath)
     }
 
@@ -80,17 +84,26 @@ public class GitService: Service, GitServiceProtocol {
 
     /// Clone the content repository to disk.
     /// - Returns: Promise<Void>
-    public func clone() -> Promise<Void> {
+    public func clone(progressHandler: @escaping (Bool) -> Void) -> Promise<Void> {
         return Promise { resolver in
             guard let remoteRepositoryURL = URL(string: repositoryURL) else {
                 return resolver.reject(GitServiceError.invalidURL)
             }
 
-            do {
-                localRepository = try GTRepository.clone(from: remoteRepositoryURL, toWorkingDirectory: localRepositoryURL, options: [GTRepositoryCloneOptionsTransportFlags: true], transferProgressBlock: nil)
-                resolver.fulfill(())
-            } catch {
-                resolver.reject(error)
+            queue.async {
+                do {
+                    self.localRepository = try GTRepository.clone(from: remoteRepositoryURL, toWorkingDirectory: self.localRepositoryURL, options: [GTRepositoryCloneOptionsTransportFlags: true], transferProgressBlock: { progress, isFinished in
+                        print(Float(progress.pointee.received_objects)/Float(progress.pointee.total_objects))
+                        progressHandler(isFinished.pointee.boolValue)
+                    })
+                    DispatchQueue.main.async {
+                        resolver.fulfill(())
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        resolver.reject(error)
+                    }
+                }
             }
         }
     }
@@ -104,13 +117,19 @@ public class GitService: Service, GitServiceProtocol {
                 return
             }
 
-            do {
-                let branch = try localRepository.currentBranch()
-                let remoteRepository = try GTRemote(name: "origin", in: localRepository)
-                try localRepository.pull(branch, from: remoteRepository, withOptions: nil, progress: nil)
-                resolver.fulfill(())
-            } catch {
-                resolver.reject(error)
+            queue.async {
+                do {
+                    let branch = try localRepository.currentBranch()
+                    let remoteRepository = try GTRemote(name: "origin", in: localRepository)
+                    try localRepository.pull(branch, from: remoteRepository, withOptions: nil, progress: nil)
+                    DispatchQueue.main.async {
+                        resolver.fulfill(())
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        resolver.reject(error)
+                    }
+                }
             }
         }
     }
@@ -123,11 +142,17 @@ public class GitService: Service, GitServiceProtocol {
                 return resolver.fulfill(false)
             }
 
-            do {
-                try fileManager.removeItem(atPath: baseLocalRepositoryPath)
-                resolver.fulfill(true)
-            } catch {
-                resolver.reject(error)
+            queue.async {
+                do {
+                    try self.fileManager.removeItem(atPath: self.baseLocalRepositoryPath)
+                    DispatchQueue.main.async {
+                        resolver.fulfill(true)
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        resolver.reject(error)
+                    }
+                }
             }
         }
     }
