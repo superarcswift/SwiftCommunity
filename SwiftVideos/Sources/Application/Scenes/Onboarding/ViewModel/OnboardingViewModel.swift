@@ -93,29 +93,29 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
     // MARK: Private helpers
 
     private func updateLocalRepository() {
-        isReady.onNext(true)
-//        gitService.update()
-//            .done { [weak self] _ in
-//                self?.isUpdated.onNext(true)
-//            }.ensure { [weak self] in
-//                self?.isReady.onNext(true)
-//            }.catch { error in
-//                print(error)
-//            }
+        activity.start()
+        dependency.gitService.update()
+            .done { [weak self] _ in
+                self?.isUpdated.onNext(true)
+            }.ensure { [weak self] in
+                self?.activity.stop()
+                self?.isReady.onNext(true)
+            }.catch { [weak self] error in
+                self?.notification.onNext(StandardNotification(error: error))
+            }
     }
 
     private func cloneRemoteRepository() {
         activity.start()
-        dependency.gitService.clone(progressHandler: { [weak self] isFinished in
-
+        dependency.gitService.clone(progressHandler: { progress, isFinished in
+                print(progress)
             })
-            .ensure { [weak self] in
-                self?.activity.stop()
-            }
             .done { [weak self] _ in
                 self?.isReady.onNext(true)
-            }.catch { error in
-                print(error)
+            }.ensure { [weak self] in
+                    self?.activity.stop()
+            }.catch { [weak self] error in
+                self?.notification.onNext(StandardNotification(error: error))
             }
     }
 }

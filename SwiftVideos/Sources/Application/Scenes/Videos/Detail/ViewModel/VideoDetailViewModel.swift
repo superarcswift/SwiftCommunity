@@ -84,8 +84,8 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
             .done { [weak self] videoDetail in
                 self?.videoDetail.accept(videoDetail)
             }
-            .catch { error in
-                print(error)
+            .catch { [weak self] error in
+                self?.notification.onNext(StandardNotification(error: error))
             }
     }
 

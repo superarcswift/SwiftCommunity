@@ -21,7 +21,7 @@ protocol GitServiceProtocol {
 
     /// Clone the content repository to disk.
     /// - Returns: Promise<Void>
-    func clone(progressHandler: @escaping (Bool) -> Void) -> Promise<Void>
+    func clone(progressHandler: @escaping (Float, Bool) -> Void) -> Promise<Void>
 
     func update() -> Promise<Void>
 
@@ -75,7 +75,6 @@ public class GitService: Service, GitServiceProtocol {
         do {
             localRepository = try GTRepository(url: localRepositoryURL)
         } catch {
-            print(error)
             return false
         }
 
@@ -84,7 +83,7 @@ public class GitService: Service, GitServiceProtocol {
 
     /// Clone the content repository to disk.
     /// - Returns: Promise<Void>
-    public func clone(progressHandler: @escaping (Bool) -> Void) -> Promise<Void> {
+    public func clone(progressHandler: @escaping (Float, Bool) -> Void) -> Promise<Void> {
         return Promise { resolver in
             guard let remoteRepositoryURL = URL(string: repositoryURL) else {
                 return resolver.reject(GitServiceError.invalidURL)
@@ -93,8 +92,8 @@ public class GitService: Service, GitServiceProtocol {
             queue.async {
                 do {
                     self.localRepository = try GTRepository.clone(from: remoteRepositoryURL, toWorkingDirectory: self.localRepositoryURL, options: [GTRepositoryCloneOptionsTransportFlags: true], transferProgressBlock: { progress, isFinished in
-                        print(Float(progress.pointee.received_objects)/Float(progress.pointee.total_objects))
-                        progressHandler(isFinished.pointee.boolValue)
+                        let progress = Float(progress.pointee.received_objects)/Float(progress.pointee.total_objects)
+                        progressHandler(progress, isFinished.pointee.boolValue)
                     })
                     DispatchQueue.main.async {
                         resolver.fulfill(())

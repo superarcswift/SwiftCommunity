@@ -78,7 +78,6 @@ class ConferencesCollectionViewModel: CoordinatedDIViewModel<ConferencesRoute, C
                 self?.conferences.accept(conferences)
             }
             .catch { [weak self] error in
-                print(error)
                 self?.toggleEmptyState.on(.next(StandardStateViewContext(headline: error.localizedDescription)))
             }
     }
