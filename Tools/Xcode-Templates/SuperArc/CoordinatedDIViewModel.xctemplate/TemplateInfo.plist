@@ -5,9 +5,9 @@
 	<key>Kind</key>
 	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
 	<key>Description</key>
-	<string>A SuperArc ViewModel.</string>
+	<string>A SuperArc ViewModel containing dependency and coordinator.</string>
 	<key>Summary</key>
-	<string>A SuperArc ViewModel.</string>
+	<string>A SuperArc ViewModel containing dependency and coordinator.</string>
 	<key>SortOrder</key>
 	<string>30</string>
 	<key>AllowedTypes</key>
