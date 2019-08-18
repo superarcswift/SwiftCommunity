@@ -54,18 +54,13 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
             .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
 
-        let dataSource = RxCollectionViewSectionedReloadDataSource<ConferenceDetailSectionModel>(configureCell: { [weak self] (dataSource, collectionView, indexPath, video) -> UICollectionViewCell in
+        let dataSource = RxCollectionViewSectionedReloadDataSource<ConferenceDetailSectionModel>(configureCell: { (dataSource, collectionView, indexPath, videoViewModel) -> UICollectionViewCell in
             let videoCell = collectionView.dequeueReusableCell(withReuseIdentifier: VideosCollectionViewCell.className, for: indexPath) as! VideosCollectionViewCell
 
-            videoCell.videoView.titleLabel.text = video.name
-
-            videoCell.videoView.authorNameLabel.text = video.authors.first?.name
-
-            if let previewImage = self?.viewModel.apis.previewImage(for: video) {
-                videoCell.videoView.previewImageView.image = previewImage
-            } else {
-                videoCell.videoView.previewImageView.isHidden = true
-            }
+            videoCell.videoView.titleLabel.text = videoViewModel.name
+            videoCell.videoView.authorNameLabel.text = videoViewModel.authors
+            videoCell.videoView.previewImageView.image = videoViewModel.previewImage.image
+            videoCell.videoView.previewImageView.contentMode = videoViewModel.previewImage.contentMode
 
             return videoCell
         })
@@ -87,7 +82,7 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
             .bind(to: collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
 
-        collectionView.rx.modelSelected(VideoMetaData.self)
+        collectionView.rx.modelSelected(VideoViewModel.self)
             .bind(to: viewModel.inputs.didSelectVideoTrigger)
             .disposed(by: disposeBag)
     }

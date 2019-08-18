@@ -14,7 +14,7 @@ import RxCocoa
 
 protocol ConferenceDetailViewModelInput {
     var conferenceMetaData: ConferenceMetaData { get }
-    var didSelectVideoTrigger: AnyObserver<VideoMetaData> { get }
+    var didSelectVideoTrigger: AnyObserver<VideoViewModel> { get }
 }
 
 protocol ConferenceDetailViewModelOutput {
@@ -24,7 +24,6 @@ protocol ConferenceDetailViewModelOutput {
 protocol ConferenceDetailViewModelApi {
     func loadData()
     func sectionTitle(for index: Int) -> String
-    func previewImage(for video: VideoMetaData) -> UIImage?
 }
 
 protocol ConferenceDetailViewModelType {
@@ -56,7 +55,7 @@ class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, Confer
 
     public let conferenceMetaData: ConferenceMetaData
     public var conferenceEditions = BehaviorRelay<[ConferenceDetailSectionModel]>(value: [])
-    public lazy var didSelectVideoTrigger: AnyObserver<VideoMetaData> = showVideoAction.inputs
+    public lazy var didSelectVideoTrigger: AnyObserver<VideoViewModel> = showVideoAction.inputs
 
     public var toogleStateView = PublishSubject<StandardStateViewContext?>()
     public var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
@@ -67,8 +66,8 @@ class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, Confer
         self.router.rx.trigger(.conferenceEditionDetail(self.conferenceMetaData, conferenceEdition))
     }
 
-    private lazy var showVideoAction = Action<VideoMetaData, Void> { [unowned self] videoMetaData in
-        self.router.rx.trigger(.video(videoMetaData))
+    private lazy var showVideoAction = Action<VideoViewModel, Void> { [unowned self] video in
+        self.router.rx.trigger(.video(video.videoMetaData))
     }
 
     // MARK: Initialization
@@ -83,7 +82,8 @@ class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, Confer
     func loadData() {
         dependency.conferencesService.fetchVideos(conferenceMetaData: conferenceMetaData)
             .mapValues { videos -> ConferenceDetailSectionModel in
-                return .videosSection(items: videos)
+                let videoModels = videos.compactMap { VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService) }
+                return .videosSection(items: videoModels)
             }.done { [weak self] sectionModel in
                 self?.conferenceEditions.accept(sectionModel)
             }.catch { [weak self] error in
@@ -96,19 +96,6 @@ class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, Confer
             fatalError("index is out of bound")
         }
 
-        return String(conferenceEditions.value[index].items.first!.conference.edition.year)
-    }
-
-    func previewImage(for video: VideoMetaData) -> UIImage? {
-
-        guard let previewImageURL = dependency.videosService.previewImageURL(for: video) else {
-            return UIImage(named: "video_preview_default")
-        }
-
-        guard let previewImage = UIImage(contentsOfFile: previewImageURL.path) else {
-            return UIImage(named: "video_preview_default")
-        }
-
-        return previewImage
+        return String(conferenceEditions.value[index].items.first!.conferenceEditionYear)
     }
 }

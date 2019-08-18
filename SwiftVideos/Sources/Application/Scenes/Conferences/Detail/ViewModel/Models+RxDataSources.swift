@@ -5,16 +5,16 @@
 import RxDataSources
 
 enum ConferenceDetailSectionModel {
-    case videosSection(items: [VideoMetaData])
+    case videosSection(items: [VideoViewModel])
 }
 
 extension ConferenceDetailSectionModel: SectionModelType {
 
-    init(original: ConferenceDetailSectionModel, items: [VideoMetaData]) {
+    init(original: ConferenceDetailSectionModel, items: [VideoViewModel]) {
         self = original
     }
 
-    var items: [VideoMetaData] {
+    var items: [VideoViewModel] {
         switch self {
         case .videosSection(items: let items):
             return items

@@ -33,7 +33,7 @@ class AuthorViewModel: ViewModel {
 
     private var authorsService: AuthorsService
 
-    private var defaultAuthorImage: UIImage = UIImage(imageLiteralResourceName: "author_default").withRenderingMode(.alwaysTemplate)
+    private var defaultAuthorImage = UIImage(imageLiteralResourceName: "author_default").withRenderingMode(.alwaysTemplate)
 
     // MARK: Initialization
 

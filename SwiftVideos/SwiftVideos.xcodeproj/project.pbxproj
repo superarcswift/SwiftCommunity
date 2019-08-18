@@ -129,6 +129,7 @@
 		F6DFE6BA22FA26970091ECE8 /* OnboardingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6B922FA26960091ECE8 /* OnboardingComponent.swift */; };
 		F6DFE6BE22FA35D90091ECE8 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6BD22FA35D90091ECE8 /* AppComponent.swift */; };
 		F6E2323423096437003FBFA5 /* AuthorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2323323096437003FBFA5 /* AuthorViewModel.swift */; };
+		F6E2323623096D68003FBFA5 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2323523096D68003FBFA5 /* VideoViewModel.swift */; };
 		F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16122CA9EC900213675 /* AppDelegate.swift */; };
 		F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */; };
 		F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16822CA9ECA00213675 /* Assets.xcassets */; };
@@ -287,6 +288,7 @@
 		F6DFE6B922FA26960091ECE8 /* OnboardingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingComponent.swift; sourceTree = "<group>"; };
 		F6DFE6BD22FA35D90091ECE8 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		F6E2323323096437003FBFA5 /* AuthorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewModel.swift; sourceTree = "<group>"; };
+		F6E2323523096D68003FBFA5 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		F6E8D15E22CA9EC900213675 /* SwiftVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D16122CA9EC900213675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 			children = (
 				F63A720122F37981005D0778 /* VideoView.swift */,
 				F63A720322F379A1005D0778 /* VideoView.xib */,
+				F6E2323523096D68003FBFA5 /* VideoViewModel.swift */,
 			);
 			path = VideoView;
 			sourceTree = "<group>";
@@ -1386,6 +1389,7 @@
 				F63712FB22EB98440071C2DC /* ContentDataProvider.swift in Sources */,
 				F66C90A422E0FDA3006CA2BB /* AuthorsCoordinator.swift in Sources */,
 				F66C90CB22E1FEA8006CA2BB /* AboutViewController.swift in Sources */,
+				F6E2323623096D68003FBFA5 /* VideoViewModel.swift in Sources */,
 				F63712FE22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */,
 				F64238A722CD3C2F000F5CE3 /* Author.swift in Sources */,
 				F64A058C22F759F40085C0B5 /* AuthorAvatarTableViewCell.swift in Sources */,

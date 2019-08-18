@@ -49,24 +49,18 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
             .disposed(by: disposeBag)
 
         viewModel.outputs.videos
-            .bind(to: collectionView.rx.items(cellIdentifier: VideosCollectionViewCell.className)) { [weak self] _, video, cell in
+            .bind(to: collectionView.rx.items(cellIdentifier: VideosCollectionViewCell.className)) { _, videoViewModel, cell in
                 guard let videoCell = cell as? VideosCollectionViewCell else {
                     fatalError("invalid cell type")
                 }
 
-                videoCell.videoView.titleLabel.text = video.name
-
-                videoCell.videoView.authorNameLabel.text = video.authors.first?.name
-
-                if let previewImage = self?.viewModel.apis.previewImage(for: video) {
-                    videoCell.videoView.previewImageView.image = previewImage
-                } else {
-                    videoCell.videoView.previewImageView.isHidden = true
-                }
-
+                videoCell.videoView.titleLabel.text = videoViewModel.name
+                videoCell.videoView.authorNameLabel.text = videoViewModel.authors
+                videoCell.videoView.previewImageView.image = videoViewModel.previewImage.image
+                videoCell.videoView.previewImageView.contentMode = videoViewModel.previewImage.contentMode
             }.disposed(by: disposeBag)
 
-        collectionView.rx.modelSelected(VideoMetaData.self)
+        collectionView.rx.modelSelected(VideoViewModel.self)
             .bind(to: viewModel.inputs.didSelectVideoTrigger)
             .disposed(by: disposeBag)
     }

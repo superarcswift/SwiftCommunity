@@ -14,17 +14,16 @@ import RxCocoa
 protocol VideosCollectionViewModelInput {
     var conferenceMetaData: ConferenceMetaData? { get }
     var conferenceEdition: ConferenceEdition? { get }
-    var didSelectVideoTrigger: AnyObserver<VideoMetaData> { get }
+    var didSelectVideoTrigger: AnyObserver<VideoViewModel> { get }
 }
 
 protocol VideosCollectionViewModelOutput {
-    var videos: BehaviorRelay<[VideoMetaData]> { get set }
+    var videos: BehaviorRelay<[VideoViewModel]> { get set }
     var title: String { get }
 }
 
 protocol VideosCollectionViewModelApi {
     func loadData()
-    func previewImage(for video: VideoMetaData) -> UIImage?
 }
 
 protocol VideosCollectionViewModelType {
@@ -52,14 +51,14 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
 
     // MARK: Properties
 
-    private lazy var showVideoAction = Action<VideoMetaData, Void> { [unowned self] video in
-        self.router.rx.trigger(.videoDetail(video, false))
+    private lazy var showVideoAction = Action<VideoViewModel, Void> { [unowned self] video in
+        self.router.rx.trigger(.videoDetail(video.videoMetaData, false))
     }
 
     // Public
 
-    lazy var didSelectVideoTrigger: AnyObserver<VideoMetaData> = showVideoAction.inputs
-    var videos = BehaviorRelay<[VideoMetaData]>(value: [])
+    lazy var didSelectVideoTrigger: AnyObserver<VideoViewModel> = showVideoAction.inputs
+    var videos = BehaviorRelay<[VideoViewModel]>(value: [])
     var title: String {
         guard let conferenceMetaData = conferenceMetaData, let conferenceEdition = conferenceEdition else {
             return "Videos"
@@ -93,25 +92,13 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
         }
     }
 
-    // TODO: This logic must be in a lower level so that we can reuse it everywhere
-    func previewImage(for video: VideoMetaData) -> UIImage? {
-
-        guard let previewImageURL = dependency.videosService.previewImageURL(for: video) else {
-            return UIImage(named: "video_preview_default")
-        }
-
-        guard let previewImage = UIImage(contentsOfFile: previewImageURL.path) else {
-            return UIImage(named: "video_preview_default")
-        }
-
-        return previewImage
-    }
-
     // MARK: Private helpers
 
     func fetchVideosList() {
         dependency.videosService.fetchList()
-            .done { [weak self] videos in
+            .mapValues {
+                VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService)
+            }.done { [weak self] videos in
                 self?.videos.accept(videos)
             }
             .catch { [weak self] error in
@@ -122,7 +109,9 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
 
     func fetchVideosList(of conference: ConferenceMetaData, in edition: ConferenceEdition) {
         dependency.videosService.fetchList(conference: conference, edition: edition)
-            .done { [weak self] videos in
+            .mapValues {
+                VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService)
+            }.done { [weak self] videos in
                 self?.videos.accept(videos)
             }
             .catch { [weak self] error in
