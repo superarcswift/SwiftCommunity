@@ -49,19 +49,15 @@ class ConferencesCollectionViewController: ViewController<ConferencesCollectionV
             .disposed(by: disposeBag)
 
         viewModel.outputs.conferences
-            .bind(to: collectionView.rx.items(cellIdentifier: ConferenceCollectionViewCell.className)) { [weak self] _, conference, cell in
+            .bind(to: collectionView.rx.items(cellIdentifier: ConferenceCollectionViewCell.className)) { _, conferenceViewModel, cell in
                 guard let conferenceCell = cell as? ConferenceCollectionViewCell else {
                     fatalError("wrong cell type")
                 }
-                conferenceCell.conferenceView.titleLabel.text = conference.name
-                if let bannerImage = self?.viewModel.apis.bannerImage(for: conference) {
-                    conferenceCell.conferenceView.previewImageView.image = bannerImage
-                } else {
-                    conferenceCell.conferenceView.previewImageView.isHidden = true
-                }
+                conferenceCell.conferenceView.titleLabel.text = conferenceViewModel.name
+                conferenceCell.conferenceView.previewImageView.image = conferenceViewModel.bannerImage
             }.disposed(by: disposeBag)
 
-        collectionView.rx.modelSelected(ConferenceMetaData.self)
+        collectionView.rx.modelSelected(ConferenceViewModel.self)
             .bind(to: viewModel.inputs.didSelectConferenceTrigger)
             .disposed(by: disposeBag)
     }
@@ -76,7 +72,7 @@ class ConferencesCollectionViewController: ViewController<ConferencesCollectionV
 extension ConferencesCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
+        return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

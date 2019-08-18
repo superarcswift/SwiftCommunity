@@ -14,20 +14,18 @@ import RxCocoa
 protocol ConferencesCollectionViewModelInput {
 
     /// Triggered when users select a conference.
-    var didSelectConferenceTrigger: AnyObserver<ConferenceMetaData> { get }
+    var didSelectConferenceTrigger: AnyObserver<ConferenceViewModel> { get }
 }
 
 protocol ConferencesCollectionViewModelOutput {
 
-    /// Emits an array of the ConferenceMetaData that should be displaed.
-    var conferences: BehaviorRelay<[ConferenceMetaData]> { get set }
+    /// Emits an array of the ConferenceViewModel that should be displaed.
+    var conferences: BehaviorRelay<[ConferenceViewModel]> { get set }
 }
 
 protocol ConferencesCollectionViewModelApi {
 
     func loadData()
-
-    func bannerImage(for conference: ConferenceMetaData) -> UIImage?
 }
 
 protocol ConferencesCollectionViewModelType {
@@ -53,19 +51,18 @@ extension ConferencesCollectionViewModelType where Self: ConferencesCollectionVi
 
 class ConferencesCollectionViewModel: CoordinatedDIViewModel<ConferencesRoute, ConferencesDependency>, ConferencesCollectionViewModelType, ConferencesCollectionViewModelInput, ConferencesCollectionViewModelOutput, ConferencesCollectionViewModelApi {
 
-
     // MARK: Properties
 
     // Private
 
-    private lazy var showConferenceAction = Action<ConferenceMetaData, Void> { [unowned self] conference in
-        self.router.rx.trigger(.conferenceDetail(conference))
+    private lazy var showConferenceAction = Action<ConferenceViewModel, Void> { [unowned self] conference in
+        self.router.rx.trigger(.conferenceDetail(conference.conferenceMetaData))
     }
 
     // Public
 
-    lazy var didSelectConferenceTrigger: AnyObserver<ConferenceMetaData> = showConferenceAction.inputs
-    var conferences = BehaviorRelay<[ConferenceMetaData]>(value: [])
+    lazy var didSelectConferenceTrigger: AnyObserver<ConferenceViewModel> = showConferenceAction.inputs
+    var conferences = BehaviorRelay<[ConferenceViewModel]>(value: [])
 
     var toggleEmptyState = PublishSubject<StandardStateViewContext?>()
     var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
@@ -74,23 +71,13 @@ class ConferencesCollectionViewModel: CoordinatedDIViewModel<ConferencesRoute, C
 
     func loadData() {
         dependency.conferencesService.fetchList()
-            .done { [weak self] conferences in
+            .mapValues {
+                ConferenceViewModel(conferenceMetaData: $0, conferencesService: self.dependency.conferencesService)
+            }.done { [weak self] conferences in
                 self?.conferences.accept(conferences)
             }
             .catch { [weak self] error in
                 self?.toggleEmptyState.on(.next(StandardStateViewContext(headline: error.localizedDescription)))
             }
-    }
-
-    func bannerImage(for conference: ConferenceMetaData) -> UIImage? {
-        guard let bannerImageURL = dependency.conferencesService.bannerImageURL(for: conference) else {
-            return nil
-        }
-
-        guard let bannerImage = UIImage(contentsOfFile: bannerImageURL.path) else {
-            return nil
-        }
-
-        return bannerImage
     }
 }

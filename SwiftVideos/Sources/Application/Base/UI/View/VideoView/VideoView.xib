@@ -37,7 +37,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video_author_default" translatesAutoresizingMaskIntoConstraints="NO" id="FfB-Qr-aY6">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="author_default" translatesAutoresizingMaskIntoConstraints="NO" id="FfB-Qr-aY6">
                     <rect key="frame" x="16" y="341" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="LR7-XN-2wP"/>
@@ -94,6 +94,6 @@
         </view>
     </objects>
     <resources>
-        <image name="video_author_default" width="400" height="400"/>
+        <image name="author_default" width="300" height="300"/>
     </resources>
 </document>
