@@ -12,16 +12,15 @@ import RxSwift
 import RxCocoa
 
 protocol AuthorsCollectionViewModelInput {
-    var didSelectAuthor: AnyObserver<AuthorMetaData> { get }
+    var didSelectAuthor: AnyObserver<AuthorViewModel> { get }
 }
 
 protocol AuthorsCollectionViewModelOutput {
-    var authors: BehaviorRelay<[AuthorMetaData]> { get set }
+    var authors: BehaviorRelay<[AuthorViewModel]> { get set }
 }
 
 protocol AuthorsCollectionViewModelApi {
     func loadData()
-    func avatarImage(of author: AuthorMetaData) -> UIImage?
 }
 
 protocol AuthorsCollectionViewType {
@@ -49,14 +48,14 @@ class AuthorsCollectionViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDe
 
     // MARK: Properties
 
-    private lazy var showAuthorAction = Action<AuthorMetaData, Void> { [unowned self] video in
-        self.router.rx.trigger(.authorDetail(video))
+    private lazy var showAuthorAction = Action<AuthorViewModel, Void> { [unowned self] author in
+        self.router.rx.trigger(.authorDetail(author.authorMetaData))
     }
 
     // Public
 
-    lazy var didSelectAuthor: AnyObserver<AuthorMetaData> = showAuthorAction.inputs
-    var authors = BehaviorRelay<[AuthorMetaData]>(value: [])
+    lazy var didSelectAuthor: AnyObserver<AuthorViewModel> = showAuthorAction.inputs
+    var authors = BehaviorRelay<[AuthorViewModel]>(value: [])
 
     var toogleStateView = PublishSubject<StandardStateViewContext?>()
     var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
@@ -65,25 +64,14 @@ class AuthorsCollectionViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDe
 
     func loadData() {
         dependency.authorsService.fetchList()
-            .done { [weak self] authors in
+            .mapValues {
+                AuthorViewModel(authorMetaData: $0, authorsService: self.dependency.authorsService)
+            }.done { [weak self] authors in
                 self?.authors.accept(authors)
             }
             .catch { [weak self] error in
                 self?.toogleStateView.onNext(StandardStateViewContext(headline: "No authors found"))
                 self?.notification.onNext(StandardNotification(error: error))
             }
-    }
-
-    func avatarImage(of author: AuthorMetaData) -> UIImage? {
-
-        guard let avatarImageURL = dependency.authorsService.avatar(of: author) else {
-            return nil
-        }
-
-        guard let avatarImage = UIImage(contentsOfFile: avatarImageURL.path) else {
-            return nil
-        }
-
-        return avatarImage
     }
 }

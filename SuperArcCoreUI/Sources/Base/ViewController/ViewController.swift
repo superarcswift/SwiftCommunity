@@ -40,10 +40,6 @@ open class ViewController<VM: ViewModel>: UIViewController, CommonViewController
 
     // MARK: Setup
 
-    open func setupViewModel() -> VM! {
-        return nil
-    }
-
     /// Setup ViewController after loading.
     open func setupViews() {
         commonSetupView()

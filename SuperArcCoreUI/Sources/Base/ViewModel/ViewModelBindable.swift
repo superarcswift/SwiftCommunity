@@ -9,7 +9,6 @@ public protocol ViewModelBindable: class {
 
     var viewModel: ViewModelType! { get set }
 
-    func setupViewModel() -> ViewModelType!
     func setupBindings()
 }
 
@@ -17,6 +16,12 @@ extension ViewModelBindable where Self: CommonViewControllerProtocol {
     func bind(to model: Self.ViewModelType) {
         viewModel = model
         commonViewDidLoad()
+    }
+}
+
+extension ViewModelBindable where Self: View {
+    func bind(to model: Self.ViewModelType) {
+        viewModel = model
         setupBindings()
     }
 }

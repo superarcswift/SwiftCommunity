@@ -36,10 +36,6 @@ open class PageViewController<VM: ViewModel>: UIPageViewController, CommonViewCo
 
     // MARK: Setup
 
-    open func setupViewModel() -> VM! {
-        return nil
-    }
-
     open func setupViews() {}
 
     open func setupBindings() {}

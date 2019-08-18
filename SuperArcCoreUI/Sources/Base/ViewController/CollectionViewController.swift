@@ -34,10 +34,6 @@ open class CollectionViewController<VM: ViewModel>: UICollectionViewController, 
 
     // MARK: Setup
 
-    open func setupViewModel() -> VM! {
-        return nil
-    }
-
     open func setupViews() {}
 
     open func setupBindings() {}

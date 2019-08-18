@@ -30,7 +30,6 @@ public protocol CommonViewControllerProtocol: HasApplicationContext, ViewModelBi
 
     func commonSetupView()
 
-    func setupViewModel() -> ViewModelType!
     func setupViews()
     func setupBindings()
     func loadData()
@@ -40,10 +39,6 @@ public protocol CommonViewControllerProtocol: HasApplicationContext, ViewModelBi
 extension CommonViewControllerProtocol where Self: UIViewController {
 
     public func commonViewDidLoad() {
-
-        if viewModel == nil {
-            viewModel = setupViewModel()
-        }
 
         setupViews()
 
