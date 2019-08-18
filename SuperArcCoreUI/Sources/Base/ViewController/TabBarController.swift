@@ -54,10 +54,6 @@ open class TabBarController<VM: ViewModel>: UITabBarController, CommonViewContro
 
     // MARK: Setup
 
-    open func setupViewModel() -> VM! {
-        return nil
-    }
-
     open func setupViews() {}
 
     open func setupBindings() {}

@@ -40,10 +40,6 @@ open class TableViewController<VM: ViewModel>: UITableViewController, CommonView
 
     // MARK: Setup
 
-    open func setupViewModel() -> VM! {
-        return nil
-    }
-
     open func setupViews() {}
 
     open func setupBindings() {}

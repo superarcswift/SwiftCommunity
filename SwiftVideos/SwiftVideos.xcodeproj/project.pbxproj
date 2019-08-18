@@ -128,6 +128,7 @@
 		F6DFE6B822FA02A40091ECE8 /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6DFE6B622FA02A40091ECE8 /* VideosTableViewCell.xib */; };
 		F6DFE6BA22FA26970091ECE8 /* OnboardingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6B922FA26960091ECE8 /* OnboardingComponent.swift */; };
 		F6DFE6BE22FA35D90091ECE8 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6BD22FA35D90091ECE8 /* AppComponent.swift */; };
+		F6E2323423096437003FBFA5 /* AuthorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2323323096437003FBFA5 /* AuthorViewModel.swift */; };
 		F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16122CA9EC900213675 /* AppDelegate.swift */; };
 		F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */; };
 		F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16822CA9ECA00213675 /* Assets.xcassets */; };
@@ -285,6 +286,7 @@
 		F6DFE6B622FA02A40091ECE8 /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
 		F6DFE6B922FA26960091ECE8 /* OnboardingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingComponent.swift; sourceTree = "<group>"; };
 		F6DFE6BD22FA35D90091ECE8 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		F6E2323323096437003FBFA5 /* AuthorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewModel.swift; sourceTree = "<group>"; };
 		F6E8D15E22CA9EC900213675 /* SwiftVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D16122CA9EC900213675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 			children = (
 				F63A720722F379D5005D0778 /* AuthorView.swift */,
 				F63A720522F379BC005D0778 /* AuthorView.xib */,
+				F6E2323323096437003FBFA5 /* AuthorViewModel.swift */,
 			);
 			path = AuthorView;
 			sourceTree = "<group>";
@@ -1334,6 +1337,7 @@
 				F6A6B55F23015D4200BFEC40 /* ConferenceDetailSectionHeaderView.swift in Sources */,
 				F66C90DF22E202E4006CA2BB /* AuthorsService.swift in Sources */,
 				F64A059022F762EC0085C0B5 /* ModelCodingError.swift in Sources */,
+				F6E2323423096437003FBFA5 /* AuthorViewModel.swift in Sources */,
 				F66C90DD22E202DA006CA2BB /* VideosService.swift in Sources */,
 				F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */,
 				F66C90D622E20235006CA2BB /* FilesystemVideosContentProvider.swift in Sources */,

@@ -9,7 +9,7 @@ import RxSwift
 
 // MARK: - View
 
-@IBDesignable class AuthorView: View, ClassNameDerivable {
+@IBDesignable class AuthorView: View, ClassNameDerivable, ViewModelBindable {
 
     // MARK: Properties
 
@@ -18,12 +18,20 @@ import RxSwift
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
 
+    // Private
+
+    var viewModel: AuthorViewModel!
+
     // MARK: Overrides
     
     override func setup() {
         if let authorView = AuthorView.instantiateFromNib(owner: self) {
             addAndStretchSubView(authorView)
         }
+    }
+
+    func setupBindings() {
+        
     }
 }
 

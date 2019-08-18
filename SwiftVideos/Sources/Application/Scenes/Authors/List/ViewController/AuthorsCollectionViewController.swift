@@ -35,20 +35,17 @@ class AuthorsCollectionViewController: ViewController<AuthorsCollectionViewModel
         super.setupBindings()
 
         viewModel.outputs.authors
-            .bind(to: collectionView.rx.items(cellIdentifier: AuthorsCollectionViewCell.className)) { [weak self] _, author, cell in
+            .bind(to: collectionView.rx.items(cellIdentifier: AuthorsCollectionViewCell.className)) { _, authorViewModel, cell in
 
                 guard let authorCell = cell as? AuthorsCollectionViewCell else {
                     fatalError("invalid cell type")
                 }
 
-                authorCell.authorView.nameLabel.text = author.name
-
-                if let avatarImage = self?.viewModel.apis.avatarImage(of: author) {
-                    authorCell.authorView.avatarImageView.image = avatarImage
-                }
+                authorCell.authorView.nameLabel.text = authorViewModel.name
+                authorCell.authorView.avatarImageView.image = authorViewModel.avatarImage
             }.disposed(by: disposeBag)
 
-        collectionView.rx.modelSelected(AuthorMetaData.self)
+        collectionView.rx.modelSelected(AuthorViewModel.self)
             .bind(to: viewModel.inputs.didSelectAuthor)
             .disposed(by: disposeBag)
     }
