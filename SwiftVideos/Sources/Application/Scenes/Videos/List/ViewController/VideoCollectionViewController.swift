@@ -54,8 +54,10 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
                     fatalError("invalid cell type")
                 }
 
+                // TODO: move VideoViewModel into VideoView, use didSet to render the view
                 videoCell.videoView.titleLabel.text = videoViewModel.name
-                videoCell.videoView.authorNameLabel.text = videoViewModel.authors
+                videoCell.videoView.authorNameLabel.text = videoViewModel.authors.first!.name
+                videoCell.videoView.authorImageView.image = videoViewModel.authors.first!.avatarImage
                 videoCell.videoView.previewImageView.image = videoViewModel.previewImage.image
                 videoCell.videoView.previewImageView.contentMode = videoViewModel.previewImage.contentMode
             }.disposed(by: disposeBag)

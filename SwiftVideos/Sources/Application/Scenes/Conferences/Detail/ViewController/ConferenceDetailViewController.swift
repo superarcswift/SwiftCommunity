@@ -37,6 +37,9 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
         collectionView.register(sectionHeader, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ConferenceDetailSectionHeaderView.className)
 
         collectionView.registerNib(VideosCollectionViewCell.self)
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.sectionHeadersPinToVisibleBounds = true
+        }
 
         title = viewModel.conferenceMetaData.name
     }
@@ -58,7 +61,8 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
             let videoCell = collectionView.dequeueReusableCell(withReuseIdentifier: VideosCollectionViewCell.className, for: indexPath) as! VideosCollectionViewCell
 
             videoCell.videoView.titleLabel.text = videoViewModel.name
-            videoCell.videoView.authorNameLabel.text = videoViewModel.authors
+            videoCell.videoView.authorNameLabel.text = videoViewModel.authors.first!.name
+            videoCell.videoView.authorImageView.image = videoViewModel.authors.first!.avatarImage
             videoCell.videoView.previewImageView.image = videoViewModel.previewImage.image
             videoCell.videoView.previewImageView.contentMode = videoViewModel.previewImage.contentMode
 
@@ -72,7 +76,7 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
 
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ConferenceDetailSectionHeaderView.className, for: indexPath) as! ConferenceDetailSectionHeaderView
 
-            headerView.backgroundColor = .green
+            headerView.backgroundColor = .lightGray
             headerView.titleLabel.text = self?.viewModel.apis.sectionTitle(for: indexPath.section)
 
             return headerView

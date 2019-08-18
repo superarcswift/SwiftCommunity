@@ -97,7 +97,7 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
     func fetchVideosList() {
         dependency.videosService.fetchList()
             .mapValues {
-                VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService)
+                VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService, authorsService: self.dependency.authorsService)
             }.done { [weak self] videos in
                 self?.videos.accept(videos)
             }
@@ -110,7 +110,7 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
     func fetchVideosList(of conference: ConferenceMetaData, in edition: ConferenceEdition) {
         dependency.videosService.fetchList(conference: conference, edition: edition)
             .mapValues {
-                VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService)
+                VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService, authorsService: self.dependency.authorsService)
             }.done { [weak self] videos in
                 self?.videos.accept(videos)
             }

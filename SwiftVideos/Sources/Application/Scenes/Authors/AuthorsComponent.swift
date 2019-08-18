@@ -45,3 +45,9 @@ extension AuthorsComponent: HasVideosService {
         return context.engine.serviceRegistry.resolve(type: VideosService.self)
     }
 }
+
+extension AuthorsComponent: HasAuthorsService {
+    var authorsService: AuthorsService {
+        return context.engine.serviceRegistry.resolve(type: AuthorsService.self)
+    }
+}

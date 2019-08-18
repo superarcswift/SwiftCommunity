@@ -9,7 +9,7 @@ import SuperArcFoundation
 import XCoordinator
 
 /// Protocol defining all dependencies required by this component.
-typealias VideosDependency = HasVideosService
+typealias VideosDependency = HasVideosService & HasAuthorsService
 
 /// Protocol can be used used to mock for testing purpose.
 protocol VideosBuilder {

@@ -9,7 +9,7 @@ import SuperArcFoundation
 import XCoordinator
 
 /// Protocol defining all dependencies required by this component..
-typealias ConferencesDependency = HasConferencesService & HasVideosService
+typealias ConferencesDependency = HasConferencesService & HasVideosService & HasAuthorsService
 
 /// Protocol used to mock for testing purpose.
 protocol ConferencesBuilder {
@@ -38,9 +38,14 @@ class ConferencesComponent: Component<ConferencesDependency>, ConferencesBuilder
     }
 }
 
-
 extension ConferencesComponent : HasVideosService {
     var videosService: VideosService {
         return context.engine.serviceRegistry.resolve(type: VideosService.self)
+    }
+}
+
+extension ConferencesComponent : HasAuthorsService {
+    var authorsService: AuthorsService {
+        return context.engine.serviceRegistry.resolve(type: AuthorsService.self)
     }
 }

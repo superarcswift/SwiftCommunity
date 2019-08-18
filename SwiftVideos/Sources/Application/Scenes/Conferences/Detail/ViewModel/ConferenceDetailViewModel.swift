@@ -82,7 +82,7 @@ class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute, Confer
     func loadData() {
         dependency.conferencesService.fetchVideos(conferenceMetaData: conferenceMetaData)
             .mapValues { videos -> ConferenceDetailSectionModel in
-                let videoModels = videos.compactMap { VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService) }
+                let videoModels = videos.compactMap { VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService, authorsService: self.dependency.authorsService) }
                 return .videosSection(items: videoModels)
             }.done { [weak self] sectionModel in
                 self?.conferenceEditions.accept(sectionModel)

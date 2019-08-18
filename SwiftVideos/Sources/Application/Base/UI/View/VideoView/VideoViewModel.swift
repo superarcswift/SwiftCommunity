@@ -4,7 +4,7 @@
 
 import SuperArcCoreUI
 import SuperArcCore
-import UIKit.UIView
+import UIKit.UIImage
 
 class VideoViewModel: ViewModel {
 
@@ -18,13 +18,17 @@ class VideoViewModel: ViewModel {
         return videoMetaData.name
     }
 
-    var authors: String {
-        return videoMetaData.authors.map { $0.name }.joined(separator: ", ")
+    var authors: [(name: String, avatarImage: UIImage)] {
+        return videoMetaData.authors.map {
+            (name: $0.name, avatarImage: avatarImage(for: $0))
+        }
     }
 
     var conferenceEditionYear: Int {
         return videoMetaData.conference.edition.year
     }
+
+
 
     var previewImage: (image: UIImage, contentMode: UIView.ContentMode) {
         guard let previewImageURL = videosService.previewImageURL(for: videoMetaData) else {
@@ -41,14 +45,32 @@ class VideoViewModel: ViewModel {
     // Private
 
     private var videosService: VideosService
+    private var authorsService: AuthorsService
+
     private var defaultPreviewView = UIImage(imageLiteralResourceName: "video_default").withRenderingMode(.alwaysTemplate)
+    private var defaultAuthorImage = UIImage(imageLiteralResourceName: "author_default").withRenderingMode(.alwaysTemplate)
 
     // MARK: Initialization
 
-    init(videoMetaData: VideoMetaData, videosService: VideosService) {
+    init(videoMetaData: VideoMetaData, videosService: VideosService, authorsService: AuthorsService) {
         self.videoMetaData = videoMetaData
         self.videosService = videosService
+        self.authorsService = authorsService
         super.init()
+    }
+
+    // MARK: Private helpers
+
+    func avatarImage(for author: AuthorMetaData) -> UIImage {
+        guard let avatarImageURL = authorsService.avatar(of: author) else {
+            return defaultAuthorImage
+        }
+
+        guard let avatarImage = UIImage(contentsOfFile: avatarImageURL.path) else {
+            return defaultAuthorImage
+        }
+
+        return avatarImage
     }
 }
 
