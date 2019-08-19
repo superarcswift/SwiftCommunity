@@ -131,13 +131,14 @@
 		F6E2323423096437003FBFA5 /* AuthorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2323323096437003FBFA5 /* AuthorViewModel.swift */; };
 		F6E2323623096D68003FBFA5 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2323523096D68003FBFA5 /* VideoViewModel.swift */; };
 		F6E232382309EC7C003FBFA5 /* ConferenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E232372309EC7C003FBFA5 /* ConferenceViewModel.swift */; };
+		F6E2323D230A87F7003FBFA5 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2323C230A87F7003FBFA5 /* AboutViewModel.swift */; };
+		F6E2323F230A8DBE003FBFA5 /* MarkdownView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E2323E230A8DBE003FBFA5 /* MarkdownView.framework */; };
 		F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16122CA9EC900213675 /* AppDelegate.swift */; };
 		F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */; };
 		F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16822CA9ECA00213675 /* Assets.xcassets */; };
 		F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */; };
 		F6E8D17722CA9ECA00213675 /* SwiftVideosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D17622CA9ECA00213675 /* SwiftVideosTests.swift */; };
 		F6E8D18222CA9ECA00213675 /* SwiftVideosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D18122CA9ECA00213675 /* SwiftVideosUITests.swift */; };
-		F6F031D42304A0FE00BA633D /* VersaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F031D32304A0FE00BA633D /* VersaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -291,6 +292,8 @@
 		F6E2323323096437003FBFA5 /* AuthorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewModel.swift; sourceTree = "<group>"; };
 		F6E2323523096D68003FBFA5 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		F6E232372309EC7C003FBFA5 /* ConferenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceViewModel.swift; sourceTree = "<group>"; };
+		F6E2323C230A87F7003FBFA5 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
+		F6E2323E230A8DBE003FBFA5 /* MarkdownView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarkdownView.framework; path = Carthage/Build/iOS/MarkdownView.framework; sourceTree = "<group>"; };
 		F6E8D15E22CA9EC900213675 /* SwiftVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D16122CA9EC900213675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -303,7 +306,6 @@
 		F6E8D17D22CA9ECA00213675 /* SwiftVideosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVideosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D18122CA9ECA00213675 /* SwiftVideosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVideosUITests.swift; sourceTree = "<group>"; };
 		F6E8D18322CA9ECA00213675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6F031D32304A0FE00BA633D /* VersaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VersaPlayer.framework; path = Carthage/Build/iOS/VersaPlayer.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,8 +313,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E2323F230A8DBE003FBFA5 /* MarkdownView.framework in Frameworks */,
 				F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */,
-				F6F031D42304A0FE00BA633D /* VersaPlayer.framework in Frameworks */,
 				F6A6B55723014CFF00BFEC40 /* Differentiator.framework in Frameworks */,
 				F6A6B55523008F7E00BFEC40 /* RxDataSources.framework in Frameworks */,
 				F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */,
@@ -722,6 +724,7 @@
 			isa = PBXGroup;
 			children = (
 				F66C90C922E1FE9B006CA2BB /* ViewController */,
+				F6E23239230A87C3003FBFA5 /* ViewModel */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -988,8 +991,8 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6E2323E230A8DBE003FBFA5 /* MarkdownView.framework */,
 				F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */,
-				F6F031D32304A0FE00BA633D /* VersaPlayer.framework */,
 				F6A6B55623014CFF00BFEC40 /* Differentiator.framework */,
 				F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */,
 				F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */,
@@ -1063,6 +1066,14 @@
 				F642389E22CD3372000F5CE3 /* Models */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		F6E23239230A87C3003FBFA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6E2323C230A87F7003FBFA5 /* AboutViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F6E8D15522CA9EC900213675 = {
@@ -1295,7 +1306,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/VersaPlayer.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MarkdownView.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -1315,7 +1326,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/VersaPlayer.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MarkdownView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1387,6 +1398,7 @@
 				F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */,
 				F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */,
 				F64238C722CD4FEC000F5CE3 /* AuthorsCollectionViewController.swift in Sources */,
+				F6E2323D230A87F7003FBFA5 /* AboutViewModel.swift in Sources */,
 				F68F655022FD9B730026604C /* DependencyInjectedViewModel.swift in Sources */,
 				F675C34822DE27A700FA77DD /* ConferencesService.swift in Sources */,
 				F63712FB22EB98440071C2DC /* ContentDataProvider.swift in Sources */,

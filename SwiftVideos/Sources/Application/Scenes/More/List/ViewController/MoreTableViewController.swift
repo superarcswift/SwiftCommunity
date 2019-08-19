@@ -62,7 +62,7 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch Section(from: indexPath.section) {
         case .about:
-            performSegue(withIdentifier: SegueIdentifier.showAbout.rawValue, sender: self)
+            viewModel.router.trigger(.about)
         case .reset:
             confirmReset()
         }

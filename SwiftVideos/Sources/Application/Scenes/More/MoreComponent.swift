@@ -25,4 +25,12 @@ class MoreComponent: Component<MoreDependency>, MoreBuilder {
         viewController.viewModel = viewModel
         return viewController
     }
+
+    func makeAboutViewController(router: AnyRouter<MoreRoute>) -> AboutViewController {
+        let viewController = AboutViewController.instantiate(with: context)
+        let viewModel = AboutViewModel(dependency: dependency)
+        viewController.viewModel = viewModel
+        return viewController
+    }
+
 }

@@ -31,6 +31,10 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
             let viewController = component.makeMoreTableViewController(router: anyRouter)
             return .push(viewController)
 
+        case .about:
+            let viewController = component.makeAboutViewController(router: anyRouter)
+            return .push(viewController)
+
         case .reset:
             return .dismiss()
         }
@@ -40,5 +44,6 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
 enum MoreRoute: Route {
     case list
+    case about
     case reset
 }
