@@ -17,14 +17,13 @@ protocol AuthorDetailViewModelInput {
 
 protocol AuthorDetailViewModelOutput {
     var authorDetail: BehaviorRelay<AuthorDetail?> { get set }
-    var videos: BehaviorRelay<[VideoMetaData]?> { get set }
+    var videos: BehaviorRelay<[VideoViewModel]?> { get set }
 }
 
 protocol AuthorDetailViewModelApi {
     func loadData()
     func avatarImage(of author: AuthorMetaData) -> UIImage?
-    func previewImage(for video: VideoMetaData) -> UIImage?
-    func present(_ video: VideoMetaData)
+    func present(_ video: VideoViewModel)
 }
 
 protocol AuthorDetailViewModelType {
@@ -55,7 +54,7 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
     // Public
 
     var authorDetail = BehaviorRelay<AuthorDetail?>(value: nil)
-    var videos = BehaviorRelay<[VideoMetaData]?>(value: nil)
+    var videos = BehaviorRelay<[VideoViewModel]?>(value: nil)
     var toogleStateView = PublishSubject<StandardStateViewContext?>()
     var toogleVideosStateView = PublishSubject<StandardStateViewContext?>()
     var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
@@ -77,17 +76,17 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
         dependency.authorsService.fetchAuthor(with: authorMetaData)
             .done { [weak self] author in
                 self?.authorDetail.accept(author)
-            }
-            .catch { [weak self] error in
+            }.catch { [weak self] error in
                 self?.toogleStateView.onNext(StandardStateViewContext(headline: error.localizedDescription))
                 self?.notification.onNext(StandardNotification(error: error))
             }
 
         dependency.videosService.fetchVideo(page: 1, author: authorMetaData)
-            .done { [weak self] videos in
+            .mapValues {
+                VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService, authorsService: self.dependency.authorsService)
+            }.done { [weak self] videos in
                 self?.videos.accept(videos)
-            }
-            .catch { [weak self] error in
+            }.catch { [weak self] error in
                 self?.toogleVideosStateView.onNext(StandardStateViewContext(headline: error.localizedDescription))
             }
     }
@@ -105,21 +104,8 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
         return avatarImage
     }
 
-    func previewImage(for video: VideoMetaData) -> UIImage? {
-
-        guard let previewImageURL = dependency.videosService.previewImageURL(for: video) else {
-            return UIImage(named: "video_preview_default")
-        }
-
-        guard let previewImage = UIImage(contentsOfFile: previewImageURL.path) else {
-            return UIImage(named: "video_preview_default")
-        }
-
-        return previewImage
-    }
-
-    func present(_ video: VideoMetaData) {
-        router.trigger(.videoDetail(video))
+    func present(_ video: VideoViewModel) {
+        router.trigger(.videoDetail(video.videoMetaData))
     }
 
 }

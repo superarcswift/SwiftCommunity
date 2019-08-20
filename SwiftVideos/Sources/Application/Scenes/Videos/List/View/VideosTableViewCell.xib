@@ -20,9 +20,10 @@
                 <subviews>
                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k9-fc-v3r" customClass="VideoView" customModule="SwiftVideos" customModuleProvider="target">
                         <rect key="frame" x="16" y="8" width="375" height="179.5"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="7k9-fc-v3r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="4RN-d8-crs"/>
                     <constraint firstAttribute="bottom" secondItem="7k9-fc-v3r" secondAttribute="bottom" constant="8" id="D23-xO-cFy"/>
@@ -30,6 +31,7 @@
                     <constraint firstItem="7k9-fc-v3r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bps-sS-UEH"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="videoView" destination="7k9-fc-v3r" id="7IC-Us-Ppe"/>
             </connections>

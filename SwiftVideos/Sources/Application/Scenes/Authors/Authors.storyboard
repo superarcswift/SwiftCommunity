@@ -61,24 +61,24 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Oso-f2-N2j">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AuthorAvatarTableViewCell" rowHeight="150" id="xYn-hs-0gA" customClass="AuthorAvatarTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AuthorAvatarTableViewCell" rowHeight="138" id="xYn-hs-0gA" customClass="AuthorAvatarTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xYn-hs-0gA" id="C3f-fq-rtA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qn-dc-I3c" customClass="AuthorView" customModule="SwiftVideos" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="16" width="414" height="118"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="7qn-dc-I3c" secondAttribute="bottom" constant="16" id="1BI-42-iWh"/>
-                                                <constraint firstItem="7qn-dc-I3c" firstAttribute="top" secondItem="C3f-fq-rtA" secondAttribute="top" constant="16" id="E4O-oC-Y86"/>
+                                                <constraint firstAttribute="bottom" secondItem="7qn-dc-I3c" secondAttribute="bottom" id="1BI-42-iWh"/>
+                                                <constraint firstItem="7qn-dc-I3c" firstAttribute="top" secondItem="C3f-fq-rtA" secondAttribute="top" id="E4O-oC-Y86"/>
                                                 <constraint firstItem="7qn-dc-I3c" firstAttribute="leading" secondItem="C3f-fq-rtA" secondAttribute="leading" id="HWd-uf-WZ1"/>
                                                 <constraint firstAttribute="trailing" secondItem="7qn-dc-I3c" secondAttribute="trailing" id="Qi2-OF-1ZA"/>
                                             </constraints>
@@ -89,7 +89,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AuthorResourcesTableViewCell" id="TPH-0g-vwi" customClass="AuthorResourcesTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="205.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="193.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TPH-0g-vwi" id="44m-WQ-F8i">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -101,7 +101,7 @@
                                                         <constraint firstAttribute="width" constant="100" id="v8P-1Y-orE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ok-RI-GZ6">
@@ -121,6 +121,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="8Ok-RI-GZ6" secondAttribute="bottom" id="vXm-PA-7ad"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.95342905963132829" green="0.95342905963132829" blue="0.95342905963132829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="typeLabel" destination="NYi-eK-bhy" id="kpK-19-9cl"/>
                                             <outlet property="valueLabel" destination="8Ok-RI-GZ6" id="dmi-g7-vg0"/>

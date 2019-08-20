@@ -132,17 +132,12 @@ extension AuthorDetailViewController: UITableViewDataSource {
 
             let videoCell = tableView.dequeueReusableCell(VideosTableViewCell.self, for: indexPath)
 
-            if let video = viewModel.videos.value?[indexPath.row] {
-
-                videoCell.videoView.titleLabel.text = video.name
-
-                videoCell.videoView.authorNameLabel.text = video.authors.first?.name
-
-                if let previewImage = viewModel.previewImage(for: video) {
-                    videoCell.videoView.previewImageView.image = previewImage
-                } else {
-                    videoCell.videoView.previewImageView.isHidden = true
-                }
+            if let videoViewModel = viewModel.videos.value?[indexPath.row] {
+                videoCell.videoView.titleLabel.text = videoViewModel.name
+                videoCell.videoView.authorNameLabel.text = videoViewModel.authors.first!.name
+                videoCell.videoView.authorImageView.image = videoViewModel.authors.first!.avatarImage
+                videoCell.videoView.previewImageView.image = videoViewModel.previewImage.image
+                videoCell.videoView.previewImageView.contentMode = videoViewModel.previewImage.contentMode
             }
 
             return videoCell
@@ -156,7 +151,7 @@ extension AuthorDetailViewController: UITableViewDataSource {
         switch Section(rawValue: indexPath.section) {
 
         case .avatar?:
-            return 170
+            return 138
 
         case .resources?:
             return 44
@@ -168,14 +163,40 @@ extension AuthorDetailViewController: UITableViewDataSource {
             fatalError("invalid section")
         }
     }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 12.0
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 12.0
+    }
 }
 
 extension AuthorDetailViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         switch Section.from(rawValue: indexPath.section) {
+
         case .resources:
-            break
+            if let authorDetail = viewModel.authorDetail.value {
+                let resource = authorDetail.resources[indexPath.row]
+                switch resource {
+                case .github(url: let urlOrNil):
+                    guard let url = urlOrNil else { return }
+                    UIApplication.shared.open(url, options: [:])
+                    break
+                case .homepage(url: let urlOrNil):
+                    guard let url = urlOrNil else { return }
+                    UIApplication.shared.open(url, options: [:])
+                    break
+                case .linkedin(url: let urlOrNil):
+                    guard let url = urlOrNil else { return }
+                    UIApplication.shared.open(url, options: [:])
+                    break
+                }
+            }
 
         case .videos:
             if let video = viewModel.videos.value?[indexPath.row] {

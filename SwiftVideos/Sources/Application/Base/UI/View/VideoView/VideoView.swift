@@ -21,6 +21,7 @@ import SuperArcFoundation
 
     override func setup() {
         if let videoView = VideoView.instantiateFromNib(owner: self) {
+            videoView.backgroundColor = .clear
             addAndStretchSubView(videoView)
         }
     }
