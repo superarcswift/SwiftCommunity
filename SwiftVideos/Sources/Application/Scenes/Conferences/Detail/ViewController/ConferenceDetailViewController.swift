@@ -76,7 +76,7 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
 
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ConferenceDetailSectionHeaderView.className, for: indexPath) as! ConferenceDetailSectionHeaderView
 
-            headerView.backgroundColor = .lightGray
+            headerView.backgroundColor = UIColor(hex: 0xF3F3F3)
             headerView.titleLabel.text = self?.viewModel.apis.sectionTitle(for: indexPath.section)
 
             return headerView

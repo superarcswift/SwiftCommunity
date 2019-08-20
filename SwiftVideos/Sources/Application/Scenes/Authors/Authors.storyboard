@@ -121,7 +121,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="8Ok-RI-GZ6" secondAttribute="bottom" id="vXm-PA-7ad"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.95342905963132829" green="0.95342905963132829" blue="0.95342905963132829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="typeLabel" destination="NYi-eK-bhy" id="kpK-19-9cl"/>
                                             <outlet property="valueLabel" destination="8Ok-RI-GZ6" id="dmi-g7-vg0"/>

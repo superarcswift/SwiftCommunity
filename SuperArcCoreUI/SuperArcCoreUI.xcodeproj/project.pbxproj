@@ -32,6 +32,7 @@
 		F6C4C05F22E7CCF600C0636E /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05E22E7CCF600C0636E /* ViewModelBindable.swift */; };
 		F6DFE6B022FA00630091ECE8 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6AF22FA00630091ECE8 /* UITableView+Extensions.swift */; };
 		F6DFE6B422FA01EF0091ECE8 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6B322FA01EF0091ECE8 /* UICollectionView+Extensions.swift */; };
+		F6EFBF43230C9765004C2D0A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EFBF42230C9765004C2D0A /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		F6C4C05E22E7CCF600C0636E /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
 		F6DFE6AF22FA00630091ECE8 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		F6DFE6B322FA01EF0091ECE8 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		F6EFBF42230C9765004C2D0A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				F63A71F422F226FC005D0778 /* UIView+Extensions.swift */,
 				F6DFE6AF22FA00630091ECE8 /* UITableView+Extensions.swift */,
 				F6DFE6B322FA01EF0091ECE8 /* UICollectionView+Extensions.swift */,
+				F6EFBF42230C9765004C2D0A /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				F66C908722E0BB75006CA2BB /* NavigationController.swift in Sources */,
 				F63A71F522F226FC005D0778 /* UIView+Extensions.swift in Sources */,
 				F66C908922E0BB75006CA2BB /* TabBarController.swift in Sources */,
+				F6EFBF43230C9765004C2D0A /* UIColor+Extensions.swift in Sources */,
 				F66C908622E0BB75006CA2BB /* PageViewController.swift in Sources */,
 				F66C908322E0BB75006CA2BB /* CommonViewController.swift in Sources */,
 				F66C908222E0BB75006CA2BB /* UIViewController+Extensions.swift in Sources */,
