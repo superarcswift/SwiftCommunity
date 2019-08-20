@@ -26,13 +26,12 @@ import RxSwift
     
     override func setup() {
         if let authorView = AuthorView.instantiateFromNib(owner: self) {
+            authorView.backgroundColor = .clear
             addAndStretchSubView(authorView)
         }
     }
 
-    func setupBindings() {
-        
-    }
+    func setupBindings() {}
 }
 
 // MARK: - Binding

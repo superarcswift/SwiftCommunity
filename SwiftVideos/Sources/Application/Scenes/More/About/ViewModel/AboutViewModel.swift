@@ -6,9 +6,15 @@ import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
 
-class AboutViewModel: DIViewModel<MoreDependency> {
+class AboutViewModel: ViewModel {
+
+    // MARK: Properties
+
+    // Static
 
     static let readmeFilename = "README.md"
+
+    // MARK: APIs
 
     func readProjectDescription() -> String? {
         guard let path = Bundle.main.path(forResource: "README", ofType: "md") else {

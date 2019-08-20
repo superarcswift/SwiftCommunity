@@ -28,7 +28,7 @@ class MoreComponent: Component<MoreDependency>, MoreBuilder {
 
     func makeAboutViewController(router: AnyRouter<MoreRoute>) -> AboutViewController {
         let viewController = AboutViewController.instantiate(with: context)
-        let viewModel = AboutViewModel(dependency: dependency)
+        let viewModel = AboutViewModel()
         viewController.viewModel = viewModel
         return viewController
     }

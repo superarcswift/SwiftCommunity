@@ -59,12 +59,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oso-f2-N2j">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Oso-f2-N2j">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AuthorAvatarTableViewCell" rowHeight="150" id="xYn-hs-0gA" customClass="AuthorAvatarTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xYn-hs-0gA" id="C3f-fq-rtA">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -72,9 +72,10 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qn-dc-I3c" customClass="AuthorView" customModule="SwiftVideos" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="16" width="414" height="118"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="7qn-dc-I3c" secondAttribute="bottom" constant="16" id="1BI-42-iWh"/>
                                                 <constraint firstItem="7qn-dc-I3c" firstAttribute="top" secondItem="C3f-fq-rtA" secondAttribute="top" constant="16" id="E4O-oC-Y86"/>
@@ -82,12 +83,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="7qn-dc-I3c" secondAttribute="trailing" id="Qi2-OF-1ZA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="authorView" destination="7qn-dc-I3c" id="LQn-os-lB2"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AuthorResourcesTableViewCell" id="TPH-0g-vwi" customClass="AuthorResourcesTableViewCell" customModule="SwiftVideos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="178" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="205.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TPH-0g-vwi" id="44m-WQ-F8i">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
