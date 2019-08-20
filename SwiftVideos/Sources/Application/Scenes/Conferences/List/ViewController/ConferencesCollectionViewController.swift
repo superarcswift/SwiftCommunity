@@ -78,6 +78,6 @@ extension ConferencesCollectionViewController: UICollectionViewDelegateFlowLayou
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = screenSize.width - 16*2
-        return CGSize(width: cellWidth, height: 200)
+        return CGSize(width: cellWidth, height: 150)
     }
 }
