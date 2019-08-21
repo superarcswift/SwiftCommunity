@@ -111,9 +111,7 @@ extension AuthorDetailViewController: UITableViewDataSource {
         case .avatar?:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AuthorAvatarTableViewCell", for: indexPath) as! AuthorAvatarTableViewCell
 
-            if let authorDetail = viewModel.authorDetail.value {
-                cell.authorView.viewModel = viewModel.authorViewModel
-            }
+            cell.authorView.viewModel = viewModel.authorViewModel
 
             return cell
 
