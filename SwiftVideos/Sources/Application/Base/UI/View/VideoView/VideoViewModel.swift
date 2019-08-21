@@ -24,11 +24,13 @@ class VideoViewModel: ViewModel {
         }
     }
 
+    var conferenceName: String {
+        return "\(videoMetaData.conference.metaData.name) \(conferenceEditionYear)"
+    }
+
     var conferenceEditionYear: Int {
         return videoMetaData.conference.edition.year
     }
-
-
 
     var previewImage: (image: UIImage, contentMode: UIView.ContentMode) {
         guard let previewImageURL = videosService.previewImageURL(for: videoMetaData) else {

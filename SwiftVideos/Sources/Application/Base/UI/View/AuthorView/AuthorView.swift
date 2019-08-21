@@ -20,7 +20,12 @@ import RxSwift
 
     // Private
 
-    var viewModel: AuthorViewModel!
+    var viewModel: AuthorViewModel! {
+        didSet {
+            nameLabel.text = viewModel.name
+            avatarImageView.image = viewModel.avatarImage
+        }
+    }
 
     // MARK: Overrides
     
@@ -32,15 +37,4 @@ import RxSwift
     }
 
     func setupBindings() {}
-}
-
-// MARK: - Binding
-
-extension Reactive where Base: AuthorView {
-
-    var author: Binder<AuthorMetaData> {
-        return Binder<AuthorMetaData>(self.base) { authorView, authorMetaData in
-            authorView.nameLabel.text = authorMetaData.name
-        }
-    }
 }

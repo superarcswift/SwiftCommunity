@@ -67,7 +67,7 @@ public class GitService: Service, GitServiceProtocol {
     // MARK: APIs
 
     /// Prepare the repository on local disk for displaying content.
-    /// - Result: bool
+    /// - Returns: bool
     public func open() -> Bool {
 
         guard FileManager.default.fileExists(atPath: baseLocalRepositoryPath) else {

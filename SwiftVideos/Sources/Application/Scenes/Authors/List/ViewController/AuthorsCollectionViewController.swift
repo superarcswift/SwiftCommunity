@@ -41,8 +41,8 @@ class AuthorsCollectionViewController: ViewController<AuthorsCollectionViewModel
                     fatalError("invalid cell type")
                 }
 
-                authorCell.authorView.nameLabel.text = authorViewModel.name
-                authorCell.authorView.avatarImageView.image = authorViewModel.avatarImage
+                authorCell.authorView.viewModel = authorViewModel
+
             }.disposed(by: disposeBag)
 
         collectionView.rx.modelSelected(AuthorViewModel.self)

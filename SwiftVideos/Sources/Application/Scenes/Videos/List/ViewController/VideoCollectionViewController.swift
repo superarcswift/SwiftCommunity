@@ -53,13 +53,7 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
                 guard let videoCell = cell as? VideosCollectionViewCell else {
                     fatalError("invalid cell type")
                 }
-
-                // TODO: move VideoViewModel into VideoView, use didSet to render the view
-                videoCell.videoView.titleLabel.text = videoViewModel.name
-                videoCell.videoView.authorNameLabel.text = videoViewModel.authors.first!.name
-                videoCell.videoView.authorImageView.image = videoViewModel.authors.first!.avatarImage
-                videoCell.videoView.previewImageView.image = videoViewModel.previewImage.image
-                videoCell.videoView.previewImageView.contentMode = videoViewModel.previewImage.contentMode
+                videoCell.videoView.viewModel = videoViewModel
             }.disposed(by: disposeBag)
 
         collectionView.rx.modelSelected(VideoViewModel.self)
@@ -89,6 +83,6 @@ extension VideosCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = screenSize.width - 16*2
-        return CGSize(width: cellWidth, height: 280)
+        return CGSize(width: cellWidth, height: 305)
     }
 }

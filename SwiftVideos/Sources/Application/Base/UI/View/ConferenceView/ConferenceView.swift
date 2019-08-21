@@ -5,7 +5,7 @@
 import SuperArcCoreUI
 import SuperArcFoundation
 
-@IBDesignable class ConferenceView: View, ClassNameDerivable {
+@IBDesignable class ConferenceView: View, ClassNameDerivable, ViewModelBindable {
 
     // MARK: Properties
 
@@ -15,11 +15,22 @@ import SuperArcFoundation
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
 
-    // MARK: Overrides
+    // Private
+
+    var viewModel: ConferenceViewModel! {
+        didSet {
+            titleLabel.text = viewModel.name
+            previewImageView.image = viewModel.bannerImage
+        }
+    }
+
+    // MARK: Setup
 
     override func setup() {
         if let conferenceView = ConferenceView.instantiateFromNib(owner: self) {
             addAndStretchSubView(conferenceView)
         }
     }
+
+    func setupBindings() {}
 }

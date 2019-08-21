@@ -133,11 +133,7 @@ extension AuthorDetailViewController: UITableViewDataSource {
             let videoCell = tableView.dequeueReusableCell(VideosTableViewCell.self, for: indexPath)
 
             if let videoViewModel = viewModel.videos.value?[indexPath.row] {
-                videoCell.videoView.titleLabel.text = videoViewModel.name
-                videoCell.videoView.authorNameLabel.text = videoViewModel.authors.first!.name
-                videoCell.videoView.authorImageView.image = videoViewModel.authors.first!.avatarImage
-                videoCell.videoView.previewImageView.image = videoViewModel.previewImage.image
-                videoCell.videoView.previewImageView.contentMode = videoViewModel.previewImage.contentMode
+                videoCell.videoView.viewModel = videoViewModel
             }
 
             return videoCell
@@ -157,7 +153,7 @@ extension AuthorDetailViewController: UITableViewDataSource {
             return 44
 
         case .videos?:
-            return 280
+            return 305
 
         default:
             fatalError("invalid section")

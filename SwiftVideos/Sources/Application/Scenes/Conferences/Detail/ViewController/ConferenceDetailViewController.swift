@@ -60,11 +60,7 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
         let dataSource = RxCollectionViewSectionedReloadDataSource<ConferenceDetailSectionModel>(configureCell: { (dataSource, collectionView, indexPath, videoViewModel) -> UICollectionViewCell in
             let videoCell = collectionView.dequeueReusableCell(withReuseIdentifier: VideosCollectionViewCell.className, for: indexPath) as! VideosCollectionViewCell
 
-            videoCell.videoView.titleLabel.text = videoViewModel.name
-            videoCell.videoView.authorNameLabel.text = videoViewModel.authors.first!.name
-            videoCell.videoView.authorImageView.image = videoViewModel.authors.first!.avatarImage
-            videoCell.videoView.previewImageView.image = videoViewModel.previewImage.image
-            videoCell.videoView.previewImageView.contentMode = videoViewModel.previewImage.contentMode
+            videoCell.videoView.viewModel = videoViewModel
 
             return videoCell
         })
@@ -111,6 +107,6 @@ extension ConferenceDetailViewController: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = screenSize.width - 16*2
-        return CGSize(width: cellWidth, height: 280)
+        return CGSize(width: cellWidth, height: 305)
     }
 }

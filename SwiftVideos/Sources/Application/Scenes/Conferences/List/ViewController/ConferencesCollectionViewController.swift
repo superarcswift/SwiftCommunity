@@ -53,8 +53,7 @@ class ConferencesCollectionViewController: ViewController<ConferencesCollectionV
                 guard let conferenceCell = cell as? ConferenceCollectionViewCell else {
                     fatalError("wrong cell type")
                 }
-                conferenceCell.conferenceView.titleLabel.text = conferenceViewModel.name
-                conferenceCell.conferenceView.previewImageView.image = conferenceViewModel.bannerImage
+                conferenceCell.conferenceView.viewModel = conferenceViewModel
             }.disposed(by: disposeBag)
 
         collectionView.rx.modelSelected(ConferenceViewModel.self)
