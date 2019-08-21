@@ -301,6 +301,7 @@
 		F6E8D17D22CA9ECA00213675 /* SwiftVideosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVideosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D18122CA9ECA00213675 /* SwiftVideosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVideosUITests.swift; sourceTree = "<group>"; };
 		F6E8D18322CA9ECA00213675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6EFBFD3230D62B5004C2D0A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -756,6 +757,7 @@
 		F66C90D222E201E5006CA2BB /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				F66C90D522E20235006CA2BB /* FilesystemVideosContentProvider.swift */,
 				F66C90D422E201FD006CA2BB /* Mock */,
 			);
 			path = Videos;
@@ -764,6 +766,7 @@
 		F66C90D322E201EA006CA2BB /* Authors */ = {
 			isa = PBXGroup;
 			children = (
+				F66C90E022E20412006CA2BB /* FilesystemAuthorsContentProvider.swift */,
 				F66C90D822E2024F006CA2BB /* Mock */,
 			);
 			path = Authors;
@@ -772,7 +775,6 @@
 		F66C90D422E201FD006CA2BB /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				F66C90D522E20235006CA2BB /* FilesystemVideosContentProvider.swift */,
 				F66C90D722E2023B006CA2BB /* Data */,
 			);
 			path = Mock;
@@ -789,7 +791,6 @@
 		F66C90D822E2024F006CA2BB /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				F66C90E022E20412006CA2BB /* FilesystemAuthorsContentProvider.swift */,
 				F66C90D922E20254006CA2BB /* Data */,
 			);
 			path = Mock;
@@ -900,6 +901,7 @@
 		F675C34D22DE2E9700FA77DD /* Conferences */ = {
 			isa = PBXGroup;
 			children = (
+				F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */,
 				F689EC3922CE207B00CE3996 /* Mock */,
 			);
 			path = Conferences;
@@ -954,7 +956,6 @@
 		F689EC3922CE207B00CE3996 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				F675C35022DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift */,
 				F675C34F22DE2ED600FA77DD /* Data */,
 			);
 			path = Mock;
@@ -1069,6 +1070,7 @@
 		F6E8D15522CA9EC900213675 = {
 			isa = PBXGroup;
 			children = (
+				F6EFBFD3230D62B5004C2D0A /* Package.swift */,
 				F66D10E323036AEF0017C352 /* Cartfile */,
 				F6453B9F22EB304800392F93 /* README.md */,
 				F6E8D16022CA9EC900213675 /* Sources */,
