@@ -85,7 +85,10 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
                 self?.videoDetail.accept(videoDetail)
             }
             .catch { [weak self] error in
-                self?.notification.onNext(StandardNotification(error: error))
+                guard let self = self else { return }
+
+                let fallbackVideoDetail = VideoDetail(metaData: self.videoMetaData, description: nil, resources: nil)
+                self.videoDetail.accept(fallbackVideoDetail)
             }
     }
 

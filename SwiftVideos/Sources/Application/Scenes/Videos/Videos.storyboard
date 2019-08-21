@@ -59,18 +59,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXE-hb-Wxi">
-                                <rect key="frame" x="8" y="345" width="398" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ5-fV-dds">
                                 <rect key="frame" x="8" y="293" width="398" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="D1T-SV-Xb8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -81,22 +75,38 @@
                                     <constraint firstAttribute="width" secondItem="Ckb-7t-IT8" secondAttribute="height" multiplier="16:9" id="iGk-Xt-hJU"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA2-fz-oTE">
+                                <rect key="frame" x="8" y="345" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXE-hb-Wxi">
+                                <rect key="frame" x="8" y="382" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TXE-hb-Wxi" firstAttribute="top" secondItem="ZJ5-fV-dds" secondAttribute="bottom" constant="8" id="Tbk-jv-UIo"/>
+                            <constraint firstItem="OA2-fz-oTE" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" constant="8" id="CQ8-DD-7AL"/>
+                            <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="OA2-fz-oTE" secondAttribute="trailing" constant="8" id="CuP-1q-Ouq"/>
                             <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="ZJ5-fV-dds" secondAttribute="trailing" constant="8" id="awH-cv-Tes"/>
                             <constraint firstItem="TXE-hb-Wxi" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" constant="8" id="cgP-1S-n4N"/>
                             <constraint firstItem="Ckb-7t-IT8" firstAttribute="top" secondItem="HkW-YH-3qI" secondAttribute="top" id="e60-zy-MoE"/>
                             <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="Ckb-7t-IT8" secondAttribute="trailing" id="eun-RT-YBU"/>
                             <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="TXE-hb-Wxi" secondAttribute="trailing" constant="8" id="iq3-46-Gar"/>
                             <constraint firstItem="Ckb-7t-IT8" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" id="lh1-ij-QOa"/>
+                            <constraint firstItem="TXE-hb-Wxi" firstAttribute="top" secondItem="OA2-fz-oTE" secondAttribute="bottom" constant="16" id="moQ-cC-4X9"/>
+                            <constraint firstItem="OA2-fz-oTE" firstAttribute="top" secondItem="ZJ5-fV-dds" secondAttribute="bottom" constant="8" id="o6K-ya-nUh"/>
                             <constraint firstItem="ZJ5-fV-dds" firstAttribute="top" secondItem="Ckb-7t-IT8" secondAttribute="bottom" constant="16" id="rta-Pi-vvb"/>
                             <constraint firstItem="ZJ5-fV-dds" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" constant="8" id="ssB-Iq-FWS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HkW-YH-3qI"/>
                     </view>
                     <connections>
+                        <outlet property="conferenceLabel" destination="OA2-fz-oTE" id="9Sr-he-tm3"/>
                         <outlet property="descriptionLabel" destination="TXE-hb-Wxi" id="AsL-FX-ltn"/>
                         <outlet property="nameLabel" destination="ZJ5-fV-dds" id="Osp-kb-Vva"/>
                         <outlet property="videoPlayerContainerView" destination="Ckb-7t-IT8" id="F5H-xS-xAL"/>

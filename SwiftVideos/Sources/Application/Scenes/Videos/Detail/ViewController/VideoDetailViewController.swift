@@ -27,6 +27,7 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
     @IBOutlet weak var videoPlayerContainerView: UIView!
     @IBOutlet weak var startVideoPlayerButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var conferenceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
     // Public
@@ -74,6 +75,7 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
             }
 
             self?.nameLabel.text = video?.metaData.name
+            self?.conferenceLabel.text = video?.metaData.conference.metaData.name
             self?.descriptionLabel.text = video?.description
 
         }.disposed(by: disposeBag)

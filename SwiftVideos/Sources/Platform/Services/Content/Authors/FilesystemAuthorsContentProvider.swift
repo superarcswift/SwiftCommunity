@@ -58,13 +58,18 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
     public func avatar(of authorMetaData: AuthorMetaData) -> URL? {
         let authorFolderURL = baseFolderURL
             .appendingPathComponent("authors", isDirectory: true)
-        let previewFileURL = authorFolderURL.appendingPathComponent("\(authorMetaData.id).jpg")
+        let previewJPGFileURL = authorFolderURL.appendingPathComponent("\(authorMetaData.id).jpg")
+        let previewPNGFileURL = authorFolderURL.appendingPathComponent("\(authorMetaData.id).png")
 
-        guard fileManager.fileExists(atPath: authorFolderURL.path) else {
-            return nil
+        if fileManager.fileExists(atPath: previewJPGFileURL.path) {
+            return previewJPGFileURL
         }
 
-        return previewFileURL
+        if fileManager.fileExists(atPath: previewPNGFileURL.path) {
+            return previewPNGFileURL
+        }
+
+        return nil
     }
 
 }

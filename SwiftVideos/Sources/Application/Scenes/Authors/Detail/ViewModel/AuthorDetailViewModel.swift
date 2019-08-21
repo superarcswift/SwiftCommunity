@@ -17,6 +17,7 @@ protocol AuthorDetailViewModelInput {
 
 protocol AuthorDetailViewModelOutput {
     var authorDetail: BehaviorRelay<AuthorDetail?> { get set }
+    var authorViewModel: AuthorViewModel { get }
     var videos: BehaviorRelay<[VideoViewModel]?> { get set }
 }
 
@@ -54,10 +55,15 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
     // Public
 
     var authorDetail = BehaviorRelay<AuthorDetail?>(value: nil)
+
     var videos = BehaviorRelay<[VideoViewModel]?>(value: nil)
     var toogleStateView = PublishSubject<StandardStateViewContext?>()
     var toogleVideosStateView = PublishSubject<StandardStateViewContext?>()
     var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
+
+    lazy var authorViewModel: AuthorViewModel = {
+        return AuthorViewModel(authorMetaData: authorMetaData, authorsService: dependency.authorsService)
+    }()
 
     // Private
 
@@ -77,8 +83,9 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
             .done { [weak self] author in
                 self?.authorDetail.accept(author)
             }.catch { [weak self] error in
-                self?.toogleStateView.onNext(StandardStateViewContext(headline: error.localizedDescription))
-                self?.notification.onNext(StandardNotification(error: error))
+                guard let self = self else { return }
+                let fallbackAuthorDetail = AuthorDetail(metaData: self.authorMetaData, resources: [])
+                self.authorDetail.accept(fallbackAuthorDetail)
             }
 
         dependency.videosService.fetchVideo(page: 1, author: authorMetaData)
@@ -91,6 +98,7 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
             }
     }
 
+    // TODO: use AuthorViewModel instead and remove this function.
     func avatarImage(of author: AuthorMetaData) -> UIImage? {
 
         guard let avatarImageURL = dependency.authorsService.avatar(of: author) else {

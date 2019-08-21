@@ -49,6 +49,8 @@ class AuthorDetailViewController: ViewController<AuthorDetailViewModel>, Storybo
         tableView.tableFooterView = UIView(frame: .zero)
 
         tableView.registerNib(VideosTableViewCell.self)
+
+        title = viewModel.authorMetaData.name
     }
 
     override func setupBindings() {
@@ -110,8 +112,7 @@ extension AuthorDetailViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AuthorAvatarTableViewCell", for: indexPath) as! AuthorAvatarTableViewCell
 
             if let authorDetail = viewModel.authorDetail.value {
-                cell.authorView.nameLabel.text = authorDetail.metaData.name
-                cell.authorView.avatarImageView.image = viewModel.avatarImage(of: authorDetail.metaData)
+                cell.authorView.viewModel = viewModel.authorViewModel
             }
 
             return cell
