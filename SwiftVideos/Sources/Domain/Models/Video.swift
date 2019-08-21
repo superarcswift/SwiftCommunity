@@ -8,9 +8,11 @@ typealias VideoID = String
 
 // MARK: - VideoMetaData
 
-public struct VideoMetaData: Codable {
+typealias VideosList = [VideoMetaData]
+
+struct VideoMetaData: Codable {
     let id: VideoID
-    let authors: [AuthorMetaData]
+    let authors: AuthorsList
     let conference: VideoConferenceInfo
     let name: String
     let source: VideoSource
@@ -18,14 +20,14 @@ public struct VideoMetaData: Codable {
 
 // MARK: - VideoConferenceInfo
 
-public struct VideoConferenceInfo: Codable {
+struct VideoConferenceInfo: Codable {
     let metaData: ConferenceMetaData
     let edition: ConferenceEdition
 }
 
 // MARK: - VideoDetail
 
-public struct VideoDetail: Codable {
+struct VideoDetail: Codable {
     let metaData: VideoMetaData
     let description: String?
     let resources: [VideoResource]?

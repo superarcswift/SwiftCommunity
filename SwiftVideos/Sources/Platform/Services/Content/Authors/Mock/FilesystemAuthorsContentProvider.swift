@@ -25,13 +25,13 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
 
     // MARK: APIs
 
-    func fetchList() -> Promise<[AuthorMetaData]> {
+    func fetchList() -> Promise<AuthorsList> {
         return Promise { resolver in
             do {
                 let authorsFileURL = baseFolderURL
                     .appendingPathComponent("authors", isDirectory: true)
                     .appendingPathComponent("authors.json")
-                let authorsList = try decode([AuthorMetaData].self, from: authorsFileURL)
+                let authorsList = try decode(AuthorsList.self, from: authorsFileURL)
 
                 resolver.fulfill(authorsList)
             } catch {

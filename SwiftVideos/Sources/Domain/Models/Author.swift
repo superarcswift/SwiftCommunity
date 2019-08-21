@@ -93,8 +93,9 @@ extension AuthorResource: Codable {
 
 // MARK: - AuthorMetaData
 
+typealias AuthorsList = [AuthorMetaData]
+
 struct AuthorMetaData: Codable, Equatable {
     let id: String
     let name: String
 }
-

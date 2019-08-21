@@ -49,7 +49,7 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
 }
 
-public enum ConferencesRoute: Route {
+enum ConferencesRoute: Route {
     case conferences
     case conferenceDetail(ConferenceMetaData)
     case conferenceEditionDetail(ConferenceMetaData, ConferenceEdition)

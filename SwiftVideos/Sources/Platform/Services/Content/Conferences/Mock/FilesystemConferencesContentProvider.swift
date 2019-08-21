@@ -4,7 +4,7 @@
 
 import PromiseKit
 
-public class FilesystemConferencesContentProvider: ConferencesDataProvider, FilesystemContentProvider {
+class FilesystemConferencesContentProvider: ConferencesDataProvider, FilesystemContentProvider {
 
     // MARK: Properties
 
@@ -19,13 +19,13 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider, File
 
     // MARK: Initialization
 
-    public init(rootContentFolderPath: String) {
+    init(rootContentFolderPath: String) {
         self.baseFolderPath = rootContentFolderPath.combinePath("conferences")
     }
 
     // MARK: APIs
 
-    public func fetchList() -> Promise<[ConferenceMetaData]> {
+    func fetchList() -> Promise<[ConferenceMetaData]> {
         return Promise { resolver in
             do {
                 let conferecesFileURL = baseFolderURL.appendingPathComponent("conferences.json")
@@ -38,7 +38,7 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider, File
         }
     }
 
-    public func conference(with conferenceMetaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
+    func conference(with conferenceMetaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
         return Promise { resolver in
             let conferenceFileURL = baseFolderURL.appendingPathComponent(conferenceMetaData.id, isDirectory: true).appendingPathComponent("conference.json")
             let conferenceDetail = try decode(ConferenceDetail.self, from: conferenceFileURL)
@@ -47,7 +47,7 @@ public class FilesystemConferencesContentProvider: ConferencesDataProvider, File
         }
     }
 
-    public func bannerImageURL(for conference: ConferenceMetaData) -> URL? {
+    func bannerImageURL(for conference: ConferenceMetaData) -> URL? {
         let conferenceFolderURL = baseFolderURL.appendingPathComponent(conference.id, isDirectory: true)
         let bannerFileURL = conferenceFolderURL.appendingPathComponent("cover.png")
 

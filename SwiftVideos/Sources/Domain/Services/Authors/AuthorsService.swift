@@ -30,7 +30,7 @@ class AuthorsService: ContentService {
 
     // MARK: APIs
 
-    func fetchList() -> Promise<[AuthorMetaData]> {
+    func fetchList() -> Promise<AuthorsList> {
         return contentProvider.fetchList()
     }
 
@@ -48,7 +48,7 @@ class AuthorsService: ContentService {
 // MARK: - AuthorsDataProvider
 
 protocol AuthorsDataProvider: ContentDataProvider {
-    func fetchList() -> Promise<[AuthorMetaData]>
+    func fetchList() -> Promise<AuthorsList>
     func fetchAuthor(with metaData: AuthorMetaData) -> Promise<AuthorDetail>
     func avatar(of author: AuthorMetaData) -> URL?
 }

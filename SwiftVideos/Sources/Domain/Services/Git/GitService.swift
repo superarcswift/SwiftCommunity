@@ -34,7 +34,7 @@ public class GitService: Service, GitServiceProtocol {
 
     // Static
 
-    public let baseLocalRepositoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!.combinePath("content")
+    public let baseLocalRepositoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
 
     // Public
 
