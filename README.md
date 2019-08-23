@@ -1,5 +1,10 @@
 ## SwiftVideos
 
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/Swift-5.0-blue.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/Xcode-10-blue.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/platforms-iOSv|%20tvOS%20|%20macOS%20|%20watchOS%20-blue.svg)](https://opensource.org/licenses/MIT)
+
 Collection of Swift/iOS-related development videos. 
 
 This project serves as a showcase for the SuperArc project. 
@@ -10,7 +15,7 @@ The goal is to have a set of modules to create a component-based MVVM-C (Model-V
 
 ## Content
 
-All content are curated from external sources such as Vimeo, Youtube or WWDC live streams. This is insipred heavily by [SwiftTube](http://www.swifttube.co/) and [talk & coffe app]()
+All content are curated from external sources such as Vimeo, Youtube or WWDC live streams. This is insipred heavily from [SwiftTube](http://www.swifttube.co/) and [talk & coffe app]()
 
 ## App Features
 - Use json as database
@@ -40,6 +45,24 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 * Danger: https://danger.systems/
 
 * Documentation: https://github.com/realm/jazzy
+
+## Architecture
+
+![Architecture](Assets/Documentation/superarc.png)
+
+### ViewModel
+- Responsible for performing business logic
+
+### ViewController
+- Responseible for interaction with users, displaying result from `ViewModel`
+
+### Component
+- Responseible for managing dependencies required by its `ViewController` & `ViewModel`
+- Instantiate `ViewController`, `ViewModel`
+
+### Coordinator (optional)
+- Responsible for navigation
+- Instantiate `Component`
 
 ## Building and Running
 
