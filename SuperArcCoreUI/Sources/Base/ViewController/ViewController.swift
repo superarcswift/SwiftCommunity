@@ -13,7 +13,7 @@ open class ViewController<VM: ViewModel>: UIViewController, CommonViewController
 
     // Public
 
-    public var context: ApplicationContext!
+    public var viewControllerContext: ViewControllerContext!
     public var viewModel: VM!
 
     // IBInspectable

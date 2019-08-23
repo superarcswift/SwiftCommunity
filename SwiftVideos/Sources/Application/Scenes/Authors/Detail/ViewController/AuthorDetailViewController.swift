@@ -152,7 +152,7 @@ extension AuthorDetailViewController: UITableViewDataSource {
             return 44
 
         case .videos?:
-            return 305
+            return 310
 
         default:
             fatalError("invalid section")

@@ -21,7 +21,7 @@ class OnboardingComponent: Component<OnboardingDependency>, OnboardingBuilder {
     // MARK: APIs
 
     func makeOnboardingViewController(router: AnyRouter<OnboardingRoute>) -> OnboardingViewController {
-        let viewController = OnboardingViewController.instantiate(with: context)
+        let viewController = OnboardingViewController.instantiate(with: context.viewControllerContext)
         let viewModel = OnboardingViewModel(router: router, dependency: dependency)
         viewController.viewModel = viewModel
 

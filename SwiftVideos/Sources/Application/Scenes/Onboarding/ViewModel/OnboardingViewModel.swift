@@ -20,7 +20,7 @@ protocol OnboardingViewModelOutput {
 }
 
 protocol OnboardingViewModelApi {
-    func prepareLocalRepository()
+    func prepareLocalRepository(shouldResetBeforeCloning: Bool)
 }
 
 protocol OnboardingViewModelType {
@@ -78,7 +78,7 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
 
     // MARK: APIs
 
-    func prepareLocalRepository() {
+    func prepareLocalRepository(shouldResetBeforeCloning: Bool) {
 
         // Check if the local repository is existing.
         guard !dependency.gitService.open() else {
@@ -87,7 +87,17 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
         }
 
         // If the local repository doesn't exist, clone it.
-        cloneRemoteRepository()
+        if shouldResetBeforeCloning {
+            dependency.gitService.reset()
+                .done { _ in
+                    self.cloneRemoteRepository()
+                }.catch { error in
+                    self.notification.onNext(StandardNotification(error: error))
+                }
+        } else {
+            cloneRemoteRepository()
+        }
+
     }
 
     // MARK: Private helpers

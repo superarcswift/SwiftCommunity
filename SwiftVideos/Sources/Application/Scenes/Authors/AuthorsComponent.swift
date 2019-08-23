@@ -23,8 +23,7 @@ class AuthorsComponent: Component<AuthorsDependency>, AuthorsBuilder {
 
     func makeAuthorsCollectionViewController(router: AnyRouter<AuthorsRoute>) -> AuthorsCollectionViewController {
 
-        let viewController = AuthorsCollectionViewController.instantiate(with: context)
-        viewController.setApplicationContext(context)
+        let viewController = AuthorsCollectionViewController.instantiate(with: context.viewControllerContext)
         let viewModel = AuthorsCollectionViewModel(router: router, dependency: dependency)
         viewController.viewModel = viewModel
 
@@ -32,7 +31,7 @@ class AuthorsComponent: Component<AuthorsDependency>, AuthorsBuilder {
     }
 
     func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController {
-        let viewController = AuthorDetailViewController.instantiate(with: context)
+        let viewController = AuthorDetailViewController.instantiate(with: context.viewControllerContext)
         let viewModel = AuthorDetailViewModel(authorMetaData: authorMetaData, router: router, dependency: dependency)
         viewController.viewModel = viewModel
 

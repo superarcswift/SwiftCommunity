@@ -59,10 +59,15 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
         let authorFolderURL = baseFolderURL
             .appendingPathComponent("authors", isDirectory: true)
         let previewJPGFileURL = authorFolderURL.appendingPathComponent("\(authorMetaData.id).jpg")
+        let previewJPEGFileURL = authorFolderURL.appendingPathComponent("\(authorMetaData.id).jpeg")
         let previewPNGFileURL = authorFolderURL.appendingPathComponent("\(authorMetaData.id).png")
 
         if fileManager.fileExists(atPath: previewJPGFileURL.path) {
             return previewJPGFileURL
+        }
+
+        if fileManager.fileExists(atPath: previewJPEGFileURL.path) {
+            return previewJPEGFileURL
         }
 
         if fileManager.fileExists(atPath: previewPNGFileURL.path) {

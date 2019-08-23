@@ -11,7 +11,7 @@ open class TableViewController<VM: ViewModel>: UITableViewController, CommonView
 
     // Public
 
-    public var context: ApplicationContext!
+    public var viewControllerContext: ViewControllerContext!
     public var viewModel: VM!
 
     // IBInspectable

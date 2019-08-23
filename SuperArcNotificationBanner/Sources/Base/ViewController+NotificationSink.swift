@@ -11,18 +11,18 @@ public protocol HasNotificationSink {
 
 extension ViewController: HasNotificationSink {
     public var notificationSink: NotificationSink {
-        return context.dependencyRegistry.resolve(type: NotificationPresenter.self)
+        return viewControllerContext.resolve(type: NotificationPresenter.self)
     }
 }
 
 extension CollectionViewController: HasNotificationSink {
     public var notificationSink: NotificationSink {
-        return context.dependencyRegistry.resolve(type: NotificationPresenter.self)
+        return viewControllerContext.resolve(type: NotificationPresenter.self)
     }
 }
 
 extension TableViewController: HasNotificationSink {
     public var notificationSink: NotificationSink {
-        return context.dependencyRegistry.resolve(type: NotificationPresenter.self)
+        return viewControllerContext.resolve(type: NotificationPresenter.self)
     }
 }

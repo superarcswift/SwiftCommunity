@@ -26,8 +26,8 @@ class AppManager {
     // MARK: Private helpers
 
     private func setupApplicationContext() {
-        core.context.dependencyRegistry.register(NotificationPresenter(), for: NotificationPresenter.self)
-        core.context.dependencyRegistry.register(ActivityPresenter(), for: ActivityPresenter.self)
+        core.context.viewControllerContext.register(NotificationPresenter(), for: NotificationPresenter.self)
+        core.context.viewControllerContext.register(ActivityPresenter(), for: ActivityPresenter.self)
     }
 
     private func setupServices() {

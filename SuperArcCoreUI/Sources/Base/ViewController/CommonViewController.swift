@@ -4,7 +4,7 @@
 
 import SuperArcCore
 
-public protocol CommonViewControllerProtocol: HasApplicationContext, ViewModelBindable {
+public protocol CommonViewControllerProtocol: HasViewControllerContext, ViewModelBindable {
 
     // MARK: Properties
 

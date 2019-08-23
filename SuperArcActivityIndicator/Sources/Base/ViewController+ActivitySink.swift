@@ -11,18 +11,18 @@ public protocol HasActivitySink {
 
 extension ViewController: HasActivitySink {
     public var activitySink: ActivitySink {
-        return context.dependencyRegistry.resolve(type: ActivityPresenter.self)
+        return viewControllerContext.resolve(type: ActivityPresenter.self)
     }
 }
 
 extension CollectionViewController: HasActivitySink {
     public var activitySink: ActivitySink {
-        return context.dependencyRegistry.resolve(type: ActivityPresenter.self)
+        return viewControllerContext.resolve(type: ActivityPresenter.self)
     }
 }
 
 extension TableViewController: HasActivitySink {
     public var activitySink: ActivitySink {
-        return context.dependencyRegistry.resolve(type: ActivityPresenter.self)
+        return viewControllerContext.resolve(type: ActivityPresenter.self)
     }
 }

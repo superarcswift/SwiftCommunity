@@ -12,7 +12,7 @@ open class TabBarController<VM: ViewModel>: UITabBarController, CommonViewContro
 
     // Public
 
-    public var context: ApplicationContext!
+    public var viewControllerContext: ViewControllerContext!
     public var viewModel: VM!
 
     @IBInspectable public var hasRightCloseButton = false
@@ -23,9 +23,9 @@ open class TabBarController<VM: ViewModel>: UITabBarController, CommonViewContro
 
     // MARK: Initialization
 
-    init(context: ApplicationContext) {
+    init(viewControllerContext: ViewControllerContext) {
         super.init(nibName: nil, bundle: nil)
-        self.context = context
+        self.viewControllerContext = viewControllerContext
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -39,7 +39,7 @@ open class TabBarController<VM: ViewModel>: UITabBarController, CommonViewContro
         commonViewDidLoad()
 
         for child in children {
-            child.setApplicationContext(context)
+            child.setViewControllerContext(viewControllerContext)
         }
     }
 

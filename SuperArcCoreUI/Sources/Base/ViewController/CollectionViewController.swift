@@ -9,7 +9,7 @@ open class CollectionViewController<VM: ViewModel>: UICollectionViewController, 
 
     // MARK: Properties
 
-    public var context: ApplicationContext!
+    public var viewControllerContext: ViewControllerContext!
     public var viewModel: VM!
 
     @IBInspectable public var hasRightCloseButton = false

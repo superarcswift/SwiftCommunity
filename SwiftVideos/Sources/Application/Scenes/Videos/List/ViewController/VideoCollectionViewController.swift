@@ -83,6 +83,6 @@ extension VideosCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = screenSize.width - 16*2
-        return CGSize(width: cellWidth, height: 305)
+        return CGSize(width: cellWidth, height: 310)
     }
 }

@@ -25,8 +25,7 @@ class VideosComponent: Component<VideosDependency>, VideosBuilder {
 
     func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController {
 
-        let viewController = VideosCollectionViewController.instantiate(with: context)
-        viewController.setApplicationContext(context)
+        let viewController = VideosCollectionViewController.instantiate(with: context.viewControllerContext)
         if conferenceMetaData != nil {
             viewController.hasLeftCloseButton = true
         }
@@ -37,8 +36,7 @@ class VideosComponent: Component<VideosDependency>, VideosBuilder {
     }
 
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController {
-        let viewController = VideoDetailViewController.instantiate(with: context)
-        viewController.setApplicationContext(context)
+        let viewController = VideoDetailViewController.instantiate(with: context.viewControllerContext)
         viewController.videosComponent = self
         let viewModel = VideoDetailViewModel(router: router, dependency: dependency, videoMetaData: videoMetaData)
         viewController.viewModel = viewModel

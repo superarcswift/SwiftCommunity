@@ -42,12 +42,12 @@ class OnboardingViewController: ViewController<OnboardingViewModel>, StoryboardI
     }
 
     override func loadData() {
-        viewModel.apis.prepareLocalRepository()
+        viewModel.apis.prepareLocalRepository(shouldResetBeforeCloning: false)
     }
 
     // MARK: IBActions
 
     @IBAction func didTapCloneButton(_ sender: Any) {
-        loadData()
+        viewModel.apis.prepareLocalRepository(shouldResetBeforeCloning: true)
     }
 }

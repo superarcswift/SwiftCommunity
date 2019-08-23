@@ -8,10 +8,16 @@ public protocol HasApplicationContext: class {
     var context: ApplicationContext! { get set }
 }
 
-public protocol ApplicationContextProtocol {
+public protocol HasViewControllerContext: class {
+    var viewControllerContext: ViewControllerContext! { get set }
+}
+
+/// Protocol defining required depedencies used for processing application logic & driving UIs.
+/// Normally every ViewController will have reference to an object adropting this protocol.
+public protocol ApplicationContextProtocol: HasViewControllerContext {
 
     var engine: Engine { get }
-    var dependencyRegistry: ApplicationDependencyRegistry { get }
+    var viewControllerContext: ViewControllerContext! { get set }
 }
 
 public class ApplicationContext: ApplicationContextProtocol {
@@ -21,7 +27,7 @@ public class ApplicationContext: ApplicationContextProtocol {
     // Public
 
     public private(set) var engine: Engine
-    public let dependencyRegistry = ApplicationDependencyRegistry()
+    public var viewControllerContext: ViewControllerContext! = ViewControllerContext()
 
     // Private
 
