@@ -29,9 +29,6 @@
 		F640BC3A22E8464100EDB601 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F640BC3922E8464100EDB601 /* Onboarding.storyboard */; };
 		F640BC3C22E8464D00EDB601 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3B22E8464D00EDB601 /* OnboardingCoordinator.swift */; };
 		F640BC4122E86CF800EDB601 /* GitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC4022E86CF800EDB601 /* GitService.swift */; };
-		F64238A022CD338A000F5CE3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642389F22CD338A000F5CE3 /* Video.swift */; };
-		F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A222CD34E6000F5CE3 /* Conference.swift */; };
-		F64238A722CD3C2F000F5CE3 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A622CD3C2F000F5CE3 /* Author.swift */; };
 		F64238AD22CD42DA000F5CE3 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238AC22CD42DA000F5CE3 /* ContentService.swift */; };
 		F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B022CD451E000F5CE3 /* PromiseKit.framework */; };
 		F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B322CD4838000F5CE3 /* Kingfisher.framework */; };
@@ -44,12 +41,12 @@
 		F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */; };
 		F6453BA022EB304800392F93 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6453B9F22EB304800392F93 /* README.md */; };
 		F64A058C22F759F40085C0B5 /* AuthorAvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A058B22F759F40085C0B5 /* AuthorAvatarTableViewCell.swift */; };
-		F64A059022F762EC0085C0B5 /* ModelCodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A058F22F762EC0085C0B5 /* ModelCodingError.swift */; };
 		F64A059222F774210085C0B5 /* AuthorResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A059122F774210085C0B5 /* AuthorResourcesTableViewCell.swift */; };
 		F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E705F2305EB98005D066D /* MoreViewModel.swift */; };
 		F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; };
 		F64E7093230603D1005D066D /* SuperArcActivityIndicator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */; };
+		F6697FFE231027C300FCEC14 /* SwiftVideos_DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6697FFD231027C300FCEC14 /* SwiftVideos_DataModels.framework */; };
 		F66C903D22DF38A2006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903C22DF38A2006CA2BB /* RxSwift.framework */; };
 		F66C903F22DF38B0006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903E22DF38B0006CA2BB /* RxCocoa.framework */; };
 		F66C904122DF3B14006CA2BB /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904022DF3B14006CA2BB /* RxRelay.framework */; };
@@ -194,9 +191,6 @@
 		F640BC3B22E8464D00EDB601 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		F640BC3D22E86CDD00EDB601 /* SwiftGit2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGit2.framework; path = Carthage/Build/iOS/SwiftGit2.framework; sourceTree = "<group>"; };
 		F640BC4022E86CF800EDB601 /* GitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitService.swift; sourceTree = "<group>"; };
-		F642389F22CD338A000F5CE3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		F64238A222CD34E6000F5CE3 /* Conference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conference.swift; sourceTree = "<group>"; };
-		F64238A622CD3C2F000F5CE3 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		F64238AC22CD42DA000F5CE3 /* ContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
 		F64238B022CD451E000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F64238B322CD4838000F5CE3 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -209,11 +203,11 @@
 		F6451B6B22D143D20091E147 /* ConferenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6453B9F22EB304800392F93 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F64A058B22F759F40085C0B5 /* AuthorAvatarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorAvatarTableViewCell.swift; sourceTree = "<group>"; };
-		F64A058F22F762EC0085C0B5 /* ModelCodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCodingError.swift; sourceTree = "<group>"; };
 		F64A059122F774210085C0B5 /* AuthorResourcesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorResourcesTableViewCell.swift; sourceTree = "<group>"; };
 		F64E705F2305EB98005D066D /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcActivityIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6543DC222DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		F6697FFD231027C300FCEC14 /* SwiftVideos_DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftVideos_DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C903C22DF38A2006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F66C903E22DF38B0006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		F66C904022DF3B14006CA2BB /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -307,6 +301,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6697FFE231027C300FCEC14 /* SwiftVideos_DataModels.framework in Frameworks */,
 				F6E2323F230A8DBE003FBFA5 /* MarkdownView.framework in Frameworks */,
 				F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */,
 				F6A6B55723014CFF00BFEC40 /* Differentiator.framework in Frameworks */,
@@ -482,17 +477,6 @@
 				F66C90A522E11D83006CA2BB /* Detail */,
 			);
 			path = Conferences;
-			sourceTree = "<group>";
-		};
-		F642389E22CD3372000F5CE3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F64238A222CD34E6000F5CE3 /* Conference.swift */,
-				F642389F22CD338A000F5CE3 /* Video.swift */,
-				F64238A622CD3C2F000F5CE3 /* Author.swift */,
-				F64A058F22F762EC0085C0B5 /* ModelCodingError.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		F64238A922CD4252000F5CE3 /* Services */ = {
@@ -979,6 +963,7 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6697FFD231027C300FCEC14 /* SwiftVideos_DataModels.framework */,
 				F6E2323E230A8DBE003FBFA5 /* MarkdownView.framework */,
 				F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */,
 				F6A6B55623014CFF00BFEC40 /* Differentiator.framework */,
@@ -1051,7 +1036,6 @@
 			isa = PBXGroup;
 			children = (
 				F64238A922CD4252000F5CE3 /* Services */,
-				F642389E22CD3372000F5CE3 /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -1342,7 +1326,6 @@
 				F66C90B322E19E64006CA2BB /* VideosCollectionViewCell.swift in Sources */,
 				F6A6B55F23015D4200BFEC40 /* ConferenceDetailSectionHeaderView.swift in Sources */,
 				F66C90DF22E202E4006CA2BB /* AuthorsService.swift in Sources */,
-				F64A059022F762EC0085C0B5 /* ModelCodingError.swift in Sources */,
 				F6E2323423096437003FBFA5 /* AuthorViewModel.swift in Sources */,
 				F66C90DD22E202DA006CA2BB /* VideosService.swift in Sources */,
 				F6451B6C22D143D20091E147 /* ConferenceCollectionViewCell.swift in Sources */,
@@ -1368,7 +1351,6 @@
 				F66C90B622E1AD90006CA2BB /* ConferenceDetailViewModel.swift in Sources */,
 				F68F655622FF4A1B0026604C /* AuthorsComponent.swift in Sources */,
 				F66C90F222E5F938006CA2BB /* AuthorsCollectionViewCell.swift in Sources */,
-				F64238A022CD338A000F5CE3 /* Video.swift in Sources */,
 				F63A71FD22F22928005D0778 /* ConferenceView.swift in Sources */,
 				F66C90FC22E6052C006CA2BB /* VideoDetailViewController.swift in Sources */,
 				F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */,
@@ -1384,7 +1366,6 @@
 				F63A720222F37981005D0778 /* VideoView.swift in Sources */,
 				F66C90A022E0FD6D006CA2BB /* VideosCoordinator.swift in Sources */,
 				F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */,
-				F64238A322CD34E6000F5CE3 /* Conference.swift in Sources */,
 				F675C35122DE2EEB00FA77DD /* FilesystemConferencesContentProvider.swift in Sources */,
 				F64238C722CD4FEC000F5CE3 /* AuthorsCollectionViewController.swift in Sources */,
 				F6E2323D230A87F7003FBFA5 /* AboutViewModel.swift in Sources */,
@@ -1394,7 +1375,6 @@
 				F66C90CB22E1FEA8006CA2BB /* AboutViewController.swift in Sources */,
 				F6E2323623096D68003FBFA5 /* VideoViewModel.swift in Sources */,
 				F63712FE22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */,
-				F64238A722CD3C2F000F5CE3 /* Author.swift in Sources */,
 				F64A058C22F759F40085C0B5 /* AuthorAvatarTableViewCell.swift in Sources */,
 				F6E232382309EC7C003FBFA5 /* ConferenceViewModel.swift in Sources */,
 				F6543DC322DD0B4900A52B6F /* ConferenceCollectionViewFlowLayout.swift in Sources */,

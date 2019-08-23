@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SwiftVideos_DataModels
 import PromiseKit
 
 class FilesystemConferencesContentProvider: ConferencesDataProvider, FilesystemContentProvider {
