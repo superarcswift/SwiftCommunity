@@ -8,11 +8,11 @@ import PromiseKit
 import ObjectiveGit
 import Foundation
 
-protocol HasGitService {
+public protocol HasGitService {
     var gitService: GitService { get }
 }
 
-protocol GitServiceProtocol {
+public protocol GitServiceProtocol {
 
     var baseLocalRepositoryPath: String { get }
     var localRepository: GTRepository? { get set }
@@ -43,6 +43,8 @@ public class GitService: Service, GitServiceProtocol {
 
     public var context: ServiceContext
 
+    public var localRepository: GTRepository?
+
     // Private
 
     // TODO: This should be come from configuration.
@@ -50,15 +52,13 @@ public class GitService: Service, GitServiceProtocol {
 
     private lazy var localRepositoryURL = URL(string: "file://\(baseLocalRepositoryPath)/")! // This needs to be prefix with file://
 
-    internal var localRepository: GTRepository?
-
     private let fileManager = FileManager.default
 
     private let queue: DispatchQueue
     
     // MARK: Initialization
 
-    init(context: ServiceContext) {
+    public init(context: ServiceContext) {
         self.context = context
         queue = DispatchQueue(label: "com.tba.swiftvideos.gitservice", qos: .userInitiated)
         print(baseLocalRepositoryPath)

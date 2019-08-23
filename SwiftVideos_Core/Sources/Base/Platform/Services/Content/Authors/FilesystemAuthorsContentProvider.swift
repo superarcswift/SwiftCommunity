@@ -5,7 +5,7 @@
 import SwiftVideos_DataModels
 import PromiseKit
 
-class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentProvider {
+public class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentProvider {
 
     // MARK: Properties
 
@@ -20,13 +20,13 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
 
     // MARK: Initialization
 
-    init(rootContentFolderPath: String) {
+    public init(rootContentFolderPath: String) {
         self.baseFolderPath = rootContentFolderPath
     }
 
     // MARK: APIs
 
-    func fetchList() -> Promise<AuthorsList> {
+    public func fetchList() -> Promise<AuthorsList> {
         return Promise { resolver in
             do {
                 let authorsFileURL = baseFolderURL
@@ -41,7 +41,7 @@ class FilesystemAuthorsContentProvider: AuthorsDataProvider, FilesystemContentPr
         }
     }
 
-    func fetchAuthor(with metaData: AuthorMetaData) -> Promise<AuthorDetail> {
+    public func fetchAuthor(with metaData: AuthorMetaData) -> Promise<AuthorDetail> {
         return Promise { resolver in
             do {
                 let authorFileURL = baseFolderURL

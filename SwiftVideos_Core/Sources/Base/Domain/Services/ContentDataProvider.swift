@@ -4,6 +4,4 @@
 
 import PromiseKit
 
-protocol ContentDataProvider {}
-
-
+public protocol ContentDataProvider {}

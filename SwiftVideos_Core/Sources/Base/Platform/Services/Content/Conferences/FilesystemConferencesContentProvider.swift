@@ -5,7 +5,7 @@
 import SwiftVideos_DataModels
 import PromiseKit
 
-class FilesystemConferencesContentProvider: ConferencesDataProvider, FilesystemContentProvider {
+public class FilesystemConferencesContentProvider: ConferencesDataProvider, FilesystemContentProvider {
 
     // MARK: Properties
 
@@ -20,13 +20,13 @@ class FilesystemConferencesContentProvider: ConferencesDataProvider, FilesystemC
 
     // MARK: Initialization
 
-    init(rootContentFolderPath: String) {
+    public init(rootContentFolderPath: String) {
         self.baseFolderPath = rootContentFolderPath.combinePath("conferences")
     }
 
     // MARK: APIs
 
-    func fetchList() -> Promise<[ConferenceMetaData]> {
+    public func fetchList() -> Promise<[ConferenceMetaData]> {
         return Promise { resolver in
             do {
                 let conferecesFileURL = baseFolderURL.appendingPathComponent("conferences.json")
@@ -39,7 +39,7 @@ class FilesystemConferencesContentProvider: ConferencesDataProvider, FilesystemC
         }
     }
 
-    func conference(with conferenceMetaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
+    public func conference(with conferenceMetaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
         return Promise { resolver in
             let conferenceFileURL = baseFolderURL.appendingPathComponent(conferenceMetaData.id, isDirectory: true).appendingPathComponent("conference.json")
             let conferenceDetail = try decode(ConferenceDetail.self, from: conferenceFileURL)
@@ -48,7 +48,7 @@ class FilesystemConferencesContentProvider: ConferencesDataProvider, FilesystemC
         }
     }
 
-    func bannerImageURL(for conference: ConferenceMetaData) -> URL? {
+    public func bannerImageURL(for conference: ConferenceMetaData) -> URL? {
         let conferenceFolderURL = baseFolderURL.appendingPathComponent(conference.id, isDirectory: true)
         let bannerFileURL = conferenceFolderURL.appendingPathComponent("cover.png")
 
@@ -58,6 +58,4 @@ class FilesystemConferencesContentProvider: ConferencesDataProvider, FilesystemC
 
         return bannerFileURL
     }
-
-    // MARK: Private helpers
 }

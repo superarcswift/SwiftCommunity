@@ -6,17 +6,17 @@ import SwiftVideos_DataModels
 import SuperArcCore
 import PromiseKit
 
-protocol HasVideosService {
+public protocol HasVideosService {
     var videosService: VideosService { get }
 }
 
-class VideosService: ContentService {
+public class VideosService: ContentService {
 
     // MARK: Properties
 
     // Public
 
-    var context: ServiceContext
+    public var context: ServiceContext
 
     // Private
 
@@ -24,30 +24,30 @@ class VideosService: ContentService {
 
     // MARK: Intialization
 
-    init(context: ServiceContext, contentProvider: VideosDataProvider) {
+    public init(context: ServiceContext, contentProvider: VideosDataProvider) {
         self.context = context
         self.contentProvider = contentProvider
     }
 
     // MARK: APIs
 
-    func fetchList() -> Promise<[VideoMetaData]> {
+    public func fetchList() -> Promise<[VideoMetaData]> {
         return contentProvider.fetchList(page: 1)
     }
 
-    func fetchList(conference: ConferenceMetaData, edition: ConferenceEdition) -> Promise<[VideoMetaData]> {
+    public func fetchList(conference: ConferenceMetaData, edition: ConferenceEdition) -> Promise<[VideoMetaData]> {
         return contentProvider.fetchList(conference: conference, edition: edition)
     }
 
-    func fetchVideo(metaData: VideoMetaData) -> Promise<VideoDetail> {
+    public func fetchVideo(metaData: VideoMetaData) -> Promise<VideoDetail> {
         return contentProvider.fetchVideo(metaData: metaData)
     }
 
-    func fetchVideo(page: Int, author: AuthorMetaData) -> Promise<[VideoMetaData]> {
+    public func fetchVideo(page: Int, author: AuthorMetaData) -> Promise<[VideoMetaData]> {
         return contentProvider.fetchList(page: page, author: author)
     }
 
-    func previewImageURL(for video: VideoMetaData) -> URL? {
+    public func previewImageURL(for video: VideoMetaData) -> URL? {
         return contentProvider.previewImageURL(for: video)
     }
 
@@ -56,7 +56,7 @@ class VideosService: ContentService {
 
 // MARK: - VideosDataProvider
 
-protocol VideosDataProvider: ContentDataProvider {
+public protocol VideosDataProvider: ContentDataProvider {
 
     func fetchList(page: Int) -> Promise<[VideoMetaData]>
     func fetchList(conference: ConferenceMetaData, edition: ConferenceEdition) -> Promise<[VideoMetaData]>

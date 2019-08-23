@@ -91,18 +91,15 @@ extension AuthorDetailViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch Section(rawValue: section) {
-        case .avatar?:
+        switch Section.from(rawValue: section) {
+        case .avatar:
             return 1
 
-        case .resources?:
+        case .resources:
             return viewModel.authorDetail.value?.resources.count ?? 0
 
-        case .videos?:
+        case .videos:
             return viewModel.videos.value?.count ?? 0
-
-        default:
-            fatalError("invalid section")
         }
     }
 
@@ -143,28 +140,48 @@ extension AuthorDetailViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch Section(rawValue: indexPath.section) {
+        switch Section.from(rawValue: indexPath.section) {
 
-        case .avatar?:
+        case .avatar:
             return 138
 
-        case .resources?:
+        case .resources:
             return 44
 
-        case .videos?:
-            return 310
+        case .videos:
+            return 300
 
-        default:
-            fatalError("invalid section")
         }
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 12.0
+        switch Section.from(rawValue: section) {
+
+        case .resources:
+            if let count = viewModel.authorDetail.value?.resources.count, count > 0 {
+                return 12.0
+            }
+
+            return 0
+
+        default:
+            return 12.0
+        }
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 12.0
+        switch Section.from(rawValue: section) {
+
+        case .resources:
+            if let count = viewModel.authorDetail.value?.resources.count, count > 0 {
+                return 12.0
+            }
+
+            return 0
+
+        default:
+            return 12.0
+        }
     }
 }
 

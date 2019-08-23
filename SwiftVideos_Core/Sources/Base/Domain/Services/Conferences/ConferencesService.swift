@@ -6,13 +6,13 @@ import SwiftVideos_DataModels
 import SuperArcCore
 import PromiseKit
 
-protocol HasConferencesService {
+public protocol HasConferencesService {
     var conferencesService: ConferencesService { get }
 }
 
 // MARK: - ConferencesServiceProtocol
 
-protocol ConferenceServiceProtocol {
+public protocol ConferenceServiceProtocol {
     func fetchList() -> Promise<[ConferenceMetaData]>
     func fetchVideos(conferenceMetaData: ConferenceMetaData) -> Promise<[[VideoMetaData]]>
     func conference(with metaData: ConferenceMetaData) -> Promise<ConferenceDetail>
@@ -21,13 +21,13 @@ protocol ConferenceServiceProtocol {
 
 // MARK: - ConferencesService
 
-class ConferencesService: ContentService, ConferenceServiceProtocol {
+public class ConferencesService: ContentService, ConferenceServiceProtocol {
 
     // MARK: Properties
 
     // Public
 
-    var context: ServiceContext
+    public var context: ServiceContext
 
     // Private
 
@@ -36,7 +36,7 @@ class ConferencesService: ContentService, ConferenceServiceProtocol {
 
     // MARK: Intialization
 
-    init(context: ServiceContext, contentProvider: ConferencesDataProvider, videosService: VideosService) {
+    public init(context: ServiceContext, contentProvider: ConferencesDataProvider, videosService: VideosService) {
         self.context = context
         self.contentProvider = contentProvider
         self.videosService = videosService
@@ -44,15 +44,15 @@ class ConferencesService: ContentService, ConferenceServiceProtocol {
 
     // MARK: APIs
 
-    func fetchList() -> Promise<[ConferenceMetaData]> {
+    public func fetchList() -> Promise<[ConferenceMetaData]> {
         return contentProvider.fetchList()
     }
 
-    func conference(with metaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
+    public func conference(with metaData: ConferenceMetaData) -> Promise<ConferenceDetail> {
         return contentProvider.conference(with: metaData)
     }
 
-    func fetchVideos(conferenceMetaData: ConferenceMetaData) -> Promise<[[VideoMetaData]]> {
+    public func fetchVideos(conferenceMetaData: ConferenceMetaData) -> Promise<[[VideoMetaData]]> {
         return conference(with: conferenceMetaData)
             .then { conferenceDetail -> Promise<[[VideoMetaData]]> in
                 let promises = conferenceDetail.editions.map { self.videosService.fetchList(conference: conferenceMetaData, edition: $0) }
@@ -60,7 +60,7 @@ class ConferencesService: ContentService, ConferenceServiceProtocol {
             }
     }
 
-    func bannerImageURL(for conference: ConferenceMetaData) -> URL? {
+    public func bannerImageURL(for conference: ConferenceMetaData) -> URL? {
         return contentProvider.bannerImageURL(for: conference)
     }
 
@@ -69,7 +69,7 @@ class ConferencesService: ContentService, ConferenceServiceProtocol {
 
 // MARK: - ConferencesDataProvider
 
-protocol ConferencesDataProvider: ContentDataProvider {
+public protocol ConferencesDataProvider: ContentDataProvider {
     func fetchList() -> Promise<[ConferenceMetaData]>
     func conference(with metaData: ConferenceMetaData) -> Promise<ConferenceDetail>
     func bannerImageURL(for conference: ConferenceMetaData) -> URL?

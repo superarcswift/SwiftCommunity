@@ -6,5 +6,6 @@ github "onevcat/Kingfisher" ~> 5.0
 github "quickbirdstudios/XCoordinator" "feature/update-pods"
 github "libgit2/objective-git"
 github "rinov/YoutubeKit" "master"
+github "satishVekariya/LXVimeoKit" "master"
 github "Daltron/NotificationBanner" "master"
 github "keitaoouchi/MarkdownView"

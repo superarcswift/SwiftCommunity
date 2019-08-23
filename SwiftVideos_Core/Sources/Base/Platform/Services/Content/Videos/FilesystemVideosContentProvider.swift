@@ -5,7 +5,7 @@
 import SwiftVideos_DataModels
 import PromiseKit
 
-class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProvider {
+public class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProvider {
 
     // MARK: Properties
 
@@ -20,7 +20,7 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
 
     // MARK: Initialization
 
-    init(rootContentFolderPath: String) {
+    public init(rootContentFolderPath: String) {
         self.baseFolderPath = rootContentFolderPath
     }
 
@@ -79,7 +79,7 @@ class FilesystemVideosContentProvider: VideosDataProvider, FilesystemContentProv
     }
 
     /// Fetch and filter videos by author.
-    func fetchList(page: Int, author: AuthorMetaData) -> Promise<[VideoMetaData]> {
+    public func fetchList(page: Int, author: AuthorMetaData) -> Promise<[VideoMetaData]> {
         return fetchList(page: page).filterValues { videoMetaData -> Bool in
             return videoMetaData.authors.contains { $0 == author }
         }
