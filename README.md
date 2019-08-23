@@ -28,7 +28,7 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 
 ## Technologies
 
-###Tech-Stack
+### Tech-Stack
 
 - Swift 5.0
 - Xcode 10+
@@ -37,13 +37,13 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 	- **SwiftVideos**: RxDataSources, XCoordinator, objective-git, YoutubeKit, MarkdownView.
 
 
-###Tests
+### Tests
 
 - [ ] Unit Tests
 - [ ] UI Tests
 - [ ] Snapshot Tests
 
-###Package manager
+### Package manager
 
 - [ ] Carthage
 - [ ] Swift Package Manager
@@ -51,19 +51,19 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 
 ### Tools
 
-###Swiftlint:
+### Swiftlint:
 
 [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint)
 
-###Danger:
+### Danger:
 
 [https://danger.systems](https://danger.systems)
 
-###Documentation:
+### Documentation:
 
 [https://github.com/realm/jazzy](https://github.com/realm/jazzy)
 	
-##Architecture
+## Architecture
 
 - [ ] µfeatures modules
 - [ ] Clean architecture (at module level)
