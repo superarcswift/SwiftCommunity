@@ -15,7 +15,7 @@ The goal is to have a set of modules to create a component-based MVVM-C (Model-V
 
 ## Content
 
-All content are curated from external sources such as Vimeo, Youtube or WWDC live streams. This is insipred heavily from [SwiftTube](http://www.swifttube.co/) and [talk & coffe app]()
+All content are curated from external sources such as Vimeo, Youtube or WWDC live streams. This is insipred heavily from [SwiftTube](http://www.swifttube.co/) and [talk & coffe app](https://apps.apple.com/app/talks-coffee/id1466240063)
 
 ## App Features
 
@@ -83,7 +83,33 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 
 ## Building and Running
 
-## Contribute
+## Authors
+
+## Contributing
+
+### Information
+For convenience, all sub projects are kept in the same workspace & this reporistory so that we can iterate quickly without messing with versioning & package manager issues.
+
+The goal for a stable version in the future is to have separated repositories for all components so that they can live independently from each others.
+
+### Getting started
+
+- Fork the repository.
+- Run `carthage update --platform iOS`.
+- Open the workspace in Xcode and you are good to go.
+- Change code in any components you think it should be implemented differently.
+- Commit the code changes to a separated branch in your cloned repository.
+- Make a pull request to the upstream repository.
+
+Open an issue if you want to discuss about the architecture, need help or request a new feature.
+
+Open a PR if you want to make changes to any part of the frameworks.
+
+## Inspiration
+
+This project is very opinionated and probably not suitable for all kinds of iOS apps projects. I encourage you to take a look at other prjects where you might find a better architectures, approaches that are more suitable for your ideas:
+
+- Open-Source iOS Apps: [https://github.com/dkhamsing/open-source-ios-apps](https://github.com/dkhamsing/open-source-ios-apps)
 
 ## License
 
