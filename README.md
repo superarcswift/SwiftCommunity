@@ -28,40 +28,39 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 ## Technologies
 
 ###Tech-Stack
+
 - Swift 5.0
 - Xcode 10+
 - 3rd Party Dependencies:
 	- **SuperArc**: PromiseKit, RxSwift, Action, RxCocoa, NotificationBanner.
 	- **SwiftVideos**: RxDataSources, XCoordinator, objective-git, YoutubeKit, MarkdownView.
-		
 
-##Architecture
 
-- [ ] µfeatures modules
-- [ ] Clean architecture (at module level)
-
-##Tests
+###Tests
 - [ ] Unit Tests
 - [ ] UI Tests
 - [ ] Snapshot Tests
 
-##Package manager**
+###Package manager
 - [ ] Carthage
 - [ ] Swift Package Manager
 - [ ] Pods
 
-## Tools
+### Tools
 
 ###Swiftlint:
 [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint)
 
-###[Danger]:
+###Danger:
 [https://danger.systems](https://danger.systems)
 
-###[Documentation]
+###Documentation:
 [https://github.com/realm/jazzy](https://github.com/realm/jazzy)
+	
+##Architecture
 
-## Architecture
+- [ ] µfeatures modules
+- [ ] Clean architecture (at module level)
 
 ![Architecture](Assets/Documentation/superarc.png)
 
@@ -78,6 +77,7 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 ### Coordinator (optional)
 - Responsible for navigation.
 - Instantiate `Component`.
+
 
 ## Building and Running
 
