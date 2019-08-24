@@ -81,6 +81,7 @@
 		F68F655622FF4A1B0026604C /* AuthorsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655522FF4A1B0026604C /* AuthorsComponent.swift */; };
 		F68F655822FF4A4B0026604C /* DashboardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655722FF4A4B0026604C /* DashboardComponent.swift */; };
 		F690690B23109CE200B11E93 /* LXVimeoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F690690A23109CE200B11E93 /* LXVimeoKit.framework */; };
+		F690690F23115AD700B11E93 /* PageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690690E23115AD700B11E93 /* PageObject.swift */; };
 		F6A6B55122FF68B100BFEC40 /* MoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */; };
 		F6A6B55523008F7E00BFEC40 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */; };
 		F6A6B55723014CFF00BFEC40 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A6B55623014CFF00BFEC40 /* Differentiator.framework */; };
@@ -223,6 +224,7 @@
 		F68F655522FF4A1B0026604C /* AuthorsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsComponent.swift; sourceTree = "<group>"; };
 		F68F655722FF4A4B0026604C /* DashboardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardComponent.swift; sourceTree = "<group>"; };
 		F690690A23109CE200B11E93 /* LXVimeoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LXVimeoKit.framework; path = Carthage/Build/iOS/LXVimeoKit.framework; sourceTree = "<group>"; };
+		F690690E23115AD700B11E93 /* PageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageObject.swift; sourceTree = "<group>"; };
 		F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreComponent.swift; sourceTree = "<group>"; };
 		F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		F6A6B55623014CFF00BFEC40 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
@@ -743,6 +745,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F690690C23115AAA00B11E93 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F690690E23115AD700B11E93 /* PageObject.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F690690D23115AB500B11E93 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		F6A6B55D23015CE200BFEC40 /* SectionHeader */ = {
 			isa = PBXGroup;
 			children = (
@@ -861,6 +878,8 @@
 		F6E8D18022CA9ECA00213675 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				F690690D23115AB500B11E93 /* Tests */,
+				F690690C23115AAA00B11E93 /* Base */,
 				F6E8D18122CA9ECA00213675 /* SwiftVideosUITests.swift */,
 				F6E8D18322CA9ECA00213675 /* Info.plist */,
 			);
@@ -1140,6 +1159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E8D18222CA9ECA00213675 /* SwiftVideosUITests.swift in Sources */,
+				F690690F23115AD700B11E93 /* PageObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
