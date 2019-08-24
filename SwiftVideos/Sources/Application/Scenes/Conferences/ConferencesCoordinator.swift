@@ -2,9 +2,11 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import XCoordinator
+import SwiftVideos_Core
+import SwiftVideos_DataModels
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
 import RxSwift
 
 class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {

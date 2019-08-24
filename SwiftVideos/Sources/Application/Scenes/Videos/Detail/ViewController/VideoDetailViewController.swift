@@ -6,6 +6,7 @@ import SuperArcCoreUI
 import SuperArcCore
 import RxCocoa
 import RxSwift
+import LXVimeoKit
 import YoutubeKit
 import AVKit
 import UIKit
@@ -47,6 +48,8 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
         super.setupViews()
 
         switch viewModel.videoMetaData.source {
+        case .vimeo(resource: let resource):
+            setupVimeoPlayer(withVideoID: resource.video)
         case .youtube(let id):
             setupYoutubePlayer(withVideoID:  id)
         case .wwdc(let url):
@@ -108,5 +111,11 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
             videoPlayerContainerView.addAndStretchSubView(streamingPlayerController.view)
             streamingPlayerController.didMove(toParent: self)
         }
+    }
+
+    private func setupVimeoPlayer(withVideoID id: String) {
+        let vimeoPlayer = LXVimeoPlayerView()
+        videoPlayerContainerView.addAndStretchSubView(vimeoPlayer)
+        vimeoPlayer.load(url: "http://player.vimeo.com/video/\(id)")
     }
 }

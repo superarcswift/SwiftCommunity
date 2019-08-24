@@ -5,6 +5,12 @@
       location = "group:SwiftVideos/SwiftVideos.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:SwiftVideos_Core/SwiftVideos_Core.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SwiftVideos_DataModel/SwiftVideos_DataModels.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SuperArcActivityIndicator/SuperArcActivityIndicator.xcodeproj">
    </FileRef>
    <FileRef

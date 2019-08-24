@@ -2,15 +2,17 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SwiftVideos_Core
+import SwiftVideos_DataModels
 import SuperArcNotificationBanner
 import SuperArcStateView
 import SuperArcCoreUI
 import SuperArcCore
-import Foundation
 import XCoordinator
 import Action
 import RxSwift
 import RxCocoa
+import Foundation
 
 protocol ConferenceDetailViewModelInput {
     var conferenceMetaData: ConferenceMetaData { get }
