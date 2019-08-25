@@ -6,13 +6,19 @@ import XCTest
 
 protocol PageObject {
 
-    func isLoaded() -> Bool
+    var loadedElement: XCUIElement { get }
+
+    var isLoaded: Bool { get }
 
     static func terminate()
 
 }
 
 extension PageObject {
+
+    var isLoaded: Bool {
+        return loadedElement.isDisplayed
+    }
 
     static func terminate() {
         XCUIApplication().terminate()
