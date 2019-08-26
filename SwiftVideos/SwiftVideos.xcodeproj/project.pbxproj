@@ -76,6 +76,7 @@
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
+		F685D3B523147F4400DB85DE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F685D3B423147F4400DB85DE /* Settings.bundle */; };
 		F68F655222FEBF220026604C /* ConferencesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655122FEBF220026604C /* ConferencesComponent.swift */; };
 		F68F655422FEC0130026604C /* VideosComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655322FEC0130026604C /* VideosComponent.swift */; };
 		F68F655622FF4A1B0026604C /* AuthorsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655522FF4A1B0026604C /* AuthorsComponent.swift */; };
@@ -91,12 +92,11 @@
 		F69069202312990700B11E93 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F690691E231298E500B11E93 /* Quick.framework */; };
 		F690692623129B2200B11E93 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F690691E231298E500B11E93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F690692723129B2500B11E93 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F690691B2312985900B11E93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F690692A2312A07400B11E93 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F69069292312A07400B11E93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F690692C2312A08100B11E93 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F690692B2312A08100B11E93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F690692E2312A34F00B11E93 /* VideosPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690692D2312A34F00B11E93 /* VideosPageTests.swift */; };
 		F69069302312A35E00B11E93 /* VideosPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690692F2312A35E00B11E93 /* VideosPage.swift */; };
 		F69069322312ABA700B11E93 /* AuthorsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69069312312ABA700B11E93 /* AuthorsPage.swift */; };
 		F69069342312ABCA00B11E93 /* AuthorsPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69069332312ABCA00B11E93 /* AuthorsPageTests.swift */; };
+		F690693A23141B9D00B11E93 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690693923141B9D00B11E93 /* LicensesViewController.swift */; };
 		F6A6B55122FF68B100BFEC40 /* MoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */; };
 		F6A6B55523008F7E00BFEC40 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */; };
 		F6A6B55723014CFF00BFEC40 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A6B55623014CFF00BFEC40 /* Differentiator.framework */; };
@@ -165,8 +165,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F690692C2312A08100B11E93 /* Nimble.framework in CopyFiles */,
-				F690692A2312A07400B11E93 /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +254,7 @@
 		F66D10E323036AEF0017C352 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C35222DE2F4600FA77DD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		F685D3B423147F4400DB85DE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		F68F655122FEBF220026604C /* ConferencesComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesComponent.swift; sourceTree = "<group>"; };
 		F68F655322FEC0130026604C /* VideosComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosComponent.swift; sourceTree = "<group>"; };
 		F68F655522FF4A1B0026604C /* AuthorsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsComponent.swift; sourceTree = "<group>"; };
@@ -267,12 +266,11 @@
 		F69069192312954C00B11E93 /* ConferencesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesPage.swift; sourceTree = "<group>"; };
 		F690691B2312985900B11E93 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F690691E231298E500B11E93 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		F69069292312A07400B11E93 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		F690692B2312A08100B11E93 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F690692D2312A34F00B11E93 /* VideosPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosPageTests.swift; sourceTree = "<group>"; };
 		F690692F2312A35E00B11E93 /* VideosPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosPage.swift; sourceTree = "<group>"; };
 		F69069312312ABA700B11E93 /* AuthorsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsPage.swift; sourceTree = "<group>"; };
 		F69069332312ABCA00B11E93 /* AuthorsPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsPageTests.swift; sourceTree = "<group>"; };
+		F690693923141B9D00B11E93 /* LicensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
 		F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreComponent.swift; sourceTree = "<group>"; };
 		F6A6B55423008F7E00BFEC40 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		F6A6B55623014CFF00BFEC40 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
@@ -653,6 +651,7 @@
 				F66C90B822E1ADF9006CA2BB /* More.storyboard */,
 				F66C90C722E1FE82006CA2BB /* List */,
 				F66C90C822E1FE8F006CA2BB /* About */,
+				F690693723141B7B00B11E93 /* Licenses */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -779,6 +778,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		F685D3AE23147F2D00DB85DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F685D3B423147F4400DB85DE /* Settings.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F689EC3022CE1FD500CE3996 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -842,6 +849,22 @@
 				F690691523128CC400B11E93 /* UITestCase.swift */,
 			);
 			path = TestCase;
+			sourceTree = "<group>";
+		};
+		F690693723141B7B00B11E93 /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				F690693823141B9100B11E93 /* ViewController */,
+			);
+			path = Licenses;
+			sourceTree = "<group>";
+		};
+		F690693823141B9100B11E93 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F690693923141B9D00B11E93 /* LicensesViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F6A6B55D23015CE200BFEC40 /* SectionHeader */ = {
@@ -920,8 +943,6 @@
 		F6E8D15522CA9EC900213675 = {
 			isa = PBXGroup;
 			children = (
-				F690692B2312A08100B11E93 /* Nimble.framework */,
-				F69069292312A07400B11E93 /* Quick.framework */,
 				F6EFBFD3230D62B5004C2D0A /* Package.swift */,
 				F66D10E323036AEF0017C352 /* Cartfile */,
 				F6453B9F22EB304800392F93 /* README.md */,
@@ -947,6 +968,7 @@
 			isa = PBXGroup;
 			children = (
 				F6D57A6622CD304900BC3DBC /* Application */,
+				F685D3AE23147F2D00DB85DE /* Resources */,
 				F6E8D16822CA9ECA00213675 /* Assets.xcassets */,
 				F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */,
 				F6E8D16D22CA9ECA00213675 /* Info.plist */,
@@ -1082,6 +1104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F66C90C422E1AF3B006CA2BB /* MoreTableViewCell.xib in Resources */,
+				F685D3B523147F4400DB85DE /* Settings.bundle in Resources */,
 				F6CF4AB222D349300026F84F /* ConferenceCollectionViewCell.xib in Resources */,
 				F64238BD22CD4E93000F5CE3 /* Conferences.storyboard in Resources */,
 				F66C90B922E1ADF9006CA2BB /* More.storyboard in Resources */,
@@ -1215,6 +1238,7 @@
 				F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */,
 				F63A720B22F4179B005D0778 /* Constants.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
+				F690693A23141B9D00B11E93 /* LicensesViewController.swift in Sources */,
 				F6A6B55122FF68B100BFEC40 /* MoreComponent.swift in Sources */,
 				F6DFE6BA22FA26970091ECE8 /* OnboardingComponent.swift in Sources */,
 				F6DFE6BE22FA35D90091ECE8 /* AppComponent.swift in Sources */,

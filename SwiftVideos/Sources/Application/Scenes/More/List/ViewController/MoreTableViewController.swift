@@ -15,12 +15,9 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
 
     static var storyboardName = "More"
 
-    enum SegueIdentifier: String {
-        case showAbout
-    }
-
     enum Section: Int {
         case about
+        case license
         case reset
 
         init(from value: Int) {
@@ -63,6 +60,8 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
         switch Section(from: indexPath.section) {
         case .about:
             viewModel.router.trigger(.about)
+        case .license:
+            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, completionHandler: nil)
         case .reset:
             confirmReset()
         }

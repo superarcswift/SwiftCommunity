@@ -35,6 +35,11 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
             let viewController = component.makeAboutViewController(router: anyRouter)
             return .push(viewController)
 
+        case .license:
+            //let viewController = component.makeLicensesViewController(router: anyRouter)
+            //return .push(viewController)
+            fatalError("should not used")
+
         case .reset:
             return .dismiss()
         }
@@ -45,5 +50,6 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 enum MoreRoute: Route {
     case list
     case about
+    case license
     case reset
 }

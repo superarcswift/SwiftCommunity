@@ -1,0 +1,33 @@
+name: Action, nameSpecified: , owner: RxSwiftCommunity, version: 4.0.1
+
+name: Kingfisher, nameSpecified: , owner: onevcat, version: 5.7.1
+
+name: LXVimeoKit, nameSpecified: , owner: satishVekariya, version: fd6c0d2
+
+name: MarkdownView, nameSpecified: , owner: keitaoouchi, version: 1.6.0
+
+name: MarqueeLabel, nameSpecified: , owner: cbpowell, version: 4.0.0
+
+name: Nimble, nameSpecified: , owner: Quick, version: v8.0.2
+
+name: NotificationBanner, nameSpecified: , owner: Daltron, version: b7ad7a6
+
+name: objective-git, nameSpecified: , owner: libgit2, version: 0.14.2
+
+name: PromiseKit, nameSpecified: , owner: mxcl, version: 6.11.0
+
+name: Quick, nameSpecified: , owner: Quick, version: v2.1.0
+
+name: RxDataSources, nameSpecified: , owner: RxSwiftCommunity, version: 4.0.1
+
+name: RxSwift, nameSpecified: , owner: ReactiveX, version: 5.0.1
+
+name: SnapKit, nameSpecified: , owner: SnapKit, version: 5.0.1
+
+name: XCoordinator, nameSpecified: , owner: quickbirdstudios, version: 0963e9f
+
+name: YoutubeKit, nameSpecified: , owner: rinov, version: ac03b82
+
+add-version-numbers: false
+
+LicensePlist Version: 1.8.3

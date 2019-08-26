@@ -19,12 +19,11 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 
 ## App Features
 
-- Use json as database.
-- Data is stored in raw json for easy integration with other tools.
-- View list of iOS/Swift related conferences.
-- View list of videos of conferences.
-- View list of speakers of conferences.
-- Use git for manage the json database (Content is hosted at [SwiftVideosContent](https://github.com/superarcswift/SwiftVideosContent)).
+- Data is stored in raw json files for easy integration with other tools.
+- View a list of iOS/Swift related conferences.
+- View a list of videos of conferences.
+- View a list of speakers of conferences.
+- Use git to manage the json database (Content is hosted at [SwiftVideosContent](https://github.com/superarcswift/SwiftVideosContent)).
 
 ## Technologies
 
@@ -107,7 +106,7 @@ Open a PR if you want to make changes to any part of the frameworks.
 
 ## Inspiration
 
-This project is very opinionated and probably not suitable for all kinds of iOS apps projects. I encourage you to take a look at other prjects where you might find a better architectures, approaches that are more suitable for your ideas:
+This project is very opinionated and probably not suitable for all kinds of iOS apps projects. I encourage you to take a look at other projects where you might find better architectures, approaches that are more suitable for your ideas:
 
 - Open-Source iOS Apps: [https://github.com/dkhamsing/open-source-ios-apps](https://github.com/dkhamsing/open-source-ios-apps)
 

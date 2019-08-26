@@ -14,6 +14,8 @@ typealias MoreDependency = HasGitService
 /// Protocol used to mock for testing purpose.
 protocol MoreBuilder {
     func makeMoreTableViewController(router: AnyRouter<MoreRoute>) -> MoreTableViewController
+    func makeAboutViewController(router: AnyRouter<MoreRoute>) -> AboutViewController
+    func makeLicensesViewController(router: AnyRouter<MoreRoute>) -> LicensesViewController
 }
 
 class MoreComponent: Component<MoreDependency>, MoreBuilder {
@@ -31,6 +33,11 @@ class MoreComponent: Component<MoreDependency>, MoreBuilder {
         let viewController = AboutViewController.instantiate(with: context.viewControllerContext)
         let viewModel = AboutViewModel()
         viewController.viewModel = viewModel
+        return viewController
+    }
+
+    func makeLicensesViewController(router: AnyRouter<MoreRoute>) -> LicensesViewController {
+        let viewController = LicensesViewController.instantiate(with: context.viewControllerContext)
         return viewController
     }
 

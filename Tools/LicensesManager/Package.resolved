@@ -1,0 +1,61 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ColorizeSwift",
+        "repositoryURL": "https://github.com/mtynior/ColorizeSwift.git",
+        "state": {
+          "branch": "master",
+          "revision": "7492d039d594daccc39cacea343eed6cc9d1ed5a",
+          "version": null
+        }
+      },
+      {
+        "package": "CommandRegistry",
+        "repositoryURL": "https://github.com/eneko/CommandRegistry.git",
+        "state": {
+          "branch": null,
+          "revision": "dca1dbf743a0d59430f6e6c0e025d128d1140af2",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "Files",
+        "repositoryURL": "https://github.com/JohnSundell/Files.git",
+        "state": {
+          "branch": null,
+          "revision": "92b57bea0e737e7d92b5ff281f46ec2b59faf91c",
+          "version": "3.1.0"
+        }
+      },
+      {
+        "package": "Logger",
+        "repositoryURL": "https://github.com/eneko/Logger.git",
+        "state": {
+          "branch": null,
+          "revision": "146a17c68a442859ec409b2ae1a23d1913d48c5d",
+          "version": "0.0.2"
+        }
+      },
+      {
+        "package": "llbuild",
+        "repositoryURL": "https://github.com/apple/swift-llbuild.git",
+        "state": {
+          "branch": null,
+          "revision": "f1c9ad9a253cdf1aa89a7f5c99c30b4513b06ddb",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "SwiftPM",
+        "repositoryURL": "https://github.com/apple/swift-package-manager.git",
+        "state": {
+          "branch": null,
+          "revision": "8656a25cb906c1896339f950ac960ee1b4fe8034",
+          "version": "0.4.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

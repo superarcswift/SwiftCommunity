@@ -45,10 +45,36 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="KXe-3t-fC0">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nyS-Ty-EtN">
+                                        <rect key="frame" x="0.0" y="103" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nyS-Ty-EtN" id="qe4-Hg-VyD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Licenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="44" translatesAutoresizingMaskIntoConstraints="NO" id="H2Q-3r-uY7">
+                                                    <rect key="frame" x="16" y="0.0" width="382" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="H2Q-3r-uY7" secondAttribute="bottom" id="1f8-bc-8wv"/>
+                                                <constraint firstItem="H2Q-3r-uY7" firstAttribute="top" secondItem="qe4-Hg-VyD" secondAttribute="top" id="ZEJ-bW-z5c"/>
+                                                <constraint firstItem="H2Q-3r-uY7" firstAttribute="leading" secondItem="qe4-Hg-VyD" secondAttribute="leading" constant="16" id="n1O-3L-qvA"/>
+                                                <constraint firstAttribute="trailing" secondItem="H2Q-3r-uY7" secondAttribute="trailing" constant="16" id="pUv-65-J2n"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection id="mZd-T8-Keq">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Jgs-co-ft4">
-                                        <rect key="frame" x="0.0" y="103" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="171" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jgs-co-ft4" id="2L7-Eq-5WY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -79,9 +105,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="More" image="more" id="Beq-ck-wg6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="cVU-5p-Y9A" kind="show" identifier="showAbout" id="Ku7-2O-WOW"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpB-41-dfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,7 +123,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdh-dz-yiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1043" y="148"/>
+            <point key="canvasLocation" x="1065" y="470"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="Pty-GC-6ya">
+            <objects>
+                <viewController storyboardIdentifier="LicensesViewController" title="About" id="jGL-cc-gkj" customClass="LicensesViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m4s-49-TZt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BEZ-vm-J6R"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqh-ue-PaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064" y="-188"/>
         </scene>
     </scenes>
     <resources>
