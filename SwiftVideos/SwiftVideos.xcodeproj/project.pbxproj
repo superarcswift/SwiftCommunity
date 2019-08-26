@@ -781,6 +781,9 @@
 		F685D3AE23147F2D00DB85DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F6E8D16D22CA9ECA00213675 /* Info.plist */,
+				F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */,
+				F6E8D16822CA9ECA00213675 /* Assets.xcassets */,
 				F685D3B423147F4400DB85DE /* Settings.bundle */,
 			);
 			path = Resources;
@@ -969,9 +972,6 @@
 			children = (
 				F6D57A6622CD304900BC3DBC /* Application */,
 				F685D3AE23147F2D00DB85DE /* Resources */,
-				F6E8D16822CA9ECA00213675 /* Assets.xcassets */,
-				F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */,
-				F6E8D16D22CA9ECA00213675 /* Info.plist */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1440,7 +1440,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Sources/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1462,7 +1462,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Sources/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
