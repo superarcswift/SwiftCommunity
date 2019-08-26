@@ -59,7 +59,7 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 - [ ] µfeatures modules
 - [ ] Clean architecture (at module level)
 
-![Architecture](Assets/Documentation/superarc.png)
+![Architecture](https://github.com/superarcswift/SwiftVideos/raw/master/Assets/Documentation/superarc.png)
 
 ### ViewModel
 

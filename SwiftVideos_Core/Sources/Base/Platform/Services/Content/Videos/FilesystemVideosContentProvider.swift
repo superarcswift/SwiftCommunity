@@ -92,9 +92,14 @@ public class FilesystemVideosContentProvider: VideosDataProvider, FilesystemCont
                                 .appendingPathComponent("\(metaData.conference.metaData.id)", isDirectory: true)
                                 .appendingPathComponent("\(metaData.conference.edition.year)", isDirectory: true)
         let previewFileURL = videoFolderURL.appendingPathComponent("\(metaData.id).jpg")
+        if fileManager.fileExists(atPath: previewFileURL.path) {
+            return previewFileURL
+        }
 
-        guard fileManager.fileExists(atPath: videoFolderURL.path) else {
-            return nil
+        // Fallback to conference preview image
+        let fallbackPreviewFileURL  = videoFolderURL.appendingPathComponent("\(metaData.conference.metaData.id)_\(metaData.conference.edition.year).jpg")
+        if fileManager.fileExists(atPath: fallbackPreviewFileURL.path) {
+            return fallbackPreviewFileURL
         }
 
         return previewFileURL
