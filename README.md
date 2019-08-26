@@ -87,7 +87,7 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 ## Contributing
 
 ### Information
-For convenience, all sub projects are kept in the same workspace & this reporistory so that we can iterate quickly without messing with versioning & package manager issues.
+For convenience, all subprojects are kept in the same workspace & this reporistory so that we can iterate quickly without messing with versioning & package manager issues.
 
 The goal for a stable version in the future is to have separated repositories for all components so that they can live independently from each others.
 
