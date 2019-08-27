@@ -109,6 +109,9 @@ Open a PR if you want to make changes to any part of the frameworks.
 This project is very opinionated and probably not suitable for all kinds of iOS apps projects. I encourage you to take a look at other projects where you might find better architectures, approaches that are more suitable for your ideas:
 
 - Open-Source iOS Apps: [https://github.com/dkhamsing/open-source-ios-apps](https://github.com/dkhamsing/open-source-ios-apps)
+- The unofficial WWDC app for macOS:  [https://github.com/insidegui/WWDC](https://github.com/insidegui/WWDC)
+- Conferences: [https://github.com/zagahr/Conferences.digital](https://github.com/zagahr/Conferences.digital)
+- CocoaHub: [https://cocoahub.app/](https://cocoahub.app/)
 
 ## License
 
