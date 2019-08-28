@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F604E3A923170A4100BFFE6A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F604E3A823170A4000BFFE6A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F604E3AB23170A5400BFFE6A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F604E3AA23170A5400BFFE6A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F604E3AC23170CE400BFFE6A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F690691E231298E500B11E93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F604E3AD23170CE700BFFE6A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F690691B2312985900B11E93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F62DB63222EA45A90089C620 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DB63122EA45A90089C620 /* ObjectiveGit.framework */; };
 		F63712FE22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */; };
 		F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F122F220CC005D0778 /* Animation+Fade.swift */; };
@@ -166,8 +166,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F604E3AB23170A5400BFFE6A /* Nimble.framework in CopyFiles */,
-				F604E3A923170A4100BFFE6A /* Quick.framework in CopyFiles */,
+				F604E3AC23170CE400BFFE6A /* Quick.framework in CopyFiles */,
+				F604E3AD23170CE700BFFE6A /* Nimble.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,8 +191,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F604E3A823170A4000BFFE6A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		F604E3AA23170A5400BFFE6A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F62DB63122EA45A90089C620 /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
 		F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F63A71F122F220CC005D0778 /* Animation+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Fade.swift"; sourceTree = "<group>"; };
@@ -941,8 +939,6 @@
 		F6E8D15522CA9EC900213675 = {
 			isa = PBXGroup;
 			children = (
-				F604E3AA23170A5400BFFE6A /* Nimble.framework */,
-				F604E3A823170A4000BFFE6A /* Quick.framework */,
 				F6EFBFD3230D62B5004C2D0A /* Package.swift */,
 				F66D10E323036AEF0017C352 /* Cartfile */,
 				F6453B9F22EB304800392F93 /* README.md */,
