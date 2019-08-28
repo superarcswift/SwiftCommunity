@@ -4,3 +4,5 @@
 
 /// The tagging protocol for objects that can construct views/view contorllers used in a specific module.
 public protocol ViewBuildable: AnyObject {}
+
+public protocol EmptyViewBuildable: ViewBuildable {}

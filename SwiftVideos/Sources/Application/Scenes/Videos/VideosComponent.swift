@@ -14,14 +14,14 @@ import XCoordinator
 typealias VideosDependency = HasVideosService & HasAuthorsService
 
 /// Protocol can be used used to mock for testing purpose.
-protocol VideosBuilder {
+protocol VideosViewBuilder: ViewBuildable {
 
     func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController
 
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
 }
 
-class VideosComponent: Component<VideosDependency>, VideosBuilder {
+class VideosComponent: Component<VideosDependency, VideosViewBuilder>, VideosViewBuilder {
 
     // MARK: APIs
 

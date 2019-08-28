@@ -14,12 +14,12 @@ import XCoordinator
 typealias ConferencesDependency = HasConferencesService & HasVideosService & HasAuthorsService
 
 /// Protocol used to mock for testing purpose.
-protocol ConferencesBuilder {
+protocol ConferencesViewBuilder {
     func makeConferencesCollectionViewController(router: AnyRouter<ConferencesRoute>) -> ConferencesCollectionViewController
     func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>) -> ConferenceDetailViewController
 }
 
-class ConferencesComponent: Component<ConferencesDependency>, ConferencesBuilder {
+class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder>, ConferencesViewBuilder {
 
     // MARK: APIs
 
@@ -39,6 +39,8 @@ class ConferencesComponent: Component<ConferencesDependency>, ConferencesBuilder
         return viewController
     }
 }
+
+// MARK: Children's dependencies
 
 extension ConferencesComponent : HasVideosService {
     var videosService: VideosService {

@@ -13,11 +13,11 @@ import XCoordinator
 typealias OnboardingDependency = HasGitService
 
 /// Protocol used to mock for testing purpose.
-protocol OnboardingBuildable: ViewBuildable {
+protocol OnboardingBuilder: ViewBuildable {
     func makeOnboardingViewController(router: AnyRouter<OnboardingRoute>) -> OnboardingViewController
 }
 
-class OnboardingComponent: Component<OnboardingDependency>, OnboardingBuildable {
+class OnboardingComponent: Component<OnboardingDependency, OnboardingBuilder> {
 
     // MARK: APIs
 

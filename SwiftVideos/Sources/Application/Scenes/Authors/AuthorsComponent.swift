@@ -14,12 +14,12 @@ import XCoordinator
 typealias AuthorsDependency = HasAuthorsService & HasVideosService
 
 /// Protocol used to mock for testing purpose.
-protocol AuthorsBuilder {
+protocol AuthorsViewBuilder: ViewBuildable {
     func makeAuthorsCollectionViewController(router: AnyRouter<AuthorsRoute>) -> AuthorsCollectionViewController
     func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
 }
 
-class AuthorsComponent: Component<AuthorsDependency>, AuthorsBuilder {
+class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder>, AuthorsViewBuilder {
 
     // MARK: APIs
 
@@ -40,6 +40,8 @@ class AuthorsComponent: Component<AuthorsDependency>, AuthorsBuilder {
         return viewController
     }
 }
+
+// MARK: Children's dependencies
 
 extension AuthorsComponent: HasVideosService {
     var videosService: VideosService {

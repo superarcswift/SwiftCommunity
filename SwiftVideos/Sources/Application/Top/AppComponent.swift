@@ -7,7 +7,7 @@ import SuperArcCoreComponent
 import SuperArcCore
 import SuperArcFoundation
 
-class AppComponent: Component<EmptyDependency> {}
+class AppComponent: Component<EmptyDependency, EmptyViewBuildable> {}
 
 extension AppComponent: HasGitService {
 
