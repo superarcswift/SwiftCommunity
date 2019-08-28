@@ -63,15 +63,15 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 
 ### ViewModel
 
-- Responsible for performing business logics.
+- Responsible for performing calling services to do business logics and prepare data model for presentation.
 
 ### ViewController
 
-- Responseible for interaction with users, displaying result from `ViewModel`.
+- Responsible for interaction with users, displaying result from `ViewModel`.
 
 ### Component
 
-- Responseible for managing dependencies required by its `ViewController` & `ViewModel`.
+- Responsible for managing dependencies required by its `ViewController` & `ViewModel`.
 - Instantiate `ViewController`, `ViewModel`.
 
 ### Coordinator (optional)
