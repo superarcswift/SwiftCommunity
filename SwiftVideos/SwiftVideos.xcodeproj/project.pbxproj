@@ -23,7 +23,6 @@
 		F63A728D22F471F2005D0778 /* SuperArcNotificationBanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F63A728A22F471E9005D0778 /* SuperArcNotificationBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3322E8316000EDB601 /* OnboardingViewController.swift */; };
 		F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */; };
-		F640BC3822E8318800EDB601 /* CoordinatedDIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3722E8318700EDB601 /* CoordinatedDIViewModel.swift */; };
 		F640BC3A22E8464100EDB601 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F640BC3922E8464100EDB601 /* Onboarding.storyboard */; };
 		F640BC3C22E8464D00EDB601 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3B22E8464D00EDB601 /* OnboardingCoordinator.swift */; };
 		F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B022CD451E000F5CE3 /* PromiseKit.framework */; };
@@ -202,7 +201,6 @@
 		F63A728A22F471E9005D0778 /* SuperArcNotificationBanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcNotificationBanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F640BC3322E8316000EDB601 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		F640BC3722E8318700EDB601 /* CoordinatedDIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedDIViewModel.swift; sourceTree = "<group>"; };
 		F640BC3922E8464100EDB601 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		F640BC3B22E8464D00EDB601 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		F640BC3D22E86CDD00EDB601 /* SwiftGit2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGit2.framework; path = Carthage/Build/iOS/SwiftGit2.framework; sourceTree = "<group>"; };
@@ -771,7 +769,6 @@
 		F66C916E22E66EAA006CA2BB /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				F68F654E22FD9B510026604C /* ViewModel */,
 				F63A71F622F22839005D0778 /* View */,
 				F63A71F022F220BB005D0778 /* Animation */,
 			);
@@ -797,14 +794,6 @@
 				F6CF4AB122D349300026F84F /* ConferenceCollectionViewCell.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F68F654E22FD9B510026604C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F640BC3722E8318700EDB601 /* CoordinatedDIViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F690690C23115AAA00B11E93 /* Base */ = {
@@ -1224,7 +1213,6 @@
 				F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */,
 				F66C90BE22E1AF21006CA2BB /* MoreTableViewController.swift in Sources */,
 				F66C910622E6620A006CA2BB /* VideoDetailViewModel.swift in Sources */,
-				F640BC3822E8318800EDB601 /* CoordinatedDIViewModel.swift in Sources */,
 				F66C90C622E1FC25006CA2BB /* VideosCollectionViewModel.swift in Sources */,
 				F64238C422CD4FDB000F5CE3 /* VideoCollectionViewController.swift in Sources */,
 				F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */,

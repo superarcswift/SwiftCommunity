@@ -5,6 +5,7 @@
 import SwiftVideos_Core
 import SuperArcCoreComponent
 
+// TODO: Move creating child viewcontrollers from DashboardCoordinator to here.
 class DashboardComponent: Component<EmptyDependency> {}
 
 extension DashboardComponent: HasConferencesService {

@@ -9,13 +9,13 @@ import SuperArcCore
 import XCoordinator
 
 /// Protocol adding coordinators into ViewModels.
-protocol CoordinatedViewModelProtocol where Self: ViewModel {
+public protocol CoordinatedViewModelProtocol where Self: ViewModel {
     associatedtype RouteType: Route
     var router: AnyRouter<RouteType> { get }
 }
 
 /// Protocol defining dependencies for a ViewModel.
-protocol DependencyInjectedViewModelProtocol where Self: ViewModel {
+public protocol DependencyInjectedViewModelProtocol where Self: ViewModel {
     associatedtype DependencyType
     var dependency: DependencyType { get }
 }
@@ -25,7 +25,7 @@ public class CoordinatedViewModel<R: Route>: ViewModel, CoordinatedViewModelProt
 
     // MARK: Properties
 
-    var router: AnyRouter<R>
+    public var router: AnyRouter<R>
 
     // MARK: Initialization
 
@@ -36,11 +36,11 @@ public class CoordinatedViewModel<R: Route>: ViewModel, CoordinatedViewModelProt
 }
 
 /// Based class can be used to create dependency-injected ViewModels.
-public class DIViewModel<D>: ViewModel, DependencyInjectedViewModelProtocol {
+open class DIViewModel<D>: ViewModel, DependencyInjectedViewModelProtocol {
 
     // MARK: Properties
 
-    var dependency: D
+    public var dependency: D
 
     // MARK: Initialization
 
@@ -51,21 +51,18 @@ public class DIViewModel<D>: ViewModel, DependencyInjectedViewModelProtocol {
 }
 
 /// Based class can be used to create ViewModels containing dependencies and coordinator.
-class CoordinatedDIViewModel<R: Route, D>: DIViewModel<D>, CoordinatedViewModelProtocol, ActivityState {
+open class CoordinatedDIViewModel<R: Route, D>: DIViewModel<D>, CoordinatedViewModelProtocol, ActivityState {
 
     // MARK: Properties
 
     // Public
 
-    var activity = Activity()
-
-    // Private
-
-    internal var router: AnyRouter<R>
+    public var activity = Activity()
+    public var router: AnyRouter<R>
 
     // MARK: Initialization
 
-    init(router: AnyRouter<R>, dependency: D) {
+    public init(router: AnyRouter<R>, dependency: D) {
         self.router = router
         super.init(dependency: dependency)
     }

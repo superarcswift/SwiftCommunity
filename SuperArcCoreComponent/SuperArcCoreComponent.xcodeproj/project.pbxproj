@@ -13,6 +13,7 @@
 		F6ABCB2422FB4C6600476F1A /* SuperArcCoreComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6ABCB3022FB4CC900476F1A /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCB2F22FB4CC900476F1A /* Component.swift */; };
 		F6ABCB3322FB647600476F1A /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCB3222FB647600476F1A /* Dependency.swift */; };
+		F6E2937D231656BB00F759FF /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2937C231656BB00F759FF /* ViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		F6ABCB2322FB4C6600476F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6ABCB2F22FB4CC900476F1A /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		F6ABCB3222FB647600476F1A /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		F6E2937C231656BB00F759FF /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				F6ABCB2F22FB4CC900476F1A /* Component.swift */,
 				F6ABCB3222FB647600476F1A /* Dependency.swift */,
+				F6E2937C231656BB00F759FF /* ViewBuilder.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				F6ABCB3322FB647600476F1A /* Dependency.swift in Sources */,
 				F6ABCB3022FB4CC900476F1A /* Component.swift in Sources */,
+				F6E2937D231656BB00F759FF /* ViewBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

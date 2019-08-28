@@ -9,15 +9,15 @@ import SuperArcCore
 import SuperArcFoundation
 import XCoordinator
 
-/// Protocol defining all dependencies required by this component..
+/// Protocol defining all dependencies required by this component.
 typealias OnboardingDependency = HasGitService
 
 /// Protocol used to mock for testing purpose.
-protocol OnboardingBuilder {
+protocol OnboardingBuildable: ViewBuildable {
     func makeOnboardingViewController(router: AnyRouter<OnboardingRoute>) -> OnboardingViewController
 }
 
-class OnboardingComponent: Component<OnboardingDependency>, OnboardingBuilder {
+class OnboardingComponent: Component<OnboardingDependency>, OnboardingBuildable {
 
     // MARK: APIs
 

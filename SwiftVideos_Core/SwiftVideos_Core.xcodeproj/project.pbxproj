@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F604E3A72316A69000BFFE6A /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F604E3A62316A69000BFFE6A /* Cartfile */; };
 		F669801323102E4200FCEC14 /* SwiftVideos_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669800923102E4200FCEC14 /* SwiftVideos_Core.framework */; };
 		F669801823102E4200FCEC14 /* SwiftVideos_CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F669801723102E4200FCEC14 /* SwiftVideos_CoreTests.swift */; };
 		F669801A23102E4200FCEC14 /* SwiftVideos_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F669800C23102E4200FCEC14 /* SwiftVideos_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +34,7 @@
 		F669806823107A5000FCEC14 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669806723107A5000FCEC14 /* ObjectiveGit.framework */; };
 		F690690723107DE700B11E93 /* SwiftVideos_DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F690690623107DE700B11E93 /* SwiftVideos_DataModels.framework */; };
 		F690690923107DFC00B11E93 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F690690823107DFC00B11E93 /* SuperArcCore.framework */; };
+		F6E2938323165BE000F759FF /* CoordinatedDIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2938223165BE000F759FF /* CoordinatedDIViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F604E3A62316A69000BFFE6A /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		F669800923102E4200FCEC14 /* SwiftVideos_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVideos_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F669800C23102E4200FCEC14 /* SwiftVideos_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftVideos_Core.h; sourceTree = "<group>"; };
 		F669800D23102E4200FCEC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		F669806723107A5000FCEC14 /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
 		F690690623107DE700B11E93 /* SwiftVideos_DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftVideos_DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F690690823107DFC00B11E93 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E2938223165BE000F759FF /* CoordinatedDIViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatedDIViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		F6697FFF23102E4200FCEC14 = {
 			isa = PBXGroup;
 			children = (
+				F604E3A62316A69000BFFE6A /* Cartfile */,
 				F669800B23102E4200FCEC14 /* Sources */,
 				F669801623102E4200FCEC14 /* Tests */,
 				F669800A23102E4200FCEC14 /* Products */,
@@ -148,6 +153,7 @@
 		F669802423102E8200FCEC14 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F6E2937E23165B8100F759FF /* UI */,
 				F66980312310493300FCEC14 /* Platform */,
 				F66980252310493300FCEC14 /* Domain */,
 			);
@@ -366,6 +372,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F6E2937E23165B8100F759FF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F6E2938123165BE000F759FF /* UI */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F6E2938123165BE000F759FF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F6E2938223165BE000F759FF /* CoordinatedDIViewModel.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -461,6 +483,7 @@
 				F669805E2310493300FCEC14 /* swiftheroes.png in Resources */,
 				F66980612310493300FCEC14 /* conference-2.json in Resources */,
 				F669805C2310493300FCEC14 /* appbuilders.png in Resources */,
+				F604E3A72316A69000BFFE6A /* Cartfile in Resources */,
 				F669805A2310493300FCEC14 /* nsspain.png in Resources */,
 				F66980562310493300FCEC14 /* authors.json in Resources */,
 				F669805B2310493300FCEC14 /* swiftandfika.png in Resources */,
@@ -488,6 +511,7 @@
 				F66980632310493300FCEC14 /* FilesystemContentProvider.swift in Sources */,
 				F66980622310493300FCEC14 /* FilesystemConferencesContentProvider.swift in Sources */,
 				F66980572310493300FCEC14 /* FilesystemAuthorsContentProvider.swift in Sources */,
+				F6E2938323165BE000F759FF /* CoordinatedDIViewModel.swift in Sources */,
 				F66980522310493300FCEC14 /* ContentDataProvider.swift in Sources */,
 				F66980532310493300FCEC14 /* VideosService.swift in Sources */,
 				F66980512310493300FCEC14 /* AuthorsService.swift in Sources */,

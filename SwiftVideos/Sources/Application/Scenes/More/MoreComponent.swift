@@ -12,13 +12,13 @@ import XCoordinator
 typealias MoreDependency = HasGitService
 
 /// Protocol used to mock for testing purpose.
-protocol MoreBuilder {
+protocol MoreViewBuilder: ViewBuildable {
     func makeMoreTableViewController(router: AnyRouter<MoreRoute>) -> MoreTableViewController
     func makeAboutViewController(router: AnyRouter<MoreRoute>) -> AboutViewController
     func makeLicensesViewController(router: AnyRouter<MoreRoute>) -> LicensesViewController
 }
 
-class MoreComponent: Component<MoreDependency>, MoreBuilder {
+class MoreComponent: Component<MoreDependency>, MoreViewBuilder {
 
     // MARK: APIs
 

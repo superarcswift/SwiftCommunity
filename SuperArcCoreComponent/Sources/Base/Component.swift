@@ -54,7 +54,7 @@ public final class AnyComponent<DependencyType>: ComponentProtocol {
     }
 }
 
-/// The base class of a dependency injection component.
+/// The base class of a dependency injection component containing all dependencies used by this object.
 open class Component<DependencyType>: ComponentProtocol {
 
     // MARK: Properties
