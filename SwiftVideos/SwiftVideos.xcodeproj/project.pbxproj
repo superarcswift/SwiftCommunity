@@ -127,7 +127,6 @@
 		F6E8D16422CA9EC900213675 /* ConferencesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16322CA9EC900213675 /* ConferencesCollectionViewController.swift */; };
 		F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16822CA9ECA00213675 /* Assets.xcassets */; };
 		F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */; };
-		F6E8D17722CA9ECA00213675 /* SwiftVideosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D17622CA9ECA00213675 /* SwiftVideosTests.swift */; };
 		F6E8D18222CA9ECA00213675 /* ConferencesPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D18122CA9ECA00213675 /* ConferencesPageTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -302,7 +301,6 @@
 		F6E8D16B22CA9ECA00213675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6E8D16D22CA9ECA00213675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6E8D17222CA9ECA00213675 /* SwiftVideosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVideosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6E8D17622CA9ECA00213675 /* SwiftVideosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVideosTests.swift; sourceTree = "<group>"; };
 		F6E8D17822CA9ECA00213675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6E8D17D22CA9ECA00213675 /* SwiftVideosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVideosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D18122CA9ECA00213675 /* ConferencesPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesPageTests.swift; sourceTree = "<group>"; };
@@ -972,7 +970,6 @@
 		F6E8D17522CA9ECA00213675 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F6E8D17622CA9ECA00213675 /* SwiftVideosTests.swift */,
 				F6E8D17822CA9ECA00213675 /* Info.plist */,
 			);
 			path = Tests;
@@ -1274,7 +1271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6E8D17722CA9ECA00213675 /* SwiftVideosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
