@@ -21,7 +21,7 @@ public protocol ConferenceServiceProtocol {
 
 // MARK: - ConferencesService
 
-public class ConferencesService: ContentService, ConferenceServiceProtocol {
+public class ConferencesService: Service, ConferenceServiceProtocol {
 
     // MARK: Properties
 

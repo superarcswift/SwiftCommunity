@@ -9,7 +9,7 @@ import ObjectiveGit
 import Foundation
 
 public protocol HasGitService {
-    var gitService: GitService { get }
+    var gitService: GitServiceProtocol { get }
 }
 
 public protocol GitServiceProtocol {

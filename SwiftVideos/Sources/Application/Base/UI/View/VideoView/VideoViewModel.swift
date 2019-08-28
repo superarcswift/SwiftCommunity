@@ -48,15 +48,15 @@ class VideoViewModel: ViewModel {
 
     // Private
 
-    private var videosService: VideosService
-    private var authorsService: AuthorsService
+    private var videosService: VideosServiceProtocol
+    private var authorsService: AuthorsServiceProtocol
 
     private var defaultPreviewView = UIImage(imageLiteralResourceName: "video_default").withRenderingMode(.alwaysTemplate)
     private var defaultAuthorImage = UIImage(imageLiteralResourceName: "author_default").withRenderingMode(.alwaysTemplate)
 
     // MARK: Initialization
 
-    init(videoMetaData: VideoMetaData, videosService: VideosService, authorsService: AuthorsService) {
+    init(videoMetaData: VideoMetaData, videosService: VideosServiceProtocol, authorsService: AuthorsServiceProtocol) {
         self.videoMetaData = videoMetaData
         self.videosService = videosService
         self.authorsService = authorsService

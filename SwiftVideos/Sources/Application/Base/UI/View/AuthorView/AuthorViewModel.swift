@@ -33,13 +33,13 @@ class AuthorViewModel: ViewModel {
 
     // Private
 
-    private var authorsService: AuthorsService
+    private var authorsService: AuthorsServiceProtocol
 
     private var defaultAuthorImage = UIImage(imageLiteralResourceName: "author_default").withRenderingMode(.alwaysTemplate)
 
     // MARK: Initialization
 
-    init(authorMetaData: AuthorMetaData, authorsService: AuthorsService) {
+    init(authorMetaData: AuthorMetaData, authorsService: AuthorsServiceProtocol) {
         self.authorMetaData = authorMetaData
         self.authorsService = authorsService
         super.init()

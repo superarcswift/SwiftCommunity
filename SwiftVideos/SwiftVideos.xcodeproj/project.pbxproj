@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F604E3AC23170CE400BFFE6A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F690691E231298E500B11E93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F604E3AD23170CE700BFFE6A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F690691B2312985900B11E93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F604E3C22317265C00BFFE6A /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604E3C12317265C00BFFE6A /* OnboardingViewModelTests.swift */; };
+		F604E3C5231726E000BFFE6A /* UnitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604E3C4231726E000BFFE6A /* UnitTestCase.swift */; };
 		F62DB63222EA45A90089C620 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DB63122EA45A90089C620 /* ObjectiveGit.framework */; };
 		F63712FE22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */; };
 		F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F122F220CC005D0778 /* Animation+Fade.swift */; };
@@ -190,6 +192,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F604E3C12317265C00BFFE6A /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
+		F604E3C4231726E000BFFE6A /* UnitTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestCase.swift; sourceTree = "<group>"; };
 		F62DB63122EA45A90089C620 /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
 		F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F63A71F122F220CC005D0778 /* Animation+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Fade.swift"; sourceTree = "<group>"; };
@@ -359,6 +363,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F604E3BA231723C300BFFE6A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F604E3C02317262400BFFE6A /* Scenes */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F604E3BB231723CB00BFFE6A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F604E3C32317267800BFFE6A /* TestCase */,
+				F604E3BC231723E100BFFE6A /* Mock */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F604E3BC231723E100BFFE6A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		F604E3C02317262400BFFE6A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F604E3C12317265C00BFFE6A /* OnboardingViewModelTests.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F604E3C32317267800BFFE6A /* TestCase */ = {
+			isa = PBXGroup;
+			children = (
+				F604E3C4231726E000BFFE6A /* UnitTestCase.swift */,
+			);
+			path = TestCase;
+			sourceTree = "<group>";
+		};
 		F62DB63322EA55710089C620 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -941,7 +985,7 @@
 				F66D10E323036AEF0017C352 /* Cartfile */,
 				F6453B9F22EB304800392F93 /* README.md */,
 				F6E8D16022CA9EC900213675 /* Sources */,
-				F6E8D17522CA9ECA00213675 /* Tests */,
+				F6E8D17522CA9ECA00213675 /* UnitTests */,
 				F6E8D18022CA9ECA00213675 /* UITests */,
 				F6CAFA4922CBEEEF007476D4 /* Frameworks */,
 				F6E8D15F22CA9EC900213675 /* Products */,
@@ -967,12 +1011,14 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		F6E8D17522CA9ECA00213675 /* Tests */ = {
+		F6E8D17522CA9ECA00213675 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				F604E3BA231723C300BFFE6A /* Tests */,
+				F604E3BB231723CB00BFFE6A /* Base */,
 				F6E8D17822CA9ECA00213675 /* Info.plist */,
 			);
-			path = Tests;
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 		F6E8D18022CA9ECA00213675 /* UITests */ = {
@@ -1061,6 +1107,7 @@
 					};
 					F6E8D17122CA9ECA00213675 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = F6E8D15D22CA9EC900213675;
 					};
 					F6E8D17C22CA9ECA00213675 = {
@@ -1271,6 +1318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F604E3C22317265C00BFFE6A /* OnboardingViewModelTests.swift in Sources */,
+				F604E3C5231726E000BFFE6A /* UnitTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1486,13 +1535,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1500,6 +1550,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftVideosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftVideos.app/SwiftVideos";
@@ -1511,13 +1562,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

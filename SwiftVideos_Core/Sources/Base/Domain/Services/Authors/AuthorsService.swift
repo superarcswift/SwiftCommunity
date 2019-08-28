@@ -7,10 +7,16 @@ import SuperArcCore
 import PromiseKit
 
 public protocol HasAuthorsService {
-    var authorsService: AuthorsService { get }
+    var authorsService: AuthorsServiceProtocol { get }
 }
 
-public class AuthorsService: ContentService {
+public protocol AuthorsServiceProtocol {
+    func fetchList() -> Promise<AuthorsList>
+    func fetchAuthor(with metaData: AuthorMetaData) -> Promise<AuthorDetail>
+    func avatar(of author: AuthorMetaData) -> URL?
+}
+
+public class AuthorsService: Service, AuthorsServiceProtocol {
 
     // MARK: Properties
 

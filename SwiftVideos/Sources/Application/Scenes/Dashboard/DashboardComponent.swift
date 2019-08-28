@@ -18,21 +18,21 @@ extension DashboardComponent: HasConferencesService {
 
 extension DashboardComponent: HasVideosService {
 
-    var videosService: VideosService {
+    var videosService: VideosServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: VideosService.self)
     }
 }
 
 extension DashboardComponent: HasAuthorsService {
 
-    var authorsService: AuthorsService {
+    var authorsService: AuthorsServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: AuthorsService.self)
     }
 }
 
 extension DashboardComponent: HasGitService {
 
-    var gitService: GitService {
+    var gitService: GitServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: GitService.self)
     }
 }

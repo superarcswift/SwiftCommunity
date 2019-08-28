@@ -43,13 +43,13 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
 // MARK: Children's dependencies
 
 extension ConferencesComponent: HasVideosService {
-    var videosService: VideosService {
+    var videosService: VideosServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: VideosService.self)
     }
 }
 
 extension ConferencesComponent: HasAuthorsService {
-    var authorsService: AuthorsService {
+    var authorsService: AuthorsServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: AuthorsService.self)
     }
 }

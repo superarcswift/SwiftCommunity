@@ -11,7 +11,7 @@ class AppComponent: Component<EmptyDependency, EmptyViewBuildable> {}
 
 extension AppComponent: HasGitService {
 
-    var gitService: GitService {
+    var gitService: GitServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: GitService.self)
     }
 }

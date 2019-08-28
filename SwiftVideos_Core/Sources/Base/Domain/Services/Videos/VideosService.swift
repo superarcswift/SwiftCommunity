@@ -7,10 +7,18 @@ import SuperArcCore
 import PromiseKit
 
 public protocol HasVideosService {
-    var videosService: VideosService { get }
+    var videosService: VideosServiceProtocol { get }
 }
 
-public class VideosService: ContentService {
+public protocol VideosServiceProtocol {
+    func fetchList() -> Promise<[VideoMetaData]>
+    func fetchList(conference: ConferenceMetaData, edition: ConferenceEdition) -> Promise<[VideoMetaData]>
+    func fetchVideo(metaData: VideoMetaData) -> Promise<VideoDetail>
+    func fetchVideo(page: Int, author: AuthorMetaData) -> Promise<[VideoMetaData]>
+    func previewImageURL(for video: VideoMetaData) -> URL?
+}
+
+public class VideosService: Service, VideosServiceProtocol {
 
     // MARK: Properties
 

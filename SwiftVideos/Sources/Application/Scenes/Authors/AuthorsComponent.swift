@@ -44,13 +44,13 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder>, Author
 // MARK: Children's dependencies
 
 extension AuthorsComponent: HasVideosService {
-    var videosService: VideosService {
+    var videosService: VideosServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: VideosService.self)
     }
 }
 
 extension AuthorsComponent: HasAuthorsService {
-    var authorsService: AuthorsService {
+    var authorsService: AuthorsServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: AuthorsService.self)
     }
 }
