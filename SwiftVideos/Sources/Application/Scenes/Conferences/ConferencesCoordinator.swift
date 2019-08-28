@@ -33,7 +33,7 @@ class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
             return .push(viewController)
 
         case .conferenceDetail(let conferenceMetaData):
-            let viewController = component.makeConferenceDetailViewController(conferenceMetaData: conferenceMetaData, router: anyRouter)
+            let viewController = component.viewBuilder.makeConferenceDetailViewController(conferenceMetaData: conferenceMetaData, router: anyRouter)
             return .push(viewController)
 
         case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):

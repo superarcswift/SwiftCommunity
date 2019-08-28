@@ -28,7 +28,7 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
         switch route {
 
         case .onboarding:
-            let viewController = component.makeOnboardingViewController(router: anyRouter)
+            let viewController = component.viewBuilder.makeOnboardingViewController(router: anyRouter)
             return .push(viewController)
 
         case .dashboard:
