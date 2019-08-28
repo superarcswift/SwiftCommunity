@@ -96,5 +96,5 @@ public final class FilesystemStore: Storage {
     private func createDirectory() throws {
         try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true)
     }
-    
+
 }

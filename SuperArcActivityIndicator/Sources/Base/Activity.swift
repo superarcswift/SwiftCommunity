@@ -15,7 +15,7 @@ public class Activity {
 
     // Private
 
-    private var counter =  0  {
+    private var counter = 0 {
         didSet {
             counter > 0 ? active.onNext(true) : active.onNext(false)
         }

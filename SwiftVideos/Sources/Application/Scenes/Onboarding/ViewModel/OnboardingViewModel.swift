@@ -118,7 +118,7 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
 
     private func cloneRemoteRepository() {
         activity.start()
-        dependency.gitService.clone(progressHandler: { progress, isFinished in
+        dependency.gitService.clone(progressHandler: { progress, _ in
                 print(progress)
             })
             .done { [weak self] _ in

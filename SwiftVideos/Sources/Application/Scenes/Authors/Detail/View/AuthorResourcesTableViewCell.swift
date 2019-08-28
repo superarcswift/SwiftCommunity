@@ -9,5 +9,5 @@ class AuthorResourcesTableViewCell: UITableViewCell, ClassNameDerivable {
 
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
-    
+
 }

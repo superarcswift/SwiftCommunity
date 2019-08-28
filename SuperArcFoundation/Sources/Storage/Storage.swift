@@ -20,7 +20,6 @@ public protocol StorageValue {
     var data: Data { get }
 }
 
-
 extension Data: StorageValue {
     public var data: Data {
         return self

@@ -27,7 +27,6 @@
 		F66C90E622E5ECB9006CA2BB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90E522E5ECB9006CA2BB /* ViewModel.swift */; };
 		F66C90FF22E64C42006CA2BB /* StoryboardInitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90FE22E64C42006CA2BB /* StoryboardInitiable.swift */; };
 		F675C31922DDD3A900FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C30F22DDD3A900FA77DD /* SuperArcCoreUI.framework */; };
-		F675C31E22DDD3A900FA77DD /* SuperArcCoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */; };
 		F675C32022DDD3A900FA77DD /* SuperArcCoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6C4C05F22E7CCF600C0636E /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05E22E7CCF600C0636E /* ViewModelBindable.swift */; };
 		F6DFE6B022FA00630091ECE8 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6AF22FA00630091ECE8 /* UITableView+Extensions.swift */; };
@@ -69,7 +68,6 @@
 		F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCoreUI.h; sourceTree = "<group>"; };
 		F675C31322DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F675C31822DDD3A900FA77DD /* SuperArcCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcCoreUITests.swift; sourceTree = "<group>"; };
 		F675C31F22DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6C4C05E22E7CCF600C0636E /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
 		F6DFE6AF22FA00630091ECE8 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 		F675C31C22DDD3A900FA77DD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F675C31D22DDD3A900FA77DD /* SuperArcCoreUITests.swift */,
 				F675C31F22DDD3A900FA77DD /* Info.plist */,
 			);
 			path = Tests;
@@ -248,6 +245,7 @@
 				F675C30B22DDD3A900FA77DD /* Sources */,
 				F675C30C22DDD3A900FA77DD /* Frameworks */,
 				F675C30D22DDD3A900FA77DD /* Resources */,
+				F604E3B723171A7A00BFFE6A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -331,6 +329,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F604E3B723171A7A00BFFE6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F675C30B22DDD3A900FA77DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -359,7 +378,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F675C31E22DDD3A900FA77DD /* SuperArcCoreUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

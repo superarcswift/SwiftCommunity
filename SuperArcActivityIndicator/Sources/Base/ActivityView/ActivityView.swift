@@ -14,7 +14,7 @@ class ActivityView: View, ClassNameDerivable {
 
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var backgroundView: UIView!
-    
+
     // MARK: Setup
 
     override func setup() {

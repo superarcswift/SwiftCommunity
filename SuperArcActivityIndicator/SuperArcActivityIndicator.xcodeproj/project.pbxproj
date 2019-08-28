@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F64E707523060334005D066D /* SuperArcActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E706B23060334005D066D /* SuperArcActivityIndicator.framework */; };
-		F64E707A23060334005D066D /* SuperArcActivityIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E707923060334005D066D /* SuperArcActivityIndicatorTests.swift */; };
 		F64E707C23060334005D066D /* SuperArcActivityIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = F64E706E23060334005D066D /* SuperArcActivityIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64E70952306042F005D066D /* ActivitySink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70942306042F005D066D /* ActivitySink.swift */; };
 		F64E70972306049E005D066D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F64E70962306049E005D066D /* Cartfile */; };
@@ -41,7 +40,6 @@
 		F64E706E23060334005D066D /* SuperArcActivityIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcActivityIndicator.h; sourceTree = "<group>"; };
 		F64E706F23060334005D066D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F64E707423060334005D066D /* SuperArcActivityIndicatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcActivityIndicatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F64E707923060334005D066D /* SuperArcActivityIndicatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcActivityIndicatorTests.swift; sourceTree = "<group>"; };
 		F64E707B23060334005D066D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F64E70942306042F005D066D /* ActivitySink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySink.swift; sourceTree = "<group>"; };
 		F64E70962306049E005D066D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 		F64E707823060334005D066D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F64E707923060334005D066D /* SuperArcActivityIndicatorTests.swift */,
 				F64E707B23060334005D066D /* Info.plist */,
 			);
 			path = Tests;
@@ -187,6 +184,7 @@
 				F64E706723060334005D066D /* Sources */,
 				F64E706823060334005D066D /* Frameworks */,
 				F64E706923060334005D066D /* Resources */,
+				F604E3B223171A3900BFFE6A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -272,6 +270,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F604E3B223171A3900BFFE6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F64E706723060334005D066D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -291,7 +310,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64E707A23060334005D066D /* SuperArcActivityIndicatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

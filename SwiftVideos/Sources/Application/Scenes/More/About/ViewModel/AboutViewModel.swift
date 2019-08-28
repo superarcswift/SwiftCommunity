@@ -22,7 +22,7 @@ class AboutViewModel: ViewModel {
         }
 
         let url = URL(fileURLWithPath: path)
-        
+
         return try? String(contentsOf: url, encoding: .utf8)
     }
 }

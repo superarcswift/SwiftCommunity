@@ -5,7 +5,6 @@
 import SwiftVideos_Core
 import SuperArcCoreComponent
 
-
 class DashboardComponent: Component<EmptyDependency, EmptyViewBuildable> {}
 
 // MARK: Children's dependencies

@@ -55,7 +55,7 @@ public class GitService: Service, GitServiceProtocol {
     private let fileManager = FileManager.default
 
     private let queue: DispatchQueue
-    
+
     // MARK: Initialization
 
     public init(context: ServiceContext) {

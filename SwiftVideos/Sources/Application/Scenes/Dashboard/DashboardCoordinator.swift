@@ -3,7 +3,6 @@
 //
 
 import SwiftVideos_Core
-import SwiftVideos_Core
 import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore

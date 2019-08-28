@@ -100,7 +100,7 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
         youtubePlayer.loadPlayer()
     }
 
-    private func setupStreamingPlayer(withVideoURL urlString: String)  {
+    private func setupStreamingPlayer(withVideoURL urlString: String) {
 
         if let url = URL(string: urlString) {
             streamingPlayer = AVPlayer(url: url)

@@ -12,9 +12,9 @@ open class CollectionViewController<VM: ViewModel>: UICollectionViewController, 
     public var viewControllerContext: ViewControllerContext!
     public var viewModel: VM!
 
-    @IBInspectable public var hasRightCloseButton = false
-    @IBInspectable public var hasLeftCloseButton = false
-    @IBInspectable public var prefersLargeTitles = false
+    @IBInspectable public var hasRightCloseButton: Bool = false
+    @IBInspectable public var hasLeftCloseButton: Bool = false
+    @IBInspectable public var prefersLargeTitles: Bool = false
 
     // MARK: Lifecycles
 
@@ -39,5 +39,5 @@ open class CollectionViewController<VM: ViewModel>: UICollectionViewController, 
     open func setupBindings() {}
 
     open func loadData() {}
-    
+
 }

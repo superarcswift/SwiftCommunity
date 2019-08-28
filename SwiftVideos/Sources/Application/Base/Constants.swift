@@ -5,7 +5,7 @@
 import UIKit
 
 public struct Constants {
-    
+
     public struct UI {
         static public let defaultRowHeight: CGFloat = 44.0
     }

@@ -1000,6 +1000,7 @@
 				F6E8D15C22CA9EC900213675 /* Resources */,
 				F6CAFA4822CBEEE5007476D4 /* Embed Frameworks */,
 				F64238B222CD4522000F5CE3 /* Carthage */,
+				F604E3AF23170F9500BFFE6A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -1135,6 +1136,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		F604E3AF23170F9500BFFE6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint --config ../Tools/.swiftlint.yml\nfi\n";
+		};
 		F64238B222CD4522000F5CE3 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

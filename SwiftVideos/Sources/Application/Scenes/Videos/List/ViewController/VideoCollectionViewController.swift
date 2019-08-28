@@ -9,7 +9,7 @@ import RxSwift
 import UIKit
 
 class VideosCollectionViewController: ViewController<VideosCollectionViewModel>, StoryboardInitiable {
-    
+
     // MARK: Properties
 
     // Static

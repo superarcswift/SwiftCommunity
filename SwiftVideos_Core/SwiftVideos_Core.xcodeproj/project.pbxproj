@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F604E3A72316A69000BFFE6A /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F604E3A62316A69000BFFE6A /* Cartfile */; };
 		F669801323102E4200FCEC14 /* SwiftVideos_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669800923102E4200FCEC14 /* SwiftVideos_Core.framework */; };
-		F669801823102E4200FCEC14 /* SwiftVideos_CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F669801723102E4200FCEC14 /* SwiftVideos_CoreTests.swift */; };
 		F669801A23102E4200FCEC14 /* SwiftVideos_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F669800C23102E4200FCEC14 /* SwiftVideos_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F66980502310493300FCEC14 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66980272310493300FCEC14 /* ContentService.swift */; };
 		F66980512310493300FCEC14 /* AuthorsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66980292310493300FCEC14 /* AuthorsService.swift */; };
@@ -53,7 +52,6 @@
 		F669800C23102E4200FCEC14 /* SwiftVideos_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftVideos_Core.h; sourceTree = "<group>"; };
 		F669800D23102E4200FCEC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F669801223102E4200FCEC14 /* SwiftVideos_CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVideos_CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F669801723102E4200FCEC14 /* SwiftVideos_CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVideos_CoreTests.swift; sourceTree = "<group>"; };
 		F669801923102E4200FCEC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F66980272310493300FCEC14 /* ContentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
 		F66980292310493300FCEC14 /* AuthorsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorsService.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 		F669801623102E4200FCEC14 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F669801723102E4200FCEC14 /* SwiftVideos_CoreTests.swift */,
 				F669801923102E4200FCEC14 /* Info.plist */,
 			);
 			path = Tests;
@@ -410,6 +407,7 @@
 				F669800523102E4200FCEC14 /* Sources */,
 				F669800623102E4200FCEC14 /* Frameworks */,
 				F669800723102E4200FCEC14 /* Resources */,
+				F604E3B0231719FD00BFFE6A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -502,6 +500,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F604E3B0231719FD00BFFE6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F669800523102E4200FCEC14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -525,7 +544,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F669801823102E4200FCEC14 /* SwiftVideos_CoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

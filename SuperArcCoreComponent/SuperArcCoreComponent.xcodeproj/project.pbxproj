@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F6A6B55923014EA000BFEC40 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6A6B55823014EA000BFEC40 /* README.md */; };
 		F6ABCB1D22FB4C6600476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB1322FB4C6500476F1A /* SuperArcCoreComponent.framework */; };
-		F6ABCB2222FB4C6600476F1A /* SuperArcCoreComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCB2122FB4C6600476F1A /* SuperArcCoreComponentTests.swift */; };
 		F6ABCB2422FB4C6600476F1A /* SuperArcCoreComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6ABCB3022FB4CC900476F1A /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCB2F22FB4CC900476F1A /* Component.swift */; };
 		F6ABCB3322FB647600476F1A /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCB3222FB647600476F1A /* Dependency.swift */; };
@@ -32,7 +31,6 @@
 		F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCoreComponent.h; sourceTree = "<group>"; };
 		F6ABCB1722FB4C6500476F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6ABCB1C22FB4C6600476F1A /* SuperArcCoreComponentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcCoreComponentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6ABCB2122FB4C6600476F1A /* SuperArcCoreComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcCoreComponentTests.swift; sourceTree = "<group>"; };
 		F6ABCB2322FB4C6600476F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6ABCB2F22FB4CC900476F1A /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		F6ABCB3222FB647600476F1A /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 		F6ABCB2022FB4C6600476F1A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F6ABCB2122FB4C6600476F1A /* SuperArcCoreComponentTests.swift */,
 				F6ABCB2322FB4C6600476F1A /* Info.plist */,
 			);
 			path = Tests;
@@ -136,6 +133,7 @@
 				F6ABCB0F22FB4C6500476F1A /* Sources */,
 				F6ABCB1022FB4C6500476F1A /* Frameworks */,
 				F6ABCB1122FB4C6500476F1A /* Resources */,
+				F604E3B523171A5E00BFFE6A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -219,6 +217,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F604E3B523171A5E00BFFE6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F6ABCB0F22FB4C6500476F1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -234,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6ABCB2222FB4C6600476F1A /* SuperArcCoreComponentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -84,7 +84,7 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
         dependency.authorsService.fetchAuthor(with: authorMetaData)
             .done { [weak self] author in
                 self?.authorDetail.accept(author)
-            }.catch { [weak self] error in
+            }.catch { [weak self] _ in
                 guard let self = self else { return }
                 let fallbackAuthorDetail = AuthorDetail(metaData: self.authorMetaData, resources: [])
                 self.authorDetail.accept(fallbackAuthorDetail)

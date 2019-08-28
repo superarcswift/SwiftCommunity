@@ -16,10 +16,10 @@ open class TableViewController<VM: ViewModel>: UITableViewController, CommonView
 
     // IBInspectable
 
-    @IBInspectable public var hasRightCloseButton = false
-    @IBInspectable public var hasLeftCloseButton = false
-    @IBInspectable public var prefersLargeTitles = false
-    
+    @IBInspectable public var hasRightCloseButton: Bool = false
+    @IBInspectable public var hasLeftCloseButton: Bool = false
+    @IBInspectable public var prefersLargeTitles: Bool = false
+
     // Private
 
     // MARK: Lifecycles

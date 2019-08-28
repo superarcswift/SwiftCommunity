@@ -8,7 +8,6 @@ import UIKit
 /// The base class for all UIViewControllers.
 open class ViewController<VM: ViewModel>: UIViewController, CommonViewControllerProtocol {
 
-
     // MARK: Properties
 
     // Public

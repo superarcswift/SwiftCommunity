@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F63A726D22F46683005D0778 /* SuperArcNotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A726322F46683005D0778 /* SuperArcNotificationBanner.framework */; };
-		F63A727222F46683005D0778 /* SuperArcNotificationBannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A727122F46683005D0778 /* SuperArcNotificationBannerTests.swift */; };
 		F63A727422F46683005D0778 /* SuperArcNotificationBanner.h in Headers */ = {isa = PBXBuildFile; fileRef = F63A726622F46683005D0778 /* SuperArcNotificationBanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F63A728022F46B71005D0778 /* NotificationSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A727F22F46B71005D0778 /* NotificationSink.swift */; };
 		F63A728222F46BAF005D0778 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A728122F46BAF005D0778 /* Notification.swift */; };
@@ -35,7 +34,6 @@
 		F63A726622F46683005D0778 /* SuperArcNotificationBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcNotificationBanner.h; sourceTree = "<group>"; };
 		F63A726722F46683005D0778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F63A726C22F46683005D0778 /* SuperArcNotificationBannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcNotificationBannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F63A727122F46683005D0778 /* SuperArcNotificationBannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcNotificationBannerTests.swift; sourceTree = "<group>"; };
 		F63A727322F46683005D0778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F63A727F22F46B71005D0778 /* NotificationSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSink.swift; sourceTree = "<group>"; };
 		F63A728122F46BAF005D0778 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 		F63A727022F46683005D0778 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F63A727122F46683005D0778 /* SuperArcNotificationBannerTests.swift */,
 				F63A727322F46683005D0778 /* Info.plist */,
 			);
 			path = Tests;
@@ -159,6 +156,7 @@
 				F63A725F22F46683005D0778 /* Sources */,
 				F63A726022F46683005D0778 /* Frameworks */,
 				F63A726122F46683005D0778 /* Resources */,
+				F604E3B323171A4600BFFE6A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -241,6 +239,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F604E3B323171A4600BFFE6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F63A725F22F46683005D0778 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -258,7 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F63A727222F46683005D0778 /* SuperArcNotificationBannerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

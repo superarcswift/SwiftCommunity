@@ -2,13 +2,13 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-open class Model<T:Codable>: Codable {
+open class Model<T: Codable>: Codable {
 
     // MARK: Properties
 
     open var updateTimestamp: TimeInterval = 0
 
-    public var data: T? = nil
+    public var data: T?
 
     public enum CodingKeys: String, CodingKey {
         case updateTimestamp

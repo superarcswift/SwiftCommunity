@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Public
 
-    let appManager: AppManager  
+    let appManager: AppManager
 
     var window: UIWindow? = UIWindow()
 

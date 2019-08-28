@@ -19,7 +19,7 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
     public static var storyboardName = "Conferences"
 
     // IBOutlets
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
 
     // Private
@@ -58,7 +58,7 @@ class ConferenceDetailViewController: ViewController<ConferenceDetailViewModel>,
             .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
 
-        let dataSource = RxCollectionViewSectionedReloadDataSource<ConferenceDetailSectionModel>(configureCell: { (dataSource, collectionView, indexPath, videoViewModel) -> UICollectionViewCell in
+        let dataSource = RxCollectionViewSectionedReloadDataSource<ConferenceDetailSectionModel>(configureCell: { (_, collectionView, indexPath, videoViewModel) -> UICollectionViewCell in
             let videoCell = collectionView.dequeueReusableCell(withReuseIdentifier: VideosCollectionViewCell.className, for: indexPath) as! VideosCollectionViewCell
 
             videoCell.videoView.viewModel = videoViewModel

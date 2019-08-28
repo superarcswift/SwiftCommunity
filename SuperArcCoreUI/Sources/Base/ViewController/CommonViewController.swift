@@ -33,7 +33,7 @@ public protocol CommonViewControllerProtocol: HasViewControllerContext, ViewMode
     func setupViews()
     func setupBindings()
     func loadData()
-    
+
 }
 
 extension CommonViewControllerProtocol where Self: UIViewController {

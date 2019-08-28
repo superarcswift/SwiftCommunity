@@ -198,15 +198,14 @@ extension AuthorDetailViewController: UITableViewDelegate {
                 case .github(url: let urlOrNil):
                     guard let url = urlOrNil else { return }
                     UIApplication.shared.open(url, options: [:])
-                    break
+
                 case .homepage(url: let urlOrNil):
                     guard let url = urlOrNil else { return }
                     UIApplication.shared.open(url, options: [:])
-                    break
+
                 case .linkedin(url: let urlOrNil):
                     guard let url = urlOrNil else { return }
                     UIApplication.shared.open(url, options: [:])
-                    break
                 }
             }
 

@@ -60,7 +60,6 @@ public protocol ComponentProtocol: Dependency, HasApplicationContext {
 /// The base class of a dependency injection component containing all dependencies used by this object.
 open class Component<DependencyType, ViewBuildableType>: ComponentProtocol {
 
-
     // MARK: Properties
 
     // Public
@@ -74,7 +73,7 @@ open class Component<DependencyType, ViewBuildableType>: ComponentProtocol {
 
     // MARK: Intialization
 
-    public init(dependency: DependencyType,  context: ApplicationContext) {
+    public init(dependency: DependencyType, context: ApplicationContext) {
         self.dependency = dependency
         self.context = context
     }

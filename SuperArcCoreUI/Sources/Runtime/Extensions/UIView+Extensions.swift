@@ -116,4 +116,3 @@ public extension ClassNameDerivable where Self: UIView {
         return nib.instantiate(withOwner: owner, options: nil).first as? ViewClass
     }
 }
-

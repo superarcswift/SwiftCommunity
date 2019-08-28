@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F63A722822F44DBC005D0778 /* SuperArcStateView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A721E22F44DBC005D0778 /* SuperArcStateView.framework */; };
-		F63A722D22F44DBC005D0778 /* SuperArcStateViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A722C22F44DBC005D0778 /* SuperArcStateViewTests.swift */; };
 		F63A722F22F44DBC005D0778 /* SuperArcStateView.h in Headers */ = {isa = PBXBuildFile; fileRef = F63A722122F44DBC005D0778 /* SuperArcStateView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F63A724622F44EFE005D0778 /* StateViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A724222F44EFE005D0778 /* StateViewPresentable.swift */; };
 		F63A724722F44EFE005D0778 /* StateViewPresentable+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A724322F44EFE005D0778 /* StateViewPresentable+Rx.swift */; };
@@ -38,7 +37,6 @@
 		F63A722122F44DBC005D0778 /* SuperArcStateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcStateView.h; sourceTree = "<group>"; };
 		F63A722222F44DBC005D0778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F63A722722F44DBC005D0778 /* SuperArcStateViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcStateViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F63A722C22F44DBC005D0778 /* SuperArcStateViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcStateViewTests.swift; sourceTree = "<group>"; };
 		F63A722E22F44DBC005D0778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F63A724222F44EFE005D0778 /* StateViewPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateViewPresentable.swift; sourceTree = "<group>"; };
 		F63A724322F44EFE005D0778 /* StateViewPresentable+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StateViewPresentable+Rx.swift"; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 		F63A722B22F44DBC005D0778 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F63A722C22F44DBC005D0778 /* SuperArcStateViewTests.swift */,
 				F63A722E22F44DBC005D0778 /* Info.plist */,
 			);
 			path = Tests;
@@ -170,6 +167,7 @@
 				F63A721A22F44DBC005D0778 /* Sources */,
 				F63A721B22F44DBC005D0778 /* Frameworks */,
 				F63A721C22F44DBC005D0778 /* Resources */,
+				F604E3B423171A5500BFFE6A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -252,6 +250,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F604E3B423171A5500BFFE6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F63A721A22F44DBC005D0778 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -269,7 +288,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F63A722D22F44DBC005D0778 /* SuperArcStateViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,6 @@ class ConferenceCollectionViewCell: UICollectionViewCell {
     // MARK: Properties
 
     // IBOutlets
-    
+
     @IBOutlet weak var conferenceView: ConferenceView!
-    
 }

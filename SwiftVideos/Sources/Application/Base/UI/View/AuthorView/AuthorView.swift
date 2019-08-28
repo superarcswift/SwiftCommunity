@@ -28,7 +28,7 @@ import RxSwift
     }
 
     // MARK: Overrides
-    
+
     override func setup() {
         if let authorView = AuthorView.instantiateFromNib(owner: self) {
             authorView.backgroundColor = .clear
