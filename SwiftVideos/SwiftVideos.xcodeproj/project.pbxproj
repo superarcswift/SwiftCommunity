@@ -11,6 +11,9 @@
 		F604E3AD23170CE700BFFE6A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F690691B2312985900B11E93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F604E3C22317265C00BFFE6A /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604E3C12317265C00BFFE6A /* OnboardingViewModelTests.swift */; };
 		F604E3C5231726E000BFFE6A /* UnitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604E3C4231726E000BFFE6A /* UnitTestCase.swift */; };
+		F604E3C72317389F00BFFE6A /* GitServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604E3C62317389F00BFFE6A /* GitServiceMock.swift */; };
+		F604E3C92317F52B00BFFE6A /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604E3C82317F52B00BFFE6A /* RxTest.framework */; };
+		F604E3CA2317F53300BFFE6A /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F604E3C82317F52B00BFFE6A /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F62DB63222EA45A90089C620 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DB63122EA45A90089C620 /* ObjectiveGit.framework */; };
 		F63712FE22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */; };
 		F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F122F220CC005D0778 /* Animation+Fade.swift */; };
@@ -158,6 +161,7 @@
 			files = (
 				F690692623129B2200B11E93 /* Quick.framework in CopyFiles */,
 				F690692723129B2500B11E93 /* Nimble.framework in CopyFiles */,
+				F604E3CA2317F53300BFFE6A /* RxTest.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +198,8 @@
 /* Begin PBXFileReference section */
 		F604E3C12317265C00BFFE6A /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
 		F604E3C4231726E000BFFE6A /* UnitTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestCase.swift; sourceTree = "<group>"; };
+		F604E3C62317389F00BFFE6A /* GitServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitServiceMock.swift; sourceTree = "<group>"; };
+		F604E3C82317F52B00BFFE6A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		F62DB63122EA45A90089C620 /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
 		F63712FD22EB9E530071C2DC /* ConferenceDetailCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F63A71F122F220CC005D0778 /* Animation+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Fade.swift"; sourceTree = "<group>"; };
@@ -348,6 +354,7 @@
 			files = (
 				F69069202312990700B11E93 /* Quick.framework in Frameworks */,
 				F690691C2312985900B11E93 /* Nimble.framework in Frameworks */,
+				F604E3C92317F52B00BFFE6A /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +390,7 @@
 		F604E3BC231723E100BFFE6A /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				F604E3C62317389F00BFFE6A /* GitServiceMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -917,6 +925,7 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F604E3C82317F52B00BFFE6A /* RxTest.framework */,
 				F690691E231298E500B11E93 /* Quick.framework */,
 				F690691B2312985900B11E93 /* Nimble.framework */,
 				F690690A23109CE200B11E93 /* LXVimeoKit.framework */,
@@ -1320,6 +1329,7 @@
 			files = (
 				F604E3C22317265C00BFFE6A /* OnboardingViewModelTests.swift in Sources */,
 				F604E3C5231726E000BFFE6A /* UnitTestCase.swift in Sources */,
+				F604E3C72317389F00BFFE6A /* GitServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

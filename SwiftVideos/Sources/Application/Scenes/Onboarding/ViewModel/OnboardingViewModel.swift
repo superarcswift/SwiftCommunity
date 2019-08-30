@@ -15,9 +15,9 @@ import RxCocoa
 protocol OnboardingViewModelInput {}
 
 protocol OnboardingViewModelOutput {
-    var isReady: PublishSubject<Bool> { get set }
-    var isUpdated: PublishSubject<Bool> { get set }
-    var isCloned: PublishSubject<Bool> { get set }
+    var isReady: BehaviorSubject<Bool> { get set }
+    var isUpdated: BehaviorSubject<Bool> { get set }
+    var isCloned: BehaviorSubject<Bool> { get set }
 }
 
 protocol OnboardingViewModelApi {
@@ -51,9 +51,9 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
 
     // Public
 
-    var isReady = PublishSubject<Bool>()
-    var isUpdated = PublishSubject<Bool>()
-    var isCloned = PublishSubject<Bool>()
+    var isReady = BehaviorSubject<Bool>(value: false)
+    var isUpdated = BehaviorSubject<Bool>(value: false)
+    var isCloned = BehaviorSubject<Bool>(value: false)
 
     var toggleEmptyState = PublishSubject<StandardStateViewContext?>()
     var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
@@ -96,7 +96,7 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
                     self.notification.onNext(StandardNotification(error: error))
                 }
         } else {
-            cloneRemoteRepository()
+                cloneRemoteRepository()
         }
 
     }
@@ -124,7 +124,7 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
             .done { [weak self] _ in
                 self?.isReady.onNext(true)
             }.ensure { [weak self] in
-                    self?.activity.stop()
+                self?.activity.stop()
             }.catch { [weak self] error in
                 self?.notification.onNext(StandardNotification(error: error))
             }
