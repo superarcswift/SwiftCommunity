@@ -19,6 +19,7 @@ protocol VideoDetailViewModelInput {
 
 protocol VideoDetailViewModelOutput {
     var videoDetail: BehaviorRelay<VideoDetail?> { get set }
+    var authorViewModel: BehaviorRelay<AuthorViewModel?> { get set }
     var previewVideoImage: BehaviorRelay<UIImage?> { get set }
 }
 
@@ -53,11 +54,12 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
 
     // Public
 
-    public var videoDetail = BehaviorRelay<VideoDetail?>(value: nil)
-    public var previewVideoImage = BehaviorRelay<UIImage?>(value: nil)
+    var videoDetail = BehaviorRelay<VideoDetail?>(value: nil)
+    var authorViewModel = BehaviorRelay<AuthorViewModel?>(value: nil)
+    var previewVideoImage = BehaviorRelay<UIImage?>(value: nil)
 
-    public var toogleStateView = PublishSubject<StandardStateViewContext?>()
-    public var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
+    var toogleStateView = PublishSubject<StandardStateViewContext?>()
+    var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
 
     // Internal
 
@@ -84,13 +86,17 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
     private func fetchVideoDetail() {
         dependency.videosService.fetchVideo(metaData: videoMetaData)
             .done { [weak self] videoDetail in
-                self?.videoDetail.accept(videoDetail)
+                guard let self = self else { return }
+                self.videoDetail.accept(videoDetail)
+                self.authorViewModel.accept(AuthorViewModel(authorMetaData: videoDetail.metaData.authors.first!, authorsService: self.dependency.authorsService))
             }
             .catch { [weak self] _ in
                 guard let self = self else { return }
 
                 let fallbackVideoDetail = VideoDetail(metaData: self.videoMetaData, description: nil, resources: nil)
                 self.videoDetail.accept(fallbackVideoDetail)
+                self.authorViewModel.accept(AuthorViewModel(authorMetaData: self.videoMetaData.authors.first!, authorsService: self.dependency.authorsService))
+
             }
     }
 

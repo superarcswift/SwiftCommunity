@@ -94,7 +94,7 @@ The goal for a stable version in the future is to have separated repositories fo
 ### Getting started
 
 - Fork the repository.
-- From the root workspace folder, run  `swift run --package-path Tools/Bootstrap/ Bootstrap` . This will install carthage dependencies for all subprojects.
+- From the root workspace folder, run  `swift run --package-path Tools/Bootstrap/ Bootstrap .` . This will install carthage dependencies for all subprojects.
 - Open the workspace in Xcode and you are good to go.
 - Change code in any components you think it should be implemented differently.
 - Commit the code changes to a separated branch in your cloned repository.

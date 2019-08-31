@@ -84,11 +84,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GNd-Jv-qXw">
+                                <rect key="frame" x="8" y="401" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="0tW-sI-rZb"/>
+                                    <constraint firstAttribute="height" constant="30" id="PbS-zn-84l"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVh-Oj-XkT">
+                                <rect key="frame" x="46" y="405.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OA2-fz-oTE" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" constant="8" id="CQ8-DD-7AL"/>
                             <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="OA2-fz-oTE" secondAttribute="trailing" constant="8" id="CuP-1q-Ouq"/>
+                            <constraint firstItem="GNd-Jv-qXw" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" constant="8" id="EXW-p0-ovr"/>
+                            <constraint firstItem="GNd-Jv-qXw" firstAttribute="top" secondItem="TXE-hb-Wxi" secondAttribute="bottom" constant="16" id="I8a-X8-MNr"/>
+                            <constraint firstItem="WVh-Oj-XkT" firstAttribute="leading" secondItem="GNd-Jv-qXw" secondAttribute="trailing" constant="8" id="OrU-1Q-Qxb"/>
+                            <constraint firstItem="WVh-Oj-XkT" firstAttribute="centerY" secondItem="GNd-Jv-qXw" secondAttribute="centerY" id="W3i-oQ-IdC"/>
                             <constraint firstItem="HkW-YH-3qI" firstAttribute="trailing" secondItem="ZJ5-fV-dds" secondAttribute="trailing" constant="8" id="awH-cv-Tes"/>
                             <constraint firstItem="TXE-hb-Wxi" firstAttribute="leading" secondItem="HkW-YH-3qI" secondAttribute="leading" constant="8" id="cgP-1S-n4N"/>
                             <constraint firstItem="Ckb-7t-IT8" firstAttribute="top" secondItem="HkW-YH-3qI" secondAttribute="top" id="e60-zy-MoE"/>
@@ -103,6 +125,8 @@
                         <viewLayoutGuide key="safeArea" id="HkW-YH-3qI"/>
                     </view>
                     <connections>
+                        <outlet property="authorImageView" destination="GNd-Jv-qXw" id="CdF-xk-TJ0"/>
+                        <outlet property="authorNameLabel" destination="WVh-Oj-XkT" id="np5-EH-azX"/>
                         <outlet property="conferenceLabel" destination="OA2-fz-oTE" id="9Sr-he-tm3"/>
                         <outlet property="descriptionLabel" destination="TXE-hb-Wxi" id="AsL-FX-ltn"/>
                         <outlet property="nameLabel" destination="ZJ5-fV-dds" id="Osp-kb-Vva"/>

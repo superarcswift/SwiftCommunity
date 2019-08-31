@@ -25,7 +25,6 @@ protocol AuthorDetailViewModelOutput {
 
 protocol AuthorDetailViewModelApi {
     func loadData()
-    func avatarImage(of author: AuthorMetaData) -> UIImage?
     func present(_ video: VideoViewModel)
 }
 
@@ -98,20 +97,6 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
             }.catch { [weak self] error in
                 self?.toogleVideosStateView.onNext(StandardStateViewContext(headline: error.localizedDescription))
             }
-    }
-
-    // TODO: use AuthorViewModel instead and remove this function.
-    func avatarImage(of author: AuthorMetaData) -> UIImage? {
-
-        guard let avatarImageURL = dependency.authorsService.avatar(of: author) else {
-            return nil
-        }
-
-        guard let avatarImage = UIImage(contentsOfFile: avatarImageURL.path) else {
-            return nil
-        }
-
-        return avatarImage
     }
 
     func present(_ video: VideoViewModel) {

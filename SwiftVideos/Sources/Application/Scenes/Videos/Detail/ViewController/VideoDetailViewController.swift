@@ -31,6 +31,9 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
     @IBOutlet weak var conferenceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
+    @IBOutlet weak var authorImageView: UIImageView!
+    @IBOutlet weak var authorNameLabel: UILabel!
+
     // Public
 
     weak var videosComponent: VideosComponent!
@@ -72,16 +75,19 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
             .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
 
-        viewModel.outputs.videoDetail.subscribe { [weak self] event in
-            guard let video = event.element else {
-                return
-            }
+        viewModel.outputs.videoDetail.subscribe(onNext: { [weak self] videoDetail in
 
-            self?.nameLabel.text = video?.metaData.name
-            self?.conferenceLabel.text = video?.metaData.conference.metaData.name
-            self?.descriptionLabel.text = video?.description
+            self?.nameLabel.text = videoDetail?.metaData.name
+            self?.conferenceLabel.text = videoDetail?.metaData.conference.metaData.name
+            self?.descriptionLabel.text = videoDetail?.description
 
-        }.disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
+
+        viewModel.outputs.authorViewModel.subscribe(onNext: { [weak self] authorViewModel in
+            self?.authorNameLabel.text = authorViewModel?.authorMetaData.name
+            self?.authorImageView.image = authorViewModel?.avatarImage
+
+        }).disposed(by: disposeBag)
     }
 
     // MARK: APIs
