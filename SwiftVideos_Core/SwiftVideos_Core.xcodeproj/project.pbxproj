@@ -31,6 +31,7 @@
 		F66980622310493300FCEC14 /* FilesystemConferencesContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F669804E2310493300FCEC14 /* FilesystemConferencesContentProvider.swift */; };
 		F66980632310493300FCEC14 /* FilesystemContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F669804F2310493300FCEC14 /* FilesystemContentProvider.swift */; };
 		F669806823107A5000FCEC14 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669806723107A5000FCEC14 /* ObjectiveGit.framework */; };
+		F68F7255231B2C5C00D424CB /* FilePathProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F7254231B2C5C00D424CB /* FilePathProvider.swift */; };
 		F690690723107DE700B11E93 /* SwiftVideos_DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F690690623107DE700B11E93 /* SwiftVideos_DataModels.framework */; };
 		F690690923107DFC00B11E93 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F690690823107DFC00B11E93 /* SuperArcCore.framework */; };
 		F6E2938323165BE000F759FF /* CoordinatedDIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2938223165BE000F759FF /* CoordinatedDIViewModel.swift */; };
@@ -74,6 +75,7 @@
 		F669804E2310493300FCEC14 /* FilesystemConferencesContentProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesystemConferencesContentProvider.swift; sourceTree = "<group>"; };
 		F669804F2310493300FCEC14 /* FilesystemContentProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesystemContentProvider.swift; sourceTree = "<group>"; };
 		F669806723107A5000FCEC14 /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
+		F68F7254231B2C5C00D424CB /* FilePathProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePathProvider.swift; sourceTree = "<group>"; };
 		F690690623107DE700B11E93 /* SwiftVideos_DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftVideos_DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F690690823107DFC00B11E93 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E2938223165BE000F759FF /* CoordinatedDIViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatedDIViewModel.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				F66980302310493300FCEC14 /* GitService.swift */,
+				F68F7254231B2C5C00D424CB /* FilePathProvider.swift */,
 			);
 			path = Git;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				F66980532310493300FCEC14 /* VideosService.swift in Sources */,
 				F66980512310493300FCEC14 /* AuthorsService.swift in Sources */,
 				F66980592310493300FCEC14 /* FilesystemVideosContentProvider.swift in Sources */,
+				F68F7255231B2C5C00D424CB /* FilePathProvider.swift in Sources */,
 				F66980502310493300FCEC14 /* ContentService.swift in Sources */,
 				F66980542310493300FCEC14 /* ConferencesService.swift in Sources */,
 			);

@@ -36,7 +36,7 @@ public class GitService: Service, GitServiceProtocol {
 
     public let baseLocalRepositoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
     public lazy var baseContentPath = {
-        return baseLocalRepositoryPath.combinePath("content")
+        return filePathProvider.localRepositoryURL.path.combinePath("content")
     }()
 
     // Public
@@ -48,19 +48,22 @@ public class GitService: Service, GitServiceProtocol {
     // Private
 
     // TODO: This should be come from configuration.
-    private let repositoryURL = "https://github.com/superarcswift/SwiftVideosContent"
+    private let remoteRepositoryURL = URL(string: "https://github.com/superarcswift/SwiftVideosContent")!
 
-    private lazy var localRepositoryURL = URL(string: "file://\(baseLocalRepositoryPath)/")! // This needs to be prefix with file://
+    //private lazy var localRepositoryURL = URL(string: "file://\(baseLocalRepositoryPath)/")! // This needs to be prefix with file://
 
     private let fileManager = FileManager.default
 
     private let queue: DispatchQueue
+
+    private let filePathProvider: FilePathProvider
 
     // MARK: Initialization
 
     public init(context: ServiceContext) {
         self.context = context
         queue = DispatchQueue(label: "com.tba.swiftvideos.gitservice", qos: .userInitiated)
+        filePathProvider = FilePathProvider(baseLocalRepositoryPath: baseLocalRepositoryPath, remoteRepositoryURL: remoteRepositoryURL)
         print(baseLocalRepositoryPath)
     }
 
@@ -70,13 +73,13 @@ public class GitService: Service, GitServiceProtocol {
     /// - Returns: bool
     public func open() -> Bool {
 
-        guard FileManager.default.fileExists(atPath: baseLocalRepositoryPath) else {
+        guard FileManager.default.fileExists(atPath: filePathProvider.localRepositoryURL!.path) else {
             return false
         }
 
         // Check if local repository is available
         do {
-            localRepository = try GTRepository(url: localRepositoryURL)
+            localRepository = try GTRepository(url: filePathProvider.localRepositoryURL)
         } catch {
             return false
         }
@@ -88,13 +91,9 @@ public class GitService: Service, GitServiceProtocol {
     /// - Returns: Promise<Void>
     public func clone(progressHandler: @escaping (Float, Bool) -> Void) -> Promise<Void> {
         return Promise { resolver in
-            guard let remoteRepositoryURL = URL(string: repositoryURL) else {
-                return resolver.reject(GitServiceError.invalidURL)
-            }
-
             queue.async {
                 do {
-                    self.localRepository = try GTRepository.clone(from: remoteRepositoryURL, toWorkingDirectory: self.localRepositoryURL, options: [GTRepositoryCloneOptionsTransportFlags: true], transferProgressBlock: { progress, isFinished in
+                    self.localRepository = try GTRepository.clone(from: self.remoteRepositoryURL, toWorkingDirectory: self.filePathProvider.localRepositoryURL, options: [GTRepositoryCloneOptionsTransportFlags: true], transferProgressBlock: { progress, isFinished in
                         let progress = Float(progress.pointee.received_objects)/Float(progress.pointee.total_objects)
                         progressHandler(progress, isFinished.pointee.boolValue)
                     })
