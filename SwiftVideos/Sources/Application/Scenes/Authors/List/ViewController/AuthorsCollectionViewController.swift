@@ -29,6 +29,8 @@ class AuthorsCollectionViewController: ViewController<AuthorsCollectionViewModel
         collectionView.delegate = self
 
         collectionView.registerNib(AuthorsCollectionViewCell.className, bundle: Bundle(for: AuthorsCollectionViewCell.self))
+
+        titleKey = "authors"
     }
 
     override func setupBindings() {

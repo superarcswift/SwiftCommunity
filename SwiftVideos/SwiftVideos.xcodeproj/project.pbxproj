@@ -87,6 +87,10 @@
 		F68F655422FEC0130026604C /* VideosComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655322FEC0130026604C /* VideosComponent.swift */; };
 		F68F655622FF4A1B0026604C /* AuthorsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655522FF4A1B0026604C /* AuthorsComponent.swift */; };
 		F68F655822FF4A4B0026604C /* DashboardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655722FF4A4B0026604C /* DashboardComponent.swift */; };
+		F68F725D231B2FD000D424CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F68F725B231B2FD000D424CB /* Localizable.strings */; };
+		F68F7290231BE70700D424CB /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F728F231BE70700D424CB /* SuperArcLocalization.framework */; };
+		F68F72DB231BF32B00D424CB /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F728F231BE70700D424CB /* SuperArcLocalization.framework */; };
+		F68F72DC231BF32B00D424CB /* SuperArcLocalization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68F728F231BE70700D424CB /* SuperArcLocalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F690690B23109CE200B11E93 /* LXVimeoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F690690A23109CE200B11E93 /* LXVimeoKit.framework */; };
 		F690690F23115AD700B11E93 /* PageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690690E23115AD700B11E93 /* PageObject.swift */; };
 		F690691423128C0E00B11E93 /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690691223128C0500B11E93 /* XCUIElement+Extensions.swift */; };
@@ -182,6 +186,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F68F72DC231BF32B00D424CB /* SuperArcLocalization.framework in Embed Frameworks */,
 				F63A723F22F44E46005D0778 /* SuperArcStateView.framework in Embed Frameworks */,
 				F6CAFA8122CC02DE007476D4 /* SuperArcFoundation.framework in Embed Frameworks */,
 				F6ABCB3722FB6CDE00476F1A /* SuperArcCoreComponent.framework in Embed Frameworks */,
@@ -270,6 +275,12 @@
 		F68F655322FEC0130026604C /* VideosComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosComponent.swift; sourceTree = "<group>"; };
 		F68F655522FF4A1B0026604C /* AuthorsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsComponent.swift; sourceTree = "<group>"; };
 		F68F655722FF4A4B0026604C /* DashboardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardComponent.swift; sourceTree = "<group>"; };
+		F68F7256231B2F3900D424CB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F68F7257231B2F4400D424CB /* vi-VN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "vi-VN"; path = "vi-VN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		F68F725C231B2FD000D424CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F68F725E231B2FE000D424CB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F68F725F231B2FE100D424CB /* vi-VN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "vi-VN"; path = "vi-VN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F68F728F231BE70700D424CB /* SuperArcLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F690690A23109CE200B11E93 /* LXVimeoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LXVimeoKit.framework; path = Carthage/Build/iOS/LXVimeoKit.framework; sourceTree = "<group>"; };
 		F690690E23115AD700B11E93 /* PageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageObject.swift; sourceTree = "<group>"; };
 		F690691223128C0500B11E93 /* XCUIElement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extensions.swift"; sourceTree = "<group>"; };
@@ -323,6 +334,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68F7290231BE70700D424CB /* SuperArcLocalization.framework in Frameworks */,
 				F690690B23109CE200B11E93 /* LXVimeoKit.framework in Frameworks */,
 				F66980652310703A00FCEC14 /* SwiftVideos_Core.framework in Frameworks */,
 				F6697FFE231027C300FCEC14 /* SwiftVideos_DataModels.framework in Frameworks */,
@@ -330,6 +342,7 @@
 				F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */,
 				F6A6B55723014CFF00BFEC40 /* Differentiator.framework in Frameworks */,
 				F6A6B55523008F7E00BFEC40 /* RxDataSources.framework in Frameworks */,
+				F68F72DB231BF32B00D424CB /* SuperArcLocalization.framework in Frameworks */,
 				F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */,
 				F63A728B22F471E9005D0778 /* SuperArcNotificationBanner.framework in Frameworks */,
 				F63A723D22F44E3F005D0778 /* SuperArcStateView.framework in Frameworks */,
@@ -836,6 +849,7 @@
 				F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */,
 				F6E8D16822CA9ECA00213675 /* Assets.xcassets */,
 				F685D3B423147F4400DB85DE /* Settings.bundle */,
+				F68F725B231B2FD000D424CB /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -925,6 +939,7 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F68F728F231BE70700D424CB /* SuperArcLocalization.framework */,
 				F604E3C82317F52B00BFFE6A /* RxTest.framework */,
 				F690691E231298E500B11E93 /* Quick.framework */,
 				F690691B2312985900B11E93 /* Nimble.framework */,
@@ -1132,6 +1147,8 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				"vi-VN",
 			);
 			mainGroup = F6E8D15522CA9EC900213675;
 			productRefGroup = F6E8D15F22CA9EC900213675 /* Products */;
@@ -1155,6 +1172,7 @@
 				F6CF4AB222D349300026F84F /* ConferenceCollectionViewCell.xib in Resources */,
 				F64238BD22CD4E93000F5CE3 /* Conferences.storyboard in Resources */,
 				F66C90B922E1ADF9006CA2BB /* More.storyboard in Resources */,
+				F68F725D231B2FD000D424CB /* Localizable.strings in Resources */,
 				F63A71FB22F228F1005D0778 /* ConferenceView.xib in Resources */,
 				F66C90F322E5F938006CA2BB /* AuthorsCollectionViewCell.xib in Resources */,
 				F64238BF22CD4F41000F5CE3 /* Videos.storyboard in Resources */,
@@ -1365,10 +1383,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F68F725B231B2FD000D424CB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F68F725C231B2FD000D424CB /* Base */,
+				F68F725E231B2FE000D424CB /* de */,
+				F68F725F231B2FE100D424CB /* vi-VN */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F6E8D16B22CA9ECA00213675 /* Base */,
+				F68F7256231B2F3900D424CB /* de */,
+				F68F7257231B2F4400D424CB /* vi-VN */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1380,6 +1410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1443,6 +1474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

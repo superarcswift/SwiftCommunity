@@ -26,6 +26,9 @@
       location = "group:SuperArcCoordinator/SuperArcCoordinator.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:SuperArcLocalization/SuperArcLocalization.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SuperArcCoreUI/SuperArcCoreUI.xcodeproj">
    </FileRef>
    <FileRef

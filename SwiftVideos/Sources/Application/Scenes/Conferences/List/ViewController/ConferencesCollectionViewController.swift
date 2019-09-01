@@ -4,6 +4,7 @@
 
 import SwiftVideos_Core
 import SuperArcActivityIndicator
+import SuperArcLocalization
 import SuperArcCoreUI
 import SuperArcCore
 import SuperArcFoundation
@@ -34,6 +35,8 @@ class ConferencesCollectionViewController: ViewController<ConferencesCollectionV
         collectionView.delegate = self
 
         collectionView.registerNib(ConferenceCollectionViewCell.self)
+
+        titleKey = "conferences"
     }
 
     override func setupBindings() {
