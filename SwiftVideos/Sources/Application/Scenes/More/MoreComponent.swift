@@ -2,7 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import SwiftVideos_Core
+import Core
 import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore

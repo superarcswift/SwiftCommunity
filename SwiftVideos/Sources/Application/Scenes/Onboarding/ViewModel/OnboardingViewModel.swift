@@ -2,7 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import SwiftVideos_Core
+import Core
 import SuperArcNotificationBanner
 import SuperArcStateView
 import SuperArcCoreComponent
@@ -96,7 +96,7 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
                     self.notification.onNext(StandardNotification(error: error))
                 }
         } else {
-                cloneRemoteRepository()
+            cloneRemoteRepository()
         }
 
     }
@@ -118,7 +118,7 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
 
     private func cloneRemoteRepository() {
         activity.start()
-        dependency.gitService.clone(progressHandler: { progress, _ in
+        dependency.gitService.clone(progressHandler: { _, _ in
                 //print(progress)
             })
             .done { [weak self] _ in

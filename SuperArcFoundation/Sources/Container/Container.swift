@@ -32,7 +32,7 @@ public class Container<T> {
         store[key] = instance
     }
 
-    public func register<T>(_ type: T.Type, builder: () -> T) throws {
+    public func register<T>(_ type: T.Type, builder: @escaping () -> T) throws {
         let instance = builder()
         try register(instance, for: type)
     }

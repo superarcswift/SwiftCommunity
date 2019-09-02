@@ -1,0 +1,13 @@
+github "ReactiveX/RxSwift" ~> 5.0
+github "RxSwiftCommunity/Action" ~> 4.0
+github "RxSwiftCommunity/RxDataSources" ~> 4.0
+github "mxcl/PromiseKit" ~> 6.0
+github "onevcat/Kingfisher" ~> 5.0
+github "quickbirdstudios/XCoordinator" "feature/update-pods"
+github "libgit2/objective-git"
+github "rinov/YoutubeKit" "master"
+github "satishVekariya/LXVimeoKit" "master"
+github "Daltron/NotificationBanner" "master"
+github "keitaoouchi/MarkdownView"
+github "Quick/Quick" ~> 2.0
+github "Quick/Nimble" ~> 8.0

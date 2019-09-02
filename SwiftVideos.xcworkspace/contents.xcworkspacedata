@@ -1,40 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:SwiftVideos/SwiftVideos.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SwiftVideos_Core/SwiftVideos_Core.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SwiftVideos_DataModel/SwiftVideos_DataModels.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SuperArcActivityIndicator/SuperArcActivityIndicator.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SuperArcNotificationBanner/SuperArcNotificationBanner.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SuperArcStateView/SuperArcStateView.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SuperArcCoreComponent/SuperArcCoreComponent.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SuperArcCoordinator/SuperArcCoordinator.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SuperArcLocalization/SuperArcLocalization.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SuperArcCoreUI/SuperArcCoreUI.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SuperArcCore/SuperArcCore.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SuperArcFoundation/SuperArcFoundation.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "SwiftVideos">
+      <FileRef
+         location = "group:SwiftVideos/SwiftVideos.xcodeproj">
+      </FileRef>
+      <Group
+         location = "container:"
+         name = "Features">
+         <FileRef
+            location = "group:Conferences/Conferences.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Videos/Videos.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Authors/Authors.xcodeproj">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:CoreUX/CoreUX.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Core/Core.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:DataModel/DataModels.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "SuperArc">
+      <FileRef
+         location = "group:SuperArcActivityIndicator/SuperArcActivityIndicator.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SuperArcNotificationBanner/SuperArcNotificationBanner.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SuperArcStateView/SuperArcStateView.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SuperArcCoreComponent/SuperArcCoreComponent.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SuperArcCoordinator/SuperArcCoordinator.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SuperArcLocalization/SuperArcLocalization.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SuperArcCoreUI/SuperArcCoreUI.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SuperArcCore/SuperArcCore.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SuperArcFoundation/SuperArcFoundation.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

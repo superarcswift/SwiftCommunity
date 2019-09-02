@@ -2,8 +2,10 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import SwiftVideos_Core
+import Conferences
+import Core
 import SuperArcCoreComponent
+import SuperArcCoreUI
 
 class DashboardComponent: Component<EmptyDependency, EmptyViewBuildable> {}
 
@@ -11,28 +13,28 @@ class DashboardComponent: Component<EmptyDependency, EmptyViewBuildable> {}
 
 extension DashboardComponent: HasConferencesService {
 
-    var conferencesService: ConferencesService {
-        return context.engine.serviceRegistry.resolve(type: ConferencesService.self)
+    var conferencesService: ConferencesServiceProtocol {
+        return context.engine.serviceRegistry.resolve(type: ConferencesServiceProtocol.self)
     }
 }
 
 extension DashboardComponent: HasVideosService {
 
     var videosService: VideosServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: VideosService.self)
+        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
     }
 }
 
 extension DashboardComponent: HasAuthorsService {
 
     var authorsService: AuthorsServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: AuthorsService.self)
+        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
     }
 }
 
 extension DashboardComponent: HasGitService {
 
     var gitService: GitServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: GitService.self)
+        return context.engine.serviceRegistry.resolve(type: GitServiceProtocol.self)
     }
 }

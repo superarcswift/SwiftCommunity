@@ -29,8 +29,6 @@ public class ApplicationContext: ApplicationContextProtocol {
     public private(set) var engine: Engine
     public var viewControllerContext: ViewControllerContext! = ViewControllerContext()
 
-    // Private
-
     // MARK: Initialization
 
     init(engine: Engine) {
