@@ -23,6 +23,7 @@
 		F64E70AD23061659005D066D /* Activity+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70AC23061659005D066D /* Activity+Rx.swift */; };
 		F64E70AF23061A54005D066D /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70AE23061A54005D066D /* Activity.swift */; };
 		F64E70B12306B2C5005D066D /* ViewController+ActivitySink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70B02306B2C5005D066D /* ViewController+ActivitySink.swift */; };
+		F68204B4231F07CC00098C20 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B3231F07CC00098C20 /* SuperArcCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F64E70AC23061659005D066D /* Activity+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+Rx.swift"; sourceTree = "<group>"; };
 		F64E70AE23061A54005D066D /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F64E70B02306B2C5005D066D /* ViewController+ActivitySink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ActivitySink.swift"; sourceTree = "<group>"; };
+		F68204B3231F07CC00098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68204B4231F07CC00098C20 /* SuperArcCore.framework in Frameworks */,
 				F64E70A9230607D6005D066D /* SuperArcFoundation.framework in Frameworks */,
 				F64E70A72306064C005D066D /* RxRelay.framework in Frameworks */,
 				F64E70A52306063E005D066D /* RxCocoa.framework in Frameworks */,
@@ -153,6 +156,7 @@
 		F64E709F230605EC005D066D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F68204B3231F07CC00098C20 /* SuperArcCore.framework */,
 				F64E70A8230607D6005D066D /* SuperArcFoundation.framework */,
 				F64E70A62306064C005D066D /* RxRelay.framework */,
 				F64E70A42306063E005D066D /* RxCocoa.framework */,

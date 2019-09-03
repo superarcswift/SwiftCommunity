@@ -2,12 +2,23 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import SwiftVideos_Core
+import Conferences
+import Videos
+import Authors
+
+import Core
+import DataModels
+
 import SuperArcActivityIndicator
 import SuperArcNotificationBanner
+import SuperArcCoreComponent
+import SuperArcCoreUI
 import SuperArcCore
+import SuperArcFoundation
 
-class AppManager {
+import XCoordinator
+
+class AppManager: HasNavigationDelegateManager {
 
     // MARK: Properties
 
@@ -17,11 +28,16 @@ class AppManager {
         return Core()
     }()
 
+    // Private
+
+    lazy var navigationDelegateManager = NavigationDelegateManager(context: core.context)
+
     // MARK: Intialization
 
     init() {
         setupServices()
         setupApplicationContext()
+        setupNavigationDelegate()
     }
 
     // MARK: Private helpers
@@ -33,18 +49,23 @@ class AppManager {
 
     private func setupServices() {
         let gitService = GitService(context: core.engine.serviceContext)
-        core.engine.serviceRegistry.register(gitService, for: GitService.self)
+        core.engine.serviceRegistry.register(gitService, for: GitServiceProtocol.self)
 
         let videosContentProvider = FilesystemVideosContentProvider(rootContentFolderPath: gitService.baseContentPath)
         let videosService = VideosService(context: core.engine.serviceContext, contentProvider: videosContentProvider)
-        core.engine.serviceRegistry.register(videosService, for: VideosService.self)
+        core.engine.serviceRegistry.register(videosService, for: VideosServiceProtocol.self)
 
         let authorsContentProvider = FilesystemAuthorsContentProvider(rootContentFolderPath: gitService.baseContentPath)
         let authorsService = AuthorsService(context: core.engine.serviceContext, contentProvider: authorsContentProvider)
-        core.engine.serviceRegistry.register(authorsService, for: AuthorsService.self)
+        core.engine.serviceRegistry.register(authorsService, for: AuthorsServiceProtocol.self)
 
         let conferencesContentProvider = FilesystemConferencesContentProvider(rootContentFolderPath: gitService.baseContentPath)
         let conferencesService = ConferencesService(context: core.engine.serviceContext, contentProvider: conferencesContentProvider, videosService: videosService)
-        core.engine.serviceRegistry.register(conferencesService, for: ConferencesService.self)
+        core.engine.serviceRegistry.register(conferencesService, for: ConferencesServiceProtocol.self)
+    }
+
+    private func setupNavigationDelegate() {
+        core.context.viewControllerContext.register(navigationDelegateManager, for: NavigationDelegateManager.self)
+
     }
 }

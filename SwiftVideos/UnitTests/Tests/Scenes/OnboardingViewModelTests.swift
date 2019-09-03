@@ -3,7 +3,7 @@
 //
 
 @testable import SwiftVideos
-@testable import SwiftVideos_Core
+@testable import Core
 import XCoordinator
 import RxTest
 import RxSwift

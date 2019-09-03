@@ -17,6 +17,9 @@
 		F63A728F22F47565005D0778 /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A728E22F47565005D0778 /* NotificationPresenter.swift */; };
 		F63A729522F47D85005D0778 /* ViewController+NotificationSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729422F47D85005D0778 /* ViewController+NotificationSink.swift */; };
 		F63A729722F5C276005D0778 /* Notification+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729622F5C276005D0778 /* Notification+Rx.swift */; };
+		F68204B6231F07FE00098C20 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B5231F07FE00098C20 /* SuperArcCore.framework */; };
+		F68204B8231F07FE00098C20 /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B7231F07FE00098C20 /* SuperArcCoreUI.framework */; };
+		F68204BA231F07FE00098C20 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B9231F07FE00098C20 /* SuperArcFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		F63A728E22F47565005D0778 /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
 		F63A729422F47D85005D0778 /* ViewController+NotificationSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+NotificationSink.swift"; sourceTree = "<group>"; };
 		F63A729622F5C276005D0778 /* Notification+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Rx.swift"; sourceTree = "<group>"; };
+		F68204B5231F07FE00098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68204B7231F07FE00098C20 /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68204B9231F07FE00098C20 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68204B6231F07FE00098C20 /* SuperArcCore.framework in Frameworks */,
+				F68204B8231F07FE00098C20 /* SuperArcCoreUI.framework in Frameworks */,
+				F68204BA231F07FE00098C20 /* SuperArcFoundation.framework in Frameworks */,
 				F63A728722F46C1D005D0778 /* RxCocoa.framework in Frameworks */,
 				F63A728822F46C1D005D0778 /* NotificationBanner.framework in Frameworks */,
 				F63A728922F46C1D005D0778 /* RxSwift.framework in Frameworks */,
@@ -127,6 +136,9 @@
 		F63A728322F46C1C005D0778 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F68204B5231F07FE00098C20 /* SuperArcCore.framework */,
+				F68204B7231F07FE00098C20 /* SuperArcCoreUI.framework */,
+				F68204B9231F07FE00098C20 /* SuperArcFoundation.framework */,
 				F63A728522F46C1D005D0778 /* NotificationBanner.framework */,
 				F63A728422F46C1C005D0778 /* RxCocoa.framework */,
 				F63A728622F46C1D005D0778 /* RxSwift.framework */,

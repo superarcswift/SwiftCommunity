@@ -18,7 +18,7 @@ extension Registry {
         }
     }
 
-    public func register<T>(type: T.Type, builder: () -> T) {
+    public func register<T>(type: T.Type, builder: @escaping () -> T) {
         do {
             try container.register(type, builder: builder)
         } catch {
