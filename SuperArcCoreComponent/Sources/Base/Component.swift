@@ -8,15 +8,18 @@ import SuperArcCore
 public protocol ComponentProtocol: Dependency, HasApplicationContext {
     associatedtype DependencyType
     associatedtype ViewBuildableType
+    associatedtype NavigationDelegateType
 
     /// The dependency of this component, which is should be provided by the parent of this component.
     var dependency: DependencyType { get }
 
     var viewBuilder: ViewBuildableType { get }
+
+    var navigationDelegate: NavigationDelegateType! { get }
 }
 
 /// The base class of a dependency injection component containing all dependencies used by this object.
-open class Component<DependencyType, ViewBuildableType>: ComponentProtocol {
+open class Component<DependencyType, ViewBuildableType, NavigationDelegateType>: ComponentProtocol {
 
     // MARK: Properties
 
@@ -26,6 +29,7 @@ open class Component<DependencyType, ViewBuildableType>: ComponentProtocol {
     public var viewBuilder: ViewBuildableType {
         return self as! ViewBuildableType
     }
+    public var navigationDelegate: NavigationDelegateType!
 
     public var context: ApplicationContext!
 

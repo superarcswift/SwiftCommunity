@@ -18,7 +18,7 @@ protocol VideosViewBuilder: ViewBuildable {
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
 }
 
-class VideosComponent: Component<VideosDependency, VideosViewBuilder>, VideosViewBuilder {
+class VideosComponent: Component<VideosDependency, VideosViewBuilder, EmptyNavigationDelegate>, VideosViewBuilder {
 
     // MARK: APIs
 
