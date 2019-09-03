@@ -17,10 +17,13 @@ public protocol ConferencesViewBuilder {
     func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>) -> ConferenceDetailViewController
 }
 
-public class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder>, ConferencesViewBuilder {
+public class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder, ConferencesNavigationDelegate>, ConferencesViewBuilder {
 
-    public var navigationDelegate: ConferencesNavigationDelegate {
-        return context.viewControllerContext.resolve(type: NavigationDelegateManager.self) as! ConferencesNavigationDelegate
+    // MARK: Initialization
+
+    public override init(dependency: DependencyType, context: ApplicationContext) {
+        super.init(dependency: dependency, context: context)
+        navigationDelegate = context.viewControllerContext.resolve(type: NavigationDelegateManager.self) as? ConferencesNavigationDelegate
     }
 
     // MARK: APIs

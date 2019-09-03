@@ -16,7 +16,7 @@ protocol AuthorsViewBuilder: ViewBuildable {
     func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
 }
 
-class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder>, AuthorsViewBuilder {
+class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyNavigationDelegate>, AuthorsViewBuilder {
 
     // MARK: APIs
 
