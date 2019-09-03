@@ -36,19 +36,19 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
         component = DashboardComponent(dependency: EmptyComponent(), context: context)
 
         let conferencesCoordinator = ConferencesCoordinator(dependency: component, context: context)
-        conferencesCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Conferences", image: UIImage(named: "conferences"), tag: 0)
+        conferencesCoordinator.rootViewController.tabBarItem = UITabBarItem(titleKey: "conferences", image: UIImage(named: "conferences"), tag: 0)
         conferencesRouter = conferencesCoordinator.anyRouter
 
         let videosCoordinator = VideosCoordinator(initialRoute: .videos(nil, nil), depedency: component, context: context)
-        videosCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Videos", image: UIImage(named: "videos"), tag: 1)
+        videosCoordinator.rootViewController.tabBarItem = UITabBarItem(titleKey: "videos", image: UIImage(named: "videos"), tag: 1)
         videosRouter = videosCoordinator.anyRouter
 
         let authorsCoordinator = AuthorsCoordinator(dependency: component, context: context)
-        authorsCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Authors", image: UIImage(named: "authors"), tag: 2)
+        authorsCoordinator.rootViewController.tabBarItem = UITabBarItem(titleKey: "authors", image: UIImage(named: "authors"), tag: 2)
         authorsRouter = authorsCoordinator.anyRouter
 
         let moreCoordinator = MoreCoordinator(dependency: component, context: context)
-        moreCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "More", image: UIImage(named: "more"), tag: 3)
+        moreCoordinator.rootViewController.tabBarItem = UITabBarItem(titleKey: "more", image: UIImage(named: "more"), tag: 3)
         moreRouter = moreCoordinator.anyRouter
 
         super.init(tabs: [conferencesRouter, videosRouter, authorsRouter, moreRouter], select: conferencesRouter)
