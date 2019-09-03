@@ -1,3 +1,7 @@
-"conferences" = "Conferences";
-"videos" = "Videos";
-"authors" = "Authors";
+"conferences" = "Hội thảo";
+"videos" = "Phim";
+"authors" = "Diễn giả";
+"more" = "Khác";
+"about" = "Giới thiệu";
+"licenses" = "Bản quyền";
+"reset" = "Thiết lập lại";
