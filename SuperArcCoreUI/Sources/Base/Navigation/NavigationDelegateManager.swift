@@ -5,19 +5,10 @@
 import SuperArcCore
 import SuperArcFoundation
 
-public class NavigationDelegateManager: HasApplicationContext {
+public protocol ModuleInterface {}
 
-    // MARK: Properties
-
-    public var context: ApplicationContext!
-
-    // MARK: Setup
-
-    public init(context: ApplicationContext) {
-        self.context = context
-    }
-}
+public protocol NavigationDelegateManagerProtocol: HasApplicationContext {}
 
 public protocol HasNavigationDelegateManager {
-    var navigationDelegateManager: NavigationDelegateManager { get }
+    var navigationDelegateManager: NavigationDelegateManagerProtocol { get }
 }

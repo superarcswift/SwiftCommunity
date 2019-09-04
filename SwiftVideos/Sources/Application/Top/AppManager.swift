@@ -30,7 +30,7 @@ class AppManager: HasNavigationDelegateManager {
 
     // Private
 
-    lazy var navigationDelegateManager = NavigationDelegateManager(context: core.context)
+    lazy var navigationDelegateManager: NavigationDelegateManagerProtocol = NavigationDelegateManager(context: core.context)
 
     // MARK: Intialization
 
@@ -65,7 +65,20 @@ class AppManager: HasNavigationDelegateManager {
     }
 
     private func setupNavigationDelegate() {
-        core.context.viewControllerContext.register(navigationDelegateManager, for: NavigationDelegateManager.self)
+        core.context.viewControllerContext.register(navigationDelegateManager, for: NavigationDelegateManagerProtocol.self)
 
+    }
+}
+
+class NavigationDelegateManager: NavigationDelegateManagerProtocol {
+
+    // MARK: Properties
+
+    var context: ApplicationContext!
+
+    // MARK: Setup
+
+    init(context: ApplicationContext) {
+        self.context = context
     }
 }

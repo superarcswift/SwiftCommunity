@@ -138,6 +138,8 @@
 		F6C8A11F231EA9A600DD6BFD /* Top */ = {
 			isa = PBXGroup;
 			children = (
+				F6C8A129231EAA9500DD6BFD /* VideosCoordinator.swift */,
+				F6C8A130231EAA9500DD6BFD /* VideosComponent.swift */,
 				F6C8A108231EA99800DD6BFD /* Videos.h */,
 				F6C8A109231EA99800DD6BFD /* Info.plist */,
 			);
@@ -175,8 +177,6 @@
 		F6C8A123231EAA9500DD6BFD /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F6C8A129231EAA9500DD6BFD /* VideosCoordinator.swift */,
-				F6C8A130231EAA9500DD6BFD /* VideosComponent.swift */,
 				F6C8A12F231EAA9500DD6BFD /* Videos.storyboard */,
 				F6C8A124231EAA9500DD6BFD /* Detail */,
 				F6C8A12A231EAA9500DD6BFD /* List */,

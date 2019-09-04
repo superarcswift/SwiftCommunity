@@ -145,8 +145,6 @@
 		F6C8A09F231E949800DD6BFD /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F6C8A0B6231E949800DD6BFD /* ConferencesCoordinator.swift */,
-				F6C8A0A0231E949800DD6BFD /* ConferencesComponent.swift */,
 				F6C8A0AC231E949800DD6BFD /* Conferences.storyboard */,
 				F6C8A0A1231E949800DD6BFD /* Detail */,
 				F6C8A0AD231E949800DD6BFD /* List */,
@@ -301,6 +299,8 @@
 		F6CAB74D231D3D3700A0DCF6 /* Top */ = {
 			isa = PBXGroup;
 			children = (
+				F6C8A0B6231E949800DD6BFD /* ConferencesCoordinator.swift */,
+				F6C8A0A0231E949800DD6BFD /* ConferencesComponent.swift */,
 				F6CAB736231D3D2E00A0DCF6 /* Conferences.h */,
 				F6CAB737231D3D2E00A0DCF6 /* Info.plist */,
 			);

@@ -145,6 +145,8 @@
 		F6820469231EFC8700098C20 /* Top */ = {
 			isa = PBXGroup;
 			children = (
+				F6820491231EFF9000098C20 /* AuthorsCoordinator.swift */,
+				F6820490231EFF9000098C20 /* AuthorsComponent.swift */,
 				F6820452231EFC6500098C20 /* Authors.h */,
 				F6820453231EFC6500098C20 /* Info.plist */,
 			);
@@ -222,8 +224,6 @@
 		F6820487231EFF0D00098C20 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F6820491231EFF9000098C20 /* AuthorsCoordinator.swift */,
-				F6820490231EFF9000098C20 /* AuthorsComponent.swift */,
 				F6820492231EFF9000098C20 /* Authors.storyboard */,
 				F6820488231EFF9000098C20 /* Detail */,
 				F6820493231EFF9000098C20 /* List */,
