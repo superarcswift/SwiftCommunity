@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F604E3A72316A69000BFFE6A /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F604E3A62316A69000BFFE6A /* Cartfile */; };
 		F669801323102E4200FCEC14 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669800923102E4200FCEC14 /* Core.framework */; };
 		F669801A23102E4200FCEC14 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F669800C23102E4200FCEC14 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F66980502310493300FCEC14 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66980272310493300FCEC14 /* ContentService.swift */; };
 		F66980522310493300FCEC14 /* ContentDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F669802A2310493300FCEC14 /* ContentDataProvider.swift */; };
 		F66980552310493300FCEC14 /* GitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66980302310493300FCEC14 /* GitService.swift */; };
 		F66980632310493300FCEC14 /* FilesystemContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F669804F2310493300FCEC14 /* FilesystemContentProvider.swift */; };
-		F669806823107A5000FCEC14 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669806723107A5000FCEC14 /* ObjectiveGit.framework */; };
 		F682050C231F0D2B00098C20 /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682050B231F0D2B00098C20 /* SuperArcCoreComponent.framework */; };
 		F682050E231F0D2B00098C20 /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682050D231F0D2B00098C20 /* SuperArcCoreUI.framework */; };
 		F6820510231F0D2B00098C20 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682050F231F0D2B00098C20 /* SuperArcFoundation.framework */; };
@@ -23,6 +21,7 @@
 		F68EDE3D231D0EF2007E28A5 /* DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE3C231D0EF2007E28A5 /* DataModels.framework */; };
 		F68F7255231B2C5C00D424CB /* FilePathProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F7254231B2C5C00D424CB /* FilePathProvider.swift */; };
 		F690690923107DFC00B11E93 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F690690823107DFC00B11E93 /* SuperArcCore.framework */; };
+		F6B5779423204A8A0069E79F /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5779323204A8A0069E79F /* ObjectiveGit.framework */; };
 		F6C8A0EE231E98DB00DD6BFD /* VideosDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0ED231E98DB00DD6BFD /* VideosDependency.swift */; };
 		F6C8A143231EAFBC00DD6BFD /* VideosServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A142231EAFBC00DD6BFD /* VideosServiceProtocol.swift */; };
 		F6C8A154231EB39800DD6BFD /* AuthorsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A153231EB39800DD6BFD /* AuthorsServiceProtocol.swift */; };
@@ -42,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F604E3A62316A69000BFFE6A /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		F669800923102E4200FCEC14 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F669800C23102E4200FCEC14 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		F669800D23102E4200FCEC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +60,7 @@
 		F68F7254231B2C5C00D424CB /* FilePathProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePathProvider.swift; sourceTree = "<group>"; };
 		F690690623107DE700B11E93 /* SwiftVideos_DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftVideos_DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F690690823107DFC00B11E93 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B5779323204A8A0069E79F /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = ../Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
 		F6C8A0ED231E98DB00DD6BFD /* VideosDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosDependency.swift; sourceTree = "<group>"; };
 		F6C8A142231EAFBC00DD6BFD /* VideosServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosServiceProtocol.swift; sourceTree = "<group>"; };
 		F6C8A153231EB39800DD6BFD /* AuthorsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsServiceProtocol.swift; sourceTree = "<group>"; };
@@ -75,12 +74,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B5779423204A8A0069E79F /* ObjectiveGit.framework in Frameworks */,
 				F682050C231F0D2B00098C20 /* SuperArcCoreComponent.framework in Frameworks */,
 				F682050E231F0D2B00098C20 /* SuperArcCoreUI.framework in Frameworks */,
 				F6820510231F0D2B00098C20 /* SuperArcFoundation.framework in Frameworks */,
 				F68EDE3D231D0EF2007E28A5 /* DataModels.framework in Frameworks */,
 				F690690923107DFC00B11E93 /* SuperArcCore.framework in Frameworks */,
-				F669806823107A5000FCEC14 /* ObjectiveGit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +97,6 @@
 		F6697FFF23102E4200FCEC14 = {
 			isa = PBXGroup;
 			children = (
-				F604E3A62316A69000BFFE6A /* Cartfile */,
 				F669800B23102E4200FCEC14 /* Sources */,
 				F669801623102E4200FCEC14 /* Tests */,
 				F669800A23102E4200FCEC14 /* Products */,
@@ -201,6 +199,7 @@
 		F669806623107A5000FCEC14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6B5779323204A8A0069E79F /* ObjectiveGit.framework */,
 				F682050B231F0D2B00098C20 /* SuperArcCoreComponent.framework */,
 				F682050D231F0D2B00098C20 /* SuperArcCoreUI.framework */,
 				F682050F231F0D2B00098C20 /* SuperArcFoundation.framework */,
@@ -339,7 +338,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F604E3A72316A69000BFFE6A /* Cartfile in Resources */,
 				F6C8A167231EE81700DD6BFD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,10 +546,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -579,10 +574,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

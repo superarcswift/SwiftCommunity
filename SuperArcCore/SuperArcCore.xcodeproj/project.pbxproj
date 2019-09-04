@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		F63A729122F47BC6005D0778 /* ApplicationDependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729022F47BC6005D0778 /* ApplicationDependencyRegistry.swift */; };
 		F63A729322F47C14005D0778 /* ApplicationDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729222F47C14005D0778 /* ApplicationDependency.swift */; };
-		F64238AF22CD44C6000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */; };
 		F6451B7222D14B5A0091E147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B7122D14B5A0091E147 /* Endpoint.swift */; };
-		F66C903722DF381E006CA2BB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903622DF381E006CA2BB /* Kingfisher.framework */; };
-		F66C903922DF382C006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903822DF382C006CA2BB /* RxSwift.framework */; };
-		F66C903B22DF3836006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C903A22DF3836006CA2BB /* RxCocoa.framework */; };
 		F66C90EF22E5ED5E006CA2BB /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90EE22E5ED5E006CA2BB /* ApplicationContext.swift */; };
 		F675C35522DEFDA500FA77DD /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35422DEFDA500FA77DD /* Core.swift */; };
+		F6B577A823204C5E0069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A423204C5E0069E79F /* RxSwift.framework */; };
+		F6B577A923204C5E0069E79F /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A523204C5E0069E79F /* Kingfisher.framework */; };
+		F6B577AA23204C5E0069E79F /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A623204C5E0069E79F /* PromiseKit.framework */; };
+		F6B577AB23204C5E0069E79F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A723204C5E0069E79F /* RxCocoa.framework */; };
+		F6B577BB23204D560069E79F /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577BA23204D560069E79F /* RxRelay.framework */; };
 		F6CAFA3522CBEEC8007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */; };
 		F6CAFA3C22CBEEC8007476D4 /* SuperArcCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6CAFA7222CBF1A5007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7122CBF1A5007476D4 /* SuperArcFoundation.framework */; };
@@ -39,13 +40,14 @@
 /* Begin PBXFileReference section */
 		F63A729022F47BC6005D0778 /* ApplicationDependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependencyRegistry.swift; sourceTree = "<group>"; };
 		F63A729222F47C14005D0778 /* ApplicationDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependency.swift; sourceTree = "<group>"; };
-		F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6451B7122D14B5A0091E147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		F66C903622DF381E006CA2BB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		F66C903822DF382C006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		F66C903A22DF3836006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		F66C90EE22E5ED5E006CA2BB /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		F675C35422DEFDA500FA77DD /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		F6B577A423204C5E0069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F6B577A523204C5E0069E79F /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		F6B577A623204C5E0069E79F /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F6B577A723204C5E0069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F6B577BA23204D560069E79F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCore.h; sourceTree = "<group>"; };
 		F6CAFA2F22CBEEC7007476D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,10 +66,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F66C903B22DF3836006CA2BB /* RxCocoa.framework in Frameworks */,
-				F66C903922DF382C006CA2BB /* RxSwift.framework in Frameworks */,
-				F66C903722DF381E006CA2BB /* Kingfisher.framework in Frameworks */,
-				F64238AF22CD44C6000F5CE3 /* PromiseKit.framework in Frameworks */,
+				F6B577BB23204D560069E79F /* RxRelay.framework in Frameworks */,
+				F6B577A823204C5E0069E79F /* RxSwift.framework in Frameworks */,
+				F6B577A923204C5E0069E79F /* Kingfisher.framework in Frameworks */,
+				F6B577AA23204C5E0069E79F /* PromiseKit.framework in Frameworks */,
+				F6B577AB23204C5E0069E79F /* RxCocoa.framework in Frameworks */,
 				F6CAFA7222CBF1A5007476D4 /* SuperArcFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,10 +165,11 @@
 		F6CAFA7022CBF1A5007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F66C903A22DF3836006CA2BB /* RxCocoa.framework */,
-				F66C903822DF382C006CA2BB /* RxSwift.framework */,
-				F66C903622DF381E006CA2BB /* Kingfisher.framework */,
-				F64238AE22CD44C5000F5CE3 /* PromiseKit.framework */,
+				F6B577BA23204D560069E79F /* RxRelay.framework */,
+				F6B577A523204C5E0069E79F /* Kingfisher.framework */,
+				F6B577A623204C5E0069E79F /* PromiseKit.framework */,
+				F6B577A723204C5E0069E79F /* RxCocoa.framework */,
+				F6B577A423204C5E0069E79F /* RxSwift.framework */,
 				F6CAFA7122CBF1A5007476D4 /* SuperArcFoundation.framework */,
 			);
 			name = Frameworks;
@@ -406,6 +410,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -470,6 +475,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -501,10 +507,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -532,10 +534,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

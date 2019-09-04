@@ -23,8 +23,12 @@
 		F6820505231F0CCC00098C20 /* AuthorsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68204F5231F0CCC00098C20 /* AuthorsCollectionViewCell.xib */; };
 		F6820506231F0CCC00098C20 /* AuthorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68204F6231F0CCC00098C20 /* AuthorsCollectionViewCell.swift */; };
 		F6820507231F0CCC00098C20 /* AuthorsCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68204F7231F0CCC00098C20 /* AuthorsCollectionViewFlowLayout.swift */; };
-		F682050A231F0CFC00098C20 /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820509231F0CFC00098C20 /* XCoordinator.framework */; };
 		F6820532231F1B3E00098C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6820531231F1B3E00098C20 /* Assets.xcassets */; };
+		F6B5779623204AA10069E79F /* DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5779523204AA10069E79F /* DataModels.framework */; };
+		F6B5779723204AAB0069E79F /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820509231F0CFC00098C20 /* XCoordinator.framework */; };
+		F6B5779923204AB50069E79F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5779823204AB50069E79F /* Core.framework */; };
+		F6B5779B23204AB90069E79F /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5779A23204AB90069E79F /* SuperArcCore.framework */; };
+		F6B5779D23204ABD0069E79F /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5779C23204ABD0069E79F /* SuperArcCoreUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		F68204F7231F0CCC00098C20 /* AuthorsCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorsCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		F6820509231F0CFC00098C20 /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		F6820531231F1B3E00098C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6B5779523204AA10069E79F /* DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B5779823204AB50069E79F /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B5779A23204AB90069E79F /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B5779C23204ABD0069E79F /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F682050A231F0CFC00098C20 /* XCoordinator.framework in Frameworks */,
+				F6B5779D23204ABD0069E79F /* SuperArcCoreUI.framework in Frameworks */,
+				F6B5779B23204AB90069E79F /* SuperArcCore.framework in Frameworks */,
+				F6B5779923204AB50069E79F /* Core.framework in Frameworks */,
+				F6B5779723204AAB0069E79F /* XCoordinator.framework in Frameworks */,
+				F6B5779623204AA10069E79F /* DataModels.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,10 +150,8 @@
 		F68204E3231F0CCC00098C20 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F68204E4231F0CCC00098C20 /* AuthorView */,
-				F68204E8231F0CCC00098C20 /* Video */,
+				F68204E8231F0CCC00098C20 /* Videos */,
 				F68204F3231F0CCC00098C20 /* Authors */,
-				F68204F8231F0CCC00098C20 /* Videos */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,13 +166,13 @@
 			path = AuthorView;
 			sourceTree = "<group>";
 		};
-		F68204E8231F0CCC00098C20 /* Video */ = {
+		F68204E8231F0CCC00098C20 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
 				F68204E9231F0CCC00098C20 /* VideoView */,
 				F68204ED231F0CCC00098C20 /* Cell */,
 			);
-			path = Video;
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		F68204E9231F0CCC00098C20 /* VideoView */ = {
@@ -190,6 +200,7 @@
 		F68204F3231F0CCC00098C20 /* Authors */ = {
 			isa = PBXGroup;
 			children = (
+				F68204E4231F0CCC00098C20 /* AuthorView */,
 				F68204F4231F0CCC00098C20 /* Cells */,
 			);
 			path = Authors;
@@ -205,16 +216,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		F68204F8231F0CCC00098C20 /* Videos */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Videos;
-			sourceTree = "<group>";
-		};
 		F6820508231F0CFC00098C20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6B5779C23204ABD0069E79F /* SuperArcCoreUI.framework */,
+				F6B5779A23204AB90069E79F /* SuperArcCore.framework */,
+				F6B5779823204AB50069E79F /* Core.framework */,
+				F6B5779523204AA10069E79F /* DataModels.framework */,
 				F6820509231F0CFC00098C20 /* XCoordinator.framework */,
 			);
 			name = Frameworks;

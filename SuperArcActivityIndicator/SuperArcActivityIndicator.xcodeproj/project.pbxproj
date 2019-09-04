@@ -10,20 +10,19 @@
 		F64E707523060334005D066D /* SuperArcActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E706B23060334005D066D /* SuperArcActivityIndicator.framework */; };
 		F64E707C23060334005D066D /* SuperArcActivityIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = F64E706E23060334005D066D /* SuperArcActivityIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64E70952306042F005D066D /* ActivitySink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70942306042F005D066D /* ActivitySink.swift */; };
-		F64E70972306049E005D066D /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F64E70962306049E005D066D /* Cartfile */; };
 		F64E709923060531005D066D /* ActivityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E709823060531005D066D /* ActivityPresenter.swift */; };
 		F64E709C230605BA005D066D /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E709B230605BA005D066D /* ActivityView.swift */; };
 		F64E709E230605CC005D066D /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F64E709D230605CC005D066D /* ActivityView.xib */; };
 		F64E70A1230605EC005D066D /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E70A0230605EC005D066D /* SuperArcCoreUI.framework */; };
-		F64E70A32306061B005D066D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E70A22306061B005D066D /* RxSwift.framework */; };
-		F64E70A52306063E005D066D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E70A42306063E005D066D /* RxCocoa.framework */; };
-		F64E70A72306064C005D066D /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E70A62306064C005D066D /* RxRelay.framework */; };
 		F64E70A9230607D6005D066D /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E70A8230607D6005D066D /* SuperArcFoundation.framework */; };
 		F64E70AB23060CFC005D066D /* ActivityViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70AA23060CFC005D066D /* ActivityViewStyle.swift */; };
 		F64E70AD23061659005D066D /* Activity+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70AC23061659005D066D /* Activity+Rx.swift */; };
 		F64E70AF23061A54005D066D /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70AE23061A54005D066D /* Activity.swift */; };
 		F64E70B12306B2C5005D066D /* ViewController+ActivitySink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70B02306B2C5005D066D /* ViewController+ActivitySink.swift */; };
 		F68204B4231F07CC00098C20 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B3231F07CC00098C20 /* SuperArcCore.framework */; };
+		F6B577A123204B880069E79F /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5779E23204B880069E79F /* RxRelay.framework */; };
+		F6B577A223204B880069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5779F23204B880069E79F /* RxSwift.framework */; };
+		F6B577A323204B880069E79F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A023204B880069E79F /* RxCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,20 +42,19 @@
 		F64E707423060334005D066D /* SuperArcActivityIndicatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcActivityIndicatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64E707B23060334005D066D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F64E70942306042F005D066D /* ActivitySink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySink.swift; sourceTree = "<group>"; };
-		F64E70962306049E005D066D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		F64E709823060531005D066D /* ActivityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPresenter.swift; sourceTree = "<group>"; };
 		F64E709B230605BA005D066D /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		F64E709D230605CC005D066D /* ActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
 		F64E70A0230605EC005D066D /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F64E70A22306061B005D066D /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		F64E70A42306063E005D066D /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		F64E70A62306064C005D066D /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		F64E70A8230607D6005D066D /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64E70AA23060CFC005D066D /* ActivityViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewStyle.swift; sourceTree = "<group>"; };
 		F64E70AC23061659005D066D /* Activity+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+Rx.swift"; sourceTree = "<group>"; };
 		F64E70AE23061A54005D066D /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F64E70B02306B2C5005D066D /* ViewController+ActivitySink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ActivitySink.swift"; sourceTree = "<group>"; };
 		F68204B3231F07CC00098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B5779E23204B880069E79F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		F6B5779F23204B880069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F6B577A023204B880069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +62,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B577A123204B880069E79F /* RxRelay.framework in Frameworks */,
+				F6B577A223204B880069E79F /* RxSwift.framework in Frameworks */,
+				F6B577A323204B880069E79F /* RxCocoa.framework in Frameworks */,
 				F68204B4231F07CC00098C20 /* SuperArcCore.framework in Frameworks */,
 				F64E70A9230607D6005D066D /* SuperArcFoundation.framework in Frameworks */,
-				F64E70A72306064C005D066D /* RxRelay.framework in Frameworks */,
-				F64E70A52306063E005D066D /* RxCocoa.framework in Frameworks */,
-				F64E70A32306061B005D066D /* RxSwift.framework in Frameworks */,
 				F64E70A1230605EC005D066D /* SuperArcCoreUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +85,6 @@
 		F64E706123060334005D066D = {
 			isa = PBXGroup;
 			children = (
-				F64E70962306049E005D066D /* Cartfile */,
 				F64E706D23060334005D066D /* Sources */,
 				F64E707823060334005D066D /* Tests */,
 				F64E706C23060334005D066D /* Products */,
@@ -156,11 +153,11 @@
 		F64E709F230605EC005D066D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6B577A023204B880069E79F /* RxCocoa.framework */,
+				F6B5779E23204B880069E79F /* RxRelay.framework */,
+				F6B5779F23204B880069E79F /* RxSwift.framework */,
 				F68204B3231F07CC00098C20 /* SuperArcCore.framework */,
 				F64E70A8230607D6005D066D /* SuperArcFoundation.framework */,
-				F64E70A62306064C005D066D /* RxRelay.framework */,
-				F64E70A42306063E005D066D /* RxCocoa.framework */,
-				F64E70A22306061B005D066D /* RxSwift.framework */,
 				F64E70A0230605EC005D066D /* SuperArcCoreUI.framework */,
 			);
 			name = Frameworks;
@@ -260,7 +257,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64E70972306049E005D066D /* Cartfile in Resources */,
 				F64E709E230605CC005D066D /* ActivityView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +362,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -430,6 +427,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

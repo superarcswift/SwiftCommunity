@@ -15,11 +15,11 @@
 		F63A724922F44EFE005D0778 /* StateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63A724522F44EFE005D0778 /* StateView.xib */; };
 		F63A724C22F44F23005D0778 /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A724B22F44F23005D0778 /* SuperArcCoreUI.framework */; };
 		F63A724E22F44F2F005D0778 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A724D22F44F2F005D0778 /* SuperArcFoundation.framework */; };
-		F63A725222F45232005D0778 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A724F22F45232005D0778 /* RxCocoa.framework */; };
-		F63A725322F45232005D0778 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A725022F45232005D0778 /* RxRelay.framework */; };
-		F63A725422F45232005D0778 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A725122F45232005D0778 /* RxSwift.framework */; };
 		F63A725622F45322005D0778 /* StateViewPresentable+ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A725522F45322005D0778 /* StateViewPresentable+ViewControllers.swift */; };
 		F63A725822F45BCD005D0778 /* StateViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A725722F45BCD005D0778 /* StateViewContext.swift */; };
+		F6B577BF23204D7D0069E79F /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577BC23204D7D0069E79F /* RxRelay.framework */; };
+		F6B577C023204D7D0069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577BD23204D7D0069E79F /* RxSwift.framework */; };
+		F6B577C123204D7D0069E79F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577BE23204D7D0069E79F /* RxCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +44,11 @@
 		F63A724522F44EFE005D0778 /* StateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StateView.xib; sourceTree = "<group>"; };
 		F63A724B22F44F23005D0778 /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63A724D22F44F2F005D0778 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F63A724F22F45232005D0778 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		F63A725022F45232005D0778 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
-		F63A725122F45232005D0778 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F63A725522F45322005D0778 /* StateViewPresentable+ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateViewPresentable+ViewControllers.swift"; sourceTree = "<group>"; };
 		F63A725722F45BCD005D0778 /* StateViewContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewContext.swift; sourceTree = "<group>"; };
+		F6B577BC23204D7D0069E79F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		F6B577BD23204D7D0069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F6B577BE23204D7D0069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F63A725222F45232005D0778 /* RxCocoa.framework in Frameworks */,
-				F63A725322F45232005D0778 /* RxRelay.framework in Frameworks */,
-				F63A725422F45232005D0778 /* RxSwift.framework in Frameworks */,
+				F6B577BF23204D7D0069E79F /* RxRelay.framework in Frameworks */,
+				F6B577C023204D7D0069E79F /* RxSwift.framework in Frameworks */,
+				F6B577C123204D7D0069E79F /* RxCocoa.framework in Frameworks */,
 				F63A724E22F44F2F005D0778 /* SuperArcFoundation.framework in Frameworks */,
 				F63A724C22F44F23005D0778 /* SuperArcCoreUI.framework in Frameworks */,
 			);
@@ -136,9 +136,9 @@
 		F63A724A22F44F23005D0778 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F63A724F22F45232005D0778 /* RxCocoa.framework */,
-				F63A725022F45232005D0778 /* RxRelay.framework */,
-				F63A725122F45232005D0778 /* RxSwift.framework */,
+				F6B577BE23204D7D0069E79F /* RxCocoa.framework */,
+				F6B577BC23204D7D0069E79F /* RxRelay.framework */,
+				F6B577BD23204D7D0069E79F /* RxSwift.framework */,
 				F63A724D22F44F2F005D0778 /* SuperArcFoundation.framework */,
 				F63A724B22F44F23005D0778 /* SuperArcCoreUI.framework */,
 			);
@@ -340,6 +340,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -404,6 +405,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -434,10 +436,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -463,10 +461,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

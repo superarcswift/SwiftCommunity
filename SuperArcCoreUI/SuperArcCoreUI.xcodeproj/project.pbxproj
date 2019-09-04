@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		F63A71F522F226FC005D0778 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F422F226FC005D0778 /* UIView+Extensions.swift */; };
 		F63A720022F22996005D0778 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71FF22F22996005D0778 /* View.swift */; };
-		F66C904822E0823F006CA2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904322E0823F006CA2BB /* RxCocoa.framework */; };
-		F66C904922E0823F006CA2BB /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904422E0823F006CA2BB /* RxRelay.framework */; };
-		F66C904A22E0823F006CA2BB /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904522E0823F006CA2BB /* PromiseKit.framework */; };
-		F66C904B22E0823F006CA2BB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904622E0823F006CA2BB /* Kingfisher.framework */; };
-		F66C904C22E0823F006CA2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904722E0823F006CA2BB /* RxSwift.framework */; };
 		F66C904E22E08253006CA2BB /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904D22E08253006CA2BB /* SuperArcFoundation.framework */; };
 		F66C905022E08257006CA2BB /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66C904F22E08257006CA2BB /* SuperArcCore.framework */; };
 		F66C908122E0BB75006CA2BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C907822E0BB75006CA2BB /* ViewController.swift */; };
@@ -28,6 +23,10 @@
 		F66C90FF22E64C42006CA2BB /* StoryboardInitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90FE22E64C42006CA2BB /* StoryboardInitiable.swift */; };
 		F675C31922DDD3A900FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C30F22DDD3A900FA77DD /* SuperArcCoreUI.framework */; };
 		F675C32022DDD3A900FA77DD /* SuperArcCoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6B577AF23204CB40069E79F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577AC23204CB40069E79F /* RxCocoa.framework */; };
+		F6B577B023204CB40069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577AD23204CB40069E79F /* RxSwift.framework */; };
+		F6B577B123204CB40069E79F /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577AE23204CB40069E79F /* PromiseKit.framework */; };
+		F6B577B323204CC70069E79F /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577B223204CC60069E79F /* Kingfisher.framework */; };
 		F6C4C05F22E7CCF600C0636E /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05E22E7CCF600C0636E /* ViewModelBindable.swift */; };
 		F6C8A163231EE28200DD6BFD /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A162231EE28200DD6BFD /* UIImage+Extensions.swift */; };
 		F6DFE6B022FA00630091ECE8 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6AF22FA00630091ECE8 /* UITableView+Extensions.swift */; };
@@ -48,11 +47,6 @@
 /* Begin PBXFileReference section */
 		F63A71F422F226FC005D0778 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F63A71FF22F22996005D0778 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		F66C904322E0823F006CA2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		F66C904422E0823F006CA2BB /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
-		F66C904522E0823F006CA2BB /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
-		F66C904622E0823F006CA2BB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		F66C904722E0823F006CA2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F66C904D22E08253006CA2BB /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C904F22E08257006CA2BB /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C907822E0BB75006CA2BB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +64,10 @@
 		F675C31322DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F675C31822DDD3A900FA77DD /* SuperArcCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C31F22DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6B577AC23204CB40069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F6B577AD23204CB40069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F6B577AE23204CB40069E79F /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F6B577B223204CC60069E79F /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F6C4C05E22E7CCF600C0636E /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
 		F6C8A162231EE28200DD6BFD /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		F6DFE6AF22FA00630091ECE8 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
@@ -82,13 +80,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B577B323204CC70069E79F /* Kingfisher.framework in Frameworks */,
+				F6B577AF23204CB40069E79F /* RxCocoa.framework in Frameworks */,
+				F6B577B023204CB40069E79F /* RxSwift.framework in Frameworks */,
+				F6B577B123204CB40069E79F /* PromiseKit.framework in Frameworks */,
 				F66C905022E08257006CA2BB /* SuperArcCore.framework in Frameworks */,
 				F66C904E22E08253006CA2BB /* SuperArcFoundation.framework in Frameworks */,
-				F66C904822E0823F006CA2BB /* RxCocoa.framework in Frameworks */,
-				F66C904922E0823F006CA2BB /* RxRelay.framework in Frameworks */,
-				F66C904A22E0823F006CA2BB /* PromiseKit.framework in Frameworks */,
-				F66C904B22E0823F006CA2BB /* Kingfisher.framework in Frameworks */,
-				F66C904C22E0823F006CA2BB /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,13 +123,12 @@
 		F66C904222E0823E006CA2BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6B577B223204CC60069E79F /* Kingfisher.framework */,
+				F6B577AE23204CB40069E79F /* PromiseKit.framework */,
+				F6B577AC23204CB40069E79F /* RxCocoa.framework */,
+				F6B577AD23204CB40069E79F /* RxSwift.framework */,
 				F66C904F22E08257006CA2BB /* SuperArcCore.framework */,
 				F66C904D22E08253006CA2BB /* SuperArcFoundation.framework */,
-				F66C904622E0823F006CA2BB /* Kingfisher.framework */,
-				F66C904522E0823F006CA2BB /* PromiseKit.framework */,
-				F66C904322E0823F006CA2BB /* RxCocoa.framework */,
-				F66C904422E0823F006CA2BB /* RxRelay.framework */,
-				F66C904722E0823F006CA2BB /* RxSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -434,6 +430,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -498,6 +495,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -529,10 +527,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -560,10 +554,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
