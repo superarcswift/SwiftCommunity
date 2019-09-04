@@ -66,19 +66,6 @@ class AppManager: HasNavigationDelegateManager {
 
     private func setupNavigationDelegate() {
         core.context.viewControllerContext.register(navigationDelegateManager, for: NavigationDelegateManagerProtocol.self)
-
-    }
-}
-
-class NavigationDelegateManager: NavigationDelegateManagerProtocol {
-
-    // MARK: Properties
-
-    var context: ApplicationContext!
-
-    // MARK: Setup
-
-    init(context: ApplicationContext) {
-        self.context = context
+        navigationDelegateManager.interfaceRegistry.register(VideosInterface(), for: VideosInterfaceProtocol.self)
     }
 }

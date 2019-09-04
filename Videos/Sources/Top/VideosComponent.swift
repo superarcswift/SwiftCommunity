@@ -12,13 +12,11 @@ import XCoordinator
 
 /// Protocol can be used used to mock for testing purpose.
 protocol VideosViewBuilder: ViewBuildable {
-
     func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController
-
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
 }
 
-class VideosComponent: Component<VideosDependency, VideosViewBuilder, EmptyNavigationDelegate>, VideosViewBuilder {
+class VideosComponent: Component<VideosDependency, VideosViewBuilder, EmptyNavigationDelegate, VideosInterfaceProtocol>, VideosViewBuilder {
 
     // MARK: APIs
 
@@ -43,4 +41,18 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, EmptyNavig
 
         return viewController
     }
+}
+
+public struct VideosInterface: VideosInterfaceProtocol {
+
+    public init() {}
+
+    public func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, context: ApplicationContextProtocol) -> Presentable {
+        return VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), depedency: dependency, context: context)
+    }
+
+    public func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, context: ApplicationContextProtocol) -> Presentable {
+        return VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), depedency: dependency, context: context)
+    }
+
 }

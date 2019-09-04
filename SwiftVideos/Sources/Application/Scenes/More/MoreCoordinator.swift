@@ -18,7 +18,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
     // MARK: Initialization
 
-    init(dependency: MoreDependency, context: ApplicationContext) {
+    init(dependency: MoreDependency, context: ApplicationContextProtocol) {
         component = MoreComponent(dependency: dependency, context: context)
         super.init(initialRoute: .list)
     }

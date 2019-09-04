@@ -2,7 +2,6 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import Videos
 import Core
 import DataModels
 import SuperArcCoreUI
@@ -20,7 +19,7 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 
     // MARK: Initialization
 
-    public init(dependency: AuthorsDependency, context: ApplicationContext) {
+    public init(dependency: AuthorsDependency, context: ApplicationContextProtocol) {
         component = AuthorsComponent(dependency: dependency, context: context)
         super.init(initialRoute: .authors)
     }
@@ -38,8 +37,9 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
             return .push(viewController)
 
         case .videoDetail(let videoMetaData):
-            let videoCoordinator = VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), depedency: component, context: component.context)
-            return .present(videoCoordinator)
+            //let videoCoordinator = VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), depedency: component, context: component.context)
+            let videosCoordinator = component.navigationDelegate.showVideo(videoMetaData: videoMetaData, dependency: component, context: component.context)
+            return .present(videosCoordinator)
 
         case .close:
             return .dismissToRoot()

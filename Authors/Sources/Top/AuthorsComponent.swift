@@ -16,7 +16,14 @@ protocol AuthorsViewBuilder: ViewBuildable {
     func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
 }
 
-class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyNavigationDelegate>, AuthorsViewBuilder {
+class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, AuthorsNavigationDelegate, EmptyInterface>, AuthorsViewBuilder {
+
+    // MARK: Initialization
+
+    override init(dependency: DependencyType, context: ApplicationContextProtocol) {
+        super.init(dependency: dependency, context: context)
+        navigationDelegate = context.viewControllerContext.resolve(type: NavigationDelegateManagerProtocol.self) as? AuthorsNavigationDelegate
+    }
 
     // MARK: APIs
 

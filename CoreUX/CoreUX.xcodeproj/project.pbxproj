@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F68204CF231F0C2500098C20 /* CoreUX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204C5231F0C2500098C20 /* CoreUX.framework */; };
 		F68204D6231F0C2500098C20 /* CoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F68204C8231F0C2500098C20 /* CoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F68204F9231F0CCC00098C20 /* ConferencesNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68204E2231F0CCC00098C20 /* ConferencesNavigationDelegate.swift */; };
 		F68204FA231F0CCC00098C20 /* AuthorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68204E5231F0CCC00098C20 /* AuthorViewModel.swift */; };
 		F68204FB231F0CCC00098C20 /* AuthorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68204E6231F0CCC00098C20 /* AuthorView.xib */; };
 		F68204FC231F0CCC00098C20 /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68204E7231F0CCC00098C20 /* AuthorView.swift */; };
@@ -44,7 +43,6 @@
 		F68204C9231F0C2500098C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68204CE231F0C2500098C20 /* CoreUXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreUXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68204D5231F0C2500098C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F68204E2231F0CCC00098C20 /* ConferencesNavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencesNavigationDelegate.swift; sourceTree = "<group>"; };
 		F68204E5231F0CCC00098C20 /* AuthorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorViewModel.swift; sourceTree = "<group>"; };
 		F68204E6231F0CCC00098C20 /* AuthorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorView.xib; sourceTree = "<group>"; };
 		F68204E7231F0CCC00098C20 /* AuthorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
@@ -132,18 +130,9 @@
 		F68204E0231F0CA100098C20 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F68204E1231F0CCC00098C20 /* NavigationDelegate */,
 				F68204E3231F0CCC00098C20 /* View */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		F68204E1231F0CCC00098C20 /* NavigationDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				F68204E2231F0CCC00098C20 /* ConferencesNavigationDelegate.swift */,
-			);
-			path = NavigationDelegate;
 			sourceTree = "<group>";
 		};
 		F68204E3231F0CCC00098C20 /* View */ = {
@@ -360,7 +349,6 @@
 				F6820506231F0CCC00098C20 /* AuthorsCollectionViewCell.swift in Sources */,
 				F68204FF231F0CCC00098C20 /* VideoView.swift in Sources */,
 				F6820501231F0CCC00098C20 /* VideosCollectionViewFlowLayout.swift in Sources */,
-				F68204F9231F0CCC00098C20 /* ConferencesNavigationDelegate.swift in Sources */,
 				F68204FD231F0CCC00098C20 /* VideoViewModel.swift in Sources */,
 				F68204FA231F0CCC00098C20 /* AuthorViewModel.swift in Sources */,
 			);

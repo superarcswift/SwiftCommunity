@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61DE10B2320329B0083E26A /* ConferencesNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE10A2320329B0083E26A /* ConferencesNavigationDelegate.swift */; };
 		F68204AE231F045400098C20 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204AD231F045400098C20 /* SuperArcCore.framework */; };
 		F68204B0231F045700098C20 /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204AF231F045700098C20 /* SuperArcCoreUI.framework */; };
 		F68204B2231F045C00098C20 /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B1231F045C00098C20 /* SuperArcLocalization.framework */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61DE10A2320329B0083E26A /* ConferencesNavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencesNavigationDelegate.swift; sourceTree = "<group>"; };
 		F68204AD231F045400098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68204AF231F045700098C20 /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68204B1231F045C00098C20 /* SuperArcLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61DE1092320327E0083E26A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE10A2320329B0083E26A /* ConferencesNavigationDelegate.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		F6C8A09D231E941000DD6BFD /* Engine */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		F6C8A09E231E942F00DD6BFD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F61DE1092320327E0083E26A /* Navigation */,
 				F6C8A09F231E949800DD6BFD /* Components */,
 				F6C8A0C5231E94C100DD6BFD /* Base */,
 			);
@@ -478,6 +489,7 @@
 				F6C8A0BB231E949800DD6BFD /* ConferenceDetailSectionHeaderView.swift in Sources */,
 				F6C8A0C3231E949800DD6BFD /* ConferencesCollectionViewController.swift in Sources */,
 				F6C8A0CC231E94ED00DD6BFD /* ConferenceView.swift in Sources */,
+				F61DE10B2320329B0083E26A /* ConferencesNavigationDelegate.swift in Sources */,
 				F6C8A0C2231E949800DD6BFD /* ConferenceCollectionViewCell.swift in Sources */,
 				F6C8A0BD231E949800DD6BFD /* ConferenceDetailViewController.swift in Sources */,
 				F6CAB75A231D3E9F00A0DCF6 /* ConferencesService.swift in Sources */,
