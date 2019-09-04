@@ -54,10 +54,6 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
 
     // MARK: Properties
 
-    private lazy var showVideoAction = Action<VideoViewModel, Void> { [unowned self] video in
-        self.router.rx.trigger(.videoDetail(video.videoMetaData, false))
-    }
-
     // Public
 
     lazy var didSelectVideoTrigger: AnyObserver<VideoViewModel> = showVideoAction.inputs
@@ -73,6 +69,10 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
     var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
 
     // Private
+
+    private lazy var showVideoAction = Action<VideoViewModel, Void> { [unowned self] video in
+        self.router.rx.trigger(.videoDetail(video.videoMetaData, false))
+    }
 
     var conferenceMetaData: ConferenceMetaData?
     var conferenceEdition: ConferenceEdition?

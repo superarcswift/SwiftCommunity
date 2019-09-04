@@ -51,7 +51,7 @@ class AuthorsCollectionViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDe
     // MARK: Properties
 
     private lazy var showAuthorAction = Action<AuthorViewModel, Void> { [unowned self] author in
-        self.router.rx.trigger(.authorDetail(author.authorMetaData))
+        self.router.rx.trigger(.authorDetail(author.authorMetaData, false))
     }
 
     // Public

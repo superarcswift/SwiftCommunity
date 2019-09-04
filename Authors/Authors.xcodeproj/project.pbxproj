@@ -33,6 +33,7 @@
 		F68204A6231F007600098C20 /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204A5231F007600098C20 /* SuperArcCoreUI.framework */; };
 		F682052C231F185E00098C20 /* CoreUX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682052B231F185E00098C20 /* CoreUX.framework */; };
 		F682052F231F1A9800098C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F682052E231F1A9800098C20 /* Assets.xcassets */; };
+		F6B577DD23205EF90069E79F /* AuthorsInterfaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B577DC23205EF90069E79F /* AuthorsInterfaceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		F68204A5231F007600098C20 /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F682052B231F185E00098C20 /* CoreUX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F682052E231F1A9800098C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6B577DC23205EF90069E79F /* AuthorsInterfaceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsInterfaceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F61DE10D232033F20083E26A /* AuthorsNavigationDelegate.swift */,
+				F6B577DC23205EF90069E79F /* AuthorsInterfaceProtocol.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			files = (
 				F6820473231EFD6300098C20 /* AuthorsService.swift in Sources */,
 				F68204A0231EFF9000098C20 /* AuthorsCollectionViewController.swift in Sources */,
+				F6B577DD23205EF90069E79F /* AuthorsInterfaceProtocol.swift in Sources */,
 				F6820498231EFF9000098C20 /* AuthorDetailViewModel.swift in Sources */,
 				F6820471231EFCE900098C20 /* FilesystemAuthorsContentProvider.swift in Sources */,
 				F682049A231EFF9000098C20 /* AuthorResourcesTableViewCell.swift in Sources */,

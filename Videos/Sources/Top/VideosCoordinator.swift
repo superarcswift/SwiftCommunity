@@ -36,6 +36,10 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
             let viewController = component.viewBuilder.makeVideoDetailViewController(videoMetaData: videoMetaData, hasLeftCloseButton: hasLeftCloseButton, router: anyRouter)
             return .push(viewController)
 
+        case .authorDetail(let authorMetaData):
+            let authorsCoordinator = component.navigationDelegate.showAuthor(authorMetaData: authorMetaData, dependency: component, context: component.context)
+            return .present(authorsCoordinator)
+
         case .close:
             return .dismissToRoot()
         }
@@ -46,5 +50,6 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 public enum VideosRoute: Route {
     case videos(ConferenceMetaData?, ConferenceEdition?)
     case videoDetail(VideoMetaData, Bool)
+    case authorDetail(AuthorMetaData)
     case close
 }

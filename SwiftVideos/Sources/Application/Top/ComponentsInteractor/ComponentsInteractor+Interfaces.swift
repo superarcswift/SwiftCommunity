@@ -3,10 +3,15 @@
 //
 
 import Videos
+import Authors
 
 extension ComponentsInteractor {
 
     var videosInterface: VideosInterfaceProtocol {
         return interfaceRegistry.resolve(type: VideosInterfaceProtocol.self)
+    }
+
+    var authorsInterface: AuthorsInterfaceProtocol {
+        return interfaceRegistry.resolve(type: AuthorsInterfaceProtocol.self)
     }
 }
