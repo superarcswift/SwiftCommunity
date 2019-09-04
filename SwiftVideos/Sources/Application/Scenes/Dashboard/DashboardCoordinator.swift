@@ -43,7 +43,7 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
         videosCoordinator.rootViewController.tabBarItem = UITabBarItem(titleKey: "videos", image: UIImage(named: "videos"), tag: 1)
         videosRouter = videosCoordinator.anyRouter
 
-        let authorsCoordinator = AuthorsCoordinator(dependency: component, context: context)
+        let authorsCoordinator = AuthorsCoordinator(initialRoute: .authors, dependency: component, context: context)
         authorsCoordinator.rootViewController.tabBarItem = UITabBarItem(titleKey: "authors", image: UIImage(named: "authors"), tag: 2)
         authorsRouter = authorsCoordinator.anyRouter
 

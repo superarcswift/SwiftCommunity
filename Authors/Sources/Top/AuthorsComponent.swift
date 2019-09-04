@@ -13,7 +13,7 @@ import XCoordinator
 /// Protocol used to mock for testing purpose.
 protocol AuthorsViewBuilder: ViewBuildable {
     func makeAuthorsCollectionViewController(router: AnyRouter<AuthorsRoute>) -> AuthorsCollectionViewController
-    func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
+    func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
 }
 
 class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, AuthorsNavigationDelegate, EmptyInterface>, AuthorsViewBuilder {
@@ -36,12 +36,24 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, Authors
         return viewController
     }
 
-    func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController {
+    func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController {
         let viewController = AuthorDetailViewController.instantiate(with: context.viewControllerContext)
         let viewModel = AuthorDetailViewModel(authorMetaData: authorMetaData, router: router, dependency: dependency)
         viewController.viewModel = viewModel
+        viewController.hasLeftCloseButton = hasLeftCloseButton
 
         return viewController
+    }
+}
+
+// MARK: AuthorsInterfaceProtocol
+
+public struct AuthorsInterface: AuthorsInterfaceProtocol {
+
+    public init() {}
+
+    public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, context: ApplicationContextProtocol) -> Presentable {
+        return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, context: context)
     }
 }
 

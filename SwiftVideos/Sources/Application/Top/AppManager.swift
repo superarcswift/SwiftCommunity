@@ -66,6 +66,8 @@ class AppManager: HasComponentsInteractor {
 
     private func setupNavigationDelegate() {
         core.context.viewControllerContext.register(componentsInteractor, for: ComponentsInteractorProtocol.self)
+
         componentsInteractor.interfaceRegistry.register(VideosInterface(), for: VideosInterfaceProtocol.self)
+        componentsInteractor.interfaceRegistry.register(AuthorsInterface(), for: AuthorsInterfaceProtocol.self)
     }
 }

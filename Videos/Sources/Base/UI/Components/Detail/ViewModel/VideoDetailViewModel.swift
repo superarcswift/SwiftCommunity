@@ -26,6 +26,7 @@ protocol VideoDetailViewModelOutput {
 
 protocol VideoDetailViewModelApi {
     func loadData()
+    func showAuthor()
 }
 
 protocol VideoDetailViewModelType {
@@ -51,6 +52,7 @@ extension VideoDetailViewModelType where Self: VideoDetailViewModelInput & Video
 
 class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency>, VideoDetailViewModelType, VideoDetailViewModelInput, VideoDetailViewModelOutput, VideoDetailViewModelApi {
 
+
     // MARK: Properties
 
     // Public
@@ -68,6 +70,8 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
 
     // Private
 
+    private var disposeBag = DisposeBag()
+
     // MARK: Initialization
 
     init(router: AnyRouter<VideosRoute>, dependency: VideosDependency, videoMetaData: VideoMetaData) {
@@ -80,6 +84,10 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
     func loadData() {
         fetchVideoDetail()
         fetchPreviewImage()
+    }
+
+    func showAuthor() {
+        router.rx.trigger(.authorDetail(videoMetaData.authors.first!)).subscribe().disposed(by: disposeBag)
     }
 
     // MARK: Private helpers

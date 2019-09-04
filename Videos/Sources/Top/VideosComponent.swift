@@ -16,7 +16,14 @@ protocol VideosViewBuilder: ViewBuildable {
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
 }
 
-class VideosComponent: Component<VideosDependency, VideosViewBuilder, EmptyNavigationDelegate, VideosInterfaceProtocol>, VideosViewBuilder {
+class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosNavigationDelegate, VideosInterfaceProtocol>, VideosViewBuilder {
+
+    // MARK: Initialization
+
+    override init(dependency: DependencyType, context: ApplicationContextProtocol) {
+        super.init(dependency: dependency, context: context)
+        navigationDelegate = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self) as? VideosNavigationDelegate
+    }
 
     // MARK: APIs
 
@@ -55,4 +62,20 @@ public struct VideosInterface: VideosInterfaceProtocol {
         return VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), depedency: dependency, context: context)
     }
 
+}
+
+// MARK: Children's dependencies
+
+extension VideosComponent: HasAuthorsService {
+
+    var authorsService: AuthorsServiceProtocol {
+        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
+    }
+}
+
+extension VideosComponent: HasVideosService {
+
+    var videosService: VideosServiceProtocol {
+        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
+    }
 }

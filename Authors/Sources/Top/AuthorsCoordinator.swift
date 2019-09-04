@@ -19,9 +19,9 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 
     // MARK: Initialization
 
-    public init(dependency: AuthorsDependency, context: ApplicationContextProtocol) {
+    public init(initialRoute: AuthorsRoute, dependency: AuthorsDependency, context: ApplicationContextProtocol) {
         component = AuthorsComponent(dependency: dependency, context: context)
-        super.init(initialRoute: .authors)
+        super.init(initialRoute: initialRoute)
     }
 
     // MARK: Overrides
@@ -32,8 +32,8 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
             let viewController = component.viewBuilder.makeAuthorsCollectionViewController(router: anyRouter)
             return .push(viewController)
 
-        case .authorDetail(let authorMetaData):
-            let viewController = component.viewBuilder.makeAuthorDetailViewController(authorMetaData: authorMetaData, router: anyRouter)
+        case .authorDetail(let authorMetaData, let hasLeftCloseButton):
+            let viewController = component.viewBuilder.makeAuthorDetailViewController(authorMetaData: authorMetaData, hasLeftCloseButton: hasLeftCloseButton, router: anyRouter)
             return .push(viewController)
 
         case .videoDetail(let videoMetaData):
@@ -50,7 +50,7 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 
 public enum AuthorsRoute: Route {
     case authors
-    case authorDetail(AuthorMetaData)
+    case authorDetail(AuthorMetaData, Bool)
     case videoDetail(VideoMetaData)
     case close
 }

@@ -31,7 +31,11 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
     @IBOutlet weak var conferenceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
-    @IBOutlet weak var authorImageView: UIImageView!
+    @IBOutlet weak var authorImageView: UIImageView! {
+        didSet {
+            self.authorImageView.isUserInteractionEnabled = true
+        }
+    }
     @IBOutlet weak var authorNameLabel: UILabel!
 
     // Public
@@ -96,13 +100,18 @@ class VideoDetailViewController: ViewController<VideoDetailViewModel>, Storyboar
         viewModel.apis.loadData()
     }
 
+    // MARK: IBActions
+
+    @IBAction func didTapAuthor(_ sender: Any) {
+        viewModel.showAuthor()
+    }
+
     // MARK: Private helpers
 
     private func setupYoutubePlayer(withVideoID id: String) {
         youtubePlayer = YTSwiftyPlayer(frame: view.frame, playerVars: [.videoID(id)])
         youtubePlayer.autoplay = false
         videoPlayerContainerView.addAndStretchSubView(youtubePlayer)
-//        youtubePlayer.delegate = self
         youtubePlayer.loadPlayer()
     }
 

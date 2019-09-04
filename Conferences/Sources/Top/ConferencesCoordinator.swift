@@ -37,13 +37,11 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
             return .push(viewController)
 
         case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):
-
             let videosCoordinator = component.navigationDelegate.showVideo(conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition, dependency: component, context: component.context)
             return .present(videosCoordinator)
 
         case .video(let videoMetaData):
             let videosCoordinator = component.navigationDelegate.showVideo(videoMetaData: videoMetaData, dependency: component, context: component.context)
-
             return .present(videosCoordinator)
 
         case .close:

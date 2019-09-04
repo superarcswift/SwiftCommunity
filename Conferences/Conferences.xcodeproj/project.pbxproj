@@ -157,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				F6C8A0AC231E949800DD6BFD /* Conferences.storyboard */,
-				F6C8A0A1231E949800DD6BFD /* Detail */,
 				F6C8A0AD231E949800DD6BFD /* List */,
+				F6C8A0A1231E949800DD6BFD /* Detail */,
 			);
 			path = Components;
 			sourceTree = "<group>";
