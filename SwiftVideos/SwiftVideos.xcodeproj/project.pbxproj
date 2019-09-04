@@ -14,8 +14,8 @@
 		F604E3C72317389F00BFFE6A /* GitServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604E3C62317389F00BFFE6A /* GitServiceMock.swift */; };
 		F604E3C92317F52B00BFFE6A /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604E3C82317F52B00BFFE6A /* RxTest.framework */; };
 		F604E3CA2317F53300BFFE6A /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F604E3C82317F52B00BFFE6A /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F61DE0FC231FF59E0083E26A /* NavigationDelegateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE0FB231FF59E0083E26A /* NavigationDelegateManager.swift */; };
-		F61DE1082320318A0083E26A /* NavigationDelegateManager+Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE1072320318A0083E26A /* NavigationDelegateManager+Interfaces.swift */; };
+		F61DE0FC231FF59E0083E26A /* ComponentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE0FB231FF59E0083E26A /* ComponentsInteractor.swift */; };
+		F61DE1082320318A0083E26A /* ComponentsInteractor+Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE1072320318A0083E26A /* ComponentsInteractor+Interfaces.swift */; };
 		F62DB63222EA45A90089C620 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DB63122EA45A90089C620 /* ObjectiveGit.framework */; };
 		F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F122F220CC005D0778 /* Animation+Fade.swift */; };
 		F63A720B22F4179B005D0778 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A720A22F4179B005D0778 /* Constants.swift */; };
@@ -85,7 +85,7 @@
 		F6C4C05422E79C4100C0636E /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C4C05322E79C4100C0636E /* Action.framework */; };
 		F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */; };
 		F6C4C06322E7D41E00C0636E /* YoutubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C4C06222E7D41E00C0636E /* YoutubeKit.framework */; };
-		F6C8A09C231E8FEB00DD6BFD /* NavigationDelegateManager+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A09B231E8FEB00DD6BFD /* NavigationDelegateManager+Delegates.swift */; };
+		F6C8A09C231E8FEB00DD6BFD /* ComponentsInteractor+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A09B231E8FEB00DD6BFD /* ComponentsInteractor+Delegates.swift */; };
 		F6C8A141231EADE800DD6BFD /* Videos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A140231EADE800DD6BFD /* Videos.framework */; };
 		F6C8A15A231EC16900DD6BFD /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE3E231D0F55007E28A5 /* Core.framework */; };
 		F6C8A15B231EC16900DD6BFD /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE3E231D0F55007E28A5 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -182,8 +182,8 @@
 		F604E3C4231726E000BFFE6A /* UnitTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestCase.swift; sourceTree = "<group>"; };
 		F604E3C62317389F00BFFE6A /* GitServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitServiceMock.swift; sourceTree = "<group>"; };
 		F604E3C82317F52B00BFFE6A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
-		F61DE0FB231FF59E0083E26A /* NavigationDelegateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegateManager.swift; sourceTree = "<group>"; };
-		F61DE1072320318A0083E26A /* NavigationDelegateManager+Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDelegateManager+Interfaces.swift"; sourceTree = "<group>"; };
+		F61DE0FB231FF59E0083E26A /* ComponentsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsInteractor.swift; sourceTree = "<group>"; };
+		F61DE1072320318A0083E26A /* ComponentsInteractor+Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsInteractor+Interfaces.swift"; sourceTree = "<group>"; };
 		F62DB63122EA45A90089C620 /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
 		F63A71F122F220CC005D0778 /* Animation+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Fade.swift"; sourceTree = "<group>"; };
 		F63A720A22F4179B005D0778 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 		F6C4C05322E79C4100C0636E /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
 		F6C4C06222E7D41E00C0636E /* YoutubeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YoutubeKit.framework; path = Carthage/Build/iOS/YoutubeKit.framework; sourceTree = "<group>"; };
-		F6C8A09B231E8FEB00DD6BFD /* NavigationDelegateManager+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDelegateManager+Delegates.swift"; sourceTree = "<group>"; };
+		F6C8A09B231E8FEB00DD6BFD /* ComponentsInteractor+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsInteractor+Delegates.swift"; sourceTree = "<group>"; };
 		F6C8A140231EADE800DD6BFD /* Videos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Videos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAB75D231D3F3B00A0DCF6 /* Conferences.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Conferences.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -422,7 +422,7 @@
 				F675C35222DE2F4600FA77DD /* AppManager.swift */,
 				F6DFE6BD22FA35D90091ECE8 /* AppComponent.swift */,
 				F66C905122E084BC006CA2BB /* AppCoordinator.swift */,
-				F6C8A09A231E8BB800DD6BFD /* NavigationDelegate */,
+				F6C8A09A231E8BB800DD6BFD /* ComponentsInteractor */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -593,14 +593,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		F6C8A09A231E8BB800DD6BFD /* NavigationDelegate */ = {
+		F6C8A09A231E8BB800DD6BFD /* ComponentsInteractor */ = {
 			isa = PBXGroup;
 			children = (
-				F6C8A09B231E8FEB00DD6BFD /* NavigationDelegateManager+Delegates.swift */,
-				F61DE1072320318A0083E26A /* NavigationDelegateManager+Interfaces.swift */,
-				F61DE0FB231FF59E0083E26A /* NavigationDelegateManager.swift */,
+				F6C8A09B231E8FEB00DD6BFD /* ComponentsInteractor+Delegates.swift */,
+				F61DE1072320318A0083E26A /* ComponentsInteractor+Interfaces.swift */,
+				F61DE0FB231FF59E0083E26A /* ComponentsInteractor.swift */,
 			);
-			path = NavigationDelegate;
+			path = ComponentsInteractor;
 			sourceTree = "<group>";
 		};
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
@@ -956,13 +956,13 @@
 				F690693A23141B9D00B11E93 /* LicensesViewController.swift in Sources */,
 				F6A6B55122FF68B100BFEC40 /* MoreComponent.swift in Sources */,
 				F6DFE6BA22FA26970091ECE8 /* OnboardingComponent.swift in Sources */,
-				F61DE1082320318A0083E26A /* NavigationDelegateManager+Interfaces.swift in Sources */,
+				F61DE1082320318A0083E26A /* ComponentsInteractor+Interfaces.swift in Sources */,
 				F6DFE6BE22FA35D90091ECE8 /* AppComponent.swift in Sources */,
 				F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */,
 				F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */,
 				F6E2323D230A87F7003FBFA5 /* AboutViewModel.swift in Sources */,
-				F6C8A09C231E8FEB00DD6BFD /* NavigationDelegateManager+Delegates.swift in Sources */,
-				F61DE0FC231FF59E0083E26A /* NavigationDelegateManager.swift in Sources */,
+				F6C8A09C231E8FEB00DD6BFD /* ComponentsInteractor+Delegates.swift in Sources */,
+				F61DE0FC231FF59E0083E26A /* ComponentsInteractor.swift in Sources */,
 				F66C90CB22E1FEA8006CA2BB /* AboutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

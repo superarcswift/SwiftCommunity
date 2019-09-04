@@ -22,7 +22,7 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, Authors
 
     override init(dependency: DependencyType, context: ApplicationContextProtocol) {
         super.init(dependency: dependency, context: context)
-        navigationDelegate = context.viewControllerContext.resolve(type: NavigationDelegateManagerProtocol.self) as? AuthorsNavigationDelegate
+        navigationDelegate = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self) as? AuthorsNavigationDelegate
     }
 
     // MARK: APIs

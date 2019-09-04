@@ -12,7 +12,7 @@ import SuperArcCoreUI
 import SuperArcCore
 import XCoordinator
 
-extension NavigationDelegateManager: ConferencesNavigationDelegate, AuthorsNavigationDelegate {
+extension ComponentsInteractor: ConferencesNavigationDelegate, AuthorsNavigationDelegate {
 
     public func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, context: ApplicationContextProtocol) -> Presentable {
         return videosInterface.showVideo(conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition, dependency: dependency, context: context)

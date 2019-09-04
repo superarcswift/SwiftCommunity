@@ -4,7 +4,7 @@
 
 import Videos
 
-extension NavigationDelegateManager {
+extension ComponentsInteractor {
 
     var videosInterface: VideosInterfaceProtocol {
         return interfaceRegistry.resolve(type: VideosInterfaceProtocol.self)

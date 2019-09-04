@@ -5,26 +5,12 @@
 import SuperArcCore
 import SuperArcFoundation
 
-public protocol NavigationDelegateManagerProtocol: HasApplicationContext {
+public protocol ComponentsInteractorProtocol: HasApplicationContext {
     var interfaceRegistry: InterfaceRegistry { get }
-    var delegateRegistry: NavigationDelegateRegistry { get }
 }
 
-public protocol HasNavigationDelegateManager {
-    var navigationDelegateManager: NavigationDelegateManagerProtocol { get }
-}
-
-public class NavigationDelegateRegistry: Registry {
-
-    // MARK: Properties
-
-    public var container: Container<NavigationDelegate>
-
-    // MARK: Initialization
-
-    public init() {
-        container = Container()
-    }
+public protocol HasComponentsInteractor {
+    var componentsInteractor: ComponentsInteractorProtocol { get }
 }
 
 public class InterfaceRegistry: Registry {

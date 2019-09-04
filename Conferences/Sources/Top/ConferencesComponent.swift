@@ -23,7 +23,7 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
 
     override init(dependency: DependencyType, context: ApplicationContextProtocol) {
         super.init(dependency: dependency, context: context)
-        navigationDelegate = context.viewControllerContext.resolve(type: NavigationDelegateManagerProtocol.self) as? ConferencesNavigationDelegate
+        navigationDelegate = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self) as? ConferencesNavigationDelegate
     }
 
     // MARK: APIs

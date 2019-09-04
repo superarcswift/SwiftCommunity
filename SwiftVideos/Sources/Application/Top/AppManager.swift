@@ -18,7 +18,7 @@ import SuperArcFoundation
 
 import XCoordinator
 
-class AppManager: HasNavigationDelegateManager {
+class AppManager: HasComponentsInteractor {
 
     // MARK: Properties
 
@@ -30,7 +30,7 @@ class AppManager: HasNavigationDelegateManager {
 
     // Private
 
-    lazy var navigationDelegateManager: NavigationDelegateManagerProtocol = NavigationDelegateManager(context: core.context)
+    lazy var componentsInteractor: ComponentsInteractorProtocol = ComponentsInteractor(context: core.context)
 
     // MARK: Intialization
 
@@ -65,7 +65,7 @@ class AppManager: HasNavigationDelegateManager {
     }
 
     private func setupNavigationDelegate() {
-        core.context.viewControllerContext.register(navigationDelegateManager, for: NavigationDelegateManagerProtocol.self)
-        navigationDelegateManager.interfaceRegistry.register(VideosInterface(), for: VideosInterfaceProtocol.self)
+        core.context.viewControllerContext.register(componentsInteractor, for: ComponentsInteractorProtocol.self)
+        componentsInteractor.interfaceRegistry.register(VideosInterface(), for: VideosInterfaceProtocol.self)
     }
 }

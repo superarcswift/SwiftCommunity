@@ -8,13 +8,12 @@ import SuperArcCoreUI
 import SuperArcCore
 import SuperArcFoundation
 
-class NavigationDelegateManager: NavigationDelegateManagerProtocol {
+class ComponentsInteractor: ComponentsInteractorProtocol {
 
     // MARK: Properties
 
     var context: ApplicationContextProtocol!
 
-    var delegateRegistry = NavigationDelegateRegistry()
     var interfaceRegistry = InterfaceRegistry()
 
     // MARK: Setup
