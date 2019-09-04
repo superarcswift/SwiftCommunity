@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61DE100231FFF3D0083E26A /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE0FF231FFF3D0083E26A /* Interface.swift */; };
+		F61DE102231FFF510083E26A /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE101231FFF510083E26A /* NavigationDelegate.swift */; };
+		F61DE105231FFF9B0083E26A /* NavigationDelegateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE104231FFF9B0083E26A /* NavigationDelegateManager.swift */; };
 		F6A6B55923014EA000BFEC40 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6A6B55823014EA000BFEC40 /* README.md */; };
 		F6ABCB1D22FB4C6600476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB1322FB4C6500476F1A /* SuperArcCoreComponent.framework */; };
 		F6ABCB2422FB4C6600476F1A /* SuperArcCoreComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61DE0FF231FFF3D0083E26A /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		F61DE101231FFF510083E26A /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
+		F61DE104231FFF9B0083E26A /* NavigationDelegateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDelegateManager.swift; sourceTree = "<group>"; };
 		F6A6B55823014EA000BFEC40 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6ABCB1322FB4C6500476F1A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCoreComponent.h; sourceTree = "<group>"; };
@@ -56,6 +62,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61DE103231FFF780083E26A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE104231FFF9B0083E26A /* NavigationDelegateManager.swift */,
+				F61DE101231FFF510083E26A /* NavigationDelegate.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		F61DE106231FFFAB0083E26A /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE0FF231FFF3D0083E26A /* Interface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		F6ABCB0922FB4C6500476F1A = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +127,8 @@
 		F6ABCB2E22FB4CB400476F1A /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F61DE106231FFFAB0083E26A /* Interface */,
+				F61DE103231FFF780083E26A /* Navigation */,
 				F6ABCB2F22FB4CC900476F1A /* Component.swift */,
 				F6ABCB3222FB647600476F1A /* Dependency.swift */,
 				F6E2937C231656BB00F759FF /* ViewBuilder.swift */,
@@ -243,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F61DE105231FFF9B0083E26A /* NavigationDelegateManager.swift in Sources */,
 				F6ABCB3322FB647600476F1A /* Dependency.swift in Sources */,
+				F61DE102231FFF510083E26A /* NavigationDelegate.swift in Sources */,
 				F6ABCB3022FB4CC900476F1A /* Component.swift in Sources */,
 				F6E2937D231656BB00F759FF /* ViewBuilder.swift in Sources */,
+				F61DE100231FFF3D0083E26A /* Interface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

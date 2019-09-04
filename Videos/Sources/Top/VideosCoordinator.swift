@@ -19,7 +19,7 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
     // MARK: Initialization
 
-    public init(initialRoute: VideosRoute, depedency: VideosDependency, context: ApplicationContext) {
+    public init(initialRoute: VideosRoute, depedency: VideosDependency, context: ApplicationContextProtocol) {
         component = VideosComponent(dependency: depedency, context: context)
         super.init(initialRoute: initialRoute)
     }

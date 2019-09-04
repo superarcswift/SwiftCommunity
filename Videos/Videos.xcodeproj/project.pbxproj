@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61DE111232039310083E26A /* VideosInterfaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE110232039310083E26A /* VideosInterfaceProtocol.swift */; };
 		F68204A8231F00A900098C20 /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204A7231F00A900098C20 /* SuperArcCoreUI.framework */; };
 		F68204AA231F00AC00098C20 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204A9231F00AC00098C20 /* SuperArcCore.framework */; };
 		F68204AC231F00B100098C20 /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204AB231F00B100098C20 /* SuperArcLocalization.framework */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61DE110232039310083E26A /* VideosInterfaceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosInterfaceProtocol.swift; sourceTree = "<group>"; };
 		F68204A7231F00A900098C20 /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68204A9231F00AC00098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68204AB231F00B100098C20 /* SuperArcLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61DE10F2320391F0083E26A /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE110232039310083E26A /* VideosInterfaceProtocol.swift */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
 		F6C8A0FB231EA99800DD6BFD = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,8 @@
 		F6C8A11F231EA9A600DD6BFD /* Top */ = {
 			isa = PBXGroup;
 			children = (
+				F6C8A129231EAA9500DD6BFD /* VideosCoordinator.swift */,
+				F6C8A130231EAA9500DD6BFD /* VideosComponent.swift */,
 				F6C8A108231EA99800DD6BFD /* Videos.h */,
 				F6C8A109231EA99800DD6BFD /* Info.plist */,
 			);
@@ -166,6 +178,7 @@
 		F6C8A122231EAA3E00DD6BFD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F61DE10F2320391F0083E26A /* IO */,
 				F6C8A123231EAA9500DD6BFD /* Components */,
 				F6C8A138231EAA9F00DD6BFD /* Base */,
 			);
@@ -175,8 +188,6 @@
 		F6C8A123231EAA9500DD6BFD /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F6C8A129231EAA9500DD6BFD /* VideosCoordinator.swift */,
-				F6C8A130231EAA9500DD6BFD /* VideosComponent.swift */,
 				F6C8A12F231EAA9500DD6BFD /* Videos.storyboard */,
 				F6C8A124231EAA9500DD6BFD /* Detail */,
 				F6C8A12A231EAA9500DD6BFD /* List */,
@@ -391,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F61DE111232039310083E26A /* VideosInterfaceProtocol.swift in Sources */,
 				F6C8A134231EAA9500DD6BFD /* VideosCollectionViewModel.swift in Sources */,
 				F6C8A13F231EACC200DD6BFD /* VideosService.swift in Sources */,
 				F6C8A131231EAA9500DD6BFD /* VideoDetailViewModel.swift in Sources */,

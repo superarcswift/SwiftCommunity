@@ -17,7 +17,7 @@ protocol OnboardingViewBuilder: ViewBuildable {
     func makeOnboardingViewController(router: AnyRouter<OnboardingRoute>) -> OnboardingViewController
 }
 
-class OnboardingComponent: Component<OnboardingDependency, OnboardingViewBuilder, EmptyNavigationDelegate>, OnboardingViewBuilder {
+class OnboardingComponent: Component<OnboardingDependency, OnboardingViewBuilder, EmptyNavigationDelegate, EmptyInterface>, OnboardingViewBuilder {
 
     // MARK: APIs
 

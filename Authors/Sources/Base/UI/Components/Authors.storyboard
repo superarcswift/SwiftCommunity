@@ -70,7 +70,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qn-dc-I3c" customClass="AuthorView" customModule="Core">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qn-dc-I3c" customClass="AuthorView" customModule="CoreUX">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>

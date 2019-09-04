@@ -18,7 +18,7 @@ protocol MoreViewBuilder: ViewBuildable {
     func makeLicensesViewController(router: AnyRouter<MoreRoute>) -> LicensesViewController
 }
 
-class MoreComponent: Component<MoreDependency, MoreViewBuilder, EmptyNavigationDelegate>, MoreViewBuilder {
+class MoreComponent: Component<MoreDependency, MoreViewBuilder, EmptyNavigationDelegate, EmptyInterface>, MoreViewBuilder {
 
     // MARK: APIs
 

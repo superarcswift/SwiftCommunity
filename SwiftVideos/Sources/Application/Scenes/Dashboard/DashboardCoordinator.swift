@@ -31,7 +31,7 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
     // MARK: Initialization
 
-    init(context: ApplicationContext) {
+    init(context: ApplicationContextProtocol) {
 
         component = DashboardComponent(dependency: EmptyComponent(), context: context)
 

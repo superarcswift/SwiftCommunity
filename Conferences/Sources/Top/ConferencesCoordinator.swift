@@ -19,7 +19,7 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
     // MARK: Initialization
 
-    public init(dependency: ConferencesDependency, context: ApplicationContext) {
+    public init(dependency: ConferencesDependency, context: ApplicationContextProtocol) {
         component = ConferencesComponent(dependency: dependency, context: context)
         super.init(initialRoute: .conferences)
     }

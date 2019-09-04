@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61DE10E232033F20083E26A /* AuthorsNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE10D232033F20083E26A /* AuthorsNavigationDelegate.swift */; };
 		F6820459231EFC6500098C20 /* Authors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682044F231EFC6500098C20 /* Authors.framework */; };
 		F6820460231EFC6500098C20 /* Authors.h in Headers */ = {isa = PBXBuildFile; fileRef = F6820452231EFC6500098C20 /* Authors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6820471231EFCE900098C20 /* FilesystemAuthorsContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6820470231EFCE900098C20 /* FilesystemAuthorsContentProvider.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61DE10D232033F20083E26A /* AuthorsNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsNavigationDelegate.swift; sourceTree = "<group>"; };
 		F682044F231EFC6500098C20 /* Authors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Authors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6820452231EFC6500098C20 /* Authors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Authors.h; sourceTree = "<group>"; };
 		F6820453231EFC6500098C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61DE10C232033E10083E26A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE10D232033F20083E26A /* AuthorsNavigationDelegate.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		F6820445231EFC6500098C20 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +155,8 @@
 		F6820469231EFC8700098C20 /* Top */ = {
 			isa = PBXGroup;
 			children = (
+				F6820491231EFF9000098C20 /* AuthorsCoordinator.swift */,
+				F6820490231EFF9000098C20 /* AuthorsComponent.swift */,
 				F6820452231EFC6500098C20 /* Authors.h */,
 				F6820453231EFC6500098C20 /* Info.plist */,
 			);
@@ -163,6 +175,7 @@
 		F682046B231EFCAD00098C20 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F61DE10C232033E10083E26A /* Navigation */,
 				F6820487231EFF0D00098C20 /* Components */,
 			);
 			path = UI;
@@ -222,8 +235,6 @@
 		F6820487231EFF0D00098C20 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F6820491231EFF9000098C20 /* AuthorsCoordinator.swift */,
-				F6820490231EFF9000098C20 /* AuthorsComponent.swift */,
 				F6820492231EFF9000098C20 /* Authors.storyboard */,
 				F6820488231EFF9000098C20 /* Detail */,
 				F6820493231EFF9000098C20 /* List */,
@@ -420,6 +431,7 @@
 				F682049B231EFF9000098C20 /* AuthorDetailViewController.swift in Sources */,
 				F6820499231EFF9000098C20 /* AuthorAvatarTableViewCell.swift in Sources */,
 				F682049F231EFF9000098C20 /* AuthorsCollectionViewModel.swift in Sources */,
+				F61DE10E232033F20083E26A /* AuthorsNavigationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
