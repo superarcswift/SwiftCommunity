@@ -20,6 +20,7 @@ import SuperArcFoundation
     var viewModel: ConferenceViewModel! {
         didSet {
             titleLabel.text = viewModel.name
+            titleLabel.isHidden = true
             previewImageView.image = viewModel.bannerImage
         }
     }

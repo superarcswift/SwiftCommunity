@@ -48,7 +48,7 @@ public class GitService: Service, GitServiceProtocol {
     // Private
 
     // TODO: This should be come from configuration.
-    private let remoteRepositoryURL = URL(string: "https://github.com/superarcswift/SwiftVideosContent")!
+    private let remoteRepositoryURL: URL
 
     //private lazy var localRepositoryURL = URL(string: "file://\(baseLocalRepositoryPath)/")! // This needs to be prefix with file://
 
@@ -60,8 +60,10 @@ public class GitService: Service, GitServiceProtocol {
 
     // MARK: Initialization
 
-    public init(context: ServiceContext) {
+    public init(context: ServiceContext, remoteRepositoryURL: URL) {
         self.context = context
+        self.remoteRepositoryURL = remoteRepositoryURL
+
         queue = DispatchQueue(label: "com.tba.swiftvideos.gitservice", qos: .userInitiated)
         filePathProvider = FilePathProvider(baseLocalRepositoryPath: baseLocalRepositoryPath, remoteRepositoryURL: remoteRepositoryURL)
         print(baseLocalRepositoryPath)

@@ -18,19 +18,20 @@ import SuperArcFoundation
 
 import XCoordinator
 
-class AppManager: HasComponentsInteractor {
+class AppManager: HasComponentsInteractor, HasConfigurations {
 
     // MARK: Properties
 
     // Public
 
     lazy var core: Core = {
-        return Core()
+        return Core(configurations: configurations)
     }()
 
     // Private
 
-    lazy var componentsInteractor: ComponentsInteractorProtocol = ComponentsInteractor(context: core.context)
+    lazy internal var componentsInteractor: ComponentsInteractorProtocol = ComponentsInteractor(context: core.context)
+    lazy internal var configurations = AnyRegistry(ConfigurationsRegistry(endpoint: .current))
 
     // MARK: Intialization
 
@@ -48,7 +49,8 @@ class AppManager: HasComponentsInteractor {
     }
 
     private func setupServices() {
-        let gitService = GitService(context: core.engine.serviceContext)
+        let remoteRepositoryURL = try! configurations.container.resolve(GitRepositoryConfigurationProtocol.self).url
+        let gitService = GitService(context: core.engine.serviceContext, remoteRepositoryURL: remoteRepositoryURL)
         core.engine.serviceRegistry.register(gitService, for: GitServiceProtocol.self)
 
         let videosContentProvider = FilesystemVideosContentProvider(rootContentFolderPath: gitService.baseContentPath)
