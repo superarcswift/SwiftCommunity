@@ -16,7 +16,7 @@ public protocol HasViewControllerContext: class {
 /// Normally every ViewController will have reference to an object adropting this protocol.
 public protocol ApplicationContextProtocol: HasViewControllerContext {
 
-    var engine: Engine { get }
+    var engine: EngineProtocol { get }
     var viewControllerContext: ViewControllerContext! { get set }
 }
 
@@ -26,12 +26,12 @@ public class ApplicationContext: ApplicationContextProtocol {
 
     // Public
 
-    public private(set) var engine: Engine
+    public private(set) var engine: EngineProtocol
     public var viewControllerContext: ViewControllerContext! = ViewControllerContext()
 
     // MARK: Initialization
 
-    init(engine: Engine) {
+    init(engine: EngineProtocol) {
         self.engine = engine
     }
 }

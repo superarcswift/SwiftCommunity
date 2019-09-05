@@ -25,6 +25,8 @@
 		F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B022CD451E000F5CE3 /* PromiseKit.framework */; };
 		F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B322CD4838000F5CE3 /* Kingfisher.framework */; };
 		F6453BA022EB304800392F93 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6453B9F22EB304800392F93 /* README.md */; };
+		F646EBD82321212100792DB5 /* Endpoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646EBD72321212100792DB5 /* Endpoint+Extensions.swift */; };
+		F646EBDA23212DA300792DB5 /* GitRepositoryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646EBD923212DA300792DB5 /* GitRepositoryConfiguration.swift */; };
 		F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E705F2305EB98005D066D /* MoreViewModel.swift */; };
 		F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; };
 		F64E7093230603D1005D066D /* SuperArcActivityIndicator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -35,6 +37,7 @@
 		F66C90C322E1AF3B006CA2BB /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90C122E1AF3B006CA2BB /* MoreTableViewCell.swift */; };
 		F66C90C422E1AF3B006CA2BB /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66C90C222E1AF3B006CA2BB /* MoreTableViewCell.xib */; };
 		F66C90CB22E1FEA8006CA2BB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90CA22E1FEA8006CA2BB /* AboutViewController.swift */; };
+		F6749C862321A8E0000BDC1C /* ConfigurationRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6749C852321A8E0000BDC1C /* ConfigurationRegistry.swift */; };
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
@@ -176,6 +179,8 @@
 		F64238B022CD451E000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F64238B322CD4838000F5CE3 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F6453B9F22EB304800392F93 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F646EBD72321212100792DB5 /* Endpoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Extensions.swift"; sourceTree = "<group>"; };
+		F646EBD923212DA300792DB5 /* GitRepositoryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepositoryConfiguration.swift; sourceTree = "<group>"; };
 		F64E705F2305EB98005D066D /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcActivityIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C905122E084BC006CA2BB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -185,6 +190,7 @@
 		F66C90C122E1AF3B006CA2BB /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		F66C90C222E1AF3B006CA2BB /* MoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
 		F66C90CA22E1FEA8006CA2BB /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		F6749C852321A8E0000BDC1C /* ConfigurationRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationRegistry.swift; sourceTree = "<group>"; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C35222DE2F4600FA77DD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		F6820474231EFDD900098C20 /* Authors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -340,6 +346,9 @@
 		F62DB63322EA55710089C620 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				F646EBD72321212100792DB5 /* Endpoint+Extensions.swift */,
+				F646EBD923212DA300792DB5 /* GitRepositoryConfiguration.swift */,
+				F6749C852321A8E0000BDC1C /* ConfigurationRegistry.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -399,6 +408,14 @@
 				F68F655722FF4A4B0026604C /* DashboardComponent.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		F646EBD42321196E00792DB5 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				F62DB63322EA55710089C620 /* Configuration */,
+			);
+			path = Engine;
 			sourceTree = "<group>";
 		};
 		F66C90B722E1ADE7006CA2BB /* More */ = {
@@ -469,8 +486,9 @@
 		F66C916D22E66E98006CA2BB /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F66C916E22E66EAA006CA2BB /* UI */,
 				F63A720A22F4179B005D0778 /* Constants.swift */,
+				F66C916E22E66EAA006CA2BB /* UI */,
+				F646EBD42321196E00792DB5 /* Engine */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -614,7 +632,6 @@
 			children = (
 				F642389A22CD32CB000F5CE3 /* Top */,
 				F6D57A6522CD304000BC3DBC /* Scenes */,
-				F62DB63322EA55710089C620 /* Configuration */,
 				F66C916D22E66E98006CA2BB /* Base */,
 			);
 			path = Application;
@@ -901,6 +918,7 @@
 				F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */,
 				F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */,
 				F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */,
+				F646EBDA23212DA300792DB5 /* GitRepositoryConfiguration.swift in Sources */,
 				F66C90BE22E1AF21006CA2BB /* MoreTableViewController.swift in Sources */,
 				F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */,
 				F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */,
@@ -909,9 +927,11 @@
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,
 				F690693A23141B9D00B11E93 /* LicensesViewController.swift in Sources */,
 				F6A6B55122FF68B100BFEC40 /* MoreComponent.swift in Sources */,
+				F6749C862321A8E0000BDC1C /* ConfigurationRegistry.swift in Sources */,
 				F6DFE6BA22FA26970091ECE8 /* OnboardingComponent.swift in Sources */,
 				F61DE1082320318A0083E26A /* ComponentsInteractor+Interfaces.swift in Sources */,
 				F6DFE6BE22FA35D90091ECE8 /* AppComponent.swift in Sources */,
+				F646EBD82321212100792DB5 /* Endpoint+Extensions.swift in Sources */,
 				F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */,
 				F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */,
 				F6E2323D230A87F7003FBFA5 /* AboutViewModel.swift in Sources */,

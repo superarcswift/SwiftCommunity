@@ -20,7 +20,7 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
 
     // MARK: Initialization
 
-    init(context: ApplicationContext) {
+    init(context: ApplicationContextProtocol) {
         component = AppComponent(dependency: EmptyComponent(), context: context)
         super.init(initialRoute: .onboarding)
     }

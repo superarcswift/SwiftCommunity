@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F646EBDD23212E1100792DB5 /* GitServiceConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646EBDC23212E1100792DB5 /* GitServiceConfigurationProtocol.swift */; };
 		F669801323102E4200FCEC14 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669800923102E4200FCEC14 /* Core.framework */; };
 		F669801A23102E4200FCEC14 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F669800C23102E4200FCEC14 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F66980502310493300FCEC14 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66980272310493300FCEC14 /* ContentService.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F646EBDC23212E1100792DB5 /* GitServiceConfigurationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitServiceConfigurationProtocol.swift; sourceTree = "<group>"; };
 		F669800923102E4200FCEC14 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F669800C23102E4200FCEC14 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		F669800D23102E4200FCEC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F646EBDB23212DBF00792DB5 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				F646EBDC23212E1100792DB5 /* GitServiceConfigurationProtocol.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		F6697FFF23102E4200FCEC14 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +236,7 @@
 			children = (
 				F66980312310493300FCEC14 /* Platform */,
 				F66980252310493300FCEC14 /* Domain */,
+				F646EBDB23212DBF00792DB5 /* Configurations */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -378,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C8A156231EB3F000DD6BFD /* ConferencesServiceProtocol.swift in Sources */,
+				F646EBDD23212E1100792DB5 /* GitServiceConfigurationProtocol.swift in Sources */,
 				F66980552310493300FCEC14 /* GitService.swift in Sources */,
 				F66980632310493300FCEC14 /* FilesystemContentProvider.swift in Sources */,
 				F6E2938323165BE000F759FF /* CoordinatedDIViewModel.swift in Sources */,
