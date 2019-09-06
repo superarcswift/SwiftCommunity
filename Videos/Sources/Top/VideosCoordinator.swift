@@ -37,7 +37,7 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
             return .push(viewController)
 
         case .authorDetail(let authorMetaData):
-            let authorsCoordinator = component.navigationDelegate.showAuthor(authorMetaData: authorMetaData, dependency: component, context: component.context)
+            let authorsCoordinator = component.trigger(.videoListByAuthor(authorMetaData))
             return .present(authorsCoordinator)
 
         case .close:

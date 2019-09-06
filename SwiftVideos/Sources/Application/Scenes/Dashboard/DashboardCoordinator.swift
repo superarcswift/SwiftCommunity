@@ -14,8 +14,6 @@ import XCoordinator
 import RxSwift
 import UIKit
 
-typealias DashboardNavigationDelegate = ConferencesNavigationDelegate
-
 class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
     // MARK: Properties

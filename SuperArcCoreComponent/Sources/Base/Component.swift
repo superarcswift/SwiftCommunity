@@ -4,11 +4,11 @@
 
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
 
-public protocol ComponentProtocol: Dependency, HasApplicationContext {
+public protocol ComponentProtocol: Dependency, HasApplicationContext, ComponentRouter {
     associatedtype DependencyType
     associatedtype ViewBuildableType
-    associatedtype NavigationDelegateType
     associatedtype InterfaceType
 
     /// The dependency of this component, which is should be provided by the parent of this component.
@@ -16,13 +16,11 @@ public protocol ComponentProtocol: Dependency, HasApplicationContext {
 
     var viewBuilder: ViewBuildableType { get }
 
-    var navigationDelegate: NavigationDelegateType! { get }
-
     var interface: InterfaceType! { get }
 }
 
 /// The base class of a dependency injection component containing all dependencies used by this object.
-open class Component<DependencyType, ViewBuildableType, NavigationDelegateType, InterfaceType>: ComponentProtocol {
+open class Component<DependencyType, ViewBuildableType, InterfaceType, ComponentRouteType: ComponentRoute>: ComponentProtocol {
 
     // MARK: Properties
 
@@ -32,7 +30,9 @@ open class Component<DependencyType, ViewBuildableType, NavigationDelegateType, 
     public var viewBuilder: ViewBuildableType {
         return self as! ViewBuildableType
     }
-    public var navigationDelegate: NavigationDelegateType!
+
+    public var componentsInteractor: ComponentsInteractorProtocol
+
     public var interface: InterfaceType!
 
     public var context: ApplicationContextProtocol!
@@ -42,6 +42,13 @@ open class Component<DependencyType, ViewBuildableType, NavigationDelegateType, 
     public init(dependency: DependencyType, context: ApplicationContextProtocol) {
         self.dependency = dependency
         self.context = context
+        componentsInteractor = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self)
+    }
+
+    // MARK: APIs
+
+    open func trigger(_ route: ComponentRouteType) -> Presentable {
+        fatalError("needed to be implemented")
     }
 }
 

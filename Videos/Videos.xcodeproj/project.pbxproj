@@ -12,7 +12,6 @@
 		F68204AA231F00AC00098C20 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204A9231F00AC00098C20 /* SuperArcCore.framework */; };
 		F68204AC231F00B100098C20 /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204AB231F00B100098C20 /* SuperArcLocalization.framework */; };
 		F682052A231F185B00098C20 /* CoreUX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820529231F185B00098C20 /* CoreUX.framework */; };
-		F6B577DB23205D1E0069E79F /* VideosNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B577DA23205D1E0069E79F /* VideosNavigationDelegate.swift */; };
 		F6C8A10F231EA99900DD6BFD /* Videos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A105231EA99800DD6BFD /* Videos.framework */; };
 		F6C8A116231EA99900DD6BFD /* Videos.h in Headers */ = {isa = PBXBuildFile; fileRef = F6C8A108231EA99800DD6BFD /* Videos.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6C8A131231EAA9500DD6BFD /* VideoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A126231EAA9500DD6BFD /* VideoDetailViewModel.swift */; };
@@ -49,7 +48,6 @@
 		F68204A9231F00AC00098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68204AB231F00B100098C20 /* SuperArcLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6820529231F185B00098C20 /* CoreUX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6B577DA23205D1E0069E79F /* VideosNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosNavigationDelegate.swift; sourceTree = "<group>"; };
 		F6C8A105231EA99800DD6BFD /* Videos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Videos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C8A108231EA99800DD6BFD /* Videos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Videos.h; sourceTree = "<group>"; };
 		F6C8A109231EA99800DD6BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				F61DE110232039310083E26A /* VideosInterfaceProtocol.swift */,
-				F6B577DA23205D1E0069E79F /* VideosNavigationDelegate.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -411,7 +408,6 @@
 				F6C8A131231EAA9500DD6BFD /* VideoDetailViewModel.swift in Sources */,
 				F6C8A133231EAA9500DD6BFD /* VideosCoordinator.swift in Sources */,
 				F6C8A137231EAA9500DD6BFD /* VideosComponent.swift in Sources */,
-				F6B577DB23205D1E0069E79F /* VideosNavigationDelegate.swift in Sources */,
 				F6C8A132231EAA9500DD6BFD /* VideoDetailViewController.swift in Sources */,
 				F6C8A13D231EAC8900DD6BFD /* FilesystemVideosContentProvider.swift in Sources */,
 				F6C8A135231EAA9500DD6BFD /* VideoCollectionViewController.swift in Sources */,

@@ -7,7 +7,7 @@ import Core
 import SuperArcCoreComponent
 import SuperArcCoreUI
 
-class DashboardComponent: Component<EmptyDependency, EmptyViewBuildable, EmptyNavigationDelegate, EmptyInterface> {}
+class DashboardComponent: Component<EmptyDependency, EmptyViewBuildable, EmptyInterface, EmptyComponentRoute> {}
 
 // MARK: Children's dependencies
 

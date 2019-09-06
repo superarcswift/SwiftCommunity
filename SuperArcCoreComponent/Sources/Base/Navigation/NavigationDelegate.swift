@@ -2,12 +2,12 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-public protocol NavigationDelegate {}
+import XCoordinator
 
-/// The special empty component.
-public final class EmptyNavigationDelegate: NavigationDelegate {
+//public protocol ComponentPresentable{}
 
-    // MARK: Intialization
+public protocol ComponentRoutable {
+    associatedtype ComponentRouteType: ComponentRoute
 
-    public init() {}
+    func trigger(_ route: ComponentRoute)
 }

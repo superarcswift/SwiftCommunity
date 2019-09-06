@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import CoreNavigation
 import Core
 import DataModels
 import SuperArcCoreComponent
@@ -16,14 +17,11 @@ protocol AuthorsViewBuilder: ViewBuildable {
     func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
 }
 
-class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, AuthorsNavigationDelegate, EmptyInterface>, AuthorsViewBuilder {
+public protocol AuthorsComponentRoutable {
+    func trigger(_ route: NavigationRoute) -> Presentable
+}
 
-    // MARK: Initialization
-
-    override init(dependency: DependencyType, context: ApplicationContextProtocol) {
-        super.init(dependency: dependency, context: context)
-        navigationDelegate = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self) as? AuthorsNavigationDelegate
-    }
+class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyInterface, NavigationRoute>, AuthorsViewBuilder {
 
     // MARK: APIs
 
@@ -44,11 +42,15 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, Authors
 
         return viewController
     }
+
+    override func trigger(_ route: NavigationRoute) -> Presentable {
+        return (componentsInteractor as! AuthorsComponentRoutable).trigger(route)
+    }
 }
 
 // MARK: AuthorsInterfaceProtocol
 
-public struct AuthorsInterface: AuthorsInterfaceProtocol {
+public class AuthorsInterface: AuthorsInterfaceProtocol {
 
     public init() {}
 
@@ -57,16 +59,16 @@ public struct AuthorsInterface: AuthorsInterfaceProtocol {
     }
 }
 
-// MARK: Children's dependencies
-
-extension AuthorsComponent: HasVideosService {
-    var videosService: VideosServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
-    }
-}
-
-extension AuthorsComponent: HasAuthorsService {
-    var authorsService: AuthorsServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
-    }
-}
+//// MARK: Children's dependencies
+//
+//extension AuthorsComponent: HasVideosService {
+//    var videosService: VideosServiceProtocol {
+//        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
+//    }
+//}
+//
+//extension AuthorsComponent: HasAuthorsService {
+//    var authorsService: AuthorsServiceProtocol {
+//        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
+//    }
+//}

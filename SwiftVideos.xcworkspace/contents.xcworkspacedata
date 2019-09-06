@@ -21,6 +21,9 @@
          </FileRef>
       </Group>
       <FileRef
+         location = "group:CoreNavigation/CoreNavigation.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:CoreUX/CoreUX.xcodeproj">
       </FileRef>
       <FileRef

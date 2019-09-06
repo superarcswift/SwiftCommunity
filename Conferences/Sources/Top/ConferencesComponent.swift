@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import CoreNavigation
 import CoreUX
 import Core
 import DataModels
@@ -17,14 +18,11 @@ protocol ConferencesViewBuilder {
     func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>) -> ConferenceDetailViewController
 }
 
-class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder, ConferencesNavigationDelegate, EmptyInterface>, ConferencesViewBuilder {
+public protocol ConferencesComponentRoutable {
+    func trigger(_ route: NavigationRoute) -> Presentable
+}
 
-    // MARK: Initialization
-
-    override init(dependency: DependencyType, context: ApplicationContextProtocol) {
-        super.init(dependency: dependency, context: context)
-        navigationDelegate = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self) as? ConferencesNavigationDelegate
-    }
+class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder, EmptyInterface, NavigationRoute>, ConferencesViewBuilder {
 
     // MARK: APIs
 
@@ -44,18 +42,22 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
         return viewController
     }
 
-}
-
-// MARK: Children's dependencies
-
-extension ConferencesComponent: HasVideosService {
-    var videosService: VideosServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
+    override func trigger(_ route: NavigationRoute) -> Presentable {
+        return (componentsInteractor as! ConferencesComponentRoutable).trigger(route)
     }
+
 }
 
-extension ConferencesComponent: HasAuthorsService {
-    var authorsService: AuthorsServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
-    }
-}
+//// MARK: - Children's dependencies
+//
+//extension ConferencesComponent: HasVideosService {
+//    var videosService: VideosServiceProtocol {
+//        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
+//    }
+//}
+//
+//extension ConferencesComponent: HasAuthorsService {
+//    var authorsService: AuthorsServiceProtocol {
+//        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
+//    }
+//}

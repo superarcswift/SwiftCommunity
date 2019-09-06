@@ -12,15 +12,18 @@ class ComponentsInteractor: ComponentsInteractorProtocol {
 
     // MARK: Properties
 
-    var context: ApplicationContextProtocol!
+    // Private
 
-    var interfaceRegistry = InterfaceRegistry()
+    internal var context: ApplicationContextProtocol!
+    internal var interfaceRegistry = InterfaceRegistry()
 
     // MARK: Setup
 
     init(context: ApplicationContextProtocol) {
         self.context = context
     }
+
+    // MARK: APIs
 
     func register<T: Interface>(_ instance: T, for type: T.Type) {
         interfaceRegistry.register(instance, for: type)

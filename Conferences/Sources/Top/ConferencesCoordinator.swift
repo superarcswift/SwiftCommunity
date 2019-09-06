@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import CoreNavigation
 import Core
 import DataModels
 import SuperArcCoreUI
@@ -37,11 +38,11 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
             return .push(viewController)
 
         case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):
-            let videosCoordinator = component.navigationDelegate.showVideo(conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition, dependency: component, context: component.context)
+            let videosCoordinator = component.trigger(.videoListByConference(conferenceMetaData, conferenceEdition))
             return .present(videosCoordinator)
 
         case .video(let videoMetaData):
-            let videosCoordinator = component.navigationDelegate.showVideo(videoMetaData: videoMetaData, dependency: component, context: component.context)
+            let videosCoordinator = component.trigger(.videoDetail(videoMetaData))
             return .present(videosCoordinator)
 
         case .close:

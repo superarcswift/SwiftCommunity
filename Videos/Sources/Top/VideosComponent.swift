@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import CoreNavigation
 import Core
 import DataModels
 import SuperArcCoreComponent
@@ -16,14 +17,11 @@ protocol VideosViewBuilder: ViewBuildable {
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
 }
 
-class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosNavigationDelegate, VideosInterfaceProtocol>, VideosViewBuilder {
+public protocol VideosComponentRoutable {
+    func trigger(_ route: NavigationRoute) -> Presentable
+}
 
-    // MARK: Initialization
-
-    override init(dependency: DependencyType, context: ApplicationContextProtocol) {
-        super.init(dependency: dependency, context: context)
-        navigationDelegate = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self) as? VideosNavigationDelegate
-    }
+class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInterfaceProtocol, NavigationRoute>, VideosViewBuilder {
 
     // MARK: APIs
 
@@ -48,11 +46,19 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosNavi
 
         return viewController
     }
+
+    override func trigger(_ route: NavigationRoute) -> Presentable {
+        return (componentsInteractor as! VideosComponentRoutable).trigger(route)
+    }
 }
 
-public struct VideosInterface: VideosInterfaceProtocol {
+public class VideosInterface: VideosInterfaceProtocol {
+
+    // MARK: Initialization
 
     public init() {}
+
+    // MARK: APIs
 
     public func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, context: ApplicationContextProtocol) -> Presentable {
         return VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), depedency: dependency, context: context)
@@ -64,18 +70,18 @@ public struct VideosInterface: VideosInterfaceProtocol {
 
 }
 
-// MARK: Children's dependencies
-
-extension VideosComponent: HasAuthorsService {
-
-    var authorsService: AuthorsServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
-    }
-}
-
-extension VideosComponent: HasVideosService {
-
-    var videosService: VideosServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
-    }
-}
+//// MARK: Children's dependencies
+//
+//extension VideosComponent: HasAuthorsService {
+//
+//    var authorsService: AuthorsServiceProtocol {
+//        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
+//    }
+//}
+//
+//extension VideosComponent: HasVideosService {
+//
+//    var videosService: VideosServiceProtocol {
+//        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
+//    }
+//}
