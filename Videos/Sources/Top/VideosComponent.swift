@@ -69,19 +69,3 @@ public class VideosInterface: VideosInterfaceProtocol {
     }
 
 }
-
-//// MARK: Children's dependencies
-//
-//extension VideosComponent: HasAuthorsService {
-//
-//    var authorsService: AuthorsServiceProtocol {
-//        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
-//    }
-//}
-//
-//extension VideosComponent: HasVideosService {
-//
-//    var videosService: VideosServiceProtocol {
-//        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
-//    }
-//}

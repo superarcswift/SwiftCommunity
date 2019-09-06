@@ -58,17 +58,3 @@ public class AuthorsInterface: AuthorsInterfaceProtocol {
         return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, context: context)
     }
 }
-
-//// MARK: Children's dependencies
-//
-//extension AuthorsComponent: HasVideosService {
-//    var videosService: VideosServiceProtocol {
-//        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
-//    }
-//}
-//
-//extension AuthorsComponent: HasAuthorsService {
-//    var authorsService: AuthorsServiceProtocol {
-//        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
-//    }
-//}

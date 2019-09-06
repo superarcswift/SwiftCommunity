@@ -47,17 +47,3 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
     }
 
 }
-
-//// MARK: - Children's dependencies
-//
-//extension ConferencesComponent: HasVideosService {
-//    var videosService: VideosServiceProtocol {
-//        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
-//    }
-//}
-//
-//extension ConferencesComponent: HasAuthorsService {
-//    var authorsService: AuthorsServiceProtocol {
-//        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
-//    }
-//}
