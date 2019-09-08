@@ -5,6 +5,7 @@
 import SuperArcCore
 import SuperArcFoundation
 
+/// Main protocol responsible for handling routing between components.
 public protocol ComponentsRouterProtocol: HasApplicationContext {
     var interfaceRegistry: InterfaceRegistry { get }
     var routerRegistry: RouterRegistry { get }
