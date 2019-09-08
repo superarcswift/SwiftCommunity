@@ -8,9 +8,3 @@ import XCoordinator
 public protocol ComponentRoute {}
 
 public enum EmptyComponentRoute: ComponentRoute {}
-
-public protocol ComponentRouter {
-    associatedtype ComponentRouteType: ComponentRoute
-
-    func trigger(_ route: ComponentRouteType) -> Presentable
-}

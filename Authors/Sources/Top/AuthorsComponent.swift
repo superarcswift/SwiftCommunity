@@ -2,7 +2,6 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import CoreNavigation
 import Core
 import DataModels
 import SuperArcCoreComponent
@@ -17,11 +16,16 @@ protocol AuthorsViewBuilder: ViewBuildable {
     func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
 }
 
-public protocol AuthorsComponentRoutable {
-    func trigger(_ route: NavigationRoute) -> Presentable
+public protocol AuthorsComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == AuthorsComponentRoute {}
+
+extension AuthorsComponentRouterProtocol where ComponentRouteType == AuthorsComponentRoute {
+
+    public var anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute> {
+        return AnyComponentRouter(self)
+    }
 }
 
-class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyInterface, NavigationRoute>, AuthorsViewBuilder {
+class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyInterface, AuthorsComponentRoute>, AuthorsViewBuilder {
 
     // MARK: APIs
 
@@ -43,8 +47,8 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
         return viewController
     }
 
-    override func trigger(_ route: NavigationRoute) -> Presentable {
-        return (componentsInteractor as! AuthorsComponentRoutable).trigger(route)
+    override func trigger(_ route: AuthorsComponentRoute) -> Presentable {
+        return componentsRouter.trigger(route)
     }
 }
 
@@ -54,7 +58,11 @@ public class AuthorsInterface: AuthorsInterfaceProtocol {
 
     public init() {}
 
-    public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, context: ApplicationContextProtocol) -> Presentable {
-        return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, context: context)
+    public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter:AnyComponentRouter<AuthorsComponentRoute>, context: ApplicationContextProtocol) -> Presentable {
+        return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, componentsRouter: anyAuthorsRouter, context: context)
     }
+}
+
+public enum AuthorsComponentRoute: ComponentRoute {
+    case video(VideoMetaData)
 }

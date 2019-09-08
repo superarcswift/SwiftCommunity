@@ -5,12 +5,13 @@
 import SuperArcCore
 import SuperArcFoundation
 
-public protocol ComponentsInteractorProtocol: HasApplicationContext {
+public protocol ComponentsRouterProtocol: HasApplicationContext {
     var interfaceRegistry: InterfaceRegistry { get }
+    var routerRegistry: RouterRegistry { get }
 }
 
 public protocol HasComponentsInteractor {
-    var componentsInteractor: ComponentsInteractorProtocol { get }
+    var componentsInteractor: ComponentsRouterProtocol { get }
 }
 
 public class InterfaceRegistry: Registry {
@@ -18,6 +19,19 @@ public class InterfaceRegistry: Registry {
     // MARK: Properties
 
     public var container: Container<Interface>
+
+    // MARK: Initialization
+
+    public init() {
+        container = Container()
+    }
+}
+
+public class RouterRegistry: Registry {
+
+    // MARK: Properties
+
+    public var container: Container<ComponentRouterIdentifiable>
 
     // MARK: Initialization
 

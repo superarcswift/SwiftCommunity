@@ -2,7 +2,6 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import CoreNavigation
 import CoreUX
 import Core
 import DataModels
@@ -18,11 +17,16 @@ protocol ConferencesViewBuilder {
     func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>) -> ConferenceDetailViewController
 }
 
-public protocol ConferencesComponentRoutable {
-    func trigger(_ route: NavigationRoute) -> Presentable
+public protocol ConferencesComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == ConferencesComponentRoute {}
+
+extension ConferencesComponentRouterProtocol where ComponentRouteType == ConferencesComponentRoute {
+
+    public var anyConferencesRouter: AnyComponentRouter<ConferencesComponentRoute> {
+        return AnyComponentRouter(self)
+    }
 }
 
-class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder, EmptyInterface, NavigationRoute>, ConferencesViewBuilder {
+class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder, EmptyInterface, ConferencesComponentRoute>, ConferencesViewBuilder {
 
     // MARK: APIs
 
@@ -42,8 +46,13 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
         return viewController
     }
 
-    override func trigger(_ route: NavigationRoute) -> Presentable {
-        return (componentsInteractor as! ConferencesComponentRoutable).trigger(route)
+    override func trigger(_ route: ConferencesComponentRoute) -> Presentable {
+        return componentsRouter.trigger(route)
     }
 
+}
+
+public enum ConferencesComponentRoute: ComponentRoute {
+    case videos(ConferenceMetaData, ConferenceEdition)
+    case video(VideoMetaData)
 }

@@ -8,7 +8,7 @@ import SuperArcCoreUI
 import SuperArcCore
 import SuperArcFoundation
 
-class ComponentsInteractor: ComponentsInteractorProtocol {
+class ComponentsRouter: ComponentsRouterProtocol {
 
     // MARK: Properties
 
@@ -16,6 +16,7 @@ class ComponentsInteractor: ComponentsInteractorProtocol {
 
     internal var context: ApplicationContextProtocol!
     internal var interfaceRegistry = InterfaceRegistry()
+    internal var routerRegistry = RouterRegistry()
 
     // MARK: Setup
 
@@ -27,5 +28,9 @@ class ComponentsInteractor: ComponentsInteractorProtocol {
 
     func register<T: Interface>(_ instance: T, for type: T.Type) {
         interfaceRegistry.register(instance, for: type)
+    }
+
+    func register<T: ComponentRouterIdentifiable>(_ instance: T, for type: T.Type) {
+        routerRegistry.register(instance, for: type)
     }
 }

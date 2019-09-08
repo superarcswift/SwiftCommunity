@@ -27,11 +27,14 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
     // Public
 
     public var dependency: DependencyType
+
     public var viewBuilder: ViewBuildableType {
         return self as! ViewBuildableType
     }
 
-    public var componentsInteractor: ComponentsInteractorProtocol
+    public var componentsInteractor: ComponentsRouterProtocol
+
+    public var componentsRouter: AnyComponentRouter<ComponentRouteType>
 
     public var interface: InterfaceType!
 
@@ -39,16 +42,23 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 
     // MARK: Intialization
 
-    public init(dependency: DependencyType, context: ApplicationContextProtocol) {
+    public init(dependency: DependencyType, componentsRouter: AnyComponentRouter<ComponentRouteType>, context: ApplicationContextProtocol) {
         self.dependency = dependency
         self.context = context
-        componentsInteractor = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self)
+        self.componentsRouter = componentsRouter
+        componentsInteractor = context.viewControllerContext.resolve(type: ComponentsRouterProtocol.self)
     }
 
     // MARK: APIs
 
     open func trigger(_ route: ComponentRouteType) -> Presentable {
         fatalError("needed to be implemented")
+    }
+}
+
+extension Component where ComponentRouteType == EmptyComponentRoute {
+    public convenience init(dependency: DependencyType, context: ApplicationContextProtocol) {
+        self.init(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), context: context)
     }
 }
 

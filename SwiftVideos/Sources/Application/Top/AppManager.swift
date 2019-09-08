@@ -30,7 +30,7 @@ class AppManager: HasComponentsInteractor, HasConfigurations {
 
     // Private
 
-    lazy internal var componentsInteractor: ComponentsInteractorProtocol = ComponentsInteractor(context: core.context)
+    lazy internal var componentsInteractor: ComponentsRouterProtocol = ComponentsRouter(context: core.context)
     lazy internal var configurations = AnyRegistry(ConfigurationsRegistry(endpoint: .current))
 
     // MARK: Intialization
@@ -38,7 +38,7 @@ class AppManager: HasComponentsInteractor, HasConfigurations {
     init() {
         setupServices()
         setupApplicationContext()
-        setupNavigationDelegate()
+        setupComponentsCoordinator()
     }
 
     // MARK: Private helpers
@@ -66,10 +66,14 @@ class AppManager: HasComponentsInteractor, HasConfigurations {
         core.engine.serviceRegistry.register(conferencesService, for: ConferencesServiceProtocol.self)
     }
 
-    private func setupNavigationDelegate() {
-        core.context.viewControllerContext.register(componentsInteractor, for: ComponentsInteractorProtocol.self)
+    private func setupComponentsCoordinator() {
+        core.context.viewControllerContext.register(componentsInteractor, for: ComponentsRouterProtocol.self)
 
         componentsInteractor.interfaceRegistry.register(VideosInterface(), for: VideosInterfaceProtocol.self)
         componentsInteractor.interfaceRegistry.register(AuthorsInterface(), for: AuthorsInterfaceProtocol.self)
+
+        componentsInteractor.routerRegistry.register(ConferencesComponentRouter(context: core.context), for: ConferencesComponentRouter.self)
+        componentsInteractor.routerRegistry.register(VideosComponentRouter(context: core.context), for: VideosComponentRouter.self)
+        componentsInteractor.routerRegistry.register(AuthorsComponentRouter(context: core.context), for: AuthorsComponentRouter.self)
     }
 }

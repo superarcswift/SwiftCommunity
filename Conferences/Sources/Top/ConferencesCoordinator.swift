@@ -2,9 +2,9 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import CoreNavigation
 import Core
 import DataModels
+import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
 import XCoordinator
@@ -20,8 +20,8 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
     // MARK: Initialization
 
-    public init(dependency: ConferencesDependency, context: ApplicationContextProtocol) {
-        component = ConferencesComponent(dependency: dependency, context: context)
+    public init(dependency: ConferencesDependency, componentsRouter: AnyComponentRouter<ConferencesComponentRoute>, context: ApplicationContextProtocol) {
+        component = ConferencesComponent(dependency: dependency, componentsRouter: componentsRouter, context: context)
         super.init(initialRoute: .conferences)
     }
 
@@ -38,11 +38,11 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
             return .push(viewController)
 
         case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):
-            let videosCoordinator = component.trigger(.videoListByConference(conferenceMetaData, conferenceEdition))
+            let videosCoordinator = component.trigger(.videos(conferenceMetaData, conferenceEdition))
             return .present(videosCoordinator)
 
         case .video(let videoMetaData):
-            let videosCoordinator = component.trigger(.videoDetail(videoMetaData))
+            let videosCoordinator = component.trigger(.video(videoMetaData))
             return .present(videosCoordinator)
 
         case .close:
