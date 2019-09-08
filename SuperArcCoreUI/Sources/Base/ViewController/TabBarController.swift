@@ -53,17 +53,20 @@ open class TabBarController<VM: ViewModel>: UITabBarController, CommonViewContro
 
     // MARK: Setup
 
-    open func setupViews() {}
+    /// Setup ViewController after loading.
+    open func setupViews() {
+        commonSetupView()
+
+        if hasLeftCloseButton {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(self.close))
+        }
+
+        if hasRightCloseButton {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(self.close))
+        }
+    }
 
     open func setupBindings() {}
 
     open func loadData() {}
 }
-
-//// MARK: - UITabBarControllerDelegate
-//
-//extension TabBarController: UITabBarControllerDelegate {
-//    public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-//        viewController.setApplicationContext(context)
-//    }
-//}

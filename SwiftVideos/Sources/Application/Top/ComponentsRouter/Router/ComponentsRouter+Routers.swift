@@ -10,14 +10,14 @@ import SuperArcCoreComponent
 extension ComponentsRouter {
 
     var conferencesRouter: AnyComponentRouter<ConferencesComponentRoute> {
-        return routerRegistry.resolve(type: ConferencesComponentRouter.self).anyConferencesRouter
+        return routerRegistry.resolve(type: ConferencesComponentRouterProtocol.self).anyConferencesRouter
     }
 
     var videosRouter: AnyComponentRouter<VideosComponentRoute> {
-        return routerRegistry.resolve(type: VideosComponentRouter.self).anyVideosRouter
+        return routerRegistry.resolve(type: VideosComponentRouterProtocol.self).anyVideosRouter
     }
 
     var authorsRouter: AnyComponentRouter<AuthorsComponentRoute> {
-        return routerRegistry.resolve(type: AuthorsComponentRouter.self).anyAuthorsRouter
+        return routerRegistry.resolve(type: AuthorsComponentRouterProtocol.self).anyAuthorsRouter
     }
 }

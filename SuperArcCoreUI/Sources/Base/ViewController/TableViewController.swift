@@ -40,8 +40,19 @@ open class TableViewController<VM: ViewModel>: UITableViewController, CommonView
 
     // MARK: Setup
 
-    open func setupViews() {}
+    /// Setup ViewController after loading.
+    open func setupViews() {
+        commonSetupView()
 
+        if hasLeftCloseButton {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(self.close))
+        }
+
+        if hasRightCloseButton {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(self.close))
+        }
+    }
+    
     open func setupBindings() {}
 
     open func loadData() {}

@@ -3,20 +3,21 @@
 //
 
 import Core
+import SuperArcCoreComponent
 import SuperArcCore
 
 // MARK: - Dependencies
 
 extension ComponentsRouter: HasVideosService {
 
-    var videosService: VideosServiceProtocol {
+    public var videosService: VideosServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
     }
 }
 
 extension ComponentsRouter: HasAuthorsService {
 
-    var authorsService: AuthorsServiceProtocol {
+    public var authorsService: AuthorsServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
     }
 }

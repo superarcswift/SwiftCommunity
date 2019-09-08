@@ -11,8 +11,8 @@ public protocol ComponentsRouterProtocol: HasApplicationContext {
     var routerRegistry: RouterRegistry { get }
 }
 
-public protocol HasComponentsInteractor {
-    var componentsInteractor: ComponentsRouterProtocol { get }
+public protocol HasComponentsRouter {
+    var componentsRouter: ComponentsRouterProtocol { get }
 }
 
 public class InterfaceRegistry: Registry {

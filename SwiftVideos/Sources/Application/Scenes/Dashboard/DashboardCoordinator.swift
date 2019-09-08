@@ -33,7 +33,6 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
         component = DashboardComponent(dependency: EmptyComponent(), context: context)
 
-        print(component.componentsInteractor.routerRegistry.resolve(type: ConferencesComponentRouter.self))
         let conferencesComponentRouter = component.componentsInteractor.routerRegistry.resolve(type: ConferencesComponentRouter.self)
         let conferencesCoordinator = ConferencesCoordinator(dependency: component, componentsRouter: conferencesComponentRouter.anyConferencesRouter, context: context)
         conferencesCoordinator.rootViewController.tabBarItem = UITabBarItem(titleKey: "conferences", image: UIImage(named: "conferences"), tag: 0)

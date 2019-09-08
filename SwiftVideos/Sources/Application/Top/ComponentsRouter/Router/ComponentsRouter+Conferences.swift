@@ -13,6 +13,7 @@ class ConferencesComponentRouter: ConferencesComponentRouterProtocol {
     var context: ApplicationContextProtocol
 
     lazy var componentsRouter: ComponentsRouter = {
+        // TODO: See if we can remove this force cast
         self.context.viewControllerContext.resolve(type: ComponentsRouterProtocol.self) as! ComponentsRouter
     }()
 

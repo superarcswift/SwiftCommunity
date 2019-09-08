@@ -2,18 +2,16 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import Core
 import SuperArcCore
 import SuperArcFoundation
 
-// Move this to SuperArcCore as standard ConfigurationsRegistry.
-public class ConfigurationsRegistry: Registry {
+class ConfigurationsRegistry: Registry {
 
     // MARK: Properties
 
     // Internal
 
-    public var container: Container<Configuration>
+    var container: Container<Configuration>
 
     // Private
 
@@ -21,7 +19,7 @@ public class ConfigurationsRegistry: Registry {
 
     // MARK: Initialization
 
-    public init(endpoint: Endpoint) {
+    init(endpoint: Endpoint) {
         self.endpoint = endpoint
         container = Container()
 
@@ -31,6 +29,6 @@ public class ConfigurationsRegistry: Registry {
     // MARK: Private helpers
 
     private func setup() {
-        register(GitRepositoryConfiguration(endpoint: endpoint), for: GitRepositoryConfigurationProtocol.self)
+        // register any new type of configuration here
     }
 }
