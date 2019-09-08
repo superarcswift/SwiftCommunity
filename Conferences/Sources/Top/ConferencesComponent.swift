@@ -17,14 +17,16 @@ protocol ConferencesViewBuilder {
     func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>) -> ConferenceDetailViewController
 }
 
-class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder, ConferencesNavigationDelegate, EmptyInterface>, ConferencesViewBuilder {
+public protocol ConferencesComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == ConferencesComponentRoute {}
 
-    // MARK: Initialization
+extension ConferencesComponentRouterProtocol where ComponentRouteType == ConferencesComponentRoute {
 
-    override init(dependency: DependencyType, context: ApplicationContextProtocol) {
-        super.init(dependency: dependency, context: context)
-        navigationDelegate = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self) as? ConferencesNavigationDelegate
+    public var anyConferencesRouter: AnyComponentRouter<ConferencesComponentRoute> {
+        return AnyComponentRouter(self)
     }
+}
+
+class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder, EmptyInterface, ConferencesComponentRoute>, ConferencesViewBuilder {
 
     // MARK: APIs
 
@@ -44,18 +46,13 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
         return viewController
     }
 
+    override func trigger(_ route: ConferencesComponentRoute) -> Presentable {
+        return componentsRouter.trigger(route)
+    }
+
 }
 
-// MARK: Children's dependencies
-
-extension ConferencesComponent: HasVideosService {
-    var videosService: VideosServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
-    }
-}
-
-extension ConferencesComponent: HasAuthorsService {
-    var authorsService: AuthorsServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
-    }
+public enum ConferencesComponentRoute: ComponentRoute {
+    case videos(ConferenceMetaData, ConferenceEdition)
+    case video(VideoMetaData)
 }

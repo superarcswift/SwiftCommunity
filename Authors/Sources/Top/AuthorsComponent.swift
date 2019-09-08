@@ -16,14 +16,16 @@ protocol AuthorsViewBuilder: ViewBuildable {
     func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
 }
 
-class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, AuthorsNavigationDelegate, EmptyInterface>, AuthorsViewBuilder {
+public protocol AuthorsComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == AuthorsComponentRoute {}
 
-    // MARK: Initialization
+extension AuthorsComponentRouterProtocol where ComponentRouteType == AuthorsComponentRoute {
 
-    override init(dependency: DependencyType, context: ApplicationContextProtocol) {
-        super.init(dependency: dependency, context: context)
-        navigationDelegate = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self) as? AuthorsNavigationDelegate
+    public var anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute> {
+        return AnyComponentRouter(self)
     }
+}
+
+class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyInterface, AuthorsComponentRoute>, AuthorsViewBuilder {
 
     // MARK: APIs
 
@@ -44,29 +46,23 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, Authors
 
         return viewController
     }
+
+    override func trigger(_ route: AuthorsComponentRoute) -> Presentable {
+        return componentsRouter.trigger(route)
+    }
 }
 
 // MARK: AuthorsInterfaceProtocol
 
-public struct AuthorsInterface: AuthorsInterfaceProtocol {
+public class AuthorsInterface: AuthorsInterfaceProtocol {
 
     public init() {}
 
-    public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, context: ApplicationContextProtocol) -> Presentable {
-        return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, context: context)
+    public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter:AnyComponentRouter<AuthorsComponentRoute>, context: ApplicationContextProtocol) -> Presentable {
+        return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, componentsRouter: anyAuthorsRouter, context: context)
     }
 }
 
-// MARK: Children's dependencies
-
-extension AuthorsComponent: HasVideosService {
-    var videosService: VideosServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
-    }
-}
-
-extension AuthorsComponent: HasAuthorsService {
-    var authorsService: AuthorsServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
-    }
+public enum AuthorsComponentRoute: ComponentRoute {
+    case video(VideoMetaData)
 }

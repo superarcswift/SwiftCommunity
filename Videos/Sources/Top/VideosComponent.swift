@@ -16,14 +16,16 @@ protocol VideosViewBuilder: ViewBuildable {
     func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
 }
 
-class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosNavigationDelegate, VideosInterfaceProtocol>, VideosViewBuilder {
+public protocol VideosComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == VideosComponentRoute {}
 
-    // MARK: Initialization
+extension VideosComponentRouterProtocol where ComponentRouteType == VideosComponentRoute {
 
-    override init(dependency: DependencyType, context: ApplicationContextProtocol) {
-        super.init(dependency: dependency, context: context)
-        navigationDelegate = context.viewControllerContext.resolve(type: ComponentsInteractorProtocol.self) as? VideosNavigationDelegate
+    public var anyVideosRouter: AnyComponentRouter<VideosComponentRoute> {
+        return AnyComponentRouter(self)
     }
+}
+
+class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInterfaceProtocol, VideosComponentRoute>, VideosViewBuilder {
 
     // MARK: APIs
 
@@ -48,34 +50,30 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosNavi
 
         return viewController
     }
+
+    override func trigger(_ route: VideosComponentRoute) -> Presentable {
+        return componentsRouter.trigger(route)
+    }
 }
 
-public struct VideosInterface: VideosInterfaceProtocol {
+public class VideosInterface: VideosInterfaceProtocol {
+
+    // MARK: Initialization
 
     public init() {}
 
-    public func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, context: ApplicationContextProtocol) -> Presentable {
-        return VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), depedency: dependency, context: context)
+    // MARK: APIs
+
+    public func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>, context: ApplicationContextProtocol) -> Presentable {
+        return VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), depedency: dependency, componentsRouter: componentsRouter, context: context)
     }
 
-    public func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, context: ApplicationContextProtocol) -> Presentable {
-        return VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), depedency: dependency, context: context)
+    public func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>, context: ApplicationContextProtocol) -> Presentable {
+        return VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), depedency: dependency, componentsRouter: componentsRouter, context: context)
     }
 
 }
 
-// MARK: Children's dependencies
-
-extension VideosComponent: HasAuthorsService {
-
-    var authorsService: AuthorsServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
-    }
-}
-
-extension VideosComponent: HasVideosService {
-
-    var videosService: VideosServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
-    }
+public enum VideosComponentRoute: ComponentRoute {
+    case author(AuthorMetaData)
 }

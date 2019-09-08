@@ -5,7 +5,7 @@
 import Videos
 import Authors
 
-extension ComponentsInteractor {
+extension ComponentsRouter {
 
     var videosInterface: VideosInterfaceProtocol {
         return interfaceRegistry.resolve(type: VideosInterfaceProtocol.self)

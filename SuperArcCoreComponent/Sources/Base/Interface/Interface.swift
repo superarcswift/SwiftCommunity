@@ -4,4 +4,4 @@
 
 public protocol Interface {}
 
-public struct EmptyInterface: NavigationDelegate {}
+public struct EmptyInterface: Interface {}

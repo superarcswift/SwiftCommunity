@@ -4,11 +4,11 @@
 
 import SuperArcCoreUI
 import SuperArcCore
+import XCoordinator
 
-public protocol ComponentProtocol: Dependency, HasApplicationContext {
+public protocol ComponentProtocol: Dependency, HasApplicationContext, ComponentRouter {
     associatedtype DependencyType
     associatedtype ViewBuildableType
-    associatedtype NavigationDelegateType
     associatedtype InterfaceType
 
     /// The dependency of this component, which is should be provided by the parent of this component.
@@ -16,32 +16,49 @@ public protocol ComponentProtocol: Dependency, HasApplicationContext {
 
     var viewBuilder: ViewBuildableType { get }
 
-    var navigationDelegate: NavigationDelegateType! { get }
-
     var interface: InterfaceType! { get }
 }
 
 /// The base class of a dependency injection component containing all dependencies used by this object.
-open class Component<DependencyType, ViewBuildableType, NavigationDelegateType, InterfaceType>: ComponentProtocol {
+open class Component<DependencyType, ViewBuildableType, InterfaceType, ComponentRouteType: ComponentRoute>: ComponentProtocol {
 
     // MARK: Properties
 
     // Public
 
     public var dependency: DependencyType
+
     public var viewBuilder: ViewBuildableType {
         return self as! ViewBuildableType
     }
-    public var navigationDelegate: NavigationDelegateType!
+
+    public var componentsInteractor: ComponentsRouterProtocol
+
+    public var componentsRouter: AnyComponentRouter<ComponentRouteType>
+
     public var interface: InterfaceType!
 
     public var context: ApplicationContextProtocol!
 
     // MARK: Intialization
 
-    public init(dependency: DependencyType, context: ApplicationContextProtocol) {
+    public init(dependency: DependencyType, componentsRouter: AnyComponentRouter<ComponentRouteType>, context: ApplicationContextProtocol) {
         self.dependency = dependency
         self.context = context
+        self.componentsRouter = componentsRouter
+        componentsInteractor = context.viewControllerContext.resolve(type: ComponentsRouterProtocol.self)
+    }
+
+    // MARK: APIs
+
+    open func trigger(_ route: ComponentRouteType) -> Presentable {
+        fatalError("needed to be implemented")
+    }
+}
+
+extension Component where ComponentRouteType == EmptyComponentRoute {
+    public convenience init(dependency: DependencyType, context: ApplicationContextProtocol) {
+        self.init(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), context: context)
     }
 }
 

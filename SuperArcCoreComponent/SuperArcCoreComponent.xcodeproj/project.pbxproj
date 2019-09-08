@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F61DE100231FFF3D0083E26A /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE0FF231FFF3D0083E26A /* Interface.swift */; };
-		F61DE102231FFF510083E26A /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE101231FFF510083E26A /* NavigationDelegate.swift */; };
-		F61DE105231FFF9B0083E26A /* NavigationDelegateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE104231FFF9B0083E26A /* NavigationDelegateManager.swift */; };
+		F61DE102231FFF510083E26A /* ComponentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE101231FFF510083E26A /* ComponentRouter.swift */; };
+		F61DE105231FFF9B0083E26A /* ComponentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE104231FFF9B0083E26A /* ComponentsRouter.swift */; };
+		F6749C882321B65B000BDC1C /* ComponentRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6749C872321B65B000BDC1C /* ComponentRoute.swift */; };
+		F6749CBB23229319000BDC1C /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6749CBA23229319000BDC1C /* XCoordinator.framework */; };
 		F6A6B55923014EA000BFEC40 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6A6B55823014EA000BFEC40 /* README.md */; };
 		F6ABCB1D22FB4C6600476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB1322FB4C6500476F1A /* SuperArcCoreComponent.framework */; };
 		F6ABCB2422FB4C6600476F1A /* SuperArcCoreComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,8 +32,10 @@
 
 /* Begin PBXFileReference section */
 		F61DE0FF231FFF3D0083E26A /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
-		F61DE101231FFF510083E26A /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
-		F61DE104231FFF9B0083E26A /* NavigationDelegateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDelegateManager.swift; sourceTree = "<group>"; };
+		F61DE101231FFF510083E26A /* ComponentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRouter.swift; sourceTree = "<group>"; };
+		F61DE104231FFF9B0083E26A /* ComponentsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentsRouter.swift; sourceTree = "<group>"; };
+		F6749C872321B65B000BDC1C /* ComponentRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRoute.swift; sourceTree = "<group>"; };
+		F6749CBA23229319000BDC1C /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		F6A6B55823014EA000BFEC40 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6ABCB1322FB4C6500476F1A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCoreComponent.h; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6749CBB23229319000BDC1C /* XCoordinator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +70,9 @@
 		F61DE103231FFF780083E26A /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				F61DE104231FFF9B0083E26A /* NavigationDelegateManager.swift */,
-				F61DE101231FFF510083E26A /* NavigationDelegate.swift */,
+				F61DE104231FFF9B0083E26A /* ComponentsRouter.swift */,
+				F61DE101231FFF510083E26A /* ComponentRouter.swift */,
+				F6749C872321B65B000BDC1C /* ComponentRoute.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -79,6 +85,14 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
+		F6749CB923229318000BDC1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6749CBA23229319000BDC1C /* XCoordinator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F6ABCB0922FB4C6500476F1A = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +100,7 @@
 				F6ABCB1522FB4C6500476F1A /* Sources */,
 				F6ABCB2022FB4C6600476F1A /* Tests */,
 				F6ABCB1422FB4C6500476F1A /* Products */,
+				F6749CB923229318000BDC1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,11 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F61DE105231FFF9B0083E26A /* NavigationDelegateManager.swift in Sources */,
+				F61DE105231FFF9B0083E26A /* ComponentsRouter.swift in Sources */,
 				F6ABCB3322FB647600476F1A /* Dependency.swift in Sources */,
-				F61DE102231FFF510083E26A /* NavigationDelegate.swift in Sources */,
+				F61DE102231FFF510083E26A /* ComponentRouter.swift in Sources */,
 				F6ABCB3022FB4CC900476F1A /* Component.swift in Sources */,
 				F6E2937D231656BB00F759FF /* ViewBuilder.swift in Sources */,
+				F6749C882321B65B000BDC1C /* ComponentRoute.swift in Sources */,
 				F61DE100231FFF3D0083E26A /* Interface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

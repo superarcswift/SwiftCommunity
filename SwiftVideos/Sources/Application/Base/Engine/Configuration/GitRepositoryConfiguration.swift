@@ -8,7 +8,7 @@ import SuperArcCore
 struct GitRepositoryConfiguration: GitRepositoryConfigurationProtocol {
 
     // MARK: Properties
-    
+
     var endpoint: Endpoint
 
     // MARK: Initialization

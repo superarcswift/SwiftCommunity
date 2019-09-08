@@ -4,6 +4,7 @@
 
 import Core
 import DataModels
+import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
 import XCoordinator
@@ -19,8 +20,8 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
     // MARK: Initialization
 
-    public init(initialRoute: VideosRoute, depedency: VideosDependency, context: ApplicationContextProtocol) {
-        component = VideosComponent(dependency: depedency, context: context)
+    public init(initialRoute: VideosRoute, depedency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>, context: ApplicationContextProtocol) {
+        component = VideosComponent(dependency: depedency, componentsRouter: componentsRouter, context: context)
         super.init(initialRoute: initialRoute)
     }
 
@@ -37,7 +38,7 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
             return .push(viewController)
 
         case .authorDetail(let authorMetaData):
-            let authorsCoordinator = component.navigationDelegate.showAuthor(authorMetaData: authorMetaData, dependency: component, context: component.context)
+            let authorsCoordinator = component.trigger(.author(authorMetaData))
             return .present(authorsCoordinator)
 
         case .close:
