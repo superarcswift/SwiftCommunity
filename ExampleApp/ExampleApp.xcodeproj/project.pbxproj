@@ -21,13 +21,10 @@
 		F6429C3E2325466B00744ACA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C3B2325466B00744ACA /* RxSwift.framework */; };
 		F6429C412325487800744ACA /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C402325487800744ACA /* Kingfisher.framework */; };
 		F6429C43232548DE00744ACA /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C42232548DE00744ACA /* PromiseKit.framework */; };
-		F6429C45232549D000744ACA /* FeatureBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C44232549D000744ACA /* FeatureBViewController.swift */; };
 		F6429C47232549E000744ACA /* FeatureCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C46232549E000744ACA /* FeatureCViewController.swift */; };
 		F6429C49232549EC00744ACA /* FeatureDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C48232549EC00744ACA /* FeatureDViewController.swift */; };
-		F6429C4D23254B7C00744ACA /* FeatureBComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C4C23254B7C00744ACA /* FeatureBComponent.swift */; };
 		F6429C4F23254B8500744ACA /* FeatureCComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C4E23254B8500744ACA /* FeatureCComponent.swift */; };
 		F6429C5123254B9000744ACA /* FeatureDComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C5023254B9000744ACA /* FeatureDComponent.swift */; };
-		F6429C55232550CC00744ACA /* FeatureB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429C54232550CC00744ACA /* FeatureB.storyboard */; };
 		F6429C57232550D400744ACA /* FeatureC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429C56232550D400744ACA /* FeatureC.storyboard */; };
 		F6429C59232550DB00744ACA /* FeatureD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429C58232550DB00744ACA /* FeatureD.storyboard */; };
 		F6429C602325583500744ACA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C5F2325583500744ACA /* DashboardViewController.swift */; };
@@ -46,6 +43,9 @@
 		F6429CC423265D8100744ACA /* FeatureA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CC023265D0F00744ACA /* FeatureA.framework */; };
 		F6429CC523265D8F00744ACA /* FeatureA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CC023265D0F00744ACA /* FeatureA.framework */; };
 		F6429CC623265D8F00744ACA /* FeatureA.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CC023265D0F00744ACA /* FeatureA.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6429D282326829900744ACA /* FeatureB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429D14232681F600744ACA /* FeatureB.framework */; };
+		F6429D29232682B700744ACA /* FeatureB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429D14232681F600744ACA /* FeatureB.framework */; };
+		F6429D2A232682B700744ACA /* FeatureB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6429D14232681F600744ACA /* FeatureB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +84,27 @@
 			remoteGlobalIDString = F6429C9C23265CFF00744ACA;
 			remoteInfo = FeatureA;
 		};
+		F6429D13232681F600744ACA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6429D0E232681F600744ACA /* FeatureB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6429CF4232681CE00744ACA;
+			remoteInfo = FeatureB;
+		};
+		F6429D15232681F600744ACA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6429D0E232681F600744ACA /* FeatureB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6429CFD232681CE00744ACA;
+			remoteInfo = FeatureBTests;
+		};
+		F6429D2B232682B700744ACA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6429D0E232681F600744ACA /* FeatureB.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F6429CF3232681CE00744ACA;
+			remoteInfo = FeatureB;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +118,7 @@
 				F6429CC623265D8F00744ACA /* FeatureA.framework in Embed Frameworks */,
 				F6429C362325463200744ACA /* SuperArcCore.framework in Embed Frameworks */,
 				F6429C382325463500744ACA /* SuperArcCoreUI.framework in Embed Frameworks */,
+				F6429D2A232682B700744ACA /* FeatureB.framework in Embed Frameworks */,
 				F6429C332325462900744ACA /* SuperArcFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -122,13 +144,10 @@
 		F6429C3B2325466B00744ACA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F6429C402325487800744ACA /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F6429C42232548DE00744ACA /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
-		F6429C44232549D000744ACA /* FeatureBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureBViewController.swift; sourceTree = "<group>"; };
 		F6429C46232549E000744ACA /* FeatureCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCViewController.swift; sourceTree = "<group>"; };
 		F6429C48232549EC00744ACA /* FeatureDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDViewController.swift; sourceTree = "<group>"; };
-		F6429C4C23254B7C00744ACA /* FeatureBComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureBComponent.swift; sourceTree = "<group>"; };
 		F6429C4E23254B8500744ACA /* FeatureCComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCComponent.swift; sourceTree = "<group>"; };
 		F6429C5023254B9000744ACA /* FeatureDComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDComponent.swift; sourceTree = "<group>"; };
-		F6429C54232550CC00744ACA /* FeatureB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeatureB.storyboard; sourceTree = "<group>"; };
 		F6429C56232550D400744ACA /* FeatureC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeatureC.storyboard; sourceTree = "<group>"; };
 		F6429C58232550DB00744ACA /* FeatureD.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeatureD.storyboard; sourceTree = "<group>"; };
 		F6429C5F2325583500744ACA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +162,7 @@
 		F6429C8B2325AD1400744ACA /* ComponentsRouter+FeatureB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsRouter+FeatureB.swift"; sourceTree = "<group>"; };
 		F6429C8D2325AEDF00744ACA /* ComponentsRouter+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsRouter+Dependencies.swift"; sourceTree = "<group>"; };
 		F6429CBA23265D0F00744ACA /* FeatureA.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FeatureA.xcodeproj; path = FeatureA/FeatureA.xcodeproj; sourceTree = "<group>"; };
+		F6429D0E232681F600744ACA /* FeatureB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FeatureB.xcodeproj; path = FeatureB/FeatureB.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +170,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6429D282326829900744ACA /* FeatureB.framework in Frameworks */,
+				F6429D29232682B700744ACA /* FeatureB.framework in Frameworks */,
 				F6429CC423265D8100744ACA /* FeatureA.framework in Frameworks */,
 				F6429C6D2325603D00744ACA /* XCoordinator.framework in Frameworks */,
 				F6429C6923255F7700744ACA /* SuperArcCoreComponent.framework in Frameworks */,
@@ -186,8 +208,8 @@
 		F6429BCC232540A900744ACA = {
 			isa = PBXGroup;
 			children = (
-				F6429CBA23265D0F00744ACA /* FeatureA.xcodeproj */,
 				F6429BD7232540A900744ACA /* Sources */,
+				F6429D17232681FB00744ACA /* Features */,
 				F6429BEE232540AB00744ACA /* UnitTests */,
 				F6429BF9232540AB00744ACA /* UITests */,
 				F6429BD6232540A900744ACA /* Products */,
@@ -254,21 +276,10 @@
 			isa = PBXGroup;
 			children = (
 				F6429C5A232557EF00744ACA /* Dashboard */,
-				F6429C0C2325431000744ACA /* FeatureB */,
 				F6429C0D2325431600744ACA /* FeatureC */,
 				F6429C0E2325431E00744ACA /* FeatureD */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		F6429C0C2325431000744ACA /* FeatureB */ = {
-			isa = PBXGroup;
-			children = (
-				F6429C4C23254B7C00744ACA /* FeatureBComponent.swift */,
-				F6429C44232549D000744ACA /* FeatureBViewController.swift */,
-				F6429C54232550CC00744ACA /* FeatureB.storyboard */,
-			);
-			path = FeatureB;
 			sourceTree = "<group>";
 		};
 		F6429C0D2325431600744ACA /* FeatureC */ = {
@@ -364,6 +375,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F6429D0F232681F600744ACA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6429D14232681F600744ACA /* FeatureB.framework */,
+				F6429D16232681F600744ACA /* FeatureBTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6429D17232681FB00744ACA /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F6429CBA23265D0F00744ACA /* FeatureA.xcodeproj */,
+				F6429D0E232681F600744ACA /* FeatureB.xcodeproj */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -381,6 +410,7 @@
 			);
 			dependencies = (
 				F6429CC823265D8F00744ACA /* PBXTargetDependency */,
+				F6429D2C232682B700744ACA /* PBXTargetDependency */,
 			);
 			name = ExampleApp;
 			productName = ExampleApp;
@@ -462,6 +492,10 @@
 					ProductGroup = F6429CBB23265D0F00744ACA /* Products */;
 					ProjectRef = F6429CBA23265D0F00744ACA /* FeatureA.xcodeproj */;
 				},
+				{
+					ProductGroup = F6429D0F232681F600744ACA /* Products */;
+					ProjectRef = F6429D0E232681F600744ACA /* FeatureB.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -487,6 +521,20 @@
 			remoteRef = F6429CC123265D0F00744ACA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F6429D14232681F600744ACA /* FeatureB.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FeatureB.framework;
+			remoteRef = F6429D13232681F600744ACA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6429D16232681F600744ACA /* FeatureBTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FeatureBTests.xctest;
+			remoteRef = F6429D15232681F600744ACA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -494,7 +542,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6429C55232550CC00744ACA /* FeatureB.storyboard in Resources */,
 				F6429BE5232540AB00744ACA /* LaunchScreen.storyboard in Resources */,
 				F6429C57232550D400744ACA /* FeatureC.storyboard in Resources */,
 				F6429C59232550DB00744ACA /* FeatureD.storyboard in Resources */,
@@ -557,13 +604,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6429C45232549D000744ACA /* FeatureBViewController.swift in Sources */,
 				F6429C8423259DCC00744ACA /* ComponentsRouter+FeatureA.swift in Sources */,
 				F6429C47232549E000744ACA /* FeatureCViewController.swift in Sources */,
 				F6429C81232578A600744ACA /* DashboardComponent.swift in Sources */,
 				F6429BD9232540A900744ACA /* AppDelegate.swift in Sources */,
 				F6429C8E2325AEDF00744ACA /* ComponentsRouter+Dependencies.swift in Sources */,
-				F6429C4D23254B7C00744ACA /* FeatureBComponent.swift in Sources */,
 				F6429C5123254B9000744ACA /* FeatureDComponent.swift in Sources */,
 				F6429C4F23254B8500744ACA /* FeatureCComponent.swift in Sources */,
 				F6429C8A2325AA2E00744ACA /* ComponentsRouter+Routers.swift in Sources */,
@@ -606,6 +651,11 @@
 			isa = PBXTargetDependency;
 			name = FeatureA;
 			targetProxy = F6429CC723265D8F00744ACA /* PBXContainerItemProxy */;
+		};
+		F6429D2C232682B700744ACA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FeatureB;
+			targetProxy = F6429D2B232682B700744ACA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -742,6 +792,7 @@
 		F6429C00232540AB00744ACA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
@@ -761,6 +812,7 @@
 		F6429C01232540AB00744ACA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;

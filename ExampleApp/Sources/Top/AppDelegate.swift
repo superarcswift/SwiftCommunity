@@ -3,6 +3,7 @@
 //
 
 import FeatureA
+import FeatureB
 import SuperArcCoreComponent
 import SuperArcCore
 import SuperArcFoundation

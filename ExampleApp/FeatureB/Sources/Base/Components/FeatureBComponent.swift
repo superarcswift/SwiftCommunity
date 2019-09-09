@@ -8,9 +8,9 @@ import SuperArcCore
 
 // MARK: - FeatureBComponent
 
-class FeatureBComponent: Component<FeatureBDependency, FeatureBComponentBuilder, FeatureBInterfaceProtocol, FeatureBComponentRoute>, FeatureBComponentBuilder {
+public class FeatureBComponent: Component<FeatureBDependency, FeatureBComponentBuilder, FeatureBInterfaceProtocol, FeatureBComponentRoute>, FeatureBComponentBuilder {
 
-    func makeFeatureBViewController(hasRightCloseButton: Bool = false) -> ComponentPresentable {
+    public func makeFeatureBViewController(hasRightCloseButton: Bool = false) -> ComponentPresentable {
         let viewController = FeatureBViewController.instantiate(with: context.viewControllerContext)
         viewController.hasRightCloseButton = hasRightCloseButton
         let navigationController = NavigationController(rootViewController: viewController)
@@ -21,36 +21,36 @@ class FeatureBComponent: Component<FeatureBDependency, FeatureBComponentBuilder,
 
 // MARK: - FeatureBComponentBuilder
 
-protocol FeatureBComponentBuilder: ViewBuildable {
+public protocol FeatureBComponentBuilder: ViewBuildable {
     func makeFeatureBViewController(hasRightCloseButton: Bool) -> ComponentPresentable
 }
 
 // MARK: - FeatureBDependency
 
-protocol FeatureBDependency: Dependency {}
+public protocol FeatureBDependency: Dependency {}
 
 // MARK: - FeatureBInterfaceProtocol
 
-protocol FeatureBInterfaceProtocol: Interface {
+public protocol FeatureBInterfaceProtocol: Interface {
     func show(dependency: FeatureBDependency, componentsRouter: AnyComponentRouter<FeatureBComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool) -> ComponentPresentable
 }
 
 // MARK: - FeatureBInterface
 
-class FeatureBInterface: FeatureBInterfaceProtocol {
+public class FeatureBInterface: FeatureBInterfaceProtocol {
 
     public init() {}
 
-    func show(dependency: FeatureBDependency, componentsRouter: AnyComponentRouter<FeatureBComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool = false) -> ComponentPresentable {
+    public func show(dependency: FeatureBDependency, componentsRouter: AnyComponentRouter<FeatureBComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool = false) -> ComponentPresentable {
         return FeatureBComponent(dependency: dependency, componentsRouter: componentsRouter, context: context).makeFeatureBViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }
 
 // MARK: - FeatureBComponentRouterProtocol
 
-protocol FeatureBComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == FeatureBComponentRoute {}
+public protocol FeatureBComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == FeatureBComponentRoute {}
 
-extension FeatureBComponentRouterProtocol where ComponentRouteType == FeatureBComponentRoute {
+public extension FeatureBComponentRouterProtocol where ComponentRouteType == FeatureBComponentRoute {
 
     var anyFeatureBRouter: AnyComponentRouter<FeatureBComponentRoute> {
         return AnyComponentRouter(self)

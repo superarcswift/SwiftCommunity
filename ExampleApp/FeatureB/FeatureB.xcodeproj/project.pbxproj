@@ -7,134 +7,114 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F6429CA723265CFF00744ACA /* FeatureA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C9D23265CFF00744ACA /* FeatureA.framework */; };
-		F6429CAC23265CFF00744ACA /* FeatureATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429CAB23265CFF00744ACA /* FeatureATests.swift */; };
-		F6429CAE23265CFF00744ACA /* FeatureA.h in Headers */ = {isa = PBXBuildFile; fileRef = F6429CA023265CFF00744ACA /* FeatureA.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6429CE123265DFE00744ACA /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CE023265DFE00744ACA /* SuperArcCore.framework */; };
-		F6429CE323265E0200744ACA /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CE223265E0200744ACA /* SuperArcCoreUI.framework */; };
-		F6429CE523265E0600744ACA /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CE423265E0600744ACA /* SuperArcCoreComponent.framework */; };
-		F6429D1E2326826A00744ACA /* FeatureAComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429D1B2326826A00744ACA /* FeatureAComponent.swift */; };
-		F6429D1F2326826A00744ACA /* FeatureA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429D1C2326826A00744ACA /* FeatureA.storyboard */; };
-		F6429D202326826A00744ACA /* FeatureAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429D1D2326826A00744ACA /* FeatureAViewController.swift */; };
+		F6429CFE232681CE00744ACA /* FeatureB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CF4232681CE00744ACA /* FeatureB.framework */; };
+		F6429D03232681CE00744ACA /* FeatureBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429D02232681CE00744ACA /* FeatureBTests.swift */; };
+		F6429D05232681CE00744ACA /* FeatureB.h in Headers */ = {isa = PBXBuildFile; fileRef = F6429CF7232681CE00744ACA /* FeatureB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6429D252326828900744ACA /* FeatureBComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429D222326828900744ACA /* FeatureBComponent.swift */; };
+		F6429D262326828900744ACA /* FeatureB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429D232326828900744ACA /* FeatureB.storyboard */; };
+		F6429D272326828900744ACA /* FeatureBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429D242326828900744ACA /* FeatureBViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F6429CA823265CFF00744ACA /* PBXContainerItemProxy */ = {
+		F6429CFF232681CE00744ACA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F6429C9423265CFF00744ACA /* Project object */;
+			containerPortal = F6429CEB232681CE00744ACA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F6429C9C23265CFF00744ACA;
-			remoteInfo = FeatureA;
+			remoteGlobalIDString = F6429CF3232681CE00744ACA;
+			remoteInfo = FeatureB;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F6429C9D23265CFF00744ACA /* FeatureA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeatureA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6429CA023265CFF00744ACA /* FeatureA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeatureA.h; sourceTree = "<group>"; };
-		F6429CA123265CFF00744ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6429CA623265CFF00744ACA /* FeatureATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatureATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6429CAB23265CFF00744ACA /* FeatureATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureATests.swift; sourceTree = "<group>"; };
-		F6429CAD23265CFF00744ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6429CE023265DFE00744ACA /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6429CE223265E0200744ACA /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6429CE423265E0600744ACA /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6429D1B2326826A00744ACA /* FeatureAComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureAComponent.swift; sourceTree = "<group>"; };
-		F6429D1C2326826A00744ACA /* FeatureA.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeatureA.storyboard; sourceTree = "<group>"; };
-		F6429D1D2326826A00744ACA /* FeatureAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureAViewController.swift; sourceTree = "<group>"; };
+		F6429CF4232681CE00744ACA /* FeatureB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeatureB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6429CF7232681CE00744ACA /* FeatureB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeatureB.h; sourceTree = "<group>"; };
+		F6429CF8232681CE00744ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6429CFD232681CE00744ACA /* FeatureBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatureBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6429D02232681CE00744ACA /* FeatureBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureBTests.swift; sourceTree = "<group>"; };
+		F6429D04232681CE00744ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6429D222326828900744ACA /* FeatureBComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureBComponent.swift; sourceTree = "<group>"; };
+		F6429D232326828900744ACA /* FeatureB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeatureB.storyboard; sourceTree = "<group>"; };
+		F6429D242326828900744ACA /* FeatureBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureBViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F6429C9A23265CFF00744ACA /* Frameworks */ = {
+		F6429CF1232681CE00744ACA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6429CE523265E0600744ACA /* SuperArcCoreComponent.framework in Frameworks */,
-				F6429CE323265E0200744ACA /* SuperArcCoreUI.framework in Frameworks */,
-				F6429CE123265DFE00744ACA /* SuperArcCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6429CA323265CFF00744ACA /* Frameworks */ = {
+		F6429CFA232681CE00744ACA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6429CA723265CFF00744ACA /* FeatureA.framework in Frameworks */,
+				F6429CFE232681CE00744ACA /* FeatureB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F6429C9323265CFF00744ACA = {
+		F6429CEA232681CE00744ACA = {
 			isa = PBXGroup;
 			children = (
-				F6429C9F23265CFF00744ACA /* Sources */,
-				F6429CAA23265CFF00744ACA /* Tests */,
-				F6429C9E23265CFF00744ACA /* Products */,
-				F6429CDF23265DFE00744ACA /* Frameworks */,
+				F6429CF6232681CE00744ACA /* Sources */,
+				F6429D01232681CE00744ACA /* FeatureBTests */,
+				F6429CF5232681CE00744ACA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F6429C9E23265CFF00744ACA /* Products */ = {
+		F6429CF5232681CE00744ACA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6429C9D23265CFF00744ACA /* FeatureA.framework */,
-				F6429CA623265CFF00744ACA /* FeatureATests.xctest */,
+				F6429CF4232681CE00744ACA /* FeatureB.framework */,
+				F6429CFD232681CE00744ACA /* FeatureBTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F6429C9F23265CFF00744ACA /* Sources */ = {
+		F6429CF6232681CE00744ACA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F6429CC323265D2C00744ACA /* Top */,
-				F6429CD723265DCB00744ACA /* Base */,
+				F6429D182326823600744ACA /* Top */,
+				F6429D192326823E00744ACA /* Base */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		F6429CAA23265CFF00744ACA /* Tests */ = {
+		F6429D01232681CE00744ACA /* FeatureBTests */ = {
 			isa = PBXGroup;
 			children = (
-				F6429CAB23265CFF00744ACA /* FeatureATests.swift */,
-				F6429CAD23265CFF00744ACA /* Info.plist */,
+				F6429D02232681CE00744ACA /* FeatureBTests.swift */,
+				F6429D04232681CE00744ACA /* Info.plist */,
 			);
-			path = Tests;
+			path = FeatureBTests;
 			sourceTree = "<group>";
 		};
-		F6429CC323265D2C00744ACA /* Top */ = {
+		F6429D182326823600744ACA /* Top */ = {
 			isa = PBXGroup;
 			children = (
-				F6429CA023265CFF00744ACA /* FeatureA.h */,
-				F6429CA123265CFF00744ACA /* Info.plist */,
+				F6429CF7232681CE00744ACA /* FeatureB.h */,
+				F6429CF8232681CE00744ACA /* Info.plist */,
 			);
 			path = Top;
 			sourceTree = "<group>";
 		};
-		F6429CD723265DCB00744ACA /* Base */ = {
+		F6429D192326823E00744ACA /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F6429D1A2326826A00744ACA /* Components */,
+				F6429D212326828900744ACA /* Components */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		F6429CDF23265DFE00744ACA /* Frameworks */ = {
+		F6429D212326828900744ACA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F6429CE423265E0600744ACA /* SuperArcCoreComponent.framework */,
-				F6429CE223265E0200744ACA /* SuperArcCoreUI.framework */,
-				F6429CE023265DFE00744ACA /* SuperArcCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F6429D1A2326826A00744ACA /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				F6429D1B2326826A00744ACA /* FeatureAComponent.swift */,
-				F6429D1C2326826A00744ACA /* FeatureA.storyboard */,
-				F6429D1D2326826A00744ACA /* FeatureAViewController.swift */,
+				F6429D222326828900744ACA /* FeatureBComponent.swift */,
+				F6429D232326828900744ACA /* FeatureB.storyboard */,
+				F6429D242326828900744ACA /* FeatureBViewController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -142,99 +122,99 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F6429C9823265CFF00744ACA /* Headers */ = {
+		F6429CEF232681CE00744ACA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6429CAE23265CFF00744ACA /* FeatureA.h in Headers */,
+				F6429D05232681CE00744ACA /* FeatureB.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F6429C9C23265CFF00744ACA /* FeatureA */ = {
+		F6429CF3232681CE00744ACA /* FeatureB */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6429CB123265CFF00744ACA /* Build configuration list for PBXNativeTarget "FeatureA" */;
+			buildConfigurationList = F6429D08232681CE00744ACA /* Build configuration list for PBXNativeTarget "FeatureB" */;
 			buildPhases = (
-				F6429C9823265CFF00744ACA /* Headers */,
-				F6429C9923265CFF00744ACA /* Sources */,
-				F6429C9A23265CFF00744ACA /* Frameworks */,
-				F6429C9B23265CFF00744ACA /* Resources */,
+				F6429CEF232681CE00744ACA /* Headers */,
+				F6429CF0232681CE00744ACA /* Sources */,
+				F6429CF1232681CE00744ACA /* Frameworks */,
+				F6429CF2232681CE00744ACA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FeatureA;
-			productName = FeatureA;
-			productReference = F6429C9D23265CFF00744ACA /* FeatureA.framework */;
+			name = FeatureB;
+			productName = FeatureB;
+			productReference = F6429CF4232681CE00744ACA /* FeatureB.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F6429CA523265CFF00744ACA /* FeatureATests */ = {
+		F6429CFC232681CE00744ACA /* FeatureBTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6429CB423265CFF00744ACA /* Build configuration list for PBXNativeTarget "FeatureATests" */;
+			buildConfigurationList = F6429D0B232681CE00744ACA /* Build configuration list for PBXNativeTarget "FeatureBTests" */;
 			buildPhases = (
-				F6429CA223265CFF00744ACA /* Sources */,
-				F6429CA323265CFF00744ACA /* Frameworks */,
-				F6429CA423265CFF00744ACA /* Resources */,
+				F6429CF9232681CE00744ACA /* Sources */,
+				F6429CFA232681CE00744ACA /* Frameworks */,
+				F6429CFB232681CE00744ACA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F6429CA923265CFF00744ACA /* PBXTargetDependency */,
+				F6429D00232681CE00744ACA /* PBXTargetDependency */,
 			);
-			name = FeatureATests;
-			productName = FeatureATests;
-			productReference = F6429CA623265CFF00744ACA /* FeatureATests.xctest */;
+			name = FeatureBTests;
+			productName = FeatureBTests;
+			productReference = F6429CFD232681CE00744ACA /* FeatureBTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F6429C9423265CFF00744ACA /* Project object */ = {
+		F6429CEB232681CE00744ACA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "An Tran";
 				TargetAttributes = {
-					F6429C9C23265CFF00744ACA = {
+					F6429CF3232681CE00744ACA = {
 						CreatedOnToolsVersion = 10.3;
 					};
-					F6429CA523265CFF00744ACA = {
+					F6429CFC232681CE00744ACA = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
 			};
-			buildConfigurationList = F6429C9723265CFF00744ACA /* Build configuration list for PBXProject "FeatureA" */;
+			buildConfigurationList = F6429CEE232681CE00744ACA /* Build configuration list for PBXProject "FeatureB" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F6429C9323265CFF00744ACA;
-			productRefGroup = F6429C9E23265CFF00744ACA /* Products */;
+			mainGroup = F6429CEA232681CE00744ACA;
+			productRefGroup = F6429CF5232681CE00744ACA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F6429C9C23265CFF00744ACA /* FeatureA */,
-				F6429CA523265CFF00744ACA /* FeatureATests */,
+				F6429CF3232681CE00744ACA /* FeatureB */,
+				F6429CFC232681CE00744ACA /* FeatureBTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F6429C9B23265CFF00744ACA /* Resources */ = {
+		F6429CF2232681CE00744ACA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6429D1F2326826A00744ACA /* FeatureA.storyboard in Resources */,
+				F6429D262326828900744ACA /* FeatureB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6429CA423265CFF00744ACA /* Resources */ = {
+		F6429CFB232681CE00744ACA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -244,35 +224,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F6429C9923265CFF00744ACA /* Sources */ = {
+		F6429CF0232681CE00744ACA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6429D1E2326826A00744ACA /* FeatureAComponent.swift in Sources */,
-				F6429D202326826A00744ACA /* FeatureAViewController.swift in Sources */,
+				F6429D272326828900744ACA /* FeatureBViewController.swift in Sources */,
+				F6429D252326828900744ACA /* FeatureBComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6429CA223265CFF00744ACA /* Sources */ = {
+		F6429CF9232681CE00744ACA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6429CAC23265CFF00744ACA /* FeatureATests.swift in Sources */,
+				F6429D03232681CE00744ACA /* FeatureBTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F6429CA923265CFF00744ACA /* PBXTargetDependency */ = {
+		F6429D00232681CE00744ACA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F6429C9C23265CFF00744ACA /* FeatureA */;
-			targetProxy = F6429CA823265CFF00744ACA /* PBXContainerItemProxy */;
+			target = F6429CF3232681CE00744ACA /* FeatureB */;
+			targetProxy = F6429CFF232681CE00744ACA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F6429CAF23265CFF00744ACA /* Debug */ = {
+		F6429D06232681CE00744ACA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -336,7 +316,7 @@
 			};
 			name = Debug;
 		};
-		F6429CB023265CFF00744ACA /* Release */ = {
+		F6429D07232681CE00744ACA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -394,7 +374,7 @@
 			};
 			name = Release;
 		};
-		F6429CB223265CFF00744ACA /* Debug */ = {
+		F6429D09232681CE00744ACA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -411,7 +391,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.ExampleApp.FeatureA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.ExampleApp.FeatureB;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -419,7 +399,7 @@
 			};
 			name = Debug;
 		};
-		F6429CB323265CFF00744ACA /* Release */ = {
+		F6429D0A232681CE00744ACA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -436,7 +416,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.ExampleApp.FeatureA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.ExampleApp.FeatureB;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -444,38 +424,38 @@
 			};
 			name = Release;
 		};
-		F6429CB523265CFF00744ACA /* Debug */ = {
+		F6429D0C232681CE00744ACA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
-				INFOPLIST_FILE = FeatureATests/Info.plist;
+				INFOPLIST_FILE = FeatureBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.FeatureATests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.FeatureBTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F6429CB623265CFF00744ACA /* Release */ = {
+		F6429D0D232681CE00744ACA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
-				INFOPLIST_FILE = FeatureATests/Info.plist;
+				INFOPLIST_FILE = FeatureBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.FeatureATests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.FeatureBTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,34 +465,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F6429C9723265CFF00744ACA /* Build configuration list for PBXProject "FeatureA" */ = {
+		F6429CEE232681CE00744ACA /* Build configuration list for PBXProject "FeatureB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6429CAF23265CFF00744ACA /* Debug */,
-				F6429CB023265CFF00744ACA /* Release */,
+				F6429D06232681CE00744ACA /* Debug */,
+				F6429D07232681CE00744ACA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6429CB123265CFF00744ACA /* Build configuration list for PBXNativeTarget "FeatureA" */ = {
+		F6429D08232681CE00744ACA /* Build configuration list for PBXNativeTarget "FeatureB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6429CB223265CFF00744ACA /* Debug */,
-				F6429CB323265CFF00744ACA /* Release */,
+				F6429D09232681CE00744ACA /* Debug */,
+				F6429D0A232681CE00744ACA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6429CB423265CFF00744ACA /* Build configuration list for PBXNativeTarget "FeatureATests" */ = {
+		F6429D0B232681CE00744ACA /* Build configuration list for PBXNativeTarget "FeatureBTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6429CB523265CFF00744ACA /* Debug */,
-				F6429CB623265CFF00744ACA /* Release */,
+				F6429D0C232681CE00744ACA /* Debug */,
+				F6429D0D232681CE00744ACA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F6429C9423265CFF00744ACA /* Project object */;
+	rootObject = F6429CEB232681CE00744ACA /* Project object */;
 }
