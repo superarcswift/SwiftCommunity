@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        window = UIWindow(frame: UIScreen.main.bounds)
         #if DEBUG
         let endpoint: Endpoint = .development
         #else
@@ -39,8 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         componentsRouter.routerRegistry.register(FeatureAComponentRouter(context: core.context), for: FeatureAComponentRouter.self)
         componentsRouter.routerRegistry.register(FeatureBComponentRouter(context: core.context), for: FeatureBComponentRouter.self)
 
-
         let dashboardComponent = DashboardComponent(dependency: EmptyComponent(), context: core.context)
+        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = dashboardComponent.makeDashboardViewController()
         window?.makeKeyAndVisible()
 

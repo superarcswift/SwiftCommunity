@@ -9,8 +9,7 @@ public protocol ComponentRouterIdentifiable: ClassNameDerivable {}
 
 public protocol ComponentRouter {
     associatedtype ComponentRouteType: ComponentRoute
-    // TODO: add this
-    //init(context: ApplicationContextProtocol)
+
     func trigger(_ route: ComponentRouteType) -> ComponentPresentable
 }
 

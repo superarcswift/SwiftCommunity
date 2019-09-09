@@ -7,9 +7,9 @@ import SuperArcCoreUI
 import SuperArcCore
 import XCoordinator
 
-
 // MARK: - FeatureAComponent
 
+/// Main component class.
 public class FeatureAComponent: Component<FeatureADependency, FeatureAComponentBuilder, FeatureAInterfaceProtocol, FeatureAComponentRoute>, FeatureAComponentBuilder {
 
     public func makeFeatureAViewController(hasRightCloseButton: Bool = false) -> ComponentPresentable {
@@ -22,22 +22,22 @@ public class FeatureAComponent: Component<FeatureADependency, FeatureAComponentB
 
 // MARK: - FeatureAComponentBuilder
 
+/// Defining methods used to build all view controllers of this component.
 public protocol FeatureAComponentBuilder: ViewBuildable {
     func makeFeatureAViewController(hasRightCloseButton: Bool) -> ComponentPresentable
 }
 
 // MARK: -FeatureADependency
 
+/// Protocol defining dependencies that needed to build this component.
 public protocol FeatureADependency: Dependency {}
 
 // MARK: - FeatureAInterfaceProtocol
 
+/// Protocol defining methods for outside components to interact with the current components.
 public protocol FeatureAInterfaceProtocol: Interface {
     func show(dependency: FeatureADependency, componentsRouter: AnyComponentRouter<FeatureAComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool) -> ComponentPresentable
 }
-
-
-// MARK: - AuthorsInterface
 
 public class FeatureAInterface: FeatureAInterfaceProtocol {
 
@@ -51,6 +51,7 @@ public class FeatureAInterface: FeatureAInterfaceProtocol {
 
 // MARK: - FeatureAComponentRouterProtocol
 
+/// Protocol defining method to navigate to outside components from this component.
 public protocol FeatureAComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == FeatureAComponentRoute {}
 
 extension FeatureAComponentRouterProtocol where ComponentRouteType == FeatureAComponentRoute {
@@ -66,6 +67,7 @@ public protocol HasFeatureAComponentRouter {
 
 // MARK: - FeatureAComponentRoute
 
+/// Routes to navigate to outside components.
 public enum FeatureAComponentRoute: ComponentRoute {
     case featureB
     case featureC

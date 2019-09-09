@@ -11,7 +11,7 @@ This project serves as a showcase for **the SuperArc project (TSP)**.
 
 **TSP** aims to standardize many common building blocks which can help developers to kickstart new iOS projects quickly.
 
-The goal is to have a set of modules to create a component-based MVVM-C (Model-View-ViewModel-Coordinator) architecture for iOS apps. The modules are intended to use together but each module should be able to be integrated into any other iOS projects. For more information about the SuperArc project, please take a look at [here](https://github.com/superarcswift/SwiftVideos).
+The goal is to have a set of modules to create a component-based MVVM-C (Model-View-ViewModel-Coordinator) architecture for iOS apps. The modules are intended to use together but each module should be able to be integrated into any other iOS projects. This setup is incredibly useful when you create multiple apps which share some same features/functionalities. For more information about the SuperArc project, please take a look at [here](https://github.com/superarcswift/SwiftVideos).
 
 ## Content
 
@@ -94,7 +94,7 @@ The goal for a stable version in the future is to have separated repositories fo
 ### Getting started
 
 - Fork the repository.
-- From the root workspace folder, run  `swift run --package-path Tools/Bootstrap/ Bootstrap .` . This will install carthage dependencies for all subprojects.
+- From the root workspace folder, run  `swift run --package-path Tools/Bootstrap/ Bootstrap .`  to install all dependencies.
 - Open the workspace in Xcode and you are good to go.
 - Change code in any components you think it should be implemented differently.
 - Commit the code changes to a separated branch in your cloned repository.

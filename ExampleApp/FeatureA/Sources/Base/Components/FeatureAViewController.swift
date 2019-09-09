@@ -17,13 +17,16 @@ class FeatureAViewController: ViewController<ViewModel>, ViewControllerRoutable,
     // Private
 
     lazy var componentsRouter: AnyComponentRouter<FeatureAComponentRoute> = {
-        return (storedComponentsRouter as! HasFeatureAComponentRouter).featureARouter
+        guard router = storedComponentsRouter as! HasFeatureAComponentRouter else {
+            fatalError("invalid router type")
+        }
+
+        return router.featureARouter
     }()
 
     // MARK: IBActions
 
     @IBAction func didTapFeatureB(_ sender: Any) {
-        // TODO: see if we can remove this force cast. This componentsRouter needs to be injected
         print("should go to feature B from feature A")
         let presentable = componentsRouter.trigger(.featureB)
         present(presentable.viewController, animated: true)
