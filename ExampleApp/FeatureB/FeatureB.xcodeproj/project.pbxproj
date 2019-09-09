@@ -113,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				F6429D222326828900744ACA /* FeatureBComponent.swift */,
-				F6429D232326828900744ACA /* FeatureB.storyboard */,
 				F6429D242326828900744ACA /* FeatureBViewController.swift */,
+				F6429D232326828900744ACA /* FeatureB.storyboard */,
 			);
 			path = Components;
 			sourceTree = "<group>";

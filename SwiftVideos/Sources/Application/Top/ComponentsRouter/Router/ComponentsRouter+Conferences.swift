@@ -21,13 +21,15 @@ class ConferencesComponentRouter: ConferencesComponentRouterProtocol {
         self.context = context
     }
 
-    func trigger(_ route: ConferencesComponentRoute) -> Presentable {
+    func trigger(_ route: ConferencesComponentRoute) -> ComponentPresentable {
         switch route {
         case .videos(let conferenceMetaData, let conferenceEdition):
-            return componentsRouter.videosInterface.showVideo(conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter, context: context)
+            let presentable = componentsRouter.videosInterface.showVideo(conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter, context: context)
+            return ComponentPresentableWrapper(presentable: presentable)
 
         case .video(let videoMetaData):
-            return componentsRouter.videosInterface.showVideo(videoMetaData: videoMetaData, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter, context: context)
+            let presentable = componentsRouter.videosInterface.showVideo(videoMetaData: videoMetaData, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter, context: context)
+            return ComponentPresentableWrapper(presentable: presentable)
         }
     }
 }

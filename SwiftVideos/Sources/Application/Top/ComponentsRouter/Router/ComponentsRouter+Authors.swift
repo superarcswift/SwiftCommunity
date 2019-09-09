@@ -20,10 +20,11 @@ class AuthorsComponentRouter: AuthorsComponentRouterProtocol {
         self.context = context
     }
 
-    func trigger(_ route: AuthorsComponentRoute) -> Presentable {
+    func trigger(_ route: AuthorsComponentRoute) -> ComponentPresentable {
         switch route {
         case .video(let videoMetaData):
-            return componentsRouter.videosInterface.showVideo(videoMetaData: videoMetaData, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter, context: context)
+            let presentable = componentsRouter.videosInterface.showVideo(videoMetaData: videoMetaData, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter, context: context)
+            return ComponentPresentableWrapper(presentable: presentable)
         }
     }
 }

@@ -77,8 +77,8 @@ class AppManager: HasComponentsRouter, HasConfigurations {
         componentsRouter.interfaceRegistry.register(VideosInterface(), for: VideosInterfaceProtocol.self)
         componentsRouter.interfaceRegistry.register(AuthorsInterface(), for: AuthorsInterfaceProtocol.self)
 
-        componentsRouter.routerRegistry.register(ConferencesComponentRouter(context: core.context), for: ConferencesComponentRouterProtocol.self)
-        componentsRouter.routerRegistry.register(VideosComponentRouter(context: core.context), for: VideosComponentRouterProtocol.self)
-        componentsRouter.routerRegistry.register(AuthorsComponentRouter(context: core.context), for: AuthorsComponentRouterProtocol.self)
+        componentsRouter.routerRegistry.register(ConferencesComponentRouter(context: core.context), for: ConferencesComponentRouter.self)
+        componentsRouter.routerRegistry.register(VideosComponentRouter(context: core.context), for: VideosComponentRouter.self)
+        componentsRouter.routerRegistry.register(AuthorsComponentRouter(context: core.context), for: AuthorsComponentRouter.self)
     }
 }

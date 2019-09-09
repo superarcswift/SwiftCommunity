@@ -29,20 +29,19 @@ public protocol FeatureBComponentBuilder: ViewBuildable {
 
 public protocol FeatureBDependency: Dependency {}
 
-// MARK: - FeatureBInterfaceProtocol
+// MARK: - FeatureBInterface
 
 public protocol FeatureBInterfaceProtocol: Interface {
     func show(dependency: FeatureBDependency, componentsRouter: AnyComponentRouter<FeatureBComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool) -> ComponentPresentable
 }
-
-// MARK: - FeatureBInterface
 
 public class FeatureBInterface: FeatureBInterfaceProtocol {
 
     public init() {}
 
     public func show(dependency: FeatureBDependency, componentsRouter: AnyComponentRouter<FeatureBComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool = false) -> ComponentPresentable {
-        return FeatureBComponent(dependency: dependency, componentsRouter: componentsRouter, context: context).makeFeatureBViewController(hasRightCloseButton: hasRightCloseButton)
+        let component = FeatureBComponent(dependency: dependency, componentsRouter: componentsRouter, context: context)
+        return component.viewBuilder.makeFeatureBViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }
 

@@ -38,8 +38,8 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
             return .push(viewController)
 
         case .authorDetail(let authorMetaData):
-            let authorsCoordinator = component.trigger(.author(authorMetaData))
-            return .present(authorsCoordinator)
+            let authorsComponentPresentable = component.trigger(.author(authorMetaData)) as! ComponentPresentableWrapper
+            return .present(authorsComponentPresentable.presentable)
 
         case .close:
             return .dismissToRoot()

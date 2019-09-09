@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6429D352326914C00744ACA /* ComponentPresentableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429D342326914C00744ACA /* ComponentPresentableWrapper.swift */; };
 		F646EBDD23212E1100792DB5 /* GitServiceConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646EBDC23212E1100792DB5 /* GitServiceConfigurationProtocol.swift */; };
 		F669801323102E4200FCEC14 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669800923102E4200FCEC14 /* Core.framework */; };
 		F669801A23102E4200FCEC14 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F669800C23102E4200FCEC14 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6429D342326914C00744ACA /* ComponentPresentableWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentPresentableWrapper.swift; sourceTree = "<group>"; };
 		F646EBDC23212E1100792DB5 /* GitServiceConfigurationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitServiceConfigurationProtocol.swift; sourceTree = "<group>"; };
 		F669800923102E4200FCEC14 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F669800C23102E4200FCEC14 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6429D332326912F00744ACA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F6429D342326914C00744ACA /* ComponentPresentableWrapper.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		F646EBDB23212DBF00792DB5 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		F669802423102E8200FCEC14 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F6429D332326912F00744ACA /* Navigation */,
 				F6C8A0EC231E98CE00DD6BFD /* Dependencies */,
 				F6E2937E23165B8100F759FF /* ViewModel */,
 				F6C8A164231EE6CE00DD6BFD /* Engine */,
@@ -391,6 +402,7 @@
 				F6C8A156231EB3F000DD6BFD /* ConferencesServiceProtocol.swift in Sources */,
 				F646EBDD23212E1100792DB5 /* GitServiceConfigurationProtocol.swift in Sources */,
 				F66980552310493300FCEC14 /* GitService.swift in Sources */,
+				F6429D352326914C00744ACA /* ComponentPresentableWrapper.swift in Sources */,
 				F66980632310493300FCEC14 /* FilesystemContentProvider.swift in Sources */,
 				F6E2938323165BE000F759FF /* CoordinatedDIViewModel.swift in Sources */,
 				F66980522310493300FCEC14 /* ContentDataProvider.swift in Sources */,

@@ -44,6 +44,7 @@ public class FeatureAInterface: FeatureAInterfaceProtocol {
     public init() {}
 
     public func show(dependency: FeatureADependency, componentsRouter: AnyComponentRouter<FeatureAComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool = false) -> ComponentPresentable {
+        // TODO: this will create a new FeatureAComponent everytime. See if we can keep it in the memory and release it when needed.
         return FeatureAComponent(dependency: dependency, componentsRouter: componentsRouter, context: context).makeFeatureAViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }
