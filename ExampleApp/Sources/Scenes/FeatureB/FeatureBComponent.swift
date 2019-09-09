@@ -6,25 +6,7 @@ import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
 
-protocol FeatureBComponentBuilder: ViewBuildable {
-    func makeFeatureBViewController(hasRightCloseButton: Bool) -> ComponentPresentable
-}
-
-protocol FeatureBDependency: Dependency {
-}
-
-protocol FeatureBInterfaceProtocol: Interface {
-    func show(dependency: FeatureBDependency, componentsRouter: AnyComponentRouter<FeatureBComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool) -> ComponentPresentable
-}
-
-protocol FeatureBComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == FeatureBComponentRoute {}
-
-extension FeatureBComponentRouterProtocol where ComponentRouteType == FeatureBComponentRoute {
-
-    var anyFeatureBRouter: AnyComponentRouter<FeatureBComponentRoute> {
-        return AnyComponentRouter(self)
-    }
-}
+// MARK: - FeatureBComponent
 
 class FeatureBComponent: Component<FeatureBDependency, FeatureBComponentBuilder, FeatureBInterfaceProtocol, FeatureBComponentRoute>, FeatureBComponentBuilder {
 
@@ -37,7 +19,23 @@ class FeatureBComponent: Component<FeatureBDependency, FeatureBComponentBuilder,
 
 }
 
-// MARK: - AuthorsInterface
+// MARK: - FeatureBComponentBuilder
+
+protocol FeatureBComponentBuilder: ViewBuildable {
+    func makeFeatureBViewController(hasRightCloseButton: Bool) -> ComponentPresentable
+}
+
+// MARK: - FeatureBDependency
+
+protocol FeatureBDependency: Dependency {}
+
+// MARK: - FeatureBInterfaceProtocol
+
+protocol FeatureBInterfaceProtocol: Interface {
+    func show(dependency: FeatureBDependency, componentsRouter: AnyComponentRouter<FeatureBComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool) -> ComponentPresentable
+}
+
+// MARK: - FeatureBInterface
 
 class FeatureBInterface: FeatureBInterfaceProtocol {
 
@@ -48,7 +46,22 @@ class FeatureBInterface: FeatureBInterfaceProtocol {
     }
 }
 
-enum FeatureBComponentRoute: ComponentRoute {
+// MARK: - FeatureBComponentRouterProtocol
+
+protocol FeatureBComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == FeatureBComponentRoute {}
+
+extension FeatureBComponentRouterProtocol where ComponentRouteType == FeatureBComponentRoute {
+
+    var anyFeatureBRouter: AnyComponentRouter<FeatureBComponentRoute> {
+        return AnyComponentRouter(self)
+    }
+}
+
+public protocol HasFeatureBComponentRouter {
+    var featureBRouter: AnyComponentRouter<FeatureBComponentRoute> { get }
+}
+
+public enum FeatureBComponentRoute: ComponentRoute {
     case featureA
     case featureC
     case featureD

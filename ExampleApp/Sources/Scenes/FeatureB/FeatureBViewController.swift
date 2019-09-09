@@ -6,10 +6,21 @@ import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
 
-// TODO: Create RoutableTableViewController
 class FeatureBViewController: TableViewController<ViewModel>, StoryboardInitiable {
 
+    // MARK: Properties
+
+    // Static
+
     static var storyboardName = "FeatureB"
+
+    // Private
+
+    private lazy var componentsRouter: AnyComponentRouter<FeatureBComponentRoute> = {
+        return (storedComponentsRouter as! HasFeatureBComponentRouter).featureBRouter
+    }()
+
+    // MARK: Overriden
 
     override func setupViews() {
         super.setupViews()
@@ -25,15 +36,15 @@ class FeatureBViewController: TableViewController<ViewModel>, StoryboardInitiabl
         switch indexPath.row {
         case 0:
             print("should go to feature A from feature B")
-            let presentable = (componentsRouter as! ComponentsRouter).featureBRouter.trigger(.featureA)
+            let presentable = componentsRouter.trigger(.featureA)
             present(presentable.viewController, animated: true)
         case 1:
             print("should go to feature C from feature B")
-            let presentable = (componentsRouter as! ComponentsRouter).featureBRouter.trigger(.featureC)
+            let presentable = componentsRouter.trigger(.featureC)
             present(presentable.viewController, animated: true)
         case 2:
             print("should go to feature D from feature B")
-            let presentable = (componentsRouter as! ComponentsRouter).featureBRouter.trigger(.featureD)
+            let presentable = componentsRouter.trigger(.featureD)
             navigationController?.pushViewController(presentable.viewController, animated: true)
 
         default:

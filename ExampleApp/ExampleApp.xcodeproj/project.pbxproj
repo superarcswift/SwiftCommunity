@@ -10,7 +10,6 @@
 		F6429BD9232540A900744ACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429BD8232540A900744ACA /* AppDelegate.swift */; };
 		F6429BE2232540AB00744ACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6429BE1232540AB00744ACA /* Assets.xcassets */; };
 		F6429BE5232540AB00744ACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429BE3232540AB00744ACA /* LaunchScreen.storyboard */; };
-		F6429C10232543B500744ACA /* FeatureAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C0F232543B500744ACA /* FeatureAViewController.swift */; };
 		F6429C322325462900744ACA /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C2C2325461500744ACA /* SuperArcFoundation.framework */; };
 		F6429C332325462900744ACA /* SuperArcFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C2C2325461500744ACA /* SuperArcFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6429C352325463200744ACA /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C2E2325461900744ACA /* SuperArcCore.framework */; };
@@ -25,11 +24,9 @@
 		F6429C45232549D000744ACA /* FeatureBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C44232549D000744ACA /* FeatureBViewController.swift */; };
 		F6429C47232549E000744ACA /* FeatureCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C46232549E000744ACA /* FeatureCViewController.swift */; };
 		F6429C49232549EC00744ACA /* FeatureDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C48232549EC00744ACA /* FeatureDViewController.swift */; };
-		F6429C4B23254B7000744ACA /* FeatureAComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C4A23254B7000744ACA /* FeatureAComponent.swift */; };
 		F6429C4D23254B7C00744ACA /* FeatureBComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C4C23254B7C00744ACA /* FeatureBComponent.swift */; };
 		F6429C4F23254B8500744ACA /* FeatureCComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C4E23254B8500744ACA /* FeatureCComponent.swift */; };
 		F6429C5123254B9000744ACA /* FeatureDComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C5023254B9000744ACA /* FeatureDComponent.swift */; };
-		F6429C53232550C300744ACA /* FeatureA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429C52232550C300744ACA /* FeatureA.storyboard */; };
 		F6429C55232550CC00744ACA /* FeatureB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429C54232550CC00744ACA /* FeatureB.storyboard */; };
 		F6429C57232550D400744ACA /* FeatureC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429C56232550D400744ACA /* FeatureC.storyboard */; };
 		F6429C59232550DB00744ACA /* FeatureD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429C58232550DB00744ACA /* FeatureD.storyboard */; };
@@ -46,6 +43,9 @@
 		F6429C8A2325AA2E00744ACA /* ComponentsRouter+Routers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C892325AA2E00744ACA /* ComponentsRouter+Routers.swift */; };
 		F6429C8C2325AD1400744ACA /* ComponentsRouter+FeatureB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C8B2325AD1400744ACA /* ComponentsRouter+FeatureB.swift */; };
 		F6429C8E2325AEDF00744ACA /* ComponentsRouter+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C8D2325AEDF00744ACA /* ComponentsRouter+Dependencies.swift */; };
+		F6429CC423265D8100744ACA /* FeatureA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CC023265D0F00744ACA /* FeatureA.framework */; };
+		F6429CC523265D8F00744ACA /* FeatureA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CC023265D0F00744ACA /* FeatureA.framework */; };
+		F6429CC623265D8F00744ACA /* FeatureA.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CC023265D0F00744ACA /* FeatureA.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +63,27 @@
 			remoteGlobalIDString = F6429BD4232540A900744ACA;
 			remoteInfo = ExampleApp;
 		};
+		F6429CBF23265D0F00744ACA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6429CBA23265D0F00744ACA /* FeatureA.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6429C9D23265CFF00744ACA;
+			remoteInfo = FeatureA;
+		};
+		F6429CC123265D0F00744ACA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6429CBA23265D0F00744ACA /* FeatureA.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6429CA623265CFF00744ACA;
+			remoteInfo = FeatureATests;
+		};
+		F6429CC723265D8F00744ACA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6429CBA23265D0F00744ACA /* FeatureA.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F6429C9C23265CFF00744ACA;
+			remoteInfo = FeatureA;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +94,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F6429C6B23255F7F00744ACA /* SuperArcCoreComponent.framework in Embed Frameworks */,
+				F6429CC623265D8F00744ACA /* FeatureA.framework in Embed Frameworks */,
 				F6429C362325463200744ACA /* SuperArcCore.framework in Embed Frameworks */,
 				F6429C382325463500744ACA /* SuperArcCoreUI.framework in Embed Frameworks */,
 				F6429C332325462900744ACA /* SuperArcFoundation.framework in Embed Frameworks */,
@@ -92,7 +114,6 @@
 		F6429BF1232540AB00744ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6429BF6232540AB00744ACA /* ExampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6429BFC232540AB00744ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6429C0F232543B500744ACA /* FeatureAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureAViewController.swift; sourceTree = "<group>"; };
 		F6429C2C2325461500744ACA /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6429C2E2325461900744ACA /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6429C302325461E00744ACA /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,11 +125,9 @@
 		F6429C44232549D000744ACA /* FeatureBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureBViewController.swift; sourceTree = "<group>"; };
 		F6429C46232549E000744ACA /* FeatureCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCViewController.swift; sourceTree = "<group>"; };
 		F6429C48232549EC00744ACA /* FeatureDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDViewController.swift; sourceTree = "<group>"; };
-		F6429C4A23254B7000744ACA /* FeatureAComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureAComponent.swift; sourceTree = "<group>"; };
 		F6429C4C23254B7C00744ACA /* FeatureBComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureBComponent.swift; sourceTree = "<group>"; };
 		F6429C4E23254B8500744ACA /* FeatureCComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCComponent.swift; sourceTree = "<group>"; };
 		F6429C5023254B9000744ACA /* FeatureDComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDComponent.swift; sourceTree = "<group>"; };
-		F6429C52232550C300744ACA /* FeatureA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeatureA.storyboard; sourceTree = "<group>"; };
 		F6429C54232550CC00744ACA /* FeatureB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeatureB.storyboard; sourceTree = "<group>"; };
 		F6429C56232550D400744ACA /* FeatureC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeatureC.storyboard; sourceTree = "<group>"; };
 		F6429C58232550DB00744ACA /* FeatureD.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeatureD.storyboard; sourceTree = "<group>"; };
@@ -123,6 +142,7 @@
 		F6429C892325AA2E00744ACA /* ComponentsRouter+Routers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsRouter+Routers.swift"; sourceTree = "<group>"; };
 		F6429C8B2325AD1400744ACA /* ComponentsRouter+FeatureB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsRouter+FeatureB.swift"; sourceTree = "<group>"; };
 		F6429C8D2325AEDF00744ACA /* ComponentsRouter+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsRouter+Dependencies.swift"; sourceTree = "<group>"; };
+		F6429CBA23265D0F00744ACA /* FeatureA.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FeatureA.xcodeproj; path = FeatureA/FeatureA.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6429CC423265D8100744ACA /* FeatureA.framework in Frameworks */,
 				F6429C6D2325603D00744ACA /* XCoordinator.framework in Frameworks */,
 				F6429C6923255F7700744ACA /* SuperArcCoreComponent.framework in Frameworks */,
 				F6429C43232548DE00744ACA /* PromiseKit.framework in Frameworks */,
@@ -137,6 +158,7 @@
 				F6429C3C2325466B00744ACA /* RxRelay.framework in Frameworks */,
 				F6429C6A23255F7F00744ACA /* SuperArcCoreComponent.framework in Frameworks */,
 				F6429C3D2325466B00744ACA /* RxCocoa.framework in Frameworks */,
+				F6429CC523265D8F00744ACA /* FeatureA.framework in Frameworks */,
 				F6429C3E2325466B00744ACA /* RxSwift.framework in Frameworks */,
 				F6429C352325463200744ACA /* SuperArcCore.framework in Frameworks */,
 				F6429C372325463500744ACA /* SuperArcCoreUI.framework in Frameworks */,
@@ -164,6 +186,7 @@
 		F6429BCC232540A900744ACA = {
 			isa = PBXGroup;
 			children = (
+				F6429CBA23265D0F00744ACA /* FeatureA.xcodeproj */,
 				F6429BD7232540A900744ACA /* Sources */,
 				F6429BEE232540AB00744ACA /* UnitTests */,
 				F6429BF9232540AB00744ACA /* UITests */,
@@ -231,22 +254,11 @@
 			isa = PBXGroup;
 			children = (
 				F6429C5A232557EF00744ACA /* Dashboard */,
-				F6429C0B2325430600744ACA /* FeatureA */,
 				F6429C0C2325431000744ACA /* FeatureB */,
 				F6429C0D2325431600744ACA /* FeatureC */,
 				F6429C0E2325431E00744ACA /* FeatureD */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		F6429C0B2325430600744ACA /* FeatureA */ = {
-			isa = PBXGroup;
-			children = (
-				F6429C4A23254B7000744ACA /* FeatureAComponent.swift */,
-				F6429C0F232543B500744ACA /* FeatureAViewController.swift */,
-				F6429C52232550C300744ACA /* FeatureA.storyboard */,
-			);
-			path = FeatureA;
 			sourceTree = "<group>";
 		};
 		F6429C0C2325431000744ACA /* FeatureB */ = {
@@ -343,6 +355,15 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		F6429CBB23265D0F00744ACA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6429CC023265D0F00744ACA /* FeatureA.framework */,
+				F6429CC223265D0F00744ACA /* FeatureATests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,6 +380,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F6429CC823265D8F00744ACA /* PBXTargetDependency */,
 			);
 			name = ExampleApp;
 			productName = ExampleApp;
@@ -435,6 +457,12 @@
 			mainGroup = F6429BCC232540A900744ACA;
 			productRefGroup = F6429BD6232540A900744ACA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F6429CBB23265D0F00744ACA /* Products */;
+					ProjectRef = F6429CBA23265D0F00744ACA /* FeatureA.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F6429BD4232540A900744ACA /* ExampleApp */,
@@ -444,6 +472,23 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		F6429CC023265D0F00744ACA /* FeatureA.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FeatureA.framework;
+			remoteRef = F6429CBF23265D0F00744ACA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6429CC223265D0F00744ACA /* FeatureATests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FeatureATests.xctest;
+			remoteRef = F6429CC123265D0F00744ACA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		F6429BD3232540A900744ACA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -452,7 +497,6 @@
 				F6429C55232550CC00744ACA /* FeatureB.storyboard in Resources */,
 				F6429BE5232540AB00744ACA /* LaunchScreen.storyboard in Resources */,
 				F6429C57232550D400744ACA /* FeatureC.storyboard in Resources */,
-				F6429C53232550C300744ACA /* FeatureA.storyboard in Resources */,
 				F6429C59232550DB00744ACA /* FeatureD.storyboard in Resources */,
 				F6429C62232559A500744ACA /* Dashboard.storyboard in Resources */,
 				F6429BE2232540AB00744ACA /* Assets.xcassets in Resources */,
@@ -524,10 +568,8 @@
 				F6429C4F23254B8500744ACA /* FeatureCComponent.swift in Sources */,
 				F6429C8A2325AA2E00744ACA /* ComponentsRouter+Routers.swift in Sources */,
 				F6429C882325A7C500744ACA /* ComponentsRouter+Interfaces.swift in Sources */,
-				F6429C10232543B500744ACA /* FeatureAViewController.swift in Sources */,
 				F6429C8C2325AD1400744ACA /* ComponentsRouter+FeatureB.swift in Sources */,
 				F6429C602325583500744ACA /* DashboardViewController.swift in Sources */,
-				F6429C4B23254B7000744ACA /* FeatureAComponent.swift in Sources */,
 				F6429C49232549EC00744ACA /* FeatureDViewController.swift in Sources */,
 				F6429C6723255E1400744ACA /* ConfigurationsRegistry.swift in Sources */,
 			);
@@ -559,6 +601,11 @@
 			isa = PBXTargetDependency;
 			target = F6429BD4232540A900744ACA /* ExampleApp */;
 			targetProxy = F6429BF7232540AB00744ACA /* PBXContainerItemProxy */;
+		};
+		F6429CC823265D8F00744ACA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FeatureA;
+			targetProxy = F6429CC723265D8F00744ACA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

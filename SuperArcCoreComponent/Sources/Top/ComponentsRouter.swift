@@ -14,6 +14,7 @@ public class ComponentsRouter: ComponentsRouterProtocol {
     // Private
 
     public var context: ApplicationContextProtocol!
+
     public var interfaceRegistry = InterfaceRegistry()
     public var routerRegistry = RouterRegistry()
 

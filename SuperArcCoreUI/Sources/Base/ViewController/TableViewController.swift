@@ -52,7 +52,7 @@ open class TableViewController<VM: ViewModel>: UITableViewController, CommonView
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(self.close))
         }
     }
-    
+
     open func setupBindings() {}
 
     open func loadData() {}

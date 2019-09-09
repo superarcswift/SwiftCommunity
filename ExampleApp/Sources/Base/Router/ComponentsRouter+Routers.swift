@@ -2,15 +2,19 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import FeatureA
 import SuperArcCoreComponent
 
-extension ComponentsRouter {
+extension ComponentsRouter: HasFeatureAComponentRouter {
 
-    var featureARouter: AnyComponentRouter<FeatureAComponentRoute> {
+    public var featureARouter: AnyComponentRouter<FeatureAComponentRoute> {
         return routerRegistry.resolve(type: FeatureAComponentRouter.self).anyFeatureARouter
     }
+}
 
-    var featureBRouter: AnyComponentRouter<FeatureBComponentRoute> {
+extension ComponentsRouter: HasFeatureBComponentRouter {
+
+    public var featureBRouter: AnyComponentRouter<FeatureBComponentRoute> {
         return routerRegistry.resolve(type: FeatureBComponentRouter.self).anyFeatureBRouter
     }
 }
