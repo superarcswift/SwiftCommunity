@@ -31,8 +31,6 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
         return self as! ViewBuildableType
     }
 
-    public var componentsInteractor: ComponentsRouterProtocol
-
     public var componentsRouter: AnyComponentRouter<ComponentRouteType>
 
     public var interface: InterfaceType!
@@ -45,7 +43,6 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
         self.dependency = dependency
         self.context = context
         self.componentsRouter = componentsRouter
-        componentsInteractor = context.viewControllerContext.resolve(type: ComponentsRouterProtocol.self)
     }
 
     // MARK: APIs

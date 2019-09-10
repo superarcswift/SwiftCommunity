@@ -23,6 +23,11 @@ let rootProjectPath = arguments[1]
 print("🏃‍♂️ Starting at \(rootProjectPath) ...")
 
 do {
+    // Install in the root folders
+    let rootFolder = try Folder(path: ".")
+    runCarthage(in: rootFolder)
+
+    // Install carthage in the subfolders
     let folder = try Folder(path: rootProjectPath)
     folder.makeSubfolderSequence(recursive: false).forEach { folder in
         if folder.containsFile(named: "Cartfile") {
@@ -30,8 +35,6 @@ do {
             runCarthage(in: folder)
         }
     }
-
-
 } catch {
     exit(error)
 }

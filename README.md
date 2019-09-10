@@ -32,8 +32,8 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 - Swift 5.0
 - Xcode 10+
 - 3rd Party Dependencies:
-	- **SuperArc**: PromiseKit, RxSwift, Action, RxCocoa, NotificationBanner.
-	- **SwiftVideos**: RxDataSources, XCoordinator, objective-git, YoutubeKit, MarkdownView.
+	- **SuperArc**: PromiseKit, RxSwift, Action, RxCocoa, NotificationBanner, Kingfisher.
+	- **SwiftVideos**: RxDataSources, XCoordinator, objective-git, YoutubeKit, LXVimeoKit, MarkdownView.
 
 
 ### Tests
@@ -56,33 +56,66 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 	
 ## Architecture
 
-- [ ] µfeatures modules
-- [ ] Clean architecture (at module level)
+When building an iOS app, developers normally starts with a single workspace/project which contains all source codes of the app. This setup is useful for smaller apps, but when the app grows, there are some problem comming with this setup:
+
+- Implicit dependencies between classes: because all classes living in the same module, they can access each other easily.
+- Slow compilation time since all source codes will be complied everytime.
+- Hard to reuse code because strong coupling between classes.
+- Hard to scale and maintain because of complex dependencies between classes.
+
+**TSP** proposes a different approach to modularise the app architecture into foundation and feature modules
+
+- [ ] **foundation modules**: used by other **feature modules**, providing tools and utilities to develop **feature modules**.
+- [ ] **feature modules**: built using **foundation modules**, responsible for user-facing features.
+- [ ] Clean architecture (at module level): separation of UI, domain logics and platform logics.
 
 ![Architecture](https://github.com/superarcswift/SwiftVideos/raw/master/Assets/Documentation/superarc.png)
 
 ### ViewModel
 
-- Responsible for performing calling services to do business logics and prepare data model for presentation.
+- Responsible for calling services classes to do business logics and prepare data model for presentations.
 
 ### ViewController
 
-- Responsible for interaction with users, displaying result from `ViewModel`.
+- Responsible for interaction with users, displaying results from its corresponding `ViewModel`.
 
 ### Component
 
 - Responsible for managing dependencies required by its `ViewController` & `ViewModel`.
 - Instantiate `ViewController`, `ViewModel`.
+- Containing `ComponentRouter` used for navigating to outside components.
+- Manage `Interface` to control interactions from outside.
 
 ### Coordinator (optional)
 
 - Responsible for navigation.
 - Instantiate `Component`.
 
+## Example App
+The example app demonstrates how you can use SuperArc to modularize an simple app by features and layers.
+
+The sample app has the following specs:
+
+- consists of **FeatureA**, **FeatureB**, **FeatureC** and **FeatureD**.
+- **FeatureA** can navigate to **FeatureB**, **FeatureC** and **FeatureD**
+- **FeatureB** can navigate to **FeatureA**, **FeatureC** and **FeatureD**
+
 
 ## Building and Running
 
+After cloning the repository. Run the following command from the root folder of the cloned project to install all carthage dependencies in all subprojects:
+
+```
+swift run --package-path Tools/Bootstrap/ Bootstrap .
+```
+
+After this, you can open `SwiftVideos.xcworkspace` and run the `SwiftVideos` target to start the app.
+
 ## Authors
+
+The app is developed by [An Tran](https://twitter.com/peacemoon).
+
+The app icon is designed by [Khalid](https://github.com/ka95dev).
 
 ## Contributing
 
