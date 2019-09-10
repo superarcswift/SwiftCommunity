@@ -16,6 +16,11 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
 
     // MARK: APIs
 
+    override class func register(to context: ApplicationContextProtocol) {
+        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
+        componentsRouter.interfaceRegistry.register(AuthorsInterface(context: context), for: AuthorsInterfaceProtocol.self)
+    }
+
     func makeAuthorsCollectionViewController(router: AnyRouter<AuthorsRoute>) -> AuthorsCollectionViewController {
 
         let viewController = AuthorsCollectionViewController.instantiate(with: context.viewControllerContext)
@@ -34,8 +39,8 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
         return viewController
     }
 
-    override func trigger(_ route: AuthorsComponentRoute) -> ComponentPresentable {
-        return componentsRouter.trigger(route)
+    override func trigger(_ route: AuthorsComponentRoute) -> ComponentPresentable? {
+        return componentsRouter?.trigger(route)
     }
 }
 
@@ -50,9 +55,13 @@ protocol AuthorsViewBuilder: ViewBuildable {
 
 public class AuthorsInterface: AuthorsInterfaceProtocol {
 
-    public init() {}
+    public var context: ApplicationContextProtocol!
 
-    public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter:AnyComponentRouter<AuthorsComponentRoute>, context: ApplicationContextProtocol) -> Presentable {
+    public init(context: ApplicationContextProtocol) {
+        self.context = context
+    }
+
+    public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter:AnyComponentRouter<AuthorsComponentRoute>) -> Presentable {
         return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, componentsRouter: anyAuthorsRouter, context: context)
     }
 }

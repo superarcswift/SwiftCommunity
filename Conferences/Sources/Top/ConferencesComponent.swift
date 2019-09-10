@@ -33,8 +33,8 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
         return viewController
     }
 
-    override func trigger(_ route: ConferencesComponentRoute) -> ComponentPresentable {
-        return componentsRouter.trigger(route)
+    override func trigger(_ route: ConferencesComponentRoute) -> ComponentPresentable? {
+        return componentsRouter?.trigger(route)
     }
 }
 

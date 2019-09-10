@@ -10,20 +10,26 @@ import XCoordinator
 
 class VideosComponentRouter: VideosComponentRouterProtocol {
 
+    // MARK: Properties
+
     var context: ApplicationContextProtocol
 
     lazy var componentsRouter: ComponentsRouter = {
-        self.context.viewControllerContext.resolve(type: ComponentsRouterProtocol.self) as! ComponentsRouter
+        self.context.viewControllerContext.resolve(type: ComponentsRouter.self)
     }()
+
+    // MARK: Initialization
 
     init(context: ApplicationContextProtocol) {
         self.context = context
     }
 
-    func trigger(_ route: VideosComponentRoute) -> ComponentPresentable {
+    // MARK: APIs
+
+    func trigger(_ route: VideosComponentRoute) -> ComponentPresentable? {
         switch route {
         case .author(let authorMetaData):
-            let presentable = componentsRouter.authorsInterface.showAuthor(authorMetaData: authorMetaData, dependency: componentsRouter, anyAuthorsRouter: componentsRouter.authorsRouter, context: context)
+            let presentable = componentsRouter.authorsInterface.showAuthor(authorMetaData: authorMetaData, dependency: componentsRouter, anyAuthorsRouter: componentsRouter.authorsRouter)
             return ComponentPresentableWrapper(presentable: presentable)
         }
     }

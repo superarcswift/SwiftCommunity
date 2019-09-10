@@ -5,29 +5,33 @@
 import FeatureB
 import SuperArcCoreComponent
 import SuperArcCore
-import XCoordinator
 
 class FeatureBComponentRouter: FeatureBComponentRouterProtocol {
+
+    // MARK: Properties
 
     var context: ApplicationContextProtocol
 
     lazy var componentsRouter: ComponentsRouter = {
-        // TODO: See if we can remove this force cast
-        self.context.viewControllerContext.resolve(type: ComponentsRouterProtocol.self) as! ComponentsRouter
+        self.context.viewControllerContext.resolve(type: ComponentsRouter.self)
     }()
+
+    // MARK: Initialization
 
     init(context: ApplicationContextProtocol) {
         self.context = context
     }
 
-    func trigger(_ route: FeatureBComponentRoute) -> ComponentPresentable {
+    // MARK: APIs
+
+    func trigger(_ route: FeatureBComponentRoute) -> ComponentPresentable? {
         switch route {
         case .featureA:
-            return componentsRouter.featureAInterface.show(dependency: componentsRouter, componentsRouter: componentsRouter.featureARouter, context: context, hasRightCloseButton: true)
+            return componentsRouter.featureAInterface.show(dependency: componentsRouter, componentsRouter: componentsRouter.featureARouter, hasRightCloseButton: true)
         case .featureC:
-            return componentsRouter.featureCInterface.show(dependency: componentsRouter, context: context, hasRightCloseButton: true)
+            return componentsRouter.featureCInterface.show(dependency: componentsRouter, hasRightCloseButton: true)
         case .featureD:
-            return componentsRouter.featureDInterface.show(dependency: componentsRouter, context: context)
+            return componentsRouter.featureDInterface.show(dependency: componentsRouter)
         }
     }
 

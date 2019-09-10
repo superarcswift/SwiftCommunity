@@ -10,14 +10,18 @@ protocol FeatureCComponentBuilder: ViewBuildable {
     func makeFeatureCViewController(hasRightCloseButton: Bool) -> ComponentPresentable
 }
 
-protocol FeatureCDependency: Dependency {
-}
+protocol FeatureCDependency: Dependency {}
 
 protocol FeatureCInterfaceProtocol: Interface {
-    func show(dependency: FeatureCDependency, context: ApplicationContextProtocol, hasRightCloseButton: Bool) -> ComponentPresentable
+    func show(dependency: FeatureCDependency, hasRightCloseButton: Bool) -> ComponentPresentable
 }
 
 class FeatureCComponent: Component<FeatureCDependency, FeatureCComponentBuilder, FeatureCInterfaceProtocol, EmptyComponentRoute> {
+
+    public override class func register(to context: ApplicationContextProtocol) {
+        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
+        componentsRouter.interfaceRegistry.register(FeatureCInterface(context: context), for: FeatureCInterfaceProtocol.self)
+    }
 
     func makeFeatureCViewController(hasRightCloseButton: Bool = false) -> ComponentPresentable {
         let viewController = FeatureCViewController.instantiate(with: context.viewControllerContext)
@@ -31,9 +35,13 @@ class FeatureCComponent: Component<FeatureCDependency, FeatureCComponentBuilder,
 
 class FeatureCInterface: FeatureCInterfaceProtocol {
 
-    init() {}
+    var context: ApplicationContextProtocol!
 
-    func show(dependency: FeatureCDependency, context: ApplicationContextProtocol, hasRightCloseButton: Bool = false) -> ComponentPresentable {
+    init(context: ApplicationContextProtocol) {
+        self.context = context
+    }
+
+    func show(dependency: FeatureCDependency, hasRightCloseButton: Bool = false) -> ComponentPresentable {
         return FeatureCComponent(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), context: context).makeFeatureCViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }

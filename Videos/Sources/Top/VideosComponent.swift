@@ -17,6 +17,11 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInte
 
     // MARK: APIs
 
+    override class func register(to context: ApplicationContextProtocol) {
+        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
+        componentsRouter.interfaceRegistry.register(VideosInterface(context: context), for: VideosInterfaceProtocol.self)
+    }
+
     func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController {
 
         let viewController = VideosCollectionViewController.instantiate(with: context.viewControllerContext)
@@ -39,8 +44,8 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInte
         return viewController
     }
 
-    override func trigger(_ route: VideosComponentRoute) -> ComponentPresentable {
-        return componentsRouter.trigger(route)
+    override func trigger(_ route: VideosComponentRoute) -> ComponentPresentable? {
+        return componentsRouter?.trigger(route)
     }
 }
 
@@ -55,17 +60,21 @@ protocol VideosViewBuilder: ViewBuildable {
 
 public class VideosInterface: VideosInterfaceProtocol {
 
+    public var context: ApplicationContextProtocol!
+
     // MARK: Initialization
 
-    public init() {}
+    public init(context: ApplicationContextProtocol) {
+        self.context = context
+    }
 
     // MARK: APIs
 
-    public func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>, context: ApplicationContextProtocol) -> Presentable {
+    public func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>) -> Presentable {
         return VideosCoordinator(initialRoute: .videos(conferenceMetaData, conferenceEdition), depedency: dependency, componentsRouter: componentsRouter, context: context)
     }
 
-    public func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>, context: ApplicationContextProtocol) -> Presentable {
+    public func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>) -> Presentable {
         return VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), depedency: dependency, componentsRouter: componentsRouter, context: context)
     }
 

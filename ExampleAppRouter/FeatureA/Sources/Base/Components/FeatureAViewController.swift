@@ -28,19 +28,25 @@ class FeatureAViewController: ViewController<ViewModel>, ViewControllerRoutable,
 
     @IBAction func didTapFeatureB(_ sender: Any) {
         print("should go to feature B from feature A")
-        let presentable = componentsRouter.trigger(.featureB)
+        guard let presentable = componentsRouter.trigger(.featureB) else {
+            return
+        }
         present(presentable.viewController, animated: true)
     }
 
     @IBAction func didTapFeatureC(_ sender: Any) {
         print("should go to feature C from feature A")
-        let presentable = componentsRouter.trigger(.featureC)
+        guard let presentable = componentsRouter.trigger(.featureC) else {
+            return
+        }
         present(presentable.viewController, animated: true)
     }
 
     @IBAction func didTapFeatureD(_ sender: Any) {
         print("should go to feature D from feature A")
-        let presentable = componentsRouter.trigger(.featureD)
+        guard let presentable = componentsRouter.trigger(.featureD) else {
+            return
+        }
         navigationController?.pushViewController(presentable.viewController, animated: true)
     }
 }

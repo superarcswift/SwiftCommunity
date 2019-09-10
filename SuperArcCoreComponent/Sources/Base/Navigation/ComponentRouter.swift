@@ -10,7 +10,7 @@ public protocol ComponentRouterIdentifiable: ClassNameDerivable {}
 public protocol ComponentRouter {
     associatedtype ComponentRouteType: ComponentRoute
 
-    func trigger(_ route: ComponentRouteType) -> ComponentPresentable
+    func trigger(_ route: ComponentRouteType) -> ComponentPresentable?
 }
 
 extension ComponentRouter {
@@ -29,7 +29,7 @@ private class _AnyComponentRouterBase<ComponentRouteType: ComponentRoute>: Compo
         }
     }
 
-    func trigger(_ route: ComponentRouteType) -> ComponentPresentable {
+    func trigger(_ route: ComponentRouteType) -> ComponentPresentable? {
         fatalError("needed to be overriden")
     }
 }
@@ -42,7 +42,7 @@ private final class _AnyComponentRoutableBox<ConcreteRouter: ComponentRouter>: _
         self.concrete = concrete
     }
 
-    override func trigger(_ route: ComponentRouteType) -> ComponentPresentable {
+    override func trigger(_ route: ComponentRouteType) -> ComponentPresentable? {
         return concrete.trigger(route)
     }
 }
@@ -55,7 +55,7 @@ public class AnyComponentRouter<ComponentRouteType: ComponentRoute>: ComponentRo
         self.box = _AnyComponentRoutableBox(concrete)
     }
 
-    public func trigger(_ route: ComponentRouteType) -> ComponentPresentable {
+    public func trigger(_ route: ComponentRouteType) -> ComponentPresentable? {
         return box.trigger(route)
     }
 }
@@ -70,7 +70,7 @@ public class AnyEmptyComponentRouter: AnyComponentRouter<EmptyComponentRoute> {
 private class EmptyComponentRouter: ComponentRouter {
     typealias ComponentRouteType = EmptyComponentRoute
 
-    func trigger(_ route: ComponentRouteType) -> ComponentPresentable {
+    func trigger(_ route: ComponentRouteType) -> ComponentPresentable? {
         return UIViewController()
     }
 }

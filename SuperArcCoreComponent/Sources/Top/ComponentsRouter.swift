@@ -6,7 +6,6 @@ import SuperArcCoreUI
 import SuperArcCore
 import SuperArcFoundation
 
-// Move this into SuperArcComponent as standard ComponentsRouter
 public class ComponentsRouter: ComponentsRouterProtocol {
 
     // MARK: Properties

@@ -42,11 +42,8 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
             return .present(videosComponentPresentable.presentable)
 
         case .video(let videoMetaData):
-            let videosComponentPresentable = component.trigger(.video(videoMetaData))
-            print(videosComponentPresentable)
-            print(videosComponentPresentable is ComponentPresentableWrapper)
-            let test = videosComponentPresentable as! ComponentPresentableWrapper
-            return .present(test.presentable)
+            let videosComponentPresentable = component.trigger(.video(videoMetaData)) as! ComponentPresentableWrapper
+            return .present(videosComponentPresentable.presentable)
 
         case .close:
             return .dismissToRoot()

@@ -35,7 +35,7 @@ class AppManager: HasComponentsRouter, HasConfigurations {
 
     // Private
 
-    lazy internal var componentsRouter: ComponentsRouterProtocol = ComponentsRouter(context: core.context)
+    lazy internal var componentsRouter: ComponentsRouter = ComponentsRouter(context: core.context)
     lazy internal var configurations = AnyRegistry(ConfigurationsRegistry(endpoint: .current))
 
     // MARK: Intialization
@@ -72,10 +72,10 @@ class AppManager: HasComponentsRouter, HasConfigurations {
     }
 
     private func setupComponentsCoordinator() {
-        core.context.viewControllerContext.register(componentsRouter, for: ComponentsRouterProtocol.self)
+        core.context.viewControllerContext.register(componentsRouter, for: ComponentsRouter.self)
 
-        componentsRouter.interfaceRegistry.register(VideosInterface(), for: VideosInterfaceProtocol.self)
-        componentsRouter.interfaceRegistry.register(AuthorsInterface(), for: AuthorsInterfaceProtocol.self)
+        VideosCoordinator.register(to: core.context)
+        AuthorsCoordinator.register(to: core.context)
 
         componentsRouter.routerRegistry.register(ConferencesComponentRouter(context: core.context), for: ConferencesComponentRouter.self)
         componentsRouter.routerRegistry.register(VideosComponentRouter(context: core.context), for: VideosComponentRouter.self)

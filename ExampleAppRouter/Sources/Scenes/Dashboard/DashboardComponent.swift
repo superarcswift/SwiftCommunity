@@ -7,17 +7,25 @@ import FeatureB
 import SuperArcCoreComponent
 import SuperArcCoreUI
 
+// MARK: - DashboardComponentBuilder
+
 protocol DashboardComponentBuilder: ViewBuildable {
     func makeDashboardViewController() -> DashboardViewController
 }
 
+// MARK: - DashboardComponent
+
 class DashboardComponent: Component<EmptyDependency, DashboardComponentBuilder, EmptyInterface, EmptyComponentRoute>, DashboardComponentBuilder {
+
+    // MARK: Properties
 
     var featureAComponent: FeatureAComponent!
     var featureBComponent: FeatureBComponent!
 
+    // MARK: APIs
+
     func makeDashboardViewController() -> DashboardViewController {
-        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouterProtocol.self) as! ComponentsRouter
+        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
         featureAComponent = FeatureAComponent(dependency: componentsRouter, componentsRouter: componentsRouter.featureARouter, context: context)
         featureBComponent = FeatureBComponent(dependency: componentsRouter, componentsRouter: componentsRouter.featureBRouter, context: context)
 

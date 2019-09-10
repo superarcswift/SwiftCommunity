@@ -25,7 +25,11 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
         super.init(initialRoute: initialRoute)
     }
 
-    // MARK: Overrides
+    // MARK: APIs
+
+    public static func register(to context: ApplicationContextProtocol) {
+        AuthorsComponent.register(to: context)
+    }
 
     override public func prepareTransition(for route: AuthorsRoute) -> NavigationTransition {
         switch route {

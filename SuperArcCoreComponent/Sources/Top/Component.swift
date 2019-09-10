@@ -16,6 +16,9 @@ public protocol ComponentProtocol: Dependency, HasApplicationContext, ComponentR
     var viewBuilder: ViewBuildableType { get }
 
     var interface: InterfaceType! { get }
+
+    /// Register any objects provided by this component that will be used by classes in the higher layer.
+    static func register(to context: ApplicationContextProtocol)
 }
 
 /// The base class of a dependency injection component containing all dependencies used by this object.
@@ -31,7 +34,7 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
         return self as! ViewBuildableType
     }
 
-    public var componentsRouter: AnyComponentRouter<ComponentRouteType>
+    public var componentsRouter: AnyComponentRouter<ComponentRouteType>?
 
     public var interface: InterfaceType!
 
@@ -39,7 +42,7 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 
     // MARK: Intialization
 
-    public init(dependency: DependencyType, componentsRouter: AnyComponentRouter<ComponentRouteType>, context: ApplicationContextProtocol) {
+    public init(dependency: DependencyType, componentsRouter: AnyComponentRouter<ComponentRouteType>? = nil, context: ApplicationContextProtocol) {
         self.dependency = dependency
         self.context = context
         self.componentsRouter = componentsRouter
@@ -47,7 +50,11 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 
     // MARK: APIs
 
-    open func trigger(_ route: ComponentRouteType) -> ComponentPresentable {
+    open class func register(to context: ApplicationContextProtocol) {
+        fatalError("needed to be implemented")
+    }
+
+    open func trigger(_ route: ComponentRouteType) -> ComponentPresentable? {
         fatalError("needed to be implemented")
     }
 }

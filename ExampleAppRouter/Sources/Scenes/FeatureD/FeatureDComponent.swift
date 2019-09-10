@@ -6,31 +6,47 @@ import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
 
-protocol FeatureDComponentBuilder: ViewBuildable {
-    func makeFeatureDViewController() -> ComponentPresentable
-}
-
-protocol FeatureDDependency: Dependency {
-}
-
-protocol FeatureDInterfaceProtocol: Interface {
-    func show(dependency: FeatureDDependency, context: ApplicationContextProtocol) -> ComponentPresentable
-}
+// MARK: - FeatureDComponent
 
 class FeatureDComponent: Component<FeatureDDependency, FeatureDComponentBuilder, FeatureDInterfaceProtocol, EmptyComponentRoute> {
+
+    public override class func register(to context: ApplicationContextProtocol) {
+        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
+        componentsRouter.interfaceRegistry.register(FeatureDInterface(context: context), for: FeatureDInterfaceProtocol.self)
+    }
 
     func makeFeatureDViewController() -> ComponentPresentable {
         return FeatureDViewController.instantiate(with: context.viewControllerContext)
     }
 }
 
-// MARK: - AuthorsInterface
+// MARK: - FeatureDComponentBuilder
+
+protocol FeatureDComponentBuilder: ViewBuildable {
+    func makeFeatureDViewController() -> ComponentPresentable
+}
+
+
+// MARK: - FeatureDDependency
+
+protocol FeatureDDependency: Dependency {}
+
+protocol FeatureDInterfaceProtocol: Interface {
+    func show(dependency: FeatureDDependency) -> ComponentPresentable
+}
+
+// MARK: - FeatureDInterface
 
 class FeatureDInterface: FeatureDInterfaceProtocol {
 
-    init() {}
+    var context: ApplicationContextProtocol!
 
-    func show(dependency: FeatureDDependency, context: ApplicationContextProtocol) -> ComponentPresentable {
-        return FeatureDComponent(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), context: context).makeFeatureDViewController()
+    init(context: ApplicationContextProtocol) {
+        self.context = context
+    }
+
+    func show(dependency: FeatureDDependency) -> ComponentPresentable {
+        let component = FeatureDComponent(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), context: context)
+        return component.makeFeatureDViewController()
     }
 }

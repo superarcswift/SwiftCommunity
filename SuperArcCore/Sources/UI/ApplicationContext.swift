@@ -13,11 +13,10 @@ public protocol HasViewControllerContext: class {
 }
 
 /// Protocol defining required depedencies used for processing application logic & driving UIs.
-/// Normally every ViewController will have reference to an object adropting this protocol.
+/// Normally every ViewController will have reference to an object adopting this protocol.
 public protocol ApplicationContextProtocol: HasViewControllerContext {
 
     var engine: EngineProtocol { get }
-    var viewControllerContext: ViewControllerContext! { get set }
 }
 
 public class ApplicationContext: ApplicationContextProtocol {

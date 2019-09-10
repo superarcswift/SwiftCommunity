@@ -29,7 +29,6 @@
 		F6429C59232550DB00744ACA /* FeatureD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429C58232550DB00744ACA /* FeatureD.storyboard */; };
 		F6429C602325583500744ACA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C5F2325583500744ACA /* DashboardViewController.swift */; };
 		F6429C62232559A500744ACA /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429C61232559A500744ACA /* Dashboard.storyboard */; };
-		F6429C6723255E1400744ACA /* ConfigurationsRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C6623255E1400744ACA /* ConfigurationsRegistry.swift */; };
 		F6429C6923255F7700744ACA /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C6823255F7700744ACA /* SuperArcCoreComponent.framework */; };
 		F6429C6A23255F7F00744ACA /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C6823255F7700744ACA /* SuperArcCoreComponent.framework */; };
 		F6429C6B23255F7F00744ACA /* SuperArcCoreComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C6823255F7700744ACA /* SuperArcCoreComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -152,7 +151,6 @@
 		F6429C58232550DB00744ACA /* FeatureD.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeatureD.storyboard; sourceTree = "<group>"; };
 		F6429C5F2325583500744ACA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F6429C61232559A500744ACA /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
-		F6429C6623255E1400744ACA /* ConfigurationsRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsRegistry.swift; sourceTree = "<group>"; };
 		F6429C6823255F7700744ACA /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6429C6C2325603D00744ACA /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		F6429C80232578A600744ACA /* DashboardComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardComponent.swift; sourceTree = "<group>"; };
@@ -333,25 +331,8 @@
 			isa = PBXGroup;
 			children = (
 				F6429C8223259CE500744ACA /* Router */,
-				F6429C6423255E0100744ACA /* Engine */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		F6429C6423255E0100744ACA /* Engine */ = {
-			isa = PBXGroup;
-			children = (
-				F6429C6523255E0600744ACA /* Configurations */,
-			);
-			path = Engine;
-			sourceTree = "<group>";
-		};
-		F6429C6523255E0600744ACA /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				F6429C6623255E1400744ACA /* ConfigurationsRegistry.swift */,
-			);
-			path = Configurations;
 			sourceTree = "<group>";
 		};
 		F6429C8223259CE500744ACA /* Router */ = {
@@ -616,7 +597,6 @@
 				F6429C8C2325AD1400744ACA /* ComponentsRouter+FeatureB.swift in Sources */,
 				F6429C602325583500744ACA /* DashboardViewController.swift in Sources */,
 				F6429C49232549EC00744ACA /* FeatureDViewController.swift in Sources */,
-				F6429C6723255E1400744ACA /* ConfigurationsRegistry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,7 +782,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.ExampleAppRouter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -822,7 +802,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.ExampleAppRouter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
