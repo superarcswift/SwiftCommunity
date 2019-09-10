@@ -38,12 +38,15 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
             return .push(viewController)
 
         case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):
-            let videosCoordinator = component.trigger(.videos(conferenceMetaData, conferenceEdition))
-            return .present(videosCoordinator)
+            let videosComponentPresentable = component.trigger(.videos(conferenceMetaData, conferenceEdition)) as! ComponentPresentableWrapper
+            return .present(videosComponentPresentable.presentable)
 
         case .video(let videoMetaData):
-            let videosCoordinator = component.trigger(.video(videoMetaData))
-            return .present(videosCoordinator)
+            let videosComponentPresentable = component.trigger(.video(videoMetaData))
+            print(videosComponentPresentable)
+            print(videosComponentPresentable is ComponentPresentableWrapper)
+            let test = videosComponentPresentable as! ComponentPresentableWrapper
+            return .present(test.presentable)
 
         case .close:
             return .dismissToRoot()

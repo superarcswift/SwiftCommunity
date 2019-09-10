@@ -4,6 +4,7 @@
 
 import Videos
 import Authors
+import SuperArcCoreComponent
 
 extension ComponentsRouter {
 

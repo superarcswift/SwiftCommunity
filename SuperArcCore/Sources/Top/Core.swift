@@ -10,18 +10,15 @@ public class Core {
 
     // Public
 
-    public var context: ApplicationContextProtocol
+    public let context: ApplicationContextProtocol
 
-    public var engine: EngineProtocol
-
-    public var configurations: AnyRegistry<Configuration>
+    public let engine: EngineProtocol
 
     // MARK: Initialization
 
-    public init(configurations: AnyRegistry<Configuration>) {
-        self.configurations = configurations
+    public init(endpoint: Endpoint, configurations: AnyRegistry<Configuration>) {
 
-        let serviceContext = ServiceContext()
+        let serviceContext = ServiceContext(endpoint: endpoint, configurations: configurations)
         engine = Engine(serviceContext: serviceContext)
         context = ApplicationContext(engine: engine)
     }

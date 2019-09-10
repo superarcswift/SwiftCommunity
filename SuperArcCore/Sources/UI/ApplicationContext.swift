@@ -31,7 +31,7 @@ public class ApplicationContext: ApplicationContextProtocol {
 
     // MARK: Initialization
 
-    init(engine: EngineProtocol) {
+    public init(engine: EngineProtocol) {
         self.engine = engine
     }
 }

@@ -46,6 +46,10 @@ open class ViewController<VM: ViewModel>: UIViewController, CommonViewController
         if hasLeftCloseButton {
             navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(self.close))
         }
+
+        if hasRightCloseButton {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(self.close))
+        }
     }
 
     open func setupBindings() {}

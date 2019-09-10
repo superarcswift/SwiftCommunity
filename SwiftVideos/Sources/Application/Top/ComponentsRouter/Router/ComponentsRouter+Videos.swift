@@ -2,13 +2,13 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import Authors
+import Videos
 import Core
 import SuperArcCoreComponent
 import SuperArcCore
 import XCoordinator
 
-class AuthorsComponentRouter: AuthorsComponentRouterProtocol {
+class VideosComponentRouter: VideosComponentRouterProtocol {
 
     var context: ApplicationContextProtocol
 
@@ -20,10 +20,11 @@ class AuthorsComponentRouter: AuthorsComponentRouterProtocol {
         self.context = context
     }
 
-    func trigger(_ route: AuthorsComponentRoute) -> Presentable {
+    func trigger(_ route: VideosComponentRoute) -> ComponentPresentable {
         switch route {
-        case .video(let videoMetaData):
-            return componentsRouter.videosInterface.showVideo(videoMetaData: videoMetaData, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter, context: context)
+        case .author(let authorMetaData):
+            let presentable = componentsRouter.authorsInterface.showAuthor(authorMetaData: authorMetaData, dependency: componentsRouter, anyAuthorsRouter: componentsRouter.authorsRouter, context: context)
+            return ComponentPresentableWrapper(presentable: presentable)
         }
     }
 }

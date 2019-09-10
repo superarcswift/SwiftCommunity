@@ -4,7 +4,6 @@
 
 import SuperArcCoreUI
 import SuperArcCore
-import XCoordinator
 
 public protocol ComponentProtocol: Dependency, HasApplicationContext, ComponentRouter {
     associatedtype DependencyType
@@ -51,7 +50,7 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 
     // MARK: APIs
 
-    open func trigger(_ route: ComponentRouteType) -> Presentable {
+    open func trigger(_ route: ComponentRouteType) -> ComponentPresentable {
         fatalError("needed to be implemented")
     }
 }

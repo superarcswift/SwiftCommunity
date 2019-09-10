@@ -11,20 +11,7 @@ import SuperArcCore
 import SuperArcFoundation
 import XCoordinator
 
-/// Protocol used to mock for testing purpose.
-protocol ConferencesViewBuilder {
-    func makeConferencesCollectionViewController(router: AnyRouter<ConferencesRoute>) -> ConferencesCollectionViewController
-    func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>) -> ConferenceDetailViewController
-}
-
-public protocol ConferencesComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == ConferencesComponentRoute {}
-
-extension ConferencesComponentRouterProtocol where ComponentRouteType == ConferencesComponentRoute {
-
-    public var anyConferencesRouter: AnyComponentRouter<ConferencesComponentRoute> {
-        return AnyComponentRouter(self)
-    }
-}
+// MARK: - ConferencesComponent
 
 class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder, EmptyInterface, ConferencesComponentRoute>, ConferencesViewBuilder {
 
@@ -46,10 +33,27 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
         return viewController
     }
 
-    override func trigger(_ route: ConferencesComponentRoute) -> Presentable {
+    override func trigger(_ route: ConferencesComponentRoute) -> ComponentPresentable {
         return componentsRouter.trigger(route)
     }
+}
 
+// MARK: - ConferencesViewBuilder
+
+protocol ConferencesViewBuilder {
+    func makeConferencesCollectionViewController(router: AnyRouter<ConferencesRoute>) -> ConferencesCollectionViewController
+    func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>) -> ConferenceDetailViewController
+}
+
+// MARK: - ConferencesComponentRouter
+
+public protocol ConferencesComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == ConferencesComponentRoute {}
+
+extension ConferencesComponentRouterProtocol where ComponentRouteType == ConferencesComponentRoute {
+
+    public var anyConferencesRouter: AnyComponentRouter<ConferencesComponentRoute> {
+        return AnyComponentRouter(self)
+    }
 }
 
 public enum ConferencesComponentRoute: ComponentRoute {

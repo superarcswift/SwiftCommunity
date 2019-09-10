@@ -6,6 +6,7 @@ import Core
 import SuperArcCore
 import SuperArcFoundation
 
+// Move this to SuperArcCore as standard ConfigurationsRegistry.
 public class ConfigurationsRegistry: Registry {
 
     // MARK: Properties

@@ -18,19 +18,24 @@ import SuperArcFoundation
 
 import XCoordinator
 
-class AppManager: HasComponentsInteractor, HasConfigurations {
+class AppManager: HasComponentsRouter, HasConfigurations {
 
     // MARK: Properties
 
     // Public
 
     lazy var core: Core = {
-        return Core(configurations: configurations)
+        #if DEBUG
+        let endpoint: Endpoint = .development
+        #else
+        let endpoint: Endpoint = .production
+        #endif
+        return Core(endpoint: endpoint, configurations: configurations)
     }()
 
     // Private
 
-    lazy internal var componentsInteractor: ComponentsRouterProtocol = ComponentsRouter(context: core.context)
+    lazy internal var componentsRouter: ComponentsRouterProtocol = ComponentsRouter(context: core.context)
     lazy internal var configurations = AnyRegistry(ConfigurationsRegistry(endpoint: .current))
 
     // MARK: Intialization
@@ -67,13 +72,13 @@ class AppManager: HasComponentsInteractor, HasConfigurations {
     }
 
     private func setupComponentsCoordinator() {
-        core.context.viewControllerContext.register(componentsInteractor, for: ComponentsRouterProtocol.self)
+        core.context.viewControllerContext.register(componentsRouter, for: ComponentsRouterProtocol.self)
 
-        componentsInteractor.interfaceRegistry.register(VideosInterface(), for: VideosInterfaceProtocol.self)
-        componentsInteractor.interfaceRegistry.register(AuthorsInterface(), for: AuthorsInterfaceProtocol.self)
+        componentsRouter.interfaceRegistry.register(VideosInterface(), for: VideosInterfaceProtocol.self)
+        componentsRouter.interfaceRegistry.register(AuthorsInterface(), for: AuthorsInterfaceProtocol.self)
 
-        componentsInteractor.routerRegistry.register(ConferencesComponentRouter(context: core.context), for: ConferencesComponentRouter.self)
-        componentsInteractor.routerRegistry.register(VideosComponentRouter(context: core.context), for: VideosComponentRouter.self)
-        componentsInteractor.routerRegistry.register(AuthorsComponentRouter(context: core.context), for: AuthorsComponentRouter.self)
+        componentsRouter.routerRegistry.register(ConferencesComponentRouter(context: core.context), for: ConferencesComponentRouter.self)
+        componentsRouter.routerRegistry.register(VideosComponentRouter(context: core.context), for: VideosComponentRouter.self)
+        componentsRouter.routerRegistry.register(AuthorsComponentRouter(context: core.context), for: AuthorsComponentRouter.self)
     }
 }

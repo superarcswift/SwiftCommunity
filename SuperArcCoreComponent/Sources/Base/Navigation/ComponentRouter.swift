@@ -2,7 +2,6 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import XCoordinator
 import SuperArcCore
 import SuperArcFoundation
 
@@ -10,9 +9,8 @@ public protocol ComponentRouterIdentifiable: ClassNameDerivable {}
 
 public protocol ComponentRouter {
     associatedtype ComponentRouteType: ComponentRoute
-    // TODO: add this
-    //init(context: ApplicationContextProtocol)
-    func trigger(_ route: ComponentRouteType) -> Presentable
+
+    func trigger(_ route: ComponentRouteType) -> ComponentPresentable
 }
 
 extension ComponentRouter {
@@ -31,7 +29,7 @@ private class _AnyComponentRouterBase<ComponentRouteType: ComponentRoute>: Compo
         }
     }
 
-    func trigger(_ route: ComponentRouteType) -> Presentable {
+    func trigger(_ route: ComponentRouteType) -> ComponentPresentable {
         fatalError("needed to be overriden")
     }
 }
@@ -44,7 +42,7 @@ private final class _AnyComponentRoutableBox<ConcreteRouter: ComponentRouter>: _
         self.concrete = concrete
     }
 
-    override func trigger(_ route: ComponentRouteType) -> Presentable {
+    override func trigger(_ route: ComponentRouteType) -> ComponentPresentable {
         return concrete.trigger(route)
     }
 }
@@ -57,14 +55,14 @@ public class AnyComponentRouter<ComponentRouteType: ComponentRoute>: ComponentRo
         self.box = _AnyComponentRoutableBox(concrete)
     }
 
-    public func trigger(_ route: ComponentRouteType) -> Presentable {
+    public func trigger(_ route: ComponentRouteType) -> ComponentPresentable {
         return box.trigger(route)
     }
 }
 
 public class AnyEmptyComponentRouter: AnyComponentRouter<EmptyComponentRoute> {
 
-    convenience init() {
+    public convenience init() {
         self.init(EmptyComponentRouter())
     }
 }
@@ -72,7 +70,7 @@ public class AnyEmptyComponentRouter: AnyComponentRouter<EmptyComponentRoute> {
 private class EmptyComponentRouter: ComponentRouter {
     typealias ComponentRouteType = EmptyComponentRoute
 
-    func trigger(_ route: ComponentRouteType) -> Presentable {
+    func trigger(_ route: ComponentRouteType) -> ComponentPresentable {
         return UIViewController()
     }
 }

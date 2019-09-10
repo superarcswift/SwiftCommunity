@@ -10,20 +10,7 @@ import SuperArcCore
 import SuperArcFoundation
 import XCoordinator
 
-/// Protocol used to mock for testing purpose.
-protocol AuthorsViewBuilder: ViewBuildable {
-    func makeAuthorsCollectionViewController(router: AnyRouter<AuthorsRoute>) -> AuthorsCollectionViewController
-    func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
-}
-
-public protocol AuthorsComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == AuthorsComponentRoute {}
-
-extension AuthorsComponentRouterProtocol where ComponentRouteType == AuthorsComponentRoute {
-
-    public var anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute> {
-        return AnyComponentRouter(self)
-    }
-}
+// MARK: - AuthorsComponent
 
 class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyInterface, AuthorsComponentRoute>, AuthorsViewBuilder {
 
@@ -47,9 +34,16 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
         return viewController
     }
 
-    override func trigger(_ route: AuthorsComponentRoute) -> Presentable {
+    override func trigger(_ route: AuthorsComponentRoute) -> ComponentPresentable {
         return componentsRouter.trigger(route)
     }
+}
+
+// MARK: - AuthorsViewBuilder
+
+protocol AuthorsViewBuilder: ViewBuildable {
+    func makeAuthorsCollectionViewController(router: AnyRouter<AuthorsRoute>) -> AuthorsCollectionViewController
+    func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
 }
 
 // MARK: AuthorsInterfaceProtocol
@@ -60,6 +54,17 @@ public class AuthorsInterface: AuthorsInterfaceProtocol {
 
     public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter:AnyComponentRouter<AuthorsComponentRoute>, context: ApplicationContextProtocol) -> Presentable {
         return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, componentsRouter: anyAuthorsRouter, context: context)
+    }
+}
+
+// MARK: - AuthorsComponentRouter
+
+public protocol AuthorsComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == AuthorsComponentRoute {}
+
+extension AuthorsComponentRouterProtocol where ComponentRouteType == AuthorsComponentRoute {
+
+    public var anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute> {
+        return AnyComponentRouter(self)
     }
 }
 

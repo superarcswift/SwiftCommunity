@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3dY-Gk-Lgu">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feature A-->
+        <scene sceneID="nvn-dR-00T">
+            <objects>
+                <viewController storyboardIdentifier="FeatureAViewController" title="Feature A" id="3dY-Gk-Lgu" customClass="FeatureAViewController" customModule="ExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3jK-Pn-QGc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6t-YA-B7i">
+                                <rect key="frame" x="170" y="94" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wg-Z2-Az4">
+                                <rect key="frame" x="154.5" y="433" width="105" height="30"/>
+                                <state key="normal" title="Go to feature C"/>
+                                <connections>
+                                    <action selector="didTapFeatureC:" destination="3dY-Gk-Lgu" eventType="touchUpInside" id="itI-cJ-ydE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxo-Ys-9Ij">
+                                <rect key="frame" x="155" y="371" width="104" height="30"/>
+                                <state key="normal" title="Go to feature B"/>
+                                <connections>
+                                    <action selector="didTapFeatureB:" destination="3dY-Gk-Lgu" eventType="touchUpInside" id="cUw-Di-mAr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkr-uT-7Jy">
+                                <rect key="frame" x="154.5" y="495" width="105" height="30"/>
+                                <state key="normal" title="Go to feature D"/>
+                                <connections>
+                                    <action selector="didTapFeatureD:" destination="3dY-Gk-Lgu" eventType="touchUpInside" id="qOg-dx-6D9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z6t-YA-B7i" firstAttribute="centerX" secondItem="3jK-Pn-QGc" secondAttribute="centerX" id="4Gr-7J-ysh"/>
+                            <constraint firstItem="5Wg-Z2-Az4" firstAttribute="centerX" secondItem="3jK-Pn-QGc" secondAttribute="centerX" id="ApF-gx-KBZ"/>
+                            <constraint firstItem="z6t-YA-B7i" firstAttribute="top" secondItem="jYN-hJ-tkL" secondAttribute="top" constant="50" id="H0T-bu-Drm"/>
+                            <constraint firstItem="5Wg-Z2-Az4" firstAttribute="centerY" secondItem="3jK-Pn-QGc" secondAttribute="centerY" id="IDa-ol-Eq3"/>
+                            <constraint firstItem="Tkr-uT-7Jy" firstAttribute="top" secondItem="5Wg-Z2-Az4" secondAttribute="bottom" constant="32" id="Ju5-jj-Gqv"/>
+                            <constraint firstItem="5Wg-Z2-Az4" firstAttribute="top" secondItem="zxo-Ys-9Ij" secondAttribute="bottom" constant="32" id="MbN-8N-YY4"/>
+                            <constraint firstItem="Tkr-uT-7Jy" firstAttribute="centerX" secondItem="3jK-Pn-QGc" secondAttribute="centerX" id="Sc4-dX-b67"/>
+                            <constraint firstItem="zxo-Ys-9Ij" firstAttribute="centerX" secondItem="3jK-Pn-QGc" secondAttribute="centerX" id="fBJ-3f-A6d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jYN-hJ-tkL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qxg-Bb-afP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="149"/>
+        </scene>
+    </scenes>
+</document>

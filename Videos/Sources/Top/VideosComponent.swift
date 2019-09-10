@@ -10,20 +10,8 @@ import SuperArcCore
 import SuperArcFoundation
 import XCoordinator
 
-/// Protocol can be used used to mock for testing purpose.
-protocol VideosViewBuilder: ViewBuildable {
-    func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController
-    func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
-}
 
-public protocol VideosComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == VideosComponentRoute {}
-
-extension VideosComponentRouterProtocol where ComponentRouteType == VideosComponentRoute {
-
-    public var anyVideosRouter: AnyComponentRouter<VideosComponentRoute> {
-        return AnyComponentRouter(self)
-    }
-}
+// MARK: - VideosComponent
 
 class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInterfaceProtocol, VideosComponentRoute>, VideosViewBuilder {
 
@@ -51,10 +39,19 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInte
         return viewController
     }
 
-    override func trigger(_ route: VideosComponentRoute) -> Presentable {
+    override func trigger(_ route: VideosComponentRoute) -> ComponentPresentable {
         return componentsRouter.trigger(route)
     }
 }
+
+// MARK: - VideosViewBuilder
+
+protocol VideosViewBuilder: ViewBuildable {
+    func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController
+    func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
+}
+
+// MARK: - VideosInterface
 
 public class VideosInterface: VideosInterfaceProtocol {
 
@@ -72,6 +69,17 @@ public class VideosInterface: VideosInterfaceProtocol {
         return VideosCoordinator(initialRoute: .videoDetail(videoMetaData, true), depedency: dependency, componentsRouter: componentsRouter, context: context)
     }
 
+}
+
+// MARK: - VideosComponentRouter
+
+public protocol VideosComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == VideosComponentRoute {}
+
+extension VideosComponentRouterProtocol where ComponentRouteType == VideosComponentRoute {
+
+    public var anyVideosRouter: AnyComponentRouter<VideosComponentRoute> {
+        return AnyComponentRouter(self)
+    }
 }
 
 public enum VideosComponentRoute: ComponentRoute {
