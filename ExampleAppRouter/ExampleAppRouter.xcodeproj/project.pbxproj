@@ -127,14 +127,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F6429BD5232540A900744ACA /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6429BD5232540A900744ACA /* ExampleAppRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleAppRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6429BD8232540A900744ACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6429BE1232540AB00744ACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6429BE4232540AB00744ACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6429BE6232540AB00744ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6429BEB232540AB00744ACA /* ExampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6429BEB232540AB00744ACA /* ExampleAppRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleAppRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6429BF1232540AB00744ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6429BF6232540AB00744ACA /* ExampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6429BF6232540AB00744ACA /* ExampleAppRouterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleAppRouterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6429BFC232540AB00744ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6429C2C2325461500744ACA /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6429C2E2325461900744ACA /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,9 +220,9 @@
 		F6429BD6232540A900744ACA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6429BD5232540A900744ACA /* ExampleApp.app */,
-				F6429BEB232540AB00744ACA /* ExampleAppTests.xctest */,
-				F6429BF6232540AB00744ACA /* ExampleAppUITests.xctest */,
+				F6429BD5232540A900744ACA /* ExampleAppRouter.app */,
+				F6429BEB232540AB00744ACA /* ExampleAppRouterTests.xctest */,
+				F6429BF6232540AB00744ACA /* ExampleAppRouterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -396,9 +396,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F6429BD4232540A900744ACA /* ExampleApp */ = {
+		F6429BD4232540A900744ACA /* ExampleAppRouter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6429BFF232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleApp" */;
+			buildConfigurationList = F6429BFF232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleAppRouter" */;
 			buildPhases = (
 				F6429BD1232540A900744ACA /* Sources */,
 				F6429BD2232540A900744ACA /* Frameworks */,
@@ -412,14 +412,14 @@
 				F6429CC823265D8F00744ACA /* PBXTargetDependency */,
 				F6429D2C232682B700744ACA /* PBXTargetDependency */,
 			);
-			name = ExampleApp;
+			name = ExampleAppRouter;
 			productName = ExampleApp;
-			productReference = F6429BD5232540A900744ACA /* ExampleApp.app */;
+			productReference = F6429BD5232540A900744ACA /* ExampleAppRouter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F6429BEA232540AB00744ACA /* ExampleAppTests */ = {
+		F6429BEA232540AB00744ACA /* ExampleAppRouterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6429C02232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleAppTests" */;
+			buildConfigurationList = F6429C02232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleAppRouterTests" */;
 			buildPhases = (
 				F6429BE7232540AB00744ACA /* Sources */,
 				F6429BE8232540AB00744ACA /* Frameworks */,
@@ -430,14 +430,14 @@
 			dependencies = (
 				F6429BED232540AB00744ACA /* PBXTargetDependency */,
 			);
-			name = ExampleAppTests;
+			name = ExampleAppRouterTests;
 			productName = ExampleAppTests;
-			productReference = F6429BEB232540AB00744ACA /* ExampleAppTests.xctest */;
+			productReference = F6429BEB232540AB00744ACA /* ExampleAppRouterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F6429BF5232540AB00744ACA /* ExampleAppUITests */ = {
+		F6429BF5232540AB00744ACA /* ExampleAppRouterUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6429C05232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleAppUITests" */;
+			buildConfigurationList = F6429C05232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleAppRouterUITests" */;
 			buildPhases = (
 				F6429BF2232540AB00744ACA /* Sources */,
 				F6429BF3232540AB00744ACA /* Frameworks */,
@@ -448,9 +448,9 @@
 			dependencies = (
 				F6429BF8232540AB00744ACA /* PBXTargetDependency */,
 			);
-			name = ExampleAppUITests;
+			name = ExampleAppRouterUITests;
 			productName = ExampleAppUITests;
-			productReference = F6429BF6232540AB00744ACA /* ExampleAppUITests.xctest */;
+			productReference = F6429BF6232540AB00744ACA /* ExampleAppRouterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -476,7 +476,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F6429BD0232540A900744ACA /* Build configuration list for PBXProject "ExampleApp" */;
+			buildConfigurationList = F6429BD0232540A900744ACA /* Build configuration list for PBXProject "ExampleAppRouter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -499,9 +499,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				F6429BD4232540A900744ACA /* ExampleApp */,
-				F6429BEA232540AB00744ACA /* ExampleAppTests */,
-				F6429BF5232540AB00744ACA /* ExampleAppUITests */,
+				F6429BD4232540A900744ACA /* ExampleAppRouter */,
+				F6429BEA232540AB00744ACA /* ExampleAppRouterTests */,
+				F6429BF5232540AB00744ACA /* ExampleAppRouterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -639,12 +639,12 @@
 /* Begin PBXTargetDependency section */
 		F6429BED232540AB00744ACA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F6429BD4232540A900744ACA /* ExampleApp */;
+			target = F6429BD4232540A900744ACA /* ExampleAppRouter */;
 			targetProxy = F6429BEC232540AB00744ACA /* PBXContainerItemProxy */;
 		};
 		F6429BF8232540AB00744ACA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F6429BD4232540A900744ACA /* ExampleApp */;
+			target = F6429BD4232540A900744ACA /* ExampleAppRouter */;
 			targetProxy = F6429BF7232540AB00744ACA /* PBXContainerItemProxy */;
 		};
 		F6429CC823265D8F00744ACA /* PBXTargetDependency */ = {
@@ -846,7 +846,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExampleApp.app/ExampleApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExampleAppRouter.app/ExampleAppRouter";
 			};
 			name = Debug;
 		};
@@ -867,7 +867,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExampleApp.app/ExampleApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExampleAppRouter.app/ExampleAppRouter";
 			};
 			name = Release;
 		};
@@ -914,7 +914,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F6429BD0232540A900744ACA /* Build configuration list for PBXProject "ExampleApp" */ = {
+		F6429BD0232540A900744ACA /* Build configuration list for PBXProject "ExampleAppRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6429BFD232540AB00744ACA /* Debug */,
@@ -923,7 +923,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6429BFF232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleApp" */ = {
+		F6429BFF232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleAppRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6429C00232540AB00744ACA /* Debug */,
@@ -932,7 +932,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6429C02232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleAppTests" */ = {
+		F6429C02232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleAppRouterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6429C03232540AB00744ACA /* Debug */,
@@ -941,7 +941,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6429C05232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleAppUITests" */ = {
+		F6429C05232540AB00744ACA /* Build configuration list for PBXNativeTarget "ExampleAppRouterUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6429C06232540AB00744ACA /* Debug */,

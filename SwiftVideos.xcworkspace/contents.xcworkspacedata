@@ -34,7 +34,7 @@
       location = "container:"
       name = "SuperArc">
       <FileRef
-         location = "group:ExampleApp/ExampleApp.xcodeproj">
+         location = "group:ExampleAppRouter/ExampleAppRouter.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:SuperArcActivityIndicator/SuperArcActivityIndicator.xcodeproj">
