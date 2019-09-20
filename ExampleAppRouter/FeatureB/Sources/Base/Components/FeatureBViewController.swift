@@ -36,15 +36,21 @@ class FeatureBViewController: TableViewController<ViewModel>, StoryboardInitiabl
         switch indexPath.row {
         case 0:
             print("should go to feature A from feature B")
-            let presentable = componentsRouter.trigger(.featureA)
+            guard let presentable = componentsRouter.trigger(.featureA) else {
+                return
+            }
             present(presentable.viewController, animated: true)
         case 1:
             print("should go to feature C from feature B")
-            let presentable = componentsRouter.trigger(.featureC)
+            guard let presentable = componentsRouter.trigger(.featureC) else {
+                return
+            }
             present(presentable.viewController, animated: true)
         case 2:
             print("should go to feature D from feature B")
-            let presentable = componentsRouter.trigger(.featureD)
+            guard let presentable = componentsRouter.trigger(.featureD) else {
+                return
+            }
             navigationController?.pushViewController(presentable.viewController, animated: true)
 
         default:

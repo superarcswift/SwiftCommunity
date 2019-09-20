@@ -12,7 +12,8 @@ public protocol ComponentsRouterProtocol: HasApplicationContext {
 }
 
 public protocol HasComponentsRouter {
-    var componentsRouter: ComponentsRouterProtocol { get }
+    // Note: This variable has a concrete type since we are going to add more dependencies into it via extension.
+    var componentsRouter: ComponentsRouter { get }
 }
 
 public class InterfaceRegistry: Registry {

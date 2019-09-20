@@ -7,6 +7,6 @@ import SuperArcCoreUI
 extension CommonViewControllerProtocol {
 
     public var storedComponentsRouter: ComponentsRouterProtocol {
-        return viewControllerContext.resolve(type: ComponentsRouterProtocol.self)
+        return viewControllerContext.resolve(type: ComponentsRouter.self)
     }
 }

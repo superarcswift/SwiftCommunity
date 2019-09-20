@@ -5,12 +5,16 @@
 import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
-import XCoordinator
 
 // MARK: - FeatureAComponent
 
 /// Main component class.
 public class FeatureAComponent: Component<FeatureADependency, FeatureAComponentBuilder, FeatureAInterfaceProtocol, FeatureAComponentRoute>, FeatureAComponentBuilder {
+
+    public override class func register(to context: ApplicationContextProtocol) {
+        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
+        componentsRouter.interfaceRegistry.register(FeatureAInterface(context: context), for: FeatureAInterfaceProtocol.self)
+    }
 
     public func makeFeatureAViewController(hasRightCloseButton: Bool = false) -> ComponentPresentable {
         let viewController = FeatureAViewController.instantiate(with: context.viewControllerContext)
@@ -27,7 +31,7 @@ public protocol FeatureAComponentBuilder: ViewBuildable {
     func makeFeatureAViewController(hasRightCloseButton: Bool) -> ComponentPresentable
 }
 
-// MARK: -FeatureADependency
+// MARK: - FeatureADependency
 
 /// Protocol defining dependencies that needed to build this component.
 public protocol FeatureADependency: Dependency {}
@@ -36,22 +40,27 @@ public protocol FeatureADependency: Dependency {}
 
 /// Protocol defining methods for outside components to interact with the current components.
 public protocol FeatureAInterfaceProtocol: Interface {
-    func show(dependency: FeatureADependency, componentsRouter: AnyComponentRouter<FeatureAComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool) -> ComponentPresentable
+    func show(dependency: FeatureADependency, componentsRouter: AnyComponentRouter<FeatureAComponentRoute>, hasRightCloseButton: Bool) -> ComponentPresentable
 }
 
 public class FeatureAInterface: FeatureAInterfaceProtocol {
 
-    public init() {}
+    public var context: ApplicationContextProtocol!
 
-    public func show(dependency: FeatureADependency, componentsRouter: AnyComponentRouter<FeatureAComponentRoute>, context: ApplicationContextProtocol, hasRightCloseButton: Bool = false) -> ComponentPresentable {
+    public init(context: ApplicationContextProtocol) {
+        self.context = context
+    }
+
+    public func show(dependency: FeatureADependency, componentsRouter: AnyComponentRouter<FeatureAComponentRoute>, hasRightCloseButton: Bool = false) -> ComponentPresentable {
         // TODO: this will create a new FeatureAComponent everytime. See if we can keep it in the memory and release it when needed.
-        return FeatureAComponent(dependency: dependency, componentsRouter: componentsRouter, context: context).makeFeatureAViewController(hasRightCloseButton: hasRightCloseButton)
+        let component = FeatureAComponent(dependency: dependency, componentsRouter: componentsRouter, context: context)
+        return component.makeFeatureAViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }
 
 // MARK: - FeatureAComponentRouterProtocol
 
-/// Protocol defining method to navigate to outside components from this component.
+/// Protocol defining a router used to navigate to outside components from this component.
 public protocol FeatureAComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == FeatureAComponentRoute {}
 
 extension FeatureAComponentRouterProtocol where ComponentRouteType == FeatureAComponentRoute {
@@ -67,7 +76,7 @@ public protocol HasFeatureAComponentRouter {
 
 // MARK: - FeatureAComponentRoute
 
-/// Routes to navigate to outside components.
+/// List of outside routes that this component can navigate to.
 public enum FeatureAComponentRoute: ComponentRoute {
     case featureB
     case featureC

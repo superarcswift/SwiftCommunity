@@ -10,25 +10,30 @@ import XCoordinator
 
 class ConferencesComponentRouter: ConferencesComponentRouterProtocol {
 
+    // MARK: Properties
+
     var context: ApplicationContextProtocol
 
     lazy var componentsRouter: ComponentsRouter = {
-        // TODO: See if we can remove this force cast
-        self.context.viewControllerContext.resolve(type: ComponentsRouterProtocol.self) as! ComponentsRouter
+        self.context.viewControllerContext.resolve(type: ComponentsRouter.self)
     }()
+
+    // MARK: Initialization
 
     init(context: ApplicationContextProtocol) {
         self.context = context
     }
 
-    func trigger(_ route: ConferencesComponentRoute) -> ComponentPresentable {
+    // MARK: APIs
+
+    func trigger(_ route: ConferencesComponentRoute) -> ComponentPresentable? {
         switch route {
         case .videos(let conferenceMetaData, let conferenceEdition):
-            let presentable = componentsRouter.videosInterface.showVideo(conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter, context: context)
+            let presentable = componentsRouter.videosInterface.showVideo(conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter)
             return ComponentPresentableWrapper(presentable: presentable)
 
         case .video(let videoMetaData):
-            let presentable = componentsRouter.videosInterface.showVideo(videoMetaData: videoMetaData, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter, context: context)
+            let presentable = componentsRouter.videosInterface.showVideo(videoMetaData: videoMetaData, dependency: componentsRouter, componentsRouter: componentsRouter.videosRouter)
             return ComponentPresentableWrapper(presentable: presentable)
         }
     }

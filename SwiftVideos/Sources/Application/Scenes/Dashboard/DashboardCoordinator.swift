@@ -32,7 +32,7 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
     init(context: ApplicationContextProtocol) {
 
         component = DashboardComponent(dependency: EmptyComponent(), context: context)
-        let appComponentsRouter = context.viewControllerContext.resolve(type: ComponentsRouterProtocol.self)
+        let appComponentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
 
         let conferencesComponentRouter = appComponentsRouter.routerRegistry.resolve(type: ConferencesComponentRouter.self)
         let conferencesCoordinator = ConferencesCoordinator(dependency: component, componentsRouter: conferencesComponentRouter.anyConferencesRouter, context: context)

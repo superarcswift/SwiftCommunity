@@ -25,7 +25,11 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
         super.init(initialRoute: initialRoute)
     }
 
-    // MARK: Overrides
+    // MARK: APIs
+
+    public static func register(to context: ApplicationContextProtocol) {
+        VideosComponent.register(to: context)
+    }
 
     override public func prepareTransition(for route: VideosRoute) -> NavigationTransition {
         switch route {
