@@ -8,11 +8,11 @@ import SuperArcCoreComponent
 
 extension ComponentsRouter {
 
-    var videosInterface: VideosInterfaceProtocol {
-        return interfaceRegistry.resolve(type: VideosInterfaceProtocol.self)
+    var videosInterface: VideosInterface {
+        return interfaceRegistry.resolveOnDemand(type: VideosInterface.self)
     }
 
-    var authorsInterface: AuthorsInterfaceProtocol {
-        return interfaceRegistry.resolve(type: AuthorsInterfaceProtocol.self)
+    var authorsInterface: AuthorsInterface {
+        return interfaceRegistry.resolveOnDemand(type: AuthorsInterface.self)
     }
 }

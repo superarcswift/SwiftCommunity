@@ -37,19 +37,29 @@ public class Container<T> {
         lock.unlock()
     }
 
+    /// Register an instance to a specific type.
+    /// Instance is created in a closure.
     public func register<T>(_ type: T.Type, builder: @escaping () -> T) throws {
         let instance = builder()
         try register(instance, for: type)
     }
 
     /// Find and return an instance for a specific type.
-    public func resolve<T>(_ type: T.Type) throws -> T {
+    /// Return `nil` when not found.
+    public func resolve<T>(_ type: T.Type) -> T? {
         lock.lock()
         let key = String(describing: type)
-        guard let instance = store[key] as? T else {
+        let instance = store[key] as? T
+        lock.unlock()
+        return instance
+    }
+
+    /// Find and return an instance for a specific type.
+    /// Throws an error when not found.
+    public func resolve<T>(_ type: T.Type) throws -> T {
+        guard let instance = resolve(type) else {
             throw ContainerError.notFound
         }
-        lock.unlock()
         return instance
     }
 

@@ -51,11 +51,11 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
     // MARK: APIs
 
     open class func register(to context: ApplicationContextProtocol) {
-        fatalError("needed to be implemented")
+        // empty
     }
 
     open func trigger(_ route: ComponentRouteType) -> ComponentPresentable? {
-        fatalError("needed to be implemented")
+        return nil
     }
 }
 

@@ -6,6 +6,10 @@ import SuperArcCore
 
 public protocol Interface: HasApplicationContext {}
 
+public protocol OnDemandInterface {
+    init(onDemandWith context: ApplicationContextProtocol)
+}
+
 public class EmptyInterface: Interface {
 
     public var context: ApplicationContextProtocol! {
