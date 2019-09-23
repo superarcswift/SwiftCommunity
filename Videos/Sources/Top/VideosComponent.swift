@@ -17,11 +17,6 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInte
 
     // MARK: APIs
 
-    override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
-        componentsRouter.interfaceRegistry.register(VideosInterface(context: context), for: VideosInterfaceProtocol.self)
-    }
-
     func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController {
 
         let viewController = VideosCollectionViewController.instantiate(with: context.viewControllerContext)
@@ -58,13 +53,13 @@ protocol VideosViewBuilder: ViewBuildable {
 
 // MARK: - VideosInterface
 
-public class VideosInterface: VideosInterfaceProtocol {
+public class VideosInterface: VideosInterfaceProtocol, OnDemandInterface {
 
     public var context: ApplicationContextProtocol!
 
     // MARK: Initialization
 
-    public init(context: ApplicationContextProtocol) {
+    public required init(onDemandWith context: ApplicationContextProtocol) {
         self.context = context
     }
 

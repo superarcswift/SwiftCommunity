@@ -16,11 +16,6 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
 
     // MARK: APIs
 
-    override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
-        componentsRouter.interfaceRegistry.register(AuthorsInterface(context: context), for: AuthorsInterfaceProtocol.self)
-    }
-
     func makeAuthorsCollectionViewController(router: AnyRouter<AuthorsRoute>) -> AuthorsCollectionViewController {
 
         let viewController = AuthorsCollectionViewController.instantiate(with: context.viewControllerContext)
@@ -53,13 +48,19 @@ protocol AuthorsViewBuilder: ViewBuildable {
 
 // MARK: AuthorsInterfaceProtocol
 
-public class AuthorsInterface: AuthorsInterfaceProtocol {
+public class AuthorsInterface: AuthorsInterfaceProtocol, OnDemandInterface {
+
+    // MARK: Properties
 
     public var context: ApplicationContextProtocol!
 
-    public init(context: ApplicationContextProtocol) {
+    // MARK: Initialization
+
+    public required init(onDemandWith context: ApplicationContextProtocol) {
         self.context = context
     }
+
+    // MARK: APIs
 
     public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter:AnyComponentRouter<AuthorsComponentRoute>) -> Presentable {
         return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, componentsRouter: anyAuthorsRouter, context: context)

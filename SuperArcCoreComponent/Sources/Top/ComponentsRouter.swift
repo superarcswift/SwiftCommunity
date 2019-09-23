@@ -14,13 +14,15 @@ public class ComponentsRouter: ComponentsRouterProtocol {
 
     public var context: ApplicationContextProtocol!
 
-    public var interfaceRegistry = InterfaceRegistry()
-    public var routerRegistry = RouterRegistry()
+    public let interfaceRegistry: InterfaceRegistry
+    public let routerRegistry: RouterRegistry
 
     // MARK: Setup
 
     public init(context: ApplicationContextProtocol) {
         self.context = context
+        interfaceRegistry = InterfaceRegistry(context: context)
+        routerRegistry = RouterRegistry()
     }
 
     // MARK: APIs
