@@ -30,11 +30,11 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
     override public func prepareTransition(for route: ConferencesRoute) -> NavigationTransition {
         switch route {
         case .conferences:
-            let viewController = component.viewBuilder.makeConferencesCollectionViewController(router: anyRouter)
+            let viewController = component.viewBuilder.makeConferencesCollectionViewController(router: unownedRouter)
             return .push(viewController)
 
         case .conferenceDetail(let conferenceMetaData):
-            let viewController = component.viewBuilder.makeConferenceDetailViewController(conferenceMetaData: conferenceMetaData, router: anyRouter)
+            let viewController = component.viewBuilder.makeConferenceDetailViewController(conferenceMetaData: conferenceMetaData, router: unownedRouter)
             return .push(viewController)
 
         case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):

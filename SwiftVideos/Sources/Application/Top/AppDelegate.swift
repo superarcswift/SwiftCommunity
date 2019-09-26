@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Private
 
-    private lazy var appRouter = AppCoordinator(context: appManager.core.context).anyRouter
+    private lazy var appRouter = AppCoordinator(context: appManager.core.context).strongRouter
 
     // MARK: Initialization
 

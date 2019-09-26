@@ -34,11 +34,11 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
     override public func prepareTransition(for route: VideosRoute) -> NavigationTransition {
         switch route {
         case .videos(let conferenceMetaData, let conferenceEdition):
-            let viewController = component.viewBuilder.makeVideosCollectionViewController(conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition, router: anyRouter)
+            let viewController = component.viewBuilder.makeVideosCollectionViewController(conferenceMetaData: conferenceMetaData, conferenceEdition: conferenceEdition, router: unownedRouter)
             return .push(viewController)
 
         case .videoDetail(let videoMetaData, let hasLeftCloseButton):
-            let viewController = component.viewBuilder.makeVideoDetailViewController(videoMetaData: videoMetaData, hasLeftCloseButton: hasLeftCloseButton, router: anyRouter)
+            let viewController = component.viewBuilder.makeVideoDetailViewController(videoMetaData: videoMetaData, hasLeftCloseButton: hasLeftCloseButton, router: unownedRouter)
             return .push(viewController)
 
         case .authorDetail(let authorMetaData):

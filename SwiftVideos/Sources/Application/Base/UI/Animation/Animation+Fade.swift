@@ -3,6 +3,7 @@
 //
 
 import XCoordinator
+import UIKit
 
 extension Animation {
     static let fade = Animation(

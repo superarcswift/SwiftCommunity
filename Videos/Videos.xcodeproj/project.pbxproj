@@ -30,6 +30,8 @@
 		F6C8A14E231EB04500DD6BFD /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A149231EB04500DD6BFD /* PromiseKit.framework */; };
 		F6C8A150231EB04A00DD6BFD /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A14F231EB04A00DD6BFD /* Core.framework */; };
 		F6C8A152231EB04E00DD6BFD /* DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A151231EB04E00DD6BFD /* DataModels.framework */; };
+		F6F7760E233D638F001DDCCF /* XCoordinatorRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F7760D233D638F001DDCCF /* XCoordinatorRx.framework */; };
+		F6F7760F233D638F001DDCCF /* XCoordinatorRx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6F7760D233D638F001DDCCF /* XCoordinatorRx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,20 @@
 			remoteInfo = Videos;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6F77610233D638F001DDCCF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6F7760F233D638F001DDCCF /* XCoordinatorRx.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F61DE110232039310083E26A /* VideosInterfaceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosInterfaceProtocol.swift; sourceTree = "<group>"; };
@@ -69,6 +85,7 @@
 		F6C8A149231EB04500DD6BFD /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6C8A14F231EB04A00DD6BFD /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C8A151231EB04E00DD6BFD /* DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6F7760D233D638F001DDCCF /* XCoordinatorRx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinatorRx.framework; path = ../Carthage/Build/iOS/XCoordinatorRx.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +99,7 @@
 				F68204A8231F00A900098C20 /* SuperArcCoreUI.framework in Frameworks */,
 				F6C8A152231EB04E00DD6BFD /* DataModels.framework in Frameworks */,
 				F6C8A150231EB04A00DD6BFD /* Core.framework in Frameworks */,
+				F6F7760E233D638F001DDCCF /* XCoordinatorRx.framework in Frameworks */,
 				F6C8A14A231EB04500DD6BFD /* RxSwift.framework in Frameworks */,
 				F6C8A14B231EB04500DD6BFD /* XCoordinator.framework in Frameworks */,
 				F6C8A14C231EB04500DD6BFD /* Action.framework in Frameworks */,
@@ -278,6 +296,7 @@
 		F6C8A144231EB04400DD6BFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6F7760D233D638F001DDCCF /* XCoordinatorRx.framework */,
 				F6820529231F185B00098C20 /* CoreUX.framework */,
 				F68204AB231F00B100098C20 /* SuperArcLocalization.framework */,
 				F68204A9231F00AC00098C20 /* SuperArcCore.framework */,
@@ -315,6 +334,7 @@
 				F6C8A101231EA99800DD6BFD /* Sources */,
 				F6C8A102231EA99800DD6BFD /* Frameworks */,
 				F6C8A103231EA99800DD6BFD /* Resources */,
+				F6F77610233D638F001DDCCF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
