@@ -17,7 +17,7 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
 
     // MARK: APIs
 
-    func makeConferencesCollectionViewController(router: AnyRouter<ConferencesRoute>) -> ConferencesCollectionViewController {
+    func makeConferencesCollectionViewController(router: UnownedRouter<ConferencesRoute>) -> ConferencesCollectionViewController {
         let viewController = ConferencesCollectionViewController.instantiate(with: context.viewControllerContext)
         let viewModel = ConferencesCollectionViewModel(router: router, dependency: dependency)
         viewController.viewModel = viewModel
@@ -25,7 +25,7 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
         return viewController
     }
 
-    func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>) -> ConferenceDetailViewController {
+    func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: UnownedRouter<ConferencesRoute>) -> ConferenceDetailViewController {
         let viewController = ConferenceDetailViewController.instantiate(with: context.viewControllerContext)
         let viewModel = ConferenceDetailViewModel(conferenceMetaData: conferenceMetaData, router: router, dependency: dependency)
         viewController.viewModel = viewModel
@@ -41,8 +41,8 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
 // MARK: - ConferencesViewBuilder
 
 protocol ConferencesViewBuilder {
-    func makeConferencesCollectionViewController(router: AnyRouter<ConferencesRoute>) -> ConferencesCollectionViewController
-    func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>) -> ConferenceDetailViewController
+    func makeConferencesCollectionViewController(router: UnownedRouter<ConferencesRoute>) -> ConferencesCollectionViewController
+    func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: UnownedRouter<ConferencesRoute>) -> ConferenceDetailViewController
 }
 
 // MARK: - ConferencesComponentRouter

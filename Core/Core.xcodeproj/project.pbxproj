@@ -54,7 +54,6 @@
 		F669802A2310493300FCEC14 /* ContentDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentDataProvider.swift; sourceTree = "<group>"; };
 		F66980302310493300FCEC14 /* GitService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitService.swift; sourceTree = "<group>"; };
 		F669804F2310493300FCEC14 /* FilesystemContentProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesystemContentProvider.swift; sourceTree = "<group>"; };
-		F669806723107A5000FCEC14 /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
 		F682050B231F0D2B00098C20 /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F682050D231F0D2B00098C20 /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F682050F231F0D2B00098C20 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +61,6 @@
 		F6820513231F120C00098C20 /* AuthorsDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsDependency.swift; sourceTree = "<group>"; };
 		F68EDE3C231D0EF2007E28A5 /* DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F7254231B2C5C00D424CB /* FilePathProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePathProvider.swift; sourceTree = "<group>"; };
-		F690690623107DE700B11E93 /* SwiftVideos_DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftVideos_DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F690690823107DFC00B11E93 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B5779323204A8A0069E79F /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = ../Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
 		F6C8A0ED231E98DB00DD6BFD /* VideosDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosDependency.swift; sourceTree = "<group>"; };
@@ -226,8 +224,6 @@
 				F682050F231F0D2B00098C20 /* SuperArcFoundation.framework */,
 				F68EDE3C231D0EF2007E28A5 /* DataModels.framework */,
 				F690690823107DFC00B11E93 /* SuperArcCore.framework */,
-				F690690623107DE700B11E93 /* SwiftVideos_DataModels.framework */,
-				F669806723107A5000FCEC14 /* ObjectiveGit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -343,6 +339,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F6697FFF23102E4200FCEC14;
 			productRefGroup = F669800A23102E4200FCEC14 /* Products */;

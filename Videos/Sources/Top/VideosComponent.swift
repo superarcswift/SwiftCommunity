@@ -17,7 +17,7 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInte
 
     // MARK: APIs
 
-    func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController {
+    func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: UnownedRouter<VideosRoute>) -> VideosCollectionViewController {
 
         let viewController = VideosCollectionViewController.instantiate(with: context.viewControllerContext)
         if conferenceMetaData != nil {
@@ -29,7 +29,7 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInte
         return viewController
     }
 
-    func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController {
+    func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: UnownedRouter<VideosRoute>) -> VideoDetailViewController {
         let viewController = VideoDetailViewController.instantiate(with: context.viewControllerContext)
         viewController.videosComponent = self
         let viewModel = VideoDetailViewModel(router: router, dependency: dependency, videoMetaData: videoMetaData)
@@ -47,8 +47,8 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInte
 // MARK: - VideosViewBuilder
 
 protocol VideosViewBuilder: ViewBuildable {
-    func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: AnyRouter<VideosRoute>) -> VideosCollectionViewController
-    func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: AnyRouter<VideosRoute>) -> VideoDetailViewController
+    func makeVideosCollectionViewController(conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?, router: UnownedRouter<VideosRoute>) -> VideosCollectionViewController
+    func makeVideoDetailViewController(videoMetaData: VideoMetaData, hasLeftCloseButton: Bool, router: UnownedRouter<VideosRoute>) -> VideoDetailViewController
 }
 
 // MARK: - VideosInterface

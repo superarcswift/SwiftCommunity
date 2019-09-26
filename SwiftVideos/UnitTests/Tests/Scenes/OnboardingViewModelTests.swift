@@ -22,7 +22,10 @@ class OnboardingViewModelTests: UnitTestCase {
 
     override func setUp() {
         super.setUp()
-        let router = AnyRouter<OnboardingRoute>(RouterMock())
+        let strongRouter = StrongRouter(RouterMock())
+        let router = UnownedRouter<OnboardingRoute>(strongRouter) { _ in
+            strongRouter
+        }
         viewModel = OnboardingViewModel(router: router, dependency: DependencyMock() )
 
         scheduler = TestScheduler(initialClock: 0)
@@ -137,9 +140,9 @@ class RouterMock: Router {
 
     typealias RouteType = OnboardingRoute
 
-    func contextTrigger(_ route: OnboardingRoute, with options: TransitionOptions, completion: ContextPresentationHandler?) {
-    }
     var viewController: UIViewController!
+
+    func contextTrigger(_ route: OnboardingRoute, with options: TransitionOptions, completion: ContextPresentationHandler?) {}
 }
 
 class DependencyMock: OnboardingDependency {

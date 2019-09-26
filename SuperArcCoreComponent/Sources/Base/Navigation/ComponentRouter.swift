@@ -71,6 +71,6 @@ private class EmptyComponentRouter: ComponentRouter {
     typealias ComponentRouteType = EmptyComponentRoute
 
     func trigger(_ route: ComponentRouteType) -> ComponentPresentable? {
-        return UIViewController()
+        return nil
     }
 }

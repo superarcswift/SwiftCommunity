@@ -9,6 +9,7 @@ import SuperArcStateView
 import SuperArcCoreUI
 import SuperArcCore
 import XCoordinator
+import XCoordinatorRx
 import Action
 import RxSwift
 import RxCocoa

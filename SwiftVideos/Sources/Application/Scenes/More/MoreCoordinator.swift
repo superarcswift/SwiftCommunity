@@ -28,11 +28,11 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
     override func prepareTransition(for route: MoreRoute) -> NavigationTransition {
         switch route {
         case .list:
-            let viewController = component.viewBuilder.makeMoreTableViewController(router: anyRouter)
+            let viewController = component.viewBuilder.makeMoreTableViewController(router: unownedRouter)
             return .push(viewController)
 
         case .about:
-            let viewController = component.viewBuilder.makeAboutViewController(router: anyRouter)
+            let viewController = component.viewBuilder.makeAboutViewController(router: unownedRouter)
             return .push(viewController)
 
         case .license:

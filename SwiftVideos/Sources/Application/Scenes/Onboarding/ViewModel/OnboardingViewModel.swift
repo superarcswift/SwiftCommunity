@@ -64,7 +64,7 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
 
     // MARK: Initialization
 
-    override init(router: AnyRouter<OnboardingRoute>, dependency: OnboardingDependency) {
+    override init(router: UnownedRouter<OnboardingRoute>, dependency: OnboardingDependency) {
         super.init(router: router, dependency: dependency)
 
         isReady

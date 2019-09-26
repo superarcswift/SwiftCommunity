@@ -34,11 +34,11 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
     override public func prepareTransition(for route: AuthorsRoute) -> NavigationTransition {
         switch route {
         case .authors:
-            let viewController = component.viewBuilder.makeAuthorsCollectionViewController(router: anyRouter)
+            let viewController = component.viewBuilder.makeAuthorsCollectionViewController(router: unownedRouter)
             return .push(viewController)
 
         case .authorDetail(let authorMetaData, let hasLeftCloseButton):
-            let viewController = component.viewBuilder.makeAuthorDetailViewController(authorMetaData: authorMetaData, hasLeftCloseButton: hasLeftCloseButton, router: anyRouter)
+            let viewController = component.viewBuilder.makeAuthorDetailViewController(authorMetaData: authorMetaData, hasLeftCloseButton: hasLeftCloseButton, router: unownedRouter)
             return .push(viewController)
 
         case .videoDetail(let videoMetaData):

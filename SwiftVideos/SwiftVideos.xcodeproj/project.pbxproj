@@ -926,6 +926,7 @@
 				"$(SRCROOT)/../Carthage/Build/iOS/Differentiator.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/MarkdownView.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/LXVimeoKit.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/XCoordinatorRx.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -947,6 +948,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MarkdownView.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LXVimeoKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XCoordinatorRx.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

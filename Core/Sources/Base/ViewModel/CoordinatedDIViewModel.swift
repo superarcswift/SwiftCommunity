@@ -11,7 +11,7 @@ import XCoordinator
 /// Protocol adding coordinators into ViewModels.
 public protocol CoordinatedViewModelProtocol where Self: ViewModel {
     associatedtype RouteType: Route
-    var router: AnyRouter<RouteType> { get }
+    var router: UnownedRouter<RouteType> { get }
 }
 
 /// Protocol defining dependencies for a ViewModel.
@@ -25,11 +25,11 @@ public class CoordinatedViewModel<R: Route>: ViewModel, CoordinatedViewModelProt
 
     // MARK: Properties
 
-    public var router: AnyRouter<R>
+    public var router: UnownedRouter<R>
 
     // MARK: Initialization
 
-    public init(router: AnyRouter<R>) {
+    public init(router: UnownedRouter<R>) {
         self.router = router
         super.init()
     }
@@ -58,11 +58,11 @@ open class CoordinatedDIViewModel<R: Route, D>: DIViewModel<D>, CoordinatedViewM
     // Public
 
     public var activity = Activity()
-    public var router: AnyRouter<R>
+    public var router: UnownedRouter<R>
 
     // MARK: Initialization
 
-    public init(router: AnyRouter<R>, dependency: D) {
+    public init(router: UnownedRouter<R>, dependency: D) {
         self.router = router
         super.init(dependency: dependency)
     }
