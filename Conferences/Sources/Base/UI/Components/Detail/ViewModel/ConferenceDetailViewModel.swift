@@ -75,7 +75,7 @@ public class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute,
 
     // MARK: Initialization
 
-    init(conferenceMetaData: ConferenceMetaData, router: AnyRouter<ConferencesRoute>, dependency: ConferencesDependency) {
+    init(conferenceMetaData: ConferenceMetaData, router: UnownedRouter<ConferencesRoute>, dependency: ConferencesDependency) {
         self.conferenceMetaData = conferenceMetaData
         super.init(router: router, dependency: dependency)
     }

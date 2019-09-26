@@ -75,7 +75,7 @@ class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency
 
     // MARK: Initialization
 
-    init(router: AnyRouter<VideosRoute>, dependency: VideosDependency, videoMetaData: VideoMetaData) {
+    init(router: UnownedRouter<VideosRoute>, dependency: VideosDependency, videoMetaData: VideoMetaData) {
         self.videoMetaData = videoMetaData
         super.init(router: router, dependency: dependency)
     }

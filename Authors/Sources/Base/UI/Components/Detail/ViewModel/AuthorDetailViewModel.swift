@@ -73,7 +73,7 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
 
     // MARK: Initialization
 
-    init(authorMetaData: AuthorMetaData, router: AnyRouter<AuthorsRoute>, dependency: AuthorsDependency) {
+    init(authorMetaData: AuthorMetaData, router: UnownedRouter<AuthorsRoute>, dependency: AuthorsDependency) {
         self.authorMetaData = authorMetaData
         super.init(router: router, dependency: dependency)
     }

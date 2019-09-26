@@ -14,14 +14,14 @@ typealias OnboardingDependency = HasGitService
 
 /// Protocol used to mock for testing purpose.
 protocol OnboardingViewBuilder: ViewBuildable {
-    func makeOnboardingViewController(router: AnyRouter<OnboardingRoute>) -> OnboardingViewController
+    func makeOnboardingViewController(router: UnownedRouter<OnboardingRoute>) -> OnboardingViewController
 }
 
 class OnboardingComponent: Component<OnboardingDependency, OnboardingViewBuilder, EmptyInterface, EmptyComponentRoute>, OnboardingViewBuilder {
 
     // MARK: APIs
 
-    func makeOnboardingViewController(router: AnyRouter<OnboardingRoute>) -> OnboardingViewController {
+    func makeOnboardingViewController(router: UnownedRouter<OnboardingRoute>) -> OnboardingViewController {
         let viewController = OnboardingViewController.instantiate(with: context.viewControllerContext)
         let viewModel = OnboardingViewModel(router: router, dependency: dependency)
         viewController.viewModel = viewModel

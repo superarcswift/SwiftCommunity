@@ -16,7 +16,7 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
 
     // MARK: APIs
 
-    func makeAuthorsCollectionViewController(router: AnyRouter<AuthorsRoute>) -> AuthorsCollectionViewController {
+    func makeAuthorsCollectionViewController(router: UnownedRouter<AuthorsRoute>) -> AuthorsCollectionViewController {
 
         let viewController = AuthorsCollectionViewController.instantiate(with: context.viewControllerContext)
         let viewModel = AuthorsCollectionViewModel(router: router, dependency: dependency)
@@ -25,7 +25,7 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
         return viewController
     }
 
-    func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController {
+    func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: UnownedRouter<AuthorsRoute>) -> AuthorDetailViewController {
         let viewController = AuthorDetailViewController.instantiate(with: context.viewControllerContext)
         let viewModel = AuthorDetailViewModel(authorMetaData: authorMetaData, router: router, dependency: dependency)
         viewController.viewModel = viewModel
@@ -42,8 +42,8 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
 // MARK: - AuthorsViewBuilder
 
 protocol AuthorsViewBuilder: ViewBuildable {
-    func makeAuthorsCollectionViewController(router: AnyRouter<AuthorsRoute>) -> AuthorsCollectionViewController
-    func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: AnyRouter<AuthorsRoute>) -> AuthorDetailViewController
+    func makeAuthorsCollectionViewController(router: UnownedRouter<AuthorsRoute>) -> AuthorsCollectionViewController
+    func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: UnownedRouter<AuthorsRoute>) -> AuthorDetailViewController
 }
 
 // MARK: AuthorsInterfaceProtocol

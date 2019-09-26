@@ -80,7 +80,7 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
 
     // MARK: Initialization
 
-    init(router: AnyRouter<VideosRoute>, dependency: VideosDependency, conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?) {
+    init(router: UnownedRouter<VideosRoute>, dependency: VideosDependency, conferenceMetaData: ConferenceMetaData?, conferenceEdition: ConferenceEdition?) {
         self.conferenceMetaData = conferenceMetaData
         self.conferenceEdition = conferenceEdition
         super.init(router: router, dependency: dependency)
