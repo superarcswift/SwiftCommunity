@@ -2,7 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-@testable import SwiftVideos
+@testable import SwiftCommunity
 @testable import Core
 import XCoordinator
 import RxTest

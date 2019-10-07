@@ -23,7 +23,7 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 - View a list of iOS/Swift related conferences.
 - View a list of videos of conferences.
 - View a list of speakers of conferences.
-- Use git to manage the json database (Content is hosted at [SwiftVideosContent](https://github.com/superarcswift/SwiftVideosContent)).
+- Use git to manage the json database (Content is hosted at [SwiftCommunityContent](https://github.com/superarcswift/SwiftCommunityContent)).
 
 ## Technologies
 
@@ -33,7 +33,7 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 - Xcode 10+
 - 3rd Party Dependencies:
 	- **SuperArc**: PromiseKit, RxSwift, Action, RxCocoa, NotificationBanner, Kingfisher.
-	- **SwiftVideos**: RxDataSources, XCoordinator, objective-git, YoutubeKit, LXVimeoKit, MarkdownView.
+	- **SwiftCommunity**: RxDataSources, XCoordinator, objective-git, YoutubeKit, LXVimeoKit, MarkdownView.
 
 
 ### Tests
@@ -69,7 +69,7 @@ When building an iOS app, developers normally starts with a single workspace/pro
 - [ ] **feature modules**: built using **foundation modules**, responsible for user-facing features.
 - [ ] Clean architecture (at module level): separation of UI, domain logics and platform logics.
 
-![Architecture](https://github.com/superarcswift/SwiftVideos/raw/master/Assets/Documentation/superarc.png)
+![Architecture](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/Documentation/superarc.png)
 
 ### ViewModel
 
@@ -109,7 +109,7 @@ After cloning the repository. Run the following command from the root folder of 
 swift run --package-path Tools/Bootstrap/ Bootstrap .
 ```
 
-After this, you can open `SwiftVideos.xcworkspace` and run the `SwiftVideos` target to start the app.
+After this, you can open `SwiftCommunity.xcworkspace` and run the `SwiftCommunity` target to start the app.
 
 ## Authors
 
@@ -148,4 +148,4 @@ This project is very opinionated and probably not suitable for all kinds of iOS 
 
 ## License
 
-MIT License. See [LICENSE](https://github.com/superarcswift/SwiftVideos/blob/master/LICENSE)
+MIT License. See [LICENSE](https://github.com/superarcswift/SwiftCommunity/blob/master/LICENSE)
