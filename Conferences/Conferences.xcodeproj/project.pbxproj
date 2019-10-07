@@ -684,7 +684,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = mh_dylib;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftVideos.Conferences;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftCommunity.Conferences;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -712,7 +712,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = mh_dylib;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftVideos.Conferences;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftCommunity.Conferences;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

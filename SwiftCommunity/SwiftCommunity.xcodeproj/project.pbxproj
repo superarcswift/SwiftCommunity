@@ -1233,7 +1233,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftVideosTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftCommunityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1257,7 +1257,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftVideosTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftCommunityTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1278,11 +1278,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftVideosUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftCommunityUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SwiftVideos;
+				TEST_TARGET_NAME = SwiftCommunity;
 			};
 			name = Debug;
 		};
@@ -1299,11 +1299,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftVideosUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftCommunityUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SwiftVideos;
+				TEST_TARGET_NAME = SwiftCommunity;
 			};
 			name = Release;
 		};
