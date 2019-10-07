@@ -61,7 +61,7 @@ public class GitService: Service, GitServiceProtocol {
         self.context = context
         self.remoteRepositoryURL = remoteRepositoryURL
 
-        queue = DispatchQueue(label: "com.tba.swiftvideos.gitservice", qos: .userInitiated)
+        queue = DispatchQueue(label: "com.tba.swiftcommunity.gitservice", qos: .userInitiated)
         filePathProvider = FilePathProvider(baseLocalRepositoryPath: baseLocalRepositoryPath, remoteRepositoryURL: remoteRepositoryURL)
         print(baseLocalRepositoryPath)
     }

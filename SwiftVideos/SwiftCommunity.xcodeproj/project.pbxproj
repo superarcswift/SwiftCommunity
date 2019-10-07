@@ -260,14 +260,14 @@
 		F6DFE6B922FA26960091ECE8 /* OnboardingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingComponent.swift; sourceTree = "<group>"; };
 		F6DFE6BD22FA35D90091ECE8 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		F6E2323C230A87F7003FBFA5 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
-		F6E8D15E22CA9EC900213675 /* SwiftVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E8D15E22CA9EC900213675 /* SwiftCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D16122CA9EC900213675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E8D16822CA9ECA00213675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6E8D16B22CA9ECA00213675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6E8D16D22CA9ECA00213675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6E8D17222CA9ECA00213675 /* SwiftVideosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVideosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E8D17222CA9ECA00213675 /* SwiftCommunityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCommunityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D17822CA9ECA00213675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6E8D17D22CA9ECA00213675 /* SwiftVideosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVideosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E8D17D22CA9ECA00213675 /* SwiftCommunityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCommunityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D18122CA9ECA00213675 /* ConferencesPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesPageTests.swift; sourceTree = "<group>"; };
 		F6E8D18322CA9ECA00213675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6EFBFD3230D62B5004C2D0A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -708,9 +708,9 @@
 		F6E8D15F22CA9EC900213675 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6E8D15E22CA9EC900213675 /* SwiftVideos.app */,
-				F6E8D17222CA9ECA00213675 /* SwiftVideosTests.xctest */,
-				F6E8D17D22CA9ECA00213675 /* SwiftVideosUITests.xctest */,
+				F6E8D15E22CA9EC900213675 /* SwiftCommunity.app */,
+				F6E8D17222CA9ECA00213675 /* SwiftCommunityTests.xctest */,
+				F6E8D17D22CA9ECA00213675 /* SwiftCommunityUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -747,9 +747,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F6E8D15D22CA9EC900213675 /* SwiftVideos */ = {
+		F6E8D15D22CA9EC900213675 /* SwiftCommunity */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6E8D18622CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftVideos" */;
+			buildConfigurationList = F6E8D18622CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftCommunity" */;
 			buildPhases = (
 				F6E8D15A22CA9EC900213675 /* Sources */,
 				F6E8D15B22CA9EC900213675 /* Frameworks */,
@@ -762,14 +762,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftVideos;
+			name = SwiftCommunity;
 			productName = SwiftVideos;
-			productReference = F6E8D15E22CA9EC900213675 /* SwiftVideos.app */;
+			productReference = F6E8D15E22CA9EC900213675 /* SwiftCommunity.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F6E8D17122CA9ECA00213675 /* SwiftVideosTests */ = {
+		F6E8D17122CA9ECA00213675 /* SwiftCommunityTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6E8D18922CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftVideosTests" */;
+			buildConfigurationList = F6E8D18922CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftCommunityTests" */;
 			buildPhases = (
 				F6E8D16E22CA9ECA00213675 /* Sources */,
 				F6E8D16F22CA9ECA00213675 /* Frameworks */,
@@ -781,14 +781,14 @@
 			dependencies = (
 				F6E8D17422CA9ECA00213675 /* PBXTargetDependency */,
 			);
-			name = SwiftVideosTests;
+			name = SwiftCommunityTests;
 			productName = SwiftVideosTests;
-			productReference = F6E8D17222CA9ECA00213675 /* SwiftVideosTests.xctest */;
+			productReference = F6E8D17222CA9ECA00213675 /* SwiftCommunityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F6E8D17C22CA9ECA00213675 /* SwiftVideosUITests */ = {
+		F6E8D17C22CA9ECA00213675 /* SwiftCommunityUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6E8D18C22CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftVideosUITests" */;
+			buildConfigurationList = F6E8D18C22CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftCommunityUITests" */;
 			buildPhases = (
 				F6E8D17922CA9ECA00213675 /* Sources */,
 				F6E8D17A22CA9ECA00213675 /* Frameworks */,
@@ -800,9 +800,9 @@
 			dependencies = (
 				F6E8D17F22CA9ECA00213675 /* PBXTargetDependency */,
 			);
-			name = SwiftVideosUITests;
+			name = SwiftCommunityUITests;
 			productName = SwiftVideosUITests;
-			productReference = F6E8D17D22CA9ECA00213675 /* SwiftVideosUITests.xctest */;
+			productReference = F6E8D17D22CA9ECA00213675 /* SwiftCommunityUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -829,7 +829,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F6E8D15922CA9EC900213675 /* Build configuration list for PBXProject "SwiftVideos" */;
+			buildConfigurationList = F6E8D15922CA9EC900213675 /* Build configuration list for PBXProject "SwiftCommunity" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -844,9 +844,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F6E8D15D22CA9EC900213675 /* SwiftVideos */,
-				F6E8D17122CA9ECA00213675 /* SwiftVideosTests */,
-				F6E8D17C22CA9ECA00213675 /* SwiftVideosUITests */,
+				F6E8D15D22CA9EC900213675 /* SwiftCommunity */,
+				F6E8D17122CA9ECA00213675 /* SwiftCommunityTests */,
+				F6E8D17C22CA9ECA00213675 /* SwiftCommunityUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1024,12 +1024,12 @@
 /* Begin PBXTargetDependency section */
 		F6E8D17422CA9ECA00213675 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F6E8D15D22CA9EC900213675 /* SwiftVideos */;
+			target = F6E8D15D22CA9EC900213675 /* SwiftCommunity */;
 			targetProxy = F6E8D17322CA9ECA00213675 /* PBXContainerItemProxy */;
 		};
 		F6E8D17F22CA9ECA00213675 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F6E8D15D22CA9EC900213675 /* SwiftVideos */;
+			target = F6E8D15D22CA9EC900213675 /* SwiftCommunity */;
 			targetProxy = F6E8D17E22CA9ECA00213675 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1185,14 +1185,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7F8866H6R9;
+				DEVELOPMENT_TEAM = 36ML5F3NSU;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftVideos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftCommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1204,14 +1204,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7F8866H6R9;
+				DEVELOPMENT_TEAM = 36ML5F3NSU;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftVideos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftCommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1238,7 +1238,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftVideos.app/SwiftVideos";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftCommunity.app/SwiftCommunity";
 			};
 			name = Debug;
 		};
@@ -1261,7 +1261,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftVideos.app/SwiftVideos";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftCommunity.app/SwiftCommunity";
 			};
 			name = Release;
 		};
@@ -1310,7 +1310,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F6E8D15922CA9EC900213675 /* Build configuration list for PBXProject "SwiftVideos" */ = {
+		F6E8D15922CA9EC900213675 /* Build configuration list for PBXProject "SwiftCommunity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6E8D18422CA9ECA00213675 /* Debug */,
@@ -1319,7 +1319,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6E8D18622CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftVideos" */ = {
+		F6E8D18622CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftCommunity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6E8D18722CA9ECA00213675 /* Debug */,
@@ -1328,7 +1328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6E8D18922CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftVideosTests" */ = {
+		F6E8D18922CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftCommunityTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6E8D18A22CA9ECA00213675 /* Debug */,
@@ -1337,7 +1337,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6E8D18C22CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftVideosUITests" */ = {
+		F6E8D18C22CA9ECA00213675 /* Build configuration list for PBXNativeTarget "SwiftCommunityUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6E8D18D22CA9ECA00213675 /* Debug */,
