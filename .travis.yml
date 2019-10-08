@@ -3,4 +3,4 @@ osx_image: xcode11
 install:
   - bundle install
 script:
-  - fastlane test
+  - fastlane tests
