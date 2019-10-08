@@ -20,6 +20,6 @@ struct GitRepositoryConfiguration: GitRepositoryConfigurationProtocol {
     // MARK: APIs
 
     var url: URL {
-        return URL(string: "https://github.com/superarcswift/SwiftVideosContent")!
+        return URL(string: "https://github.com/superarcswift/SwiftCommunityContent")!
     }
 }

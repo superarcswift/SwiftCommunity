@@ -5,7 +5,7 @@
       location = "container:"
       name = "SwiftCommunity">
       <FileRef
-         location = "group:/Users/atran/Desktop/Projects/iOS/SwiftVideos/SwiftCommunity/SwiftCommunity.xcodeproj">
+         location = "group:SwiftCommunity/SwiftCommunity.xcodeproj">
       </FileRef>
       <Group
          location = "container:"
