@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode11
 install:
-  - bundle install --deployment
+  - bundle install
 script:
   - fastlane test
