@@ -25,7 +25,7 @@ platform :ios do
     end
 
     lane :beta do
-        build_app(scheme: "SwiftCommunity")
+        build_app(workspace: "SwiftCommunity.xcworkspace", scheme: "SwiftCommunity")
         upload_to_testflight
     end
 end
