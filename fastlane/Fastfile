@@ -20,12 +20,13 @@ platform :ios do
 
     lane :tests do
         run_tests(workspace: "SwiftCommunity.xcworkspace",
-                devices: ["iPhone 11"],
-                scheme: "SwiftCommunity")
+                  devices: ["iPhone 11"],
+                  scheme: "SwiftCommunity")
     end
 
     lane :beta do
-        build_app(workspace: "SwiftCommunity.xcworkspace", scheme: "SwiftCommunity")
+        build_app(workspace: "SwiftCommunity.xcworkspace",
+                  scheme: "SwiftCommunity")
         upload_to_testflight
     end
 end

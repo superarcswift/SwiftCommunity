@@ -4,4 +4,3 @@ install:
   - bundle install
 script:
   - swift run --package-path Tools/Bootstrap/ Bootstrap .
-  - fastlane tests
