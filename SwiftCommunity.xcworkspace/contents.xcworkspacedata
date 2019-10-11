@@ -3,9 +3,9 @@
    version = "1.0">
    <Group
       location = "container:"
-      name = "SwiftVideos">
+      name = "SwiftCommunity">
       <FileRef
-         location = "group:SwiftVideos/SwiftVideos.xcodeproj">
+         location = "group:SwiftCommunity/SwiftCommunity.xcodeproj">
       </FileRef>
       <Group
          location = "container:"

@@ -1,4 +1,4 @@
-## SwiftVideos
+## SwiftCommunity
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![License](https://img.shields.io/badge/Swift-5.0-blue.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +11,7 @@ This project serves as a showcase for **the SuperArc project (TSP)**.
 
 **TSP** aims to standardize many common building blocks which can help developers to kickstart new iOS projects quickly.
 
-The goal is to have a set of modules to create a component-based MVVM-C (Model-View-ViewModel-Coordinator) architecture for iOS apps. The modules are intended to use together but each module should be able to be integrated into any other iOS projects. This setup is incredibly useful when you create multiple apps which share some same features/functionalities. For more information about the SuperArc project, please take a look at [here](https://github.com/superarcswift/SwiftVideos).
+The goal is to have a set of modules to create a component-based MVVM-C (Model-View-ViewModel-Coordinator) architecture for iOS apps. The modules are intended to use together but each module should be able to be integrated into any other iOS projects. This setup is incredibly useful when you create multiple apps which share some same features/functionalities. For more information about the SuperArc project, please take a look at [here](https://github.com/superarcswift/SwiftCommunity).
 
 ## Content
 
@@ -23,7 +23,7 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 - View a list of iOS/Swift related conferences.
 - View a list of videos of conferences.
 - View a list of speakers of conferences.
-- Use git to manage the json database (Content is hosted at [SwiftVideosContent](https://github.com/superarcswift/SwiftVideosContent)).
+- Use git to manage the json database (Content is hosted at [SwiftCommunityContent](https://github.com/superarcswift/SwiftCommunityContent)).
 
 ## Technologies
 
@@ -33,7 +33,7 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 - Xcode 10+
 - 3rd Party Dependencies:
 	- **SuperArc**: PromiseKit, RxSwift, Action, RxCocoa, NotificationBanner, Kingfisher.
-	- **SwiftVideos**: RxDataSources, XCoordinator, objective-git, YoutubeKit, LXVimeoKit, MarkdownView.
+	- **SwiftCommunity**: RxDataSources, XCoordinator, objective-git, YoutubeKit, LXVimeoKit, MarkdownView.
 
 
 ### Tests
@@ -69,7 +69,7 @@ When building an iOS app, developers normally starts with a single workspace/pro
 - [ ] **feature modules**: built using **foundation modules**, responsible for user-facing features.
 - [ ] Clean architecture (at module level): separation of UI, domain logics and platform logics.
 
-![Architecture](https://github.com/superarcswift/SwiftVideos/raw/master/Assets/Documentation/superarc.png)
+![Architecture](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/Documentation/superarc.png)
 
 ### ViewModel
 
@@ -109,7 +109,7 @@ After cloning the repository. Run the following command from the root folder of 
 swift run --package-path Tools/Bootstrap/ Bootstrap .
 ```
 
-After this, you can open `SwiftVideos.xcworkspace` and run the `SwiftVideos` target to start the app.
+After this, you can open `SwiftCommunity.xcworkspace` and run the `SwiftCommunity` target to start the app.
 
 ## Authors
 
@@ -148,4 +148,4 @@ This project is very opinionated and probably not suitable for all kinds of iOS 
 
 ## License
 
-MIT License. See [LICENSE](https://github.com/superarcswift/SwiftVideos/blob/master/LICENSE)
+MIT License. See [LICENSE](https://github.com/superarcswift/SwiftCommunity/blob/master/LICENSE)
