@@ -25,13 +25,13 @@ class VideosPageTests: UITestCase, PageTestable, PageSnapshotable {
     }
 
     override func navigateToPage() {
-        XCUIApplication().tabBars.buttons["Videos"].tap()
+        app.tabBars.buttons["Videos"].tap()
     }
 
     // MARK: Tests
 
     func testPageIsLoaded() {
         expect(self.page.isLoaded).toEventually(beTrue())
-        snapshot("02VideosScreen")
+        snapshot("02_VideosScreen")
     }
 }

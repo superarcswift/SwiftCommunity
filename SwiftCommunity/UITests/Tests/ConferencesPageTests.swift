@@ -20,13 +20,12 @@ class ConferencesPageTests: UITestCase, PageTestable, PageSnapshotable {
         super.tearDown()
     }
 
-    override func navigateToPage() {
-    }
+    override func navigateToPage() {}
 
     // MARK: Tests
 
     func testPageIsLoaded() {
         expect(self.page.isLoaded).toEventually(beTrue())
-        snapshot("01ConferencesScreen")
+        snapshot("01_ConferencesScreen")
     }
 }

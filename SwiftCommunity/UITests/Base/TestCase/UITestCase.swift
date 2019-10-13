@@ -19,6 +19,8 @@ class UITestCase: XCTestCase {
         case long = 10
     }
 
+    let app = XCUIApplication()
+
     // MARK: Setup
 
     override func setUp() {
@@ -26,7 +28,6 @@ class UITestCase: XCTestCase {
 
         continueAfterFailure = false
 
-        let app = XCUIApplication()
         if self is PageSnapshotable {
             setupSnapshot(app)
         }

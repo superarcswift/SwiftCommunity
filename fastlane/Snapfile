@@ -1,17 +1,15 @@
 # Uncomment the lines below you want to change by removing the # in the beginning
 
+# Reset the simulators
+erase_simulator(true)
+
 # A list of devices you want to take the screenshots from
 devices([
-  "iPhone 8",
-  "iPhone 8 Plus",
-  "iPhone SE",
   "iPhone X"
 ])
 
 languages([
-  "en-US",
-  "de-DE",
-  "vi-VN"
+  "en-US"
 ])
 
 # The name of the scheme which contains the UI Tests

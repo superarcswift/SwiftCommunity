@@ -25,13 +25,13 @@ class AuthorsPageTests: UITestCase, PageTestable, PageSnapshotable {
     }
 
     override func navigateToPage() {
-        XCUIApplication().tabBars.buttons["Authors"].tap()
+        app.tabBars.buttons["Authors"].tap()
     }
 
     // MARK: Tests
 
     func testPageIsLoaded() {
         expect(self.page.isLoaded).toEventually(beTrue())
-        snapshot("01AuthorsScreen")
+        snapshot("03_AuthorsScreen")
     }
 }
