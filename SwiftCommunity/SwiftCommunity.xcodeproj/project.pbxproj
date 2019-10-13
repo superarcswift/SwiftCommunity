@@ -33,6 +33,7 @@
 		F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E705F2305EB98005D066D /* MoreViewModel.swift */; };
 		F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; };
 		F64E7093230603D1005D066D /* SuperArcActivityIndicator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6594AB423535B5700F1F8EA /* Transition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6594AB323535B5700F1F8EA /* Transition+Extensions.swift */; };
 		F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C905122E084BC006CA2BB /* AppCoordinator.swift */; };
 		F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C905322E09DF2006CA2BB /* DashboardCoordinator.swift */; };
 		F66C90B922E1ADF9006CA2BB /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66C90B822E1ADF9006CA2BB /* More.storyboard */; };
@@ -207,6 +208,7 @@
 		F646EBD923212DA300792DB5 /* GitRepositoryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepositoryConfiguration.swift; sourceTree = "<group>"; };
 		F64E705F2305EB98005D066D /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcActivityIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6594AB323535B5700F1F8EA /* Transition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition+Extensions.swift"; sourceTree = "<group>"; };
 		F66C905122E084BC006CA2BB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F66C905322E09DF2006CA2BB /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 		F66C90B822E1ADF9006CA2BB /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
@@ -462,6 +464,14 @@
 			path = Engine;
 			sourceTree = "<group>";
 		};
+		F6594AB223535B4200F1F8EA /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				F6594AB323535B5700F1F8EA /* Transition+Extensions.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		F66C90B722E1ADE7006CA2BB /* More */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +550,7 @@
 		F66C916E22E66EAA006CA2BB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F6594AB223535B4200F1F8EA /* Transition */,
 				F63A71F022F220BB005D0778 /* Animation */,
 			);
 			path = UI;
@@ -975,6 +986,7 @@
 				F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */,
 				F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */,
 				F609679C23245951009570CF /* ComponentsRouter+Authors.swift in Sources */,
+				F6594AB423535B5700F1F8EA /* Transition+Extensions.swift in Sources */,
 				F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */,
 				F63A720B22F4179B005D0778 /* Constants.swift in Sources */,
 				F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */,

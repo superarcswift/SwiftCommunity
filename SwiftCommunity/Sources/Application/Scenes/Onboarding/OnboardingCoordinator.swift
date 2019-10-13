@@ -33,7 +33,7 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
 
         case .dashboard:
             let dashboardCoordinator = DashboardCoordinator(context: component.context)
-            return .present(dashboardCoordinator, animation: .fade)
+            return .presentFullScreen(dashboardCoordinator, animation: .fade)
         }
     }
 }
