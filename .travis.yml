@@ -18,5 +18,5 @@ install:
 
 script:
   - swift run --package-path Tools/Bootstrap/ Bootstrap .
-  - bundle exec fastlane tests
+  #- bundle exec fastlane tests
   - swift run danger-swift ci
