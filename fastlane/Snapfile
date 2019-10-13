@@ -5,7 +5,7 @@ erase_simulator(true)
 clear_previous_screenshots(true)
 
 devices([
-  "iPhone X"
+  "iPhone 11"
 ])
 
 languages([
