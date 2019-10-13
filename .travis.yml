@@ -6,6 +6,8 @@ cache:
     - .build
     # Danger Swift plugins
     - ~/.danger-swift
+    # Cathage
+    - Carthage
 
 osx_image: xcode11
 
@@ -13,6 +15,8 @@ install:
   - bundle install
   - node -v
   - npm install -g danger@7.1.4
+
 script:
   - swift run --package-path Tools/Bootstrap/ Bootstrap .
-  - danger-swift ci
+  - bundle exec fastlane tests
+  - swift run danger-swift ci
