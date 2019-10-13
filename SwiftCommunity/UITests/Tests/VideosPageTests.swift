@@ -6,7 +6,7 @@ import XCTest
 import Quick
 import Nimble
 
-class VideosPageTests: UITestCase, PageTestable {
+class VideosPageTests: UITestCase, PageTestable, PageSnapshotable {
 
     // MARK: Properties
 
@@ -32,5 +32,6 @@ class VideosPageTests: UITestCase, PageTestable {
 
     func testPageIsLoaded() {
         expect(self.page.isLoaded).toEventually(beTrue())
+        snapshot("02VideosScreen")
     }
 }

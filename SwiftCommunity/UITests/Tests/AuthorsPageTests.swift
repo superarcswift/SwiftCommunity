@@ -6,7 +6,7 @@ import XCTest
 import Quick
 import Nimble
 
-class AuthorsPageTests: UITestCase, PageTestable {
+class AuthorsPageTests: UITestCase, PageTestable, PageSnapshotable {
 
     // MARK: Properties
 
@@ -32,5 +32,6 @@ class AuthorsPageTests: UITestCase, PageTestable {
 
     func testPageIsLoaded() {
         expect(self.page.isLoaded).toEventually(beTrue())
+        snapshot("01AuthorsScreen")
     }
 }

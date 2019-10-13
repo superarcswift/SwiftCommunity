@@ -6,7 +6,7 @@ import XCTest
 import Quick
 import Nimble
 
-class ConferencesPageTests: UITestCase, PageTestable {
+class ConferencesPageTests: UITestCase, PageTestable, PageSnapshotable {
 
     var page: ConferencesPage!
 
@@ -27,5 +27,6 @@ class ConferencesPageTests: UITestCase, PageTestable {
 
     func testPageIsLoaded() {
         expect(self.page.isLoaded).toEventually(beTrue())
+        snapshot("01ConferencesScreen")
     }
 }

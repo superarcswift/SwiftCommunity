@@ -10,6 +10,8 @@ protocol PageTestable {
     var page: PageType! { get set }
 }
 
+protocol PageSnapshotable {}
+
 class UITestCase: XCTestCase {
 
     enum TimeOut: Double {
@@ -23,7 +25,12 @@ class UITestCase: XCTestCase {
         super.setUp()
 
         continueAfterFailure = false
-        XCUIApplication().launch()
+
+        let app = XCUIApplication()
+        if self is PageSnapshotable {
+            setupSnapshot(app)
+        }
+        app.launch()
 
         navigateToPage()
     }
