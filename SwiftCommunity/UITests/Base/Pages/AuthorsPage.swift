@@ -7,6 +7,6 @@ import XCTest
 class AuthorsPage: PageObject {
 
     var loadedElement: XCUIElement {
-        return XCUIApplication().navigationBars["Authors"].otherElements["Authors"]
+        return XCUIApplication().navigationBars["Authors"].staticTexts["Authors"]
     }
 }

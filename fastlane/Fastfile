@@ -24,6 +24,12 @@ platform :ios do
                   scheme: "SwiftCommunity")
     end
 
+    lane :screenshots do
+        capture_screenshots
+        #frame_screenshots(white: true)
+        #upload_to_app_store
+    end
+
     lane :beta do
         build_app(workspace: "SwiftCommunity.xcworkspace",
                   scheme: "SwiftCommunity")

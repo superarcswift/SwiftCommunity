@@ -7,6 +7,6 @@ import XCTest
 class VideosPage: PageObject {
 
     var loadedElement: XCUIElement {
-        return XCUIApplication().navigationBars["Videos"].otherElements["Videos"]
+        return XCUIApplication().navigationBars["Videos"].staticTexts["Videos"]
     }
 }

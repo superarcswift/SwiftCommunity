@@ -6,7 +6,7 @@ import XCTest
 import Quick
 import Nimble
 
-class AuthorsPageTests: UITestCase, PageTestable {
+class AuthorsPageTests: UITestCase, PageTestable, PageSnapshotable {
 
     // MARK: Properties
 
@@ -25,12 +25,13 @@ class AuthorsPageTests: UITestCase, PageTestable {
     }
 
     override func navigateToPage() {
-        XCUIApplication().tabBars.buttons["Authors"].tap()
+        app.tabBars.buttons["Authors"].tap()
     }
 
     // MARK: Tests
 
     func testPageIsLoaded() {
         expect(self.page.isLoaded).toEventually(beTrue())
+        snapshot("03_AuthorsScreen")
     }
 }

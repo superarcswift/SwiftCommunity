@@ -1,0 +1,15 @@
+# Uncomment the lines below you want to change by removing the # in the beginning
+
+erase_simulator(true)
+
+clear_previous_screenshots(true)
+
+devices([
+  "iPhone 11"
+])
+
+languages([
+  "en-US"
+])
+
+scheme("SwiftCommunityUITests")

@@ -6,7 +6,7 @@ import XCTest
 import Quick
 import Nimble
 
-class ConferencesPageTests: UITestCase, PageTestable {
+class ConferencesPageTests: UITestCase, PageTestable, PageSnapshotable {
 
     var page: ConferencesPage!
 
@@ -20,12 +20,12 @@ class ConferencesPageTests: UITestCase, PageTestable {
         super.tearDown()
     }
 
-    override func navigateToPage() {
-    }
+    override func navigateToPage() {}
 
     // MARK: Tests
 
     func testPageIsLoaded() {
         expect(self.page.isLoaded).toEventually(beTrue())
+        snapshot("01_ConferencesScreen")
     }
 }
