@@ -41,4 +41,5 @@ overridden_super_call:
     - appWillEnterForeground()
 
 excluded:
+  - .build
   - Carthage

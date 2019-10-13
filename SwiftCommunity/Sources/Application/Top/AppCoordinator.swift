@@ -30,7 +30,7 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
     override func prepareTransition(for route: AppRoute) -> NavigationTransition {
         switch route {
         case .onboarding:
-            return .present(onboardingCoordinator)
+            return .presentFullScreen(onboardingCoordinator)
         }
     }
 }

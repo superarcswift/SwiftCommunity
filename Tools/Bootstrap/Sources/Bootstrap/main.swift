@@ -7,7 +7,7 @@ import Rainbow
 
 func runCarthage(in folder: Folder) {
     do {
-        try runAndPrint(bash: "pushd \(folder.path) && carthage bootstrap --platform iOS --no-use-binaries --cache-builds && popd")
+        try runAndPrint(bash: "pushd \(folder.path) && carthage update --platform iOS --cache-builds && popd")
     } catch {
         print("\(error)")
     }
