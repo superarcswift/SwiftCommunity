@@ -10,7 +10,6 @@ import SuperArcCore
 import SuperArcFoundation
 import XCoordinator
 
-
 // MARK: - VideosComponent
 
 class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInterfaceProtocol, VideosComponentRoute>, VideosViewBuilder {
