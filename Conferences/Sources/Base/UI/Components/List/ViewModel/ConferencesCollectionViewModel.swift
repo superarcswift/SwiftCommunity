@@ -75,7 +75,8 @@ public class ConferencesCollectionViewModel: CoordinatedDIViewModel<ConferencesR
         dependency.conferencesService.fetchList()
             .mapValues {
                 ConferenceViewModel(conferenceMetaData: $0, conferencesService: self.dependency.conferencesService)
-            }.done { [weak self] conferences in
+            }
+            .done { [weak self] conferences in
                 self?.conferences.accept(conferences)
             }
             .catch { [weak self] error in

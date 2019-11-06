@@ -87,9 +87,11 @@ public class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute,
             .mapValues { videos -> ConferenceDetailSectionModel in
                 let videoModels = videos.compactMap { VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService, authorsService: self.dependency.authorsService) }
                 return .videosSection(items: videoModels)
-            }.done { [weak self] sectionModel in
+            }
+            .done { [weak self] sectionModel in
                 self?.conferenceEditions.accept(sectionModel)
-            }.catch { [weak self] error in
+            }
+            .catch { [weak self] error in
                 self?.toogleStateView.on(.next(StandardStateViewContext(headline: error.localizedDescription)))
             }
     }

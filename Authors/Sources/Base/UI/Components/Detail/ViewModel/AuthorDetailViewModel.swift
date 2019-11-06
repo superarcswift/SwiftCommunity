@@ -84,7 +84,8 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
         dependency.authorsService.fetchAuthor(with: authorMetaData)
             .done { [weak self] author in
                 self?.authorDetail.accept(author)
-            }.catch { [weak self] _ in
+            }
+            .catch { [weak self] _ in
                 guard let self = self else { return }
                 let fallbackAuthorDetail = AuthorDetail(metaData: self.authorMetaData, resources: [])
                 self.authorDetail.accept(fallbackAuthorDetail)
@@ -93,9 +94,11 @@ class AuthorDetailViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDepende
         dependency.videosService.fetchVideo(page: 1, author: authorMetaData)
             .mapValues {
                 VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService, authorsService: self.dependency.authorsService)
-            }.done { [weak self] videos in
+            }
+            .done { [weak self] videos in
                 self?.videos.accept(videos)
-            }.catch { [weak self] error in
+            }
+            .catch { [weak self] error in
                 self?.toogleVideosStateView.onNext(StandardStateViewContext(headline: error.localizedDescription))
             }
     }

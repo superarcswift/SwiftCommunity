@@ -69,7 +69,8 @@ class AuthorsCollectionViewModel: CoordinatedDIViewModel<AuthorsRoute, AuthorsDe
         dependency.authorsService.fetchList()
             .mapValues {
                 AuthorViewModel(authorMetaData: $0, authorsService: self.dependency.authorsService)
-            }.done { [weak self] authors in
+            }
+            .done { [weak self] authors in
                 self?.authors.accept(authors)
             }
             .catch { [weak self] error in

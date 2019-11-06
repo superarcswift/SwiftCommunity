@@ -102,9 +102,11 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
         dependency.videosService.fetchList()
             .mapValues {
                 VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService, authorsService: self.dependency.authorsService)
-            }.done { [weak self] videos in
+            }
+            .done { [weak self] videos in
                 self?.videos.accept(videos)
-            }.catch { [weak self] error in
+            }
+            .catch { [weak self] error in
                 self?.toogleStateView.onNext(StandardStateViewContext(headline: "No videos found"))
                 self?.notification.onNext(StandardNotification(error: error))
             }
@@ -114,9 +116,11 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
         dependency.videosService.fetchList(conference: conference, edition: edition)
             .mapValues {
                 VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService, authorsService: self.dependency.authorsService)
-            }.done { [weak self] videos in
+            }
+            .done { [weak self] videos in
                 self?.videos.accept(videos)
-            }.catch { [weak self] error in
+            }
+            .catch { [weak self] error in
                 self?.toogleStateView.onNext(StandardStateViewContext(headline: "No videos found for conference \(conference.name)"))
                 self?.notification.onNext(StandardNotification(error: error))
             }

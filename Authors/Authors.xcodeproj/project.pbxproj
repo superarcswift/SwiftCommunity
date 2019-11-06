@@ -255,8 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				F6820492231EFF9000098C20 /* Authors.storyboard */,
-				F6820488231EFF9000098C20 /* Detail */,
 				F6820493231EFF9000098C20 /* List */,
+				F6820488231EFF9000098C20 /* Detail */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -264,9 +264,9 @@
 		F6820488231EFF9000098C20 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				F682048E231EFF9000098C20 /* ViewController */,
 				F6820489231EFF9000098C20 /* ViewModel */,
 				F682048B231EFF9000098C20 /* View */,
-				F682048E231EFF9000098C20 /* ViewController */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -299,8 +299,8 @@
 		F6820493231EFF9000098C20 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				F6820494231EFF9000098C20 /* ViewModel */,
 				F6820496231EFF9000098C20 /* ViewController */,
+				F6820494231EFF9000098C20 /* ViewModel */,
 			);
 			path = List;
 			sourceTree = "<group>";
