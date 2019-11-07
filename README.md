@@ -11,7 +11,7 @@ This project serves as a showcase for **the SuperArc project (TSP)**.
 
 **TSP** aims to standardize many common building blocks which can help developers to kickstart new iOS projects quickly.
 
-The goal is to have a set of modules to create a component-based MVVM-C (Model-View-ViewModel-Coordinator) architecture for iOS apps. The modules are intended to use together but each module should be able to be integrated into any other iOS projects. This setup is incredibly useful when you create multiple apps which share some same features/functionalities. For more information about the SuperArc project, please take a look at [here](https://github.com/superarcswift/SwiftCommunity).
+The goal is to have a set of modules (µComponent) to create a component-based MVVM-C (Model-View-ViewModel-Coordinator) architecture for iOS apps. The modules are intended to use together but each module should be able to be integrated into any other iOS projects. This setup is incredibly useful when you create multiple apps which share some same features/functionalities. For more information about the SuperArc project, please take a look at [here](https://github.com/superarcswift/SwiftCommunity).
 
 ## Content
 
@@ -65,11 +65,13 @@ When building an iOS app, developers normally starts with a single workspace/pro
 
 **TSP** proposes a different approach to modularise the app architecture into foundation and feature modules
 
-- [ ] **foundation modules**: used by other **feature modules**, providing tools and utilities to develop **feature modules**.
-- [ ] **feature modules**: built using **foundation modules**, responsible for user-facing features.
-- [ ] Clean architecture (at module level): separation of UI, domain logics and platform logics.
+- [ ] **foundation µComponent**: used by other **feature µComponent**, providing tools and utilities to develop **feature µComponent**.
+- [ ] **feature µComponent**: built using **foundation µComponent**, responsible for user-facing features.
+- [ ] Clean architecture (at µComponent level): separation of UI, domain logics and platform logics.
 
-![Architecture](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/Documentation/superarc.png)
+![Registration](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/Documentation/registration.png)
+
+![Registration](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/Documentation/navigation.png)
 
 ### ViewModel
 
