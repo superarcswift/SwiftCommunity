@@ -93,6 +93,12 @@ When building an iOS app, developers normally starts with a single workspace/pro
 - Responsible for navigation.
 - Instantiate `Component`.
 
+## Documentation
+Please take 5 minutes to read the presentation to understand the motivation behind SuperArcSwift.
+
+[Presentation](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/Documentation/superarc.pdf)
+
+
 ## Example App
 The example app demonstrates how you can use SuperArc to modularize an simple app by features and layers.
 
