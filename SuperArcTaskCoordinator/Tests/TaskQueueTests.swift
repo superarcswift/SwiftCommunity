@@ -5,9 +5,9 @@
 import XCTest
 @testable import SuperArcTaskCoordinator
 
-class SuperArcTaskQueueTests: XCTestCase {
+class TaskQueueTests: XCTestCase {
 
-    func testQueue() {
+    func testRunTasksInQueue() {
         let expectationTask1 = self.expectation(description: #function)
         let expectationTask2 = self.expectation(description: #function)
 
@@ -24,10 +24,10 @@ class SuperArcTaskQueueTests: XCTestCase {
         taskQueue.run(task1)
         taskQueue.run(task2)
 
-        wait(for: [expectationTask1, expectationTask2], timeout: 2.0, enforceOrder: true)
+        wait(for: [expectationTask1, expectationTask2], timeout: 5.0, enforceOrder: true)
     }
 
-    func testStartAndFinishQueue() {
+    func testStartAndFinishTasksInQueue() {
         let expectationTask1 = self.expectation(description: #function)
         let expectationTask2 = self.expectation(description: #function)
 
@@ -50,10 +50,10 @@ class SuperArcTaskQueueTests: XCTestCase {
         taskQueue.start(task1)
         taskQueue.start(task2)
 
-        wait(for: [expectationTask1, expectationTask2], timeout: 2.0, enforceOrder: true)
+        wait(for: [expectationTask1, expectationTask2], timeout: 5.0, enforceOrder: true)
     }
 
-    func testAccessingResource() {
+    func testAccessingResourceFromTasks() {
         let expectation = self.expectation(description: #function)
 
         var value = 0
@@ -72,6 +72,6 @@ class SuperArcTaskQueueTests: XCTestCase {
 
         taskQueue.start(task1, task2)
 
-        wait(for: [expectation], timeout: 2.0, enforceOrder: true)
+        wait(for: [expectation], timeout: 5.0, enforceOrder: true)
     }
 }

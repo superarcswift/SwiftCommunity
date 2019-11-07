@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F65FD4162373175000521CDD /* SuperArcTaskCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65FD40C2373175000521CDD /* SuperArcTaskCoordinator.framework */; };
-		F65FD41B2373175000521CDD /* SuperArcTaskQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD41A2373175000521CDD /* SuperArcTaskQueueTests.swift */; };
+		F65FD41B2373175000521CDD /* TaskQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD41A2373175000521CDD /* TaskQueueTests.swift */; };
 		F65FD41D2373175000521CDD /* SuperArcTaskCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = F65FD40F2373175000521CDD /* SuperArcTaskCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F65FD4282373179800521CDD /* TaskQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD4272373179800521CDD /* TaskQueue.swift */; };
+		F65FD4322374093A00521CDD /* ResourceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD4312374093A00521CDD /* ResourceMonitor.swift */; };
+		F65FD4352374100D00521CDD /* ResourceMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD43323740F0200521CDD /* ResourceMonitorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +30,11 @@
 		F65FD40F2373175000521CDD /* SuperArcTaskCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcTaskCoordinator.h; sourceTree = "<group>"; };
 		F65FD4102373175000521CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F65FD4152373175000521CDD /* SuperArcTaskCoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcTaskCoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F65FD41A2373175000521CDD /* SuperArcTaskQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcTaskQueueTests.swift; sourceTree = "<group>"; };
+		F65FD41A2373175000521CDD /* TaskQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskQueueTests.swift; sourceTree = "<group>"; };
 		F65FD41C2373175000521CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F65FD4272373179800521CDD /* TaskQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskQueue.swift; sourceTree = "<group>"; };
+		F65FD4312374093A00521CDD /* ResourceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceMonitor.swift; sourceTree = "<group>"; };
+		F65FD43323740F0200521CDD /* ResourceMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceMonitorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,8 @@
 		F65FD4192373175000521CDD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F65FD41A2373175000521CDD /* SuperArcTaskQueueTests.swift */,
+				F65FD43323740F0200521CDD /* ResourceMonitorTests.swift */,
+				F65FD41A2373175000521CDD /* TaskQueueTests.swift */,
 				F65FD41C2373175000521CDD /* Info.plist */,
 			);
 			path = Tests;
@@ -93,6 +98,7 @@
 				F65FD40F2373175000521CDD /* SuperArcTaskCoordinator.h */,
 				F65FD4102373175000521CDD /* Info.plist */,
 				F65FD4272373179800521CDD /* TaskQueue.swift */,
+				F65FD4312374093A00521CDD /* ResourceMonitor.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F65FD4322374093A00521CDD /* ResourceMonitor.swift in Sources */,
 				F65FD4282373179800521CDD /* TaskQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F65FD41B2373175000521CDD /* SuperArcTaskQueueTests.swift in Sources */,
+				F65FD4352374100D00521CDD /* ResourceMonitorTests.swift in Sources */,
+				F65FD41B2373175000521CDD /* TaskQueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
