@@ -40,6 +40,9 @@
          location = "group:ExampleAppRouter/ExampleAppRouter.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:SuperArcTaskCoordinator/SuperArcTaskCoordinator.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:SuperArcActivityIndicator/SuperArcActivityIndicator.xcodeproj">
       </FileRef>
       <FileRef
