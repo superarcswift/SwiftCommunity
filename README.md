@@ -29,8 +29,8 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 
 ### Tech-Stack
 
-- Swift 5.0
-- Xcode 10+
+- Swift 5.1
+- Xcode 11+
 - 3rd Party Dependencies:
 	- **SuperArc**: PromiseKit, RxSwift, Action, RxCocoa, NotificationBanner, Kingfisher.
 	- **SwiftCommunity**: RxDataSources, XCoordinator, objective-git, YoutubeKit, LXVimeoKit, MarkdownView.
@@ -50,8 +50,8 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 
 ### Tools
 
-- [ ] Swiftlint: [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint)
-- [ ] Danger: [https://danger.systems](https://danger.systems)
+- [x] Swiftlint: [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint)
+- [x] Danger: [https://danger.systems](https://danger.systems)
 - [ ] Documentation: [https://github.com/realm/jazzy](https://github.com/realm/jazzy)
 	
 ## Architecture
