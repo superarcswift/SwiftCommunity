@@ -2,8 +2,9 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import XCTest
 @testable import SuperArcTaskCoordinator
+import PromiseKit
+import XCTest
 
 class TaskQueueTests: XCTestCase {
 
@@ -30,18 +31,24 @@ class TaskQueueTests: XCTestCase {
     func testStartAndFinishTasksInQueue() {
         let expectationTask1 = self.expectation(description: #function)
         let expectationTask2 = self.expectation(description: #function)
+        let finalExpectation = self.expectation(description: #function)
 
-        let taskQueue = TaskQueue()
+        var value = 0
+        let taskQueue = TaskQueue {
+            XCTAssertEqual(value, 2)
+            finalExpectation.fulfill()
+        }
 
         let task1 = {
-            DispatchQueue.main.asyncAfter(wallDeadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 expectationTask1.fulfill()
                 taskQueue.finish()
             }
         }
 
         let task2 = {
-            DispatchQueue.main.asyncAfter(wallDeadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                value = 2
                 expectationTask2.fulfill()
                 taskQueue.finish()
             }
@@ -50,28 +57,29 @@ class TaskQueueTests: XCTestCase {
         taskQueue.start(task1)
         taskQueue.start(task2)
 
-        wait(for: [expectationTask1, expectationTask2], timeout: 5.0, enforceOrder: true)
+        wait(for: [expectationTask1, expectationTask2, finalExpectation], timeout: 5.0, enforceOrder: true)
     }
 
-    func testAccessingResourceFromTasks() {
-        let expectation = self.expectation(description: #function)
+    func testPromise() {
+        let finalExpectation = self.expectation(description: #function)
 
         var value = 0
         let taskQueue = TaskQueue {
-            XCTAssertEqual(value, 2)
-            expectation.fulfill()
+            XCTAssertEqual(value, 5)
+            finalExpectation.fulfill()
         }
 
-        let task1 = {
-            value = 1
+        for i in 1...5 {
+            taskQueue.run {
+                Promise<Void> { resolver in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        value = i
+                        resolver.fulfill(())
+                    }
+                }
+            }
         }
 
-        let task2 = {
-            value = 2
-        }
-
-        taskQueue.start(task1, task2)
-
-        wait(for: [expectation], timeout: 5.0, enforceOrder: true)
+        wait(for: [finalExpectation], timeout: 5.0, enforceOrder: true)
     }
 }

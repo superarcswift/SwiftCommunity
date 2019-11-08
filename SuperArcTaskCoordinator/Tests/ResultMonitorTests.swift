@@ -2,10 +2,11 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import XCTest
 @testable import SuperArcTaskCoordinator
+import PromiseKit
+import XCTest
 
-class ResourceMonitorTests: XCTestCase {
+class ResultMonitorTests: XCTestCase {
 
     class Resource {
 
@@ -15,20 +16,20 @@ class ResourceMonitorTests: XCTestCase {
             self.value = initialValue
         }
 
-        func changeValue(to newValue: Int, continuation: @escaping ResourceMonitor<Void>.Continuation) {
+        func changeValue(to newValue: Int, continuation: @escaping ResultMonitor<Void>.Continuation) {
             self.value = newValue
             continuation(Result.success(()))
         }
     }
 
-    func testResourceMonitor() {
+    func testContinuation() {
         let expectation1 = self.expectation(description: #function)
         let expectation2 = self.expectation(description: #function)
 
-        let monitor = ResourceMonitor<Void>()
+        let monitor = ResultMonitor<Void>()
         let resource = Resource(initialValue: 1)
 
-        let continuation1: ResourceMonitor<Void>.Continuation = { result in
+        let continuation1: ResultMonitor<Void>.Continuation = { result in
             switch result {
                 case .success:
                     XCTAssertEqual(resource.value, 2)
@@ -39,7 +40,7 @@ class ResourceMonitorTests: XCTestCase {
             expectation1.fulfill()
         }
 
-        let continuation2: ResourceMonitor<Void>.Continuation = { result in
+        let continuation2: ResultMonitor<Void>.Continuation = { result in
             switch result {
                 case .success:
                     XCTAssertEqual(resource.value, 2)

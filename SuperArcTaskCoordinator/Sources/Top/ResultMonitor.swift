@@ -7,7 +7,7 @@ import Foundation
 ///
 /// Serialize accessing to a common resource.
 ///
-public class ResourceMonitor<T> {
+public class ResultMonitor<T> {
 
     public typealias Continuation = (Result<T, Error>) -> Void
 

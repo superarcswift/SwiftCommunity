@@ -30,16 +30,16 @@ public class TaskQueue {
     }
 
     ///
-    ///   Enqueue an  async task into the queue.
-    ///   `finish()` needs to be called manually.
+    /// Enqueue an  async task into the queue.
+    /// `finish()` needs to be called manually.
     ///
-    public func start(_ newTasks: Task...) {
-        tasks = tasks + newTasks
+    public func start(_ task: @escaping Task) {
+        tasks.append(task)
         runNextTaskIfAvailable()
     }
 
     ///
-    ///   Enqueue a sync task into the queue.
+    /// Enqueue a sync task into the queue.
     ///
     public func run(_ task: @escaping Task) {
         start {
@@ -49,7 +49,7 @@ public class TaskQueue {
     }
 
     ///
-    ///   Remove all remaining tasks from the queue.
+    /// Remove all remaining tasks from the queue.
     ///
     public func reset() {
         tasks.removeAll()
@@ -57,7 +57,7 @@ public class TaskQueue {
     }
 
     ///
-    ///   Finish the current task and start the next task in the queue.
+    /// Finish the current task and start the next task in the queue.
     ///
     public func finish() {
         currentTask = nil
