@@ -7,227 +7,228 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F60ED7392376FE6800E3E3B9 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60ED7382376FE6800E3E3B9 /* SuperArcFoundation.framework */; };
-		F60ED73A2376FE6800E3E3B9 /* SuperArcFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F60ED7382376FE6800E3E3B9 /* SuperArcFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F65FD4162373175000521CDD /* SuperArcTaskCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65FD40C2373175000521CDD /* SuperArcTaskCoordinator.framework */; };
-		F65FD41B2373175000521CDD /* TaskQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD41A2373175000521CDD /* TaskQueueTests.swift */; };
-		F65FD41D2373175000521CDD /* SuperArcTaskCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = F65FD40F2373175000521CDD /* SuperArcTaskCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F65FD4282373179800521CDD /* TaskQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD4272373179800521CDD /* TaskQueue.swift */; };
-		F65FD4322374093A00521CDD /* ResultMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD4312374093A00521CDD /* ResultMonitor.swift */; };
-		F65FD4352374100D00521CDD /* ResultMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD43323740F0200521CDD /* ResultMonitorTests.swift */; };
-		F6E7430723755D4800ADEE9B /* TaskQueue+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E7430623755D4800ADEE9B /* TaskQueue+Promise.swift */; };
-		F6E7430923755DA000ADEE9B /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E7430823755DA000ADEE9B /* PromiseKit.framework */; };
-		F6E7430E2375653100ADEE9B /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6E7430823755DA000ADEE9B /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F60ED7172376EE1100E3E3B9 /* SuperArcStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60ED70D2376EE1100E3E3B9 /* SuperArcStore.framework */; };
+		F60ED71C2376EE1100E3E3B9 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED71B2376EE1100E3E3B9 /* StoreTests.swift */; };
+		F60ED71E2376EE1100E3E3B9 /* SuperArcStore.h in Headers */ = {isa = PBXBuildFile; fileRef = F60ED7102376EE1100E3E3B9 /* SuperArcStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F60ED72B2376EE7B00E3E3B9 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED72A2376EE7B00E3E3B9 /* StoreProtocol.swift */; };
+		F60ED72D2376F24C00E3E3B9 /* MemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED72C2376F24C00E3E3B9 /* MemoryStore.swift */; };
+		F60ED72F2376F48B00E3E3B9 /* FilesystemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED72E2376F48B00E3E3B9 /* FilesystemStore.swift */; };
+		F60ED7322376F57700E3E3B9 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60ED7312376F57700E3E3B9 /* SuperArcFoundation.framework */; };
+		F60ED7332376F57700E3E3B9 /* SuperArcFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F60ED7312376F57700E3E3B9 /* SuperArcFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F60ED73C2376FEB800E3E3B9 /* AsyncStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED73B2376FEB800E3E3B9 /* AsyncStoreProtocol.swift */; };
+		F60ED73E2376FF9700E3E3B9 /* AsyncStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED73D2376FF9700E3E3B9 /* AsyncStore.swift */; };
+		F60ED742237716E100E3E3B9 /* StoreValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED741237716E100E3E3B9 /* StoreValue.swift */; };
+		F60ED7462378003D00E3E3B9 /* AsyncStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED7432377FFE300E3E3B9 /* AsyncStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F65FD4172373175000521CDD /* PBXContainerItemProxy */ = {
+		F60ED7182376EE1100E3E3B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F65FD4032373175000521CDD /* Project object */;
+			containerPortal = F60ED7042376EE1100E3E3B9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F65FD40B2373175000521CDD;
-			remoteInfo = SuperArcTaskCoordinator;
+			remoteGlobalIDString = F60ED70C2376EE1100E3E3B9;
+			remoteInfo = SuperArcStore;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F6E7430523755D1100ADEE9B /* Embed Frameworks */ = {
+		F60ED7342376F57700E3E3B9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F60ED73A2376FE6800E3E3B9 /* SuperArcFoundation.framework in Embed Frameworks */,
+				F60ED7332376F57700E3E3B9 /* SuperArcFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F6E7430D2375652800ADEE9B /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F6E7430E2375653100ADEE9B /* PromiseKit.framework in CopyFiles */,
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F60ED7382376FE6800E3E3B9 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F65FD40C2373175000521CDD /* SuperArcTaskCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcTaskCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F65FD40F2373175000521CDD /* SuperArcTaskCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcTaskCoordinator.h; sourceTree = "<group>"; };
-		F65FD4102373175000521CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F65FD4152373175000521CDD /* SuperArcTaskCoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcTaskCoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F65FD41A2373175000521CDD /* TaskQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskQueueTests.swift; sourceTree = "<group>"; };
-		F65FD41C2373175000521CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F65FD4272373179800521CDD /* TaskQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskQueue.swift; sourceTree = "<group>"; };
-		F65FD4312374093A00521CDD /* ResultMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultMonitor.swift; sourceTree = "<group>"; };
-		F65FD43323740F0200521CDD /* ResultMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultMonitorTests.swift; sourceTree = "<group>"; };
-		F6E7430623755D4800ADEE9B /* TaskQueue+Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskQueue+Promise.swift"; sourceTree = "<group>"; };
-		F6E7430823755DA000ADEE9B /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F60ED70D2376EE1100E3E3B9 /* SuperArcStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60ED7102376EE1100E3E3B9 /* SuperArcStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcStore.h; sourceTree = "<group>"; };
+		F60ED7112376EE1100E3E3B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F60ED7162376EE1100E3E3B9 /* SuperArcStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60ED71B2376EE1100E3E3B9 /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		F60ED71D2376EE1100E3E3B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F60ED72A2376EE7B00E3E3B9 /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
+		F60ED72C2376F24C00E3E3B9 /* MemoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStore.swift; sourceTree = "<group>"; };
+		F60ED72E2376F48B00E3E3B9 /* FilesystemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemStore.swift; sourceTree = "<group>"; };
+		F60ED7312376F57700E3E3B9 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60ED73B2376FEB800E3E3B9 /* AsyncStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStoreProtocol.swift; sourceTree = "<group>"; };
+		F60ED73D2376FF9700E3E3B9 /* AsyncStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStore.swift; sourceTree = "<group>"; };
+		F60ED741237716E100E3E3B9 /* StoreValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreValue.swift; sourceTree = "<group>"; };
+		F60ED7432377FFE300E3E3B9 /* AsyncStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F65FD4092373175000521CDD /* Frameworks */ = {
+		F60ED70A2376EE1100E3E3B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F60ED7392376FE6800E3E3B9 /* SuperArcFoundation.framework in Frameworks */,
-				F6E7430923755DA000ADEE9B /* PromiseKit.framework in Frameworks */,
+				F60ED7322376F57700E3E3B9 /* SuperArcFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F65FD4122373175000521CDD /* Frameworks */ = {
+		F60ED7132376EE1100E3E3B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F65FD4162373175000521CDD /* SuperArcTaskCoordinator.framework in Frameworks */,
+				F60ED7172376EE1100E3E3B9 /* SuperArcStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F65FD4022373175000521CDD = {
+		F60ED7032376EE1100E3E3B9 = {
 			isa = PBXGroup;
 			children = (
-				F65FD40E2373175000521CDD /* Sources */,
-				F65FD4192373175000521CDD /* Tests */,
-				F65FD40D2373175000521CDD /* Products */,
-				F6E7430123755D1100ADEE9B /* Frameworks */,
+				F60ED70F2376EE1100E3E3B9 /* Sources */,
+				F60ED71A2376EE1100E3E3B9 /* Tests */,
+				F60ED70E2376EE1100E3E3B9 /* Products */,
+				F60ED7302376F57700E3E3B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		F65FD40D2373175000521CDD /* Products */ = {
+		F60ED70E2376EE1100E3E3B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F65FD40C2373175000521CDD /* SuperArcTaskCoordinator.framework */,
-				F65FD4152373175000521CDD /* SuperArcTaskCoordinatorTests.xctest */,
+				F60ED70D2376EE1100E3E3B9 /* SuperArcStore.framework */,
+				F60ED7162376EE1100E3E3B9 /* SuperArcStoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F65FD40E2373175000521CDD /* Sources */ = {
+		F60ED70F2376EE1100E3E3B9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F65FD4262373176700521CDD /* Top */,
-				F6E7430F2375656E00ADEE9B /* SupportingFiles */,
+				F60ED7282376EE3800E3E3B9 /* Top */,
+				F60ED7292376EE6E00E3E3B9 /* Base */,
+				F60ED7272376EE2700E3E3B9 /* SupportingFiles */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		F65FD4192373175000521CDD /* Tests */ = {
+		F60ED71A2376EE1100E3E3B9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F65FD41A2373175000521CDD /* TaskQueueTests.swift */,
-				F65FD43323740F0200521CDD /* ResultMonitorTests.swift */,
-				F65FD41C2373175000521CDD /* Info.plist */,
+				F60ED71B2376EE1100E3E3B9 /* StoreTests.swift */,
+				F60ED71D2376EE1100E3E3B9 /* Info.plist */,
+				F60ED7432377FFE300E3E3B9 /* AsyncStoreTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		F65FD4262373176700521CDD /* Top */ = {
+		F60ED7272376EE2700E3E3B9 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F65FD4272373179800521CDD /* TaskQueue.swift */,
-				F6E7430623755D4800ADEE9B /* TaskQueue+Promise.swift */,
-				F65FD4312374093A00521CDD /* ResultMonitor.swift */,
+				F60ED7102376EE1100E3E3B9 /* SuperArcStore.h */,
+				F60ED7112376EE1100E3E3B9 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F60ED7282376EE3800E3E3B9 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				F60ED72C2376F24C00E3E3B9 /* MemoryStore.swift */,
+				F60ED72E2376F48B00E3E3B9 /* FilesystemStore.swift */,
+				F60ED73D2376FF9700E3E3B9 /* AsyncStore.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
 		};
-		F6E7430123755D1100ADEE9B /* Frameworks */ = {
+		F60ED7292376EE6E00E3E3B9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F60ED7382376FE6800E3E3B9 /* SuperArcFoundation.framework */,
-				F6E7430823755DA000ADEE9B /* PromiseKit.framework */,
+				F60ED73B2376FEB800E3E3B9 /* AsyncStoreProtocol.swift */,
+				F60ED72A2376EE7B00E3E3B9 /* StoreProtocol.swift */,
+				F60ED741237716E100E3E3B9 /* StoreValue.swift */,
 			);
-			name = Frameworks;
+			path = Base;
 			sourceTree = "<group>";
 		};
-		F6E7430F2375656E00ADEE9B /* SupportingFiles */ = {
+		F60ED7302376F57700E3E3B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F65FD40F2373175000521CDD /* SuperArcTaskCoordinator.h */,
-				F65FD4102373175000521CDD /* Info.plist */,
+				F60ED7312376F57700E3E3B9 /* SuperArcFoundation.framework */,
 			);
-			path = SupportingFiles;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F65FD4072373175000521CDD /* Headers */ = {
+		F60ED7082376EE1100E3E3B9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F65FD41D2373175000521CDD /* SuperArcTaskCoordinator.h in Headers */,
+				F60ED71E2376EE1100E3E3B9 /* SuperArcStore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F65FD40B2373175000521CDD /* SuperArcTaskCoordinator */ = {
+		F60ED70C2376EE1100E3E3B9 /* SuperArcStore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F65FD4202373175000521CDD /* Build configuration list for PBXNativeTarget "SuperArcTaskCoordinator" */;
+			buildConfigurationList = F60ED7212376EE1100E3E3B9 /* Build configuration list for PBXNativeTarget "SuperArcStore" */;
 			buildPhases = (
-				F65FD4072373175000521CDD /* Headers */,
-				F65FD4082373175000521CDD /* Sources */,
-				F65FD4092373175000521CDD /* Frameworks */,
-				F65FD40A2373175000521CDD /* Resources */,
-				F6E7430523755D1100ADEE9B /* Embed Frameworks */,
+				F60ED7082376EE1100E3E3B9 /* Headers */,
+				F60ED7092376EE1100E3E3B9 /* Sources */,
+				F60ED70A2376EE1100E3E3B9 /* Frameworks */,
+				F60ED70B2376EE1100E3E3B9 /* Resources */,
+				F60ED7342376F57700E3E3B9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SuperArcTaskCoordinator;
-			productName = SuperArcTaskCoordinator;
-			productReference = F65FD40C2373175000521CDD /* SuperArcTaskCoordinator.framework */;
+			name = SuperArcStore;
+			productName = SuperArcStore;
+			productReference = F60ED70D2376EE1100E3E3B9 /* SuperArcStore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F65FD4142373175000521CDD /* SuperArcTaskCoordinatorTests */ = {
+		F60ED7152376EE1100E3E3B9 /* SuperArcStoreTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F65FD4232373175000521CDD /* Build configuration list for PBXNativeTarget "SuperArcTaskCoordinatorTests" */;
+			buildConfigurationList = F60ED7242376EE1100E3E3B9 /* Build configuration list for PBXNativeTarget "SuperArcStoreTests" */;
 			buildPhases = (
-				F65FD4112373175000521CDD /* Sources */,
-				F65FD4122373175000521CDD /* Frameworks */,
-				F65FD4132373175000521CDD /* Resources */,
-				F6E7430D2375652800ADEE9B /* CopyFiles */,
+				F60ED7122376EE1100E3E3B9 /* Sources */,
+				F60ED7132376EE1100E3E3B9 /* Frameworks */,
+				F60ED7142376EE1100E3E3B9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F65FD4182373175000521CDD /* PBXTargetDependency */,
+				F60ED7192376EE1100E3E3B9 /* PBXTargetDependency */,
 			);
-			name = SuperArcTaskCoordinatorTests;
-			productName = SuperArcTaskCoordinatorTests;
-			productReference = F65FD4152373175000521CDD /* SuperArcTaskCoordinatorTests.xctest */;
+			name = SuperArcStoreTests;
+			productName = SuperArcStoreTests;
+			productReference = F60ED7162376EE1100E3E3B9 /* SuperArcStoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F65FD4032373175000521CDD /* Project object */ = {
+		F60ED7042376EE1100E3E3B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "An Tran";
 				TargetAttributes = {
-					F65FD40B2373175000521CDD = {
+					F60ED70C2376EE1100E3E3B9 = {
 						CreatedOnToolsVersion = 11.1;
 						LastSwiftMigration = 1110;
 					};
-					F65FD4142373175000521CDD = {
+					F60ED7152376EE1100E3E3B9 = {
 						CreatedOnToolsVersion = 11.1;
 					};
 				};
 			};
-			buildConfigurationList = F65FD4062373175000521CDD /* Build configuration list for PBXProject "SuperArcTaskCoordinator" */;
+			buildConfigurationList = F60ED7072376EE1100E3E3B9 /* Build configuration list for PBXProject "SuperArcStore" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -235,26 +236,26 @@
 				en,
 				Base,
 			);
-			mainGroup = F65FD4022373175000521CDD;
-			productRefGroup = F65FD40D2373175000521CDD /* Products */;
+			mainGroup = F60ED7032376EE1100E3E3B9;
+			productRefGroup = F60ED70E2376EE1100E3E3B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F65FD40B2373175000521CDD /* SuperArcTaskCoordinator */,
-				F65FD4142373175000521CDD /* SuperArcTaskCoordinatorTests */,
+				F60ED70C2376EE1100E3E3B9 /* SuperArcStore */,
+				F60ED7152376EE1100E3E3B9 /* SuperArcStoreTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F65FD40A2373175000521CDD /* Resources */ = {
+		F60ED70B2376EE1100E3E3B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F65FD4132373175000521CDD /* Resources */ = {
+		F60ED7142376EE1100E3E3B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -264,37 +265,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F65FD4082373175000521CDD /* Sources */ = {
+		F60ED7092376EE1100E3E3B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6E7430723755D4800ADEE9B /* TaskQueue+Promise.swift in Sources */,
-				F65FD4322374093A00521CDD /* ResultMonitor.swift in Sources */,
-				F65FD4282373179800521CDD /* TaskQueue.swift in Sources */,
+				F60ED72D2376F24C00E3E3B9 /* MemoryStore.swift in Sources */,
+				F60ED72F2376F48B00E3E3B9 /* FilesystemStore.swift in Sources */,
+				F60ED73E2376FF9700E3E3B9 /* AsyncStore.swift in Sources */,
+				F60ED742237716E100E3E3B9 /* StoreValue.swift in Sources */,
+				F60ED73C2376FEB800E3E3B9 /* AsyncStoreProtocol.swift in Sources */,
+				F60ED72B2376EE7B00E3E3B9 /* StoreProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F65FD4112373175000521CDD /* Sources */ = {
+		F60ED7122376EE1100E3E3B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F65FD4352374100D00521CDD /* ResultMonitorTests.swift in Sources */,
-				F65FD41B2373175000521CDD /* TaskQueueTests.swift in Sources */,
+				F60ED7462378003D00E3E3B9 /* AsyncStoreTests.swift in Sources */,
+				F60ED71C2376EE1100E3E3B9 /* StoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F65FD4182373175000521CDD /* PBXTargetDependency */ = {
+		F60ED7192376EE1100E3E3B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F65FD40B2373175000521CDD /* SuperArcTaskCoordinator */;
-			targetProxy = F65FD4172373175000521CDD /* PBXContainerItemProxy */;
+			target = F60ED70C2376EE1100E3E3B9 /* SuperArcStore */;
+			targetProxy = F60ED7182376EE1100E3E3B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F65FD41E2373175000521CDD /* Debug */ = {
+		F60ED71F2376EE1100E3E3B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,7 +335,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -358,7 +361,7 @@
 			};
 			name = Debug;
 		};
-		F65FD41F2373175000521CDD /* Release */ = {
+		F60ED7202376EE1100E3E3B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -395,7 +398,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -416,7 +418,7 @@
 			};
 			name = Release;
 		};
-		F65FD4212373175000521CDD /* Debug */ = {
+		F60ED7222376EE1100E3E3B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -432,7 +434,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SuperArcTaskCoordinator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SuperArcStore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -441,7 +443,7 @@
 			};
 			name = Debug;
 		};
-		F65FD4222373175000521CDD /* Release */ = {
+		F60ED7232376EE1100E3E3B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -457,7 +459,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SuperArcTaskCoordinator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SuperArcStore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -465,7 +467,7 @@
 			};
 			name = Release;
 		};
-		F65FD4242373175000521CDD /* Debug */ = {
+		F60ED7252376EE1100E3E3B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -476,14 +478,14 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SuperArcTaskCoordinatorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SuperArcStoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F65FD4252373175000521CDD /* Release */ = {
+		F60ED7262376EE1100E3E3B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -494,7 +496,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SuperArcTaskCoordinatorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SuperArcStoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,34 +506,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F65FD4062373175000521CDD /* Build configuration list for PBXProject "SuperArcTaskCoordinator" */ = {
+		F60ED7072376EE1100E3E3B9 /* Build configuration list for PBXProject "SuperArcStore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F65FD41E2373175000521CDD /* Debug */,
-				F65FD41F2373175000521CDD /* Release */,
+				F60ED71F2376EE1100E3E3B9 /* Debug */,
+				F60ED7202376EE1100E3E3B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F65FD4202373175000521CDD /* Build configuration list for PBXNativeTarget "SuperArcTaskCoordinator" */ = {
+		F60ED7212376EE1100E3E3B9 /* Build configuration list for PBXNativeTarget "SuperArcStore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F65FD4212373175000521CDD /* Debug */,
-				F65FD4222373175000521CDD /* Release */,
+				F60ED7222376EE1100E3E3B9 /* Debug */,
+				F60ED7232376EE1100E3E3B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F65FD4232373175000521CDD /* Build configuration list for PBXNativeTarget "SuperArcTaskCoordinatorTests" */ = {
+		F60ED7242376EE1100E3E3B9 /* Build configuration list for PBXNativeTarget "SuperArcStoreTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F65FD4242373175000521CDD /* Debug */,
-				F65FD4252373175000521CDD /* Release */,
+				F60ED7252376EE1100E3E3B9 /* Debug */,
+				F60ED7262376EE1100E3E3B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F65FD4032373175000521CDD /* Project object */;
+	rootObject = F60ED7042376EE1100E3E3B9 /* Project object */;
 }
