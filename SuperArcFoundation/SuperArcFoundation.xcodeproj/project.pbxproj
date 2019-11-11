@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60ED7372376FBAD00E3E3B9 /* Continuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED7362376FBAD00E3E3B9 /* Continuation.swift */; };
+		F60ED740237713F700E3E3B9 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED73F237713F700E3E3B9 /* DispatchQueue+Extension.swift */; };
 		F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */; };
 		F6A6B5532300469A00BFEC40 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B5522300469A00BFEC40 /* Int+Extensions.swift */; };
 		F6CAFA6022CBF13F007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */; };
 		F6CAFA6722CBF13F007476D4 /* SuperArcFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6CAFA7522CBF21C007476D4 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA7422CBF21C007476D4 /* Storage.swift */; };
-		F6CAFA7722CBF3E6007476D4 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA7622CBF3E6007476D4 /* MemoryStorage.swift */; };
-		F6CAFA7922CBFAD5007476D4 /* FilesystemStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA7822CBFAD5007476D4 /* FilesystemStorage.swift */; };
 		F6CAFA7E22CBFC99007476D4 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA7D22CBFC99007476D4 /* String+Extensions.swift */; };
 		F6CAFA8B22CC0930007476D4 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA8A22CC0930007476D4 /* Container.swift */; };
 		F6CAFA8D22CC097C007476D4 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAFA8C22CC097C007476D4 /* NSObject+Extensions.swift */; };
@@ -31,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F60ED7362376FBAD00E3E3B9 /* Continuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continuation.swift; sourceTree = "<group>"; };
+		F60ED73F237713F700E3E3B9 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameDerivable.swift; sourceTree = "<group>"; };
 		F6A6B5522300469A00BFEC40 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,9 +39,6 @@
 		F6CAFA5A22CBF13F007476D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6CAFA5F22CBF13F007476D4 /* SuperArcFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA6622CBF13F007476D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6CAFA7422CBF21C007476D4 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		F6CAFA7622CBF3E6007476D4 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
-		F6CAFA7822CBFAD5007476D4 /* FilesystemStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemStorage.swift; sourceTree = "<group>"; };
 		F6CAFA7D22CBFC99007476D4 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F6CAFA8A22CC0930007476D4 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		F6CAFA8C22CC097C007476D4 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
@@ -66,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F60ED7352376FBA000E3E3B9 /* Continuation */ = {
+			isa = PBXGroup;
+			children = (
+				F60ED7362376FBAD00E3E3B9 /* Continuation.swift */,
+			);
+			path = Continuation;
+			sourceTree = "<group>";
+		};
 		F6CAFA4C22CBF13F007476D4 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +96,7 @@
 				F6CAFA5922CBF13F007476D4 /* SuperArcFoundation.h */,
 				F6CAFA5A22CBF13F007476D4 /* Info.plist */,
 				F6CAFA8922CC0599007476D4 /* Container */,
-				F6CAFA7322CBF209007476D4 /* Storage */,
+				F60ED7352376FBA000E3E3B9 /* Continuation */,
 				F6CAFA7C22CBFC81007476D4 /* Runtime */,
 			);
 			path = Sources;
@@ -104,16 +110,6 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		F6CAFA7322CBF209007476D4 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				F6CAFA7822CBFAD5007476D4 /* FilesystemStorage.swift */,
-				F6CAFA7622CBF3E6007476D4 /* MemoryStorage.swift */,
-				F6CAFA7422CBF21C007476D4 /* Storage.swift */,
-			);
-			path = Storage;
-			sourceTree = "<group>";
-		};
 		F6CAFA7C22CBFC81007476D4 /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +117,7 @@
 				F6CAFA8C22CC097C007476D4 /* NSObject+Extensions.swift */,
 				F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */,
 				F6A6B5522300469A00BFEC40 /* Int+Extensions.swift */,
+				F60ED73F237713F700E3E3B9 /* DispatchQueue+Extension.swift */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -267,14 +264,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */,
+				F60ED7372376FBAD00E3E3B9 /* Continuation.swift in Sources */,
 				F6CAFA7E22CBFC99007476D4 /* String+Extensions.swift in Sources */,
-				F6CAFA7722CBF3E6007476D4 /* MemoryStorage.swift in Sources */,
 				F6A6B5532300469A00BFEC40 /* Int+Extensions.swift in Sources */,
 				F6CAFA8B22CC0930007476D4 /* Container.swift in Sources */,
+				F60ED740237713F700E3E3B9 /* DispatchQueue+Extension.swift in Sources */,
 				F6CAFA8F22CC0B82007476D4 /* Registry.swift in Sources */,
 				F6CAFA8D22CC097C007476D4 /* NSObject+Extensions.swift in Sources */,
-				F6CAFA7922CBFAD5007476D4 /* FilesystemStorage.swift in Sources */,
-				F6CAFA7522CBF21C007476D4 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

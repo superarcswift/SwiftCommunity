@@ -4,6 +4,9 @@
 
 import Foundation
 
+///
+/// A class to serialize the execution of tasks.
+///
 public class TaskQueue {
 
     public typealias Task = () -> Void

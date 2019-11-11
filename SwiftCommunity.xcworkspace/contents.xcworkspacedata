@@ -40,9 +40,6 @@
          location = "group:ExampleAppRouter/ExampleAppRouter.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:SuperArcTaskCoordinator/SuperArcTaskCoordinator.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:SuperArcActivityIndicator/SuperArcActivityIndicator.xcodeproj">
       </FileRef>
       <FileRef
@@ -62,6 +59,15 @@
       </FileRef>
       <FileRef
          location = "group:SuperArcCoreUI/SuperArcCoreUI.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SuperArcModelManager/SuperArcModelManager.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SuperArcTaskCoordinator/SuperArcTaskCoordinator.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/atran/Desktop/Projects/iOS/SwiftCommunity/SuperArcStore/SuperArcStore.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:SuperArcCore/SuperArcCore.xcodeproj">

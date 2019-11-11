@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcFoundation
 import Foundation
 
 ///
@@ -9,13 +10,11 @@ import Foundation
 ///
 public class ResultMonitor<T> {
 
-    public typealias Continuation = (Result<T, Error>) -> Void
-
     // MARK: Properties
 
     // Private
 
-    private var continuations = [Continuation]()
+    private var continuations = [Result<T, Error>.Continuation]()
 
     // MARK: Initialization
 
@@ -26,7 +25,7 @@ public class ResultMonitor<T> {
     ///
     /// Enter the monitor
     ///
-    public func run(_ continuation: @escaping Continuation, call: (@escaping Continuation) -> Void) {
+    public func run(_ continuation: @escaping Result<T, Error>.Continuation, call: (@escaping Result<T, Error>.Continuation) -> Void) {
         start(continuation) {
             call { result in
                 self.finish(result)
@@ -37,7 +36,7 @@ public class ResultMonitor<T> {
     ///
     /// Enqueue a continuation and start the call.
     ///
-    public func start(_ continuation: @escaping Continuation, call: () -> Void) {
+    public func start(_ continuation: @escaping Result<T, Error>.Continuation, call: () -> Void) {
         continuations.append(continuation)
 
         guard continuations.count == 1 else {
