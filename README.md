@@ -13,6 +13,8 @@ This project serves as a showcase for **the SuperArc project (TSP)**.
 
 The goal is to have a set of modules (µComponent) to create a component-based MVVM-C (Model-View-ViewModel-Coordinator) architecture for iOS apps. The modules are intended to use together but each module should be able to be integrated into any other iOS projects. This setup is incredibly useful when you create multiple apps which share some same features/functionalities. For more information about the SuperArc project, please take a look at [here](https://github.com/superarcswift/SwiftCommunity).
 
+![](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/screenshot1.png) ![](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/screenshot2.png) ![](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/screenshot3.png) ![](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/screenshot4.png)
+
 ## Content
 
 All content are curated from external sources such as Vimeo, Youtube or WWDC live streams. This is insipred heavily from [SwiftTube](http://www.swifttube.co/) and [talk & coffe app](https://apps.apple.com/app/talks-coffee/id1466240063)
