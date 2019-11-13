@@ -2,8 +2,6 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import SuperArcFoundation
-
 public protocol HasConfigurations {
     var configurations: AnyRegistry<Configuration> { get }
 }
@@ -18,7 +16,7 @@ open class ConfigurationsRegistry: Registry {
 
     // Private
 
-    private var endpoint: Endpoint
+    private let endpoint: Endpoint
 
     // MARK: Initialization
 

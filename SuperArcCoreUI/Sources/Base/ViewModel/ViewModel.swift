@@ -7,5 +7,8 @@ import SuperArcCore
 public protocol ViewModelProtocol {}
 
 open class ViewModel: ViewModelProtocol {
+
+    // MARK: Initialization
+
     public init() {}
 }

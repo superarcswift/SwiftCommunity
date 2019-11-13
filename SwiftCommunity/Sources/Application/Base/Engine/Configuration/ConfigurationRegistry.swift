@@ -4,6 +4,7 @@
 
 import Core
 import SuperArcCore
+import SuperArcNetwork
 import SuperArcFoundation
 
 // Move this to SuperArcCore as standard ConfigurationsRegistry.
@@ -32,5 +33,6 @@ public class ConfigurationsRegistry: Registry {
 
     private func setup() {
         register(GitRepositoryConfiguration(endpoint: endpoint), for: GitRepositoryConfigurationProtocol.self)
+        register(OpenConferenceConfiguration(endpoint: endpoint), for: ServerConfiguration.self)
     }
 }
