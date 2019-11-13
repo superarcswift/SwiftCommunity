@@ -7,17 +7,17 @@
 
 **Collection of Swift/iOS-related conference videos**.
 
-This project serves as a showcase for **the SuperArc project (TSP)**. 
+This project serves as a showcase for **the SuperArc project (TSP)**.
 
 **TSP** aims to standardize many common building blocks which can help developers to kickstart new iOS projects quickly.
 
-The goal is to have a set of modules (µComponent) to create a component-based MVVM-C (Model-View-ViewModel-Coordinator) architecture for iOS apps. The modules are intended to use together but each module should be able to be integrated into any other iOS projects. This setup is incredibly useful when you create multiple apps which share some same features/functionalities. For more information about the SuperArc project, please take a look at [here](https://github.com/superarcswift/SwiftCommunity).
+The goal is to have a set of modules (µComponent) to create a component-based MVVM-C (Model-View-ViewModel-Coordinator) architecture for iOS apps. The modules are intended to use together but each module should be able to be integrated into any other iOS projects. This setup is incredibly useful when you create multiple apps which share some same features/functionalities. For more information about the **SuperArc** project, please take a look at [this presentation](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/Documentation/superarc.pdf).
 
 ![](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/screenshot1.png) ![](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/screenshot2.png) ![](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/screenshot3.png) ![](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/screenshot4.png)
 
 ## Content
 
-All content are curated from external sources such as Vimeo, Youtube or WWDC live streams. This is insipred heavily from [SwiftTube](http://www.swifttube.co/) and [talk & coffe app](https://apps.apple.com/app/talks-coffee/id1466240063)
+All content are curated from external sources such as Vimeo, Youtube or WWDC live streams. This is insipred heavily from [SwiftTube](http://www.swifttube.co/) and [talk & coffee app](https://apps.apple.com/app/talks-coffee/id1466240063)
 
 ## App Features
 
@@ -55,7 +55,7 @@ All content are curated from external sources such as Vimeo, Youtube or WWDC liv
 - [x] Swiftlint: [https://github.com/realm/SwiftLint](https://github.com/realm/SwiftLint)
 - [x] Danger: [https://danger.systems](https://danger.systems)
 - [ ] Documentation: [https://github.com/realm/jazzy](https://github.com/realm/jazzy)
-	
+
 ## Architecture
 
 When building an iOS app, developers normally starts with a single workspace/project which contains all source codes of the app. This setup is useful for smaller apps, but when the app grows, there are some problem comming with this setup:
@@ -96,13 +96,13 @@ When building an iOS app, developers normally starts with a single workspace/pro
 - Instantiate `Component`.
 
 ## Documentation
-Please take 5 minutes to read the presentation to understand the motivation behind SuperArcSwift.
+Please take 5 minutes to read the presentation to understand the motivation behind the **SuperArc** framework.
 
 [Presentation](https://github.com/superarcswift/SwiftCommunity/raw/master/Assets/Documentation/superarc.pdf)
 
 
 ## Example App
-The example app demonstrates how you can use SuperArc to modularize an simple app by features and layers.
+The example app demonstrates how you can use **SuperArc** to modularize an simple app by features and layers.
 
 The sample app has the following specs:
 
