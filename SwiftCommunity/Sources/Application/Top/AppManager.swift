@@ -14,6 +14,7 @@ import SuperArcNotificationBanner
 import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
+import SuperArcNetwork
 import SuperArcFoundation
 
 import XCoordinator
@@ -43,6 +44,7 @@ class AppManager: HasComponentsRouter, HasConfigurations {
     init() {
         setupServices()
         setupApplicationContext()
+        setupCommunicationInterfaces()
         setupComponentsCoordinator()
     }
 
@@ -80,5 +82,10 @@ class AppManager: HasComponentsRouter, HasConfigurations {
         componentsRouter.routerRegistry.register(ConferencesComponentRouter(context: core.context), for: ConferencesComponentRouter.self)
         componentsRouter.routerRegistry.register(VideosComponentRouter(context: core.context), for: VideosComponentRouter.self)
         componentsRouter.routerRegistry.register(AuthorsComponentRouter(context: core.context), for: AuthorsComponentRouter.self)
+    }
+
+    private func setupCommunicationInterfaces() {
+        let server = DirectAccessJSONServer(configurationContainer: configurations.container)
+        core.context.engine.serviceContext.register(server, for: DirectAccessJSONServer.self)
     }
 }

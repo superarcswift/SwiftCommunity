@@ -73,6 +73,9 @@
          location = "group:SuperArcCore/SuperArcCore.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:SuperArcNetwork/SuperArcNetwork.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:SuperArcFoundation/SuperArcFoundation.xcodeproj">
       </FileRef>
    </Group>

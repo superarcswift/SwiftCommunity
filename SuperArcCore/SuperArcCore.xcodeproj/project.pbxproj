@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		F63A729122F47BC6005D0778 /* ApplicationDependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729022F47BC6005D0778 /* ApplicationDependencyRegistry.swift */; };
 		F63A729322F47C14005D0778 /* ApplicationDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729222F47C14005D0778 /* ApplicationDependency.swift */; };
-		F6451B7222D14B5A0091E147 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6451B7122D14B5A0091E147 /* Endpoint.swift */; };
-		F646EBD12321176800792DB5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646EBD02321176800792DB5 /* Configuration.swift */; };
-		F646EBD3232118DA00792DB5 /* ConfigurationRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646EBD2232118DA00792DB5 /* ConfigurationRegistry.swift */; };
+		F650777A237CC4A60076AE6B /* SuperArcNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6507779237CC4A60076AE6B /* SuperArcNetwork.framework */; };
+		F650777B237CC4A60076AE6B /* SuperArcNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6507779237CC4A60076AE6B /* SuperArcNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F66C90EF22E5ED5E006CA2BB /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90EE22E5ED5E006CA2BB /* ApplicationContext.swift */; };
 		F675C35522DEFDA500FA77DD /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35422DEFDA500FA77DD /* Core.swift */; };
 		F6B577A823204C5E0069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A423204C5E0069E79F /* RxSwift.framework */; };
@@ -39,12 +38,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F650777C237CC4A60076AE6B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F650777B237CC4A60076AE6B /* SuperArcNetwork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F63A729022F47BC6005D0778 /* ApplicationDependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependencyRegistry.swift; sourceTree = "<group>"; };
 		F63A729222F47C14005D0778 /* ApplicationDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependency.swift; sourceTree = "<group>"; };
-		F6451B7122D14B5A0091E147 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		F646EBD02321176800792DB5 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		F646EBD2232118DA00792DB5 /* ConfigurationRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationRegistry.swift; sourceTree = "<group>"; };
+		F6507779237CC4A60076AE6B /* SuperArcNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C90EE22E5ED5E006CA2BB /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		F675C35422DEFDA500FA77DD /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		F6B577A423204C5E0069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -73,6 +84,7 @@
 				F6B577BB23204D560069E79F /* RxRelay.framework in Frameworks */,
 				F6B577A823204C5E0069E79F /* RxSwift.framework in Frameworks */,
 				F6B577A923204C5E0069E79F /* Kingfisher.framework in Frameworks */,
+				F650777A237CC4A60076AE6B /* SuperArcNetwork.framework in Frameworks */,
 				F6B577AA23204C5E0069E79F /* PromiseKit.framework in Frameworks */,
 				F6B577AB23204C5E0069E79F /* RxCocoa.framework in Frameworks */,
 				F6CAFA7222CBF1A5007476D4 /* SuperArcFoundation.framework in Frameworks */,
@@ -90,16 +102,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F6451B7022D14B450091E147 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				F6451B7122D14B5A0091E147 /* Endpoint.swift */,
-				F646EBD2232118DA00792DB5 /* ConfigurationRegistry.swift */,
-				F646EBD02321176800792DB5 /* Configuration.swift */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
 		F66C90EB22E5ED46006CA2BB /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +165,6 @@
 				F6CAFA7A22CBFAE6007476D4 /* Engine.swift */,
 				F6CAFA8222CC032E007476D4 /* DomainLogic */,
 				F6CAFA8322CC033F007476D4 /* DataAccess */,
-				F6451B7022D14B450091E147 /* Configuration */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -171,6 +172,7 @@
 		F6CAFA7022CBF1A5007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6507779237CC4A60076AE6B /* SuperArcNetwork.framework */,
 				F6B577BA23204D560069E79F /* RxRelay.framework */,
 				F6B577A523204C5E0069E79F /* Kingfisher.framework */,
 				F6B577A623204C5E0069E79F /* PromiseKit.framework */,
@@ -238,6 +240,7 @@
 				F6CAFA2822CBEEC7007476D4 /* Frameworks */,
 				F6CAFA2922CBEEC7007476D4 /* Resources */,
 				F604E3B823171A8800BFFE6A /* SwiftLint */,
+				F650777C237CC4A60076AE6B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,7 +351,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6CAFA7B22CBFAE6007476D4 /* Engine.swift in Sources */,
-				F6451B7222D14B5A0091E147 /* Endpoint.swift in Sources */,
 				F66C90EF22E5ED5E006CA2BB /* ApplicationContext.swift in Sources */,
 				F6CAFA9122CC0C34007476D4 /* ServiceRegistry.swift in Sources */,
 				F6CF4AB022D283CD0026F84F /* Model.swift in Sources */,
@@ -356,9 +358,7 @@
 				F675C35522DEFDA500FA77DD /* Core.swift in Sources */,
 				F63A729322F47C14005D0778 /* ApplicationDependency.swift in Sources */,
 				F6CAFA8822CC039F007476D4 /* Service.swift in Sources */,
-				F646EBD3232118DA00792DB5 /* ConfigurationRegistry.swift in Sources */,
 				F63A729122F47BC6005D0778 /* ApplicationDependencyRegistry.swift in Sources */,
-				F646EBD12321176800792DB5 /* Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

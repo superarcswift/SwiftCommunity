@@ -16,6 +16,7 @@ public class EmptyInterface: Interface {
         get {
             fatalError("should never be used")
         }
+        //swiftlint:disable:next unused_setter_value
         set {
             fatalError("should never be used")
         }

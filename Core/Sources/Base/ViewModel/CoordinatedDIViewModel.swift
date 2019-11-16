@@ -21,11 +21,15 @@ public protocol DependencyInjectedViewModelProtocol where Self: ViewModel {
 }
 
 /// Base class can be used to create ViewModels with Coordinator.
-public class CoordinatedViewModel<R: Route>: ViewModel, CoordinatedViewModelProtocol {
+public class CoordinatedViewModel<R: Route>: ViewModel, CoordinatedViewModelProtocol, ActivityState {
 
     // MARK: Properties
 
+    // Public
+
     public var router: UnownedRouter<R>
+
+    public var activity = Activity()
 
     // MARK: Initialization
 
@@ -36,11 +40,15 @@ public class CoordinatedViewModel<R: Route>: ViewModel, CoordinatedViewModelProt
 }
 
 /// Based class can be used to create dependency-injected ViewModels.
-open class DIViewModel<D>: ViewModel, DependencyInjectedViewModelProtocol {
+open class DIViewModel<D>: ViewModel, DependencyInjectedViewModelProtocol, ActivityState {
 
     // MARK: Properties
 
+    // Public
+
     public var dependency: D
+
+    public var activity = Activity()
 
     // MARK: Initialization
 
@@ -51,13 +59,12 @@ open class DIViewModel<D>: ViewModel, DependencyInjectedViewModelProtocol {
 }
 
 /// Based class can be used to create ViewModels containing dependencies and coordinator.
-open class CoordinatedDIViewModel<R: Route, D>: DIViewModel<D>, CoordinatedViewModelProtocol, ActivityState {
+open class CoordinatedDIViewModel<R: Route, D>: DIViewModel<D>, CoordinatedViewModelProtocol {
 
     // MARK: Properties
 
     // Public
 
-    public var activity = Activity()
     public var router: UnownedRouter<R>
 
     // MARK: Initialization

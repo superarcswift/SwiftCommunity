@@ -16,6 +16,7 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
     static var storyboardName = "More"
 
     enum Section: Int {
+        case conferences
         case about
         case license
         case reset
@@ -58,6 +59,8 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch Section(from: indexPath.section) {
+        case .conferences:
+            viewModel.router.trigger(.conferences)
         case .about:
             viewModel.router.trigger(.about)
         case .license:

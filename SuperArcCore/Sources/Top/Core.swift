@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import SuperArcNetwork
 import SuperArcFoundation
 
 public class Core {
@@ -22,4 +23,6 @@ public class Core {
         engine = Engine(serviceContext: serviceContext)
         context = ApplicationContext(engine: engine)
     }
+
+    // MARK: Private helpers
 }

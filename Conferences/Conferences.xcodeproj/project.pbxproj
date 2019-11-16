@@ -227,9 +227,9 @@
 		F6C8A0AD231E949800DD6BFD /* List */ = {
 			isa = PBXGroup;
 			children = (
+				F6C8A0B4231E949800DD6BFD /* ViewController */,
 				F6C8A0AE231E949800DD6BFD /* ViewModel */,
 				F6C8A0B0231E949800DD6BFD /* View */,
-				F6C8A0B4231E949800DD6BFD /* ViewController */,
 			);
 			path = List;
 			sourceTree = "<group>";

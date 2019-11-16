@@ -3,7 +3,7 @@
 //
 
 import Core
-import SuperArcCore
+import SuperArcFoundation
 
 struct GitRepositoryConfiguration: GitRepositoryConfigurationProtocol {
 

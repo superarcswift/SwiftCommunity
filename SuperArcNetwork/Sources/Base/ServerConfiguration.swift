@@ -4,6 +4,6 @@
 
 import SuperArcFoundation
 
-public protocol Configuration {
-    var endpoint: Endpoint { get }
+public protocol ServerConfiguration: Configuration {
+    var baseURL: URL { get }
 }

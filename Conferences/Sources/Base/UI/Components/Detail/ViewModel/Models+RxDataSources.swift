@@ -3,7 +3,6 @@
 //
 
 import CoreUX
-
 import RxDataSources
 
 public enum ConferenceDetailSectionModel {

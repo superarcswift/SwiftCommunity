@@ -9,4 +9,8 @@ extension String {
     public func combinePath(_ component: String) -> String {
         return NSString(string: self).appendingPathComponent(component)
     }
+
+    public var urlComponents: URLComponents {
+        return URLComponents(string: self)!
+    }
 }
