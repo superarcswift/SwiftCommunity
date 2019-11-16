@@ -1,0 +1,824 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F68204AE231F045400098C20 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204AD231F045400098C20 /* SuperArcCore.framework */; };
+		F68204B0231F045700098C20 /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204AF231F045700098C20 /* SuperArcCoreUI.framework */; };
+		F68204B2231F045C00098C20 /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B1231F045C00098C20 /* SuperArcLocalization.framework */; };
+		F6820528231F185500098C20 /* CoreUX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820527231F185500098C20 /* CoreUX.framework */; };
+		F6C8A0B7231E949800DD6BFD /* ConferencesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0A0231E949800DD6BFD /* ConferencesComponent.swift */; };
+		F6C8A0B8231E949800DD6BFD /* ConferenceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0A3231E949800DD6BFD /* ConferenceDetailViewModel.swift */; };
+		F6C8A0B9231E949800DD6BFD /* Models+RxDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0A4231E949800DD6BFD /* Models+RxDataSources.swift */; };
+		F6C8A0BA231E949800DD6BFD /* ConferenceDetailSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C8A0A7231E949800DD6BFD /* ConferenceDetailSectionHeaderView.xib */; };
+		F6C8A0BB231E949800DD6BFD /* ConferenceDetailSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0A8231E949800DD6BFD /* ConferenceDetailSectionHeaderView.swift */; };
+		F6C8A0BC231E949800DD6BFD /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0A9231E949800DD6BFD /* ConferenceDetailCollectionViewFlowLayout.swift */; };
+		F6C8A0BD231E949800DD6BFD /* ConferenceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0AB231E949800DD6BFD /* ConferenceDetailViewController.swift */; };
+		F6C8A0BE231E949800DD6BFD /* Conferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8A0AC231E949800DD6BFD /* Conferences.storyboard */; };
+		F6C8A0BF231E949800DD6BFD /* ConferencesCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0AF231E949800DD6BFD /* ConferencesCollectionViewModel.swift */; };
+		F6C8A0C0231E949800DD6BFD /* ConferenceCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0B1231E949800DD6BFD /* ConferenceCollectionViewFlowLayout.swift */; };
+		F6C8A0C1231E949800DD6BFD /* ConferenceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C8A0B2231E949800DD6BFD /* ConferenceCollectionViewCell.xib */; };
+		F6C8A0C2231E949800DD6BFD /* ConferenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0B3231E949800DD6BFD /* ConferenceCollectionViewCell.swift */; };
+		F6C8A0C3231E949800DD6BFD /* ConferencesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0B5231E949800DD6BFD /* ConferencesCollectionViewController.swift */; };
+		F6C8A0C4231E949800DD6BFD /* ConferencesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0B6231E949800DD6BFD /* ConferencesCoordinator.swift */; };
+		F6C8A0CA231E94ED00DD6BFD /* ConferenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0C7231E94ED00DD6BFD /* ConferenceViewModel.swift */; };
+		F6C8A0CB231E94ED00DD6BFD /* ConferenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C8A0C8231E94ED00DD6BFD /* ConferenceView.xib */; };
+		F6C8A0CC231E94ED00DD6BFD /* ConferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A0C9231E94ED00DD6BFD /* ConferenceView.swift */; };
+		F6C8A0CE231E954A00DD6BFD /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A0CD231E954A00DD6BFD /* Action.framework */; };
+		F6C8A0D4231E957000DD6BFD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A0D0231E957000DD6BFD /* RxCocoa.framework */; };
+		F6C8A0D5231E957000DD6BFD /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A0D1231E957000DD6BFD /* XCoordinator.framework */; };
+		F6C8A0D6231E957000DD6BFD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A0D2231E957000DD6BFD /* RxSwift.framework */; };
+		F6C8A159231EB5CE00DD6BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C8A158231EB5CE00DD6BFD /* Assets.xcassets */; };
+		F6CAB73D231D3D2E00A0DCF6 /* Conferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB733231D3D2E00A0DCF6 /* Conferences.framework */; };
+		F6CAB744231D3D2E00A0DCF6 /* Conferences.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CAB736231D3D2E00A0DCF6 /* Conferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6CAB750231D3D8700A0DCF6 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB74F231D3D8700A0DCF6 /* Core.framework */; };
+		F6CAB752231D3D8C00A0DCF6 /* DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB751231D3D8C00A0DCF6 /* DataModels.framework */; };
+		F6CAB754231D3E0700A0DCF6 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB753231D3E0700A0DCF6 /* PromiseKit.framework */; };
+		F6CAB75A231D3E9F00A0DCF6 /* ConferencesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAB759231D3E9F00A0DCF6 /* ConferencesService.swift */; };
+		F6CAB75C231D3F1D00A0DCF6 /* FilesystemConferencesContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAB75B231D3F1D00A0DCF6 /* FilesystemConferencesContentProvider.swift */; };
+		F6F7760A233D6378001DDCCF /* XCoordinatorRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F77609233D6378001DDCCF /* XCoordinatorRx.framework */; };
+		F6F7760B233D6378001DDCCF /* XCoordinatorRx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6F77609233D6378001DDCCF /* XCoordinatorRx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6CAB73E231D3D2E00A0DCF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6CAB72A231D3D2E00A0DCF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6CAB732231D3D2E00A0DCF6;
+			remoteInfo = Conferences;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6F7760C233D6378001DDCCF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6F7760B233D6378001DDCCF /* XCoordinatorRx.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F68204AD231F045400098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68204AF231F045700098C20 /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68204B1231F045C00098C20 /* SuperArcLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6820517231F131100098C20 /* CoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6820527231F185500098C20 /* CoreUX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6C8A0A0231E949800DD6BFD /* ConferencesComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencesComponent.swift; sourceTree = "<group>"; };
+		F6C8A0A3231E949800DD6BFD /* ConferenceDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceDetailViewModel.swift; sourceTree = "<group>"; };
+		F6C8A0A4231E949800DD6BFD /* Models+RxDataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Models+RxDataSources.swift"; sourceTree = "<group>"; };
+		F6C8A0A7231E949800DD6BFD /* ConferenceDetailSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceDetailSectionHeaderView.xib; sourceTree = "<group>"; };
+		F6C8A0A8231E949800DD6BFD /* ConferenceDetailSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceDetailSectionHeaderView.swift; sourceTree = "<group>"; };
+		F6C8A0A9231E949800DD6BFD /* ConferenceDetailCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceDetailCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		F6C8A0AB231E949800DD6BFD /* ConferenceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceDetailViewController.swift; sourceTree = "<group>"; };
+		F6C8A0AC231E949800DD6BFD /* Conferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conferences.storyboard; sourceTree = "<group>"; };
+		F6C8A0AF231E949800DD6BFD /* ConferencesCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencesCollectionViewModel.swift; sourceTree = "<group>"; };
+		F6C8A0B1231E949800DD6BFD /* ConferenceCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		F6C8A0B2231E949800DD6BFD /* ConferenceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceCollectionViewCell.xib; sourceTree = "<group>"; };
+		F6C8A0B3231E949800DD6BFD /* ConferenceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6C8A0B5231E949800DD6BFD /* ConferencesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencesCollectionViewController.swift; sourceTree = "<group>"; };
+		F6C8A0B6231E949800DD6BFD /* ConferencesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencesCoordinator.swift; sourceTree = "<group>"; };
+		F6C8A0C7231E94ED00DD6BFD /* ConferenceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceViewModel.swift; sourceTree = "<group>"; };
+		F6C8A0C8231E94ED00DD6BFD /* ConferenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceView.xib; sourceTree = "<group>"; };
+		F6C8A0C9231E94ED00DD6BFD /* ConferenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceView.swift; sourceTree = "<group>"; };
+		F6C8A0CD231E954A00DD6BFD /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = ../../../Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
+		F6C8A0CF231E957000DD6BFD /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = ../../../Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
+		F6C8A0D0231E957000DD6BFD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../../../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F6C8A0D1231E957000DD6BFD /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../../../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
+		F6C8A0D2231E957000DD6BFD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F6C8A158231EB5CE00DD6BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6CAB733231D3D2E00A0DCF6 /* Conferences.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Conferences.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CAB736231D3D2E00A0DCF6 /* Conferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Conferences.h; sourceTree = "<group>"; };
+		F6CAB737231D3D2E00A0DCF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6CAB73C231D3D2E00A0DCF6 /* ConferencesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConferencesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CAB743231D3D2E00A0DCF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6CAB74F231D3D8700A0DCF6 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CAB751231D3D8C00A0DCF6 /* DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CAB753231D3E0700A0DCF6 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F6CAB759231D3E9F00A0DCF6 /* ConferencesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencesService.swift; sourceTree = "<group>"; };
+		F6CAB75B231D3F1D00A0DCF6 /* FilesystemConferencesContentProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesystemConferencesContentProvider.swift; sourceTree = "<group>"; };
+		F6F77609233D6378001DDCCF /* XCoordinatorRx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinatorRx.framework; path = ../../../Carthage/Build/iOS/XCoordinatorRx.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6CAB730231D3D2E00A0DCF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6820528231F185500098C20 /* CoreUX.framework in Frameworks */,
+				F68204B2231F045C00098C20 /* SuperArcLocalization.framework in Frameworks */,
+				F68204B0231F045700098C20 /* SuperArcCoreUI.framework in Frameworks */,
+				F68204AE231F045400098C20 /* SuperArcCore.framework in Frameworks */,
+				F6C8A0D4231E957000DD6BFD /* RxCocoa.framework in Frameworks */,
+				F6C8A0D5231E957000DD6BFD /* XCoordinator.framework in Frameworks */,
+				F6F7760A233D6378001DDCCF /* XCoordinatorRx.framework in Frameworks */,
+				F6C8A0D6231E957000DD6BFD /* RxSwift.framework in Frameworks */,
+				F6C8A0CE231E954A00DD6BFD /* Action.framework in Frameworks */,
+				F6CAB754231D3E0700A0DCF6 /* PromiseKit.framework in Frameworks */,
+				F6CAB752231D3D8C00A0DCF6 /* DataModels.framework in Frameworks */,
+				F6CAB750231D3D8700A0DCF6 /* Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6CAB739231D3D2E00A0DCF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6CAB73D231D3D2E00A0DCF6 /* Conferences.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6749CB62321C0A2000BDC1C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6CAB736231D3D2E00A0DCF6 /* Conferences.h */,
+				F6CAB737231D3D2E00A0DCF6 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6C8A09D231E941000DD6BFD /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				F6CAB758231D3E6B00A0DCF6 /* Platform */,
+				F6CAB757231D3E6300A0DCF6 /* DomainLogic */,
+				F6CAB756231D3E5800A0DCF6 /* DataModels */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		F6C8A09E231E942F00DD6BFD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A09F231E949800DD6BFD /* Components */,
+				F6C8A0C5231E94C100DD6BFD /* Base */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F6C8A09F231E949800DD6BFD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0AC231E949800DD6BFD /* Conferences.storyboard */,
+				F6C8A0AD231E949800DD6BFD /* List */,
+				F6C8A0A1231E949800DD6BFD /* Detail */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F6C8A0A1231E949800DD6BFD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0A2231E949800DD6BFD /* ViewModel */,
+				F6C8A0A5231E949800DD6BFD /* View */,
+				F6C8A0AA231E949800DD6BFD /* ViewController */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F6C8A0A2231E949800DD6BFD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0A3231E949800DD6BFD /* ConferenceDetailViewModel.swift */,
+				F6C8A0A4231E949800DD6BFD /* Models+RxDataSources.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F6C8A0A5231E949800DD6BFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0A6231E949800DD6BFD /* SectionHeader */,
+				F6C8A0A9231E949800DD6BFD /* ConferenceDetailCollectionViewFlowLayout.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6C8A0A6231E949800DD6BFD /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0A7231E949800DD6BFD /* ConferenceDetailSectionHeaderView.xib */,
+				F6C8A0A8231E949800DD6BFD /* ConferenceDetailSectionHeaderView.swift */,
+			);
+			path = SectionHeader;
+			sourceTree = "<group>";
+		};
+		F6C8A0AA231E949800DD6BFD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0AB231E949800DD6BFD /* ConferenceDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F6C8A0AD231E949800DD6BFD /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0B4231E949800DD6BFD /* ViewController */,
+				F6C8A0AE231E949800DD6BFD /* ViewModel */,
+				F6C8A0B0231E949800DD6BFD /* View */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		F6C8A0AE231E949800DD6BFD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0AF231E949800DD6BFD /* ConferencesCollectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F6C8A0B0231E949800DD6BFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0B1231E949800DD6BFD /* ConferenceCollectionViewFlowLayout.swift */,
+				F6C8A0B2231E949800DD6BFD /* ConferenceCollectionViewCell.xib */,
+				F6C8A0B3231E949800DD6BFD /* ConferenceCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6C8A0B4231E949800DD6BFD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0B5231E949800DD6BFD /* ConferencesCollectionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F6C8A0C5231E94C100DD6BFD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0C6231E94ED00DD6BFD /* ConferenceView */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F6C8A0C6231E94ED00DD6BFD /* ConferenceView */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0C7231E94ED00DD6BFD /* ConferenceViewModel.swift */,
+				F6C8A0C8231E94ED00DD6BFD /* ConferenceView.xib */,
+				F6C8A0C9231E94ED00DD6BFD /* ConferenceView.swift */,
+			);
+			path = ConferenceView;
+			sourceTree = "<group>";
+		};
+		F6C8A157231EB5B900DD6BFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A158231EB5CE00DD6BFD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6CAB729231D3D2E00A0DCF6 = {
+			isa = PBXGroup;
+			children = (
+				F6CAB735231D3D2E00A0DCF6 /* Sources */,
+				F6CAB740231D3D2E00A0DCF6 /* Tests */,
+				F6CAB734231D3D2E00A0DCF6 /* Products */,
+				F6CAB74E231D3D8700A0DCF6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F6CAB734231D3D2E00A0DCF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6CAB733231D3D2E00A0DCF6 /* Conferences.framework */,
+				F6CAB73C231D3D2E00A0DCF6 /* ConferencesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6CAB735231D3D2E00A0DCF6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F6CAB74D231D3D3700A0DCF6 /* Top */,
+				F6CAB755231D3E5200A0DCF6 /* Base */,
+				F6C8A157231EB5B900DD6BFD /* Resources */,
+				F6749CB62321C0A2000BDC1C /* Supporting Files */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F6CAB740231D3D2E00A0DCF6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F6CAB743231D3D2E00A0DCF6 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F6CAB74D231D3D3700A0DCF6 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A0B6231E949800DD6BFD /* ConferencesCoordinator.swift */,
+				F6C8A0A0231E949800DD6BFD /* ConferencesComponent.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		F6CAB74E231D3D8700A0DCF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6F77609233D6378001DDCCF /* XCoordinatorRx.framework */,
+				F6820527231F185500098C20 /* CoreUX.framework */,
+				F6820517231F131100098C20 /* CoreUI.framework */,
+				F68204B1231F045C00098C20 /* SuperArcLocalization.framework */,
+				F68204AF231F045700098C20 /* SuperArcCoreUI.framework */,
+				F68204AD231F045400098C20 /* SuperArcCore.framework */,
+				F6C8A0CF231E957000DD6BFD /* ObjectiveGit.framework */,
+				F6C8A0D0231E957000DD6BFD /* RxCocoa.framework */,
+				F6C8A0D2231E957000DD6BFD /* RxSwift.framework */,
+				F6C8A0D1231E957000DD6BFD /* XCoordinator.framework */,
+				F6C8A0CD231E954A00DD6BFD /* Action.framework */,
+				F6CAB753231D3E0700A0DCF6 /* PromiseKit.framework */,
+				F6CAB751231D3D8C00A0DCF6 /* DataModels.framework */,
+				F6CAB74F231D3D8700A0DCF6 /* Core.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6CAB755231D3E5200A0DCF6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8A09E231E942F00DD6BFD /* UI */,
+				F6C8A09D231E941000DD6BFD /* Engine */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F6CAB756231D3E5800A0DCF6 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataModels;
+			path = ../DataModels;
+			sourceTree = "<group>";
+		};
+		F6CAB757231D3E6300A0DCF6 /* DomainLogic */ = {
+			isa = PBXGroup;
+			children = (
+				F6CAB759231D3E9F00A0DCF6 /* ConferencesService.swift */,
+			);
+			path = DomainLogic;
+			sourceTree = "<group>";
+		};
+		F6CAB758231D3E6B00A0DCF6 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				F6CAB75B231D3F1D00A0DCF6 /* FilesystemConferencesContentProvider.swift */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F6CAB72E231D3D2E00A0DCF6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6CAB744231D3D2E00A0DCF6 /* Conferences.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F6CAB732231D3D2E00A0DCF6 /* Conferences */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6CAB747231D3D2E00A0DCF6 /* Build configuration list for PBXNativeTarget "Conferences" */;
+			buildPhases = (
+				F6CAB72E231D3D2E00A0DCF6 /* Headers */,
+				F6CAB72F231D3D2E00A0DCF6 /* Sources */,
+				F6CAB730231D3D2E00A0DCF6 /* Frameworks */,
+				F6CAB731231D3D2E00A0DCF6 /* Resources */,
+				F6F7760C233D6378001DDCCF /* Embed Frameworks */,
+				F64C7FB4238027AB00ED0A30 /* Swiftlint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Conferences;
+			productName = Conferences;
+			productReference = F6CAB733231D3D2E00A0DCF6 /* Conferences.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F6CAB73B231D3D2E00A0DCF6 /* ConferencesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6CAB74A231D3D2E00A0DCF6 /* Build configuration list for PBXNativeTarget "ConferencesTests" */;
+			buildPhases = (
+				F6CAB738231D3D2E00A0DCF6 /* Sources */,
+				F6CAB739231D3D2E00A0DCF6 /* Frameworks */,
+				F6CAB73A231D3D2E00A0DCF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6CAB73F231D3D2E00A0DCF6 /* PBXTargetDependency */,
+			);
+			name = ConferencesTests;
+			productName = ConferencesTests;
+			productReference = F6CAB73C231D3D2E00A0DCF6 /* ConferencesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6CAB72A231D3D2E00A0DCF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "An Tran";
+				TargetAttributes = {
+					F6CAB732231D3D2E00A0DCF6 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+					F6CAB73B231D3D2E00A0DCF6 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = F6CAB72D231D3D2E00A0DCF6 /* Build configuration list for PBXProject "Conferences" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6CAB729231D3D2E00A0DCF6;
+			productRefGroup = F6CAB734231D3D2E00A0DCF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6CAB732231D3D2E00A0DCF6 /* Conferences */,
+				F6CAB73B231D3D2E00A0DCF6 /* ConferencesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6CAB731231D3D2E00A0DCF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C8A159231EB5CE00DD6BFD /* Assets.xcassets in Resources */,
+				F6C8A0BE231E949800DD6BFD /* Conferences.storyboard in Resources */,
+				F6C8A0C1231E949800DD6BFD /* ConferenceCollectionViewCell.xib in Resources */,
+				F6C8A0CB231E94ED00DD6BFD /* ConferenceView.xib in Resources */,
+				F6C8A0BA231E949800DD6BFD /* ConferenceDetailSectionHeaderView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6CAB73A231D3D2E00A0DCF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F64C7FB4238027AB00ED0A30 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../../../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6CAB72F231D3D2E00A0DCF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C8A0BF231E949800DD6BFD /* ConferencesCollectionViewModel.swift in Sources */,
+				F6C8A0BB231E949800DD6BFD /* ConferenceDetailSectionHeaderView.swift in Sources */,
+				F6C8A0C3231E949800DD6BFD /* ConferencesCollectionViewController.swift in Sources */,
+				F6C8A0CC231E94ED00DD6BFD /* ConferenceView.swift in Sources */,
+				F6C8A0C2231E949800DD6BFD /* ConferenceCollectionViewCell.swift in Sources */,
+				F6C8A0BD231E949800DD6BFD /* ConferenceDetailViewController.swift in Sources */,
+				F6CAB75A231D3E9F00A0DCF6 /* ConferencesService.swift in Sources */,
+				F6C8A0B8231E949800DD6BFD /* ConferenceDetailViewModel.swift in Sources */,
+				F6C8A0B9231E949800DD6BFD /* Models+RxDataSources.swift in Sources */,
+				F6CAB75C231D3F1D00A0DCF6 /* FilesystemConferencesContentProvider.swift in Sources */,
+				F6C8A0BC231E949800DD6BFD /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */,
+				F6C8A0C0231E949800DD6BFD /* ConferenceCollectionViewFlowLayout.swift in Sources */,
+				F6C8A0B7231E949800DD6BFD /* ConferencesComponent.swift in Sources */,
+				F6C8A0CA231E94ED00DD6BFD /* ConferenceViewModel.swift in Sources */,
+				F6C8A0C4231E949800DD6BFD /* ConferencesCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6CAB738231D3D2E00A0DCF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6CAB73F231D3D2E00A0DCF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6CAB732231D3D2E00A0DCF6 /* Conferences */;
+			targetProxy = F6CAB73E231D3D2E00A0DCF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F6CAB745231D3D2E00A0DCF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Carthage/Build/iOS";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F6CAB746231D3D2E00A0DCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Carthage/Build/iOS";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F6CAB748231D3D2E00A0DCF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftCommunity.Conferences;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6CAB749231D3D2E00A0DCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.SwiftCommunity.Conferences;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F6CAB74B231D3D2E00A0DCF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ConferencesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.ConferencesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6CAB74C231D3D2E00A0DCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ConferencesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.ConferencesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6CAB72D231D3D2E00A0DCF6 /* Build configuration list for PBXProject "Conferences" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6CAB745231D3D2E00A0DCF6 /* Debug */,
+				F6CAB746231D3D2E00A0DCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6CAB747231D3D2E00A0DCF6 /* Build configuration list for PBXNativeTarget "Conferences" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6CAB748231D3D2E00A0DCF6 /* Debug */,
+				F6CAB749231D3D2E00A0DCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6CAB74A231D3D2E00A0DCF6 /* Build configuration list for PBXNativeTarget "ConferencesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6CAB74B231D3D2E00A0DCF6 /* Debug */,
+				F6CAB74C231D3D2E00A0DCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6CAB72A231D3D2E00A0DCF6 /* Project object */;
+}

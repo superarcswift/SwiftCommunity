@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F61DE100231FFF3D0083E26A /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE0FF231FFF3D0083E26A /* Interface.swift */; };
+		F61DE102231FFF510083E26A /* ComponentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE101231FFF510083E26A /* ComponentRouter.swift */; };
+		F61DE105231FFF9B0083E26A /* ComponentsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE104231FFF9B0083E26A /* ComponentsRouterProtocol.swift */; };
+		F6429C78232562EB00744ACA /* ComponentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C77232562EA00744ACA /* ComponentsRouter.swift */; };
+		F6429C902326396100744ACA /* ComponentPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C8F2326396100744ACA /* ComponentPresentable.swift */; };
+		F6429C9223264E9400744ACA /* CommonViewController+ComponentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C9123264E9400744ACA /* CommonViewController+ComponentsRouter.swift */; };
+		F6429CE923266D8B00744ACA /* ViewControllerRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429CE823266D8B00744ACA /* ViewControllerRoutable.swift */; };
+		F6429D2E2326855B00744ACA /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429D2D2326855B00744ACA /* SuperArcCore.framework */; };
+		F6429D302326858300744ACA /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429D2F2326858300744ACA /* SuperArcCoreUI.framework */; };
+		F6749C882321B65B000BDC1C /* ComponentRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6749C872321B65B000BDC1C /* ComponentRoute.swift */; };
+		F6A6B55923014EA000BFEC40 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6A6B55823014EA000BFEC40 /* README.md */; };
+		F6ABCB1D22FB4C6600476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB1322FB4C6500476F1A /* SuperArcCoreComponent.framework */; };
+		F6ABCB2422FB4C6600476F1A /* SuperArcCoreComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6ABCB3022FB4CC900476F1A /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCB2F22FB4CC900476F1A /* Component.swift */; };
+		F6ABCB3322FB647600476F1A /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCB3222FB647600476F1A /* Dependency.swift */; };
+		F6E2937D231656BB00F759FF /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2937C231656BB00F759FF /* ViewBuilder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6ABCB1E22FB4C6600476F1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6ABCB0A22FB4C6500476F1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6ABCB1222FB4C6500476F1A;
+			remoteInfo = SuperArcCoreComponent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F61DE0FF231FFF3D0083E26A /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		F61DE101231FFF510083E26A /* ComponentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRouter.swift; sourceTree = "<group>"; };
+		F61DE104231FFF9B0083E26A /* ComponentsRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentsRouterProtocol.swift; sourceTree = "<group>"; };
+		F6429C77232562EA00744ACA /* ComponentsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentsRouter.swift; sourceTree = "<group>"; };
+		F6429C8F2326396100744ACA /* ComponentPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentPresentable.swift; sourceTree = "<group>"; };
+		F6429C9123264E9400744ACA /* CommonViewController+ComponentsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommonViewController+ComponentsRouter.swift"; sourceTree = "<group>"; };
+		F6429CE823266D8B00744ACA /* ViewControllerRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRoutable.swift; sourceTree = "<group>"; };
+		F6429D2D2326855B00744ACA /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6429D2F2326858300744ACA /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6749C872321B65B000BDC1C /* ComponentRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRoute.swift; sourceTree = "<group>"; };
+		F6749CBA23229319000BDC1C /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
+		F6A6B55823014EA000BFEC40 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F6ABCB1322FB4C6500476F1A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCoreComponent.h; sourceTree = "<group>"; };
+		F6ABCB1722FB4C6500476F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6ABCB1C22FB4C6600476F1A /* SuperArcCoreComponentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcCoreComponentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6ABCB2322FB4C6600476F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6ABCB2F22FB4CC900476F1A /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		F6ABCB3222FB647600476F1A /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		F6E2937C231656BB00F759FF /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6ABCB1022FB4C6500476F1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6429D302326858300744ACA /* SuperArcCoreUI.framework in Frameworks */,
+				F6429D2E2326855B00744ACA /* SuperArcCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6ABCB1922FB4C6600476F1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6ABCB1D22FB4C6600476F1A /* SuperArcCoreComponent.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F61DE103231FFF780083E26A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE104231FFF9B0083E26A /* ComponentsRouterProtocol.swift */,
+				F61DE101231FFF510083E26A /* ComponentRouter.swift */,
+				F6749C872321B65B000BDC1C /* ComponentRoute.swift */,
+				F6429C8F2326396100744ACA /* ComponentPresentable.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		F61DE106231FFFAB0083E26A /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				F61DE0FF231FFF3D0083E26A /* Interface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		F6429CE723266D7C00744ACA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6429CE823266D8B00744ACA /* ViewControllerRoutable.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F6749CB923229318000BDC1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6429D2F2326858300744ACA /* SuperArcCoreUI.framework */,
+				F6429D2D2326855B00744ACA /* SuperArcCore.framework */,
+				F6749CBA23229319000BDC1C /* XCoordinator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6ABCB0922FB4C6500476F1A = {
+			isa = PBXGroup;
+			children = (
+				F6A6B55823014EA000BFEC40 /* README.md */,
+				F6ABCB1522FB4C6500476F1A /* Sources */,
+				F6ABCB2022FB4C6600476F1A /* Tests */,
+				F6ABCB1422FB4C6500476F1A /* Products */,
+				F6749CB923229318000BDC1C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F6ABCB1422FB4C6500476F1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCB1322FB4C6500476F1A /* SuperArcCoreComponent.framework */,
+				F6ABCB1C22FB4C6600476F1A /* SuperArcCoreComponentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6ABCB1522FB4C6500476F1A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCB2D22FB4C9600476F1A /* Top */,
+				F6ABCB2E22FB4CB400476F1A /* Base */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F6ABCB2022FB4C6600476F1A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCB2322FB4C6600476F1A /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F6ABCB2D22FB4C9600476F1A /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCB2F22FB4CC900476F1A /* Component.swift */,
+				F6429C9123264E9400744ACA /* CommonViewController+ComponentsRouter.swift */,
+				F6429C77232562EA00744ACA /* ComponentsRouter.swift */,
+				F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */,
+				F6ABCB1722FB4C6500476F1A /* Info.plist */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		F6ABCB2E22FB4CB400476F1A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F6429CE723266D7C00744ACA /* ViewController */,
+				F61DE106231FFFAB0083E26A /* Interface */,
+				F61DE103231FFF780083E26A /* Navigation */,
+				F6ABCB3222FB647600476F1A /* Dependency.swift */,
+				F6E2937C231656BB00F759FF /* ViewBuilder.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F6ABCB0E22FB4C6500476F1A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6ABCB2422FB4C6600476F1A /* SuperArcCoreComponent.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F6ABCB1222FB4C6500476F1A /* SuperArcCoreComponent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6ABCB2722FB4C6600476F1A /* Build configuration list for PBXNativeTarget "SuperArcCoreComponent" */;
+			buildPhases = (
+				F6ABCB0E22FB4C6500476F1A /* Headers */,
+				F6ABCB0F22FB4C6500476F1A /* Sources */,
+				F6ABCB1022FB4C6500476F1A /* Frameworks */,
+				F6ABCB1122FB4C6500476F1A /* Resources */,
+				F604E3B523171A5E00BFFE6A /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuperArcCoreComponent;
+			productName = SuperArcCoreComponent;
+			productReference = F6ABCB1322FB4C6500476F1A /* SuperArcCoreComponent.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F6ABCB1B22FB4C6600476F1A /* SuperArcCoreComponentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6ABCB2A22FB4C6600476F1A /* Build configuration list for PBXNativeTarget "SuperArcCoreComponentTests" */;
+			buildPhases = (
+				F6ABCB1822FB4C6600476F1A /* Sources */,
+				F6ABCB1922FB4C6600476F1A /* Frameworks */,
+				F6ABCB1A22FB4C6600476F1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6ABCB1F22FB4C6600476F1A /* PBXTargetDependency */,
+			);
+			name = SuperArcCoreComponentTests;
+			productName = SuperArcCoreComponentTests;
+			productReference = F6ABCB1C22FB4C6600476F1A /* SuperArcCoreComponentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6ABCB0A22FB4C6500476F1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "An Tran";
+				TargetAttributes = {
+					F6ABCB1222FB4C6500476F1A = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+					F6ABCB1B22FB4C6600476F1A = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = F6ABCB0D22FB4C6500476F1A /* Build configuration list for PBXProject "SuperArcCoreComponent" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6ABCB0922FB4C6500476F1A;
+			productRefGroup = F6ABCB1422FB4C6500476F1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6ABCB1222FB4C6500476F1A /* SuperArcCoreComponent */,
+				F6ABCB1B22FB4C6600476F1A /* SuperArcCoreComponentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6ABCB1122FB4C6500476F1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A6B55923014EA000BFEC40 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6ABCB1A22FB4C6600476F1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F604E3B523171A5E00BFFE6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6ABCB0F22FB4C6500476F1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6429C902326396100744ACA /* ComponentPresentable.swift in Sources */,
+				F6429C78232562EB00744ACA /* ComponentsRouter.swift in Sources */,
+				F6429C9223264E9400744ACA /* CommonViewController+ComponentsRouter.swift in Sources */,
+				F61DE105231FFF9B0083E26A /* ComponentsRouterProtocol.swift in Sources */,
+				F6ABCB3322FB647600476F1A /* Dependency.swift in Sources */,
+				F61DE102231FFF510083E26A /* ComponentRouter.swift in Sources */,
+				F6ABCB3022FB4CC900476F1A /* Component.swift in Sources */,
+				F6429CE923266D8B00744ACA /* ViewControllerRoutable.swift in Sources */,
+				F6E2937D231656BB00F759FF /* ViewBuilder.swift in Sources */,
+				F6749C882321B65B000BDC1C /* ComponentRoute.swift in Sources */,
+				F61DE100231FFF3D0083E26A /* Interface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6ABCB1822FB4C6600476F1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6ABCB1F22FB4C6600476F1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6ABCB1222FB4C6500476F1A /* SuperArcCoreComponent */;
+			targetProxy = F6ABCB1E22FB4C6600476F1A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F6ABCB2522FB4C6600476F1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F6ABCB2622FB4C6600476F1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F6ABCB2822FB4C6600476F1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Sources/Top/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.CoreComponent;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6ABCB2922FB4C6600476F1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Sources/Top/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.CoreComponent;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F6ABCB2B22FB4C6600476F1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SuperArcCoreComponentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.SuperArcCoreComponentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6ABCB2C22FB4C6600476F1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SuperArcCoreComponentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.superarc.SuperArcCoreComponentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6ABCB0D22FB4C6500476F1A /* Build configuration list for PBXProject "SuperArcCoreComponent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6ABCB2522FB4C6600476F1A /* Debug */,
+				F6ABCB2622FB4C6600476F1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6ABCB2722FB4C6600476F1A /* Build configuration list for PBXNativeTarget "SuperArcCoreComponent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6ABCB2822FB4C6600476F1A /* Debug */,
+				F6ABCB2922FB4C6600476F1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6ABCB2A22FB4C6600476F1A /* Build configuration list for PBXNativeTarget "SuperArcCoreComponentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6ABCB2B22FB4C6600476F1A /* Debug */,
+				F6ABCB2C22FB4C6600476F1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6ABCB0A22FB4C6500476F1A /* Project object */;
+}
