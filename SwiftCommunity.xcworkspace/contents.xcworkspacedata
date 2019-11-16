@@ -5,7 +5,7 @@
       location = "container:"
       name = "SwiftCommunity">
       <FileRef
-         location = "group:SwiftCommunity/SwiftCommunity.xcodeproj">
+         location = "group:/Users/atran/Desktop/Projects/iOS/SwiftCommunity/SwiftCommunity/SwiftCommunity.xcodeproj">
       </FileRef>
       <Group
          location = "container:"
@@ -31,14 +31,18 @@
       </FileRef>
    </Group>
    <Group
-      location = "container:"
+      location = "container:SuperArc"
       name = "SuperArc">
-      <FileRef
-         location = "group:ExampleApp/ExampleApp.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:ExampleAppRouter/ExampleAppRouter.xcodeproj">
-      </FileRef>
+      <Group
+         location = "container:SuperArc/Example"
+         name = "Example">
+         <FileRef
+            location = "group:ExampleApp/ExampleApp.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:ExampleAppRouter/ExampleAppRouter.xcodeproj">
+         </FileRef>
+      </Group>
       <FileRef
          location = "group:SuperArcActivityIndicator/SuperArcActivityIndicator.xcodeproj">
       </FileRef>
@@ -67,10 +71,10 @@
          location = "group:SuperArcTaskCoordinator/SuperArcTaskCoordinator.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:/Users/atran/Desktop/Projects/iOS/SwiftCommunity/SuperArcStore/SuperArcStore.xcodeproj">
+         location = "group:SuperArcCore/SuperArcCore.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:SuperArcCore/SuperArcCore.xcodeproj">
+         location = "group:SuperArcStore/SuperArcStore.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:SuperArcNetwork/SuperArcNetwork.xcodeproj">

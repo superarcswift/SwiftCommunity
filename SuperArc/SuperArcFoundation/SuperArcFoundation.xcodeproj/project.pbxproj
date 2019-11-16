@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60337AF23801B4A00C3CFEC /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60337AE23801B4A00C3CFEC /* PromiseKit.framework */; };
+		F606251423801DBE00A03CA9 /* Promise+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507770237CB4620076AE6B /* Promise+Extensions.swift */; };
 		F60ED7372376FBAD00E3E3B9 /* Continuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED7362376FBAD00E3E3B9 /* Continuation.swift */; };
 		F60ED740237713F700E3E3B9 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED73F237713F700E3E3B9 /* DispatchQueue+Extension.swift */; };
 		F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */; };
@@ -14,9 +16,6 @@
 		F6507751237C8B030076AE6B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650774E237C8B030076AE6B /* Configuration.swift */; };
 		F6507752237C8B030076AE6B /* ConfigurationRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650774F237C8B030076AE6B /* ConfigurationRegistry.swift */; };
 		F650775E237C90460076AE6B /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650775D237C90460076AE6B /* Dictionary+Extensions.swift */; };
-		F650776D237CB43B0076AE6B /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F650776C237CB43B0076AE6B /* PromiseKit.framework */; };
-		F650776E237CB43B0076AE6B /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F650776C237CB43B0076AE6B /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F6507771237CB4620076AE6B /* Promise+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507770237CB4620076AE6B /* Promise+Extensions.swift */; };
 		F6A6B5532300469A00BFEC40 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B5522300469A00BFEC40 /* Int+Extensions.swift */; };
 		F6C41DF5237EDB6A009C3419 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C41DF4237EDB6A009C3419 /* Date+Extensions.swift */; };
 		F6CAFA6022CBF13F007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */; };
@@ -38,13 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F650776F237CB43B0076AE6B /* Embed Frameworks */ = {
+		F60337B123801B4A00C3CFEC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F650776E237CB43B0076AE6B /* PromiseKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F60337AE23801B4A00C3CFEC /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F60ED7362376FBAD00E3E3B9 /* Continuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continuation.swift; sourceTree = "<group>"; };
 		F60ED73F237713F700E3E3B9 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameDerivable.swift; sourceTree = "<group>"; };
@@ -59,7 +58,6 @@
 		F650774E237C8B030076AE6B /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		F650774F237C8B030076AE6B /* ConfigurationRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationRegistry.swift; sourceTree = "<group>"; };
 		F650775D237C90460076AE6B /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
-		F650776C237CB43B0076AE6B /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6507770237CB4620076AE6B /* Promise+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Extensions.swift"; sourceTree = "<group>"; };
 		F6A6B5522300469A00BFEC40 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		F6C41DF4237EDB6A009C3419 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -79,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F650776D237CB43B0076AE6B /* PromiseKit.framework in Frameworks */,
+				F60337AF23801B4A00C3CFEC /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +130,7 @@
 		F650776B237CB43A0076AE6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F650776C237CB43B0076AE6B /* PromiseKit.framework */,
+				F60337AE23801B4A00C3CFEC /* PromiseKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -223,7 +221,7 @@
 				F6CAFA5322CBF13F007476D4 /* Frameworks */,
 				F6CAFA5422CBF13F007476D4 /* Resources */,
 				F604E3B923171A9E00BFFE6A /* SwiftLint */,
-				F650776F237CB43B0076AE6B /* Embed Frameworks */,
+				F60337B123801B4A00C3CFEC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -324,7 +322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../Tools/.swiftlint.yml\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../../Tools/.swiftlint.yml\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -336,6 +334,7 @@
 				F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */,
 				F6507750237C8B030076AE6B /* Endpoint.swift in Sources */,
 				F60ED7372376FBAD00E3E3B9 /* Continuation.swift in Sources */,
+				F606251423801DBE00A03CA9 /* Promise+Extensions.swift in Sources */,
 				F6CAFA7E22CBFC99007476D4 /* String+Extensions.swift in Sources */,
 				F6A6B5532300469A00BFEC40 /* Int+Extensions.swift in Sources */,
 				F6CAFA8B22CC0930007476D4 /* Container.swift in Sources */,
@@ -343,7 +342,6 @@
 				F60ED740237713F700E3E3B9 /* DispatchQueue+Extension.swift in Sources */,
 				F6507752237C8B030076AE6B /* ConfigurationRegistry.swift in Sources */,
 				F6C41DF5237EDB6A009C3419 /* Date+Extensions.swift in Sources */,
-				F6507771237CB4620076AE6B /* Promise+Extensions.swift in Sources */,
 				F6CAFA8F22CC0B82007476D4 /* Registry.swift in Sources */,
 				F6CAFA8D22CC097C007476D4 /* NSObject+Extensions.swift in Sources */,
 				F650775E237C90460076AE6B /* Dictionary+Extensions.swift in Sources */,
@@ -406,7 +404,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -471,7 +469,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -503,6 +501,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -531,6 +530,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -553,6 +553,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SuperArcFoundationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -572,6 +573,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SuperArcFoundationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

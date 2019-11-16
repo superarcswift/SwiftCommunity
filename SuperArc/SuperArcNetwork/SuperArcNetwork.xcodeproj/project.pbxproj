@@ -12,13 +12,11 @@
 		F60ED7D0237AFEF100E3E3B9 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED7CF237AFEF100E3E3B9 /* Server.swift */; };
 		F6507755237C8B9B0076AE6B /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507754237C8B9B0076AE6B /* ServerConfiguration.swift */; };
 		F6507758237C8BA70076AE6B /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6507757237C8BA70076AE6B /* SuperArcFoundation.framework */; };
-		F6507759237C8BA70076AE6B /* SuperArcFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6507757237C8BA70076AE6B /* SuperArcFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F650775C237C8EBE0076AE6B /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650775B237C8EBE0076AE6B /* Channel.swift */; };
 		F6507760237CA61E0076AE6B /* HTTPJSONChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650775F237CA61E0076AE6B /* HTTPJSONChannel.swift */; };
 		F6507762237CA7590076AE6B /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507761237CA7590076AE6B /* RequestResponse.swift */; };
 		F6507764237CA77C0076AE6B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507763237CA77C0076AE6B /* HTTPMethod.swift */; };
 		F6507766237CAAF10076AE6B /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6507765237CAAF10076AE6B /* PromiseKit.framework */; };
-		F6507767237CAAF10076AE6B /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6507765237CAAF10076AE6B /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6507769237CB2360076AE6B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507768237CB2360076AE6B /* NetworkError.swift */; };
 		F6507778237CC3210076AE6B /* DirectAccessJSONServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507777237CC3210076AE6B /* DirectAccessJSONServer.swift */; };
 /* End PBXBuildFile section */
@@ -33,21 +31,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		F650775A237C8BA70076AE6B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F6507759237C8BA70076AE6B /* SuperArcFoundation.framework in Embed Frameworks */,
-				F6507767237CAAF10076AE6B /* PromiseKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		F60ED7B2237AFAAF00E3E3B9 /* SuperArcNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F60ED7B5237AFAAF00E3E3B9 /* SuperArcNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcNetwork.h; sourceTree = "<group>"; };
@@ -61,7 +44,7 @@
 		F650775F237CA61E0076AE6B /* HTTPJSONChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPJSONChannel.swift; sourceTree = "<group>"; };
 		F6507761237CA7590076AE6B /* RequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
 		F6507763237CA77C0076AE6B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		F6507765237CAAF10076AE6B /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F6507765237CAAF10076AE6B /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6507768237CB2360076AE6B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		F6507777237CC3210076AE6B /* DirectAccessJSONServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAccessJSONServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,7 +169,6 @@
 				F60ED7AE237AFAAF00E3E3B9 /* Sources */,
 				F60ED7AF237AFAAF00E3E3B9 /* Frameworks */,
 				F60ED7B0237AFAAF00E3E3B9 /* Resources */,
-				F650775A237C8BA70076AE6B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +186,7 @@
 				F60ED7B7237AFAB000E3E3B9 /* Sources */,
 				F60ED7B8237AFAB000E3E3B9 /* Frameworks */,
 				F60ED7B9237AFAB000E3E3B9 /* Resources */,
+				F60625152380225100A03CA9 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -269,6 +252,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F60625152380225100A03CA9 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint --config ../../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F60ED7AE237AFAAF00E3E3B9 /* Sources */ = {
@@ -341,7 +345,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS/**";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -405,7 +409,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS/**";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -435,6 +439,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,6 +465,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -480,6 +486,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SuperArcNetworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,6 +505,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SuperArcNetworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

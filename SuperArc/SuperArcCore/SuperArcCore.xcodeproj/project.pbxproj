@@ -14,7 +14,6 @@
 		F66C90EF22E5ED5E006CA2BB /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90EE22E5ED5E006CA2BB /* ApplicationContext.swift */; };
 		F675C35522DEFDA500FA77DD /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35422DEFDA500FA77DD /* Core.swift */; };
 		F6B577A823204C5E0069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A423204C5E0069E79F /* RxSwift.framework */; };
-		F6B577A923204C5E0069E79F /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A523204C5E0069E79F /* Kingfisher.framework */; };
 		F6B577AA23204C5E0069E79F /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A623204C5E0069E79F /* PromiseKit.framework */; };
 		F6B577AB23204C5E0069E79F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A723204C5E0069E79F /* RxCocoa.framework */; };
 		F6B577BB23204D560069E79F /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577BA23204D560069E79F /* RxRelay.framework */; };
@@ -58,11 +57,11 @@
 		F6507779237CC4A60076AE6B /* SuperArcNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C90EE22E5ED5E006CA2BB /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		F675C35422DEFDA500FA77DD /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		F6B577A423204C5E0069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		F6B577A523204C5E0069E79F /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		F6B577A623204C5E0069E79F /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
-		F6B577A723204C5E0069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		F6B577BA23204D560069E79F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		F6B577A423204C5E0069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F6B577A523204C5E0069E79F /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		F6B577A623204C5E0069E79F /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F6B577A723204C5E0069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F6B577BA23204D560069E79F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		F6CAFA2B22CBEEC7007476D4 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CAFA2E22CBEEC7007476D4 /* SuperArcCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCore.h; sourceTree = "<group>"; };
 		F6CAFA2F22CBEEC7007476D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,7 +82,6 @@
 			files = (
 				F6B577BB23204D560069E79F /* RxRelay.framework in Frameworks */,
 				F6B577A823204C5E0069E79F /* RxSwift.framework in Frameworks */,
-				F6B577A923204C5E0069E79F /* Kingfisher.framework in Frameworks */,
 				F650777A237CC4A60076AE6B /* SuperArcNetwork.framework in Frameworks */,
 				F6B577AA23204C5E0069E79F /* PromiseKit.framework in Frameworks */,
 				F6B577AB23204C5E0069E79F /* RxCocoa.framework in Frameworks */,
@@ -341,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../Tools/.swiftlint.yml\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../../Tools/.swiftlint.yml\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -418,7 +416,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -483,7 +481,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -515,6 +513,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -542,6 +541,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -563,6 +563,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SuperArcCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,6 +583,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SuperArcCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
