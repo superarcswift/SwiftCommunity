@@ -53,7 +53,6 @@ extension VideoDetailViewModelType where Self: VideoDetailViewModelInput & Video
 
 class VideoDetailViewModel: CoordinatedDIViewModel<VideosRoute, VideosDependency>, VideoDetailViewModelType, VideoDetailViewModelInput, VideoDetailViewModelOutput, VideoDetailViewModelApi {
 
-
     // MARK: Properties
 
     // Public

@@ -34,5 +34,5 @@ class FeatureAComponentRouter: FeatureAComponentRouterProtocol {
             return componentsRouter.featureDInterface.show(dependency: componentsRouter)
         }
     }
-    
+
 }

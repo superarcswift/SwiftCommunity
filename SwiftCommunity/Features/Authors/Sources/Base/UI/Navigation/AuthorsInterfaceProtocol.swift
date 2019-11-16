@@ -10,5 +10,5 @@ import SuperArcCore
 import XCoordinator
 
 public protocol AuthorsInterfaceProtocol: Interface {
-    func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter:AnyComponentRouter<AuthorsComponentRoute>) -> Presentable
+    func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute>) -> Presentable
 }

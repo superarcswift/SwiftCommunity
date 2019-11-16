@@ -62,7 +62,7 @@ public class AuthorsInterface: AuthorsInterfaceProtocol, OnDemandInterface {
 
     // MARK: APIs
 
-    public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter:AnyComponentRouter<AuthorsComponentRoute>) -> Presentable {
+    public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute>) -> Presentable {
         return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, componentsRouter: anyAuthorsRouter, context: context)
     }
 }

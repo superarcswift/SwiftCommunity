@@ -53,7 +53,6 @@ public class FilesystemStore: StoreProtocol {
 
     public func delete(_ key: String) throws {
         let path = makeFilePath(key)
-        
         guard defaultFileManager.fileExists(atPath: path) else {
             return
         }

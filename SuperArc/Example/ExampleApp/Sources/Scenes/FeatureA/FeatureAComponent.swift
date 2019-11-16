@@ -31,7 +31,7 @@ public protocol FeatureAComponentBuilder: ViewBuildable {
     func makeFeatureAViewController(hasRightCloseButton: Bool) -> ComponentPresentable
 }
 
-// MARK: -FeatureADependency
+// MARK: - FeatureADependency
 
 /// Protocol defining dependencies that needed to build this component.
 public protocol FeatureADependency: Dependency {}

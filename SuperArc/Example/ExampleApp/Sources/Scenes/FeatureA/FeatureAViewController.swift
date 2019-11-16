@@ -15,7 +15,6 @@ class FeatureAViewController: ViewController<ViewModel>, StoryboardInitiable {
     static var storyboardName = "FeatureA"
 
     lazy var componentsRouter: ComponentsRouter = {
-        // TODO: See if we can remove this force cast
         self.viewControllerContext.resolve(type: ComponentsRouter.self)
     }()
 
