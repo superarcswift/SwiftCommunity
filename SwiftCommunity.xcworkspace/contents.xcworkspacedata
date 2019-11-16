@@ -6,12 +6,12 @@
    </FileRef>
    <Group
       location = "container:_SwiftCommunity"
-      name = "_SwiftCommunity">
+      name = "SwiftCommunity">
       <FileRef
-         location = "group:SwiftCommunity/SwiftCommunity.xcodeproj">
+         location = "group:SwiftCommunity/SwiftCommunity/SwiftCommunity.xcodeproj">
       </FileRef>
       <Group
-         location = "container:_SwiftCommunity/Features"
+         location = "container:SwiftCommunity/Features"
          name = "Features">
          <FileRef
             location = "group:Authors/Authors.xcodeproj">
@@ -24,13 +24,13 @@
          </FileRef>
       </Group>
       <FileRef
-         location = "group:CoreUX/CoreUX.xcodeproj">
+         location = "group:SwiftCommunity/CoreUX/CoreUX.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:Core/Core.xcodeproj">
+         location = "group:SwiftCommunity/Core/Core.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:DataModel/DataModels.xcodeproj">
+         location = "group:SwiftCommunity/DataModel/DataModels.xcodeproj">
       </FileRef>
    </Group>
    <Group
