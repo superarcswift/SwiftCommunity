@@ -71,11 +71,11 @@
 		F6820472231EFD6300098C20 /* AuthorsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorsService.swift; sourceTree = "<group>"; };
 		F6820479231EFE1300098C20 /* DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F682047B231EFE1800098C20 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F682047D231EFE3A00098C20 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		F682047E231EFE3A00098C20 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = ../Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
-		F682047F231EFE3A00098C20 /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
-		F6820480231EFE3A00098C20 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		F6820485231EFE4B00098C20 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F682047D231EFE3A00098C20 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F682047E231EFE3A00098C20 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = ../../../Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
+		F682047F231EFE3A00098C20 /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../../../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
+		F6820480231EFE3A00098C20 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../../../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F6820485231EFE4B00098C20 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F682048A231EFF9000098C20 /* AuthorDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewModel.swift; sourceTree = "<group>"; };
 		F682048C231EFF9000098C20 /* AuthorAvatarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorAvatarTableViewCell.swift; sourceTree = "<group>"; };
 		F682048D231EFF9000098C20 /* AuthorResourcesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorResourcesTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		F682052B231F185E00098C20 /* CoreUX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F682052E231F1A9800098C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6B577DC23205EF90069E79F /* AuthorsInterfaceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsInterfaceProtocol.swift; sourceTree = "<group>"; };
-		F6F77611233D639E001DDCCF /* XCoordinatorRx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinatorRx.framework; path = ../Carthage/Build/iOS/XCoordinatorRx.framework; sourceTree = "<group>"; };
+		F6F77611233D639E001DDCCF /* XCoordinatorRx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinatorRx.framework; path = ../../../Carthage/Build/iOS/XCoordinatorRx.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +352,7 @@
 				F682044C231EFC6500098C20 /* Frameworks */,
 				F682044D231EFC6500098C20 /* Resources */,
 				F6F77614233D639E001DDCCF /* Embed Frameworks */,
+				F64C7FB32380279B00ED0A30 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -437,6 +438,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F64C7FB32380279B00ED0A30 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../../../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F682044B231EFC6500098C20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -512,7 +534,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -527,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -578,7 +600,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -587,7 +609,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -611,6 +633,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -638,6 +662,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/Top/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -659,6 +685,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AuthorsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -678,6 +706,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AuthorsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

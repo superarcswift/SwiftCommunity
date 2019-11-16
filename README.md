@@ -1,8 +1,8 @@
 ## SwiftCommunity
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![License](https://img.shields.io/badge/Swift-5.0-blue.svg)](https://opensource.org/licenses/MIT)
-[![License](https://img.shields.io/badge/Xcode-10-blue.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/Swift-5.1-blue.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/Xcode-11-blue.svg)](https://opensource.org/licenses/MIT)
 [![License](https://img.shields.io/badge/platforms-iOSv|%20tvOS%20|%20macOS%20|%20watchOS%20-blue.svg)](https://opensource.org/licenses/MIT)
 
 **Collection of Swift/iOS-related conference videos**.

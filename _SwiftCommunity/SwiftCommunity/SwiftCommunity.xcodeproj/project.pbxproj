@@ -27,7 +27,6 @@
 		F640BC3C22E8464D00EDB601 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3B22E8464D00EDB601 /* OnboardingCoordinator.swift */; };
 		F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B022CD451E000F5CE3 /* PromiseKit.framework */; };
 		F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64238B322CD4838000F5CE3 /* Kingfisher.framework */; };
-		F6453BA022EB304800392F93 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6453B9F22EB304800392F93 /* README.md */; };
 		F646EBD82321212100792DB5 /* Endpoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646EBD72321212100792DB5 /* Endpoint+Extensions.swift */; };
 		F646EBDA23212DA300792DB5 /* GitRepositoryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646EBD923212DA300792DB5 /* GitRepositoryConfiguration.swift */; };
 		F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E705F2305EB98005D066D /* MoreViewModel.swift */; };
@@ -212,9 +211,8 @@
 		F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F640BC3922E8464100EDB601 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		F640BC3B22E8464D00EDB601 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
-		F64238B022CD451E000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
-		F64238B322CD4838000F5CE3 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		F6453B9F22EB304800392F93 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F64238B022CD451E000F5CE3 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F64238B322CD4838000F5CE3 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../../Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F646EBD72321212100792DB5 /* Endpoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Extensions.swift"; sourceTree = "<group>"; };
 		F646EBD923212DA300792DB5 /* GitRepositoryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepositoryConfiguration.swift; sourceTree = "<group>"; };
 		F64E705F2305EB98005D066D /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
@@ -234,7 +232,7 @@
 		F6749CB72322851B000BDC1C /* ComponentsRouter+Conferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsRouter+Conferences.swift"; sourceTree = "<group>"; };
 		F6749CBC2322A3A7000BDC1C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F6749CBE2322A3B1000BDC1C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		F6749CC72322A539000BDC1C /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = ../Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		F6749CC72322A539000BDC1C /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = ../../Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C35222DE2F4600FA77DD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		F6820474231EFDD900098C20 /* Authors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,14 +258,14 @@
 		F690693923141B9D00B11E93 /* LicensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
 		F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreComponent.swift; sourceTree = "<group>"; };
 		F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6B577CA2320503F0069E79F /* YoutubeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YoutubeKit.framework; path = ../Carthage/Build/iOS/YoutubeKit.framework; sourceTree = "<group>"; };
-		F6B577CB2320503F0069E79F /* LXVimeoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LXVimeoKit.framework; path = ../Carthage/Build/iOS/LXVimeoKit.framework; sourceTree = "<group>"; };
-		F6B577CC2320503F0069E79F /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = ../Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
-		F6B577CD2320503F0069E79F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
-		F6B577CE2320503F0069E79F /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = ../Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
-		F6B577CF2320503F0069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		F6B577D02320503F0069E79F /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
-		F6B577D1232050400069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F6B577CA2320503F0069E79F /* YoutubeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YoutubeKit.framework; path = ../../Carthage/Build/iOS/YoutubeKit.framework; sourceTree = "<group>"; };
+		F6B577CB2320503F0069E79F /* LXVimeoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LXVimeoKit.framework; path = ../../Carthage/Build/iOS/LXVimeoKit.framework; sourceTree = "<group>"; };
+		F6B577CC2320503F0069E79F /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = ../../Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		F6B577CD2320503F0069E79F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		F6B577CE2320503F0069E79F /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = ../../Carthage/Build/iOS/ObjectiveGit.framework; sourceTree = "<group>"; };
+		F6B577CF2320503F0069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F6B577D02320503F0069E79F /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
+		F6B577D1232050400069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F6C41DBB237DF77F009C3419 /* OpenConferenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenConferenceTableViewCell.swift; sourceTree = "<group>"; };
 		F6C41DBF237DF8BE009C3419 /* OpenConferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenConferencesViewController.swift; sourceTree = "<group>"; };
 		F6C41DC1237DF9BB009C3419 /* OpenConferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpenConferences.storyboard; sourceTree = "<group>"; };
@@ -825,7 +823,6 @@
 			isa = PBXGroup;
 			children = (
 				F6EFBFD3230D62B5004C2D0A /* Package.swift */,
-				F6453B9F22EB304800392F93 /* README.md */,
 				F6E8D16022CA9EC900213675 /* Sources */,
 				F6E8D17522CA9ECA00213675 /* UnitTests */,
 				F6E8D18022CA9ECA00213675 /* UITests */,
@@ -992,7 +989,6 @@
 				F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */,
 				F640BC3A22E8464100EDB601 /* Onboarding.storyboard in Resources */,
 				F6C41DC2237DF9BB009C3419 /* OpenConferences.storyboard in Resources */,
-				F6453BA022EB304800392F93 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,7 +1025,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint --config ../Tools/.swiftlint.yml\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint --config ../../Tools/.swiftlint.yml\nfi\n";
 		};
 		F64238B222CD4522000F5CE3 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1039,23 +1035,23 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/../Carthage/Build/iOS/PromiseKit.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/Kingfisher.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/RxRelay.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/XCoordinator.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/Action.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/YoutubeKit.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/ObjectiveGit.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/NotificationBanner.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/MarqueeLabel.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/SnapKit.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/RxDataSources.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/Differentiator.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/MarkdownView.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/LXVimeoKit.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/XCoordinatorRx.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/RxRelay.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/XCoordinator.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/Action.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/YoutubeKit.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/ObjectiveGit.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/NotificationBanner.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/MarqueeLabel.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/RxDataSources.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/Differentiator.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/MarkdownView.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/LXVimeoKit.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/XCoordinatorRx.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -1234,7 +1230,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS/**";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1249,7 +1245,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1299,7 +1295,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS/**";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1308,7 +1304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1327,6 +1323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36ML5F3NSU;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1346,6 +1343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36ML5F3NSU;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1367,6 +1365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1391,6 +1390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1412,6 +1412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1433,6 +1434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
