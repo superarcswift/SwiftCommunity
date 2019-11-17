@@ -31,7 +31,6 @@
 		F6C8A150231EB04A00DD6BFD /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A14F231EB04A00DD6BFD /* Core.framework */; };
 		F6C8A152231EB04E00DD6BFD /* DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A151231EB04E00DD6BFD /* DataModels.framework */; };
 		F6F7760E233D638F001DDCCF /* XCoordinatorRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F7760D233D638F001DDCCF /* XCoordinatorRx.framework */; };
-		F6F7760F233D638F001DDCCF /* XCoordinatorRx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6F7760D233D638F001DDCCF /* XCoordinatorRx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,20 +42,6 @@
 			remoteInfo = Videos;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F6F77610233D638F001DDCCF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F6F7760F233D638F001DDCCF /* XCoordinatorRx.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F61DE110232039310083E26A /* VideosInterfaceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosInterfaceProtocol.swift; sourceTree = "<group>"; };
@@ -334,7 +319,6 @@
 				F6C8A101231EA99800DD6BFD /* Sources */,
 				F6C8A102231EA99800DD6BFD /* Frameworks */,
 				F6C8A103231EA99800DD6BFD /* Resources */,
-				F6F77610233D638F001DDCCF /* Embed Frameworks */,
 				F64C7FB5238027BD00ED0A30 /* Swiftlint */,
 			);
 			buildRules = (

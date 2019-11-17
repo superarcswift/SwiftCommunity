@@ -38,6 +38,8 @@
 		F6507776237CC02D0076AE6B /* JSONServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507775237CC02D0076AE6B /* JSONServerConfiguration.swift */; };
 		F6507782237D5ED90076AE6B /* OpenConferenceIterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507781237D5ED90076AE6B /* OpenConferenceIterface.swift */; };
 		F6507786237D61C90076AE6B /* OpenConference.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507785237D61C90076AE6B /* OpenConference.swift */; };
+		F6517EDD2381E290005C7144 /* XCoordinatorRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6517EDC2381E290005C7144 /* XCoordinatorRx.framework */; };
+		F6517EDE2381E290005C7144 /* XCoordinatorRx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6517EDC2381E290005C7144 /* XCoordinatorRx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F66C905222E084BC006CA2BB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C905122E084BC006CA2BB /* AppCoordinator.swift */; };
 		F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C905322E09DF2006CA2BB /* DashboardCoordinator.swift */; };
 		F66C90B922E1ADF9006CA2BB /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66C90B822E1ADF9006CA2BB /* More.storyboard */; };
@@ -184,6 +186,7 @@
 				F6C8A15F231EC17000DD6BFD /* Conferences.framework in Embed Frameworks */,
 				F6ABCB3722FB6CDE00476F1A /* SuperArcCoreComponent.framework in Embed Frameworks */,
 				F675C34622DDD5B600FA77DD /* SuperArcCoreUI.framework in Embed Frameworks */,
+				F6517EDE2381E290005C7144 /* XCoordinatorRx.framework in Embed Frameworks */,
 				F6820477231EFDDE00098C20 /* Authors.framework in Embed Frameworks */,
 				F6CAFA4722CBEEE5007476D4 /* SuperArcCore.framework in Embed Frameworks */,
 				F63A728D22F471F2005D0778 /* SuperArcNotificationBanner.framework in Embed Frameworks */,
@@ -223,6 +226,7 @@
 		F6507775237CC02D0076AE6B /* JSONServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONServerConfiguration.swift; sourceTree = "<group>"; };
 		F6507781237D5ED90076AE6B /* OpenConferenceIterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenConferenceIterface.swift; sourceTree = "<group>"; };
 		F6507785237D61C90076AE6B /* OpenConference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenConference.swift; sourceTree = "<group>"; };
+		F6517EDC2381E290005C7144 /* XCoordinatorRx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinatorRx.framework; path = ../../Carthage/Build/iOS/XCoordinatorRx.framework; sourceTree = "<group>"; };
 		F6594AB323535B5700F1F8EA /* Transition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition+Extensions.swift"; sourceTree = "<group>"; };
 		F6594AB923539A8700F1F8EA /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../../../../fastlane/SnapshotHelper.swift; sourceTree = "<group>"; };
 		F66C905122E084BC006CA2BB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -318,6 +322,7 @@
 				F68EDE3F231D0F55007E28A5 /* Core.framework in Frameworks */,
 				F68EDE41231D0F55007E28A5 /* DataModels.framework in Frameworks */,
 				F6C8A15C231EC16D00DD6BFD /* DataModels.framework in Frameworks */,
+				F6517EDD2381E290005C7144 /* XCoordinatorRx.framework in Frameworks */,
 				F68F7290231BE70700D424CB /* SuperArcLocalization.framework in Frameworks */,
 				F6C8A15A231EC16900DD6BFD /* Core.framework in Frameworks */,
 				F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */,
@@ -761,6 +766,7 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6517EDC2381E290005C7144 /* XCoordinatorRx.framework */,
 				F6507772237CBC490076AE6B /* SuperArcNetwork.framework */,
 				F6749CC72322A539000BDC1C /* RxTest.framework */,
 				F6749CBE2322A3B1000BDC1C /* Quick.framework */,

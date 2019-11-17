@@ -41,7 +41,6 @@
 		F6CAB75A231D3E9F00A0DCF6 /* ConferencesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAB759231D3E9F00A0DCF6 /* ConferencesService.swift */; };
 		F6CAB75C231D3F1D00A0DCF6 /* FilesystemConferencesContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAB75B231D3F1D00A0DCF6 /* FilesystemConferencesContentProvider.swift */; };
 		F6F7760A233D6378001DDCCF /* XCoordinatorRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F77609233D6378001DDCCF /* XCoordinatorRx.framework */; };
-		F6F7760B233D6378001DDCCF /* XCoordinatorRx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6F77609233D6378001DDCCF /* XCoordinatorRx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,20 +52,6 @@
 			remoteInfo = Conferences;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F6F7760C233D6378001DDCCF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F6F7760B233D6378001DDCCF /* XCoordinatorRx.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F68204AD231F045400098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,7 +394,6 @@
 				F6CAB72F231D3D2E00A0DCF6 /* Sources */,
 				F6CAB730231D3D2E00A0DCF6 /* Frameworks */,
 				F6CAB731231D3D2E00A0DCF6 /* Resources */,
-				F6F7760C233D6378001DDCCF /* Embed Frameworks */,
 				F64C7FB4238027AB00ED0A30 /* Swiftlint */,
 			);
 			buildRules = (

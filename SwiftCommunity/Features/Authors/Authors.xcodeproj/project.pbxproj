@@ -34,7 +34,6 @@
 		F682052F231F1A9800098C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F682052E231F1A9800098C20 /* Assets.xcassets */; };
 		F6B577DD23205EF90069E79F /* AuthorsInterfaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B577DC23205EF90069E79F /* AuthorsInterfaceProtocol.swift */; };
 		F6F77612233D639E001DDCCF /* XCoordinatorRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F77611233D639E001DDCCF /* XCoordinatorRx.framework */; };
-		F6F77613233D639E001DDCCF /* XCoordinatorRx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6F77611233D639E001DDCCF /* XCoordinatorRx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,20 +45,6 @@
 			remoteInfo = Authors;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F6F77614233D639E001DDCCF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F6F77613233D639E001DDCCF /* XCoordinatorRx.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F682044F231EFC6500098C20 /* Authors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Authors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -351,7 +336,6 @@
 				F682044B231EFC6500098C20 /* Sources */,
 				F682044C231EFC6500098C20 /* Frameworks */,
 				F682044D231EFC6500098C20 /* Resources */,
-				F6F77614233D639E001DDCCF /* Embed Frameworks */,
 				F64C7FB32380279B00ED0A30 /* Swiftlint */,
 			);
 			buildRules = (

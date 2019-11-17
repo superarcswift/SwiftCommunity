@@ -10,7 +10,6 @@
 		F63A729122F47BC6005D0778 /* ApplicationDependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729022F47BC6005D0778 /* ApplicationDependencyRegistry.swift */; };
 		F63A729322F47C14005D0778 /* ApplicationDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729222F47C14005D0778 /* ApplicationDependency.swift */; };
 		F650777A237CC4A60076AE6B /* SuperArcNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6507779237CC4A60076AE6B /* SuperArcNetwork.framework */; };
-		F650777B237CC4A60076AE6B /* SuperArcNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6507779237CC4A60076AE6B /* SuperArcNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F66C90EF22E5ED5E006CA2BB /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90EE22E5ED5E006CA2BB /* ApplicationContext.swift */; };
 		F675C35522DEFDA500FA77DD /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35422DEFDA500FA77DD /* Core.swift */; };
 		F6B577A823204C5E0069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577A423204C5E0069E79F /* RxSwift.framework */; };
@@ -36,20 +35,6 @@
 			remoteInfo = SuperArcCore;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F650777C237CC4A60076AE6B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F650777B237CC4A60076AE6B /* SuperArcNetwork.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F63A729022F47BC6005D0778 /* ApplicationDependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDependencyRegistry.swift; sourceTree = "<group>"; };
@@ -238,7 +223,6 @@
 				F6CAFA2822CBEEC7007476D4 /* Frameworks */,
 				F6CAFA2922CBEEC7007476D4 /* Resources */,
 				F604E3B823171A8800BFFE6A /* SwiftLint */,
-				F650777C237CC4A60076AE6B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

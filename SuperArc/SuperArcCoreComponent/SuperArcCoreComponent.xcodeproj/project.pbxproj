@@ -46,7 +46,6 @@
 		F6429D2D2326855B00744ACA /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6429D2F2326858300744ACA /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6749C872321B65B000BDC1C /* ComponentRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentRoute.swift; sourceTree = "<group>"; };
-		F6749CBA23229319000BDC1C /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		F6A6B55823014EA000BFEC40 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6ABCB1322FB4C6500476F1A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcCoreComponent.h; sourceTree = "<group>"; };
@@ -111,7 +110,6 @@
 			children = (
 				F6429D2F2326858300744ACA /* SuperArcCoreUI.framework */,
 				F6429D2D2326855B00744ACA /* SuperArcCore.framework */,
-				F6749CBA23229319000BDC1C /* XCoordinator.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
