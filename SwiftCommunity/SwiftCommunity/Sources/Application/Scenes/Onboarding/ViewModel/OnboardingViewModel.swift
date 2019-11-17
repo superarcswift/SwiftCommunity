@@ -111,8 +111,8 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
                 self?.isUpdated.onNext(true)
             }
             .ensure { [weak self] in
-//                self?.activity.stop()
-//                self?.isReady.onNext(true)
+                self?.activity.stop()
+                self?.isReady.onNext(true)
             }
             .catch { [weak self] error in
                 self?.notification.onNext(StandardNotification(error: error))
@@ -128,7 +128,7 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
                 self?.isReady.onNext(true)
             }
             .ensure { [weak self] in
-//                self?.activity.stop()
+                self?.activity.stop()
             }
             .catch { [weak self] error in
                 self?.notification.onNext(StandardNotification(error: error))

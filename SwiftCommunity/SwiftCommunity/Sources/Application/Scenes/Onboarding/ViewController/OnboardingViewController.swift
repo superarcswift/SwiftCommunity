@@ -21,6 +21,11 @@ class OnboardingViewController: ViewController<OnboardingViewModel>, StoryboardI
 
     // MARK: Setup
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
     override func setupBindings() {
         super.setupBindings()
 
