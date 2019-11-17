@@ -22,7 +22,7 @@ extension Reactive where Base: UIViewController {
 
             let activitySink = activitySinkHolder.activitySink
 
-            isBusy ? activitySink.showActivity() : activitySink.hideActivity()
+            isBusy ? activitySink.showActivity(in: self.base.view) : activitySink.hideActivity()
         }
     }
 }
