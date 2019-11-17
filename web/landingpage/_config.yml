@@ -1,5 +1,7 @@
+baseurl                                   : "/SwiftCommunity"
+
 #page title
-page_title                                :                                           # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
+page_title                                : Swift Community App                       # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
 
 # App Info
 ios_app_id                                : 1483205279                                # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
@@ -9,10 +11,10 @@ playstore_link                            :                                     
 presskit_download_link                    :                                           # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file).
                                                                                       # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
 
-app_icon                                  : /assets/appicon.png                       # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
+app_icon                                  : assets/appicon.png                       # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
 app_name                                  : Swift Community                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_price                                 :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description                           : Cocoa/Swift-related videos collection app, opensourced and community-driven.
+app_description                           : Cocoa/Swift-related videos collection app, open-sourced and community-driven.
 
 enable_smart_app_banner                   : false                                      # Set to true to show a smart app banner at top of page on mobile devices.
 
@@ -39,7 +41,7 @@ features                                  :
     fontawesome_icon_name                 : play-circle
 
   - title                                 : Open Source
-    description                           : Both the app and the content are opensourced.
+    description                           : Both <a href="https://github.com/superarcswift/SwiftCommunity" target="_blank">the app</a> and <a href="https://github.com/superarcswift/SwiftCommunityContent" target="_blank">the content</a> are opensourced.
     fontawesome_icon_name                 : book
 
   - title                                 : Community-driven
@@ -52,7 +54,7 @@ topbar_color                              : "#000000"
 topbar_transparency                       : 0.1
 topbar_title_color                        : "#ffffff"
 
-cover_image                               : /assets/headerimage.png                    # Replace with alternative image path or image URL.
+cover_image                               : assets/headerimage.png                    # Replace with alternative image path or image URL.
 cover_overlay_color                       : "#363b3d"
 cover_overlay_transparency                : 0.8
 
@@ -70,7 +72,7 @@ feature_title_color                       : "#000000"
 feature_text_color                        : "#666666"
 
 feature_icons_foreground_color            : "#1d63ea"
-feature_icons_background_color            : "#e6e6e6"
+feature_icons_background_color            : "#efefef"
 
 social_icons_foreground_color             : "#666666"
 social_icons_background_color             : "#e6e6e6"
