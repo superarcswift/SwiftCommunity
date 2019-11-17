@@ -21,6 +21,7 @@
 		F63A723F22F44E46005D0778 /* SuperArcStateView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F63A723C22F44E3F005D0778 /* SuperArcStateView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F63A728B22F471E9005D0778 /* SuperArcNotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A728A22F471E9005D0778 /* SuperArcNotificationBanner.framework */; };
 		F63A728D22F471F2005D0778 /* SuperArcNotificationBanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F63A728A22F471E9005D0778 /* SuperArcNotificationBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F63A905823813F8800F70CEB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F63A905723813F8800F70CEB /* README.md */; };
 		F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3322E8316000EDB601 /* OnboardingViewController.swift */; };
 		F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */; };
 		F640BC3A22E8464100EDB601 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F640BC3922E8464100EDB601 /* Onboarding.storyboard */; };
@@ -207,6 +208,7 @@
 		F63A720A22F4179B005D0778 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F63A723C22F44E3F005D0778 /* SuperArcStateView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcStateView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63A728A22F471E9005D0778 /* SuperArcNotificationBanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcNotificationBanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F63A905723813F8800F70CEB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		F640BC3322E8316000EDB601 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F640BC3922E8464100EDB601 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -822,6 +824,7 @@
 		F6E8D15522CA9EC900213675 = {
 			isa = PBXGroup;
 			children = (
+				F63A905723813F8800F70CEB /* README.md */,
 				F6EFBFD3230D62B5004C2D0A /* Package.swift */,
 				F6E8D16022CA9EC900213675 /* Sources */,
 				F6E8D17522CA9ECA00213675 /* UnitTests */,
@@ -989,6 +992,7 @@
 				F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */,
 				F640BC3A22E8464100EDB601 /* Onboarding.storyboard in Resources */,
 				F6C41DC2237DF9BB009C3419 /* OpenConferences.storyboard in Resources */,
+				F63A905823813F8800F70CEB /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
