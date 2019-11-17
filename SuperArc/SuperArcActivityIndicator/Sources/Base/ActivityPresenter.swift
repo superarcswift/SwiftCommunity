@@ -10,7 +10,6 @@ public class ActivityPresenter: ActivitySink {
 
     // Private
 
-    private let view: UIView?
     private let animated: Bool
     private let style: ActivityViewStyle
 
@@ -18,15 +17,14 @@ public class ActivityPresenter: ActivitySink {
 
     // MARK: Initialization
 
-    public init(view: UIView? = nil, animated: Bool = false, style: ActivityViewStyle = ActivityViewStyle.standard) {
-        self.view = view
+    public init(animated: Bool = false, style: ActivityViewStyle = .standard) {
         self.animated = animated
         self.style = style
     }
 
     // MARK: APIs
 
-    public func showActivity() {
+    public func showActivity(in view: UIView? = nil) {
         if let view = view {
             activityView = ActivityView.showInView(view, animated: animated, style: style)
         } else {
@@ -36,5 +34,6 @@ public class ActivityPresenter: ActivitySink {
 
     public func hideActivity() {
         activityView?.hide(animated)
+        activityView = nil
     }
 }

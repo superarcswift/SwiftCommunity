@@ -20,7 +20,6 @@ class ActivityView: View, ClassNameDerivable {
     override func setup() {
         if let acitivityView = ActivityView.instantiateFromNib(owner: self) {
             addAndStretchSubView(acitivityView)
-
             backgroundView.cornerRadius = 7.0
             activityIndicatorView.startAnimating()
         }
@@ -64,6 +63,5 @@ class ActivityView: View, ClassNameDerivable {
                 self.removeFromSuperview()
             }
         )
-
     }
 }

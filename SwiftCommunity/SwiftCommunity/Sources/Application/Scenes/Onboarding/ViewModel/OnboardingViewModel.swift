@@ -90,10 +90,11 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
         // If the local repository doesn't exist, clone it.
         if shouldResetBeforeCloning {
             dependency.gitService.reset()
-                .done { _ in
-                    self.cloneRemoteRepository()
-                }.catch { error in
-                    self.notification.onNext(StandardNotification(error: error))
+                .done { [weak self] _ in
+                    self?.cloneRemoteRepository()
+                }
+                .catch { [weak self] error in
+                    self?.notification.onNext(StandardNotification(error: error))
                 }
         } else {
             cloneRemoteRepository()
@@ -108,10 +109,12 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
         dependency.gitService.update()
             .done { [weak self] _ in
                 self?.isUpdated.onNext(true)
-            }.ensure { [weak self] in
+            }
+            .ensure { [weak self] in
                 self?.activity.stop()
                 self?.isReady.onNext(true)
-            }.catch { [weak self] error in
+            }
+            .catch { [weak self] error in
                 self?.notification.onNext(StandardNotification(error: error))
             }
     }
@@ -123,9 +126,11 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
             })
             .done { [weak self] _ in
                 self?.isReady.onNext(true)
-            }.ensure { [weak self] in
+            }
+            .ensure { [weak self] in
                 self?.activity.stop()
-            }.catch { [weak self] error in
+            }
+            .catch { [weak self] error in
                 self?.notification.onNext(StandardNotification(error: error))
             }
     }

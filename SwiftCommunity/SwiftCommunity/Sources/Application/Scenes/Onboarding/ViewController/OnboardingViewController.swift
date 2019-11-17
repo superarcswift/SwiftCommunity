@@ -19,14 +19,18 @@ class OnboardingViewController: ViewController<OnboardingViewModel>, StoryboardI
 
     private let disposeBag = DisposeBag()
 
-    private let activityPresenter = ActivityPresenter(view: nil)
-
     // MARK: Setup
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 
     override func setupBindings() {
         super.setupBindings()
 
         viewModel.activity.active
+            .observeOn(MainScheduler.instance)
             .bind(to: self.rx.activity)
             .disposed(by: disposeBag)
 
