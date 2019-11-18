@@ -13,8 +13,8 @@ public class ComponentsRouter: ComponentsRouterProtocol, HasViewControllerContex
 
     // Private
 
-    public var context: ApplicationContextProtocol!
-    public var viewControllerContext: ViewControllerContext!
+    public weak var context: ApplicationContextProtocol!
+    public weak var viewControllerContext: ViewControllerContext!
 
     public let interfaceRegistry: InterfaceRegistry
     public let routerRegistry: RouterRegistry
