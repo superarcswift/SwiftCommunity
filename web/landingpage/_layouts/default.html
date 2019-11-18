@@ -54,8 +54,13 @@
                             {% if site.playstore_link %}
                                 <a class="playStoreLink" href="{{site.playstore_link}}"><img class="playStore" src="assets/playstore.png"></a>
                             {% endif %}
-                            <!--<a class="appStoreLink" href="{{site.appstore_link}}"><img class="appStore" src="assets/testflight.png"></a>-->
-                            <a class="appstore-link" href="#">Beta available at Testflight</a>
+                            {% if site.testflight_link %}
+                                <a class="testflight-link" href="{{site.testflight_link}}" target="_blank">Beta available at Testflight</a>
+                            {% endif %}
+                            {% if site.appstore_link %}
+                                <a class="appStoreLink" href="{{site.appstore_link}}"><img class="appStore" src="assets/testflight.png"></a>
+                            {% endif %}
+
                         </div>
                     </div>
                     {% include features.html %}
