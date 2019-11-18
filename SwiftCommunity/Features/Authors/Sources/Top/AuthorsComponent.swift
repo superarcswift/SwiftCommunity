@@ -52,12 +52,12 @@ public class AuthorsInterface: AuthorsInterfaceProtocol, OnDemandInterface {
 
     // MARK: Properties
 
-    public var context: ApplicationContextProtocol!
+    public weak var dependencyProvider: DependencyProvider!
 
     // MARK: Initialization
 
-    public required init(onDemandWith context: ApplicationContextProtocol) {
-        self.context = context
+    public required init(onDemandWith dependencyProvider: DependencyProvider) {
+        self.dependencyProvider = dependencyProvider
     }
 
     // MARK: APIs
@@ -67,8 +67,8 @@ public class AuthorsInterface: AuthorsInterfaceProtocol, OnDemandInterface {
             initialRoute: .authorDetail(authorMetaData, true),
             dependency: dependency,
             componentsRouter: anyAuthorsRouter,
-            viewControllerContext: context.viewControllerContext,
-            context: context)
+            viewControllerContext: dependencyProvider.viewControllerContext,
+            context: dependencyProvider.context)
     }
 }
 

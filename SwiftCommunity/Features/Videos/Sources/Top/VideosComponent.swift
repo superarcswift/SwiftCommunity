@@ -54,12 +54,12 @@ protocol VideosViewBuilder: ViewBuildable {
 
 public class VideosInterface: VideosInterfaceProtocol, OnDemandInterface {
 
-    public var context: ApplicationContextProtocol!
+    public weak var dependencyProvider: DependencyProvider!
 
     // MARK: Initialization
 
-    public required init(onDemandWith context: ApplicationContextProtocol) {
-        self.context = context
+    public required init(onDemandWith dependencyProvider: DependencyProvider) {
+        self.dependencyProvider = dependencyProvider
     }
 
     // MARK: APIs
@@ -69,8 +69,8 @@ public class VideosInterface: VideosInterfaceProtocol, OnDemandInterface {
             initialRoute: .videos(conferenceMetaData, conferenceEdition),
             depedency: dependency,
             componentsRouter: componentsRouter,
-            viewControllerContext: context.viewControllerContext,
-            context: context)
+            viewControllerContext: dependencyProvider.viewControllerContext,
+            context: dependencyProvider.context)
     }
 
     public func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>) -> Presentable {
@@ -78,8 +78,8 @@ public class VideosInterface: VideosInterfaceProtocol, OnDemandInterface {
             initialRoute: .videoDetail(videoMetaData, true),
             depedency: dependency,
             componentsRouter: componentsRouter,
-            viewControllerContext: context.viewControllerContext,
-            context: context)
+            viewControllerContext: dependencyProvider.viewControllerContext,
+            context: dependencyProvider.context)
     }
 
 }
