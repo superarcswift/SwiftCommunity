@@ -37,19 +37,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		F60337B123801B4A00C3CFEC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		F60337AE23801B4A00C3CFEC /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F60ED7362376FBAD00E3E3B9 /* Continuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continuation.swift; sourceTree = "<group>"; };
@@ -224,7 +211,6 @@
 				F6CAFA5322CBF13F007476D4 /* Frameworks */,
 				F6CAFA5422CBF13F007476D4 /* Resources */,
 				F604E3B923171A9E00BFFE6A /* SwiftLint */,
-				F60337B123801B4A00C3CFEC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

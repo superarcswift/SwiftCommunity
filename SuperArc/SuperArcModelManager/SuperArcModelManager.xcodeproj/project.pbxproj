@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F60ED6C72376ECCE00E3E3B9 /* SuperArcModelManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60ED6BD2376ECCE00E3E3B9 /* SuperArcModelManager.framework */; };
-		F60ED6CC2376ECCE00E3E3B9 /* SuperArcModelManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED6CB2376ECCE00E3E3B9 /* SuperArcModelManagerTests.swift */; };
 		F60ED6CE2376ECCE00E3E3B9 /* SuperArcModelManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F60ED6C02376ECCE00E3E3B9 /* SuperArcModelManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F60ED6DA2376ED2600E3E3B9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED6D92376ED2600E3E3B9 /* Model.swift */; };
 		F60ED6DC2376ED3100E3E3B9 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED6DB2376ED3100E3E3B9 /* DataSource.swift */; };
@@ -31,7 +30,6 @@
 		F60ED6C02376ECCE00E3E3B9 /* SuperArcModelManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcModelManager.h; sourceTree = "<group>"; };
 		F60ED6C12376ECCE00E3E3B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F60ED6C62376ECCE00E3E3B9 /* SuperArcModelManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcModelManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F60ED6CB2376ECCE00E3E3B9 /* SuperArcModelManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcModelManagerTests.swift; sourceTree = "<group>"; };
 		F60ED6CD2376ECCE00E3E3B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F60ED6D92376ED2600E3E3B9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F60ED6DB2376ED3100E3E3B9 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 		F60ED6CA2376ECCE00E3E3B9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F60ED6CB2376ECCE00E3E3B9 /* SuperArcModelManagerTests.swift */,
 				F60ED6CD2376ECCE00E3E3B9 /* Info.plist */,
 			);
 			path = Tests;
@@ -136,6 +133,7 @@
 				F60ED6B92376ECCE00E3E3B9 /* Sources */,
 				F60ED6BA2376ECCE00E3E3B9 /* Frameworks */,
 				F60ED6BB2376ECCE00E3E3B9 /* Resources */,
+				F6D2D3602382D4610046A8D1 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -220,6 +218,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F6D2D3602382D4610046A8D1 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F60ED6B92376ECCE00E3E3B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -235,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F60ED6CC2376ECCE00E3E3B9 /* SuperArcModelManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

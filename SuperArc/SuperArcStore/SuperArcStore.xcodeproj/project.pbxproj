@@ -14,7 +14,6 @@
 		F60ED72D2376F24C00E3E3B9 /* MemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED72C2376F24C00E3E3B9 /* MemoryStore.swift */; };
 		F60ED72F2376F48B00E3E3B9 /* FilesystemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED72E2376F48B00E3E3B9 /* FilesystemStore.swift */; };
 		F60ED7322376F57700E3E3B9 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60ED7312376F57700E3E3B9 /* SuperArcFoundation.framework */; };
-		F60ED7332376F57700E3E3B9 /* SuperArcFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F60ED7312376F57700E3E3B9 /* SuperArcFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F60ED73C2376FEB800E3E3B9 /* AsyncStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED73B2376FEB800E3E3B9 /* AsyncStoreProtocol.swift */; };
 		F60ED73E2376FF9700E3E3B9 /* AsyncStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED73D2376FF9700E3E3B9 /* AsyncStore.swift */; };
 		F60ED742237716E100E3E3B9 /* StoreValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED741237716E100E3E3B9 /* StoreValue.swift */; };
@@ -31,20 +30,6 @@
 			remoteInfo = SuperArcStore;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F60ED7342376F57700E3E3B9 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F60ED7332376F57700E3E3B9 /* SuperArcFoundation.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F60ED70D2376EE1100E3E3B9 /* SuperArcStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,7 +168,7 @@
 				F60ED7092376EE1100E3E3B9 /* Sources */,
 				F60ED70A2376EE1100E3E3B9 /* Frameworks */,
 				F60ED70B2376EE1100E3E3B9 /* Resources */,
-				F60ED7342376F57700E3E3B9 /* Embed Frameworks */,
+				F6D2D3632382D4BE0046A8D1 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -267,6 +252,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F6D2D3632382D4BE0046A8D1 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../../Tools/.swiftlint.yml\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F60ED7092376EE1100E3E3B9 /* Sources */ = {

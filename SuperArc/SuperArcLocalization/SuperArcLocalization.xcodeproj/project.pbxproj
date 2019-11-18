@@ -10,7 +10,6 @@
 		F67DC26B238293F400081262 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67DC26A238293F400081262 /* README.md */; };
 		F6820534231F20B200098C20 /* UITabBarItem+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6820533231F20B200098C20 /* UITabBarItem+Localization.swift */; };
 		F68F72C9231BE7F700D424CB /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F72BF231BE7F700D424CB /* SuperArcLocalization.framework */; };
-		F68F72CE231BE7F700D424CB /* SuperArcLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F72CD231BE7F700D424CB /* SuperArcLocalizationTests.swift */; };
 		F68F72D0231BE7F700D424CB /* SuperArcLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = F68F72C2231BE7F700D424CB /* SuperArcLocalization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F68F72E0231BF3E000D424CB /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F72DF231BF3E000D424CB /* String+Localization.swift */; };
 		F68F72E2231C51A300D424CB /* UILabel+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F72E1231C51A300D424CB /* UILabel+Localization.swift */; };
@@ -34,7 +33,6 @@
 		F68F72C2231BE7F700D424CB /* SuperArcLocalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcLocalization.h; sourceTree = "<group>"; };
 		F68F72C3231BE7F700D424CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F72C8231BE7F700D424CB /* SuperArcLocalizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcLocalizationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F68F72CD231BE7F700D424CB /* SuperArcLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcLocalizationTests.swift; sourceTree = "<group>"; };
 		F68F72CF231BE7F700D424CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F72DF231BF3E000D424CB /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		F68F72E1231C51A300D424CB /* UILabel+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Localization.swift"; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 		F68F72CC231BE7F700D424CB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F68F72CD231BE7F700D424CB /* SuperArcLocalizationTests.swift */,
 				F68F72CF231BE7F700D424CB /* Info.plist */,
 			);
 			path = Tests;
@@ -173,6 +170,7 @@
 				F68F72C4231BE7F700D424CB /* Sources */,
 				F68F72C5231BE7F700D424CB /* Frameworks */,
 				F68F72C6231BE7F700D424CB /* Resources */,
+				F6D2D3622382D4880046A8D1 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -259,6 +257,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../../Tools/.swiftlint.yml\nfi\n";
 		};
+		F6D2D3622382D4880046A8D1 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --config ../../Tools/.swiftlint.yml\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -277,7 +293,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F68F72CE231BE7F700D424CB /* SuperArcLocalizationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
