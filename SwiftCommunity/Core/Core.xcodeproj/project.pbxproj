@@ -29,6 +29,8 @@
 		F6C8A154231EB39800DD6BFD /* AuthorsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A153231EB39800DD6BFD /* AuthorsServiceProtocol.swift */; };
 		F6C8A156231EB3F000DD6BFD /* ConferencesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A155231EB3F000DD6BFD /* ConferencesServiceProtocol.swift */; };
 		F6C8A167231EE81700DD6BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C8A166231EE81700DD6BFD /* Assets.xcassets */; };
+		F6D2D35B2382C70D0046A8D1 /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D2D35A2382C70D0046A8D1 /* XCoordinator.framework */; };
+		F6D2D35C2382C70D0046A8D1 /* XCoordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6D2D35A2382C70D0046A8D1 /* XCoordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6E2938323165BE000F759FF /* CoordinatedDIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2938223165BE000F759FF /* CoordinatedDIViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,20 @@
 			remoteInfo = SwiftVideos_Core;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6D2D35D2382C70D0046A8D1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6D2D35C2382C70D0046A8D1 /* XCoordinator.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F6429D342326914C00744ACA /* ComponentPresentableWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentPresentableWrapper.swift; sourceTree = "<group>"; };
@@ -68,6 +84,7 @@
 		F6C8A153231EB39800DD6BFD /* AuthorsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsServiceProtocol.swift; sourceTree = "<group>"; };
 		F6C8A155231EB3F000DD6BFD /* ConferencesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesServiceProtocol.swift; sourceTree = "<group>"; };
 		F6C8A166231EE81700DD6BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6D2D35A2382C70D0046A8D1 /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		F6E2938223165BE000F759FF /* CoordinatedDIViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatedDIViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D2D35B2382C70D0046A8D1 /* XCoordinator.framework in Frameworks */,
 				F6B5779423204A8A0069E79F /* ObjectiveGit.framework in Frameworks */,
 				F682050C231F0D2B00098C20 /* SuperArcCoreComponent.framework in Frameworks */,
 				F682050E231F0D2B00098C20 /* SuperArcCoreUI.framework in Frameworks */,
@@ -218,6 +236,7 @@
 		F669806623107A5000FCEC14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6D2D35A2382C70D0046A8D1 /* XCoordinator.framework */,
 				F6B5779323204A8A0069E79F /* ObjectiveGit.framework */,
 				F682050B231F0D2B00098C20 /* SuperArcCoreComponent.framework */,
 				F682050D231F0D2B00098C20 /* SuperArcCoreUI.framework */,
@@ -287,6 +306,7 @@
 				F669800623102E4200FCEC14 /* Frameworks */,
 				F669800723102E4200FCEC14 /* Resources */,
 				F604E3B0231719FD00BFFE6A /* SwiftLint */,
+				F6D2D35D2382C70D0046A8D1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

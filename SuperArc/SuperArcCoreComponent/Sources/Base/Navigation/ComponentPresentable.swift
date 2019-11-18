@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+/// Protocol describing a component that can be presented.
 public protocol ComponentPresentable {
     var viewController: UIViewController! { get }
 }

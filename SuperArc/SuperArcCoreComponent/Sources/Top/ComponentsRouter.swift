@@ -6,6 +6,7 @@ import SuperArcCoreUI
 import SuperArcCore
 import SuperArcFoundation
 
+/// The main application router which is responsible to navigate between the components.
 public class ComponentsRouter: ComponentsRouterProtocol {
 
     // MARK: Properties
