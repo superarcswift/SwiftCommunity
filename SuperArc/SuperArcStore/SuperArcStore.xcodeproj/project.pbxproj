@@ -19,6 +19,7 @@
 		F60ED73E2376FF9700E3E3B9 /* AsyncStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED73D2376FF9700E3E3B9 /* AsyncStore.swift */; };
 		F60ED742237716E100E3E3B9 /* StoreValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED741237716E100E3E3B9 /* StoreValue.swift */; };
 		F60ED7462378003D00E3E3B9 /* AsyncStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED7432377FFE300E3E3B9 /* AsyncStoreTests.swift */; };
+		F67DC2752382943500081262 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67DC2742382943500081262 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		F60ED73D2376FF9700E3E3B9 /* AsyncStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStore.swift; sourceTree = "<group>"; };
 		F60ED741237716E100E3E3B9 /* StoreValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreValue.swift; sourceTree = "<group>"; };
 		F60ED7432377FFE300E3E3B9 /* AsyncStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStoreTests.swift; sourceTree = "<group>"; };
+		F67DC2742382943500081262 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		F60ED7032376EE1100E3E3B9 = {
 			isa = PBXGroup;
 			children = (
+				F67DC2742382943500081262 /* README.md */,
 				F60ED70F2376EE1100E3E3B9 /* Sources */,
 				F60ED71A2376EE1100E3E3B9 /* Tests */,
 				F60ED70E2376EE1100E3E3B9 /* Products */,
@@ -252,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DC2752382943500081262 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

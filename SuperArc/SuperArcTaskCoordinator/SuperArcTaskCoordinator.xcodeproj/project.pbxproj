@@ -15,6 +15,7 @@
 		F65FD4282373179800521CDD /* TaskQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD4272373179800521CDD /* TaskQueue.swift */; };
 		F65FD4322374093A00521CDD /* ResultMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD4312374093A00521CDD /* ResultMonitor.swift */; };
 		F65FD4352374100D00521CDD /* ResultMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD43323740F0200521CDD /* ResultMonitorTests.swift */; };
+		F67DC2712382941C00081262 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67DC2702382941C00081262 /* README.md */; };
 		F6E7430723755D4800ADEE9B /* TaskQueue+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E7430623755D4800ADEE9B /* TaskQueue+Promise.swift */; };
 		F6E7430923755DA000ADEE9B /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E7430823755DA000ADEE9B /* PromiseKit.framework */; };
 		F6E7430E2375653100ADEE9B /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6E7430823755DA000ADEE9B /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -65,6 +66,7 @@
 		F65FD4272373179800521CDD /* TaskQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskQueue.swift; sourceTree = "<group>"; };
 		F65FD4312374093A00521CDD /* ResultMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultMonitor.swift; sourceTree = "<group>"; };
 		F65FD43323740F0200521CDD /* ResultMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultMonitorTests.swift; sourceTree = "<group>"; };
+		F67DC2702382941C00081262 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6E7430623755D4800ADEE9B /* TaskQueue+Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskQueue+Promise.swift"; sourceTree = "<group>"; };
 		F6E7430823755DA000ADEE9B /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 		F65FD4022373175000521CDD = {
 			isa = PBXGroup;
 			children = (
+				F67DC2702382941C00081262 /* README.md */,
 				F65FD40E2373175000521CDD /* Sources */,
 				F65FD4192373175000521CDD /* Tests */,
 				F65FD40D2373175000521CDD /* Products */,
@@ -251,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DC2712382941C00081262 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

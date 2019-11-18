@@ -23,6 +23,7 @@
 		F66C90FF22E64C42006CA2BB /* StoryboardInitiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C90FE22E64C42006CA2BB /* StoryboardInitiable.swift */; };
 		F675C31922DDD3A900FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C30F22DDD3A900FA77DD /* SuperArcCoreUI.framework */; };
 		F675C32022DDD3A900FA77DD /* SuperArcCoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F675C31222DDD3A900FA77DD /* SuperArcCoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F67DC26D238293FC00081262 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67DC26C238293FC00081262 /* README.md */; };
 		F6B577AF23204CB40069E79F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577AC23204CB40069E79F /* RxCocoa.framework */; };
 		F6B577B023204CB40069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577AD23204CB40069E79F /* RxSwift.framework */; };
 		F6B577B123204CB40069E79F /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577AE23204CB40069E79F /* PromiseKit.framework */; };
@@ -64,6 +65,7 @@
 		F675C31322DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F675C31822DDD3A900FA77DD /* SuperArcCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperArcCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F675C31F22DDD3A900FA77DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F67DC26C238293FC00081262 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6B577AC23204CB40069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		F6B577AD23204CB40069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F6B577AE23204CB40069E79F /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		F675C30522DDD3A900FA77DD = {
 			isa = PBXGroup;
 			children = (
+				F67DC26C238293FC00081262 /* README.md */,
 				F675C31122DDD3A900FA77DD /* Sources */,
 				F675C31C22DDD3A900FA77DD /* Tests */,
 				F675C31022DDD3A900FA77DD /* Products */,
@@ -316,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DC26D238293FC00081262 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

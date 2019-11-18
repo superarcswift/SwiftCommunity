@@ -11,6 +11,7 @@
 		F66C914F22E6684A006CA2BB /* SuperArcCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C914E22E6684A006CA2BB /* SuperArcCoordinatorTests.swift */; };
 		F66C915122E6684A006CA2BB /* SuperArcCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = F66C914322E6684A006CA2BB /* SuperArcCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F66C916322E668F6006CA2BB /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C916222E668F6006CA2BB /* BaseCoordinator.swift */; };
+		F67DC265238293A400081262 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67DC264238293A300081262 /* README.md */; };
 		F6B577B723204D280069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577B423204D270069E79F /* RxSwift.framework */; };
 		F6B577B823204D280069E79F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577B523204D270069E79F /* RxCocoa.framework */; };
 		F6B577B923204D280069E79F /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577B623204D270069E79F /* RxRelay.framework */; };
@@ -34,6 +35,7 @@
 		F66C914E22E6684A006CA2BB /* SuperArcCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperArcCoordinatorTests.swift; sourceTree = "<group>"; };
 		F66C915022E6684A006CA2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F66C916222E668F6006CA2BB /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		F67DC264238293A300081262 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6B577B423204D270069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F6B577B523204D270069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		F6B577B623204D270069E79F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		F66C913622E6684A006CA2BB = {
 			isa = PBXGroup;
 			children = (
+				F67DC264238293A300081262 /* README.md */,
 				F66C914222E6684A006CA2BB /* Sources */,
 				F66C914D22E6684A006CA2BB /* Tests */,
 				F66C914122E6684A006CA2BB /* Products */,
@@ -218,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DC265238293A400081262 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

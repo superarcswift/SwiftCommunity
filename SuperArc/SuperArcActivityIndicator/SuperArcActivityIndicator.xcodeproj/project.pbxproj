@@ -19,6 +19,7 @@
 		F64E70AD23061659005D066D /* Activity+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70AC23061659005D066D /* Activity+Rx.swift */; };
 		F64E70AF23061A54005D066D /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70AE23061A54005D066D /* Activity.swift */; };
 		F64E70B12306B2C5005D066D /* ViewController+ActivitySink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E70B02306B2C5005D066D /* ViewController+ActivitySink.swift */; };
+		F67DC267238293B300081262 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67DC266238293B300081262 /* README.md */; };
 		F68204B4231F07CC00098C20 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B3231F07CC00098C20 /* SuperArcCore.framework */; };
 		F6B577A123204B880069E79F /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5779E23204B880069E79F /* RxRelay.framework */; };
 		F6B577A223204B880069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5779F23204B880069E79F /* RxSwift.framework */; };
@@ -51,6 +52,7 @@
 		F64E70AC23061659005D066D /* Activity+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+Rx.swift"; sourceTree = "<group>"; };
 		F64E70AE23061A54005D066D /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F64E70B02306B2C5005D066D /* ViewController+ActivitySink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ActivitySink.swift"; sourceTree = "<group>"; };
+		F67DC266238293B300081262 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F68204B3231F07CC00098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B5779E23204B880069E79F /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		F6B5779F23204B880069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		F64E706123060334005D066D = {
 			isa = PBXGroup;
 			children = (
+				F67DC266238293B300081262 /* README.md */,
 				F64E706D23060334005D066D /* Sources */,
 				F64E707823060334005D066D /* Tests */,
 				F64E706C23060334005D066D /* Products */,
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DC267238293B300081262 /* README.md in Resources */,
 				F64E709E230605CC005D066D /* ActivityView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

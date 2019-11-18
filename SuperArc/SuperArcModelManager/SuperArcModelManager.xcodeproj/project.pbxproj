@@ -13,6 +13,7 @@
 		F60ED6DA2376ED2600E3E3B9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED6D92376ED2600E3E3B9 /* Model.swift */; };
 		F60ED6DC2376ED3100E3E3B9 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED6DB2376ED3100E3E3B9 /* DataSource.swift */; };
 		F60ED6DE2376ED3C00E3E3B9 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED6DD2376ED3C00E3E3B9 /* ModelManager.swift */; };
+		F67DC26F2382940900081262 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67DC26E2382940900081262 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		F60ED6D92376ED2600E3E3B9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F60ED6DB2376ED3100E3E3B9 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		F60ED6DD2376ED3C00E3E3B9 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		F67DC26E2382940900081262 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		F60ED6B32376ECCE00E3E3B9 = {
 			isa = PBXGroup;
 			children = (
+				F67DC26E2382940900081262 /* README.md */,
 				F60ED6BF2376ECCE00E3E3B9 /* Sources */,
 				F60ED6CA2376ECCE00E3E3B9 /* Tests */,
 				F60ED6BE2376ECCE00E3E3B9 /* Products */,
@@ -204,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DC26F2382940900081262 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

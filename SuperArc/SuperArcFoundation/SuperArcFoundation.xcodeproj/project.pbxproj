@@ -16,6 +16,7 @@
 		F6507751237C8B030076AE6B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650774E237C8B030076AE6B /* Configuration.swift */; };
 		F6507752237C8B030076AE6B /* ConfigurationRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650774F237C8B030076AE6B /* ConfigurationRegistry.swift */; };
 		F650775E237C90460076AE6B /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650775D237C90460076AE6B /* Dictionary+Extensions.swift */; };
+		F67DC2792382945000081262 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67DC2782382945000081262 /* README.md */; };
 		F6A6B5532300469A00BFEC40 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B5522300469A00BFEC40 /* Int+Extensions.swift */; };
 		F6C41DF5237EDB6A009C3419 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C41DF4237EDB6A009C3419 /* Date+Extensions.swift */; };
 		F6CAFA6022CBF13F007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */; };
@@ -59,6 +60,7 @@
 		F650774F237C8B030076AE6B /* ConfigurationRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationRegistry.swift; sourceTree = "<group>"; };
 		F650775D237C90460076AE6B /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		F6507770237CB4620076AE6B /* Promise+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Extensions.swift"; sourceTree = "<group>"; };
+		F67DC2782382945000081262 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6A6B5522300469A00BFEC40 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		F6C41DF4237EDB6A009C3419 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		F6CAFA5622CBF13F007476D4 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 		F6CAFA4C22CBF13F007476D4 = {
 			isa = PBXGroup;
 			children = (
+				F67DC2782382945000081262 /* README.md */,
 				F6CAFA5822CBF13F007476D4 /* Sources */,
 				F6CAFA6322CBF13F007476D4 /* Tests */,
 				F6CAFA5722CBF13F007476D4 /* Products */,
@@ -293,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DC2792382945000081262 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

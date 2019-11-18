@@ -14,6 +14,7 @@
 		F63A728F22F47565005D0778 /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A728E22F47565005D0778 /* NotificationPresenter.swift */; };
 		F63A729522F47D85005D0778 /* ViewController+NotificationSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729422F47D85005D0778 /* ViewController+NotificationSink.swift */; };
 		F63A729722F5C276005D0778 /* Notification+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A729622F5C276005D0778 /* Notification+Rx.swift */; };
+		F67DC269238293CF00081262 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67DC268238293CF00081262 /* README.md */; };
 		F68204B6231F07FE00098C20 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B5231F07FE00098C20 /* SuperArcCore.framework */; };
 		F68204B8231F07FE00098C20 /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B7231F07FE00098C20 /* SuperArcCoreUI.framework */; };
 		F68204BA231F07FE00098C20 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B9231F07FE00098C20 /* SuperArcFoundation.framework */; };
@@ -44,6 +45,7 @@
 		F63A728E22F47565005D0778 /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
 		F63A729422F47D85005D0778 /* ViewController+NotificationSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+NotificationSink.swift"; sourceTree = "<group>"; };
 		F63A729622F5C276005D0778 /* Notification+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Rx.swift"; sourceTree = "<group>"; };
+		F67DC268238293CF00081262 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F68204B5231F07FE00098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68204B7231F07FE00098C20 /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68204B9231F07FE00098C20 /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 		F63A725922F46683005D0778 = {
 			isa = PBXGroup;
 			children = (
+				F67DC268238293CF00081262 /* README.md */,
 				F63A726522F46683005D0778 /* Sources */,
 				F63A727022F46683005D0778 /* Tests */,
 				F63A726422F46683005D0778 /* Products */,
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DC269238293CF00081262 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

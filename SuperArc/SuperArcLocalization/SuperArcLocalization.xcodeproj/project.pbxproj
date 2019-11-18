@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F67DC26B238293F400081262 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F67DC26A238293F400081262 /* README.md */; };
 		F6820534231F20B200098C20 /* UITabBarItem+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6820533231F20B200098C20 /* UITabBarItem+Localization.swift */; };
 		F68F72C9231BE7F700D424CB /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F72BF231BE7F700D424CB /* SuperArcLocalization.framework */; };
 		F68F72CE231BE7F700D424CB /* SuperArcLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F72CD231BE7F700D424CB /* SuperArcLocalizationTests.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F67DC26A238293F400081262 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6820533231F20B200098C20 /* UITabBarItem+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Localization.swift"; sourceTree = "<group>"; };
 		F68F72BF231BE7F700D424CB /* SuperArcLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SuperArcLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F72C2231BE7F700D424CB /* SuperArcLocalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperArcLocalization.h; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		F68F72B5231BE7F700D424CB = {
 			isa = PBXGroup;
 			children = (
+				F67DC26A238293F400081262 /* README.md */,
 				F68F72C1231BE7F700D424CB /* Sources */,
 				F68F72CC231BE7F700D424CB /* Tests */,
 				F68F72C0231BE7F700D424CB /* Products */,
@@ -224,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DC26B238293F400081262 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
