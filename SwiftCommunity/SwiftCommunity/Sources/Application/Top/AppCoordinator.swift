@@ -21,7 +21,7 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
     // MARK: Initialization
 
     init(context: ApplicationContextProtocol) {
-        component = AppComponent(dependency: EmptyComponent(), context: context)
+        component = AppComponent(dependency: EmptyComponent(), viewControllerContext: context.viewControllerContext, context: context)
         super.init(initialRoute: .onboarding)
     }
 

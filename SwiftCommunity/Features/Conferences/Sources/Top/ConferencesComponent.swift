@@ -18,7 +18,7 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
     // MARK: APIs
 
     func makeConferencesCollectionViewController(router: UnownedRouter<ConferencesRoute>) -> ConferencesCollectionViewController {
-        let viewController = ConferencesCollectionViewController.instantiate(with: context.viewControllerContext)
+        let viewController = ConferencesCollectionViewController.instantiate(with: viewControllerContext)
         let viewModel = ConferencesCollectionViewModel(router: router, dependency: dependency)
         viewController.viewModel = viewModel
 
@@ -26,7 +26,7 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
     }
 
     func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: UnownedRouter<ConferencesRoute>) -> ConferenceDetailViewController {
-        let viewController = ConferenceDetailViewController.instantiate(with: context.viewControllerContext)
+        let viewController = ConferenceDetailViewController.instantiate(with: viewControllerContext)
         let viewModel = ConferenceDetailViewModel(conferenceMetaData: conferenceMetaData, router: router, dependency: dependency)
         viewController.viewModel = viewModel
 

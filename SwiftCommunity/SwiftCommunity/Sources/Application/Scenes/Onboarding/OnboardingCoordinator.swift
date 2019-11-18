@@ -18,7 +18,7 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
     // MARK: Initialization
 
     init(dependency: OnboardingDependency, context: ApplicationContextProtocol) {
-        component = OnboardingComponent(dependency: dependency, context: context)
+        component = OnboardingComponent(dependency: dependency, viewControllerContext: context.viewControllerContext, context: context)
         super.init(initialRoute: .onboarding)
     }
 

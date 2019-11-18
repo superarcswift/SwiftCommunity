@@ -18,7 +18,7 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
 
     func makeAuthorsCollectionViewController(router: UnownedRouter<AuthorsRoute>) -> AuthorsCollectionViewController {
 
-        let viewController = AuthorsCollectionViewController.instantiate(with: context.viewControllerContext)
+        let viewController = AuthorsCollectionViewController.instantiate(with: viewControllerContext)
         let viewModel = AuthorsCollectionViewModel(router: router, dependency: dependency)
         viewController.viewModel = viewModel
 
@@ -26,7 +26,7 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
     }
 
     func makeAuthorDetailViewController(authorMetaData: AuthorMetaData, hasLeftCloseButton: Bool, router: UnownedRouter<AuthorsRoute>) -> AuthorDetailViewController {
-        let viewController = AuthorDetailViewController.instantiate(with: context.viewControllerContext)
+        let viewController = AuthorDetailViewController.instantiate(with: viewControllerContext)
         let viewModel = AuthorDetailViewModel(authorMetaData: authorMetaData, router: router, dependency: dependency)
         viewController.viewModel = viewModel
         viewController.hasLeftCloseButton = hasLeftCloseButton
@@ -63,7 +63,12 @@ public class AuthorsInterface: AuthorsInterfaceProtocol, OnDemandInterface {
     // MARK: APIs
 
     public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute>) -> Presentable {
-        return AuthorsCoordinator(initialRoute: .authorDetail(authorMetaData, true), dependency: dependency, componentsRouter: anyAuthorsRouter, context: context)
+        return AuthorsCoordinator(
+            initialRoute: .authorDetail(authorMetaData, true),
+            dependency: dependency,
+            componentsRouter: anyAuthorsRouter,
+            viewControllerContext: context.viewControllerContext,
+            context: context)
     }
 }
 

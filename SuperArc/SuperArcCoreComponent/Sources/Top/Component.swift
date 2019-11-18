@@ -5,7 +5,8 @@
 import SuperArcCoreUI
 import SuperArcCore
 
-public protocol ComponentProtocol: Dependency, HasApplicationContext, ComponentRouter {
+/// Protocol defining a component.
+public protocol ComponentProtocol: Dependency, HasViewControllerContext, HasApplicationContext, ComponentRouter {
     associatedtype DependencyType
     associatedtype ViewBuildableType
     associatedtype InterfaceType
@@ -13,8 +14,10 @@ public protocol ComponentProtocol: Dependency, HasApplicationContext, ComponentR
     /// The dependency of this component, which is should be provided by the parent of this component.
     var dependency: DependencyType { get }
 
+    /// Build and initialize view controllers.
     var viewBuilder: ViewBuildableType { get }
 
+    /// Interfaces used by higher layers to access this component.
     var interface: InterfaceType! { get }
 
     /// Register any objects provided by this component that will be used by classes in the higher layer.
@@ -38,12 +41,16 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 
     public var interface: InterfaceType!
 
+    public var viewControllerContext: ViewControllerContext!
+
+    // TODO: Abstract this into something like DependencyProvider
     public var context: ApplicationContextProtocol!
 
     // MARK: Intialization
 
-    public init(dependency: DependencyType, componentsRouter: AnyComponentRouter<ComponentRouteType>? = nil, context: ApplicationContextProtocol) {
+    public init(dependency: DependencyType, componentsRouter: AnyComponentRouter<ComponentRouteType>? = nil, viewControllerContext: ViewControllerContext, context: ApplicationContextProtocol) {
         self.dependency = dependency
+        self.viewControllerContext = viewControllerContext
         self.context = context
         self.componentsRouter = componentsRouter
     }
@@ -60,8 +67,8 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 }
 
 extension Component where ComponentRouteType == EmptyComponentRoute {
-    public convenience init(dependency: DependencyType, context: ApplicationContextProtocol) {
-        self.init(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), context: context)
+    public convenience init(dependency: DependencyType, viewControllerContext: ViewControllerContext, context: ApplicationContextProtocol) {
+        self.init(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), viewControllerContext: viewControllerContext, context: context)
     }
 }
 
