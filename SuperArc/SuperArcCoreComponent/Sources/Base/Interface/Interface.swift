@@ -8,8 +8,8 @@ import SuperArcCore
 public protocol Interface {}
 
 /// Support creating `Interface` on-demand.
-public protocol OnDemandInterface {
-    init(onDemandWith dependencyProvider: DependencyProvider)
+public protocol OnDemandInterface: Interface {
+    init(onDemandWith viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider)
 }
 
 /// A special `Interface` which is empty.

@@ -22,18 +22,20 @@ public class InterfaceRegistry: Registry {
 
     public var container: Container<Interface>
     public weak var dependencyProvider: DependencyProvider!
+    public weak var viewControllerContext: ViewControllerContext!
 
     // MARK: Initialization
 
-    public init() {
+    public init(viewControllerContext: ViewControllerContext) {
         container = Container()
+        self.viewControllerContext = viewControllerContext
     }
 
     // MARK: APIs
 
     public func resolveOnDemand<ElementType>(type: ElementType.Type) -> ElementType where ElementType: OnDemandInterface {
         guard let instance = container.resolve(type) else {
-            let newInstance = type.init(onDemandWith: dependencyProvider)
+            let newInstance = type.init(onDemandWith: viewControllerContext, and: dependencyProvider)
             register(newInstance, for: type)
             return newInstance
         }

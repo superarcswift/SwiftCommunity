@@ -4,4 +4,4 @@
 
 import SuperArcCore
 
-public protocol DependencyProvider: HasViewControllerContext, HasApplicationContext {}
+public protocol DependencyProvider: HasApplicationContext {}
