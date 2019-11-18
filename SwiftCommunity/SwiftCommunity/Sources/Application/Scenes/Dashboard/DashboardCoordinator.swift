@@ -31,21 +31,21 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
     init(context: ApplicationContextProtocol) {
 
-        component = DashboardComponent(dependency: EmptyComponent(), context: context)
+        component = DashboardComponent(dependency: EmptyComponent(), viewControllerContext: context.viewControllerContext, context: context)
         let appComponentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
 
         let conferencesComponentRouter = appComponentsRouter.routerRegistry.resolve(type: ConferencesComponentRouter.self)
-        let conferencesCoordinator = ConferencesCoordinator(dependency: component, componentsRouter: conferencesComponentRouter.anyConferencesRouter, context: context)
+        let conferencesCoordinator = ConferencesCoordinator(dependency: component, componentsRouter: conferencesComponentRouter.anyConferencesRouter, viewControllerContext: context.viewControllerContext, context: context)
         conferencesCoordinator.rootViewController.tabBarItem = UITabBarItem(titleKey: "conferences", image: UIImage(named: "conferences"), tag: 0)
         conferencesRouter = conferencesCoordinator.strongRouter
 
         let videosComponentRouter = appComponentsRouter.routerRegistry.resolve(type: VideosComponentRouter.self)
-        let videosCoordinator = VideosCoordinator(initialRoute: .videos(nil, nil), depedency: component, componentsRouter: videosComponentRouter.anyVideosRouter, context: context)
+        let videosCoordinator = VideosCoordinator(initialRoute: .videos(nil, nil), depedency: component, componentsRouter: videosComponentRouter.anyVideosRouter, viewControllerContext: context.viewControllerContext, context: context)
         videosCoordinator.rootViewController.tabBarItem = UITabBarItem(titleKey: "videos", image: UIImage(named: "videos"), tag: 1)
         videosRouter = videosCoordinator.strongRouter
 
         let authorsComponentRouter = appComponentsRouter.routerRegistry.resolve(type: AuthorsComponentRouter.self)
-        let authorsCoordinator = AuthorsCoordinator(initialRoute: .authors, dependency: component, componentsRouter: authorsComponentRouter.anyAuthorsRouter, context: context)
+        let authorsCoordinator = AuthorsCoordinator(initialRoute: .authors, dependency: component, componentsRouter: authorsComponentRouter.anyAuthorsRouter, viewControllerContext: context.viewControllerContext, context: context)
         authorsCoordinator.rootViewController.tabBarItem = UITabBarItem(titleKey: "authors", image: UIImage(named: "authors"), tag: 2)
         authorsRouter = authorsCoordinator.strongRouter
 

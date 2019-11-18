@@ -4,6 +4,7 @@
 
 import SuperArcFoundation
 
+/// Dependencies required by all view controllers.
 public class ViewControllerContext: Registry {
 
     // MARK: Properties

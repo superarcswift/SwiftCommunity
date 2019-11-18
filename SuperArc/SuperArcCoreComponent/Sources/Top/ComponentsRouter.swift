@@ -7,13 +7,13 @@ import SuperArcCore
 import SuperArcFoundation
 
 /// The main application router which is responsible to navigate between the components.
-public class ComponentsRouter: ComponentsRouterProtocol {
+public class ComponentsRouter: ComponentsRouterProtocol, DependencyProvider {
 
     // MARK: Properties
 
     // Private
 
-    public var context: ApplicationContextProtocol!
+    public weak var context: ApplicationContextProtocol!
 
     public let interfaceRegistry: InterfaceRegistry
     public let routerRegistry: RouterRegistry
@@ -22,8 +22,9 @@ public class ComponentsRouter: ComponentsRouterProtocol {
 
     public init(context: ApplicationContextProtocol) {
         self.context = context
-        interfaceRegistry = InterfaceRegistry(context: context)
         routerRegistry = RouterRegistry()
+        interfaceRegistry = InterfaceRegistry(viewControllerContext: context.viewControllerContext)
+        interfaceRegistry.dependencyProvider = self
     }
 
     // MARK: APIs

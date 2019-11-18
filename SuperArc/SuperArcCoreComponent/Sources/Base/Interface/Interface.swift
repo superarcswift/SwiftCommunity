@@ -4,21 +4,13 @@
 
 import SuperArcCore
 
-public protocol Interface: HasApplicationContext {}
+/// Public interfaces to interact with the components.
+public protocol Interface {}
 
-public protocol OnDemandInterface {
-    init(onDemandWith context: ApplicationContextProtocol)
+/// Support creating `Interface` on-demand.
+public protocol OnDemandInterface: Interface {
+    init(onDemandWith viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider)
 }
 
-public class EmptyInterface: Interface {
-
-    public var context: ApplicationContextProtocol! {
-        get {
-            fatalError("should never be used")
-        }
-        //swiftlint:disable:next unused_setter_value
-        set {
-            fatalError("should never be used")
-        }
-    }
-}
+/// A special `Interface` which is empty.
+public class EmptyInterface: Interface {}

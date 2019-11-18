@@ -20,8 +20,8 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
     // MARK: Initialization
 
-    public init(initialRoute: VideosRoute, depedency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>, context: ApplicationContextProtocol) {
-        component = VideosComponent(dependency: depedency, componentsRouter: componentsRouter, context: context)
+    public init(initialRoute: VideosRoute, depedency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>, viewControllerContext: ViewControllerContext, context: ApplicationContextProtocol) {
+        component = VideosComponent(dependency: depedency, componentsRouter: componentsRouter, viewControllerContext: viewControllerContext, context: context)
         super.init(initialRoute: initialRoute)
     }
 
