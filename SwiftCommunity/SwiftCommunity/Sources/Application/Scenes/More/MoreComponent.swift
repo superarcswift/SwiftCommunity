@@ -32,7 +32,7 @@ class MoreComponent: Component<MoreDependency, MoreViewBuilder, EmptyInterface, 
 
     func makeOpenConferencesViewController(router: UnownedRouter<MoreRoute>) -> UIViewController {
         let viewController = OpenConferencesViewController.instantiate(with: context.viewControllerContext)
-        let viewModel = OpenConferencesViewModel(engine: context!.engine)
+        let viewModel = OpenConferencesViewModel(dependency: context)
         viewController.viewModel = viewModel
         return viewController
     }

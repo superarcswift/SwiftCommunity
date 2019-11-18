@@ -10,7 +10,7 @@ public protocol EngineProtocol {
 }
 
 public protocol HasEngine {
-    var engine: Engine { get set }
+    var engine: EngineProtocol { get set }
 }
 
 public class Engine: EngineProtocol {

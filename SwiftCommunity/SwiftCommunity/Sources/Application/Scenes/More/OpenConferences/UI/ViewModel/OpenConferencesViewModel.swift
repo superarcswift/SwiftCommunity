@@ -45,7 +45,7 @@ extension OpenConferencesViewModelType where Self: OpenConferencesViewModelInput
     }
 }
 
-public class OpenConferencesViewModel: ViewModel, OpenConferencesViewModelType, OpenConferencesViewModelInput, OpenConferencesViewModelOutput, OpenConferencesViewModelApi, ActivityState {
+public class OpenConferencesViewModel: DIViewModel<OpenConferencesDependency>, OpenConferencesViewModelType, OpenConferencesViewModelInput, OpenConferencesViewModelOutput, OpenConferencesViewModelApi {
 
     // MARK: Properties
 
@@ -55,7 +55,6 @@ public class OpenConferencesViewModel: ViewModel, OpenConferencesViewModelType, 
 
     // Public
 
-    public var activity = Activity()
     var conferences = BehaviorRelay<[OpenConferenceSectionModel]>(value: [])
 
     var toogleStateView = PublishSubject<StandardStateViewContext?>()
@@ -63,8 +62,9 @@ public class OpenConferencesViewModel: ViewModel, OpenConferencesViewModelType, 
 
     // MARK: Initialization
 
-    public init(engine: EngineProtocol) {
-        service = OpenConferencesService(context: engine.serviceContext)
+    public override init(dependency: OpenConferencesDependency) {
+        service = OpenConferencesService(context: dependency.engine.serviceContext)
+        super.init(dependency: dependency)
     }
 
     // MARK: APIs
