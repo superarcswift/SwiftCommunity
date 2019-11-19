@@ -20,8 +20,8 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 
     // MARK: Initialization
 
-    public init(initialRoute: AuthorsRoute, dependency: AuthorsDependency, componentsRouter: AnyComponentRouter<AuthorsComponentRoute>, viewControllerContext: ViewControllerContext, context: ApplicationContextProtocol) {
-        component = AuthorsComponent(dependency: dependency, componentsRouter: componentsRouter, viewControllerContext: viewControllerContext, context: context)
+    public init(initialRoute: AuthorsRoute, dependency: AuthorsDependency, componentsRouter: AnyComponentRouter<AuthorsComponentRoute>, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        component = AuthorsComponent(dependency: dependency, componentsRouter: componentsRouter, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
         super.init(initialRoute: initialRoute)
     }
 

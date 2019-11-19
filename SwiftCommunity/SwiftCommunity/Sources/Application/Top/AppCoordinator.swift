@@ -16,12 +16,12 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
     // Private
 
     private let component: AppComponent
-    lazy private var onboardingCoordinator = OnboardingCoordinator(dependency: component, context: self.component.context)
+    lazy private var onboardingCoordinator = OnboardingCoordinator(dependency: component, viewControllerContext: component.viewControllerContext, dependencyProvider: component.dependencyProvider)
 
     // MARK: Initialization
 
-    init(context: ApplicationContextProtocol) {
-        component = AppComponent(dependency: EmptyComponent(), viewControllerContext: context.viewControllerContext, context: context)
+    init(viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        component = AppComponent(dependency: EmptyComponent(), viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
         super.init(initialRoute: .onboarding)
     }
 

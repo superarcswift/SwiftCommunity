@@ -74,7 +74,7 @@ public class VideosInterface: VideosInterfaceProtocol, OnDemandInterface {
             depedency: dependency,
             componentsRouter: componentsRouter,
             viewControllerContext: viewControllerContext,
-            context: dependencyProvider.context)
+            dependencyProvider: dependencyProvider)
     }
 
     public func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>) -> Presentable {
@@ -83,7 +83,7 @@ public class VideosInterface: VideosInterfaceProtocol, OnDemandInterface {
             depedency: dependency,
             componentsRouter: componentsRouter,
             viewControllerContext: viewControllerContext,
-            context: dependencyProvider.context)
+            dependencyProvider: dependencyProvider)
     }
 
 }
