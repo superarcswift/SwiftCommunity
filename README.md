@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/badge/Xcode-11-blue.svg)](https://opensource.org/licenses/MIT)
 [![License](https://img.shields.io/badge/platforms-iOSv|%20tvOS%20|%20macOS%20|%20watchOS%20-blue.svg)](https://opensource.org/licenses/MIT)
 
+###[Beta version is available at TestFlight](https://superarcswift.github.io/SwiftCommunity/)
+
 **Collection of Swift/iOS-related conference videos**.
 
 This project serves as a showcase for **the SuperArc project (TSP)**.
