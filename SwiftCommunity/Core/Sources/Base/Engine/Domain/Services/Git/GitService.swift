@@ -172,9 +172,7 @@ public class GitService: Service, GitServiceProtocol {
         }
 
         return URL(fileURLWithPath: path)
-    }   
-
-    // MARK: Private helpers
+    }
 }
 
 enum GitServiceError: Error {

@@ -6,7 +6,7 @@ import SuperArcCoreUI
 import SuperArcCore
 
 /// Protocol defining a component.
-public protocol ComponentProtocol: Dependency, HasViewControllerContext, HasApplicationContext, ComponentRouter {
+public protocol ComponentProtocol: Dependency, HasViewControllerContext, ComponentRouter {
     associatedtype DependencyType
     associatedtype ViewBuildableType
     associatedtype InterfaceType
@@ -43,15 +43,14 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 
     public var viewControllerContext: ViewControllerContext!
 
-    // TODO: Abstract this into something like DependencyProvider
-    public var context: ApplicationContextProtocol!
+    public var dependencyProvider: DependencyProvider
 
     // MARK: Intialization
 
-    public init(dependency: DependencyType, componentsRouter: AnyComponentRouter<ComponentRouteType>? = nil, viewControllerContext: ViewControllerContext, context: ApplicationContextProtocol) {
+    public init(dependency: DependencyType, componentsRouter: AnyComponentRouter<ComponentRouteType>? = nil, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
         self.dependency = dependency
         self.viewControllerContext = viewControllerContext
-        self.context = context
+        self.dependencyProvider = dependencyProvider
         self.componentsRouter = componentsRouter
     }
 
@@ -67,8 +66,8 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 }
 
 extension Component where ComponentRouteType == EmptyComponentRoute {
-    public convenience init(dependency: DependencyType, viewControllerContext: ViewControllerContext, context: ApplicationContextProtocol) {
-        self.init(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), viewControllerContext: viewControllerContext, context: context)
+    public convenience init(dependency: DependencyType, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        self.init(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
     }
 }
 

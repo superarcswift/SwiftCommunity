@@ -70,7 +70,7 @@ public class AuthorsInterface: AuthorsInterfaceProtocol, OnDemandInterface {
             dependency: dependency,
             componentsRouter: anyAuthorsRouter,
             viewControllerContext: viewControllerContext,
-            context: dependencyProvider.context)
+            dependencyProvider: dependencyProvider)
     }
 }
 

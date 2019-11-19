@@ -89,3 +89,5 @@ class AppManager: HasComponentsRouter, HasConfigurations {
         core.context.engine.serviceContext.register(server, for: DirectAccessJSONServer.self)
     }
 }
+
+extension Core: DependencyProvider {}

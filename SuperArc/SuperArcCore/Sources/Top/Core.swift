@@ -5,13 +5,13 @@
 import SuperArcNetwork
 import SuperArcFoundation
 
-public class Core {
+public class Core: HasApplicationContext {
 
     // MARK: Properties
 
     // Public
 
-    public let context: ApplicationContextProtocol
+    public var context: ApplicationContextProtocol!
 
     public let engine: EngineProtocol
 

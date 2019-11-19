@@ -14,27 +14,27 @@ class DashboardComponent: Component<EmptyDependency, EmptyViewBuildable, EmptyIn
 extension DashboardComponent: HasConferencesService {
 
     var conferencesService: ConferencesServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: ConferencesServiceProtocol.self)
+        return dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesServiceProtocol.self)
     }
 }
 
 extension DashboardComponent: HasVideosService {
 
     var videosService: VideosServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
+        return dependencyProvider.context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
     }
 }
 
 extension DashboardComponent: HasAuthorsService {
 
     var authorsService: AuthorsServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
+        return dependencyProvider.context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)
     }
 }
 
 extension DashboardComponent: HasGitService {
 
     var gitService: GitServiceProtocol {
-        return context.engine.serviceRegistry.resolve(type: GitServiceProtocol.self)
+        return dependencyProvider.context.engine.serviceRegistry.resolve(type: GitServiceProtocol.self)
     }
 }
