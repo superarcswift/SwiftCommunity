@@ -3,5 +3,6 @@
 "authors" = "Diễn giả";
 "more" = "Khác";
 "about" = "Giới thiệu";
-"licenses" = "Bản quyền";
+"content_licenses" = "Bản quyền nội dung";
+"acknowledgements" = "Cảm ơn";
 "reset" = "Thiết lập lại";

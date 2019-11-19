@@ -27,23 +27,27 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
     override func prepareTransition(for route: MoreRoute) -> NavigationTransition {
         switch route {
-        case .list:
-            let viewController = component.viewBuilder.makeMoreTableViewController(router: unownedRouter)
-            return .push(viewController)
+            case .list:
+                let viewController = component.viewBuilder.makeMoreTableViewController(router: unownedRouter)
+                return .push(viewController)
 
-        case .about:
-            let viewController = component.viewBuilder.makeAboutViewController(router: unownedRouter)
-            return .push(viewController)
+            case .about:
+                let viewController = component.viewBuilder.makeAboutViewController(router: unownedRouter)
+                return .push(viewController)
 
-        case .conferences:
-            let viewController = component.viewBuilder.makeOpenConferencesViewController(router: unownedRouter)
-            return .push(viewController)
+            case .conferences:
+                let viewController = component.viewBuilder.makeOpenConferencesViewController(router: unownedRouter)
+                return .push(viewController)
 
-        case .license:
-            fatalError("should not used")
+            case .acknowledgements:
+                fatalError("should not used")
 
-        case .reset:
-            return .dismiss()
+            case .contentLicense:
+                let viewController = component.viewBuilder.makeContentLicensesViewController(router: unownedRouter)
+                return .push(viewController)
+
+            case .reset:
+                return .dismiss()
         }
     }
 
@@ -53,6 +57,7 @@ enum MoreRoute: Route {
     case list
     case conferences
     case about
-    case license
+    case acknowledgements
+    case contentLicense
     case reset
 }

@@ -3,5 +3,6 @@
 "authors" = "Authors";
 "more" = "More";
 "about" = "About";
-"licenses" = "Licenses";
+"content_licenses" = "Licenses";
+"acknowledgements" = "Acknowledgements";
 "reset" = "Reset";

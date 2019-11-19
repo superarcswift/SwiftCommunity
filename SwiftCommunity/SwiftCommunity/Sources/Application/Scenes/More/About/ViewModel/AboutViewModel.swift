@@ -2,27 +2,24 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import CoreUX
 import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
 
-class AboutViewModel: ViewModel {
+class AboutViewModel: ViewModel, MarkdownViewModelProtocol {
 
-    // MARK: Properties
+    var resourceURL: URL? {
+        get {
+            guard let path = Bundle.main.path(forResource: "README", ofType: "md") else {
+                return nil
+            }
 
-    // Static
-
-    static let readmeFilename = "README.md"
-
-    // MARK: APIs
-
-    func readProjectDescription() -> String? {
-        guard let path = Bundle.main.path(forResource: "README", ofType: "md") else {
-            return nil
+            return URL(fileURLWithPath: path)
         }
-
-        let url = URL(fileURLWithPath: path)
-
-        return try? String(contentsOf: url, encoding: .utf8)
+        // swiftlint:disable:next unused_setter_value
+        set {
+            // Do nothing
+        }
     }
 }
