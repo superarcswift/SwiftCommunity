@@ -5,19 +5,17 @@
 import SuperArcCoreUI
 import MarkdownView
 
-class AboutViewController: ViewController<AboutViewModel>, StoryboardInitiable {
+open class MarkdownViewController: ViewController<MarkdownViewModel> {
 
     // MARK: Properties
 
-    // Static
+    // Private
 
-    static var storyboardName = "More"
-
-    var markdownView: MarkdownView!
+    private var markdownView: MarkdownView!
 
     // MARK: Setup
 
-    override func setupViews() {
+    override open func setupViews() {
         super.setupViews()
 
         markdownView = MarkdownView()
@@ -29,7 +27,9 @@ class AboutViewController: ViewController<AboutViewModel>, StoryboardInitiable {
         markdownView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
 
-    override func loadData() {
+    // MARK: APIs
+
+    override open func loadData() {
         let description = viewModel.loadContent()
         markdownView.load(markdown: description)
     }

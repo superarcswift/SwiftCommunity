@@ -26,6 +26,8 @@ public protocol GitServiceProtocol {
     func update() -> Promise<Void>
 
     func reset() -> Promise<Bool>
+
+    func localURL(for filePath: String) -> URL?
 }
 
 public class GitService: Service, GitServiceProtocol {
@@ -34,9 +36,12 @@ public class GitService: Service, GitServiceProtocol {
 
     // Static
 
-    public let baseLocalRepositoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+    public let baseLocalPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+    public var baseLocalRepositoryPath: String {
+        filePathProvider.localRepositoryURL.path
+    }
     public lazy var baseContentPath = {
-        return filePathProvider.localRepositoryURL.path.combinePath("content")
+        baseLocalRepositoryPath.combinePath("content")
     }()
 
     // Public
@@ -62,8 +67,8 @@ public class GitService: Service, GitServiceProtocol {
         self.remoteRepositoryURL = remoteRepositoryURL
 
         queue = DispatchQueue(label: "com.tba.swiftcommunity.gitservice", qos: .userInitiated)
-        filePathProvider = FilePathProvider(baseLocalRepositoryPath: baseLocalRepositoryPath, remoteRepositoryURL: remoteRepositoryURL)
-        print(baseLocalRepositoryPath)
+        filePathProvider = FilePathProvider(baseLocalRepositoryPath: baseLocalPath, remoteRepositoryURL: remoteRepositoryURL)
+        print(baseLocalPath)
     }
 
     // MARK: APIs
@@ -138,13 +143,13 @@ public class GitService: Service, GitServiceProtocol {
     /// - Returns: true or false
     public func reset() -> Promise<Bool> {
         return Promise { resolver in
-            guard fileManager.fileExists(atPath: baseLocalRepositoryPath) else {
+            guard fileManager.fileExists(atPath: baseLocalPath) else {
                 return resolver.fulfill(false)
             }
 
             queue.async {
                 do {
-                    try self.fileManager.removeItem(atPath: self.baseLocalRepositoryPath)
+                    try self.fileManager.removeItem(atPath: self.baseLocalPath)
                     DispatchQueue.main.async {
                         resolver.fulfill(true)
                     }
@@ -156,6 +161,18 @@ public class GitService: Service, GitServiceProtocol {
             }
         }
     }
+
+    // MARK: Local file management
+
+    public func localURL(for filePath: String) -> URL? {
+        let path = baseLocalRepositoryPath.combinePath(filePath)
+
+        guard fileManager.fileExists(atPath: path) else {
+            return nil
+        }
+
+        return URL(fileURLWithPath: path)
+    }   
 
     // MARK: Private helpers
 }

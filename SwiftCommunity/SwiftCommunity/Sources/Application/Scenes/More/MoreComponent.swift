@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import CoreUX
 import Core
 import SuperArcCoreComponent
 import SuperArcCoreUI
@@ -16,7 +17,7 @@ protocol MoreViewBuilder: ViewBuildable {
     func makeMoreTableViewController(router: UnownedRouter<MoreRoute>) -> UIViewController
     func makeOpenConferencesViewController(router: UnownedRouter<MoreRoute>) -> UIViewController
     func makeAboutViewController(router: UnownedRouter<MoreRoute>) -> UIViewController
-    func makeLicensesViewController(router: UnownedRouter<MoreRoute>) -> UIViewController
+    func makeContentLicensesViewController(router: UnownedRouter<MoreRoute>) -> UIViewController
 }
 
 class MoreComponent: Component<MoreDependency, MoreViewBuilder, EmptyInterface, EmptyComponentRoute>, MoreViewBuilder {
@@ -44,8 +45,10 @@ class MoreComponent: Component<MoreDependency, MoreViewBuilder, EmptyInterface, 
         return viewController
     }
 
-    func makeLicensesViewController(router: UnownedRouter<MoreRoute>) -> UIViewController {
-        let viewController = LicensesViewController.instantiate(with: viewControllerContext)
+    func makeContentLicensesViewController(router: UnownedRouter<MoreRoute>) -> UIViewController {
+        let contentURL = dependency.gitService.localURL(for: "LICENSE")
+        let viewController = MarkdownViewController()
+        viewController.viewModel = MarkdownViewModel(resourceURL: contentURL)
         return viewController
     }
 

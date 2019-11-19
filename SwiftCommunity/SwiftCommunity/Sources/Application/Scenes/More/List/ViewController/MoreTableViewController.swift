@@ -18,15 +18,12 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
     enum Section: Int {
         case conferences
         case about
-        case license
+        case licenses
         case reset
 
-        init(from value: Int) {
-            guard let section = Section(rawValue: value) else {
-                fatalError("invalid section")
-            }
-
-            self = section
+        enum LicensesRows: Int {
+            case acknowledgements
+            case contentLicense
         }
     }
 
@@ -58,15 +55,24 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch Section(from: indexPath.section) {
-        case .conferences:
-            viewModel.router.trigger(.conferences)
-        case .about:
-            viewModel.router.trigger(.about)
-        case .license:
-            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, completionHandler: nil)
-        case .reset:
-            confirmReset()
+        switch Section(rawValue: indexPath.section) {
+            case .conferences?:
+                viewModel.router.trigger(.conferences)
+            case .about?:
+                viewModel.router.trigger(.about)
+            case .licenses?:
+                switch Section.LicensesRows(rawValue: indexPath.row) {
+                    case .acknowledgements?:
+                        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, completionHandler: nil)
+                    case .contentLicense?:
+                        viewModel.router.trigger(.contentLicense)
+                    default:
+                        fatalError("invalid row")
+                }
+            case .reset?:
+                confirmReset()
+            default:
+                fatalError("invalid section")
         }
 
         tableView.deselectRow(at: indexPath, animated: true)
