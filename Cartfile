@@ -7,7 +7,7 @@ github "quickbirdstudios/XCoordinator" ~> 2.0
 github "libgit2/objective-git"
 github "rinov/YoutubeKit" "master"
 github "satishVekariya/LXVimeoKit" "master"
-github "Daltron/NotificationBanner" ~> 3.0.0
+github "Daltron/NotificationBanner" "master"
 github "keitaoouchi/MarkdownView" ~> 1.6
 # Disable because failing on Travis
 # github "Quick/Quick" ~> 2.0

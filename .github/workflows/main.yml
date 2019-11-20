@@ -14,7 +14,7 @@ jobs:
         id: carthage
         with:
           path: Carthage/Build
-          key: ${{ runner.os }}
+          key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
 
       - name: Checkout
         uses: actions/checkout@master
@@ -27,7 +27,9 @@ jobs:
         run: |
           xcodebuild clean test -workspace SwiftCommunity.xcworkspace -scheme SwiftCommunity -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
           bash <(curl -s https://codecov.io/bash)
-          swift run danger-swift ci
 
-        env:
-         destination: ${{ matrix.destination }}
+      - name: Danger
+        run: swift run danger-swift ci
+
+      env:
+        destination: ${{ matrix.destination }}
