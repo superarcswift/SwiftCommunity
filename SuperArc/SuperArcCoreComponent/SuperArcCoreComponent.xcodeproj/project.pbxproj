@@ -159,9 +159,9 @@
 				F6ABCB2F22FB4CC900476F1A /* Component.swift */,
 				F6429C9123264E9400744ACA /* CommonViewController+ComponentsRouter.swift */,
 				F6429C77232562EA00744ACA /* ComponentsRouter.swift */,
+				F6D2D3642382D8B80046A8D1 /* DependencyProvider.swift */,
 				F6ABCB1622FB4C6500476F1A /* SuperArcCoreComponent.h */,
 				F6ABCB1722FB4C6500476F1A /* Info.plist */,
-				F6D2D3642382D8B80046A8D1 /* DependencyProvider.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";

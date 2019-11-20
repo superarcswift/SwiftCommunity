@@ -1,8 +1,4 @@
 //
-//  SuperArcCoreComponent.h
-//  SuperArcCoreComponent
-//
-//  Created by An Tran on 07.08.19.
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
