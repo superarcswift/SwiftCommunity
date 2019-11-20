@@ -9,15 +9,15 @@ jobs:
         matrix:
           destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 11']
     steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
       - name: Cache
         uses: actions/cache@v1.0.2
         id: carthage
         with:
           path: Carthage/Build
           key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
-
-      - name: Checkout
-        uses: actions/checkout@master
 
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
