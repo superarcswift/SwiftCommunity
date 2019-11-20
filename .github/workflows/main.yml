@@ -31,5 +31,5 @@ jobs:
       - name: Danger
         run: swift run danger-swift ci
 
-      env:
-        destination: ${{ matrix.destination }}
+        env:
+          destination: ${{ matrix.destination }}
