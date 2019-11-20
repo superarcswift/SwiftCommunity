@@ -137,7 +137,7 @@ For convenience, all subprojects are kept in the same workspace & this reporisto
 The goal for a stable version in the future is to have separated repositories for all components so that they can live independently from each others.
 
 ### Getting started
-
+- Please make sure that you have [Carthage](https://github.com/Carthage/Carthage) installed.
 - Fork the repository.
 - From the root workspace folder, run  `swift run --package-path Tools/Bootstrap/ Bootstrap .`  to install all dependencies.
 - Open the workspace in Xcode and you are good to go.
