@@ -19,7 +19,7 @@ The goal is to have a set of modules (µComponent) to create a component-based M
 
 ## Content
 
-All content are curated from external sources such as Vimeo, Youtube or WWDC live streams. This is insipred heavily from [SwiftTube](http://www.swifttube.co/) and [talk & coffee app](https://apps.apple.com/app/talks-coffee/id1466240063)
+All content are curated from external sources such as Vimeo, Youtube or WWDC live streams. This is inspired heavily from [SwiftTube](http://www.swifttube.co/) and [talk & coffee app](https://apps.apple.com/app/talks-coffee/id1466240063)
 
 ## App Features
 
@@ -160,4 +160,5 @@ This project is very opinionated and probably not suitable for all kinds of iOS 
 
 ## License
 
-MIT License. See [LICENSE](https://github.com/superarcswift/SwiftCommunity/blob/master/LICENSE)
+MIT License. However, **please do not ship this app** under your own account, paid or free.
+See [LICENSE](https://github.com/superarcswift/SwiftCommunity/blob/master/LICENSE)
