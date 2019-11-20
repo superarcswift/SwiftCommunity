@@ -47,7 +47,10 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 
     // MARK: Intialization
 
-    public init(dependency: DependencyType, componentsRouter: AnyComponentRouter<ComponentRouteType>? = nil, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+    public init(dependency: DependencyType,
+                componentsRouter: AnyComponentRouter<ComponentRouteType>? = nil,
+                viewControllerContext: ViewControllerContext,
+                dependencyProvider: DependencyProvider) {
         self.dependency = dependency
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
