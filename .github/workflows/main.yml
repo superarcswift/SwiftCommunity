@@ -1,5 +1,6 @@
 on: pull_request
-name: UnitTest
+
+name: PullRequest
 jobs:
   test:
     name: UnitTest
@@ -8,13 +9,25 @@ jobs:
         matrix:
           destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 11']
     steps:
+      - name: Cache
+        uses: actions/cache@v1.0.2
+        id: carthage
+        with:
+          path: Carthage/Build
+          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+
       - name: Checkout
         uses: actions/checkout@master
+
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: swift run --package-path Tools/Bootstrap/ Bootstrap .
+
       - name: Build and test
         run: |
-          swift run --package-path Tools/Bootstrap/ Bootstrap .
           xcodebuild clean test -workspace SwiftCommunity.xcworkspace -scheme SwiftCommunity -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
           bash <(curl -s https://codecov.io/bash)
           swift run danger-swift ci
+
         env:
          destination: ${{ matrix.destination }}
