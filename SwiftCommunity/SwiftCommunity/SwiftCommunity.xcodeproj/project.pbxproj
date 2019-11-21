@@ -17,6 +17,8 @@
 		F61DE1082320318A0083E26A /* ComponentsRouter+Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE1072320318A0083E26A /* ComponentsRouter+Interfaces.swift */; };
 		F62A0B7F23867D56000AE377 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62A0B7E23867D55000AE377 /* Nimble.framework */; };
 		F62A0B8123867D60000AE377 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62A0B8023867D60000AE377 /* Quick.framework */; };
+		F62A0BA42386B757000AE377 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F62A0B8023867D60000AE377 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F62A0BA52386B759000AE377 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F62A0B7E23867D55000AE377 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F122F220CC005D0778 /* Animation+Fade.swift */; };
 		F63A720B22F4179B005D0778 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A720A22F4179B005D0778 /* Constants.swift */; };
 		F63A723D22F44E3F005D0778 /* SuperArcStateView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A723C22F44E3F005D0778 /* SuperArcStateView.framework */; };
@@ -107,6 +109,9 @@
 		F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16822CA9ECA00213675 /* Assets.xcassets */; };
 		F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */; };
 		F6E8D18222CA9ECA00213675 /* ConferencesPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D18122CA9ECA00213675 /* ConferencesPageTests.swift */; };
+		F6F74AC32386BABA00018583 /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F64238B022CD451E000F5CE3 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6F74AC42386BAE800018583 /* XCoordinator.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6B577D02320503F0069E79F /* XCoordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6F74AC72386BB2300018583 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE3E231D0F55007E28A5 /* Core.framework */; };
 		F6FB1C512353B78D00456BFC /* Transition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6594AB323535B5700F1F8EA /* Transition+Extensions.swift */; };
 		F6FB1C522353B79400456BFC /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6594AB923539A8700F1F8EA /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
@@ -137,6 +142,10 @@
 			files = (
 				F6749CC92322A541000BDC1C /* RxTest.framework in CopyFiles */,
 				F6749CCA2322A541000BDC1C /* RxSwift.framework in CopyFiles */,
+				F62A0BA42386B757000AE377 /* Quick.framework in CopyFiles */,
+				F62A0BA52386B759000AE377 /* Nimble.framework in CopyFiles */,
+				F6F74AC32386BABA00018583 /* PromiseKit.framework in CopyFiles */,
+				F6F74AC42386BAE800018583 /* XCoordinator.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +315,7 @@
 				F62A0B7F23867D56000AE377 /* Nimble.framework in Frameworks */,
 				F6749CC82322A539000BDC1C /* RxTest.framework in Frameworks */,
 				F6749CC62322A539000BDC1C /* RxSwift.framework in Frameworks */,
+				F6F74AC72386BB2300018583 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
