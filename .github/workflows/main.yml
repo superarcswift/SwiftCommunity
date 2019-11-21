@@ -33,4 +33,3 @@ jobs:
 
       - name: Danger Swift
         uses: danger/swift@2.0.3
-        run: swift run danger-swift ci
