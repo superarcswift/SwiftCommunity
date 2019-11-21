@@ -9,6 +9,5 @@ github "rinov/YoutubeKit" "master"
 github "satishVekariya/LXVimeoKit" "master"
 github "Daltron/NotificationBanner" "master"
 github "keitaoouchi/MarkdownView" ~> 1.6
-# Disable because failing on Travis
-# github "Quick/Quick" ~> 2.0
-# github "Quick/Nimble" ~> 8.0
+github "Quick/Quick" ~> 2.0
+github "Quick/Nimble" ~> 8.0

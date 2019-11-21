@@ -15,6 +15,8 @@
 		F609679C23245951009570CF /* ComponentsRouter+Authors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F609679B23245951009570CF /* ComponentsRouter+Authors.swift */; };
 		F60967A0232466A4009570CF /* ComponentsRouter+Routers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F609679F232466A4009570CF /* ComponentsRouter+Routers.swift */; };
 		F61DE1082320318A0083E26A /* ComponentsRouter+Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE1072320318A0083E26A /* ComponentsRouter+Interfaces.swift */; };
+		F62A0B7F23867D56000AE377 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62A0B7E23867D55000AE377 /* Nimble.framework */; };
+		F62A0B8123867D60000AE377 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62A0B8023867D60000AE377 /* Quick.framework */; };
 		F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F122F220CC005D0778 /* Animation+Fade.swift */; };
 		F63A720B22F4179B005D0778 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A720A22F4179B005D0778 /* Constants.swift */; };
 		F63A723D22F44E3F005D0778 /* SuperArcStateView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A723C22F44E3F005D0778 /* SuperArcStateView.framework */; };
@@ -46,10 +48,6 @@
 		F6749CBF2322A3B1000BDC1C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6749CBE2322A3B1000BDC1C /* Quick.framework */; };
 		F6749CC02322A3BB000BDC1C /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6749CBC2322A3A7000BDC1C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6749CC12322A3BD000BDC1C /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6749CBE2322A3B1000BDC1C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F6749CC22322A4BA000BDC1C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6749CBC2322A3A7000BDC1C /* Nimble.framework */; };
-		F6749CC32322A4BA000BDC1C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6749CBE2322A3B1000BDC1C /* Quick.framework */; };
-		F6749CC42322A4BF000BDC1C /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6749CBE2322A3B1000BDC1C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F6749CC52322A4BF000BDC1C /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6749CBC2322A3A7000BDC1C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6749CC62322A539000BDC1C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577D1232050400069E79F /* RxSwift.framework */; };
 		F6749CC82322A539000BDC1C /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6749CC72322A539000BDC1C /* RxTest.framework */; };
 		F6749CC92322A541000BDC1C /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6749CC72322A539000BDC1C /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -137,10 +135,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F6749CC42322A4BF000BDC1C /* Quick.framework in CopyFiles */,
 				F6749CC92322A541000BDC1C /* RxTest.framework in CopyFiles */,
 				F6749CCA2322A541000BDC1C /* RxSwift.framework in CopyFiles */,
-				F6749CC52322A4BF000BDC1C /* Nimble.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +162,8 @@
 		F609679B23245951009570CF /* ComponentsRouter+Authors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsRouter+Authors.swift"; sourceTree = "<group>"; };
 		F609679F232466A4009570CF /* ComponentsRouter+Routers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsRouter+Routers.swift"; sourceTree = "<group>"; };
 		F61DE1072320318A0083E26A /* ComponentsRouter+Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComponentsRouter+Interfaces.swift"; sourceTree = "<group>"; };
+		F62A0B7E23867D55000AE377 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		F62A0B8023867D60000AE377 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		F63A71F122F220CC005D0778 /* Animation+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Fade.swift"; sourceTree = "<group>"; };
 		F63A720A22F4179B005D0778 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F63A723C22F44E3F005D0778 /* SuperArcStateView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcStateView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,7 +185,7 @@
 		F6507785237D61C90076AE6B /* OpenConference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenConference.swift; sourceTree = "<group>"; };
 		F6517EDC2381E290005C7144 /* XCoordinatorRx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinatorRx.framework; path = ../../Carthage/Build/iOS/XCoordinatorRx.framework; sourceTree = "<group>"; };
 		F6594AB323535B5700F1F8EA /* Transition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition+Extensions.swift"; sourceTree = "<group>"; };
-		F6594AB923539A8700F1F8EA /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../../../../fastlane/SnapshotHelper.swift; sourceTree = "<group>"; };
+		F6594AB923539A8700F1F8EA /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../../fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		F66C905122E084BC006CA2BB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F66C905322E09DF2006CA2BB /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 		F66C90B822E1ADF9006CA2BB /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
@@ -304,10 +302,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F62A0B8123867D60000AE377 /* Quick.framework in Frameworks */,
+				F62A0B7F23867D56000AE377 /* Nimble.framework in Frameworks */,
 				F6749CC82322A539000BDC1C /* RxTest.framework in Frameworks */,
 				F6749CC62322A539000BDC1C /* RxSwift.framework in Frameworks */,
-				F6749CC22322A4BA000BDC1C /* Nimble.framework in Frameworks */,
-				F6749CC32322A4BA000BDC1C /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +725,8 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F62A0B8023867D60000AE377 /* Quick.framework */,
+				F62A0B7E23867D55000AE377 /* Nimble.framework */,
 				F6517EDC2381E290005C7144 /* XCoordinatorRx.framework */,
 				F6507772237CBC490076AE6B /* SuperArcNetwork.framework */,
 				F6749CC72322A539000BDC1C /* RxTest.framework */,
