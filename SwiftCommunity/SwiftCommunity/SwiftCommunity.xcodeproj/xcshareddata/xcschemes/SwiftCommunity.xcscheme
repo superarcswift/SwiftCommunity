@@ -48,16 +48,6 @@
                ReferencedContainer = "container:SwiftCommunity.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6E8D17C22CA9ECA00213675"
-               BuildableName = "SwiftCommunityUITests.xctest"
-               BlueprintName = "SwiftCommunityUITests"
-               ReferencedContainer = "container:SwiftCommunity.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
