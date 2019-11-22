@@ -16,7 +16,7 @@ open class PageViewController<VM: ViewModel>: UIPageViewController, CommonViewCo
 
     @IBInspectable public var hasRightCloseButton: Bool = false
     @IBInspectable public var hasLeftCloseButton: Bool = false
-    @IBInspectable public var prefersLargeTitles: Bool = false
+    @IBInspectable public var prefersLargeTitles: Bool = true
 
     // MARK: Lifecycles
 

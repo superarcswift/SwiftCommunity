@@ -17,6 +17,7 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
 
     enum Section: Int {
         case conferences
+        case algorithms
         case about
         case licenses
         case contact
@@ -59,6 +60,8 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
         switch Section(rawValue: indexPath.section) {
             case .conferences?:
                 viewModel.router.trigger(.conferences)
+            case .algorithms:
+                viewModel.router.trigger(.algorithms)
             case .about?:
                 viewModel.router.trigger(.about)
             case .licenses?:

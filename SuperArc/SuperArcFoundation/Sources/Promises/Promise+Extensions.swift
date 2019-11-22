@@ -17,11 +17,10 @@ extension Resolver {
     }
 }
 
-public struct Promises {}
 
 /// MARK: Supporting dispatch async for promises
 
-extension Promises {
+public struct Promises {
 
     /// Creates a promise which runs the given method on the specified queue and fulfills on the main queue.
     // Note: unfortunately I cant name this method dispatchAsyncOnQueue...

@@ -56,6 +56,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 enum MoreRoute: Route {
     case list
     case conferences
+    case algorithms
     case about
     case acknowledgements
     case contentLicense
