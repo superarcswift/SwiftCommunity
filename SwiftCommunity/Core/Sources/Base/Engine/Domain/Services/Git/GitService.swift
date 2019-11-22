@@ -77,7 +77,7 @@ public class GitService: Service, GitServiceProtocol {
     /// - Returns: bool
     public func open() -> Bool {
 
-        guard FileManager.default.fileExists(atPath: filePathProvider.localRepositoryURL!.path) else {
+        guard fileManager.fileExists(atPath: filePathProvider.localRepositoryURL!.path) else {
             return false
         }
 
