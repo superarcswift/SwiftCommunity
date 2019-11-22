@@ -21,7 +21,10 @@ jobs:
 
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: GITHUB_TOKEN=${GITHUB_ACTION_TOKEN} swift run --package-path Tools/Bootstrap/ Bootstrap .
+        run: |
+          rm -rf ~/Library/Caches/carthage
+          rm -rf ~/Library/Caches/org.carthage.CarthageKit
+          GITHUB_TOKEN=${GITHUB_ACTION_TOKEN} swift run --package-path Tools/Bootstrap/ Bootstrap .
         env:
           GITHUB_ACTION_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
 
