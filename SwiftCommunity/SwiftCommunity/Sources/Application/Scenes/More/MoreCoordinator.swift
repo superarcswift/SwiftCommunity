@@ -40,7 +40,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
                 return .push(viewController)
 
             case .algorithms:
-
+                fatalError("not implemented")
             case .acknowledgements:
                 fatalError("should not used")
 

@@ -17,7 +17,6 @@ extension Resolver {
     }
 }
 
-
 /// MARK: Supporting dispatch async for promises
 
 public struct Promises {
