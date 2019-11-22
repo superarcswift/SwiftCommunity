@@ -39,6 +39,8 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
                 let viewController = component.viewBuilder.makeOpenConferencesViewController(router: unownedRouter)
                 return .push(viewController)
 
+            case .algorithms:
+
             case .acknowledgements:
                 fatalError("should not used")
 

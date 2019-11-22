@@ -16,6 +16,7 @@ typealias MoreDependency = HasGitService
 protocol MoreViewBuilder: ViewBuildable {
     func makeMoreTableViewController(router: UnownedRouter<MoreRoute>) -> UIViewController
     func makeOpenConferencesViewController(router: UnownedRouter<MoreRoute>) -> UIViewController
+    func makeAlgorithmsViewController(router: UnownedRouter<MoreRoute>) -> UIViewController
     func makeAboutViewController(router: UnownedRouter<MoreRoute>) -> UIViewController
     func makeContentLicensesViewController(router: UnownedRouter<MoreRoute>) -> UIViewController
 }
@@ -36,6 +37,9 @@ class MoreComponent: Component<MoreDependency, MoreViewBuilder, EmptyInterface, 
         let viewModel = OpenConferencesViewModel(dependency: dependencyProvider.context)
         viewController.viewModel = viewModel
         return viewController
+    }
+
+    func makeAlgorithmsViewController(router: UnownedRouter<MoreRoute>) -> UIViewController {
     }
 
     func makeAboutViewController(router: UnownedRouter<MoreRoute>) -> UIViewController {
