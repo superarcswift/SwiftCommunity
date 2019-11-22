@@ -50,11 +50,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F674C2822388A18E004FA46C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F67BF3EF23889672003BAFB9 /* Algorithm.h */,
+				F67BF3F023889672003BAFB9 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F674C2832388A1C9004FA46C /* Top */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		F674C2842388A1CF004FA46C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		F67BF3E223889672003BAFB9 = {
 			isa = PBXGroup;
 			children = (
-				F67BF3EE23889672003BAFB9 /* Algorithm */,
-				F67BF3F923889672003BAFB9 /* AlgorithmTests */,
+				F67BF3EE23889672003BAFB9 /* Sources */,
+				F67BF3F923889672003BAFB9 /* Tests */,
 				F67BF3ED23889672003BAFB9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,22 +91,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F67BF3EE23889672003BAFB9 /* Algorithm */ = {
+		F67BF3EE23889672003BAFB9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F67BF3EF23889672003BAFB9 /* Algorithm.h */,
-				F67BF3F023889672003BAFB9 /* Info.plist */,
+				F674C2832388A1C9004FA46C /* Top */,
+				F674C2842388A1CF004FA46C /* Base */,
+				F674C2822388A18E004FA46C /* SupportingFiles */,
 			);
-			path = Algorithm;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		F67BF3F923889672003BAFB9 /* AlgorithmTests */ = {
+		F67BF3F923889672003BAFB9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				F67BF3FA23889672003BAFB9 /* AlgorithmTests.swift */,
 				F67BF3FC23889672003BAFB9 /* Info.plist */,
 			);
-			path = AlgorithmTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,7 +369,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Algorithm/Info.plist;
+				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -368,7 +392,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Algorithm/Info.plist;
+				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,7 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AlgorithmTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,7 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AlgorithmTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

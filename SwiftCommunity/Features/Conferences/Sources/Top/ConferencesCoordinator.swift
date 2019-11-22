@@ -20,8 +20,16 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
     // MARK: Initialization
 
-    public init(dependency: ConferencesDependency, componentsRouter: AnyComponentRouter<ConferencesComponentRoute>, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
-        component = ConferencesComponent(dependency: dependency, componentsRouter: componentsRouter, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+    public init(componentsRouter: ComponentsRouter,
+                dependency: ConferencesDependency,
+                router: AnyComponentRouter<ConferencesComponentRoute>,
+                viewControllerContext: ViewControllerContext,
+                dependencyProvider: DependencyProvider) {
+
+        component = ConferencesComponent(dependency: dependency,
+                                         router: router,
+                                         viewControllerContext: viewControllerContext,
+                                         dependencyProvider: dependencyProvider)
         super.init(initialRoute: .conferences)
     }
 

@@ -16,12 +16,17 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
     // Private
 
+    private let componentsRouter: ComponentsRouter
     private let component: VideosComponent
 
     // MARK: Initialization
 
-    public init(initialRoute: VideosRoute, depedency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
-        component = VideosComponent(dependency: depedency, componentsRouter: componentsRouter, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+    public init(initialRoute: VideosRoute, componentsRouter: ComponentsRouter, depedency: VideosDependency, router: AnyComponentRouter<VideosComponentRoute>, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        self.componentsRouter = componentsRouter
+        component = VideosComponent(dependency: depedency,
+                                    router: router,
+                                    viewControllerContext: viewControllerContext,
+                                    dependencyProvider: dependencyProvider)
         super.init(initialRoute: initialRoute)
     }
 

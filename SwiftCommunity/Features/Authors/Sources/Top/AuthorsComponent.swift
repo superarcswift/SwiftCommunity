@@ -35,7 +35,7 @@ class AuthorsComponent: Component<AuthorsDependency, AuthorsViewBuilder, EmptyIn
     }
 
     override func trigger(_ route: AuthorsComponentRoute) -> ComponentPresentable? {
-        return componentsRouter?.trigger(route)
+        return router?.trigger(route)
     }
 }
 
@@ -52,12 +52,14 @@ public class AuthorsInterface: AuthorsInterfaceProtocol, OnDemandInterface {
 
     // MARK: Properties
 
-    public weak var dependencyProvider: DependencyProvider!
-    public weak var viewControllerContext: ViewControllerContext!
+    private weak var componentsRouter: ComponentsRouter!
+    private weak var dependencyProvider: DependencyProvider!
+    private weak var viewControllerContext: ViewControllerContext!
 
     // MARK: Initialization
 
-    public required init(onDemandWith viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
+    public required init(onDemandWith componentsRouter: ComponentsRouter, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
+        self.componentsRouter = componentsRouter
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
     }
@@ -67,8 +69,9 @@ public class AuthorsInterface: AuthorsInterfaceProtocol, OnDemandInterface {
     public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute>) -> Presentable {
         return AuthorsCoordinator(
             initialRoute: .authorDetail(authorMetaData, true),
+            componentsRouter: componentsRouter,
             dependency: dependency,
-            componentsRouter: anyAuthorsRouter,
+            router: anyAuthorsRouter,
             viewControllerContext: viewControllerContext,
             dependencyProvider: dependencyProvider)
     }

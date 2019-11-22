@@ -37,7 +37,7 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
         return self as! ViewBuildableType
     }
 
-    public var componentsRouter: AnyComponentRouter<ComponentRouteType>?
+    public var router: AnyComponentRouter<ComponentRouteType>?
 
     public var interface: InterfaceType!
 
@@ -48,13 +48,13 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
     // MARK: Intialization
 
     public init(dependency: DependencyType,
-                componentsRouter: AnyComponentRouter<ComponentRouteType>? = nil,
+                router: AnyComponentRouter<ComponentRouteType>? = nil,
                 viewControllerContext: ViewControllerContext,
                 dependencyProvider: DependencyProvider) {
         self.dependency = dependency
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
-        self.componentsRouter = componentsRouter
+        self.router = router
     }
 
     // MARK: APIs
@@ -70,7 +70,10 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 
 extension Component where ComponentRouteType == EmptyComponentRoute {
     public convenience init(dependency: DependencyType, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
-        self.init(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+        self.init(dependency: dependency,
+                  router: AnyEmptyComponentRouter(),
+                  viewControllerContext: viewControllerContext,
+                  dependencyProvider: dependencyProvider)
     }
 }
 

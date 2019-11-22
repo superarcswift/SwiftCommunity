@@ -12,15 +12,14 @@ class VideosComponentRouter: VideosComponentRouterProtocol {
 
     // MARK: Properties
 
-    var context: ApplicationContextProtocol
+    let context: ApplicationContextProtocol
 
-    lazy var componentsRouter: ComponentsRouter = {
-        self.context.viewControllerContext.resolve(type: ComponentsRouter.self)
-    }()
+    let componentsRouter: ComponentsRouter
 
     // MARK: Initialization
 
-    init(context: ApplicationContextProtocol) {
+    init(componentsRouter: ComponentsRouter, context: ApplicationContextProtocol) {
+        self.componentsRouter = componentsRouter
         self.context = context
     }
 

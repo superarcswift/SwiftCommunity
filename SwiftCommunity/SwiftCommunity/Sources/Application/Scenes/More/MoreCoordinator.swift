@@ -18,8 +18,10 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
     // MARK: Initialization
 
-    init(dependency: MoreDependency, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
-        component = MoreComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+    init(componentsRouter: ComponentsRouter, dependency: MoreDependency, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        component = MoreComponent(dependency: dependency,
+                                  viewControllerContext: viewControllerContext,
+                                  dependencyProvider: dependencyProvider)
         super.init(initialRoute: .list)
     }
 

@@ -74,14 +74,12 @@ class AppManager: HasComponentsRouter, HasConfigurations {
     }
 
     private func setupComponentsCoordinator() {
-        core.context.viewControllerContext.register(componentsRouter, for: ComponentsRouter.self)
-
         VideosCoordinator.register(to: core.context)
         AuthorsCoordinator.register(to: core.context)
 
-        componentsRouter.routerRegistry.register(ConferencesComponentRouter(context: core.context), for: ConferencesComponentRouter.self)
-        componentsRouter.routerRegistry.register(VideosComponentRouter(context: core.context), for: VideosComponentRouter.self)
-        componentsRouter.routerRegistry.register(AuthorsComponentRouter(context: core.context), for: AuthorsComponentRouter.self)
+        componentsRouter.routerRegistry.register(ConferencesComponentRouter(componentsRouter: componentsRouter, context: core.context), for: ConferencesComponentRouter.self)
+        componentsRouter.routerRegistry.register(VideosComponentRouter(componentsRouter: componentsRouter, context: core.context), for: VideosComponentRouter.self)
+        componentsRouter.routerRegistry.register(AuthorsComponentRouter(componentsRouter: componentsRouter, context: core.context), for: AuthorsComponentRouter.self)
     }
 
     private func setupCommunicationInterfaces() {
