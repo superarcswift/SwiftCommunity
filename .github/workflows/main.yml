@@ -22,9 +22,9 @@ jobs:
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: swift run --package-path Tools/Bootstrap/ Bootstrap .
-        with:
-          repo-token: ${{ secrets.GITHUB_ACTION_TOKEN }}
-            
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
+
       - name: Build and test
         run: |
           xcodebuild clean test -workspace SwiftCommunity.xcworkspace -scheme SwiftCommunity -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES
