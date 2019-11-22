@@ -30,7 +30,6 @@
 		F6429C602325583500744ACA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C5F2325583500744ACA /* DashboardViewController.swift */; };
 		F6429C62232559A500744ACA /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6429C61232559A500744ACA /* Dashboard.storyboard */; };
 		F6429C6923255F7700744ACA /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C6823255F7700744ACA /* SuperArcCoreComponent.framework */; };
-		F6429C6A23255F7F00744ACA /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C6823255F7700744ACA /* SuperArcCoreComponent.framework */; };
 		F6429C6B23255F7F00744ACA /* SuperArcCoreComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C6823255F7700744ACA /* SuperArcCoreComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6429C6D2325603D00744ACA /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429C6C2325603D00744ACA /* XCoordinator.framework */; };
 		F6429C81232578A600744ACA /* DashboardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C80232578A600744ACA /* DashboardComponent.swift */; };
@@ -40,10 +39,8 @@
 		F6429C8C2325AD1400744ACA /* ComponentsRouter+FeatureB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C8B2325AD1400744ACA /* ComponentsRouter+FeatureB.swift */; };
 		F6429C8E2325AEDF00744ACA /* ComponentsRouter+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6429C8D2325AEDF00744ACA /* ComponentsRouter+Dependencies.swift */; };
 		F6429CC423265D8100744ACA /* FeatureA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CC023265D0F00744ACA /* FeatureA.framework */; };
-		F6429CC523265D8F00744ACA /* FeatureA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CC023265D0F00744ACA /* FeatureA.framework */; };
 		F6429CC623265D8F00744ACA /* FeatureA.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6429CC023265D0F00744ACA /* FeatureA.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6429D282326829900744ACA /* FeatureB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429D14232681F600744ACA /* FeatureB.framework */; };
-		F6429D29232682B700744ACA /* FeatureB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6429D14232681F600744ACA /* FeatureB.framework */; };
 		F6429D2A232682B700744ACA /* FeatureB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6429D14232681F600744ACA /* FeatureB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -169,16 +166,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6429D282326829900744ACA /* FeatureB.framework in Frameworks */,
-				F6429D29232682B700744ACA /* FeatureB.framework in Frameworks */,
 				F6429CC423265D8100744ACA /* FeatureA.framework in Frameworks */,
 				F6429C6D2325603D00744ACA /* XCoordinator.framework in Frameworks */,
 				F6429C6923255F7700744ACA /* SuperArcCoreComponent.framework in Frameworks */,
 				F6429C43232548DE00744ACA /* PromiseKit.framework in Frameworks */,
 				F6429C412325487800744ACA /* Kingfisher.framework in Frameworks */,
 				F6429C3C2325466B00744ACA /* RxRelay.framework in Frameworks */,
-				F6429C6A23255F7F00744ACA /* SuperArcCoreComponent.framework in Frameworks */,
 				F6429C3D2325466B00744ACA /* RxCocoa.framework in Frameworks */,
-				F6429CC523265D8F00744ACA /* FeatureA.framework in Frameworks */,
 				F6429C3E2325466B00744ACA /* RxSwift.framework in Frameworks */,
 				F6429C352325463200744ACA /* SuperArcCore.framework in Frameworks */,
 				F6429C372325463500744ACA /* SuperArcCoreUI.framework in Frameworks */,
@@ -441,7 +435,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "An Tran";
 				TargetAttributes = {
 					F6429BD4232540A900744ACA = {

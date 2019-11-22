@@ -57,16 +57,13 @@
 		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
 		F6820475231EFDD900098C20 /* Authors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820474231EFDD900098C20 /* Authors.framework */; };
-		F6820476231EFDDE00098C20 /* Authors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820474231EFDD900098C20 /* Authors.framework */; };
 		F6820524231F173300098C20 /* CoreUX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820523231F173300098C20 /* CoreUX.framework */; };
-		F6820525231F173900098C20 /* CoreUX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820523231F173300098C20 /* CoreUX.framework */; };
 		F685D3B523147F4400DB85DE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F685D3B423147F4400DB85DE /* Settings.bundle */; };
 		F68EDE3F231D0F55007E28A5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE3E231D0F55007E28A5 /* Core.framework */; };
 		F68EDE41231D0F55007E28A5 /* DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE40231D0F55007E28A5 /* DataModels.framework */; };
 		F68F655822FF4A4B0026604C /* DashboardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655722FF4A4B0026604C /* DashboardComponent.swift */; };
 		F68F725D231B2FD000D424CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F68F725B231B2FD000D424CB /* Localizable.strings */; };
 		F68F7290231BE70700D424CB /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F728F231BE70700D424CB /* SuperArcLocalization.framework */; };
-		F68F72DB231BF32B00D424CB /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F728F231BE70700D424CB /* SuperArcLocalization.framework */; };
 		F690690F23115AD700B11E93 /* PageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690690E23115AD700B11E93 /* PageObject.swift */; };
 		F690691423128C0E00B11E93 /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690691223128C0500B11E93 /* XCUIElement+Extensions.swift */; };
 		F690691823128CDC00B11E93 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690691523128CC400B11E93 /* UITestCase.swift */; };
@@ -94,11 +91,7 @@
 		F6C41DCF237E0979009C3419 /* Models+RxDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C41DCE237E0979009C3419 /* Models+RxDataSources.swift */; };
 		F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */; };
 		F6C8A141231EADE800DD6BFD /* Videos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A140231EADE800DD6BFD /* Videos.framework */; };
-		F6C8A15A231EC16900DD6BFD /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE3E231D0F55007E28A5 /* Core.framework */; };
-		F6C8A15C231EC16D00DD6BFD /* DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE40231D0F55007E28A5 /* DataModels.framework */; };
 		F6C8A15E231EC17000DD6BFD /* Conferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB75D231D3F3B00A0DCF6 /* Conferences.framework */; };
-		F6C8A160231EC17200DD6BFD /* Videos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A140231EADE800DD6BFD /* Videos.framework */; };
-		F6CAB75E231D3F3B00A0DCF6 /* Conferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB75D231D3F3B00A0DCF6 /* Conferences.framework */; };
 		F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; };
 		F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; };
 		F6D2D35F2382CB440046A8D1 /* OpenConferencesDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2D35E2382CB440046A8D1 /* OpenConferencesDependency.swift */; };
@@ -278,21 +271,14 @@
 				F6820475231EFDD900098C20 /* Authors.framework in Frameworks */,
 				F6C8A15E231EC17000DD6BFD /* Conferences.framework in Frameworks */,
 				F6C8A141231EADE800DD6BFD /* Videos.framework in Frameworks */,
-				F6CAB75E231D3F3B00A0DCF6 /* Conferences.framework in Frameworks */,
 				F68EDE3F231D0F55007E28A5 /* Core.framework in Frameworks */,
 				F68EDE41231D0F55007E28A5 /* DataModels.framework in Frameworks */,
-				F6C8A15C231EC16D00DD6BFD /* DataModels.framework in Frameworks */,
 				F6517EDD2381E290005C7144 /* XCoordinatorRx.framework in Frameworks */,
 				F68F7290231BE70700D424CB /* SuperArcLocalization.framework in Frameworks */,
-				F6C8A15A231EC16900DD6BFD /* Core.framework in Frameworks */,
 				F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */,
-				F6C8A160231EC17200DD6BFD /* Videos.framework in Frameworks */,
-				F68F72DB231BF32B00D424CB /* SuperArcLocalization.framework in Frameworks */,
 				F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */,
 				F63A728B22F471E9005D0778 /* SuperArcNotificationBanner.framework in Frameworks */,
 				F63A723D22F44E3F005D0778 /* SuperArcStateView.framework in Frameworks */,
-				F6820525231F173900098C20 /* CoreUX.framework in Frameworks */,
-				F6820476231EFDDE00098C20 /* Authors.framework in Frameworks */,
 				F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */,
 				F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */,
 				F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */,
@@ -907,7 +893,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "An Tran";
 				TargetAttributes = {
 					F6E8D15D22CA9EC900213675 = {

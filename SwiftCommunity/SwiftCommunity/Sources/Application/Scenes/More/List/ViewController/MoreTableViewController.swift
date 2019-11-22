@@ -19,6 +19,7 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
         case conferences
         case about
         case licenses
+        case contact
         case reset
 
         enum LicensesRows: Int {
@@ -69,6 +70,8 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
                     default:
                         fatalError("invalid row")
                 }
+            case .contact?:
+                UIApplication.shared.open(URL(string: "https://twitter.com/swift_community")!, completionHandler: nil)
             case .reset?:
                 confirmReset()
             default:
