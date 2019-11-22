@@ -44,4 +44,7 @@ class GitServiceMock: GitServiceProtocol {
         }
     }
 
+    func localURL(for filePath: String) -> URL? {
+        return nil
+    }
 }

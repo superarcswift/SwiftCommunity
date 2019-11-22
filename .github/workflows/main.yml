@@ -1,0 +1,37 @@
+on: pull_request
+
+name: PullRequest
+jobs:
+  test:
+    name: UnitTest
+    runs-on: macOS-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 11']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Cache
+        uses: actions/cache@v1.0.2
+        id: carthage
+        with:
+          path: Carthage/Build
+          key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
+
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          rm -rf ~/Library/Caches/carthage
+          rm -rf ~/Library/Caches/org.carthage.CarthageKit
+          GITHUB_TOKEN=${GITHUB_ACTION_TOKEN} swift run --package-path Tools/Bootstrap/ Bootstrap .
+        env:
+          GITHUB_ACTION_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
+
+      - name: Build and test
+        run: |
+          xcodebuild clean test -workspace SwiftCommunity.xcworkspace -scheme SwiftCommunity -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES
+          CODECOV_TOKEN=${CODECOV_TOKEN} bash <(curl -s https://codecov.io/bash)
+        env:
+          destination: ${{ matrix.destination }}
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
