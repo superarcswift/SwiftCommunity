@@ -1,8 +1,4 @@
 //
-//  Algorithm.h
-//  Algorithm
-//
-//  Created by An Tran on 22.11.19.
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 

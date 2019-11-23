@@ -33,4 +33,10 @@ class OpenConferenceTableViewCell: UITableViewCell, ClassNameDerivable {
             dateLabel.text = dateString
         }
     }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        conference = nil
+    }
 }

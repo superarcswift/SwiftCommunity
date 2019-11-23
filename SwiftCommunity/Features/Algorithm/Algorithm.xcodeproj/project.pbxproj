@@ -14,6 +14,7 @@
 		F638450D2389CD8C00060D2F /* AlgorithmDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638450C2389CD8C00060D2F /* AlgorithmDependency.swift */; };
 		F63845102389D3D200060D2F /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F638450F2389D3D200060D2F /* PromiseKit.framework */; };
 		F63845112389D3D200060D2F /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F638450F2389D3D200060D2F /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F63845162389EF0700060D2F /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845152389EF0700060D2F /* SectionTableViewCell.swift */; };
 		F674C28A2388B081004FA46C /* AlgorithmComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C2892388B081004FA46C /* AlgorithmComponent.swift */; };
 		F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C28F2388B263004FA46C /* DashboardViewController.swift */; };
 		F674C2922388B276004FA46C /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F674C2912388B276004FA46C /* Dashboard.storyboard */; };
@@ -54,6 +55,7 @@
 		F63845092389CB3300060D2F /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		F638450C2389CD8C00060D2F /* AlgorithmDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmDependency.swift; sourceTree = "<group>"; };
 		F638450F2389D3D200060D2F /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F63845152389EF0700060D2F /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
 		F674C2892388B081004FA46C /* AlgorithmComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmComponent.swift; sourceTree = "<group>"; };
 		F674C28F2388B263004FA46C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F674C2912388B276004FA46C /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F63845142389EECD00060D2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F63845152389EF0700060D2F /* SectionTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F674C2822388A18E004FA46C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +186,7 @@
 		F674C28E2388B253004FA46C /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				F63845142389EECD00060D2F /* View */,
 				F674C28F2388B263004FA46C /* DashboardViewController.swift */,
 				F63845092389CB3300060D2F /* DashboardViewModel.swift */,
 			);
@@ -346,6 +357,7 @@
 				F63845022389B4C400060D2F /* Section.swift in Sources */,
 				F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */,
 				F638450A2389CB3300060D2F /* DashboardViewModel.swift in Sources */,
+				F63845162389EF0700060D2F /* SectionTableViewCell.swift in Sources */,
 				F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */,
 				F674C2952388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift in Sources */,
 			);

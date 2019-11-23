@@ -18,7 +18,7 @@ public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBui
 
     public func makeDashboardViewController() -> UIViewController {
 
-        let viewController = DashboardViewController.instantiate(with: viewControllerContext)
+        let viewController = DashboardTableViewController.instantiate(with: viewControllerContext)
         viewController.viewModel = DashboardViewModel(dependency: dependency)
         return viewController
     }

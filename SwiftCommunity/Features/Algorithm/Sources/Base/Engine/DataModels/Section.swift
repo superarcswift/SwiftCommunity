@@ -5,11 +5,13 @@
 import DataModels
 
 class Section: Codable {
+    let id: String
     let title: String
     let content: ContentType?
     let sections: [Section]?
 
-    init(title: String, content: ContentType?, sections: [Section]?) {
+    init(id: String, title: String, content: ContentType?, sections: [Section]?) {
+        self.id = id
         self.title = title
         self.content = content
         self.sections = sections
@@ -68,5 +70,28 @@ extension ContentType: Codable {
                 try container.encode(mimeType, forKey: .mime)
                 try container.encode(value, forKey: .value)
         }
+    }
+}
+
+// MARK: Tree operaton
+
+extension Section {
+
+    func search(for sectionID: String) -> Section? {
+        if id == self.id {
+            return self
+        }
+
+        guard let sections = sections else {
+            return nil
+        }
+
+        for section in sections {
+            if let found = section.search(for: id) {
+                return found
+            }
+        }
+
+        return nil
     }
 }
