@@ -16,7 +16,7 @@ jobs:
         uses: actions/cache@v1.0.2
         id: carthage
         with:
-          path: Carthage/Build
+          path: Carthage
           key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
 
       - name: Install Dependencies
@@ -33,3 +33,6 @@ jobs:
         env:
           destination: ${{ matrix.destination }}
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Danger
+        run: swift run danger-swift ci
