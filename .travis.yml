@@ -8,8 +8,6 @@ cache:
 osx_image: xcode11
 
 install:
-  - bundle install
-  - node -v
   - npm install -g danger@7.1.4
 
 script:
