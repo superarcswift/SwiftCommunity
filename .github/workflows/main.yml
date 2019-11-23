@@ -9,7 +9,7 @@ jobs:
         matrix:
           destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 11']
     steps:
-      - name: Checkout
+      - name: Checkout/Build
         uses: actions/checkout@master
 
       - name: Cache
