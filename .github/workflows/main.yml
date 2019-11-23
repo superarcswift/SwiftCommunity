@@ -22,9 +22,9 @@ jobs:
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          export GITHUB_ACCESS_TOKEN=${GITHUB_ACTION_TOKEN}; swift run --package-path Tools/Bootstrap/ Bootstrap .
+          swift run --package-path Tools/Bootstrap/ Bootstrap .
         env:
-          GITHUB_ACTION_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
 
       - name: Build and test
         run: |
@@ -40,3 +40,6 @@ jobs:
           node -v
           npm install -g danger@7.1.4
           swift run danger-swift ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
