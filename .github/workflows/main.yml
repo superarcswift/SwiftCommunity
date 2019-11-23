@@ -22,7 +22,7 @@ jobs:
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          set -o pipefail && export GITHUB_TOKEN=${GITHUB_ACTION_TOKEN}; swift run --package-path Tools/Bootstrap/ Bootstrap .
+          export GITHUB_TOKEN=${GITHUB_ACTION_TOKEN}; swift run --package-path Tools/Bootstrap/ Bootstrap .
         env:
           GITHUB_ACTION_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
 
