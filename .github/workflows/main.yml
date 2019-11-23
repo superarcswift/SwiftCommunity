@@ -22,14 +22,14 @@ jobs:
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          export GITHUB_TOKEN=${GITHUB_ACTION_TOKEN}; swift run --package-path Tools/Bootstrap/ Bootstrap .
+          export GITHUB_ACCESS_TOKEN=${GITHUB_ACTION_TOKEN}; swift run --package-path Tools/Bootstrap/ Bootstrap .
         env:
           GITHUB_ACTION_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
 
       - name: Build and test
         run: |
           set -o pipefail && xcodebuild clean test -workspace SwiftCommunity.xcworkspace -scheme SwiftCommunity -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES | xcpretty -c
-          export CODECOV_TOKEN=${CODECOV_TOKEN}; bash <(curl -s https://codecov.io/bash)
+          bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}
         env:
           destination: ${{ matrix.destination }}
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
