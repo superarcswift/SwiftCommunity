@@ -9,29 +9,35 @@ jobs:
         matrix:
           destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 11']
     steps:
-      - name: Checkout
+      - name: Checkout/Build
         uses: actions/checkout@master
 
       - name: Cache
         uses: actions/cache@v1.0.2
         id: carthage
         with:
-          path: Carthage/Build
+          path: Carthage
           key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
 
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          rm -rf ~/Library/Caches/carthage
-          rm -rf ~/Library/Caches/org.carthage.CarthageKit
-          GITHUB_TOKEN=${GITHUB_ACTION_TOKEN} swift run --package-path Tools/Bootstrap/ Bootstrap .
+          swift run --package-path Tools/Bootstrap/ Bootstrap .
         env:
-          GITHUB_ACTION_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
 
       - name: Build and test
         run: |
-          xcodebuild clean test -workspace SwiftCommunity.xcworkspace -scheme SwiftCommunity -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES
-          CODECOV_TOKEN=${CODECOV_TOKEN} bash <(curl -s https://codecov.io/bash)
+          set -o pipefail && xcodebuild clean test -workspace SwiftCommunity.xcworkspace -scheme SwiftCommunity -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES | xcpretty -c
+          bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}
         env:
           destination: ${{ matrix.destination }}
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Danger
+        run: |
+          npm install -g danger@7.1.4
+          swift run danger-swift ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}

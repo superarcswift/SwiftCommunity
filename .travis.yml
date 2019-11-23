@@ -1,0 +1,14 @@
+language: objective-c
+
+cache:
+  directories:
+    - .build
+    - ~/.danger-swift
+
+osx_image: xcode11
+
+install:
+  - npm install -g danger@7.1.4
+
+script:
+  - swift run danger-swift ci
