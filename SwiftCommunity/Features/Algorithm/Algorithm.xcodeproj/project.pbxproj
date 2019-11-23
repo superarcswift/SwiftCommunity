@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F63844FD2389B34400060D2F /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = F63844FC2389B34400060D2F /* index.json */; };
+		F63845022389B4C400060D2F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845012389B4C400060D2F /* Section.swift */; };
+		F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845052389B8DF00060D2F /* AlgorithmService.swift */; };
 		F674C28A2388B081004FA46C /* AlgorithmComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C2892388B081004FA46C /* AlgorithmComponent.swift */; };
 		F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C28F2388B263004FA46C /* DashboardViewController.swift */; };
 		F674C2922388B276004FA46C /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F674C2912388B276004FA46C /* Dashboard.storyboard */; };
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F63844FC2389B34400060D2F /* index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = index.json; path = /Users/atran/Desktop/Projects/iOS/SwiftCommunityContent/algorithm/index.json; sourceTree = "<absolute>"; };
+		F63845012389B4C400060D2F /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		F63845052389B8DF00060D2F /* AlgorithmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmService.swift; sourceTree = "<group>"; };
 		F674C2892388B081004FA46C /* AlgorithmComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmComponent.swift; sourceTree = "<group>"; };
 		F674C28F2388B263004FA46C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F674C2912388B276004FA46C /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
@@ -58,9 +64,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F63844FE2389B4A600060D2F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F674C2932388B4A0004FA46C /* Navigation */,
+				F674C28D2388B0E1004FA46C /* Scenes */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F63844FF2389B4AC00060D2F /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				F63845042389B8CA00060D2F /* Platform */,
+				F63845032389B8AD00060D2F /* DomainLogic */,
+				F63845002389B4B500060D2F /* DataModels */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		F63845002389B4B500060D2F /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				F63845012389B4C400060D2F /* Section.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		F63845032389B8AD00060D2F /* DomainLogic */ = {
+			isa = PBXGroup;
+			children = (
+				F63845052389B8DF00060D2F /* AlgorithmService.swift */,
+			);
+			path = DomainLogic;
+			sourceTree = "<group>";
+		};
+		F63845042389B8CA00060D2F /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
 		F674C2822388A18E004FA46C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				F63844FC2389B34400060D2F /* index.json */,
 				F67BF3EF23889672003BAFB9 /* Algorithm.h */,
 				F67BF3F023889672003BAFB9 /* Info.plist */,
 			);
@@ -78,8 +127,8 @@
 		F674C2842388A1CF004FA46C /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F674C2932388B4A0004FA46C /* Navigation */,
-				F674C28D2388B0E1004FA46C /* Scenes */,
+				F63844FE2389B4A600060D2F /* UI */,
+				F63844FF2389B4AC00060D2F /* Engine */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -239,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63844FD2389B34400060D2F /* index.json in Resources */,
 				F674C2922388B276004FA46C /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F674C28A2388B081004FA46C /* AlgorithmComponent.swift in Sources */,
+				F63845022389B4C400060D2F /* Section.swift in Sources */,
+				F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */,
 				F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */,
 				F674C2952388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift in Sources */,
 			);
@@ -319,6 +371,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -383,6 +436,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -413,6 +467,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,6 +493,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sources/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

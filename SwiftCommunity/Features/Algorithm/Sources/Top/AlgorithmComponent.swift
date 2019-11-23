@@ -10,7 +10,7 @@ import SuperArcCore
 import SuperArcFoundation
 import UIKit
 
-// MARK: - AuthorsComponent
+// MARK: - AlgorithmComponent
 
 public class AlgorithmComponent: Component<EmptyDependency, AlgorithmViewBuilder, EmptyInterface, EmptyComponentRoute>, AlgorithmViewBuilder {
 
@@ -23,7 +23,7 @@ public class AlgorithmComponent: Component<EmptyDependency, AlgorithmViewBuilder
     }
 }
 
-// MARK: - AuthorsViewBuilder
+// MARK: - AlgorithmViewBuilder
 
 public protocol AlgorithmViewBuilder: ViewBuildable {
     func makeDashboardViewController() -> UIViewController
