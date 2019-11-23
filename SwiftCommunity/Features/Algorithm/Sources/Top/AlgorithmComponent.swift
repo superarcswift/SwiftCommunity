@@ -12,13 +12,14 @@ import UIKit
 
 // MARK: - AlgorithmComponent
 
-public class AlgorithmComponent: Component<EmptyDependency, AlgorithmViewBuilder, EmptyInterface, EmptyComponentRoute>, AlgorithmViewBuilder {
+public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBuilder, EmptyInterface, EmptyComponentRoute>, AlgorithmViewBuilder {
 
     // MARK: APIs
 
     public func makeDashboardViewController() -> UIViewController {
 
         let viewController = DashboardViewController.instantiate(with: viewControllerContext)
+        viewController.viewModel = DashboardViewModel(dependency: dependency)
         return viewController
     }
 }

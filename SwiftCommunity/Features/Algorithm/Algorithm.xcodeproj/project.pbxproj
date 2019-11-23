@@ -10,6 +10,10 @@
 		F63844FD2389B34400060D2F /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = F63844FC2389B34400060D2F /* index.json */; };
 		F63845022389B4C400060D2F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845012389B4C400060D2F /* Section.swift */; };
 		F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845052389B8DF00060D2F /* AlgorithmService.swift */; };
+		F638450A2389CB3300060D2F /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845092389CB3300060D2F /* DashboardViewModel.swift */; };
+		F638450D2389CD8C00060D2F /* AlgorithmDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638450C2389CD8C00060D2F /* AlgorithmDependency.swift */; };
+		F63845102389D3D200060D2F /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F638450F2389D3D200060D2F /* PromiseKit.framework */; };
+		F63845112389D3D200060D2F /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F638450F2389D3D200060D2F /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F674C28A2388B081004FA46C /* AlgorithmComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C2892388B081004FA46C /* AlgorithmComponent.swift */; };
 		F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C28F2388B263004FA46C /* DashboardViewController.swift */; };
 		F674C2922388B276004FA46C /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F674C2912388B276004FA46C /* Dashboard.storyboard */; };
@@ -29,10 +33,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F63845122389D3D200060D2F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F63845112389D3D200060D2F /* PromiseKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F63844FC2389B34400060D2F /* index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = index.json; path = /Users/atran/Desktop/Projects/iOS/SwiftCommunityContent/algorithm/index.json; sourceTree = "<absolute>"; };
 		F63845012389B4C400060D2F /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		F63845052389B8DF00060D2F /* AlgorithmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmService.swift; sourceTree = "<group>"; };
+		F63845092389CB3300060D2F /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		F638450C2389CD8C00060D2F /* AlgorithmDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmDependency.swift; sourceTree = "<group>"; };
+		F638450F2389D3D200060D2F /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F674C2892388B081004FA46C /* AlgorithmComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmComponent.swift; sourceTree = "<group>"; };
 		F674C28F2388B263004FA46C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F674C2912388B276004FA46C /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
@@ -50,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63845102389D3D200060D2F /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +128,14 @@
 			path = Platform;
 			sourceTree = "<group>";
 		};
+		F638450E2389D3D200060D2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F638450F2389D3D200060D2F /* PromiseKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F674C2822388A18E004FA46C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				F674C2892388B081004FA46C /* AlgorithmComponent.swift */,
+				F638450C2389CD8C00060D2F /* AlgorithmDependency.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -146,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				F674C28F2388B263004FA46C /* DashboardViewController.swift */,
+				F63845092389CB3300060D2F /* DashboardViewModel.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -164,6 +196,7 @@
 				F67BF3EE23889672003BAFB9 /* Sources */,
 				F67BF3F923889672003BAFB9 /* Tests */,
 				F67BF3ED23889672003BAFB9 /* Products */,
+				F638450E2389D3D200060D2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +250,7 @@
 				F67BF3E823889672003BAFB9 /* Sources */,
 				F67BF3E923889672003BAFB9 /* Frameworks */,
 				F67BF3EA23889672003BAFB9 /* Resources */,
+				F63845122389D3D200060D2F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,9 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F638450D2389CD8C00060D2F /* AlgorithmDependency.swift in Sources */,
 				F674C28A2388B081004FA46C /* AlgorithmComponent.swift in Sources */,
 				F63845022389B4C400060D2F /* Section.swift in Sources */,
 				F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */,
+				F638450A2389CB3300060D2F /* DashboardViewModel.swift in Sources */,
 				F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */,
 				F674C2952388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift in Sources */,
 			);

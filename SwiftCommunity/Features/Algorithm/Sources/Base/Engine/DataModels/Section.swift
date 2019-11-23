@@ -7,12 +7,14 @@ import DataModels
 class Section: Codable {
     let title: String
     let content: ContentType?
-    let subSections: [Section]?
+    let children: [Section]?
+    weak var parent: Section?
 
-    init(title: String, content: ContentType?, subSections: [Section]?) {
+    init(title: String, content: ContentType?, children: [Section]?, parent: Section?) {
         self.title = title
         self.content = content
-        self.subSections = subSections
+        self.children = children
+        self.parent = parent
     }
 }
 
