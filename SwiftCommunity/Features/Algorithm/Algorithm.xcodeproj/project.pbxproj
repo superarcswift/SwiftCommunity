@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F674C28A2388B081004FA46C /* AlgorithmComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C2892388B081004FA46C /* AlgorithmComponent.swift */; };
+		F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C28F2388B263004FA46C /* DashboardViewController.swift */; };
+		F674C2922388B276004FA46C /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F674C2912388B276004FA46C /* Dashboard.storyboard */; };
+		F674C2952388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C2942388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift */; };
 		F67BF3F623889672003BAFB9 /* Algorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67BF3EC23889672003BAFB9 /* Algorithm.framework */; };
 		F67BF3FB23889672003BAFB9 /* AlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67BF3FA23889672003BAFB9 /* AlgorithmTests.swift */; };
 		F67BF3FD23889672003BAFB9 /* Algorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = F67BF3EF23889672003BAFB9 /* Algorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F674C2892388B081004FA46C /* AlgorithmComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmComponent.swift; sourceTree = "<group>"; };
+		F674C28F2388B263004FA46C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		F674C2912388B276004FA46C /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		F674C2942388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmInterfaceProtocol.swift; sourceTree = "<group>"; };
 		F67BF3EC23889672003BAFB9 /* Algorithm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Algorithm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67BF3EF23889672003BAFB9 /* Algorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		F67BF3F023889672003BAFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +70,7 @@
 		F674C2832388A1C9004FA46C /* Top */ = {
 			isa = PBXGroup;
 			children = (
+				F674C2892388B081004FA46C /* AlgorithmComponent.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -69,8 +78,35 @@
 		F674C2842388A1CF004FA46C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F674C2932388B4A0004FA46C /* Navigation */,
+				F674C28D2388B0E1004FA46C /* Scenes */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		F674C28D2388B0E1004FA46C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F674C2912388B276004FA46C /* Dashboard.storyboard */,
+				F674C28E2388B253004FA46C /* Dashboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F674C28E2388B253004FA46C /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				F674C28F2388B263004FA46C /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		F674C2932388B4A0004FA46C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F674C2942388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		F67BF3E223889672003BAFB9 = {
@@ -172,6 +208,7 @@
 				TargetAttributes = {
 					F67BF3EB23889672003BAFB9 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					F67BF3F423889672003BAFB9 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -202,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F674C2922388B276004FA46C /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F674C28A2388B081004FA46C /* AlgorithmComponent.swift in Sources */,
+				F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */,
+				F674C2952388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -349,6 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../Carthage/Build/iOS/ObjectiveGit.framework/Headers/";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -364,6 +407,7 @@
 		F67BF40123889672003BAFB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -379,6 +423,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.Algorithm;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -387,6 +432,7 @@
 		F67BF40223889672003BAFB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -410,6 +456,7 @@
 		F67BF40423889672003BAFB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -427,6 +474,7 @@
 		F67BF40523889672003BAFB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
