@@ -12,6 +12,7 @@ class DashboardViewModel: DIViewModel<AlgorithmDependency> {
         service.fetchData()
             .done { section in
                 print(section.title)
+                print(section.sections)
             }
             .catch { error in
                 print(error)

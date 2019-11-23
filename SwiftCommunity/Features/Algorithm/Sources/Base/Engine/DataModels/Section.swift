@@ -7,14 +7,12 @@ import DataModels
 class Section: Codable {
     let title: String
     let content: ContentType?
-    let children: [Section]?
-    weak var parent: Section?
+    let sections: [Section]?
 
-    init(title: String, content: ContentType?, children: [Section]?, parent: Section?) {
+    init(title: String, content: ContentType?, sections: [Section]?) {
         self.title = title
         self.content = content
-        self.children = children
-        self.parent = parent
+        self.sections = sections
     }
 }
 
@@ -46,7 +44,6 @@ extension ContentType: Codable {
         let value = try container.decode(String.self, forKey: .value)
 
         switch rawValue {
-
             case "local":
                 self = .local(mimeType: mimeType, value: value)
 
