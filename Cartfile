@@ -4,7 +4,7 @@ github "RxSwiftCommunity/RxDataSources" ~> 4.0
 github "mxcl/PromiseKit" ~> 6.0
 github "onevcat/Kingfisher" ~> 5.0
 github "quickbirdstudios/XCoordinator" ~> 2.0
-github "libgit2/objective-git"
+github "libgit2/objective-git" "master"
 github "rinov/YoutubeKit" "master"
 github "satishVekariya/LXVimeoKit" "master"
 github "Daltron/NotificationBanner" "master"

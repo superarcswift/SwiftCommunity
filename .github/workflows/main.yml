@@ -36,8 +36,6 @@ jobs:
 
       - name: Danger
         run: |
-          bundle install
-          node -v
           npm install -g danger@7.1.4
           swift run danger-swift ci
         env:
