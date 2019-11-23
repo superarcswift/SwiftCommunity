@@ -2,6 +2,8 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import Algorithm
+
 import SuperArcCoreComponent
 import SuperArcCoreUI
 import SuperArcCore
@@ -42,7 +44,12 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
                 return .push(viewController)
 
             case .algorithms:
-                fatalError("not implemented")
+                let algorithmComponent = AlgorithmComponent(dependency: EmptyComponent(),
+                                                   viewControllerContext: component.viewControllerContext,
+                                                   dependencyProvider: component.dependencyProvider)
+                let viewController = algorithmComponent.makeDashboardViewController()
+                return .push(viewController)
+
             case .acknowledgements:
                 fatalError("should not used")
 

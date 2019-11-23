@@ -79,6 +79,8 @@
 		F6B577D7232050400069E79F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577CF2320503F0069E79F /* RxCocoa.framework */; };
 		F6B577D8232050400069E79F /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577D02320503F0069E79F /* XCoordinator.framework */; };
 		F6B577D9232050400069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577D1232050400069E79F /* RxSwift.framework */; };
+		F6B630492389A8B5005B273B /* Algorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B630482389A8B5005B273B /* Algorithm.framework */; };
+		F6B6304A2389A8B6005B273B /* Algorithm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6B630482389A8B5005B273B /* Algorithm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6C41DBD237DF77F009C3419 /* OpenConferenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C41DBB237DF77F009C3419 /* OpenConferenceTableViewCell.swift */; };
 		F6C41DC0237DF8BE009C3419 /* OpenConferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C41DBF237DF8BE009C3419 /* OpenConferencesViewController.swift */; };
 		F6C41DC2237DF9BB009C3419 /* OpenConferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C41DC1237DF9BB009C3419 /* OpenConferences.storyboard */; };
@@ -145,6 +147,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B6304B2389A8B6005B273B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6B6304A2389A8B6005B273B /* Algorithm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -223,6 +236,7 @@
 		F6B577CF2320503F0069E79F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		F6B577D02320503F0069E79F /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = ../../Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		F6B577D1232050400069E79F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F6B630482389A8B5005B273B /* Algorithm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Algorithm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C41DBB237DF77F009C3419 /* OpenConferenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenConferenceTableViewCell.swift; sourceTree = "<group>"; };
 		F6C41DBF237DF8BE009C3419 /* OpenConferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenConferencesViewController.swift; sourceTree = "<group>"; };
 		F6C41DC1237DF9BB009C3419 /* OpenConferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpenConferences.storyboard; sourceTree = "<group>"; };
@@ -265,6 +279,7 @@
 				F6B577D7232050400069E79F /* RxCocoa.framework in Frameworks */,
 				F6B577D8232050400069E79F /* XCoordinator.framework in Frameworks */,
 				F6B577D9232050400069E79F /* RxSwift.framework in Frameworks */,
+				F6B630492389A8B5005B273B /* Algorithm.framework in Frameworks */,
 				F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */,
 				F6820524231F173300098C20 /* CoreUX.framework in Frameworks */,
 				F6820475231EFDD900098C20 /* Authors.framework in Frameworks */,
@@ -711,6 +726,7 @@
 		F6CAFA4922CBEEEF007476D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6B630482389A8B5005B273B /* Algorithm.framework */,
 				F62A0B8023867D60000AE377 /* Quick.framework */,
 				F62A0B7E23867D55000AE377 /* Nimble.framework */,
 				F6517EDC2381E290005C7144 /* XCoordinatorRx.framework */,
@@ -836,6 +852,7 @@
 				F6E8D15C22CA9EC900213675 /* Resources */,
 				F64238B222CD4522000F5CE3 /* Carthage */,
 				F604E3AF23170F9500BFFE6A /* SwiftLint */,
+				F6B6304B2389A8B6005B273B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
