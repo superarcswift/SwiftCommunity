@@ -5,6 +5,7 @@
 import SuperArcFoundation
 import UIKit
 import MarkdownView
+import PromiseKit
 
 class MarkdownContentTableViewCell: UITableViewCell, ClassNameDerivable {
 
@@ -19,14 +20,20 @@ class MarkdownContentTableViewCell: UITableViewCell, ClassNameDerivable {
                 return
             }
 
-            let description = load(content)
-            mainContentView.load(markdown: description)
             mainContentView.isScrollEnabled = false
             mainContentView.onRendered = { [unowned self] num in
                 self.mainContentViewHeightConstraint.constant = num
                 self.mainContentViewHeightConstraint.isActive = true
                 self.onRendered?()
             }
+
+            load(content)
+                .done { [weak self] stringContent in
+                    self?.mainContentView.load(markdown: stringContent)
+                }
+                .catch { error in
+                    print(error)
+                }
         }
     }
 
@@ -40,14 +47,24 @@ class MarkdownContentTableViewCell: UITableViewCell, ClassNameDerivable {
 
     // MARK: Private helpers
 
-    private func load(_ content: Content) -> String? {
+    private func load(_ content: Content) -> Promise<String?> {
         switch content {
             case .local(_, let value):
-                return value
-            case .url(_, let value):
-                let url = URL(string: value)!
-                let data = try! Data(contentsOf: url)
-                return String(data: data, encoding: .utf8)
+                return Promise.value(value)
+            case .url(_, let path):
+                return loadContent(from: path)
+        }
+    }
+
+    private func loadContent(from path: String) -> Promise<String?> {
+        return Promises.asyncOnGlobalQueue {
+            let remotePath = AlgorithmService.baseRemoteRepositoryURL.combinePath(path)
+            guard let url = URL(string: remotePath) else {
+                throw AlgorithmServiceError.invalidPath
+            }
+
+            let data = try Data(contentsOf: url)
+            return String(data: data, encoding: .utf8)
         }
     }
 }

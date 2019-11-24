@@ -20,9 +20,10 @@ public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBui
 
     // MARK: APIs
 
-    public func makeDashboardViewController(with builder: UnonwedWrapper<AlgorithmComponent>?) -> UIViewController {
+    public func makeDashboardViewController(forSection sectionID: String?, with builder: UnonwedWrapper<AlgorithmComponent>?) -> UIViewController {
         let viewController = DashboardTableViewController.instantiate(with: viewControllerContext)
         viewController.builder = builder
+        viewController.sectionID = sectionID
         viewController.viewModel = DashboardViewModel(dependency: dependency)
         return viewController
     }
@@ -31,5 +32,5 @@ public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBui
 // MARK: - AlgorithmViewBuilder
 
 public protocol AlgorithmViewBuilder: ViewBuildable {
-    func makeDashboardViewController(with builder: UnonwedWrapper<AlgorithmComponent>?) -> UIViewController
+    func makeDashboardViewController(forSection sectionID: String?, with builder: UnonwedWrapper<AlgorithmComponent>?) -> UIViewController
 }

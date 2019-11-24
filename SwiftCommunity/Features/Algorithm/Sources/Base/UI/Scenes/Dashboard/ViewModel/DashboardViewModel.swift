@@ -13,9 +13,7 @@ import Action
 import RxCocoa
 import RxSwift
 
-protocol DashboardViewModelInput {
-    var didSelectSectionTrigger: AnyObserver<Section> { get }
-}
+protocol DashboardViewModelInput {}
 
 protocol DashboardViewModelOutput {
     var section: BehaviorRelay<Section?> { get set }
@@ -53,13 +51,7 @@ public class DashboardViewModel: DIViewModel<AlgorithmDependency>, DashboardView
 
     // Private
 
-    private lazy var showSectionAction = Action<Section, Void> { [unowned self] section in
-        Observable.just(())
-    }
-
     // Public
-
-    lazy var didSelectSectionTrigger: AnyObserver<Section> = showSectionAction.inputs
 
     var section = BehaviorRelay<Section?>(value: nil)
 

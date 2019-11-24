@@ -29,6 +29,8 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
 
     var builder: UnonwedWrapper<AlgorithmComponent>?
 
+    var sectionID: String?
+
     // MARK: Lifecycles
 
     override public func setupBindings() {
@@ -89,7 +91,7 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
     override func loadData() {
         super.loadData()
 
-        viewModel.loadData(sectionID: nil)
+        viewModel.loadData(sectionID: sectionID)
     }
 
     // MARK Private helpers
@@ -116,7 +118,7 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
             return
         }
 
-        let viewController = builder.wrappedValue.makeDashboardViewController(with: builder)
+        let viewController = builder.wrappedValue.makeDashboardViewController(forSection: sectionID, with: builder)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

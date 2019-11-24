@@ -4,6 +4,7 @@
 
 import PromiseKit
 import SuperArcCore
+import SuperArcFoundation
 
 // MARK: - Protocol
 
@@ -16,6 +17,10 @@ protocol AlgorithmServiceProtocol {
 class AlgorithmService: Service, AlgorithmServiceProtocol {
 
     // MARK: Properties
+
+    // Static
+
+    static let baseRemoteRepositoryURL = "https://raw.githubusercontent.com/raywenderlich/swift-algorithm-club/master"
 
     var context: ServiceContext
 
@@ -42,16 +47,15 @@ class AlgorithmService: Service, AlgorithmServiceProtocol {
             return Promise.value(section)
         }
     }
-    
 
     // MARK: Private helpers
 
     private func fetchData() -> Promise<Section> {
-        return Promise { resolver in
+        return Promises.asyncOnGlobalQueue {
             let jsonURL = Bundle(for: AlgorithmService.self).url(forResource: "index", withExtension: "json")!
             let data = try Data(contentsOf: jsonURL)
             let section = try JSONDecoder().decode(Section.self, from: data)
-            resolver.fulfill(section)
+            return section
         }
     }
 
@@ -66,4 +70,5 @@ class AlgorithmService: Service, AlgorithmServiceProtocol {
 
 enum AlgorithmServiceError: Error {
     case sectionNotFound
+    case invalidPath
 }

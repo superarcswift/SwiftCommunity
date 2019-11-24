@@ -78,7 +78,7 @@ extension Content: Codable {
 extension Section {
 
     func search(for sectionID: String) -> Section? {
-        if id == self.id {
+        if sectionID == self.id {
             return self
         }
 
@@ -87,7 +87,7 @@ extension Section {
         }
 
         for section in sections {
-            if let found = section.search(for: id) {
+            if let found = section.search(for: sectionID) {
                 return found
             }
         }
