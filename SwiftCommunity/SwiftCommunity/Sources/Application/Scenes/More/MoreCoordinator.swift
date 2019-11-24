@@ -18,7 +18,9 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
     private var component: MoreComponent
 
-//    private var algorithmComponent: AlgorithmComponent?
+    private lazy var algorithmComponent: AlgorithmComponent = AlgorithmComponent(dependency: component.dependencyProvider.context.engine,
+                                                                                 viewControllerContext: component.viewControllerContext,
+                                                                                 dependencyProvider: component.dependencyProvider)
 
     // MARK: Initialization
 
@@ -46,10 +48,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
                 return .push(viewController)
 
             case .algorithms:
-                let algorithmComponent = AlgorithmComponent(dependency: component.dependencyProvider.context.engine,
-                                                   viewControllerContext: component.viewControllerContext,
-                                                   dependencyProvider: component.dependencyProvider)
-                let viewController = algorithmComponent.makeDashboardViewController(forSection: nil, with: algorithmComponent.strongViewBuilder)
+                let viewController = algorithmComponent.makeDashboardViewController(forSection: nil, with: algorithmComponent.unownedViewBuilder)
                 return .push(viewController)
 
             case .acknowledgements:

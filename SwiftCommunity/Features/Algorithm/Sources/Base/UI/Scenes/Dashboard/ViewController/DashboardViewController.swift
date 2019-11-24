@@ -27,7 +27,7 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
 
     // Public
 
-    var builder: StrongWrapper<AlgorithmComponent>?
+    var builder: UnownedWrapper<AlgorithmComponent>?
 
     var sectionID: String?
 
