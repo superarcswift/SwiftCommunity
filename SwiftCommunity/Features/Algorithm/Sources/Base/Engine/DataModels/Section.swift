@@ -7,10 +7,10 @@ import DataModels
 class Section: Codable {
     let id: String
     let title: String
-    let content: ContentType?
+    let content: Content?
     let sections: [Section]?
 
-    init(id: String, title: String, content: ContentType?, sections: [Section]?) {
+    init(id: String, title: String, content: Content?, sections: [Section]?) {
         self.id = id
         self.title = title
         self.content = content
@@ -18,12 +18,12 @@ class Section: Codable {
     }
 }
 
-enum ContentType {
-    case local(mimeType: MimeType, value: String)
-    case url(mimeType: MimeType, value: String)
+enum Content {
+    case local(mimeType: Mime, value: String)
+    case url(mimeType: Mime, value: String)
 }
 
-enum MimeType: String, Codable {
+enum Mime: String, Codable {
     case text
     case markdown
     case html
@@ -31,7 +31,7 @@ enum MimeType: String, Codable {
 
 // MARK: Codable
 
-extension ContentType: Codable {
+extension Content: Codable {
 
     enum Key: CodingKey {
         case type
@@ -41,7 +41,7 @@ extension ContentType: Codable {
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Key.self)
-        let mimeType = try container.decode(MimeType.self, forKey: .mime)
+        let mimeType = try container.decode(Mime.self, forKey: .mime)
         let rawValue = try container.decode(String.self, forKey: .type)
         let value = try container.decode(String.self, forKey: .value)
 

@@ -11,20 +11,47 @@
         <scene sceneID="spD-OT-bSP">
             <objects>
                 <tableViewController storyboardIdentifier="DashboardTableViewController" id="8Sb-UT-L8i" customClass="DashboardTableViewController" customModule="Algorithm" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="buQ-GV-6wQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="buQ-GV-6wQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MarkdownContentTableViewCell" id="MUU-Gz-yRX" customClass="MarkdownContentTableViewCell" customModule="Algorithm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="44.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MUU-Gz-yRX" id="7Rj-RZ-IeM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKh-c7-VHS" customClass="MarkdownView" customModule="MarkdownView">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="cjW-LA-dHp"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OKh-c7-VHS" firstAttribute="leading" secondItem="7Rj-RZ-IeM" secondAttribute="leading" id="71M-bx-Xyn"/>
+                                        <constraint firstItem="OKh-c7-VHS" firstAttribute="top" secondItem="7Rj-RZ-IeM" secondAttribute="top" id="P9p-L9-zOV"/>
+                                        <constraint firstAttribute="bottom" secondItem="OKh-c7-VHS" secondAttribute="bottom" id="PYL-aq-oo3"/>
+                                        <constraint firstAttribute="trailing" secondItem="OKh-c7-VHS" secondAttribute="trailing" id="r3u-jH-B9P"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mainContentView" destination="OKh-c7-VHS" id="AzN-zE-0R3"/>
+                                    <outlet property="mainContentViewHeightConstraint" destination="cjW-LA-dHp" id="oMJ-5y-3fF"/>
+                                </connections>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionTableViewCell" id="kPl-Bi-gTq" customClass="SectionTableViewCell" customModule="Algorithm" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="53.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kPl-Bi-gTq" id="aJb-fw-dYN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="53.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5P-V6-E2f">
-                                            <rect key="frame" x="16" y="0.0" width="382" height="21"/>
+                                            <rect key="frame" x="16" y="16" width="382" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -32,9 +59,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="z5P-V6-E2f" firstAttribute="leading" secondItem="aJb-fw-dYN" secondAttribute="leading" constant="16" id="Uc5-Tc-vLh"/>
-                                        <constraint firstItem="z5P-V6-E2f" firstAttribute="top" secondItem="aJb-fw-dYN" secondAttribute="top" id="WhY-gG-v0Z"/>
+                                        <constraint firstItem="z5P-V6-E2f" firstAttribute="top" secondItem="aJb-fw-dYN" secondAttribute="top" constant="16" id="WhY-gG-v0Z"/>
                                         <constraint firstAttribute="trailing" secondItem="z5P-V6-E2f" secondAttribute="trailing" constant="16" id="qCK-WN-Z36"/>
-                                        <constraint firstAttribute="bottom" secondItem="z5P-V6-E2f" secondAttribute="bottom" id="zy3-6e-E09"/>
+                                        <constraint firstAttribute="bottom" secondItem="z5P-V6-E2f" secondAttribute="bottom" constant="16" id="zy3-6e-E09"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
