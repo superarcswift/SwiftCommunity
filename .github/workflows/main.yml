@@ -22,8 +22,6 @@ jobs:
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          rm -rf ~/Library/Caches/carthage
-          rm -rf ~/Library/Caches/org.carthage.CarthageKit
           carthage update --platform iOS --cache-builds && exit ${PIPESTATUS[0]}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
