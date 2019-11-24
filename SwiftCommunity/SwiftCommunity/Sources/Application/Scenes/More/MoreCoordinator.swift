@@ -49,7 +49,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
                 let algorithmComponent = AlgorithmComponent(dependency: component.dependencyProvider.context.engine,
                                                    viewControllerContext: component.viewControllerContext,
                                                    dependencyProvider: component.dependencyProvider)
-                let viewController = algorithmComponent.makeDashboardViewController(forSection: nil, with: algorithmComponent.unonwedViewBuilder)
+                let viewController = algorithmComponent.makeDashboardViewController(forSection: nil, with: algorithmComponent.strongViewBuilder)
                 return .push(viewController)
 
             case .acknowledgements:

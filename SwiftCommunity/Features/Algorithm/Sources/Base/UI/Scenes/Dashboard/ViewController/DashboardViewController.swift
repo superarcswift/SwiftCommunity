@@ -27,7 +27,7 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
 
     // Public
 
-    var builder: UnonwedWrapper<AlgorithmComponent>?
+    var builder: StrongWrapper<AlgorithmComponent>?
 
     var sectionID: String?
 
@@ -54,9 +54,9 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
         let dataSource = RxTableViewSectionedReloadDataSource<AlgorithmSectionModel>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
             switch item {
                 case .content(let content):
-                    return self.makeContentCell(with: content, from: tableView)
+                    return self.makeContentCell(with: content, from: tableView, for: indexPath)
                 case .section(let section):
-                    return self.makeSectionsCell(with: section, from: tableView)
+                    return self.makeSectionsCell(with: section, from: tableView, for: indexPath)
             }
         })
 
@@ -94,10 +94,10 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
         viewModel.loadData(sectionID: sectionID)
     }
 
-    // MARK Private helpers
+    // MARK: Private helpers
 
-    func makeContentCell(with content: Content, from tableView: UITableView) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(MarkdownContentTableViewCell.self)
+    private func makeContentCell(with content: Content, from tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(MarkdownContentTableViewCell.self, for: indexPath)
         cell.content = content
         cell.onRendered = { [weak tableView] in
             // Hacky workaround to relayout the cell so that we get the correct height after the content is loaded.
@@ -107,13 +107,13 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
         return cell
     }
 
-    func makeSectionsCell(with section: Section, from tableView: UITableView) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(SectionTableViewCell.self)
+    private func makeSectionsCell(with section: Section, from tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(SectionTableViewCell.self, for: indexPath)
         cell.section = section
         return cell
     }
 
-    func show(_ sectionID: String) {
+    private func show(_ sectionID: String) {
         guard let builder = builder else {
             return
         }

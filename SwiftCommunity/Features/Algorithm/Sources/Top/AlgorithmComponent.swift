@@ -14,13 +14,13 @@ import UIKit
 
 public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBuilder, EmptyInterface, EmptyComponentRoute>, AlgorithmViewBuilder {
 
-    public var unonwedViewBuilder: UnonwedWrapper<AlgorithmComponent> {
-        return UnonwedWrapper(self)
+    public var strongViewBuilder: StrongWrapper<AlgorithmComponent> {
+        return StrongWrapper(self)
     }
 
     // MARK: APIs
 
-    public func makeDashboardViewController(forSection sectionID: String?, with builder: UnonwedWrapper<AlgorithmComponent>?) -> UIViewController {
+    public func makeDashboardViewController(forSection sectionID: String?, with builder: StrongWrapper<AlgorithmComponent>?) -> UIViewController {
         let viewController = DashboardTableViewController.instantiate(with: viewControllerContext)
         viewController.builder = builder
         viewController.sectionID = sectionID
@@ -32,5 +32,5 @@ public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBui
 // MARK: - AlgorithmViewBuilder
 
 public protocol AlgorithmViewBuilder: ViewBuildable {
-    func makeDashboardViewController(forSection sectionID: String?, with builder: UnonwedWrapper<AlgorithmComponent>?) -> UIViewController
+    func makeDashboardViewController(forSection sectionID: String?, with builder: StrongWrapper<AlgorithmComponent>?) -> UIViewController
 }
