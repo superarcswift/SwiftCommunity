@@ -13,39 +13,39 @@ import Action
 import RxCocoa
 import RxSwift
 
-protocol DashboardViewModelInput {}
+protocol ContentViewModelInput {}
 
-protocol DashboardViewModelOutput {
+protocol ContentViewModelOutput {
     var section: BehaviorRelay<Section?> { get set }
 }
 
-protocol DashboardViewModelApi {
+protocol ContentViewModelApi {
 
     func loadData(sectionID: String?)
 }
 
-protocol DashboardViewModelType {
-    var inputs: DashboardViewModelInput { get }
-    var outputs: DashboardViewModelOutput { get }
-    var apis: DashboardViewModelApi { get }
+protocol ContentViewModelType {
+    var inputs: ContentViewModelInput { get }
+    var outputs: ContentViewModelOutput { get }
+    var apis: ContentViewModelApi { get }
 }
 
-extension DashboardViewModelType where Self: DashboardViewModelInput & DashboardViewModelOutput & DashboardViewModelApi {
+extension ContentViewModelType where Self: ContentViewModelInput & ContentViewModelOutput & ContentViewModelApi {
 
-    var inputs: DashboardViewModelInput {
+    var inputs: ContentViewModelInput {
         return self
     }
 
-    var outputs: DashboardViewModelOutput {
+    var outputs: ContentViewModelOutput {
         return self
     }
 
-    var apis: DashboardViewModelApi {
+    var apis: ContentViewModelApi {
         return self
     }
 }
 
-public class DashboardViewModel: DIViewModel<AlgorithmDependency>, DashboardViewModelType, DashboardViewModelInput, DashboardViewModelOutput, DashboardViewModelApi {
+public class ContentViewModel: DIViewModel<AlgorithmDependency>, ContentViewModelType, ContentViewModelInput, ContentViewModelOutput, ContentViewModelApi {
 
     // MARK: Properties
 

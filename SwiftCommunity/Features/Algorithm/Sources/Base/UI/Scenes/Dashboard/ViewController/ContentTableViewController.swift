@@ -13,13 +13,13 @@ import RxDataSources
 import RxSwift
 import UIKit
 
-class DashboardTableViewController: TableViewController<DashboardViewModel>, StoryboardInitiable {
+class ContentTableViewController: TableViewController<ContentViewModel>, StoryboardInitiable {
 
     // MARK: Properties
 
     // Static
 
-    static var storyboardName = "Dashboard"
+    static var storyboardName = "Content"
 
     // Private
 

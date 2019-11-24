@@ -18,8 +18,8 @@
 		F638451A2389F91200060D2F /* MarkdownView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63845192389F91200060D2F /* MarkdownView.framework */; };
 		F638451E2389FB4F00060D2F /* Models+RxDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638451D2389FB4F00060D2F /* Models+RxDataSources.swift */; };
 		F674C28A2388B081004FA46C /* AlgorithmComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C2892388B081004FA46C /* AlgorithmComponent.swift */; };
-		F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C28F2388B263004FA46C /* DashboardViewController.swift */; };
-		F674C2922388B276004FA46C /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F674C2912388B276004FA46C /* Dashboard.storyboard */; };
+		F674C2902388B263004FA46C /* ContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C28F2388B263004FA46C /* ContentTableViewController.swift */; };
+		F674C2922388B276004FA46C /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F674C2912388B276004FA46C /* Content.storyboard */; };
 		F674C2952388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C2942388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift */; };
 		F67BF3F623889672003BAFB9 /* Algorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67BF3EC23889672003BAFB9 /* Algorithm.framework */; };
 		F67BF3FD23889672003BAFB9 /* Algorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = F67BF3EF23889672003BAFB9 /* Algorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,8 +55,8 @@
 		F63845192389F91200060D2F /* MarkdownView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarkdownView.framework; path = ../../../Carthage/Build/iOS/MarkdownView.framework; sourceTree = "<group>"; };
 		F638451D2389FB4F00060D2F /* Models+RxDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models+RxDataSources.swift"; sourceTree = "<group>"; };
 		F674C2892388B081004FA46C /* AlgorithmComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmComponent.swift; sourceTree = "<group>"; };
-		F674C28F2388B263004FA46C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		F674C2912388B276004FA46C /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		F674C28F2388B263004FA46C /* ContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewController.swift; sourceTree = "<group>"; };
+		F674C2912388B276004FA46C /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 		F674C2942388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmInterfaceProtocol.swift; sourceTree = "<group>"; };
 		F67BF3EC23889672003BAFB9 /* Algorithm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Algorithm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67BF3EF23889672003BAFB9 /* Algorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 		F638451F238A745400060D2F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F674C28F2388B263004FA46C /* DashboardViewController.swift */,
+				F674C28F2388B263004FA46C /* ContentTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 		F674C28D2388B0E1004FA46C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F674C2912388B276004FA46C /* Dashboard.storyboard */,
+				F674C2912388B276004FA46C /* Content.storyboard */,
 				F674C28E2388B253004FA46C /* Dashboard */,
 			);
 			path = Scenes;
@@ -373,7 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F63844FD2389B34400060D2F /* index.json in Resources */,
-				F674C2922388B276004FA46C /* Dashboard.storyboard in Resources */,
+				F674C2922388B276004FA46C /* Content.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +399,7 @@
 				F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */,
 				F638450A2389CB3300060D2F /* DashboardViewModel.swift in Sources */,
 				F63845162389EF0700060D2F /* SectionTableViewCell.swift in Sources */,
-				F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */,
+				F674C2902388B263004FA46C /* ContentTableViewController.swift in Sources */,
 				F674C2952388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

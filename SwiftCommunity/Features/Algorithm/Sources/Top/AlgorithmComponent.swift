@@ -21,10 +21,10 @@ public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBui
     // MARK: APIs
 
     public func makeDashboardViewController(forSection sectionID: String?, with builder: UnownedWrapper<AlgorithmComponent>?) -> UIViewController {
-        let viewController = DashboardTableViewController.instantiate(with: viewControllerContext)
+        let viewController = ContentTableViewController.instantiate(with: viewControllerContext)
         viewController.builder = builder
         viewController.sectionID = sectionID
-        viewController.viewModel = DashboardViewModel(dependency: dependency)
+        viewController.viewModel = ContentViewModel(dependency: dependency)
         return viewController
     }
 }
