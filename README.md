@@ -162,3 +162,4 @@ This project is very opinionated and probably not suitable for all kinds of iOS 
 
 MIT License. However, **please do not ship this app** under your own account, paid or free.
 See [LICENSE](https://github.com/superarcswift/SwiftCommunity/blob/master/LICENSE)
+Swift and the Swift logo are trademarks of Apple Inc.
