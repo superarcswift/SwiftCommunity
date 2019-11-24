@@ -21,8 +21,6 @@
 		F62A0BA52386B759000AE377 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F62A0B7E23867D55000AE377 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F63A71F222F220CC005D0778 /* Animation+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A71F122F220CC005D0778 /* Animation+Fade.swift */; };
 		F63A720B22F4179B005D0778 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A720A22F4179B005D0778 /* Constants.swift */; };
-		F63A723D22F44E3F005D0778 /* SuperArcStateView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A723C22F44E3F005D0778 /* SuperArcStateView.framework */; };
-		F63A728B22F471E9005D0778 /* SuperArcNotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A728A22F471E9005D0778 /* SuperArcNotificationBanner.framework */; };
 		F63A905823813F8800F70CEB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F63A905723813F8800F70CEB /* README.md */; };
 		F640BC3422E8316000EDB601 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3322E8316000EDB601 /* OnboardingViewController.swift */; };
 		F640BC3622E8316A00EDB601 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640BC3522E8316A00EDB601 /* OnboardingViewModel.swift */; };
@@ -33,8 +31,6 @@
 		F646EBD82321212100792DB5 /* Endpoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646EBD72321212100792DB5 /* Endpoint+Extensions.swift */; };
 		F646EBDA23212DA300792DB5 /* GitRepositoryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646EBD923212DA300792DB5 /* GitRepositoryConfiguration.swift */; };
 		F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64E705F2305EB98005D066D /* MoreViewModel.swift */; };
-		F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; };
-		F6507773237CBC490076AE6B /* SuperArcNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6507772237CBC490076AE6B /* SuperArcNetwork.framework */; };
 		F6507776237CC02D0076AE6B /* JSONServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507775237CC02D0076AE6B /* JSONServerConfiguration.swift */; };
 		F6507782237D5ED90076AE6B /* OpenConferenceIterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507781237D5ED90076AE6B /* OpenConferenceIterface.swift */; };
 		F6507786237D61C90076AE6B /* OpenConference.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507785237D61C90076AE6B /* OpenConference.swift */; };
@@ -50,16 +46,10 @@
 		F6749CC82322A539000BDC1C /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6749CC72322A539000BDC1C /* RxTest.framework */; };
 		F6749CC92322A541000BDC1C /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6749CC72322A539000BDC1C /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6749CCA2322A541000BDC1C /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6B577D1232050400069E79F /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
 		F675C35322DE2F4600FA77DD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675C35222DE2F4600FA77DD /* AppManager.swift */; };
-		F6820475231EFDD900098C20 /* Authors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820474231EFDD900098C20 /* Authors.framework */; };
-		F6820524231F173300098C20 /* CoreUX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820523231F173300098C20 /* CoreUX.framework */; };
 		F685D3B523147F4400DB85DE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F685D3B423147F4400DB85DE /* Settings.bundle */; };
-		F68EDE3F231D0F55007E28A5 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE3E231D0F55007E28A5 /* Core.framework */; };
-		F68EDE41231D0F55007E28A5 /* DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE40231D0F55007E28A5 /* DataModels.framework */; };
 		F68F655822FF4A4B0026604C /* DashboardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F655722FF4A4B0026604C /* DashboardComponent.swift */; };
 		F68F725D231B2FD000D424CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F68F725B231B2FD000D424CB /* Localizable.strings */; };
-		F68F7290231BE70700D424CB /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F728F231BE70700D424CB /* SuperArcLocalization.framework */; };
 		F690690F23115AD700B11E93 /* PageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690690E23115AD700B11E93 /* PageObject.swift */; };
 		F690691423128C0E00B11E93 /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690691223128C0500B11E93 /* XCUIElement+Extensions.swift */; };
 		F690691823128CDC00B11E93 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690691523128CC400B11E93 /* UITestCase.swift */; };
@@ -70,7 +60,6 @@
 		F69069342312ABCA00B11E93 /* AuthorsPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69069332312ABCA00B11E93 /* AuthorsPageTests.swift */; };
 		F690693A23141B9D00B11E93 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690693923141B9D00B11E93 /* LicensesViewController.swift */; };
 		F6A6B55122FF68B100BFEC40 /* MoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6B55022FF68B100BFEC40 /* MoreComponent.swift */; };
-		F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; };
 		F6B577D2232050400069E79F /* YoutubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577CA2320503F0069E79F /* YoutubeKit.framework */; };
 		F6B577D3232050400069E79F /* LXVimeoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577CB2320503F0069E79F /* LXVimeoKit.framework */; };
 		F6B577D4232050400069E79F /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577CC2320503F0069E79F /* Differentiator.framework */; };
@@ -79,8 +68,6 @@
 		F6B577D7232050400069E79F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577CF2320503F0069E79F /* RxCocoa.framework */; };
 		F6B577D8232050400069E79F /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577D02320503F0069E79F /* XCoordinator.framework */; };
 		F6B577D9232050400069E79F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B577D1232050400069E79F /* RxSwift.framework */; };
-		F6B630492389A8B5005B273B /* Algorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B630482389A8B5005B273B /* Algorithm.framework */; };
-		F6B6304A2389A8B6005B273B /* Algorithm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6B630482389A8B5005B273B /* Algorithm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6C41DBD237DF77F009C3419 /* OpenConferenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C41DBB237DF77F009C3419 /* OpenConferenceTableViewCell.swift */; };
 		F6C41DC0237DF8BE009C3419 /* OpenConferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C41DBF237DF8BE009C3419 /* OpenConferencesViewController.swift */; };
 		F6C41DC2237DF9BB009C3419 /* OpenConferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C41DC1237DF9BB009C3419 /* OpenConferences.storyboard */; };
@@ -88,10 +75,38 @@
 		F6C41DC9237DFFC7009C3419 /* OpenConferencesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C41DC8237DFFC7009C3419 /* OpenConferencesService.swift */; };
 		F6C41DCF237E0979009C3419 /* Models+RxDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C41DCE237E0979009C3419 /* Models+RxDataSources.swift */; };
 		F6C4C05622E7BF9F00C0636E /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C4C05522E7BF9F00C0636E /* MoreCoordinator.swift */; };
-		F6C8A141231EADE800DD6BFD /* Videos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A140231EADE800DD6BFD /* Videos.framework */; };
-		F6C8A15E231EC17000DD6BFD /* Conferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB75D231D3F3B00A0DCF6 /* Conferences.framework */; };
-		F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; };
-		F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; };
+		F6CA7F86238ABB7D00D07F2A /* SuperArcActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; };
+		F6CA7F87238ABB7D00D07F2A /* SuperArcActivityIndicator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64E7090230603CD005D066D /* SuperArcActivityIndicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F89238ABB7E00D07F2A /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; };
+		F6CA7F8A238ABB7E00D07F2A /* SuperArcCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA4522CBEEE5007476D4 /* SuperArcCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F8B238ABB8000D07F2A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; };
+		F6CA7F8C238ABB8000D07F2A /* SuperArcCoreComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6ABCB3422FB6CD700476F1A /* SuperArcCoreComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F8D238ABB8400D07F2A /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; };
+		F6CA7F8E238ABB8400D07F2A /* SuperArcCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F675C34322DDD5B100FA77DD /* SuperArcCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F8F238ABB8600D07F2A /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; };
+		F6CA7F90238ABB8600D07F2A /* SuperArcFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAFA7F22CC02DE007476D4 /* SuperArcFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F91238ABB8900D07F2A /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F728F231BE70700D424CB /* SuperArcLocalization.framework */; };
+		F6CA7F92238ABB8900D07F2A /* SuperArcLocalization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68F728F231BE70700D424CB /* SuperArcLocalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F93238ABB8A00D07F2A /* SuperArcNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6507772237CBC490076AE6B /* SuperArcNetwork.framework */; };
+		F6CA7F94238ABB8A00D07F2A /* SuperArcNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6507772237CBC490076AE6B /* SuperArcNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F95238ABB8B00D07F2A /* SuperArcNotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A728A22F471E9005D0778 /* SuperArcNotificationBanner.framework */; };
+		F6CA7F96238ABB8B00D07F2A /* SuperArcNotificationBanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F63A728A22F471E9005D0778 /* SuperArcNotificationBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F97238ABB8D00D07F2A /* SuperArcStateView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A723C22F44E3F005D0778 /* SuperArcStateView.framework */; };
+		F6CA7F98238ABB8D00D07F2A /* SuperArcStateView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F63A723C22F44E3F005D0778 /* SuperArcStateView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F99238ABBAD00D07F2A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE3E231D0F55007E28A5 /* Core.framework */; };
+		F6CA7F9A238ABBAD00D07F2A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE3E231D0F55007E28A5 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F9B238ABBAF00D07F2A /* Conferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB75D231D3F3B00A0DCF6 /* Conferences.framework */; };
+		F6CA7F9C238ABBAF00D07F2A /* Conferences.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB75D231D3F3B00A0DCF6 /* Conferences.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F9D238ABBB000D07F2A /* Authors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820474231EFDD900098C20 /* Authors.framework */; };
+		F6CA7F9E238ABBB000D07F2A /* Authors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6820474231EFDD900098C20 /* Authors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7F9F238ABBB200D07F2A /* Algorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B630482389A8B5005B273B /* Algorithm.framework */; };
+		F6CA7FA0238ABBB200D07F2A /* Algorithm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6B630482389A8B5005B273B /* Algorithm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7FA1238ABBB600D07F2A /* CoreUX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6820523231F173300098C20 /* CoreUX.framework */; };
+		F6CA7FA2238ABBB600D07F2A /* CoreUX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6820523231F173300098C20 /* CoreUX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7FA3238ABBB800D07F2A /* DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE40231D0F55007E28A5 /* DataModels.framework */; };
+		F6CA7FA4238ABBB800D07F2A /* DataModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68EDE40231D0F55007E28A5 /* DataModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6CA7FA5238ABBC600D07F2A /* Videos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A140231EADE800DD6BFD /* Videos.framework */; };
+		F6CA7FA6238ABBC700D07F2A /* Videos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8A140231EADE800DD6BFD /* Videos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6D2D35F2382CB440046A8D1 /* OpenConferencesDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2D35E2382CB440046A8D1 /* OpenConferencesDependency.swift */; };
 		F6DFE6BA22FA26970091ECE8 /* OnboardingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6B922FA26960091ECE8 /* OnboardingComponent.swift */; };
 		F6DFE6BE22FA35D90091ECE8 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6BD22FA35D90091ECE8 /* AppComponent.swift */; };
@@ -149,13 +164,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6B6304B2389A8B6005B273B /* Embed Frameworks */ = {
+		F6CA7F88238ABB7D00D07F2A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F6B6304A2389A8B6005B273B /* Algorithm.framework in Embed Frameworks */,
+				F6CA7FA2238ABBB600D07F2A /* CoreUX.framework in Embed Frameworks */,
+				F6CA7F8E238ABB8400D07F2A /* SuperArcCoreUI.framework in Embed Frameworks */,
+				F6CA7F90238ABB8600D07F2A /* SuperArcFoundation.framework in Embed Frameworks */,
+				F6CA7F96238ABB8B00D07F2A /* SuperArcNotificationBanner.framework in Embed Frameworks */,
+				F6CA7F9A238ABBAD00D07F2A /* Core.framework in Embed Frameworks */,
+				F6CA7F9C238ABBAF00D07F2A /* Conferences.framework in Embed Frameworks */,
+				F6CA7FA6238ABBC700D07F2A /* Videos.framework in Embed Frameworks */,
+				F6CA7F92238ABB8900D07F2A /* SuperArcLocalization.framework in Embed Frameworks */,
+				F6CA7FA4238ABBB800D07F2A /* DataModels.framework in Embed Frameworks */,
+				F6CA7F94238ABB8A00D07F2A /* SuperArcNetwork.framework in Embed Frameworks */,
+				F6CA7F8A238ABB7E00D07F2A /* SuperArcCore.framework in Embed Frameworks */,
+				F6CA7F87238ABB7D00D07F2A /* SuperArcActivityIndicator.framework in Embed Frameworks */,
+				F6CA7F98238ABB8D00D07F2A /* SuperArcStateView.framework in Embed Frameworks */,
+				F6CA7F8C238ABB8000D07F2A /* SuperArcCoreComponent.framework in Embed Frameworks */,
+				F6CA7FA0238ABBB200D07F2A /* Algorithm.framework in Embed Frameworks */,
+				F6CA7F9E238ABBB000D07F2A /* Authors.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,31 +302,31 @@
 			files = (
 				F6B577D2232050400069E79F /* YoutubeKit.framework in Frameworks */,
 				F6B577D3232050400069E79F /* LXVimeoKit.framework in Frameworks */,
+				F6CA7F8F238ABB8600D07F2A /* SuperArcFoundation.framework in Frameworks */,
 				F6B577D4232050400069E79F /* Differentiator.framework in Frameworks */,
+				F6CA7FA3238ABBB800D07F2A /* DataModels.framework in Frameworks */,
 				F6B577D5232050400069E79F /* RxRelay.framework in Frameworks */,
-				F6507773237CBC490076AE6B /* SuperArcNetwork.framework in Frameworks */,
+				F6CA7F91238ABB8900D07F2A /* SuperArcLocalization.framework in Frameworks */,
 				F6B577D6232050400069E79F /* ObjectiveGit.framework in Frameworks */,
 				F6B577D7232050400069E79F /* RxCocoa.framework in Frameworks */,
+				F6CA7F89238ABB7E00D07F2A /* SuperArcCore.framework in Frameworks */,
+				F6CA7F9F238ABBB200D07F2A /* Algorithm.framework in Frameworks */,
+				F6CA7F9B238ABBAF00D07F2A /* Conferences.framework in Frameworks */,
+				F6CA7F93238ABB8A00D07F2A /* SuperArcNetwork.framework in Frameworks */,
 				F6B577D8232050400069E79F /* XCoordinator.framework in Frameworks */,
 				F6B577D9232050400069E79F /* RxSwift.framework in Frameworks */,
-				F6B630492389A8B5005B273B /* Algorithm.framework in Frameworks */,
+				F6CA7F86238ABB7D00D07F2A /* SuperArcActivityIndicator.framework in Frameworks */,
 				F64238B422CD4838000F5CE3 /* Kingfisher.framework in Frameworks */,
-				F6820524231F173300098C20 /* CoreUX.framework in Frameworks */,
-				F6820475231EFDD900098C20 /* Authors.framework in Frameworks */,
-				F6C8A15E231EC17000DD6BFD /* Conferences.framework in Frameworks */,
-				F6C8A141231EADE800DD6BFD /* Videos.framework in Frameworks */,
-				F68EDE3F231D0F55007E28A5 /* Core.framework in Frameworks */,
-				F68EDE41231D0F55007E28A5 /* DataModels.framework in Frameworks */,
+				F6CA7F9D238ABBB000D07F2A /* Authors.framework in Frameworks */,
+				F6CA7F95238ABB8B00D07F2A /* SuperArcNotificationBanner.framework in Frameworks */,
+				F6CA7F8D238ABB8400D07F2A /* SuperArcCoreUI.framework in Frameworks */,
 				F6517EDD2381E290005C7144 /* XCoordinatorRx.framework in Frameworks */,
-				F68F7290231BE70700D424CB /* SuperArcLocalization.framework in Frameworks */,
-				F64E7091230603CD005D066D /* SuperArcActivityIndicator.framework in Frameworks */,
-				F6ABCB3522FB6CD700476F1A /* SuperArcCoreComponent.framework in Frameworks */,
-				F63A728B22F471E9005D0778 /* SuperArcNotificationBanner.framework in Frameworks */,
-				F63A723D22F44E3F005D0778 /* SuperArcStateView.framework in Frameworks */,
+				F6CA7F8B238ABB8000D07F2A /* SuperArcCoreComponent.framework in Frameworks */,
+				F6CA7F97238ABB8D00D07F2A /* SuperArcStateView.framework in Frameworks */,
+				F6CA7FA5238ABBC600D07F2A /* Videos.framework in Frameworks */,
+				F6CA7F99238ABBAD00D07F2A /* Core.framework in Frameworks */,
 				F64238B122CD451E000F5CE3 /* PromiseKit.framework in Frameworks */,
-				F6CAFA8022CC02DE007476D4 /* SuperArcFoundation.framework in Frameworks */,
-				F675C34422DDD5B100FA77DD /* SuperArcCoreUI.framework in Frameworks */,
-				F6CAFA4622CBEEE5007476D4 /* SuperArcCore.framework in Frameworks */,
+				F6CA7FA1238ABBB600D07F2A /* CoreUX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,7 +882,7 @@
 				F6E8D15C22CA9EC900213675 /* Resources */,
 				F64238B222CD4522000F5CE3 /* Carthage */,
 				F604E3AF23170F9500BFFE6A /* SwiftLint */,
-				F6B6304B2389A8B6005B273B /* Embed Frameworks */,
+				F6CA7F88238ABB7D00D07F2A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

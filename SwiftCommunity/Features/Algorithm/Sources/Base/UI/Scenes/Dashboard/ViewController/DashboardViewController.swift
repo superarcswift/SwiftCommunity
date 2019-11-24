@@ -6,15 +6,12 @@ import Core
 import SuperArcActivityIndicator
 import SuperArcLocalization
 import SuperArcCoreUI
+import SuperArcCoreComponent
 import SuperArcCore
 import SuperArcFoundation
 import RxDataSources
 import RxSwift
 import UIKit
-
-protocol DashboardNavigationDelegate: class {
-    func show(_ sectionID: String?, from navigationController: UINavigationController?)
-}
 
 class DashboardTableViewController: TableViewController<DashboardViewModel>, StoryboardInitiable {
 
@@ -30,7 +27,7 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
 
     // Public
 
-    weak var delegate: DashboardNavigationDelegate?
+    var builder: UnonwedWrapper<AlgorithmComponent>?
 
     // MARK: Lifecycles
 
@@ -77,9 +74,14 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
 
-        tableView.rx.modelSelected(Section.self)
-            .subscribe( onNext: { [unowned self] section in
-                self.delegate?.show(section.id, from: self.navigationController)
+        tableView.rx.modelSelected(AlgorithmSectionDataModel.self)
+            .subscribe( onNext: { [unowned self] sectionDataModel in
+                switch sectionDataModel {
+                    case .section(let section):
+                        self.show(section.id)
+                    default:
+                        break
+                }
             })
             .disposed(by: disposeBag)
     }
@@ -107,5 +109,14 @@ class DashboardTableViewController: TableViewController<DashboardViewModel>, Sto
         let cell = tableView.dequeueReusableCell(SectionTableViewCell.self)
         cell.section = section
         return cell
+    }
+
+    func show(_ sectionID: String) {
+        guard let builder = builder else {
+            return
+        }
+
+        let viewController = builder.wrappedValue.makeDashboardViewController(with: builder)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

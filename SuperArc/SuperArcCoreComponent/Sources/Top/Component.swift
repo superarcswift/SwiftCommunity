@@ -84,3 +84,24 @@ public final class EmptyComponent: EmptyDependency, EmptyViewBuildable {
 
     public init() {}
 }
+
+// MARK: - UnonwedWrapper
+
+public struct UnonwedWrapper<Value> {
+    private var _value: () -> Value
+
+    public var wrappedValue: Value {
+        _value()
+    }
+}
+
+extension UnonwedWrapper where Value: AnyObject {
+
+    public init(_ value: Value) {
+        self._value = UnonwedWrapper.createValueClosure(for: value)
+    }
+
+    private static func createValueClosure(for value: Value) -> () -> Value {
+        return { value }
+    }
+}

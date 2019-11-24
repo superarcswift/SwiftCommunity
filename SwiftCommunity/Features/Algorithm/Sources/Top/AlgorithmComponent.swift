@@ -14,11 +14,15 @@ import UIKit
 
 public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBuilder, EmptyInterface, EmptyComponentRoute>, AlgorithmViewBuilder {
 
+    public var unonwedViewBuilder: UnonwedWrapper<AlgorithmComponent> {
+        return UnonwedWrapper(self)
+    }
+
     // MARK: APIs
 
-    public func makeDashboardViewController() -> UIViewController {
+    public func makeDashboardViewController(with builder: UnonwedWrapper<AlgorithmComponent>?) -> UIViewController {
         let viewController = DashboardTableViewController.instantiate(with: viewControllerContext)
-        viewController.delegate = self
+        viewController.builder = builder
         viewController.viewModel = DashboardViewModel(dependency: dependency)
         return viewController
     }
@@ -27,14 +31,5 @@ public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBui
 // MARK: - AlgorithmViewBuilder
 
 public protocol AlgorithmViewBuilder: ViewBuildable {
-    func makeDashboardViewController() -> UIViewController
-}
-
-// MARK: - DashbardNavigationDelegate
-
-extension AlgorithmComponent: DashboardNavigationDelegate {
-    func show(_ sectionID: String?, from navigationController: UINavigationController?) {
-        let viewController = makeDashboardViewController()
-        navigationController?.pushViewController(viewController, animated: true)
-    }
+    func makeDashboardViewController(with builder: UnonwedWrapper<AlgorithmComponent>?) -> UIViewController
 }

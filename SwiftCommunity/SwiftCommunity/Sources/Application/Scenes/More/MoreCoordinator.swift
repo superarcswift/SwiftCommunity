@@ -18,6 +18,8 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
     private var component: MoreComponent
 
+//    private var algorithmComponent: AlgorithmComponent?
+
     // MARK: Initialization
 
     init(componentsRouter: ComponentsRouter, dependency: MoreDependency, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
@@ -47,7 +49,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
                 let algorithmComponent = AlgorithmComponent(dependency: component.dependencyProvider.context.engine,
                                                    viewControllerContext: component.viewControllerContext,
                                                    dependencyProvider: component.dependencyProvider)
-                let viewController = algorithmComponent.makeDashboardViewController()
+                let viewController = algorithmComponent.makeDashboardViewController(with: algorithmComponent.unonwedViewBuilder)
                 return .push(viewController)
 
             case .acknowledgements:
