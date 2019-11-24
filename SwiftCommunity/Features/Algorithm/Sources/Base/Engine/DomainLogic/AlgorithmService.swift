@@ -68,6 +68,8 @@ class AlgorithmService: Service, AlgorithmServiceProtocol {
     }
 }
 
+// MARK: - Error
+
 enum AlgorithmServiceError: Error {
     case sectionNotFound
     case invalidPath
