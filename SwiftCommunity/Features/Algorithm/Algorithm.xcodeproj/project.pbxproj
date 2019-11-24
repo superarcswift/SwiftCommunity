@@ -13,11 +13,9 @@
 		F638450A2389CB3300060D2F /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845092389CB3300060D2F /* DashboardViewModel.swift */; };
 		F638450D2389CD8C00060D2F /* AlgorithmDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638450C2389CD8C00060D2F /* AlgorithmDependency.swift */; };
 		F63845102389D3D200060D2F /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F638450F2389D3D200060D2F /* PromiseKit.framework */; };
-		F63845112389D3D200060D2F /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F638450F2389D3D200060D2F /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F63845162389EF0700060D2F /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845152389EF0700060D2F /* SectionTableViewCell.swift */; };
 		F63845182389F83E00060D2F /* MarkdownContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845172389F83E00060D2F /* MarkdownContentTableViewCell.swift */; };
 		F638451A2389F91200060D2F /* MarkdownView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63845192389F91200060D2F /* MarkdownView.framework */; };
-		F638451B2389F91200060D2F /* MarkdownView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F63845192389F91200060D2F /* MarkdownView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F638451E2389FB4F00060D2F /* Models+RxDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638451D2389FB4F00060D2F /* Models+RxDataSources.swift */; };
 		F674C28A2388B081004FA46C /* AlgorithmComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C2892388B081004FA46C /* AlgorithmComponent.swift */; };
 		F674C2902388B263004FA46C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C28F2388B263004FA46C /* DashboardViewController.swift */; };
@@ -26,6 +24,14 @@
 		F67BF3F623889672003BAFB9 /* Algorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67BF3EC23889672003BAFB9 /* Algorithm.framework */; };
 		F67BF3FB23889672003BAFB9 /* AlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67BF3FA23889672003BAFB9 /* AlgorithmTests.swift */; };
 		F67BF3FD23889672003BAFB9 /* Algorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = F67BF3EF23889672003BAFB9 /* Algorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6CA7F6D238A964800D07F2A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CA7F6C238A964800D07F2A /* Core.framework */; };
+		F6CA7F70238A964D00D07F2A /* CoreUX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CA7F6F238A964D00D07F2A /* CoreUX.framework */; };
+		F6CA7F73238A965800D07F2A /* SuperArcFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CA7F72238A965800D07F2A /* SuperArcFoundation.framework */; };
+		F6CA7F76238A966D00D07F2A /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CA7F75238A966D00D07F2A /* SuperArcCore.framework */; };
+		F6CA7F79238A967600D07F2A /* SuperArcCoreComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CA7F78238A967600D07F2A /* SuperArcCoreComponent.framework */; };
+		F6CA7F7E238A968700D07F2A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CA7F7B238A968700D07F2A /* RxCocoa.framework */; };
+		F6CA7F80238A968700D07F2A /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CA7F7C238A968700D07F2A /* RxRelay.framework */; };
+		F6CA7F82238A968700D07F2A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CA7F7D238A968700D07F2A /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +43,6 @@
 			remoteInfo = Algorithm;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F63845122389D3D200060D2F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F638451B2389F91200060D2F /* MarkdownView.framework in Embed Frameworks */,
-				F63845112389D3D200060D2F /* PromiseKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F63844FC2389B34400060D2F /* index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = index.json; path = /Users/atran/Desktop/Projects/iOS/SwiftCommunityContent/algorithm/index.json; sourceTree = "<absolute>"; };
@@ -74,6 +65,14 @@
 		F67BF3F523889672003BAFB9 /* AlgorithmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67BF3FA23889672003BAFB9 /* AlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmTests.swift; sourceTree = "<group>"; };
 		F67BF3FC23889672003BAFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6CA7F6C238A964800D07F2A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CA7F6F238A964D00D07F2A /* CoreUX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CA7F72238A965800D07F2A /* SuperArcFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CA7F75238A966D00D07F2A /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CA7F78238A967600D07F2A /* SuperArcCoreComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CA7F7B238A968700D07F2A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../../../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F6CA7F7C238A968700D07F2A /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../../../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		F6CA7F7D238A968700D07F2A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +80,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6CA7F82238A968700D07F2A /* RxSwift.framework in Frameworks */,
 				F638451A2389F91200060D2F /* MarkdownView.framework in Frameworks */,
+				F6CA7F73238A965800D07F2A /* SuperArcFoundation.framework in Frameworks */,
+				F6CA7F80238A968700D07F2A /* RxRelay.framework in Frameworks */,
+				F6CA7F6D238A964800D07F2A /* Core.framework in Frameworks */,
+				F6CA7F70238A964D00D07F2A /* CoreUX.framework in Frameworks */,
+				F6CA7F7E238A968700D07F2A /* RxCocoa.framework in Frameworks */,
+				F6CA7F79238A967600D07F2A /* SuperArcCoreComponent.framework in Frameworks */,
+				F6CA7F76238A966D00D07F2A /* SuperArcCore.framework in Frameworks */,
 				F63845102389D3D200060D2F /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +149,14 @@
 		F638450E2389D3D200060D2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6CA7F7B238A968700D07F2A /* RxCocoa.framework */,
+				F6CA7F7C238A968700D07F2A /* RxRelay.framework */,
+				F6CA7F7D238A968700D07F2A /* RxSwift.framework */,
+				F6CA7F78238A967600D07F2A /* SuperArcCoreComponent.framework */,
+				F6CA7F75238A966D00D07F2A /* SuperArcCore.framework */,
+				F6CA7F72238A965800D07F2A /* SuperArcFoundation.framework */,
+				F6CA7F6F238A964D00D07F2A /* CoreUX.framework */,
+				F6CA7F6C238A964800D07F2A /* Core.framework */,
 				F63845192389F91200060D2F /* MarkdownView.framework */,
 				F638450F2389D3D200060D2F /* PromiseKit.framework */,
 			);
@@ -289,7 +304,6 @@
 				F67BF3E823889672003BAFB9 /* Sources */,
 				F67BF3E923889672003BAFB9 /* Frameworks */,
 				F67BF3EA23889672003BAFB9 /* Resources */,
-				F63845122389D3D200060D2F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

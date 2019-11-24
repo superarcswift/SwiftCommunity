@@ -42,9 +42,9 @@ class MarkdownContentTableViewCell: UITableViewCell, ClassNameDerivable {
 
     private func load(_ content: Content) -> String? {
         switch content {
-            case .local(let mimeType, let value):
+            case .local(_, let value):
                 return value
-            case .url(let mimeType, let value):
+            case .url(_, let value):
                 let url = URL(string: value)!
                 let data = try! Data(contentsOf: url)
                 return String(data: data, encoding: .utf8)
