@@ -29,7 +29,7 @@ class DashboardCoordinator: TabBarCoordinator<DashboardRoute> {
 
     // MARK: Initialization
 
-    init(componentsRouter: ComponentsRouter, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+    init(componentsRouter: Navigator, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
 
         component = DashboardComponent(dependency: EmptyComponent(), viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
 

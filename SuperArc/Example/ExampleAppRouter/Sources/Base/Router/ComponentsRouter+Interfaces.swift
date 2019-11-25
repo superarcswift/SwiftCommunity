@@ -6,7 +6,7 @@ import FeatureA
 import FeatureB
 import SuperArcCoreComponent
 
-extension ComponentsRouterProtocol {
+extension NavigatorProtocol {
 
     var featureAInterface: FeatureAInterfaceProtocol {
         return interfaceRegistry.resolve(type: FeatureAInterfaceProtocol.self)

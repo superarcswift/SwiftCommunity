@@ -36,7 +36,7 @@ class AppManager: HasComponentsRouter, HasConfigurations {
 
     // Private
 
-    lazy internal var componentsRouter: ComponentsRouter = ComponentsRouter(context: core.context)
+    lazy internal var componentsRouter: Navigator = Navigator(context: core.context)
     lazy internal var configurations = AnyRegistry(ConfigurationsRegistry(endpoint: .current))
 
     // MARK: Intialization

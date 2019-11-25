@@ -8,14 +8,14 @@ import SuperArcCore
 
 // MARK: - Dependencies
 
-extension ComponentsRouter: HasVideosService {
+extension Navigator: HasVideosService {
 
     public var videosService: VideosServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: VideosServiceProtocol.self)
     }
 }
 
-extension ComponentsRouter: HasAuthorsService {
+extension Navigator: HasAuthorsService {
 
     public var authorsService: AuthorsServiceProtocol {
         return context.engine.serviceRegistry.resolve(type: AuthorsServiceProtocol.self)

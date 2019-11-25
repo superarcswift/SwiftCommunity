@@ -17,6 +17,7 @@
 		F63845182389F83E00060D2F /* MarkdownContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845172389F83E00060D2F /* MarkdownContentTableViewCell.swift */; };
 		F638451A2389F91200060D2F /* MarkdownView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63845192389F91200060D2F /* MarkdownView.framework */; };
 		F638451E2389FB4F00060D2F /* Models+RxDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638451D2389FB4F00060D2F /* Models+RxDataSources.swift */; };
+		F6641D38238BCF0A00A32EAA /* MarkdownProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6641D37238BCF0A00A32EAA /* MarkdownProcessor.swift */; };
 		F674C28A2388B081004FA46C /* AlgorithmComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C2892388B081004FA46C /* AlgorithmComponent.swift */; };
 		F674C2902388B263004FA46C /* ContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674C28F2388B263004FA46C /* ContentTableViewController.swift */; };
 		F674C2922388B276004FA46C /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F674C2912388B276004FA46C /* Content.storyboard */; };
@@ -54,6 +55,7 @@
 		F63845172389F83E00060D2F /* MarkdownContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownContentTableViewCell.swift; sourceTree = "<group>"; };
 		F63845192389F91200060D2F /* MarkdownView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarkdownView.framework; path = ../../../Carthage/Build/iOS/MarkdownView.framework; sourceTree = "<group>"; };
 		F638451D2389FB4F00060D2F /* Models+RxDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models+RxDataSources.swift"; sourceTree = "<group>"; };
+		F6641D37238BCF0A00A32EAA /* MarkdownProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownProcessor.swift; sourceTree = "<group>"; };
 		F674C2892388B081004FA46C /* AlgorithmComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmComponent.swift; sourceTree = "<group>"; };
 		F674C28F2388B263004FA46C /* ContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewController.swift; sourceTree = "<group>"; };
 		F674C2912388B276004FA46C /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		F63845042389B8CA00060D2F /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				F6641D36238BCEF800A32EAA /* MarkdownProcessor */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -185,6 +188,14 @@
 				F674C28F2388B263004FA46C /* ContentTableViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F6641D36238BCEF800A32EAA /* MarkdownProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				F6641D37238BCF0A00A32EAA /* MarkdownProcessor.swift */,
+			);
+			path = MarkdownProcessor;
 			sourceTree = "<group>";
 		};
 		F674C2822388A18E004FA46C /* SupportingFiles */ = {
@@ -398,6 +409,7 @@
 				F63845022389B4C400060D2F /* Section.swift in Sources */,
 				F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */,
 				F638450A2389CB3300060D2F /* DashboardViewModel.swift in Sources */,
+				F6641D38238BCF0A00A32EAA /* MarkdownProcessor.swift in Sources */,
 				F63845162389EF0700060D2F /* SectionTableViewCell.swift in Sources */,
 				F674C2902388B263004FA46C /* ContentTableViewController.swift in Sources */,
 				F674C2952388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift in Sources */,

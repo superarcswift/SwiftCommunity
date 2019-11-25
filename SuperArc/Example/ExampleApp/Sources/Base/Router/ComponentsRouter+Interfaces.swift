@@ -2,11 +2,9 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import FeatureA
-import FeatureB
 import SuperArcCoreComponent
 
-extension ComponentsRouterProtocol {
+extension NavigatorProtocol {
 
     var featureAInterface: FeatureAInterfaceProtocol {
         return interfaceRegistry.resolve(type: FeatureAInterfaceProtocol.self)

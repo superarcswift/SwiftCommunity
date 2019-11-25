@@ -6,7 +6,7 @@ import FeatureA
 import FeatureB
 import SuperArcCoreComponent
 
-extension ComponentsRouter: FeatureADependency {}
-extension ComponentsRouter: FeatureBDependency {}
-extension ComponentsRouter: FeatureCDependency {}
-extension ComponentsRouter: FeatureDDependency {}
+extension Navigator: FeatureADependency {}
+extension Navigator: FeatureBDependency {}
+extension Navigator: FeatureCDependency {}
+extension Navigator: FeatureDDependency {}

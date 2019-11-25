@@ -52,17 +52,17 @@ protocol VideosViewBuilder: ViewBuildable {
 
 // MARK: - VideosInterface
 
-public class VideosInterface: VideosInterfaceProtocol, OnDemandInterface {
+public class VideosInterface: VideosInterfaceProtocol {
 
     // MARK: Properties
 
-    private weak var componentsRouter: ComponentsRouter!
+    private weak var componentsRouter: Navigator!
     public weak var dependencyProvider: DependencyProvider!
     public weak var viewControllerContext: ViewControllerContext!
 
     // MARK: Initialization
 
-    public required init(onDemandWith componentsRouter: ComponentsRouter, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
+    public required init(onDemandWith componentsRouter: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
         self.componentsRouter = componentsRouter
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider

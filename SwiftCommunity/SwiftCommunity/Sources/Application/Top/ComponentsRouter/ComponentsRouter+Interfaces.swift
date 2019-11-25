@@ -6,7 +6,7 @@ import Videos
 import Authors
 import SuperArcCoreComponent
 
-extension ComponentsRouter {
+extension Navigator {
 
     var videosInterface: VideosInterface {
         return interfaceRegistry.resolveOnDemand(type: VideosInterface.self)

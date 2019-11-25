@@ -7,7 +7,7 @@ import SuperArcCore
 import SuperArcFoundation
 
 /// The main application router which is responsible to navigate between the components.
-public class ComponentsRouter: ComponentsRouterProtocol, DependencyProvider {
+public class Navigator: NavigatorProtocol, DependencyProvider {
 
     // MARK: Properties
 

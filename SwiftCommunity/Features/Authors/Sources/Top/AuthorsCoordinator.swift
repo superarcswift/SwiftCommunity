@@ -16,12 +16,12 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 
     // Private
 
-    private let componentsRouter: ComponentsRouter
+    private let componentsRouter: Navigator
     private let component: AuthorsComponent
 
     // MARK: Initialization
 
-    public init(initialRoute: AuthorsRoute, componentsRouter: ComponentsRouter, dependency: AuthorsDependency, router: AnyComponentRouter<AuthorsComponentRoute>, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+    public init(initialRoute: AuthorsRoute, componentsRouter: Navigator, dependency: AuthorsDependency, router: AnyComponentRouter<AuthorsComponentRoute>, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
         self.componentsRouter = componentsRouter
         component = AuthorsComponent(dependency: dependency,
                                      router: router,

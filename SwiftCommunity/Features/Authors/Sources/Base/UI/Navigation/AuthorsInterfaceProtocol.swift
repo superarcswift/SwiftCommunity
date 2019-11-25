@@ -9,6 +9,6 @@ import SuperArcCoreUI
 import SuperArcCore
 import XCoordinator
 
-public protocol AuthorsInterfaceProtocol: Interface {
+public protocol AuthorsInterfaceProtocol: OnDemandInterface {
     func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute>) -> Presentable
 }

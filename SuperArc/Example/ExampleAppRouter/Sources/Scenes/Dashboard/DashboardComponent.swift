@@ -25,7 +25,7 @@ class DashboardComponent: Component<EmptyDependency, DashboardComponentBuilder, 
     // MARK: APIs
 
     func makeDashboardViewController() -> DashboardViewController {
-        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
+        let componentsRouter = context.viewControllerContext.resolve(type: Navigator.self)
         featureAComponent = FeatureAComponent(dependency: componentsRouter, componentsRouter: componentsRouter.featureARouter, context: context)
         featureBComponent = FeatureBComponent(dependency: componentsRouter, componentsRouter: componentsRouter.featureBRouter, context: context)
 

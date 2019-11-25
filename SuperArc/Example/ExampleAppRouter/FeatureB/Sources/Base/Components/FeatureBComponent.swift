@@ -11,7 +11,7 @@ import SuperArcCore
 public class FeatureBComponent: Component<FeatureBDependency, FeatureBComponentBuilder, FeatureBInterfaceProtocol, FeatureBComponentRoute>, FeatureBComponentBuilder {
 
     public override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
+        let componentsRouter = context.viewControllerContext.resolve(type: Navigator.self)
         componentsRouter.interfaceRegistry.register(FeatureBInterface(context: context), for: FeatureBInterfaceProtocol.self)
     }
 

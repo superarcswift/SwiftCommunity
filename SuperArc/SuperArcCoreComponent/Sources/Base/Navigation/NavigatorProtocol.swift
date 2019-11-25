@@ -6,14 +6,14 @@ import SuperArcCore
 import SuperArcFoundation
 
 /// Main protocol responsible for handling routing between components.
-public protocol ComponentsRouterProtocol: HasApplicationContext {
+public protocol NavigatorProtocol: HasApplicationContext {
     var interfaceRegistry: InterfaceRegistry { get }
     var routerRegistry: RouterRegistry { get }
 }
 
 public protocol HasComponentsRouter {
     // Note: This variable has a concrete type since we are going to add more dependencies into it via extension.
-    var componentsRouter: ComponentsRouter { get }
+    var componentsRouter: Navigator { get }
 }
 
 public class InterfaceRegistry: Registry {
@@ -21,7 +21,7 @@ public class InterfaceRegistry: Registry {
     // MARK: Properties
 
     public var container: Container<Interface>
-    public weak var componentsRouter: ComponentsRouter!
+    public weak var componentsRouter: Navigator!
     public weak var dependencyProvider: DependencyProvider!
     public weak var viewControllerContext: ViewControllerContext!
 

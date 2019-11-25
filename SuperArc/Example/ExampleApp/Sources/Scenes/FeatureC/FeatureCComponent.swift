@@ -20,7 +20,7 @@ protocol FeatureCInterfaceProtocol: Interface {
 class FeatureCComponent: Component<FeatureCDependency, FeatureCComponentBuilder, FeatureCInterfaceProtocol, EmptyComponentRoute> {
 
     public override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
+        let componentsRouter = context.viewControllerContext.resolve(type: Navigator.self)
         componentsRouter.interfaceRegistry.register(FeatureCInterface(context: context), for: FeatureCInterfaceProtocol.self)
     }
 

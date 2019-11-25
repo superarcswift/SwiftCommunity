@@ -14,8 +14,8 @@ class FeatureAViewController: ViewController<ViewModel>, StoryboardInitiable {
 
     static var storyboardName = "FeatureA"
 
-    lazy var componentsRouter: ComponentsRouter = {
-        self.viewControllerContext.resolve(type: ComponentsRouter.self)
+    lazy var componentsRouter: Navigator = {
+        self.viewControllerContext.resolve(type: Navigator.self)
     }()
 
     // MARK: IBActions

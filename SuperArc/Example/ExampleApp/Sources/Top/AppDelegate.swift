@@ -26,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         core = Core(endpoint: endpoint, configurations: configurations)
 
         // Initialize ComponentsRouter
-        let componentsRouter = ComponentsRouter(context: core.context)
-        core.context.viewControllerContext.register(componentsRouter, for: ComponentsRouter.self)
+        let componentsRouter = Navigator(context: core.context)
+        core.context.viewControllerContext.register(componentsRouter, for: Navigator.self)
 
         // Register Components
         FeatureAComponent.register(to: core.context)

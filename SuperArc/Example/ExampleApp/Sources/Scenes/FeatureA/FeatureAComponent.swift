@@ -12,12 +12,12 @@ import SuperArcCore
 public class FeatureAComponent: Component<FeatureADependency, FeatureAComponentBuilder, FeatureAInterfaceProtocol, EmptyComponentRoute>, FeatureAComponentBuilder {
 
     public override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
+        let componentsRouter = context.viewControllerContext.resolve(type: Navigator.self)
         componentsRouter.interfaceRegistry.register(FeatureAInterface(context: context), for: FeatureAInterfaceProtocol.self)
     }
 
     public func makeFeatureAViewController(hasRightCloseButton: Bool = false) -> ComponentPresentable {
-        let viewController = FeatureAViewController.instantiate(with: context.viewControllerContext)
+        let viewController = FeatureAViewController.instantiate(with: viewControllerContext)
         viewController.hasRightCloseButton = hasRightCloseButton
         let navigationController = NavigationController(rootViewController: viewController)
         return navigationController

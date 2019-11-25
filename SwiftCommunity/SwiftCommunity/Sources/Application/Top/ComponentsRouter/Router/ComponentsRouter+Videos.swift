@@ -14,11 +14,11 @@ class VideosComponentRouter: VideosComponentRouterProtocol {
 
     let context: ApplicationContextProtocol
 
-    let componentsRouter: ComponentsRouter
+    let componentsRouter: Navigator
 
     // MARK: Initialization
 
-    init(componentsRouter: ComponentsRouter, context: ApplicationContextProtocol) {
+    init(componentsRouter: Navigator, context: ApplicationContextProtocol) {
         self.componentsRouter = componentsRouter
         self.context = context
     }

@@ -13,12 +13,12 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
 
     // Private
 
-    private let componentsRouter: ComponentsRouter
+    private let componentsRouter: Navigator
     private let component: OnboardingComponent
 
     // MARK: Initialization
 
-    init(componentsRouter: ComponentsRouter,
+    init(componentsRouter: Navigator,
          dependency: OnboardingDependency,
          viewControllerContext: ViewControllerContext,
          dependencyProvider: DependencyProvider) {

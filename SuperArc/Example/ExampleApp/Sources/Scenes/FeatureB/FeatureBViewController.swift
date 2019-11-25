@@ -14,8 +14,8 @@ class FeatureBViewController: TableViewController<ViewModel>, StoryboardInitiabl
 
     static var storyboardName = "FeatureB"
 
-    lazy var componentsRouter: ComponentsRouter = {
-        self.viewControllerContext.resolve(type: ComponentsRouter.self)
+    lazy var componentsRouter: Navigator = {
+        self.viewControllerContext.resolve(type: Navigator.self)
     }()
 
     // MARK: Overriden

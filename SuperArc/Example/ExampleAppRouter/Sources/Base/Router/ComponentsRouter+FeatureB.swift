@@ -12,8 +12,8 @@ class FeatureBComponentRouter: FeatureBComponentRouterProtocol {
 
     var context: ApplicationContextProtocol
 
-    lazy var componentsRouter: ComponentsRouter = {
-        self.context.viewControllerContext.resolve(type: ComponentsRouter.self)
+    lazy var componentsRouter: Navigator = {
+        self.context.viewControllerContext.resolve(type: Navigator.self)
     }()
 
     // MARK: Initialization

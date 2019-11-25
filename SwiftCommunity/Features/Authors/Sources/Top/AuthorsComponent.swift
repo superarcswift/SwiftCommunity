@@ -48,17 +48,17 @@ protocol AuthorsViewBuilder: ViewBuildable {
 
 // MARK: AuthorsInterfaceProtocol
 
-public class AuthorsInterface: AuthorsInterfaceProtocol, OnDemandInterface {
+public class AuthorsInterface: AuthorsInterfaceProtocol {
 
     // MARK: Properties
 
-    private weak var componentsRouter: ComponentsRouter!
+    private weak var componentsRouter: Navigator!
     private weak var dependencyProvider: DependencyProvider!
     private weak var viewControllerContext: ViewControllerContext!
 
     // MARK: Initialization
 
-    public required init(onDemandWith componentsRouter: ComponentsRouter, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
+    public required init(onDemandWith componentsRouter: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
         self.componentsRouter = componentsRouter
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
