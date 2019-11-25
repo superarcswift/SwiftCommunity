@@ -63,12 +63,12 @@ class ContentTableViewController: TableViewController<ContentViewModel>, Storybo
         viewModel.outputs.section.asObservable()
             .flatMap({ section -> Observable<[AlgorithmSectionModel]> in
                 var tableViewSections = [AlgorithmSectionModel]()
-                if let content = section?.content {
-                    tableViewSections.append(AlgorithmSectionModel(items: [AlgorithmSectionDataModel.content(content)]))
-                }
                 if let sections = section?.sections {
                     let items = sections.map { AlgorithmSectionDataModel.section($0) }
                     tableViewSections.append(AlgorithmSectionModel(items: items))
+                }
+                if let content = section?.content {
+                    tableViewSections.append(AlgorithmSectionModel(items: [AlgorithmSectionDataModel.content(content)]))
                 }
 
                 return Observable.just(tableViewSections)
