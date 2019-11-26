@@ -24,7 +24,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
     // MARK: Initialization
 
-    init(componentsRouter: Navigator, dependency: MoreDependency, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+    init(navigator: Navigator, dependency: MoreDependency, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
         component = MoreComponent(dependency: dependency,
                                   viewControllerContext: viewControllerContext,
                                   dependencyProvider: dependencyProvider)

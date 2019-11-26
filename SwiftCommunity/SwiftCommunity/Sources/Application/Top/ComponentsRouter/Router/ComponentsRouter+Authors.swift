@@ -14,12 +14,12 @@ class AuthorsComponentRouter: AuthorsComponentRouterProtocol {
 
     let context: ApplicationContextProtocol
 
-    let componentsRouter: Navigator
+    let navigator: Navigator
 
     // MARK: Initialization
 
-    init(componentsRouter: Navigator, context: ApplicationContextProtocol) {
-        self.componentsRouter = componentsRouter
+    init(navigator: Navigator, context: ApplicationContextProtocol) {
+        self.navigator = navigator
         self.context = context
     }
 
@@ -28,9 +28,9 @@ class AuthorsComponentRouter: AuthorsComponentRouterProtocol {
     func trigger(_ route: AuthorsComponentRoute) -> ComponentPresentable? {
         switch route {
         case .video(let videoMetaData):
-            let presentable = componentsRouter.videosInterface.showVideo(videoMetaData: videoMetaData,
-                                                                         dependency: componentsRouter,
-                                                                         router: componentsRouter.videosRouter)
+            let presentable = navigator.videosInterface.showVideo(videoMetaData: videoMetaData,
+                                                                         dependency: navigator,
+                                                                         router: navigator.videosRouter)
             return ComponentPresentableWrapper(presentable: presentable)
         }
     }

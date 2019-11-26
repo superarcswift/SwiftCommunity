@@ -13,17 +13,19 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
 
     // Private
 
-    private let componentsRouter: Navigator
+    private let navigator: Navigator
     private let component: OnboardingComponent
 
     // MARK: Initialization
 
-    init(componentsRouter: Navigator,
+    init(navigator: Navigator,
          dependency: OnboardingDependency,
          viewControllerContext: ViewControllerContext,
          dependencyProvider: DependencyProvider) {
-        self.componentsRouter = componentsRouter
-        component = OnboardingComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+        self.navigator = navigator
+        component = OnboardingComponent(dependency: dependency,
+                                        viewControllerContext: viewControllerContext,
+                                        dependencyProvider: dependencyProvider)
         super.init(initialRoute: .onboarding)
     }
 
@@ -37,7 +39,9 @@ class OnboardingCoordinator: NavigationCoordinator<OnboardingRoute> {
             return .push(viewController)
 
         case .dashboard:
-            let dashboardCoordinator = DashboardCoordinator(componentsRouter: componentsRouter, viewControllerContext: component.viewControllerContext, dependencyProvider: component.dependencyProvider)
+            let dashboardCoordinator = DashboardCoordinator(navigator: navigator,
+                                                            viewControllerContext: component.viewControllerContext,
+                                                            dependencyProvider: component.dependencyProvider)
             return .presentFullScreen(dashboardCoordinator, animation: .fade)
         }
     }

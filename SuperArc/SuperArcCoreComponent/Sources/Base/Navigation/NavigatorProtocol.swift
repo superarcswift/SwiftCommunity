@@ -11,7 +11,7 @@ public protocol NavigatorProtocol: HasApplicationContext {
     var routerRegistry: RouterRegistry { get }
 }
 
-public protocol HasComponentsRouter {
+public protocol HasNavigator {
     // Note: This variable has a concrete type since we are going to add more dependencies into it via extension.
     var componentsRouter: Navigator { get }
 }
@@ -21,7 +21,7 @@ public class InterfaceRegistry: Registry {
     // MARK: Properties
 
     public var container: Container<Interface>
-    public weak var componentsRouter: Navigator!
+    public weak var navigator: Navigator!
     public weak var dependencyProvider: DependencyProvider!
     public weak var viewControllerContext: ViewControllerContext!
 
@@ -36,7 +36,7 @@ public class InterfaceRegistry: Registry {
 
     public func resolveOnDemand<ElementType>(type: ElementType.Type) -> ElementType where ElementType: OnDemandInterface {
         guard let instance = container.resolve(type) else {
-            let newInstance = type.init(onDemandWith: componentsRouter, viewControllerContext: viewControllerContext, and: dependencyProvider)
+            let newInstance = type.init(onDemandWith: navigator, viewControllerContext: viewControllerContext, and: dependencyProvider)
             register(newInstance, for: type)
             return newInstance
         }

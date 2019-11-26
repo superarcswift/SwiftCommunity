@@ -20,7 +20,7 @@ import SuperArcFoundation
 
 import XCoordinator
 
-class AppManager: HasComponentsRouter, HasConfigurations {
+class AppManager: HasConfigurations {
 
     // MARK: Properties
 
@@ -37,7 +37,7 @@ class AppManager: HasComponentsRouter, HasConfigurations {
 
     // Private
 
-    lazy internal var componentsRouter: Navigator = Navigator(context: core.context)
+    lazy internal var navigator: Navigator = Navigator(context: core.context)
     lazy internal var configurations = AnyRegistry(ConfigurationsRegistry(endpoint: .current))
 
     // MARK: Intialization
@@ -75,13 +75,13 @@ class AppManager: HasComponentsRouter, HasConfigurations {
 
     private func setupComponentsCoordinator() {
         // Register interfaces
-        VideosCoordinator.register(to: core.context)
-        AuthorsCoordinator.register(to: core.context)
+        VideosCoordinator.register(to: core.context, navigator: navigator)
+        AuthorsCoordinator.register(to: core.context, navigator: navigator)
 
         // Register routers
-        componentsRouter.routerRegistry.register(ConferencesComponentRouter(componentsRouter: componentsRouter, context: core.context), for: ConferencesComponentRouter.self)
-        componentsRouter.routerRegistry.register(VideosComponentRouter(componentsRouter: componentsRouter, context: core.context), for: VideosComponentRouter.self)
-        componentsRouter.routerRegistry.register(AuthorsComponentRouter(componentsRouter: componentsRouter, context: core.context), for: AuthorsComponentRouter.self)
+        navigator.routerRegistry.register(ConferencesComponentRouter(navigator: navigator, context: core.context), for: ConferencesComponentRouter.self)
+        navigator.routerRegistry.register(VideosComponentRouter(navigator: navigator, context: core.context), for: VideosComponentRouter.self)
+        navigator.routerRegistry.register(AuthorsComponentRouter(navigator: navigator, context: core.context), for: AuthorsComponentRouter.self)
     }
 
     private func setupCommunicationInterfaces() {

@@ -38,7 +38,7 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInte
         return viewController
     }
 
-    override func trigger(_ route: VideosComponentRoute) -> ComponentPresentable? {
+        override func trigger(_ route: VideosComponentRoute) -> ComponentPresentable? {
         return router?.trigger(route)
     }
 }
@@ -56,14 +56,14 @@ public class VideosInterface: VideosInterfaceProtocol {
 
     // MARK: Properties
 
-    private weak var componentsRouter: Navigator!
+    private weak var navigator: Navigator!
     public weak var dependencyProvider: DependencyProvider!
     public weak var viewControllerContext: ViewControllerContext!
 
     // MARK: Initialization
 
     public required init(onDemandWith componentsRouter: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
-        self.componentsRouter = componentsRouter
+        self.navigator = componentsRouter
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
     }
@@ -73,7 +73,7 @@ public class VideosInterface: VideosInterfaceProtocol {
     public func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, router: AnyComponentRouter<VideosComponentRoute>) -> Presentable {
         return VideosCoordinator(
             initialRoute: .videos(conferenceMetaData, conferenceEdition),
-            componentsRouter: componentsRouter,
+            navigator: navigator,
             depedency: dependency,
             router: router,
             viewControllerContext: viewControllerContext,
@@ -83,7 +83,7 @@ public class VideosInterface: VideosInterfaceProtocol {
     public func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, router: AnyComponentRouter<VideosComponentRoute>) -> Presentable {
         return VideosCoordinator(
             initialRoute: .videoDetail(videoMetaData, true),
-            componentsRouter: componentsRouter,
+            navigator: navigator,
             depedency: dependency,
             router: router,
             viewControllerContext: viewControllerContext,

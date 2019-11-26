@@ -14,12 +14,12 @@ class ConferencesComponentRouter: ConferencesComponentRouterProtocol {
 
     let context: ApplicationContextProtocol
 
-    let componentsRouter: Navigator
+    let navigator: Navigator
 
     // MARK: Initialization
 
-    init(componentsRouter: Navigator, context: ApplicationContextProtocol) {
-        self.componentsRouter = componentsRouter
+    init(navigator: Navigator, context: ApplicationContextProtocol) {
+        self.navigator = navigator
         self.context = context
     }
 
@@ -28,16 +28,16 @@ class ConferencesComponentRouter: ConferencesComponentRouterProtocol {
     func trigger(_ route: ConferencesComponentRoute) -> ComponentPresentable? {
         switch route {
         case .videos(let conferenceMetaData, let conferenceEdition):
-            let presentable = componentsRouter.videosInterface.showVideo(conferenceMetaData: conferenceMetaData,
+            let presentable = navigator.videosInterface.showVideo(conferenceMetaData: conferenceMetaData,
                                                                          conferenceEdition: conferenceEdition,
-                                                                         dependency: componentsRouter,
-                                                                         router: componentsRouter.videosRouter)
+                                                                         dependency: navigator,
+                                                                         router: navigator.videosRouter)
             return ComponentPresentableWrapper(presentable: presentable)
 
         case .video(let videoMetaData):
-            let presentable = componentsRouter.videosInterface.showVideo(videoMetaData: videoMetaData,
-                                                                         dependency: componentsRouter,
-                                                                         router: componentsRouter.videosRouter)
+            let presentable = navigator.videosInterface.showVideo(videoMetaData: videoMetaData,
+                                                                         dependency: navigator,
+                                                                         router: navigator.videosRouter)
             return ComponentPresentableWrapper(presentable: presentable)
         }
     }

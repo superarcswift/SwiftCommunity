@@ -16,13 +16,13 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
     // Private
 
-    private let componentsRouter: Navigator
+    private let navigator: Navigator
     private let component: VideosComponent
 
     // MARK: Initialization
 
-    public init(initialRoute: VideosRoute, componentsRouter: Navigator, depedency: VideosDependency, router: AnyComponentRouter<VideosComponentRoute>, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
-        self.componentsRouter = componentsRouter
+    public init(initialRoute: VideosRoute, navigator: Navigator, depedency: VideosDependency, router: AnyComponentRouter<VideosComponentRoute>, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        self.navigator = navigator
         component = VideosComponent(dependency: depedency,
                                     router: router,
                                     viewControllerContext: viewControllerContext,
@@ -32,8 +32,8 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
     // MARK: APIs
 
-    public static func register(to context: ApplicationContextProtocol) {
-        VideosComponent.register(to: context)
+    public static func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol) {
+        VideosComponent.register(to: context, navigator: navigator)
     }
 
     override public func prepareTransition(for route: VideosRoute) -> NavigationTransition {

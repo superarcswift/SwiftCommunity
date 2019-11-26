@@ -52,14 +52,14 @@ public class AuthorsInterface: AuthorsInterfaceProtocol {
 
     // MARK: Properties
 
-    private weak var componentsRouter: Navigator!
+    private weak var navigator: Navigator!
     private weak var dependencyProvider: DependencyProvider!
     private weak var viewControllerContext: ViewControllerContext!
 
     // MARK: Initialization
 
     public required init(onDemandWith componentsRouter: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
-        self.componentsRouter = componentsRouter
+        self.navigator = componentsRouter
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
     }
@@ -69,7 +69,7 @@ public class AuthorsInterface: AuthorsInterfaceProtocol {
     public func showAuthor(authorMetaData: AuthorMetaData, dependency: AuthorsDependency, anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute>) -> Presentable {
         return AuthorsCoordinator(
             initialRoute: .authorDetail(authorMetaData, true),
-            componentsRouter: componentsRouter,
+            navigator: navigator,
             dependency: dependency,
             router: anyAuthorsRouter,
             viewControllerContext: viewControllerContext,

@@ -20,7 +20,7 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
     // MARK: Initialization
 
-    public init(componentsRouter: Navigator,
+    public init(navigator: Navigator,
                 dependency: ConferencesDependency,
                 router: AnyComponentRouter<ConferencesComponentRoute>,
                 viewControllerContext: ViewControllerContext,

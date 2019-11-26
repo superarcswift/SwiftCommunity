@@ -16,13 +16,13 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 
     // Private
 
-    private let componentsRouter: Navigator
+    private let navigator: Navigator
     private let component: AuthorsComponent
 
     // MARK: Initialization
 
-    public init(initialRoute: AuthorsRoute, componentsRouter: Navigator, dependency: AuthorsDependency, router: AnyComponentRouter<AuthorsComponentRoute>, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
-        self.componentsRouter = componentsRouter
+    public init(initialRoute: AuthorsRoute, navigator: Navigator, dependency: AuthorsDependency, router: AnyComponentRouter<AuthorsComponentRoute>, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        self.navigator = navigator
         component = AuthorsComponent(dependency: dependency,
                                      router: router,
                                      viewControllerContext: viewControllerContext,
@@ -32,8 +32,8 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 
     // MARK: APIs
 
-    public static func register(to context: ApplicationContextProtocol) {
-        AuthorsComponent.register(to: context)
+    public static func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol) {
+        AuthorsComponent.register(to: context, navigator: navigator)
     }
 
     override public func prepareTransition(for route: AuthorsRoute) -> NavigationTransition {

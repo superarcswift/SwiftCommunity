@@ -24,6 +24,7 @@ public class Navigator: NavigatorProtocol, DependencyProvider {
         self.context = context
         routerRegistry = RouterRegistry()
         interfaceRegistry = InterfaceRegistry(viewControllerContext: context.viewControllerContext)
+        interfaceRegistry.navigator = self
         interfaceRegistry.dependencyProvider = self
     }
 

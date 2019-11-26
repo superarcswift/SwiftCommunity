@@ -9,7 +9,7 @@ public protocol Interface {}
 
 /// Support creating `Interface` on-demand.
 public protocol OnDemandInterface: Interface {
-    init(onDemandWith componentsRouter: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider)
+    init(onDemandWith navigator: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider)
 }
 
 /// A special `Interface` which is empty.
