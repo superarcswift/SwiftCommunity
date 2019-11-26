@@ -14,6 +14,8 @@
 		F609679A23245946009570CF /* ComponentsRouter+Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F609679923245946009570CF /* ComponentsRouter+Videos.swift */; };
 		F609679C23245951009570CF /* ComponentsRouter+Authors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F609679B23245951009570CF /* ComponentsRouter+Authors.swift */; };
 		F60967A0232466A4009570CF /* ComponentsRouter+Routers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F609679F232466A4009570CF /* ComponentsRouter+Routers.swift */; };
+		F61C4A47238D733900939F72 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F62A0B7E23867D55000AE377 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F61C4A48238D733D00939F72 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F62A0B8023867D60000AE377 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F61DE1082320318A0083E26A /* ComponentsRouter+Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DE1072320318A0083E26A /* ComponentsRouter+Interfaces.swift */; };
 		F62A0B7F23867D56000AE377 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62A0B7E23867D55000AE377 /* Nimble.framework */; };
 		F62A0B8123867D60000AE377 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62A0B8023867D60000AE377 /* Quick.framework */; };
@@ -161,6 +163,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F61C4A48238D733D00939F72 /* Quick.framework in CopyFiles */,
+				F61C4A47238D733900939F72 /* Nimble.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
