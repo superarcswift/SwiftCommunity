@@ -32,13 +32,19 @@ class FeatureDComponent: Component<FeatureDDependency, FeatureDComponentBuilder,
 
 class FeatureDInterface: FeatureDInterfaceProtocol {
 
+    // MARK: Properties
+
     var viewControllerContext: ViewControllerContext!
     var dependencyProvider: DependencyProvider
+
+    // MARK: Initialization
 
     init(viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
     }
+
+    // MARK: APIs
 
     func show(dependency: FeatureDDependency) -> ComponentPresentable {
         let component = FeatureDComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)

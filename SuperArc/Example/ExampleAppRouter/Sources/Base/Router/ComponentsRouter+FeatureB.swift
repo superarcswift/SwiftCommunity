@@ -12,7 +12,7 @@ class FeatureBComponentRouter: FeatureBComponentRouterProtocol {
 
     var context: ApplicationContextProtocol
 
-    lazy var componentsRouter: Navigator = {
+    lazy var navigator: Navigator = {
         self.context.viewControllerContext.resolve(type: Navigator.self)
     }()
 
@@ -27,11 +27,11 @@ class FeatureBComponentRouter: FeatureBComponentRouterProtocol {
     func trigger(_ route: FeatureBComponentRoute) -> ComponentPresentable? {
         switch route {
         case .featureA:
-            return componentsRouter.featureAInterface.show(dependency: componentsRouter, componentsRouter: componentsRouter.featureARouter, hasRightCloseButton: true)
+            return navigator.featureAInterface.show(dependency: navigator, router: navigator.featureARouter, hasRightCloseButton: true)
         case .featureC:
-            return componentsRouter.featureCInterface.show(dependency: componentsRouter, hasRightCloseButton: true)
+            return navigator.featureCInterface.show(dependency: navigator, hasRightCloseButton: true)
         case .featureD:
-            return componentsRouter.featureDInterface.show(dependency: componentsRouter)
+            return navigator.featureDInterface.show(dependency: navigator)
         }
     }
 

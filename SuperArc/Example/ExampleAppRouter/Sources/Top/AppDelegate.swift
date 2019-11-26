@@ -28,21 +28,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         core = Core(endpoint: endpoint, configurations: configurations)
 
         // Initialize ComponentsRouter
-        let componentsRouter = Navigator(context: core.context)
-        core.context.viewControllerContext.register(componentsRouter, for: Navigator.self)
+        let navigator = Navigator(context: core.context)
+        core.context.viewControllerContext.register(navigator, for: Navigator.self)
 
         // Register Components
-        FeatureAComponent.register(to: core.context)
-        FeatureBComponent.register(to: core.context)
-        FeatureCComponent.register(to: core.context)
-        FeatureDComponent.register(to: core.context)
+        FeatureAComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
+        FeatureBComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
+        FeatureCComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
+        FeatureDComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
 
         // Register Routers
-        componentsRouter.routerRegistry.register(FeatureAComponentRouter(context: core.context), for: FeatureAComponentRouter.self)
-        componentsRouter.routerRegistry.register(FeatureBComponentRouter(context: core.context), for: FeatureBComponentRouter.self)
+        navigator.routerRegistry.register(FeatureAComponentRouter(context: core.context), for: FeatureAComponentRouter.self)
+        navigator.routerRegistry.register(FeatureBComponentRouter(context: core.context), for: FeatureBComponentRouter.self)
 
         // Initialize first screen
-        let dashboardComponent = DashboardComponent(dependency: EmptyComponent(), context: core.context)
+        let dashboardComponent = DashboardComponent(dependency: EmptyComponent(), viewControllerContext: core.context.viewControllerContext, dependencyProvider: core)
 
         // Show the app
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -52,3 +52,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
+
+extension Core: DependencyProvider {}

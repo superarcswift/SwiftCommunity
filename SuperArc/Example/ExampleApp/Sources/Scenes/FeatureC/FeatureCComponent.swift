@@ -35,13 +35,19 @@ class FeatureCComponent: Component<FeatureCDependency, FeatureCComponentBuilder,
 
 class FeatureCInterface: FeatureCInterfaceProtocol {
 
+    // MARK: Properties
+
     var viewControllerContext: ViewControllerContext!
     var dependencyProvider: DependencyProvider
+
+    // MARK: Initialization
 
     init(viewcontrollerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
         self.viewControllerContext = viewcontrollerContext
         self.dependencyProvider = dependencyProvider
     }
+
+    // MARK: APIs
 
     func show(dependency: FeatureCDependency, hasRightCloseButton: Bool = false) -> ComponentPresentable {
         let component = FeatureCComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)

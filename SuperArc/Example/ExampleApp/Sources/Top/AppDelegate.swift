@@ -14,8 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var core: Core!
     
-    lazy internal var navigator: Navigator = Navigator(context: core.context)
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // Initialize Core
@@ -26,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #endif
         let configurations = AnyRegistry(ConfigurationsRegistry(endpoint: endpoint))
         core = Core(endpoint: endpoint, configurations: configurations)
+        let navigator: Navigator = Navigator(context: core.context)
         core.context.viewControllerContext.register(navigator, for: Navigator.self)
 
         // Register Components
