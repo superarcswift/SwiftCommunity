@@ -63,7 +63,7 @@ class AlgorithmService: BaseGitService, AlgorithmServiceProtocol {
 
             let data = try Data(contentsOf: fileURL)
             let markdown = String(data: data, encoding: .utf8)
-            return self.processImages(in: markdown)
+            return self.processImages(in: markdown, for: path)
         }
     }
 
@@ -86,13 +86,16 @@ class AlgorithmService: BaseGitService, AlgorithmServiceProtocol {
         return fetchData()
     }
 
-    private func processImages(in markdown: String?) -> String? {
+    private func processImages(in markdown: String?, for sectionPath: String) -> String? {
         guard let string = markdown else {
             return nil
         }
+
+        let baseRemotePath = AlgorithmService.baseRemoteRepositoryURL.combinePath(sectionPath.basePath)
+
         let regex = try! NSRegularExpression(pattern: "(!\\[[^\\]]*\\])\\(((?!http).*?)\\)")
         let range = NSRange(location: 0, length: string.count)
-        let newString = regex.stringByReplacingMatches(in: string, options: [], range: range, withTemplate: "$1(\(AlgorithmService.baseRemoteRepositoryURL)/$2)")
+        let newString = regex.stringByReplacingMatches(in: string, options: [], range: range, withTemplate: "$1(\(baseRemotePath)/$2)")
         return newString
     }
 }
