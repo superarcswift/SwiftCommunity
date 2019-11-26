@@ -12,4 +12,3 @@ install:
 
 script:
   - swift run danger-swift ci --dangerfile Dangerfile.swift --id swiftlint
-  - swift run danger-swift ci --dangerfile CodeCoverageDangerfile.swift --id codecoverage
