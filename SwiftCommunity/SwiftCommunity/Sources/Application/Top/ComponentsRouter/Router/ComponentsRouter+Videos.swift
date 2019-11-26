@@ -12,15 +12,14 @@ class VideosComponentRouter: VideosComponentRouterProtocol {
 
     // MARK: Properties
 
-    var context: ApplicationContextProtocol
+    let context: ApplicationContextProtocol
 
-    lazy var componentsRouter: ComponentsRouter = {
-        self.context.viewControllerContext.resolve(type: ComponentsRouter.self)
-    }()
+    let navigator: Navigator
 
     // MARK: Initialization
 
-    init(context: ApplicationContextProtocol) {
+    init(navigator: Navigator, context: ApplicationContextProtocol) {
+        self.navigator = navigator
         self.context = context
     }
 
@@ -29,7 +28,9 @@ class VideosComponentRouter: VideosComponentRouterProtocol {
     func trigger(_ route: VideosComponentRoute) -> ComponentPresentable? {
         switch route {
         case .author(let authorMetaData):
-            let presentable = componentsRouter.authorsInterface.showAuthor(authorMetaData: authorMetaData, dependency: componentsRouter, anyAuthorsRouter: componentsRouter.authorsRouter)
+            let presentable = navigator.authorsInterface.showAuthor(authorMetaData: authorMetaData,
+                                                                           dependency: navigator,
+                                                                           anyAuthorsRouter: navigator.authorsRouter)
             return ComponentPresentableWrapper(presentable: presentable)
         }
     }

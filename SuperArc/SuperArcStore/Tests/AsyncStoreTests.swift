@@ -225,7 +225,6 @@ class AsyncStoreTests: XCTestCase {
 //        }
 //    }
 
-
     // MARK: Private helpers
 
     private func iterateStores(_ call: @escaping (AsyncStore, @escaping () -> Void) -> Void) {

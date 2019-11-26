@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var core: Core!
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // Initialize Core
@@ -24,19 +24,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #endif
         let configurations = AnyRegistry(ConfigurationsRegistry(endpoint: endpoint))
         core = Core(endpoint: endpoint, configurations: configurations)
-
-        // Initialize ComponentsRouter
-        let componentsRouter = ComponentsRouter(context: core.context)
-        core.context.viewControllerContext.register(componentsRouter, for: ComponentsRouter.self)
+        let navigator: Navigator = Navigator(context: core.context)
+        core.context.viewControllerContext.register(navigator, for: Navigator.self)
 
         // Register Components
-        FeatureAComponent.register(to: core.context)
-        FeatureBComponent.register(to: core.context)
-        FeatureCComponent.register(to: core.context)
-        FeatureDComponent.register(to: core.context)
+        FeatureAComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
+        FeatureBComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
+        FeatureCComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
+        FeatureDComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
 
         // Initialize first screen
-        let dashboardComponent = DashboardComponent(dependency: EmptyComponent(), context: core.context)
+        let dashboardComponent = DashboardComponent(dependency: EmptyComponent(), viewControllerContext: core.context.viewControllerContext, dependencyProvider: core)
 
         // Show the app
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -47,3 +45,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension Core: DependencyProvider {}

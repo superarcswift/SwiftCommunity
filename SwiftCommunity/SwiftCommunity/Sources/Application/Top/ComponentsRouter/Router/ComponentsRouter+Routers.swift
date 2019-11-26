@@ -7,7 +7,7 @@ import Videos
 import Authors
 import SuperArcCoreComponent
 
-extension ComponentsRouter {
+extension Navigator {
 
     var conferencesRouter: AnyComponentRouter<ConferencesComponentRoute> {
         return routerRegistry.resolve(type: ConferencesComponentRouter.self).anyConferencesRouter

@@ -21,7 +21,7 @@ public protocol ComponentProtocol: Dependency, HasViewControllerContext, Compone
     var interface: InterfaceType! { get }
 
     /// Register any objects provided by this component that will be used by classes in the higher layer.
-    static func register(to context: ApplicationContextProtocol)
+    static func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider)
 }
 
 /// The base class of a dependency injection component containing all dependencies used by this object.
@@ -37,7 +37,7 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
         return self as! ViewBuildableType
     }
 
-    public var componentsRouter: AnyComponentRouter<ComponentRouteType>?
+    public var router: AnyComponentRouter<ComponentRouteType>?
 
     public var interface: InterfaceType!
 
@@ -48,18 +48,18 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
     // MARK: Intialization
 
     public init(dependency: DependencyType,
-                componentsRouter: AnyComponentRouter<ComponentRouteType>? = nil,
+                router: AnyComponentRouter<ComponentRouteType>? = nil,
                 viewControllerContext: ViewControllerContext,
                 dependencyProvider: DependencyProvider) {
         self.dependency = dependency
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
-        self.componentsRouter = componentsRouter
+        self.router = router
     }
 
     // MARK: APIs
 
-    open class func register(to context: ApplicationContextProtocol) {
+    open class func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider) {
         // empty
     }
 
@@ -70,7 +70,10 @@ open class Component<DependencyType, ViewBuildableType, InterfaceType, Component
 
 extension Component where ComponentRouteType == EmptyComponentRoute {
     public convenience init(dependency: DependencyType, viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
-        self.init(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+        self.init(dependency: dependency,
+                  router: AnyEmptyComponentRouter(),
+                  viewControllerContext: viewControllerContext,
+                  dependencyProvider: dependencyProvider)
     }
 }
 

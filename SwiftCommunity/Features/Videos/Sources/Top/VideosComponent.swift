@@ -38,8 +38,8 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInte
         return viewController
     }
 
-    override func trigger(_ route: VideosComponentRoute) -> ComponentPresentable? {
-        return componentsRouter?.trigger(route)
+        override func trigger(_ route: VideosComponentRoute) -> ComponentPresentable? {
+        return router?.trigger(route)
     }
 }
 
@@ -52,36 +52,45 @@ protocol VideosViewBuilder: ViewBuildable {
 
 // MARK: - VideosInterface
 
-public class VideosInterface: VideosInterfaceProtocol, OnDemandInterface {
+public class VideosInterface: VideosInterfaceProtocol {
 
     // MARK: Properties
+
+    // Private
+
+    private weak var navigator: Navigator!
+
+    // Public
 
     public weak var dependencyProvider: DependencyProvider!
     public weak var viewControllerContext: ViewControllerContext!
 
     // MARK: Initialization
 
-    public required init(onDemandWith viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
+    public required init(onDemandWith navigator: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
+        self.navigator = navigator
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
     }
 
     // MARK: APIs
 
-    public func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>) -> Presentable {
+    public func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, router: AnyComponentRouter<VideosComponentRoute>) -> Presentable {
         return VideosCoordinator(
             initialRoute: .videos(conferenceMetaData, conferenceEdition),
+            navigator: navigator,
             depedency: dependency,
-            componentsRouter: componentsRouter,
+            router: router,
             viewControllerContext: viewControllerContext,
             dependencyProvider: dependencyProvider)
     }
 
-    public func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>) -> Presentable {
+    public func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, router: AnyComponentRouter<VideosComponentRoute>) -> Presentable {
         return VideosCoordinator(
             initialRoute: .videoDetail(videoMetaData, true),
+            navigator: navigator,
             depedency: dependency,
-            componentsRouter: componentsRouter,
+            router: router,
             viewControllerContext: viewControllerContext,
             dependencyProvider: dependencyProvider)
     }

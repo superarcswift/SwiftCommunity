@@ -7,7 +7,6 @@ import XCTest
 
 class StoreTests: XCTestCase {
 
-
     private var storeSpecs: [StoreSpec] = [
         StoreSpec(store: MemoryStore(name: "Memory"), isTransient: true),
         StoreSpec(store: FilesystemStore(name: "Filesystem")),
@@ -261,7 +260,6 @@ class StoreTests: XCTestCase {
             }
         }
     }
-
 
     // MARK: Internals
 

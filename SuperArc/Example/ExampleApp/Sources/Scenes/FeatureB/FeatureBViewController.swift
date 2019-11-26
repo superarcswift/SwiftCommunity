@@ -14,8 +14,8 @@ class FeatureBViewController: TableViewController<ViewModel>, StoryboardInitiabl
 
     static var storyboardName = "FeatureB"
 
-    lazy var componentsRouter: ComponentsRouter = {
-        self.viewControllerContext.resolve(type: ComponentsRouter.self)
+    lazy var navigator: Navigator = {
+        self.viewControllerContext.resolve(type: Navigator.self)
     }()
 
     // MARK: Overriden
@@ -34,17 +34,17 @@ class FeatureBViewController: TableViewController<ViewModel>, StoryboardInitiabl
         switch indexPath.row {
         case 0:
             print("should go to feature A from feature B")
-            let presentable = componentsRouter.featureAInterface.show(dependency: componentsRouter, hasRightCloseButton: true)
+            let presentable = navigator.featureAInterface.show(dependency: navigator, hasRightCloseButton: true)
             present(presentable.viewController, animated: true)
 
         case 1:
             print("should go to feature C from feature B")
-            let presentable = componentsRouter.featureCInterface.show(dependency: componentsRouter, hasRightCloseButton: true)
+            let presentable = navigator.featureCInterface.show(dependency: navigator, hasRightCloseButton: true)
             present(presentable.viewController, animated: true)
 
         case 2:
             print("should go to feature D from feature B")
-            let presentable = componentsRouter.featureDInterface.show(dependency: componentsRouter)
+            let presentable = navigator.featureDInterface.show(dependency: navigator)
             navigationController?.pushViewController(presentable.viewController, animated: true)
 
         default:

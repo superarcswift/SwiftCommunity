@@ -10,13 +10,12 @@ import SuperArcCore
 
 class FeatureDComponent: Component<FeatureDDependency, FeatureDComponentBuilder, FeatureDInterfaceProtocol, EmptyComponentRoute> {
 
-    public override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
-        componentsRouter.interfaceRegistry.register(FeatureDInterface(context: context), for: FeatureDInterfaceProtocol.self)
+    public override class func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider) {
+        navigator.interfaceRegistry.register(FeatureDInterface(viewControllerContext: context.viewControllerContext, dependencyProvider: dependencyProvider), for: FeatureDInterfaceProtocol.self)
     }
 
     func makeFeatureDViewController() -> ComponentPresentable {
-        return FeatureDViewController.instantiate(with: context.viewControllerContext)
+        return FeatureDViewController.instantiate(with: viewControllerContext)
     }
 }
 
@@ -39,14 +38,22 @@ protocol FeatureDInterfaceProtocol: Interface {
 
 class FeatureDInterface: FeatureDInterfaceProtocol {
 
-    var context: ApplicationContextProtocol!
+    // MARK: Properties
 
-    init(context: ApplicationContextProtocol) {
-        self.context = context
+    var viewControllerContext: ViewControllerContext!
+    var dependencyProvider: DependencyProvider
+
+    // MARK: Initialization
+
+    init(viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        self.viewControllerContext = viewControllerContext
+        self.dependencyProvider = dependencyProvider
     }
 
+    // MARK: APIs
+
     func show(dependency: FeatureDDependency) -> ComponentPresentable {
-        let component = FeatureDComponent(dependency: dependency, componentsRouter: AnyEmptyComponentRouter(), context: context)
+        let component = FeatureDComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
         return component.makeFeatureDViewController()
     }
 }

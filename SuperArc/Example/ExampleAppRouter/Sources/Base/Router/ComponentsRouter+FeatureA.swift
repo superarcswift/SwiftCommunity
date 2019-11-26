@@ -12,8 +12,8 @@ class FeatureAComponentRouter: FeatureAComponentRouterProtocol {
 
     var context: ApplicationContextProtocol
 
-    lazy var componentsRouter: ComponentsRouter = {
-        self.context.viewControllerContext.resolve(type: ComponentsRouter.self)
+    lazy var navigator: Navigator = {
+        self.context.viewControllerContext.resolve(type: Navigator.self)
     }()
 
     // MARK: Initialization
@@ -27,11 +27,11 @@ class FeatureAComponentRouter: FeatureAComponentRouterProtocol {
     func trigger(_ route: FeatureAComponentRoute) -> ComponentPresentable? {
         switch route {
         case .featureB:
-            return componentsRouter.featureBInterface.show(dependency: componentsRouter, componentsRouter: componentsRouter.featureBRouter, hasRightCloseButton: true)
+            return navigator.featureBInterface.show(dependency: navigator, router: navigator.featureBRouter, hasRightCloseButton: true)
         case .featureC:
-            return componentsRouter.featureCInterface.show(dependency: componentsRouter, hasRightCloseButton: true)
+            return navigator.featureCInterface.show(dependency: navigator, hasRightCloseButton: true)
         case .featureD:
-            return componentsRouter.featureDInterface.show(dependency: componentsRouter)
+            return navigator.featureDInterface.show(dependency: navigator)
         }
     }
 

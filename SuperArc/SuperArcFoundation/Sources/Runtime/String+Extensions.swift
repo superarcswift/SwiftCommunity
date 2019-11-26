@@ -13,4 +13,8 @@ extension String {
     public var urlComponents: URLComponents {
         return URLComponents(string: self)!
     }
+
+    public var basePath: String {
+        return (self as NSString).deletingLastPathComponent
+    }
 }

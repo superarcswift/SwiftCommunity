@@ -11,4 +11,4 @@ install:
   - npm install -g danger@7.1.4
 
 script:
-  - swift run danger-swift ci
+  - swift run danger-swift ci --dangerfile Dangerfile.swift --id swiftlint

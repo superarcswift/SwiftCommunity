@@ -17,6 +17,14 @@ extension UITableView {
         register(nib, forCellReuseIdentifier: identifierAndNibName)
     }
 
+    public func dequeueReusableCell<T: UITableViewCell & ClassNameDerivable>(_ cellClass: T.Type) -> T {
+        guard let cell = dequeueReusableCell(withIdentifier: cellClass.className) as? T else {
+            fatalError("invalid type cell")
+        }
+
+        return cell
+    }
+
     public func dequeueReusableCell<T: UITableViewCell & ClassNameDerivable>(_ cellClass: T.Type, for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withIdentifier: cellClass.className, for: indexPath) as? T else {
             fatalError("invalid type cell")

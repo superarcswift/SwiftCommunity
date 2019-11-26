@@ -28,6 +28,11 @@ class OpenConferencesViewController: TableViewController<OpenConferencesViewMode
     override public func setupBindings() {
         super.setupBindings()
 
+        viewModel.activity.active
+            .observeOn(MainScheduler.instance)
+            .bind(to: self.rx.activity)
+            .disposed(by: disposeBag)
+
         viewModel.notification
             .observeOn(MainScheduler.instance)
             .bind(to: self.rx.notification)

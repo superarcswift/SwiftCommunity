@@ -19,7 +19,7 @@ open class ViewController<VM: ViewModel>: UIViewController, CommonViewController
 
     @IBInspectable open var hasRightCloseButton: Bool = false
     @IBInspectable open var hasLeftCloseButton: Bool = false
-    @IBInspectable open var prefersLargeTitles: Bool = false
+    @IBInspectable open var prefersLargeTitles: Bool = true
 
     // MARK: Lifecycles
 

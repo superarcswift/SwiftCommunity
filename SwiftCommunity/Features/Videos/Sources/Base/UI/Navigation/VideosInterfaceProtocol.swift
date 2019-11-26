@@ -8,7 +8,7 @@ import SuperArcCoreComponent
 import SuperArcCore
 import XCoordinator
 
-public protocol VideosInterfaceProtocol: Interface {
-    func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>) -> Presentable
-    func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, componentsRouter: AnyComponentRouter<VideosComponentRoute>) -> Presentable
+public protocol VideosInterfaceProtocol: OnDemandInterface {
+    func showVideo(conferenceMetaData: ConferenceMetaData, conferenceEdition: ConferenceEdition, dependency: VideosDependency, router: AnyComponentRouter<VideosComponentRoute>) -> Presentable
+    func showVideo(videoMetaData: VideoMetaData, dependency: VideosDependency, router: AnyComponentRouter<VideosComponentRoute>) -> Presentable
 }

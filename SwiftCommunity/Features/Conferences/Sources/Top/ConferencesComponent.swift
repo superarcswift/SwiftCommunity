@@ -34,7 +34,7 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
     }
 
     override func trigger(_ route: ConferencesComponentRoute) -> ComponentPresentable? {
-        return componentsRouter?.trigger(route)
+        return router?.trigger(route)
     }
 }
 

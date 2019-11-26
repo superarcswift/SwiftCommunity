@@ -11,6 +11,9 @@
          location = "container:SwiftCommunity/Features"
          name = "Features">
          <FileRef
+            location = "group:Algorithm/Algorithm.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:Authors/Authors.xcodeproj">
          </FileRef>
          <FileRef

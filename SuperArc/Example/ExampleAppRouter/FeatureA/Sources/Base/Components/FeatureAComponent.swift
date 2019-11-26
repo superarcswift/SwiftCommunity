@@ -11,13 +11,12 @@ import SuperArcCore
 /// Main component class.
 public class FeatureAComponent: Component<FeatureADependency, FeatureAComponentBuilder, FeatureAInterfaceProtocol, FeatureAComponentRoute>, FeatureAComponentBuilder {
 
-    public override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
-        componentsRouter.interfaceRegistry.register(FeatureAInterface(context: context), for: FeatureAInterfaceProtocol.self)
+    public override class func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider) {
+        navigator.interfaceRegistry.register(FeatureAInterface(viewControllerContext: context.viewControllerContext, dependencyProvider: dependencyProvider), for: FeatureAInterfaceProtocol.self)
     }
 
     public func makeFeatureAViewController(hasRightCloseButton: Bool = false) -> ComponentPresentable {
-        let viewController = FeatureAViewController.instantiate(with: context.viewControllerContext)
+        let viewController = FeatureAViewController.instantiate(with: viewControllerContext)
         viewController.hasRightCloseButton = hasRightCloseButton
         let navigationController = NavigationController(rootViewController: viewController)
         return navigationController
@@ -40,20 +39,31 @@ public protocol FeatureADependency: Dependency {}
 
 /// Protocol defining methods for outside components to interact with the current components.
 public protocol FeatureAInterfaceProtocol: Interface {
-    func show(dependency: FeatureADependency, componentsRouter: AnyComponentRouter<FeatureAComponentRoute>, hasRightCloseButton: Bool) -> ComponentPresentable
+    func show(dependency: FeatureADependency, router: AnyComponentRouter<FeatureAComponentRoute>, hasRightCloseButton: Bool) -> ComponentPresentable
 }
 
 public class FeatureAInterface: FeatureAInterfaceProtocol {
 
-    public var context: ApplicationContextProtocol!
+    // MARK: Properties
 
-    public init(context: ApplicationContextProtocol) {
-        self.context = context
+    public var viewControllerContext: ViewControllerContext!
+    public var dependencyProvider: DependencyProvider
+
+    // MARK: Initialization
+
+    public init(viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        self.viewControllerContext = viewControllerContext
+        self.dependencyProvider = dependencyProvider
     }
 
-    public func show(dependency: FeatureADependency, componentsRouter: AnyComponentRouter<FeatureAComponentRoute>, hasRightCloseButton: Bool = false) -> ComponentPresentable {
+    // MARK: APIs
+
+    public func show(dependency: FeatureADependency, router: AnyComponentRouter<FeatureAComponentRoute>, hasRightCloseButton: Bool = false) -> ComponentPresentable {
         // TODO: this will create a new FeatureAComponent everytime. See if we can keep it in the memory and release it when needed.
-        let component = FeatureAComponent(dependency: dependency, componentsRouter: componentsRouter, context: context)
+        let component = FeatureAComponent(dependency: dependency,
+                                          router: router,
+                                          viewControllerContext: viewControllerContext,
+                                          dependencyProvider: dependencyProvider)
         return component.makeFeatureAViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }

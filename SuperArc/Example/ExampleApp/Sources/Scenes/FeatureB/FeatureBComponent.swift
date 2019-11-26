@@ -10,13 +10,12 @@ import SuperArcCore
 
 public class FeatureBComponent: Component<FeatureBDependency, FeatureBComponentBuilder, FeatureBInterfaceProtocol, EmptyComponentRoute>, FeatureBComponentBuilder {
 
-    public override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: ComponentsRouter.self)
-        componentsRouter.interfaceRegistry.register(FeatureBInterface(context: context), for: FeatureBInterfaceProtocol.self)
+    public override class func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider) {
+        navigator.interfaceRegistry.register(FeatureBInterface(viewControllerContext: context.viewControllerContext, dependencyProvider: dependencyProvider), for: FeatureBInterfaceProtocol.self)
     }
 
     public func makeFeatureBViewController(hasRightCloseButton: Bool = false) -> ComponentPresentable {
-        let viewController = FeatureBViewController.instantiate(with: context.viewControllerContext)
+        let viewController = FeatureBViewController.instantiate(with: viewControllerContext)
         viewController.hasRightCloseButton = hasRightCloseButton
         let navigationController = NavigationController(rootViewController: viewController)
         return navigationController
@@ -42,14 +41,16 @@ public protocol FeatureBInterfaceProtocol: Interface {
 
 public class FeatureBInterface: FeatureBInterfaceProtocol {
 
-    public var context: ApplicationContextProtocol!
+    public var viewControllerContext: ViewControllerContext!
+    public var dependencyProvider: DependencyProvider
 
-    public init(context: ApplicationContextProtocol) {
-        self.context = context
+    public init(viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        self.viewControllerContext = viewControllerContext
+        self.dependencyProvider = dependencyProvider
     }
 
     public func show(dependency: FeatureBDependency, hasRightCloseButton: Bool = false) -> ComponentPresentable {
-        let component = FeatureBComponent(dependency: dependency, context: context)
+        let component = FeatureBComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
         return component.viewBuilder.makeFeatureBViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }
