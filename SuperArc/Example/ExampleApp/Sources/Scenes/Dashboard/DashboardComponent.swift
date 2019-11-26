@@ -23,10 +23,10 @@ class DashboardComponent: Component<EmptyDependency, DashboardComponentBuilder, 
     // MARK: APIs
 
     func makeDashboardViewController() -> DashboardViewController {
-        featureAComponent = FeatureAComponent(dependency: self, context: context)
-        featureBComponent = FeatureBComponent(dependency: self, context: context)
+        featureAComponent = FeatureAComponent(dependency: self, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+        featureBComponent = FeatureBComponent(dependency: self, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
 
-        let dashboardViewController = DashboardViewController.instantiate(with: context.viewControllerContext)
+        let dashboardViewController = DashboardViewController.instantiate(with: viewControllerContext)
         dashboardViewController.viewControllers = [
             featureAComponent.makeFeatureAViewController().viewController,
             featureBComponent.makeFeatureBViewController().viewController

@@ -19,13 +19,12 @@ protocol FeatureCInterfaceProtocol: Interface {
 
 class FeatureCComponent: Component<FeatureCDependency, FeatureCComponentBuilder, FeatureCInterfaceProtocol, EmptyComponentRoute> {
 
-    public override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: Navigator.self)
-        componentsRouter.interfaceRegistry.register(FeatureCInterface(context: context), for: FeatureCInterfaceProtocol.self)
+    public override class func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider) {
+        navigator.interfaceRegistry.register(FeatureCInterface(viewcontrollerContext: context.viewControllerContext, dependencyProvider: dependencyProvider), for: FeatureCInterfaceProtocol.self)
     }
 
     func makeFeatureCViewController(hasRightCloseButton: Bool = false) -> ComponentPresentable {
-        let viewController = FeatureCViewController.instantiate(with: context.viewControllerContext)
+        let viewController = FeatureCViewController.instantiate(with: viewControllerContext)
         viewController.hasRightCloseButton = hasRightCloseButton
         let navigationController = NavigationController(rootViewController: viewController)
         return navigationController
@@ -36,14 +35,16 @@ class FeatureCComponent: Component<FeatureCDependency, FeatureCComponentBuilder,
 
 class FeatureCInterface: FeatureCInterfaceProtocol {
 
-    var context: ApplicationContextProtocol!
+    var viewControllerContext: ViewControllerContext!
+    var dependencyProvider: DependencyProvider
 
-    init(context: ApplicationContextProtocol) {
-        self.context = context
+    init(viewcontrollerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        self.viewControllerContext = viewcontrollerContext
+        self.dependencyProvider = dependencyProvider
     }
 
     func show(dependency: FeatureCDependency, hasRightCloseButton: Bool = false) -> ComponentPresentable {
-        let component = FeatureCComponent(dependency: dependency, context: context)
+        let component = FeatureCComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
         return component.makeFeatureCViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }

@@ -19,13 +19,12 @@ protocol FeatureDInterfaceProtocol: Interface {
 
 class FeatureDComponent: Component<FeatureDDependency, FeatureDComponentBuilder, FeatureDInterfaceProtocol, EmptyComponentRoute> {
 
-    public override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: Navigator.self)
-        componentsRouter.interfaceRegistry.register(FeatureDInterface(context: context), for: FeatureDInterfaceProtocol.self)
+    public override class func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider) {
+        navigator.interfaceRegistry.register(FeatureDInterface(viewControllerContext: context.viewControllerContext, dependencyProvider: dependencyProvider), for: FeatureDInterfaceProtocol.self)
     }
 
     func makeFeatureDViewController() -> ComponentPresentable {
-        return FeatureDViewController.instantiate(with: context.viewControllerContext)
+        return FeatureDViewController.instantiate(with: viewControllerContext)
     }
 }
 
@@ -33,14 +32,16 @@ class FeatureDComponent: Component<FeatureDDependency, FeatureDComponentBuilder,
 
 class FeatureDInterface: FeatureDInterfaceProtocol {
 
-    var context: ApplicationContextProtocol!
+    var viewControllerContext: ViewControllerContext!
+    var dependencyProvider: DependencyProvider
 
-    init(context: ApplicationContextProtocol) {
-        self.context = context
+    init(viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        self.viewControllerContext = viewControllerContext
+        self.dependencyProvider = dependencyProvider
     }
 
     func show(dependency: FeatureDDependency) -> ComponentPresentable {
-        let component = FeatureDComponent(dependency: dependency, context: context)
+        let component = FeatureDComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
         return component.makeFeatureDViewController()
     }
 }

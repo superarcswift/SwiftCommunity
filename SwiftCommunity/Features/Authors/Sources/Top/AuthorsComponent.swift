@@ -58,8 +58,8 @@ public class AuthorsInterface: AuthorsInterfaceProtocol {
 
     // MARK: Initialization
 
-    public required init(onDemandWith componentsRouter: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
-        self.navigator = componentsRouter
+    public required init(onDemandWith navigator: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
+        self.navigator = navigator
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
     }

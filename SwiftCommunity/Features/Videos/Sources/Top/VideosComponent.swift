@@ -56,14 +56,19 @@ public class VideosInterface: VideosInterfaceProtocol {
 
     // MARK: Properties
 
+    // Private
+
     private weak var navigator: Navigator!
+
+    // Public
+
     public weak var dependencyProvider: DependencyProvider!
     public weak var viewControllerContext: ViewControllerContext!
 
     // MARK: Initialization
 
-    public required init(onDemandWith componentsRouter: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
-        self.navigator = componentsRouter
+    public required init(onDemandWith navigator: Navigator, viewControllerContext: ViewControllerContext, and dependencyProvider: DependencyProvider) {
+        self.navigator = navigator
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
     }

@@ -29,15 +29,15 @@ class ConferencesComponentRouter: ConferencesComponentRouterProtocol {
         switch route {
         case .videos(let conferenceMetaData, let conferenceEdition):
             let presentable = navigator.videosInterface.showVideo(conferenceMetaData: conferenceMetaData,
-                                                                         conferenceEdition: conferenceEdition,
-                                                                         dependency: navigator,
-                                                                         router: navigator.videosRouter)
+                                                                  conferenceEdition: conferenceEdition,
+                                                                  dependency: navigator,
+                                                                  router: navigator.videosRouter)
             return ComponentPresentableWrapper(presentable: presentable)
 
         case .video(let videoMetaData):
             let presentable = navigator.videosInterface.showVideo(videoMetaData: videoMetaData,
-                                                                         dependency: navigator,
-                                                                         router: navigator.videosRouter)
+                                                                  dependency: navigator,
+                                                                  router: navigator.videosRouter)
             return ComponentPresentableWrapper(presentable: presentable)
         }
     }

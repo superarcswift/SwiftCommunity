@@ -11,9 +11,8 @@ import SuperArcCore
 /// Main component class.
 public class FeatureAComponent: Component<FeatureADependency, FeatureAComponentBuilder, FeatureAInterfaceProtocol, EmptyComponentRoute>, FeatureAComponentBuilder {
 
-    public override class func register(to context: ApplicationContextProtocol) {
-        let componentsRouter = context.viewControllerContext.resolve(type: Navigator.self)
-        componentsRouter.interfaceRegistry.register(FeatureAInterface(context: context), for: FeatureAInterfaceProtocol.self)
+    public override class func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider) {
+        navigator.interfaceRegistry.register(FeatureAInterface(viewControllerContext: context.viewControllerContext, dependencyProvider: dependencyProvider), for: FeatureAInterfaceProtocol.self)
     }
 
     public func makeFeatureAViewController(hasRightCloseButton: Bool = false) -> ComponentPresentable {
@@ -47,18 +46,20 @@ public class FeatureAInterface: FeatureAInterfaceProtocol {
 
     // MARK: Properties
 
-    public var context: ApplicationContextProtocol!
+    public var viewControllerContext: ViewControllerContext!
+    public var dependencyProvider: DependencyProvider
 
     // MARK: Initialization
 
-    public init(context: ApplicationContextProtocol) {
-        self.context = context
+    public init(viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
+        self.viewControllerContext = viewControllerContext
+        self.dependencyProvider = dependencyProvider
     }
 
     // MARK: APIs
 
     public func show(dependency: FeatureADependency, hasRightCloseButton: Bool = false) -> ComponentPresentable {
-        let component = FeatureAComponent(dependency: dependency, context: context)
+        let component = FeatureAComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
         return component.makeFeatureAViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }
