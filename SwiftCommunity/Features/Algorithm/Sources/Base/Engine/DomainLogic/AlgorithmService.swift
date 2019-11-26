@@ -25,7 +25,11 @@ class AlgorithmService: BaseGitService, AlgorithmServiceProtocol {
 
     // Static
 
-    var root: Section?
+    static let baseRemoteRepositoryURL = "https://raw.githubusercontent.com/raywenderlich/swift-algorithm-club/master"
+
+    // Private
+
+    private var root: Section?
 
     // MARK: Initialization
 
@@ -52,12 +56,14 @@ class AlgorithmService: BaseGitService, AlgorithmServiceProtocol {
 
     func loadContent(from path: String) -> Promise<String?> {
         return Promises.asyncOnGlobalQueue {
+
             guard let fileURL = self.localURL(for: path) else {
                 throw AlgorithmServiceError.invalidPath
             }
 
             let data = try Data(contentsOf: fileURL)
-            return String(data: data, encoding: .utf8)
+            let markdown = String(data: data, encoding: .utf8)
+            return self.processImages(in: markdown)
         }
     }
 
@@ -78,6 +84,16 @@ class AlgorithmService: BaseGitService, AlgorithmServiceProtocol {
         }
 
         return fetchData()
+    }
+
+    private func processImages(in markdown: String?) -> String? {
+        guard let string = markdown else {
+            return nil
+        }
+        let regex = try! NSRegularExpression(pattern: "(!\\[[^\\]]*\\])\\(((?!http).*?)\\)")
+        let range = NSRange(location: 0, length: string.count)
+        let newString = regex.stringByReplacingMatches(in: string, options: [], range: range, withTemplate: "$1(\(AlgorithmService.baseRemoteRepositoryURL)/$2)")
+        return newString
     }
 }
 

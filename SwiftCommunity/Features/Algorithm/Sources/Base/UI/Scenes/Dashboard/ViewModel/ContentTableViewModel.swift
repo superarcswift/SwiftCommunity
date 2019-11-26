@@ -76,9 +76,13 @@ class ContentTableViewModel: ViewModel, ContentViewModelType, ContentTableViewMo
     // MARK: APIs
 
     func loadData(sectionID: String?) {
+        activity.start()
         algortihmService.fetchSection(with: sectionID)
             .done { [weak self] section in
                 self?.section.accept(section)
+            }
+            .ensure { [weak self] in
+                self?.activity.stop()
             }
             .catch { [weak self] error in
                 self?.notification.onNext(StandardNotification(error: error))
