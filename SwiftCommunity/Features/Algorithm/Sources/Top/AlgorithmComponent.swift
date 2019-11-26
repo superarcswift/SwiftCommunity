@@ -18,13 +18,15 @@ public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBui
         return UnownedWrapper(self)
     }
 
+    lazy var algorithmService = AlgorithmService(context: dependency.serviceContext)
+
     // MARK: APIs
 
     public func makeDashboardViewController(forSection sectionID: String?, with builder: UnownedWrapper<AlgorithmComponent>?) -> UIViewController {
         let viewController = ContentTableViewController.instantiate(with: viewControllerContext)
         viewController.builder = builder
         viewController.sectionID = sectionID
-        viewController.viewModel = ContentViewModel(dependency: dependency)
+        viewController.viewModel = ContentTableViewModel(algorithmService: algorithmService)
         return viewController
     }
 }

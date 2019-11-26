@@ -14,9 +14,9 @@ class MarkdownContentTableViewCell: UITableViewCell, ClassNameDerivable {
 
     var onRendered: (() -> Void)?
 
-    var content: Content? {
+    var contentViewModel: ContentViewModel? {
         didSet {
-            guard let content = content else {
+            guard let contentViewModel = contentViewModel else {
                 return
             }
 
@@ -27,7 +27,7 @@ class MarkdownContentTableViewCell: UITableViewCell, ClassNameDerivable {
                 self.onRendered?()
             }
 
-            load(content)
+            contentViewModel.load()
                 .done { [weak self] stringContent in
                     self?.mainContentView.load(markdown: stringContent)
                 }
@@ -40,31 +40,8 @@ class MarkdownContentTableViewCell: UITableViewCell, ClassNameDerivable {
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        content = nil
+        contentViewModel = nil
         mainContentView.load(markdown: nil)
         mainContentViewHeightConstraint.isActive = false
-    }
-
-    // MARK: Private helpers
-
-    private func load(_ content: Content) -> Promise<String?> {
-        switch content {
-            case .local(_, let value):
-                return Promise.value(value)
-            case .url(_, let path):
-                return loadContent(from: path)
-        }
-    }
-
-    private func loadContent(from path: String) -> Promise<String?> {
-        return Promises.asyncOnGlobalQueue {
-            let remotePath = AlgorithmService.baseRemoteRepositoryURL.combinePath(path)
-            guard let url = URL(string: remotePath) else {
-                throw AlgorithmServiceError.invalidPath
-            }
-
-            let data = try Data(contentsOf: url)
-            return String(data: data, encoding: .utf8)
-        }
     }
 }

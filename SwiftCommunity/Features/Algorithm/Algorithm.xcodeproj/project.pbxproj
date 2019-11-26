@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61C4A40238CA0A600939F72 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C4A3F238CA0A600939F72 /* ContentViewModel.swift */; };
 		F63844FD2389B34400060D2F /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = F63844FC2389B34400060D2F /* index.json */; };
 		F63845022389B4C400060D2F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845012389B4C400060D2F /* Section.swift */; };
 		F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845052389B8DF00060D2F /* AlgorithmService.swift */; };
-		F638450A2389CB3300060D2F /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845092389CB3300060D2F /* DashboardViewModel.swift */; };
+		F638450A2389CB3300060D2F /* ContentTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845092389CB3300060D2F /* ContentTableViewModel.swift */; };
 		F638450D2389CD8C00060D2F /* AlgorithmDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638450C2389CD8C00060D2F /* AlgorithmDependency.swift */; };
 		F63845102389D3D200060D2F /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F638450F2389D3D200060D2F /* PromiseKit.framework */; };
 		F63845162389EF0700060D2F /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845152389EF0700060D2F /* SectionTableViewCell.swift */; };
@@ -45,10 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61C4A3F238CA0A600939F72 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		F63844FC2389B34400060D2F /* index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = index.json; path = /Users/atran/Desktop/Projects/iOS/SwiftCommunityContent/algorithm/index.json; sourceTree = "<absolute>"; };
 		F63845012389B4C400060D2F /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		F63845052389B8DF00060D2F /* AlgorithmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmService.swift; sourceTree = "<group>"; };
-		F63845092389CB3300060D2F /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		F63845092389CB3300060D2F /* ContentTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewModel.swift; sourceTree = "<group>"; };
 		F638450C2389CD8C00060D2F /* AlgorithmDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmDependency.swift; sourceTree = "<group>"; };
 		F638450F2389D3D200060D2F /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F63845152389EF0700060D2F /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -176,8 +178,9 @@
 		F638451C2389FB3B00060D2F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F63845092389CB3300060D2F /* DashboardViewModel.swift */,
+				F63845092389CB3300060D2F /* ContentTableViewModel.swift */,
 				F638451D2389FB4F00060D2F /* Models+RxDataSources.swift */,
+				F61C4A3F238CA0A600939F72 /* ContentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -408,8 +411,9 @@
 				F63845182389F83E00060D2F /* MarkdownContentTableViewCell.swift in Sources */,
 				F63845022389B4C400060D2F /* Section.swift in Sources */,
 				F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */,
-				F638450A2389CB3300060D2F /* DashboardViewModel.swift in Sources */,
+				F638450A2389CB3300060D2F /* ContentTableViewModel.swift in Sources */,
 				F6641D38238BCF0A00A32EAA /* MarkdownProcessor.swift in Sources */,
+				F61C4A40238CA0A600939F72 /* ContentViewModel.swift in Sources */,
 				F63845162389EF0700060D2F /* SectionTableViewCell.swift in Sources */,
 				F674C2902388B263004FA46C /* ContentTableViewController.swift in Sources */,
 				F674C2952388B4B2004FA46C /* AlgorithmInterfaceProtocol.swift in Sources */,

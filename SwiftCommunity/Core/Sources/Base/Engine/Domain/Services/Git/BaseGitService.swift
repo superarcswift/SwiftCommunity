@@ -30,7 +30,7 @@ public protocol GitServiceProtocol {
     func localURL(for filePath: String) -> URL?
 }
 
-public class GitService: Service, GitServiceProtocol {
+open class BaseGitService: Service, GitServiceProtocol {
 
     // MARK: Properties
 
@@ -40,9 +40,6 @@ public class GitService: Service, GitServiceProtocol {
     public var baseLocalRepositoryPath: String {
         filePathProvider.localRepositoryURL.path
     }
-    public lazy var baseContentPath = {
-        baseLocalRepositoryPath.combinePath("content")
-    }()
 
     // Public
 

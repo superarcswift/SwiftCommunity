@@ -2,6 +2,7 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import Algorithm
 import Conferences
 import Videos
 import Authors
@@ -56,27 +57,28 @@ class AppManager: HasComponentsRouter, HasConfigurations {
     }
 
     private func setupServices() {
-        let remoteRepositoryURL = try! configurations.container.resolve(GitRepositoryConfigurationProtocol.self).url
-        let gitService = GitService(context: core.engine.serviceContext, remoteRepositoryURL: remoteRepositoryURL)
-        core.engine.serviceRegistry.register(gitService, for: GitServiceProtocol.self)
+        let gitService = ConferencesGitService(context: core.context.engine.serviceContext)
+        core.context.engine.serviceRegistry.register(gitService, for: ConferencesGitService.self)
 
         let videosContentProvider = FilesystemVideosContentProvider(rootContentFolderPath: gitService.baseContentPath)
-        let videosService = VideosService(context: core.engine.serviceContext, contentProvider: videosContentProvider)
-        core.engine.serviceRegistry.register(videosService, for: VideosServiceProtocol.self)
+        let videosService = VideosService(context: core.context.engine.serviceContext, contentProvider: videosContentProvider)
+        core.context.engine.serviceRegistry.register(videosService, for: VideosServiceProtocol.self)
 
         let authorsContentProvider = FilesystemAuthorsContentProvider(rootContentFolderPath: gitService.baseContentPath)
-        let authorsService = AuthorsService(context: core.engine.serviceContext, contentProvider: authorsContentProvider)
-        core.engine.serviceRegistry.register(authorsService, for: AuthorsServiceProtocol.self)
+        let authorsService = AuthorsService(context: core.context.engine.serviceContext, contentProvider: authorsContentProvider)
+        core.context.engine.serviceRegistry.register(authorsService, for: AuthorsServiceProtocol.self)
 
         let conferencesContentProvider = FilesystemConferencesContentProvider(rootContentFolderPath: gitService.baseContentPath)
-        let conferencesService = ConferencesService(context: core.engine.serviceContext, contentProvider: conferencesContentProvider, videosService: videosService)
-        core.engine.serviceRegistry.register(conferencesService, for: ConferencesServiceProtocol.self)
+        let conferencesService = ConferencesService(context: core.context.engine.serviceContext, contentProvider: conferencesContentProvider, videosService: videosService)
+        core.context.engine.serviceRegistry.register(conferencesService, for: ConferencesServiceProtocol.self)
     }
 
     private func setupComponentsCoordinator() {
+        // Register interfaces
         VideosCoordinator.register(to: core.context)
         AuthorsCoordinator.register(to: core.context)
 
+        // Register routers
         componentsRouter.routerRegistry.register(ConferencesComponentRouter(componentsRouter: componentsRouter, context: core.context), for: ConferencesComponentRouter.self)
         componentsRouter.routerRegistry.register(VideosComponentRouter(componentsRouter: componentsRouter, context: core.context), for: VideosComponentRouter.self)
         componentsRouter.routerRegistry.register(AuthorsComponentRouter(componentsRouter: componentsRouter, context: core.context), for: AuthorsComponentRouter.self)

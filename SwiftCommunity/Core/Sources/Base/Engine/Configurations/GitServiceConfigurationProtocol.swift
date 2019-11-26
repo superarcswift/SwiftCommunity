@@ -5,5 +5,6 @@
 import SuperArcFoundation
 
 public protocol GitRepositoryConfigurationProtocol: Configuration {
-    var url: URL { get }
+    var conferencesRepositoryURL: URL { get }
+    var algorithmRepositoryURL: URL { get }
 }

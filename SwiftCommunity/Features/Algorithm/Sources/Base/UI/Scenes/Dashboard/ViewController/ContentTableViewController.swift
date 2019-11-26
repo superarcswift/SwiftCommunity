@@ -13,7 +13,7 @@ import RxDataSources
 import RxSwift
 import UIKit
 
-class ContentTableViewController: TableViewController<ContentViewModel>, StoryboardInitiable {
+class ContentTableViewController: TableViewController<ContentTableViewModel>, StoryboardInitiable {
 
     // MARK: Properties
 
@@ -36,9 +36,19 @@ class ContentTableViewController: TableViewController<ContentViewModel>, Storybo
     override public func setupBindings() {
         super.setupBindings()
 
+        viewModel.activity.active
+            .observeOn(MainScheduler.instance)
+            .bind(to: self.rx.activity)
+            .disposed(by: disposeBag)
+
         viewModel.notification
             .observeOn(MainScheduler.instance)
             .bind(to: self.rx.notification)
+            .disposed(by: disposeBag)
+
+        viewModel.toggleEmptyState
+            .observeOn(MainScheduler.instance)
+            .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
 
         viewModel.outputs.section.asObservable()
@@ -49,6 +59,15 @@ class ContentTableViewController: TableViewController<ContentViewModel>, Storybo
                 }
                 self.title = section.title
             }
+            .disposed(by: disposeBag)
+
+        viewModel.isReady
+            .subscribe( onNext: { [weak self] isReady in
+                guard isReady else {
+                    return
+                }
+                self?.viewModel.loadData(sectionID: self?.sectionID)
+            })
             .disposed(by: disposeBag)
 
         let dataSource = RxTableViewSectionedReloadDataSource<AlgorithmSectionModel>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
@@ -68,7 +87,7 @@ class ContentTableViewController: TableViewController<ContentViewModel>, Storybo
                     tableViewSections.append(AlgorithmSectionModel(items: items))
                 }
                 if let content = section?.content {
-                    tableViewSections.append(AlgorithmSectionModel(items: [AlgorithmSectionDataModel.content(content)]))
+                    tableViewSections.append(AlgorithmSectionModel(items: [AlgorithmSectionDataModel.content(self.viewModel.contentViewModel(for: content))]))
                 }
 
                 return Observable.just(tableViewSections)
@@ -77,28 +96,34 @@ class ContentTableViewController: TableViewController<ContentViewModel>, Storybo
             .disposed(by: disposeBag)
 
         tableView.rx.modelSelected(AlgorithmSectionDataModel.self)
-            .subscribe( onNext: { [unowned self] sectionDataModel in
-                switch sectionDataModel {
-                    case .section(let section):
-                        self.show(section.id)
-                    default:
-                        break
+            .subscribe(
+                onNext: { [unowned self] sectionDataModel in
+                    switch sectionDataModel {
+                        case .section(let section):
+                            self.show(section.id)
+                        default:
+                            break
+                    }
                 }
-            })
+            )
             .disposed(by: disposeBag)
     }
 
     override func loadData() {
         super.loadData()
 
-        viewModel.loadData(sectionID: sectionID)
+        if let sectionID = sectionID {
+            viewModel.loadData(sectionID: sectionID)
+        } else {
+            viewModel.prepareLocalRepository(shouldResetBeforeCloning: false)
+        }
     }
 
     // MARK: Private helpers
 
-    private func makeContentCell(with content: Content, from tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
+    private func makeContentCell(with contentViewModel: ContentViewModel, from tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(MarkdownContentTableViewCell.self, for: indexPath)
-        cell.content = content
+        cell.contentViewModel = contentViewModel
         cell.onRendered = { [weak tableView] in
             // Hacky workaround to relayout the cell so that we get the correct height after the content is loaded.
             tableView?.beginUpdates()

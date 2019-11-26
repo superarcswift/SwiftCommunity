@@ -13,6 +13,6 @@ class AppComponent: Component<EmptyDependency, EmptyViewBuildable, EmptyInterfac
 extension AppComponent: HasGitService {
 
     var gitService: GitServiceProtocol {
-        return dependencyProvider.context.engine.serviceRegistry.resolve(type: GitServiceProtocol.self)
+        return dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesGitService.self)
     }
 }

@@ -6,7 +6,7 @@ import CoreUX
 import RxDataSources
 
 enum AlgorithmSectionDataModel {
-    case content(Content)
+    case content(ContentViewModel)
     case section(Section)
 }
 

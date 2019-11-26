@@ -2,11 +2,16 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import PromiseKit
+import Core
 import SuperArcCore
 import SuperArcFoundation
+import PromiseKit
 
 // MARK: - Protocol
+
+protocol HasAlgorithmService {
+    var algorithmService: AlgorithmService { get }
+}
 
 protocol AlgorithmServiceProtocol {
     func fetchSection(with sectionID: String?) -> Promise<Section>
@@ -14,22 +19,19 @@ protocol AlgorithmServiceProtocol {
 
 // MARK: - Implementation
 
-class AlgorithmService: Service, AlgorithmServiceProtocol {
+class AlgorithmService: BaseGitService, AlgorithmServiceProtocol {
 
     // MARK: Properties
 
     // Static
 
-    static let baseRemoteRepositoryURL = "https://raw.githubusercontent.com/raywenderlich/swift-algorithm-club/master"
-
-    var context: ServiceContext
-
     var root: Section?
 
     // MARK: Initialization
 
-    init(context: ServiceContext) {
-        self.context = context
+    public convenience init(context: ServiceContext) {
+        let repositoryURL = try! context.configurations.container.resolve(GitRepositoryConfigurationProtocol.self).algorithmRepositoryURL
+        self.init(context: context, remoteRepositoryURL: repositoryURL)
     }
 
     // MARK: APIs
@@ -45,6 +47,17 @@ class AlgorithmService: Service, AlgorithmServiceProtocol {
             }
 
             return Promise.value(section)
+        }
+    }
+
+    func loadContent(from path: String) -> Promise<String?> {
+        return Promises.asyncOnGlobalQueue {
+            guard let fileURL = self.localURL(for: path) else {
+                throw AlgorithmServiceError.invalidPath
+            }
+
+            let data = try Data(contentsOf: fileURL)
+            return String(data: data, encoding: .utf8)
         }
     }
 

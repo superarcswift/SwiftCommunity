@@ -3,3 +3,7 @@
 //
 
 import Foundation
+
+protocol MarkdownProcessorProtocol {
+    func process(_ markdown: String) -> String
+}

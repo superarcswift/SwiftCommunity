@@ -13,16 +13,12 @@ public class Core: HasApplicationContext {
 
     public var context: ApplicationContextProtocol!
 
-    public let engine: EngineProtocol
-
     // MARK: Initialization
 
     public init(endpoint: Endpoint, configurations: AnyRegistry<Configuration>) {
 
         let serviceContext = ServiceContext(endpoint: endpoint, configurations: configurations)
-        engine = Engine(serviceContext: serviceContext)
+        let engine = Engine(serviceContext: serviceContext)
         context = ApplicationContext(engine: engine)
     }
-
-    // MARK: Private helpers
 }
