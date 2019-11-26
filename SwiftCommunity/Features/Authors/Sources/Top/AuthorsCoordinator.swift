@@ -32,8 +32,8 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
 
     // MARK: APIs
 
-    public static func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol) {
-        AuthorsComponent.register(to: context, navigator: navigator)
+    public static func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider) {
+        AuthorsComponent.register(to: context, navigator: navigator, dependencyProvider: dependencyProvider)
     }
 
     override public func prepareTransition(for route: AuthorsRoute) -> NavigationTransition {

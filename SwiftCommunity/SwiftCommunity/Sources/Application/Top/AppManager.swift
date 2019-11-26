@@ -75,8 +75,8 @@ class AppManager: HasConfigurations {
 
     private func setupComponentsCoordinator() {
         // Register interfaces
-        VideosCoordinator.register(to: core.context, navigator: navigator)
-        AuthorsCoordinator.register(to: core.context, navigator: navigator)
+        VideosCoordinator.register(to: core.context, navigator: navigator, dependencyProvider: core)
+        AuthorsCoordinator.register(to: core.context, navigator: navigator, dependencyProvider: core)
 
         // Register routers
         navigator.routerRegistry.register(ConferencesComponentRouter(navigator: navigator, context: core.context), for: ConferencesComponentRouter.self)

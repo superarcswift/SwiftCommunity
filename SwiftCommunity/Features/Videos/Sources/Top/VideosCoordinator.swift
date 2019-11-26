@@ -32,8 +32,8 @@ public class VideosCoordinator: NavigationCoordinator<VideosRoute> {
 
     // MARK: APIs
 
-    public static func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol) {
-        VideosComponent.register(to: context, navigator: navigator)
+    public static func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider) {
+        VideosComponent.register(to: context, navigator: navigator, dependencyProvider: dependencyProvider)
     }
 
     override public func prepareTransition(for route: VideosRoute) -> NavigationTransition {
