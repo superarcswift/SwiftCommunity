@@ -61,7 +61,7 @@ public class FeatureBInterface: FeatureBInterfaceProtocol {
 
 // MARK: - FeatureBComponentRouterProtocol
 
-public protocol FeatureBComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == FeatureBComponentRoute {}
+public protocol FeatureBComponentRouterProtocol: ComponentRouter where ComponentRouteType == FeatureBComponentRoute {}
 
 public extension FeatureBComponentRouterProtocol where ComponentRouteType == FeatureBComponentRoute {
 

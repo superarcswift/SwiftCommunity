@@ -48,7 +48,9 @@ class FeatureDInterface: FeatureDInterfaceProtocol {
     // MARK: APIs
 
     func show(dependency: FeatureDDependency) -> ComponentPresentable {
-        let component = FeatureDComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+        let component = FeatureDComponent(dependency: dependency,
+                                          viewControllerContext: viewControllerContext,
+                                          dependencyProvider: dependencyProvider)
         return component.makeFeatureDViewController()
     }
 }

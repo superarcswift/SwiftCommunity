@@ -59,7 +59,9 @@ public class FeatureAInterface: FeatureAInterfaceProtocol {
     // MARK: APIs
 
     public func show(dependency: FeatureADependency, hasRightCloseButton: Bool = false) -> ComponentPresentable {
-        let component = FeatureAComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+        let component = FeatureAComponent(dependency: dependency,
+                                          viewControllerContext: viewControllerContext,
+                                          dependencyProvider: dependencyProvider)
         return component.makeFeatureAViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }
