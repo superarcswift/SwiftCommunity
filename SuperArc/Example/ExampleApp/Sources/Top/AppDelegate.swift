@@ -27,16 +27,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigator: Navigator = Navigator(context: core.context)
         core.context.viewControllerContext.register(navigator, for: Navigator.self)
 
-        // Register Components
+        // Register Components.
         FeatureAComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
         FeatureBComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
         FeatureCComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
         FeatureDComponent.register(to: core.context, navigator: navigator, dependencyProvider: core)
 
-        // Initialize first screen
-        let dashboardComponent = DashboardComponent(dependency: EmptyComponent(), viewControllerContext: core.context.viewControllerContext, dependencyProvider: core)
+        // Initialize first screen.
+        let dashboardComponent = DashboardComponent(dependency: EmptyComponent(),
+                                                    viewControllerContext: core.context.viewControllerContext,
+                                                    dependencyProvider: core)
 
-        // Show the app
+        // Show the app.
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = dashboardComponent.makeDashboardViewController()
         window?.makeKeyAndVisible()

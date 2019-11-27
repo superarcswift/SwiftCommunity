@@ -20,11 +20,11 @@ public protocol ComponentProtocol: Dependency, HasViewControllerContext, Compone
     /// Interfaces used by higher layers to access this component.
     var interface: InterfaceType! { get }
 
-    /// Register any objects provided by this component that will be used by classes in the higher layer.
+    /// Register any objects provided by this component that will be used by classes in the upper layer.
     static func register(to context: ApplicationContextProtocol, navigator: NavigatorProtocol, dependencyProvider: DependencyProvider)
 }
 
-/// The base class of a dependency injection component containing all dependencies used by this object.
+/// The base class of a component.
 open class Component<DependencyType, ViewBuildableType, InterfaceType, ComponentRouteType: ComponentRoute>: ComponentProtocol {
 
     // MARK: Properties

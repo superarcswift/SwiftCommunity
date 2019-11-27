@@ -23,8 +23,12 @@ class DashboardComponent: Component<EmptyDependency, DashboardComponentBuilder, 
     // MARK: APIs
 
     func makeDashboardViewController() -> DashboardViewController {
-        featureAComponent = FeatureAComponent(dependency: self, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
-        featureBComponent = FeatureBComponent(dependency: self, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+        featureAComponent = FeatureAComponent(dependency: self,
+                                              viewControllerContext: viewControllerContext,
+                                              dependencyProvider: dependencyProvider)
+        featureBComponent = FeatureBComponent(dependency: self,
+                                              viewControllerContext: viewControllerContext,
+                                              dependencyProvider: dependencyProvider)
 
         let dashboardViewController = DashboardViewController.instantiate(with: viewControllerContext)
         dashboardViewController.viewControllers = [
@@ -35,6 +39,8 @@ class DashboardComponent: Component<EmptyDependency, DashboardComponentBuilder, 
         return dashboardViewController
     }
 }
+
+// MARK: - Dependencies
 
 extension DashboardComponent: FeatureADependency {}
 

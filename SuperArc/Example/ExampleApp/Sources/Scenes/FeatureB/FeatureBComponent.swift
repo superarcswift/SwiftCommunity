@@ -41,16 +41,24 @@ public protocol FeatureBInterfaceProtocol: Interface {
 
 public class FeatureBInterface: FeatureBInterfaceProtocol {
 
+    // MARK: Properties
+
     public var viewControllerContext: ViewControllerContext!
     public var dependencyProvider: DependencyProvider
+
+    // MARK: Initialization
 
     public init(viewControllerContext: ViewControllerContext, dependencyProvider: DependencyProvider) {
         self.viewControllerContext = viewControllerContext
         self.dependencyProvider = dependencyProvider
     }
 
+    // MARK: APIs
+
     public func show(dependency: FeatureBDependency, hasRightCloseButton: Bool = false) -> ComponentPresentable {
-        let component = FeatureBComponent(dependency: dependency, viewControllerContext: viewControllerContext, dependencyProvider: dependencyProvider)
+        let component = FeatureBComponent(dependency: dependency,
+                                          viewControllerContext: viewControllerContext,
+                                          dependencyProvider: dependencyProvider)
         return component.viewBuilder.makeFeatureBViewController(hasRightCloseButton: hasRightCloseButton)
     }
 }
