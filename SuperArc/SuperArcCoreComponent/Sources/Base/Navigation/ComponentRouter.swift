@@ -7,16 +7,10 @@ import SuperArcFoundation
 
 public protocol ComponentRouterIdentifiable: ClassNameDerivable {}
 
-public protocol ComponentRouter {
+public protocol ComponentRouter: ComponentRouterIdentifiable {
     associatedtype ComponentRouteType: ComponentRoute
 
     func trigger(_ route: ComponentRouteType) -> ComponentPresentable?
-}
-
-extension ComponentRouter {
-    var anyRouter: AnyComponentRouter<ComponentRouteType> {
-        return AnyComponentRouter(self)
-    }
 }
 
 // MARK: - Type erasure
@@ -59,6 +53,8 @@ public class AnyComponentRouter<ComponentRouteType: ComponentRoute>: ComponentRo
         return box.trigger(route)
     }
 }
+
+// MARK: - EmptyComponentRouter
 
 public class AnyEmptyComponentRouter: AnyComponentRouter<EmptyComponentRoute> {
 
