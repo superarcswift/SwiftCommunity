@@ -5,20 +5,19 @@
 import CoreUX
 import RxDataSources
 
-public enum ConferenceDetailSectionModel {
-    case videosSection(items: [VideoViewModel])
+public enum ConferenceDetailSectionDataModel {
+    case authors([AuthorViewModel])
+    case video(VideoViewModel)
+}
+
+public struct ConferenceDetailSectionModel {
+    public var items: [ConferenceDetailSectionDataModel]
 }
 
 extension ConferenceDetailSectionModel: SectionModelType {
 
-    public init(original: ConferenceDetailSectionModel, items: [VideoViewModel]) {
+    public init(original: ConferenceDetailSectionModel, items: [ConferenceDetailSectionDataModel]) {
         self = original
-    }
-
-    public var items: [VideoViewModel] {
-        switch self {
-        case .videosSection(items: let items):
-            return items
-        }
+        self.items = items
     }
 }

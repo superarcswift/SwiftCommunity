@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +11,7 @@
         <!--Conferences-->
         <scene sceneID="9dN-gO-cIr">
             <objects>
-                <viewController storyboardIdentifier="ConferencesCollectionViewController" id="w1d-5l-EgH" customClass="ConferencesCollectionViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConferencesCollectionViewController" id="w1d-5l-EgH" customClass="ConferencesCollectionViewController" customModule="Conferences" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B4E-hc-H1T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +19,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eIp-aW-8g1">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewLayout key="collectionViewLayout" id="Kgr-l6-MbK" customClass="ConferenceCollectionViewFlowLayout" customModule="SwiftVideos" customModuleProvider="target"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Kgr-l6-MbK" customClass="ConferenceCollectionViewFlowLayout" customModule="Conferences" customModuleProvider="target"/>
                                 <cells/>
                             </collectionView>
                         </subviews>
@@ -49,13 +47,13 @@
         <!--Conference Detail View Controller-->
         <scene sceneID="ogj-ws-W5V">
             <objects>
-                <viewController storyboardIdentifier="ConferenceDetailViewController" id="zES-3U-LVX" customClass="ConferenceDetailViewController" customModule="SwiftVideos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConferenceDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="zES-3U-LVX" customClass="ConferenceDetailViewController" customModule="Conferences" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="flW-R4-W3P">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p6S-iY-XRI">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p6S-iY-XRI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jAH-hs-eEG">
                                     <size key="itemSize" width="50" height="50"/>
@@ -65,23 +63,45 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ng-Qr-Hmh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUT-8U-Wns">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="QUT-8U-Wns" secondAttribute="bottom" id="Awy-RT-niK"/>
+                                    <constraint firstItem="QUT-8U-Wns" firstAttribute="leading" secondItem="5Ng-Qr-Hmh" secondAttribute="leading" id="MD6-qt-Le0"/>
+                                    <constraint firstAttribute="trailing" secondItem="QUT-8U-Wns" secondAttribute="trailing" id="Mv9-Fp-jVp"/>
+                                    <constraint firstItem="QUT-8U-Wns" firstAttribute="top" secondItem="5Ng-Qr-Hmh" secondAttribute="top" id="ooF-O2-VxJ"/>
+                                    <constraint firstAttribute="height" constant="150" id="zzk-xH-ozS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0xi-o1-gHp" firstAttribute="trailing" secondItem="p6S-iY-XRI" secondAttribute="trailing" id="Mt0-uQ-9NX"/>
-                            <constraint firstItem="0xi-o1-gHp" firstAttribute="bottom" secondItem="p6S-iY-XRI" secondAttribute="bottom" id="VrD-Fu-bh3"/>
-                            <constraint firstItem="p6S-iY-XRI" firstAttribute="top" secondItem="0xi-o1-gHp" secondAttribute="top" id="nhg-ED-NsD"/>
-                            <constraint firstItem="p6S-iY-XRI" firstAttribute="leading" secondItem="0xi-o1-gHp" secondAttribute="leading" id="tHo-MS-KpB"/>
+                            <constraint firstItem="5Ng-Qr-Hmh" firstAttribute="top" secondItem="flW-R4-W3P" secondAttribute="top" id="4tN-Uj-r5k"/>
+                            <constraint firstItem="p6S-iY-XRI" firstAttribute="leading" secondItem="flW-R4-W3P" secondAttribute="leading" id="EZf-41-0cG"/>
+                            <constraint firstItem="5Ng-Qr-Hmh" firstAttribute="leading" secondItem="flW-R4-W3P" secondAttribute="leading" id="Hp6-n3-jfp"/>
+                            <constraint firstItem="p6S-iY-XRI" firstAttribute="trailing" secondItem="flW-R4-W3P" secondAttribute="trailing" id="OsE-gs-dg5"/>
+                            <constraint firstAttribute="trailing" secondItem="5Ng-Qr-Hmh" secondAttribute="trailing" id="Szs-h9-hSK"/>
+                            <constraint firstItem="vtQ-7h-zv9" firstAttribute="bottom" secondItem="p6S-iY-XRI" secondAttribute="bottom" id="T1j-dn-BgM"/>
+                            <constraint firstItem="p6S-iY-XRI" firstAttribute="top" secondItem="flW-R4-W3P" secondAttribute="top" id="klM-Y0-THd"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="0xi-o1-gHp"/>
+                        <viewLayoutGuide key="safeArea" id="vtQ-7h-zv9"/>
                     </view>
                     <connections>
+                        <outlet property="bannerImageView" destination="QUT-8U-Wns" id="aKu-fV-R7h"/>
                         <outlet property="collectionView" destination="p6S-iY-XRI" id="zVf-5o-imM"/>
+                        <outlet property="headerView" destination="5Ng-Qr-Hmh" id="f6M-Bs-MVe"/>
+                        <outlet property="headerViewHeightConstraint" destination="zzk-xH-ozS" id="Y9W-od-QTP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saQ-I1-WGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1799" y="73"/>
+            <point key="canvasLocation" x="1798.5507246376812" y="72.991071428571431"/>
         </scene>
     </scenes>
     <resources>

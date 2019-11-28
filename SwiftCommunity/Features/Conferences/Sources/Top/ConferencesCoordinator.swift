@@ -18,6 +18,8 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 
     private let component: ConferencesComponent
 
+    var conferenceTransition: ConferenceTransition?
+
     // MARK: Initialization
 
     public init(navigator: Navigator,
@@ -38,16 +40,12 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
     override public func prepareTransition(for route: ConferencesRoute) -> NavigationTransition {
         switch route {
         case .conferences:
-            let viewController = component.viewBuilder.makeConferencesCollectionViewController(router: unownedRouter)
+            let viewController = component.viewBuilder.makeConferencesCollectionViewController(router: unownedRouter, builder: component.unownedViewBuilder)
             return .push(viewController)
 
         case .conferenceDetail(let conferenceMetaData):
             let viewController = component.viewBuilder.makeConferenceDetailViewController(conferenceMetaData: conferenceMetaData, router: unownedRouter)
             return .push(viewController)
-
-        case .conferenceEditionDetail(let conferenceMetaData, let conferenceEdition):
-            let videosComponentPresentable = component.trigger(.videos(conferenceMetaData, conferenceEdition)) as! ComponentPresentableWrapper
-            return .present(videosComponentPresentable.presentable)
 
         case .video(let videoMetaData):
             let videosComponentPresentable = component.trigger(.video(videoMetaData)) as! ComponentPresentableWrapper
@@ -63,7 +61,6 @@ public class ConferencesCoordinator: NavigationCoordinator<ConferencesRoute> {
 public enum ConferencesRoute: Route {
     case conferences
     case conferenceDetail(ConferenceMetaData)
-    case conferenceEditionDetail(ConferenceMetaData, ConferenceEdition)
     case video(VideoMetaData)
     case close
 }

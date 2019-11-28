@@ -15,10 +15,15 @@ import XCoordinator
 
 class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuilder, EmptyInterface, ConferencesComponentRoute>, ConferencesViewBuilder {
 
+    public var unownedViewBuilder: UnownedWrapper<ConferencesComponent> {
+        return UnownedWrapper(self)
+    }
+
     // MARK: APIs
 
-    func makeConferencesCollectionViewController(router: UnownedRouter<ConferencesRoute>) -> ConferencesCollectionViewController {
+    func makeConferencesCollectionViewController(router: UnownedRouter<ConferencesRoute>, builder: UnownedWrapper<ConferencesComponent>?) -> ConferencesCollectionViewController {
         let viewController = ConferencesCollectionViewController.instantiate(with: viewControllerContext)
+        viewController.builder = unownedViewBuilder
         let viewModel = ConferencesCollectionViewModel(router: router, dependency: dependency)
         viewController.viewModel = viewModel
 
@@ -41,13 +46,13 @@ class ConferencesComponent: Component<ConferencesDependency, ConferencesViewBuil
 // MARK: - ConferencesViewBuilder
 
 protocol ConferencesViewBuilder {
-    func makeConferencesCollectionViewController(router: UnownedRouter<ConferencesRoute>) -> ConferencesCollectionViewController
+    func makeConferencesCollectionViewController(router: UnownedRouter<ConferencesRoute>, builder: UnownedWrapper<ConferencesComponent>?) -> ConferencesCollectionViewController
     func makeConferenceDetailViewController(conferenceMetaData: ConferenceMetaData, router: UnownedRouter<ConferencesRoute>) -> ConferenceDetailViewController
 }
 
 // MARK: - ConferencesComponentRouter
 
-public protocol ConferencesComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == ConferencesComponentRoute {}
+public protocol ConferencesComponentRouterProtocol: ComponentRouter where ComponentRouteType == ConferencesComponentRoute {}
 
 extension ConferencesComponentRouterProtocol where ComponentRouteType == ConferencesComponentRoute {
 

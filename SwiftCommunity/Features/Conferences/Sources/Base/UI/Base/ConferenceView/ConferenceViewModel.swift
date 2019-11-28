@@ -7,7 +7,7 @@ import DataModels
 import SuperArcCoreUI
 import SuperArcCore
 
-class ConferenceViewModel: ViewModel {
+struct ConferenceViewModel {
 
     // MARK: Properties
 
@@ -30,6 +30,7 @@ class ConferenceViewModel: ViewModel {
 
         return bannerImage
     }
+
     // Private
 
     private var conferencesService: ConferencesServiceProtocol
@@ -39,6 +40,5 @@ class ConferenceViewModel: ViewModel {
     init(conferenceMetaData: ConferenceMetaData, conferencesService: ConferencesServiceProtocol) {
         self.conferenceMetaData = conferenceMetaData
         self.conferencesService = conferencesService
-        super.init()
     }
 }

@@ -79,7 +79,7 @@ public class AuthorsInterface: AuthorsInterfaceProtocol {
 
 // MARK: - AuthorsComponentRouter
 
-public protocol AuthorsComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == AuthorsComponentRoute {}
+public protocol AuthorsComponentRouterProtocol: ComponentRouter where ComponentRouteType == AuthorsComponentRoute {}
 
 extension AuthorsComponentRouterProtocol where ComponentRouteType == AuthorsComponentRoute {
 
