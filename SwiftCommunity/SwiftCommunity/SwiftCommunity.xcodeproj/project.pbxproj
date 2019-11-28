@@ -112,7 +112,6 @@
 		F6D2D35F2382CB440046A8D1 /* OpenConferencesDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2D35E2382CB440046A8D1 /* OpenConferencesDependency.swift */; };
 		F6DFE6BA22FA26970091ECE8 /* OnboardingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6B922FA26960091ECE8 /* OnboardingComponent.swift */; };
 		F6DFE6BE22FA35D90091ECE8 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DFE6BD22FA35D90091ECE8 /* AppComponent.swift */; };
-		F6E2323D230A87F7003FBFA5 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2323C230A87F7003FBFA5 /* AboutViewModel.swift */; };
 		F6E8D16222CA9EC900213675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D16122CA9EC900213675 /* AppDelegate.swift */; };
 		F6E8D16922CA9ECA00213675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16822CA9ECA00213675 /* Assets.xcassets */; };
 		F6E8D16C22CA9ECA00213675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D16A22CA9ECA00213675 /* LaunchScreen.storyboard */; };
@@ -285,7 +284,6 @@
 		F6D2D35E2382CB440046A8D1 /* OpenConferencesDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenConferencesDependency.swift; sourceTree = "<group>"; };
 		F6DFE6B922FA26960091ECE8 /* OnboardingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingComponent.swift; sourceTree = "<group>"; };
 		F6DFE6BD22FA35D90091ECE8 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
-		F6E2323C230A87F7003FBFA5 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
 		F6E8D15E22CA9EC900213675 /* SwiftCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E8D16122CA9EC900213675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E8D16822CA9ECA00213675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -577,7 +575,6 @@
 			isa = PBXGroup;
 			children = (
 				F66C90C922E1FE9B006CA2BB /* ViewController */,
-				F6E23239230A87C3003FBFA5 /* ViewModel */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -812,14 +809,6 @@
 				F66C916D22E66E98006CA2BB /* Base */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		F6E23239230A87C3003FBFA5 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F6E2323C230A87F7003FBFA5 /* AboutViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F6E8D15522CA9EC900213675 = {
@@ -1126,7 +1115,6 @@
 				F646EBD82321212100792DB5 /* Endpoint+Extensions.swift in Sources */,
 				F66C905422E09DF2006CA2BB /* DashboardCoordinator.swift in Sources */,
 				F64E70602305EB98005D066D /* MoreViewModel.swift in Sources */,
-				F6E2323D230A87F7003FBFA5 /* AboutViewModel.swift in Sources */,
 				F6D2D35F2382CB440046A8D1 /* OpenConferencesDependency.swift in Sources */,
 				F66C90CB22E1FEA8006CA2BB /* AboutViewController.swift in Sources */,
 			);
