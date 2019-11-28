@@ -143,7 +143,7 @@ class ContentTableViewController: TableViewController<ContentTableViewModel>, St
             return
         }
 
-        let viewController = builder.wrappedValue.makeDashboardViewController(forSection: sectionID, with: builder)
+        let viewController = builder.wrappedValue.makeContentViewController(forSection: sectionID, with: builder)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

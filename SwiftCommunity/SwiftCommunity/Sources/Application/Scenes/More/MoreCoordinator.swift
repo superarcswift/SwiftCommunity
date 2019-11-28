@@ -48,7 +48,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
                 return .push(viewController)
 
             case .algorithms:
-                let viewController = algorithmComponent.makeDashboardViewController(forSection: nil, with: algorithmComponent.unownedViewBuilder)
+                let viewController = algorithmComponent.makeContentViewController(with: algorithmComponent.unownedViewBuilder)
                 return .push(viewController)
 
             case .acknowledgements:

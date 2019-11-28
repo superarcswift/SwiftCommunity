@@ -39,15 +39,18 @@ class MoreComponent: Component<MoreDependency, MoreViewBuilder, EmptyInterface, 
     }
 
     func makeAboutViewController(router: UnownedRouter<MoreRoute>) -> UIViewController {
+        let path = Bundle.main.path(forResource: "README", ofType: "md")!
+        let contentURL = URL(fileURLWithPath: path)
+
         let viewController = AboutViewController.instantiate(with: viewControllerContext)
-        let viewModel = AboutViewModel()
+        let viewModel = MarkdownViewModel(resourceURL: contentURL)
         viewController.viewModel = viewModel
         return viewController
     }
 
     func makeContentLicensesViewController(router: UnownedRouter<MoreRoute>) -> UIViewController {
         let contentURL = dependency.gitService.localURL(for: "LICENSE")
-        let viewController = MarkdownViewController()
+        let viewController = LicensesViewController.instantiate(with: viewControllerContext)
         viewController.viewModel = MarkdownViewModel(resourceURL: contentURL)
         return viewController
     }

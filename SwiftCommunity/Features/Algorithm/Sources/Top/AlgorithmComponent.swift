@@ -22,7 +22,11 @@ public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBui
 
     // MARK: APIs
 
-    public func makeDashboardViewController(forSection sectionID: String?, with builder: UnownedWrapper<AlgorithmComponent>?) -> UIViewController {
+    public func makeContentViewController(with builder: UnownedWrapper<AlgorithmComponent>?) -> UIViewController {
+        return makeContentViewController(forSection: nil, with: builder)
+    }
+
+    public func makeContentViewController(forSection sectionID: String?, with builder: UnownedWrapper<AlgorithmComponent>?) -> UIViewController {
         let viewController = ContentTableViewController.instantiate(with: viewControllerContext)
         viewController.builder = builder
         viewController.sectionID = sectionID
@@ -34,5 +38,5 @@ public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBui
 // MARK: - AlgorithmViewBuilder
 
 public protocol AlgorithmViewBuilder: ViewBuildable {
-    func makeDashboardViewController(forSection sectionID: String?, with builder: UnownedWrapper<AlgorithmComponent>?) -> UIViewController
+    func makeContentViewController(forSection sectionID: String?, with builder: UnownedWrapper<AlgorithmComponent>?) -> UIViewController
 }
