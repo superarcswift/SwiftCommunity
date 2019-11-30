@@ -19,7 +19,7 @@ public class ConferenceDetailViewController: ViewController<ConferenceDetailView
 
     private struct Constants {
         static let headerViewExpandedHeight: CGFloat = 150.0
-        static let headerViewCollapsedHeight: CGFloat = 88
+        static let headerViewCollapsedHeight: CGFloat = 44 + UIApplication.shared.statusBarFrame.size.height
     }
 
     // Static
@@ -263,7 +263,7 @@ extension ConferenceDetailViewController {
                     gesture.isEnabled = true
                 }
                 dismissalAnimator!.startAnimation()
-            
+
             default:
                 fatalError("Impossible gesture state? \(gesture.state.rawValue)")
         }
