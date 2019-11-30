@@ -46,8 +46,6 @@ public class ConferencesCollectionViewController: ViewController<ConferencesColl
         collectionView.registerNib(ConferenceCollectionViewCell.self)
 
         titleKey = "conferences"
-
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
 
     override public func setupBindings() {

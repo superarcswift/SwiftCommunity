@@ -49,6 +49,16 @@ public class ConferenceDetailViewController: ViewController<ConferenceDetailView
 
     private var startingContentOffset: CGFloat?
 
+    final class DismissalScreenEdgePanGesture: UIScreenEdgePanGestureRecognizer {}
+    private lazy var dismissalScreenEdgePanGesture: DismissalScreenEdgePanGesture = {
+        let pan = DismissalScreenEdgePanGesture()
+        pan.edges = .left
+        return pan
+    }()
+
+    private var interactiveStartingPoint: CGPoint?
+    private var dismissalAnimator: UIViewPropertyAnimator?
+
     private let disposeBag = DisposeBag()
 
     // MARK: Lifecycles
@@ -58,28 +68,34 @@ public class ConferenceDetailViewController: ViewController<ConferenceDetailView
 
         collectionView.delegate = self
 
-        // https://stackoverflow.com/questions/23786198/uicollectionview-how-can-i-remove-the-space-on-top-first-cells-row
-        collectionView.contentInsetAdjustmentBehavior = .never
-        collectionView.contentInset.top = Constants.headerViewExpandedHeight
-
-        collectionView.registerReusableView(ConferenceDetailSectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
-
-        collectionView.registerNib(VideosCollectionViewCell.self)
-
+        // Make navigationBar transparent.
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.view.backgroundColor = .clear
 
+        // Prepare `collectionView`.
+        // https://stackoverflow.com/questions/23786198/uicollectionview-how-can-i-remove-the-space-on-top-first-cells-row
+        collectionView.contentInsetAdjustmentBehavior = .never
+        collectionView.contentInset.top = Constants.headerViewExpandedHeight
+        collectionView.registerReusableView(ConferenceDetailSectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
+        collectionView.registerNib(VideosCollectionViewCell.self)
+
         bannerImageView.image = viewModel.conferenceViewModel.bannerImage
 
-        // Setup Header
+        // Setup blurring effect to `bannerImageView`.
         blurringAnimator.addAnimations { [weak self] in
             self?.headerVisualEffectView.effect = UIBlurEffect(style: .light)
         }
         blurringAnimator.startAnimation()
         blurringAnimator.pauseAnimation()
         blurringAnimator.pausesOnCompletion = true
+
+        // Setup dismissal screen gesture.
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        dismissalScreenEdgePanGesture.addTarget(self, action: #selector(handleDismissalPan(gesture:)))
+        dismissalScreenEdgePanGesture.delegate = self
+        view.addGestureRecognizer(dismissalScreenEdgePanGesture)
     }
 
     override public func setupBindings() {
@@ -144,6 +160,114 @@ public class ConferenceDetailViewController: ViewController<ConferenceDetailView
         blurringAnimator.stopAnimation(true)
     }
 
+}
+
+// MARK: - Interaction dismissal
+
+extension ConferenceDetailViewController {
+
+    private func didSuccessfullyDragDownToDismiss() {
+        // Preventing interaction whild dismissing.
+        isDismissing = true
+        view.isUserInteractionEnabled = false
+        headerVisualEffectView.removeFromSuperview()
+
+        navigationController?.popViewController(animated: true)
+    }
+
+    private func didCancelDismissalTransition() {
+        interactiveStartingPoint = nil
+        dismissalAnimator = nil
+    }
+
+    @objc func handleDismissalPan(gesture: UIPanGestureRecognizer) {
+
+        let isScreenEdgePan = gesture.isKind(of: DismissalScreenEdgePanGesture.self)
+        let canStartDragDownToDismissPan = !isScreenEdgePan
+
+        // Don't do anything when it's not in the drag down mode
+        if canStartDragDownToDismissPan { return }
+
+        let targetAnimatedView = gesture.view!
+        let startingPoint: CGPoint
+
+        if let p = interactiveStartingPoint {
+            startingPoint = p
+        } else {
+            // Initial location
+            startingPoint = gesture.location(in: nil)
+            interactiveStartingPoint = startingPoint
+        }
+
+        let currentLocation = gesture.location(in: nil)
+        let progress = isScreenEdgePan ? (gesture.translation(in: targetAnimatedView).x / 100) : (currentLocation.y - startingPoint.y) / 100
+        let targetShrinkScale: CGFloat = 0.86
+        let targetCornerRadius: CGFloat = 10.0
+
+        func createInteractiveDismissalAnimatorIfNeeded() -> UIViewPropertyAnimator {
+            if let animator = dismissalAnimator {
+                return animator
+            }
+
+            let animator = UIViewPropertyAnimator(duration: 0, curve: .linear, animations: {
+                targetAnimatedView.transform = .init(scaleX: targetShrinkScale, y: targetShrinkScale)
+                targetAnimatedView.layer.cornerRadius = targetCornerRadius
+            })
+            animator.isReversed = false
+            animator.pauseAnimation()
+            animator.fractionComplete = progress
+            return animator
+        }
+
+        switch gesture.state {
+            case .began:
+                dismissalAnimator = createInteractiveDismissalAnimatorIfNeeded()
+
+            case .changed:
+                dismissalAnimator = createInteractiveDismissalAnimatorIfNeeded()
+
+                let actualProgress = progress
+                let isDismissalSuccess = actualProgress >= 1.0
+
+                dismissalAnimator!.fractionComplete = actualProgress
+
+                if isDismissalSuccess {
+                    dismissalAnimator!.stopAnimation(false)
+                    dismissalAnimator!.addCompletion { [unowned self] (pos) in
+                        switch pos {
+                            case .end:
+                                self.didSuccessfullyDragDownToDismiss()
+                            default:
+                                fatalError("Must finish dismissal at end!")
+                        }
+                    }
+                    dismissalAnimator!.finishAnimation(at: .end)
+            }
+
+            case .ended, .cancelled:
+                if dismissalAnimator == nil {
+                    // Gesture's too quick that it doesn't have dismissalAnimator!
+                    print("Too quick there's no animator!")
+                    didCancelDismissalTransition()
+                    return
+                }
+
+                // Ended, Animate back to start
+                dismissalAnimator!.pauseAnimation()
+                dismissalAnimator!.isReversed = true
+
+                // Disable gesture until reverse closing animation finishes.
+                gesture.isEnabled = false
+                dismissalAnimator!.addCompletion { [unowned self] _ in
+                    self.didCancelDismissalTransition()
+                    gesture.isEnabled = true
+                }
+                dismissalAnimator!.startAnimation()
+            
+            default:
+                fatalError("Impossible gesture state? \(gesture.state.rawValue)")
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -241,5 +365,13 @@ extension ConferenceDetailViewController {
         } else {
             scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: -Constants.headerViewCollapsedHeight), animated: true)
         }
+    }
+}
+
+// MARK: - UIGestureRecognizerDelegate
+
+extension ConferenceDetailViewController: UIGestureRecognizerDelegate {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }

@@ -42,6 +42,7 @@ class DismissAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
         // Disable blurring header in `detailViewController`.
         detailViewController.isDismissing = true
+        detailViewController.view.isUserInteractionEnabled = false
 
         containerView.addSubview(listView)
 
@@ -95,6 +96,7 @@ class DismissAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
                 // Restore scrolling behaviour in `detailViewController`
                 detailViewController.isDismissing = false
+                detailViewController.view.isUserInteractionEnabled = true
 
                 // Remove temporary fixes if not success!
                 stretchCardToFillBottom.isActive = false
