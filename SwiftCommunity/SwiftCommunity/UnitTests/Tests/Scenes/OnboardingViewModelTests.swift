@@ -129,7 +129,7 @@ class OnboardingViewModelTests: UnitTestCase {
 
         viewModel.prepareLocalRepository(shouldResetBeforeCloning: true)
 
-        wait(for: [expectation], timeout: Timeout.debug)
+        wait(for: [expectation], timeout: Timeout.short)
     }
 
 }
