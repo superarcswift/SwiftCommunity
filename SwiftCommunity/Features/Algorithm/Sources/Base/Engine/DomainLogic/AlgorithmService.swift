@@ -29,13 +29,14 @@ class AlgorithmService: BaseGitService, AlgorithmServiceProtocol {
 
     // Private
 
+    private var conferencesGitService: ConferencesGitService
     private var root: Section?
 
     // MARK: Initialization
 
-    public convenience init(context: ServiceContext) {
-        let repositoryURL = try! context.configurations.container.resolve(GitRepositoryConfigurationProtocol.self).algorithmRepositoryURL
-        self.init(context: context, remoteRepositoryURL: repositoryURL)
+    public init(context: ServiceContext, remoteRepositoryURL: URL, conferencesGitService: ConferencesGitService) {
+        self.conferencesGitService = conferencesGitService
+        super.init(context: context, remoteRepositoryURL: remoteRepositoryURL)
     }
 
     // MARK: APIs
@@ -71,7 +72,9 @@ class AlgorithmService: BaseGitService, AlgorithmServiceProtocol {
 
     private func fetchData() -> Promise<Section> {
         return Promises.asyncOnGlobalQueue {
-            let jsonURL = Bundle(for: AlgorithmService.self).url(forResource: "index", withExtension: "json")!
+            guard let jsonURL = self.conferencesGitService.localURL(for: "algorithm".combinePath("index.json")) else {
+                throw GitServiceError.fileNotFound
+            }
             let data = try Data(contentsOf: jsonURL)
             let section = try JSONDecoder().decode(Section.self, from: data)
             return section
