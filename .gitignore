@@ -54,7 +54,8 @@ playground.xcworkspace
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 Carthage/Checkouts
-Carthage/Build/*
+Carthage/Build/*.version
+Carthage/Build/iOS/*
 !Carthage/Build/.objective-git.version
 !Carthage/Build/iOS/ObjectiveGit.framework
 !Carthage/Build/.PromiseKit.version
