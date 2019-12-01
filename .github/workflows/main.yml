@@ -33,12 +33,3 @@ jobs:
         env:
           destination: ${{ matrix.destination }}
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
-      - name: Danger
-        run: |
-          npm install -g danger@7.1.4
-          swift run danger-swift ci --dangerfile Dangerfile.swift --id swiftlint
-          swift run danger-swift ci --dangerfile CodeCoverageDangerfile.swift --id codecoverage
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
-          DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
