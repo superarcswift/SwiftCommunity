@@ -82,14 +82,14 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
     func prepareLocalRepository(shouldResetBeforeCloning: Bool) {
 
         // Check if the local repository is existing.
-        guard !dependency.gitService.open() else {
+        guard !dependency.conferencesGitService.open() else {
             updateLocalRepository()
             return
         }
 
         // If the local repository doesn't exist, clone it.
         if shouldResetBeforeCloning {
-            dependency.gitService.reset()
+            dependency.conferencesGitService.reset()
                 .done { [weak self] _ in
                     self?.cloneRemoteRepository()
                 }
@@ -106,7 +106,7 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
 
     private func updateLocalRepository() {
         activity.start()
-        dependency.gitService.update()
+        dependency.conferencesGitService.update()
             .done { [weak self] _ in
                 self?.isUpdated.onNext(true)
             }
@@ -121,7 +121,7 @@ class OnboardingViewModel: CoordinatedDIViewModel<OnboardingRoute, OnboardingDep
 
     private func cloneRemoteRepository() {
         activity.start()
-        dependency.gitService.clone(progressHandler: { _, _ in
+        dependency.conferencesGitService.clone(progressHandler: { _, _ in
                 //print(progress)
             })
             .done { [weak self] _ in

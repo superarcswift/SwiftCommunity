@@ -5,4 +5,4 @@ xcodebuild test \
     -scheme SwiftCommunityUITests \
     -configuration DEBUG \
     -destination "platform=iOS Simulator,name=iPhone 11" \
-    -derivedDataPath ./build/DerivedData
+    -derivedDataPath ./.build/DerivedData

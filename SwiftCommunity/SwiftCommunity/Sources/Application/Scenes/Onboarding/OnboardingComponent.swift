@@ -9,7 +9,7 @@ import SuperArcCore
 import SuperArcFoundation
 import XCoordinator
 
-typealias OnboardingDependency = HasGitService
+typealias OnboardingDependency = HasConferencesGitService
 
 protocol OnboardingViewBuilder: ViewBuildable {
     func makeOnboardingViewController(router: UnownedRouter<OnboardingRoute>) -> OnboardingViewController

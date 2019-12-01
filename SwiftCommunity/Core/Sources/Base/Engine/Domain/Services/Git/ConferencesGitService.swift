@@ -4,7 +4,13 @@
 
 import SuperArcCore
 
-public class ConferencesGitService: BaseGitService {
+public protocol HasConferencesGitService {
+    var conferencesGitService: ConferencesGitServiceProtocol { get }
+}
+
+public protocol ConferencesGitServiceProtocol: GitServiceProtocol {}
+
+public class ConferencesGitService: BaseGitService, ConferencesGitServiceProtocol {
 
     // MARK: Properties
 

@@ -32,9 +32,9 @@ extension DashboardComponent: HasAuthorsService {
     }
 }
 
-extension DashboardComponent: HasGitService {
+extension DashboardComponent: HasConferencesGitService {
 
-    var gitService: GitServiceProtocol {
+    var conferencesGitService: ConferencesGitServiceProtocol {
         return dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesGitService.self)
     }
 }

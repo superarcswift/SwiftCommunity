@@ -58,7 +58,7 @@ class AppManager: HasConfigurations {
 
     private func setupServices() {
         let gitService = ConferencesGitService(context: core.context.engine.serviceContext)
-        core.context.engine.serviceRegistry.register(gitService, for: ConferencesGitService.self)
+        core.context.engine.serviceRegistry.register(gitService, for: ConferencesGitServiceProtocol.self)
 
         let videosContentProvider = FilesystemVideosContentProvider(rootContentFolderPath: gitService.baseContentPath)
         let videosService = VideosService(context: core.context.engine.serviceContext, contentProvider: videosContentProvider)

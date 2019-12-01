@@ -2,6 +2,8 @@
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
+import Algorithm
+
 import CoreUX
 import Core
 import SuperArcCoreComponent
@@ -10,7 +12,7 @@ import SuperArcCore
 import SuperArcFoundation
 import XCoordinator
 
-typealias MoreDependency = HasGitService
+typealias MoreDependency = HasConferencesGitService
 
 /// Protocol used to mock for testing purpose.
 protocol MoreViewBuilder: ViewBuildable {
@@ -49,10 +51,21 @@ class MoreComponent: Component<MoreDependency, MoreViewBuilder, EmptyInterface, 
     }
 
     func makeContentLicensesViewController(router: UnownedRouter<MoreRoute>) -> UIViewController {
-        let contentURL = dependency.gitService.localURL(for: "LICENSE")
+        let contentURL = dependency.conferencesGitService.localURL(for: "LICENSE")
         let viewController = LicensesViewController.instantiate(with: viewControllerContext)
         viewController.viewModel = MarkdownViewModel(resourceURL: contentURL)
         return viewController
     }
 
+}
+
+extension MoreComponent: AlgorithmDependency {
+
+    var serviceContext: ServiceContext {
+        dependencyProvider.context.engine.serviceContext
+    }
+
+    var conferencesGitService: ConferencesGitServiceProtocol {
+        dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesGitServiceProtocol.self)
+    }
 }

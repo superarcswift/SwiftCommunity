@@ -6,7 +6,7 @@ import Core
 import ObjectiveGit
 import PromiseKit
 
-class GitServiceMock: GitServiceProtocol {
+class BaseGitServiceMock: GitServiceProtocol {
 
     var baseLocalRepositoryPath: String = ""
     var localRepository: GTRepository?
@@ -47,4 +47,8 @@ class GitServiceMock: GitServiceProtocol {
     func localURL(for filePath: String) -> URL? {
         return nil
     }
+}
+
+class ConferencesGitServiceMock: BaseGitServiceMock, ConferencesGitServiceProtocol {
+
 }
