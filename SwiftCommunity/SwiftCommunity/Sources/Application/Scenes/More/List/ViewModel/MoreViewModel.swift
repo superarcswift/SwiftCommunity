@@ -57,7 +57,7 @@ class MoreViewModel: CoordinatedDIViewModel<MoreRoute, MoreDependency>, MoreView
     // MARK: APIs
 
     func reset() {
-        dependency.gitService.reset()
+        dependency.conferencesGitService.reset()
             .done { [weak self] isSuccessful in
                 guard isSuccessful else {
                     self?.notification.onNext(StandardNotification(message: "Git repository can not be reseted. Please reinstall the app if the problem persists", style: .error))

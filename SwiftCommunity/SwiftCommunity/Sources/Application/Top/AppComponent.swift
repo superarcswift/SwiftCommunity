@@ -10,9 +10,9 @@ import SuperArcFoundation
 
 class AppComponent: Component<EmptyDependency, EmptyViewBuildable, EmptyInterface, EmptyComponentRoute> {}
 
-extension AppComponent: HasGitService {
+extension AppComponent: HasConferencesGitService {
 
-    var gitService: GitServiceProtocol {
-        return dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesGitService.self)
+    var conferencesGitService: ConferencesGitServiceProtocol {
+        return dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesGitServiceProtocol.self)
     }
 }

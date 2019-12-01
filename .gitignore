@@ -3,7 +3,6 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-build/
 DerivedData/
 
 ## Various settings
@@ -55,7 +54,11 @@ playground.xcworkspace
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 Carthage/Checkouts
-Carthage/Build
+Carthage/Build/*
+!Carthage/Build/.objective-git.version
+!Carthage/Build/iOS/ObjectiveGit.framework
+!Carthage/Build/.PromiseKit.version
+!Carthage/Build/iOS/PromiseKit.framework
 
 # fastlane
 #

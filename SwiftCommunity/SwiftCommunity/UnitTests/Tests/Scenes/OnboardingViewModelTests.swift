@@ -49,7 +49,7 @@ class OnboardingViewModelTests: UnitTestCase {
     func testPrepareLocalRepositoryWithoutResetShouldCloneAndTriggerIsReady() {
         let expectation = self.expectation(description: #function)
 
-        let gitService = viewModel.dependency.gitService as! GitServiceMock
+        let gitService = viewModel.dependency.conferencesGitService as! ConferencesGitServiceMock
         gitService.openResult = false
 
         viewModel.isReady
@@ -68,7 +68,7 @@ class OnboardingViewModelTests: UnitTestCase {
     func testPrepareLocalRepositoryWithResetShouldCloneAndTriggerIsReady() {
         let expectation = self.expectation(description: #function)
 
-        let gitService = viewModel.dependency.gitService as! GitServiceMock
+        let gitService = viewModel.dependency.conferencesGitService as! ConferencesGitServiceMock
         gitService.openResult = false
 
         viewModel.isReady
@@ -117,7 +117,7 @@ class OnboardingViewModelTests: UnitTestCase {
     }
 
     func testPrepareLocalRepositoryWithResetTriggersErrorNotification() {
-        let gitService = viewModel.dependency.gitService as! GitServiceMock
+        let gitService = viewModel.dependency.conferencesGitService as! ConferencesGitServiceMock
         gitService.updateResult = Result.rejected(ErrorMock.someError)
 
         let expectation = self.expectation(description: #function)
@@ -129,7 +129,7 @@ class OnboardingViewModelTests: UnitTestCase {
 
         viewModel.prepareLocalRepository(shouldResetBeforeCloning: true)
 
-        wait(for: [expectation], timeout: Timeout.debug)
+        wait(for: [expectation], timeout: Timeout.short)
     }
 
 }
@@ -146,8 +146,7 @@ class RouterMock: Router {
 }
 
 class DependencyMock: OnboardingDependency {
-
-    var gitService: GitServiceProtocol = GitServiceMock()
+    var conferencesGitService: ConferencesGitServiceProtocol = ConferencesGitServiceMock()
 
     init() {}
 }

@@ -8,10 +8,6 @@ import PromiseKit
 import ObjectiveGit
 import Foundation
 
-public protocol HasGitService {
-    var gitService: GitServiceProtocol { get }
-}
-
 public protocol GitServiceProtocol {
 
     var baseLocalRepositoryPath: String { get }
@@ -172,7 +168,8 @@ open class BaseGitService: Service, GitServiceProtocol {
     }
 }
 
-enum GitServiceError: Error {
+public enum GitServiceError: Error {
     case invalidURL
     case noLocalRepository
+    case fileNotFound
 }

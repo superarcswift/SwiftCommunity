@@ -18,7 +18,7 @@ class MoreCoordinator: NavigationCoordinator<MoreRoute> {
 
     private var component: MoreComponent
 
-    private lazy var algorithmComponent: AlgorithmComponent = AlgorithmComponent(dependency: component.dependencyProvider.context.engine,
+    private lazy var algorithmComponent: AlgorithmComponent = AlgorithmComponent(dependency: component,
                                                                                  viewControllerContext: component.viewControllerContext,
                                                                                  dependencyProvider: component.dependencyProvider)
 

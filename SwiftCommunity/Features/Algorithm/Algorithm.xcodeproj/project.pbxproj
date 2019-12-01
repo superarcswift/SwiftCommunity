@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F61C4A40238CA0A600939F72 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C4A3F238CA0A600939F72 /* ContentViewModel.swift */; };
-		F63844FD2389B34400060D2F /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = F63844FC2389B34400060D2F /* index.json */; };
 		F63845022389B4C400060D2F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845012389B4C400060D2F /* Section.swift */; };
 		F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845052389B8DF00060D2F /* AlgorithmService.swift */; };
 		F638450A2389CB3300060D2F /* ContentTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845092389CB3300060D2F /* ContentTableViewModel.swift */; };
@@ -46,7 +45,6 @@
 
 /* Begin PBXFileReference section */
 		F61C4A3F238CA0A600939F72 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		F63844FC2389B34400060D2F /* index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = index.json; path = /Users/atran/Desktop/Projects/iOS/SwiftCommunityContent/algorithm/index.json; sourceTree = "<absolute>"; };
 		F63845012389B4C400060D2F /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		F63845052389B8DF00060D2F /* AlgorithmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmService.swift; sourceTree = "<group>"; };
 		F63845092389CB3300060D2F /* ContentTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewModel.swift; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 		F674C2822388A18E004FA46C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F63844FC2389B34400060D2F /* index.json */,
 				F67BF3EF23889672003BAFB9 /* Algorithm.h */,
 				F67BF3F023889672003BAFB9 /* Info.plist */,
 			);
@@ -375,7 +372,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F63844FD2389B34400060D2F /* index.json in Resources */,
 				F674C2922388B276004FA46C /* Content.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

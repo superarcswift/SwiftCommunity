@@ -18,7 +18,10 @@ public class AlgorithmComponent: Component<AlgorithmDependency, AlgorithmViewBui
         return UnownedWrapper(self)
     }
 
-    lazy var algorithmService = AlgorithmService(context: dependency.serviceContext)
+    lazy var algorithmService: AlgorithmService = {
+        let repositoryURL = try! dependency.serviceContext.configurations.container.resolve(GitRepositoryConfigurationProtocol.self).algorithmRepositoryURL
+        return AlgorithmService(context: dependency.serviceContext, remoteRepositoryURL: repositoryURL, conferencesGitService: dependency.conferencesGitService)
+    }()
 
     // MARK: APIs
 
