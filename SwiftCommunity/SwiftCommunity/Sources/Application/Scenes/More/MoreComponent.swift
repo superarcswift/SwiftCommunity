@@ -65,7 +65,7 @@ extension MoreComponent: AlgorithmDependency {
         dependencyProvider.context.engine.serviceContext
     }
 
-    var conferencesGitService: ConferencesGitService {
-        dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesGitService.self)
+    var conferencesGitService: ConferencesGitServiceProtocol {
+        dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesGitServiceProtocol.self)
     }
 }

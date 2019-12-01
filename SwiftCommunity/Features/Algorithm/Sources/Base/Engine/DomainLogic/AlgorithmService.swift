@@ -29,12 +29,12 @@ class AlgorithmService: BaseGitService, AlgorithmServiceProtocol {
 
     // Private
 
-    private var conferencesGitService: ConferencesGitService
+    private var conferencesGitService: ConferencesGitServiceProtocol
     private var root: Section?
 
     // MARK: Initialization
 
-    public init(context: ServiceContext, remoteRepositoryURL: URL, conferencesGitService: ConferencesGitService) {
+    public init(context: ServiceContext, remoteRepositoryURL: URL, conferencesGitService: ConferencesGitServiceProtocol) {
         self.conferencesGitService = conferencesGitService
         super.init(context: context, remoteRepositoryURL: remoteRepositoryURL)
     }

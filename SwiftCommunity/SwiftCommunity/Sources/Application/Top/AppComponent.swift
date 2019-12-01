@@ -12,7 +12,7 @@ class AppComponent: Component<EmptyDependency, EmptyViewBuildable, EmptyInterfac
 
 extension AppComponent: HasConferencesGitService {
 
-    var conferencesGitService: ConferencesGitService {
-        return dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesGitService.self)
+    var conferencesGitService: ConferencesGitServiceProtocol {
+        return dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesGitServiceProtocol.self)
     }
 }

@@ -34,7 +34,7 @@ extension DashboardComponent: HasAuthorsService {
 
 extension DashboardComponent: HasConferencesGitService {
 
-    var conferencesGitService: ConferencesGitService {
+    var conferencesGitService: ConferencesGitServiceProtocol {
         return dependencyProvider.context.engine.serviceRegistry.resolve(type: ConferencesGitService.self)
     }
 }

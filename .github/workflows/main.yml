@@ -28,8 +28,17 @@ jobs:
 
       - name: Build and test
         run: |
-          set -o pipefail && xcodebuild clean test -workspace SwiftCommunity.xcworkspace -scheme SwiftCommunity -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES -derivedDataPath ./build/DerivedData | xcpretty -c && exit ${PIPESTATUS[0]}
+          xcodebuild clean test -workspace SwiftCommunity.xcworkspace -scheme SwiftCommunity -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES -derivedDataPath ./.build/DerivedData | xcpretty -c && exit ${PIPESTATUS[0]}
           bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}
         env:
           destination: ${{ matrix.destination }}
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Danger
+        run: |
+          npm install -g danger@7.1.4
+          swift run danger-swift ci --dangerfile Dangerfile.swift --id swiftlint
+          swift run danger-swift ci --dangerfile CodeCoverageDangerfile.swift --id codecoverage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
