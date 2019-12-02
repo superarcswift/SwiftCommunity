@@ -1,0 +1,10 @@
+{
+  "commitish" : "1.6.0",
+  "iOS" : [
+    {
+      "name" : "MarkdownView",
+      "hash" : "a2ef31d7788a256fbd92f8f348c63c4b19a04dd76caf62423e0505bfe389631d",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ]
+}

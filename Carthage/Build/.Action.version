@@ -1,0 +1,10 @@
+{
+  "commitish" : "4.0.1",
+  "iOS" : [
+    {
+      "name" : "Action",
+      "hash" : "0db48bc43fffb7c2a5dbc4ecfff92879bc3b4456201407136ff6f93b48d7773c",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ]
+}

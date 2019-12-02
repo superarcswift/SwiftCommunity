@@ -1,0 +1,11 @@
+framework module YoutubeKit {
+  umbrella header "YoutubeKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module YoutubeKit.Swift {
+    header "YoutubeKit-Swift.h"
+    requires objc
+}

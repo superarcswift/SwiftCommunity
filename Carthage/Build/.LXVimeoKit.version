@@ -1,0 +1,10 @@
+{
+  "commitish" : "fd6c0d2c87ebb5765b78e36c6cfd13b9f8cd4199",
+  "iOS" : [
+    {
+      "name" : "LXVimeoKit",
+      "hash" : "44340cc845ae3ae1f255b0f186c8c97ded152c0b95771855948200586778cc5f",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ]
+}
