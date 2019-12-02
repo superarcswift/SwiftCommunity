@@ -1,0 +1,35 @@
+{
+  "commitish" : "2.0.5",
+  "iOS" : [
+    {
+      "name" : "XCoordinatorRx",
+      "hash" : "c99dcee3a89f59f4c860f49c4245663caeb66d5f18ef7bf970081a56908c2088",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    },
+    {
+      "name" : "XCoordinatorCombine",
+      "hash" : "8c828a24270b45f0200a16e699e61bb3a9dfc47825702e6058a41dc5850e2fa8",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    },
+    {
+      "name" : "XCoordinatorCombine",
+      "hash" : "8c828a24270b45f0200a16e699e61bb3a9dfc47825702e6058a41dc5850e2fa8",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    },
+    {
+      "name" : "XCoordinatorRx",
+      "hash" : "c99dcee3a89f59f4c860f49c4245663caeb66d5f18ef7bf970081a56908c2088",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    },
+    {
+      "name" : "XCoordinator",
+      "hash" : "f1be3a23c630f70046ace4f86ecd1a1d3d0791dd649d35e206ea46e21d38a24b",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    },
+    {
+      "name" : "XCoordinator",
+      "hash" : "f1be3a23c630f70046ace4f86ecd1a1d3d0791dd649d35e206ea46e21d38a24b",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ]
+}

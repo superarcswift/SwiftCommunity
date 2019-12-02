@@ -1,0 +1,11 @@
+framework module MarkdownView {
+  umbrella header "MarkdownView.h"
+
+  export *
+  module * { export * }
+}
+
+module MarkdownView.Swift {
+    header "MarkdownView-Swift.h"
+    requires objc
+}

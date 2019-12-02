@@ -1,0 +1,10 @@
+{
+  "commitish" : "1.5.0",
+  "iOS" : [
+    {
+      "name" : "Hero",
+      "hash" : "30cd0919957e8f4277b45cc5204a7bb653ace76feec44e134813882ac81aaf63",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ]
+}
