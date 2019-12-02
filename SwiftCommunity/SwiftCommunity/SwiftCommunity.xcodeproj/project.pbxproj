@@ -196,6 +196,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D620529923952F8900415F90 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D620529A23952F8A00415F90 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F604E3C12317265C00BFFE6A /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
 		F604E3C4231726E000BFFE6A /* UnitTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestCase.swift; sourceTree = "<group>"; };
 		F604E3C62317389F00BFFE6A /* GitServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitServiceMock.swift; sourceTree = "<group>"; };
@@ -957,6 +959,7 @@
 				Base,
 				de,
 				"vi-VN",
+				ar,
 			);
 			mainGroup = F6E8D15522CA9EC900213675;
 			productRefGroup = F6E8D15F22CA9EC900213675 /* Products */;
@@ -1169,6 +1172,7 @@
 				F68F725C231B2FD000D424CB /* Base */,
 				F68F725E231B2FE000D424CB /* de */,
 				F68F725F231B2FE100D424CB /* vi-VN */,
+				D620529A23952F8A00415F90 /* ar */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1179,6 +1183,7 @@
 				F6E8D16B22CA9ECA00213675 /* Base */,
 				F68F7256231B2F3900D424CB /* de */,
 				F68F7257231B2F4400D424CB /* vi-VN */,
+				D620529923952F8900415F90 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

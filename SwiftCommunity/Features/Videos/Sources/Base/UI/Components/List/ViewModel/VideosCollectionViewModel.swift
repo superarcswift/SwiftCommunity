@@ -61,7 +61,7 @@ class VideosCollectionViewModel: CoordinatedDIViewModel<VideosRoute, VideosDepen
     var videos = BehaviorRelay<[VideoViewModel]>(value: [])
     var title: String {
         guard let conferenceMetaData = conferenceMetaData, let conferenceEdition = conferenceEdition else {
-            return "Videos"
+            return "videos"
         }
         return "\(conferenceMetaData.name) - \(conferenceEdition.year)"
     }
