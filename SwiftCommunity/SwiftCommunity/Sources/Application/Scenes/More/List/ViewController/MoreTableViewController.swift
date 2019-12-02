@@ -40,6 +40,7 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
 
         tableView.rowHeight = Constants.UI.defaultRowHeight
         tableView.tableFooterView = UIView(frame: .zero)
+        titleKey = "more"
     }
 
     override func setupBindings() {

@@ -4,6 +4,7 @@
 
 import CoreUX
 import Core
+import SuperArcLocalization
 import SuperArcCoreUI
 import SuperArcCore
 import RxSwift
@@ -29,12 +30,9 @@ class VideosCollectionViewController: ViewController<VideosCollectionViewModel>,
 
     override func setupViews() {
         super.setupViews()
-
         collectionView.delegate = self
-
         collectionView.registerNib(VideosCollectionViewCell.self)
-
-        title = viewModel.outputs.title
+        titleKey = viewModel.outputs.title
     }
 
     override func setupBindings() {
