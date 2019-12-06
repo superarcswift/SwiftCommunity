@@ -1,0 +1,16 @@
+language: objective-c
+
+cache:
+  directories:
+    - .build
+    - ~/.danger-swift
+
+osx_image: xcode11
+
+install:
+  - npm install -g danger@7.1.4
+
+script:
+  - xcodebuild clean test -workspace SwiftCommunity.xcworkspace -scheme SwiftCommunity -destination "platform=iOS Simulator,name=iPhone 11" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES -derivedDataPath ./.build/DerivedData | xcpretty -c && exit ${PIPESTATUS[0]}
+  - swift run danger-swift ci --dangerfile Dangerfile.swift --id swiftlint
+  - swift run danger-swift ci --dangerfile CodeCoverageDangerfile.swift --id codecoverage

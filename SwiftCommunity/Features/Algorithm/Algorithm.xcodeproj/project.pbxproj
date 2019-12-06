@@ -227,19 +227,19 @@
 			isa = PBXGroup;
 			children = (
 				F674C2912388B276004FA46C /* Content.storyboard */,
-				F674C28E2388B253004FA46C /* Dashboard */,
+				F674C28E2388B253004FA46C /* Content */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		F674C28E2388B253004FA46C /* Dashboard */ = {
+		F674C28E2388B253004FA46C /* Content */ = {
 			isa = PBXGroup;
 			children = (
 				F638451F238A745400060D2F /* ViewController */,
 				F638451C2389FB3B00060D2F /* ViewModel */,
 				F63845142389EECD00060D2F /* View */,
 			);
-			path = Dashboard;
+			path = Content;
 			sourceTree = "<group>";
 		};
 		F67BF3E223889672003BAFB9 = {
