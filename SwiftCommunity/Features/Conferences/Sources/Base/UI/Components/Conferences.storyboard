@@ -33,7 +33,7 @@
                         <viewLayoutGuide key="safeArea" id="HZD-VK-4y9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Conferences" image="conference" id="eDv-pO-qF2"/>
-                    <navigationItem key="navigationItem" title="Conferences" id="b19-Yp-MSc"/>
+                    <navigationItem key="navigationItem" id="b19-Yp-MSc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="eIp-aW-8g1" id="5LR-Sz-erH"/>
