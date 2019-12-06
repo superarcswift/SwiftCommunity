@@ -3,6 +3,7 @@ language: objective-c
 cache:
   directories:
     - .build
+    - Carthage
     - ~/.danger-swift
 
 osx_image: xcode11
