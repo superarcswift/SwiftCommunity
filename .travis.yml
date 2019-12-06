@@ -4,6 +4,7 @@ osx_image: xcode11.2
 cache:
   directories:
     - .build
+    - Carthage
     - ~/.danger-swift
 
 osx_image: xcode11
