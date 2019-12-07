@@ -18,6 +18,7 @@ public class ConferenceDetailViewController: ViewController<ConferenceDetailView
     // Constant
 
     private struct Constants {
+        static let offsetThresholdToDismiss: CGFloat = -120
         static let headerViewExpandedHeight: CGFloat = 150.0
         static let headerViewCollapsedHeight: CGFloat = 44 + UIApplication.shared.statusBarFrame.size.height
     }
@@ -313,7 +314,7 @@ extension ConferenceDetailViewController {
         if contentOffSetY > 0 {
             headerViewHeightConstraint.constant = max(Constants.headerViewCollapsedHeight, Constants.headerViewExpandedHeight - contentOffSetY)
         } else if contentOffSetY < 0 {
-            if contentOffSetY < -120 {
+            if contentOffSetY < Constants.offsetThresholdToDismiss {
                 didSuccessfullyDragDownToDismiss()
                 return
             }
