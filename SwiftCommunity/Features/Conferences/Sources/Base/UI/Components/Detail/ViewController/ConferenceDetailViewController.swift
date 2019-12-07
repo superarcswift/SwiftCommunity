@@ -73,6 +73,7 @@ public class ConferenceDetailViewController: ViewController<ConferenceDetailView
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.view.backgroundColor = .clear
+        navigationItem.setHidesBackButton(true, animated: false)
 
         // Prepare `collectionView`.
         // https://stackoverflow.com/questions/23786198/uicollectionview-how-can-i-remove-the-space-on-top-first-cells-row
@@ -311,8 +312,11 @@ extension ConferenceDetailViewController {
 
         if contentOffSetY > 0 {
             headerViewHeightConstraint.constant = max(Constants.headerViewCollapsedHeight, Constants.headerViewExpandedHeight - contentOffSetY)
-
         } else if contentOffSetY < 0 {
+            if contentOffSetY < -120 {
+                didSuccessfullyDragDownToDismiss()
+                return
+            }
             headerViewHeightConstraint.constant = Constants.headerViewExpandedHeight - contentOffSetY
         } else {
             headerViewHeightConstraint.constant = Constants.headerViewExpandedHeight
