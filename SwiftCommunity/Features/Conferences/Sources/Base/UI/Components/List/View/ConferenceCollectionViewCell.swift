@@ -11,4 +11,8 @@ class ConferenceCollectionViewCell: UICollectionViewCell {
     // IBOutlets
 
     @IBOutlet weak var conferenceView: ConferenceView!
+
+    func resetTransform() {
+        transform = .identity
+    }
 }

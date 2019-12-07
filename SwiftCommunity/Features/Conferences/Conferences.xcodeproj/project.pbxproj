@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61C4A6B2391AC4600939F72 /* ConferenceTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C4A6A2391AC4600939F72 /* ConferenceTransition.swift */; };
+		F61C4A6E2391ACBD00939F72 /* PresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C4A6D2391ACBD00939F72 /* PresentAnimator.swift */; };
+		F61C4A702391ACE100939F72 /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C4A6F2391ACE100939F72 /* DismissAnimator.swift */; };
 		F68204AE231F045400098C20 /* SuperArcCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204AD231F045400098C20 /* SuperArcCore.framework */; };
 		F68204B0231F045700098C20 /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204AF231F045700098C20 /* SuperArcCoreUI.framework */; };
 		F68204B2231F045C00098C20 /* SuperArcLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68204B1231F045C00098C20 /* SuperArcLocalization.framework */; };
@@ -54,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61C4A6A2391AC4600939F72 /* ConferenceTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceTransition.swift; sourceTree = "<group>"; };
+		F61C4A6D2391ACBD00939F72 /* PresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimator.swift; sourceTree = "<group>"; };
+		F61C4A6F2391ACE100939F72 /* DismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
 		F68204AD231F045400098C20 /* SuperArcCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68204AF231F045700098C20 /* SuperArcCoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcCoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68204B1231F045C00098C20 /* SuperArcLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperArcLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +132,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61C4A5F2391630A00939F72 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				F61C4A6A2391AC4600939F72 /* ConferenceTransition.swift */,
+				F61C4A6D2391ACBD00939F72 /* PresentAnimator.swift */,
+				F61C4A6F2391ACE100939F72 /* DismissAnimator.swift */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
 		F6749CB62321C0A2000BDC1C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,9 +183,9 @@
 		F6C8A0A1231E949800DD6BFD /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				F6C8A0AA231E949800DD6BFD /* ViewController */,
 				F6C8A0A2231E949800DD6BFD /* ViewModel */,
 				F6C8A0A5231E949800DD6BFD /* View */,
-				F6C8A0AA231E949800DD6BFD /* ViewController */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -215,6 +231,7 @@
 				F6C8A0B4231E949800DD6BFD /* ViewController */,
 				F6C8A0AE231E949800DD6BFD /* ViewModel */,
 				F6C8A0B0231E949800DD6BFD /* View */,
+				F61C4A5F2391630A00939F72 /* Animator */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -511,12 +528,15 @@
 			files = (
 				F6C8A0BF231E949800DD6BFD /* ConferencesCollectionViewModel.swift in Sources */,
 				F6C8A0BB231E949800DD6BFD /* ConferenceDetailSectionHeaderView.swift in Sources */,
+				F61C4A6B2391AC4600939F72 /* ConferenceTransition.swift in Sources */,
 				F6C8A0C3231E949800DD6BFD /* ConferencesCollectionViewController.swift in Sources */,
 				F6C8A0CC231E94ED00DD6BFD /* ConferenceView.swift in Sources */,
 				F6C8A0C2231E949800DD6BFD /* ConferenceCollectionViewCell.swift in Sources */,
 				F6C8A0BD231E949800DD6BFD /* ConferenceDetailViewController.swift in Sources */,
 				F6CAB75A231D3E9F00A0DCF6 /* ConferencesService.swift in Sources */,
 				F6C8A0B8231E949800DD6BFD /* ConferenceDetailViewModel.swift in Sources */,
+				F61C4A702391ACE100939F72 /* DismissAnimator.swift in Sources */,
+				F61C4A6E2391ACBD00939F72 /* PresentAnimator.swift in Sources */,
 				F6C8A0B9231E949800DD6BFD /* Models+RxDataSources.swift in Sources */,
 				F6CAB75C231D3F1D00A0DCF6 /* FilesystemConferencesContentProvider.swift in Sources */,
 				F6C8A0BC231E949800DD6BFD /* ConferenceDetailCollectionViewFlowLayout.swift in Sources */,

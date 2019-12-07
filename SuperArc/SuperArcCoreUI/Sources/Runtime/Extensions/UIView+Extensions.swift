@@ -95,11 +95,16 @@ public extension UIView {
     func addAndStretchSubView(_ subView: UIView) {
         subView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(subView)
+        subView.stretch(to: self)
+    }
+
+    /// Constrain 4 edges of `self` to specified `view`.
+    func stretch(to view: UIView, top: CGFloat = 0, left: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0) {
         NSLayoutConstraint.activate([
-            subView.topAnchor.constraint(equalTo: topAnchor),
-            subView.leftAnchor.constraint(equalTo: leftAnchor),
-            subView.rightAnchor.constraint(equalTo: rightAnchor),
-            subView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            self.leftAnchor.constraint(equalTo: view.leftAnchor, constant: left),
+            self.rightAnchor.constraint(equalTo: view.rightAnchor, constant: right),
+            self.topAnchor.constraint(equalTo: view.topAnchor, constant: top),
+            self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottom)
         ])
     }
 }

@@ -38,7 +38,7 @@ class VideosComponent: Component<VideosDependency, VideosViewBuilder, VideosInte
         return viewController
     }
 
-        override func trigger(_ route: VideosComponentRoute) -> ComponentPresentable? {
+    override func trigger(_ route: VideosComponentRoute) -> ComponentPresentable? {
         return router?.trigger(route)
     }
 }
@@ -99,7 +99,7 @@ public class VideosInterface: VideosInterfaceProtocol {
 
 // MARK: - VideosComponentRouter
 
-public protocol VideosComponentRouterProtocol: ComponentRouter, ComponentRouterIdentifiable where ComponentRouteType == VideosComponentRoute {}
+public protocol VideosComponentRouterProtocol: ComponentRouter where ComponentRouteType == VideosComponentRoute {}
 
 extension VideosComponentRouterProtocol where ComponentRouteType == VideosComponentRoute {
 

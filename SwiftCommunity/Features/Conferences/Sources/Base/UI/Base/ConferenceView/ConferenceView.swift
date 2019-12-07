@@ -5,7 +5,7 @@
 import SuperArcCoreUI
 import SuperArcFoundation
 
-@IBDesignable class ConferenceView: View, ClassNameDerivable, ViewModelBindable {
+@IBDesignable class ConferenceView: View, ClassNameDerivable {
 
     // MARK: Properties
 
@@ -32,6 +32,4 @@ import SuperArcFoundation
             addAndStretchSubView(conferenceView)
         }
     }
-
-    func setupBindings() {}
 }

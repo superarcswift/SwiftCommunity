@@ -16,7 +16,7 @@ import RxCocoa
 import Foundation
 
 protocol ConferenceDetailViewModelInput {
-    var conferenceMetaData: ConferenceMetaData { get }
+    var conferenceViewModel: ConferenceViewModel { get }
     var didSelectVideoTrigger: AnyObserver<VideoViewModel> { get }
 }
 
@@ -26,7 +26,7 @@ protocol ConferenceDetailViewModelOutput {
 
 protocol ConferenceDetailViewModelApi {
     func loadData()
-    func sectionTitle(for index: Int) -> String
+    func sectionTitle(for sectionIndex: Int) -> String?
 }
 
 protocol ConferenceDetailViewModelType {
@@ -56,7 +56,6 @@ public class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute,
 
     // Public
 
-    public let conferenceMetaData: ConferenceMetaData
     public var conferenceEditions = BehaviorRelay<[ConferenceDetailSectionModel]>(value: [])
     public lazy var didSelectVideoTrigger: AnyObserver<VideoViewModel> = showVideoAction.inputs
 
@@ -65,28 +64,27 @@ public class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute,
 
     // Private
 
-    private lazy var showConferenceEditionAction = Action<ConferenceEdition, Void> { [unowned self] conferenceEdition in
-        self.router.rx.trigger(.conferenceEditionDetail(self.conferenceMetaData, conferenceEdition))
-    }
-
     private lazy var showVideoAction = Action<VideoViewModel, Void> { [unowned self] video in
         self.router.rx.trigger(.video(video.videoMetaData))
     }
 
+    let conferenceViewModel: ConferenceViewModel
+
     // MARK: Initialization
 
     init(conferenceMetaData: ConferenceMetaData, router: UnownedRouter<ConferencesRoute>, dependency: ConferencesDependency) {
-        self.conferenceMetaData = conferenceMetaData
+        conferenceViewModel = ConferenceViewModel(conferenceMetaData: conferenceMetaData, conferencesService: dependency.conferencesService)
         super.init(router: router, dependency: dependency)
     }
 
     // MARK: APIs
 
     func loadData() {
-        dependency.conferencesService.fetchVideos(conferenceMetaData: conferenceMetaData)
+        dependency.conferencesService.fetchVideos(conferenceMetaData: conferenceViewModel.conferenceMetaData)
             .mapValues { videos -> ConferenceDetailSectionModel in
-                let videoModels = videos.compactMap { VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService, authorsService: self.dependency.authorsService) }
-                return .videosSection(items: videoModels)
+                let videoSectionDataModels = videos.compactMap { ConferenceDetailSectionDataModel.video(VideoViewModel(videoMetaData: $0, videosService: self.dependency.videosService, authorsService: self.dependency.authorsService)) }
+
+                return ConferenceDetailSectionModel(items: videoSectionDataModels)
             }
             .done { [weak self] sectionModel in
                 self?.conferenceEditions.accept(sectionModel)
@@ -96,11 +94,17 @@ public class ConferenceDetailViewModel: CoordinatedDIViewModel<ConferencesRoute,
             }
     }
 
-    func sectionTitle(for index: Int) -> String {
-        guard index < conferenceEditions.value.count else {
+    func sectionTitle(for sectionIndex: Int) -> String? {
+        guard sectionIndex < conferenceEditions.value.count else {
             fatalError("index is out of bound")
         }
 
-        return String(conferenceEditions.value[index].items.first!.conferenceEditionYear)
+        let sectionModel = conferenceEditions.value[sectionIndex].items.first!
+        switch sectionModel {
+            case .video(let videoViewModel):
+                return videoViewModel.conferenceEditionYear.asString
+            default:
+                return nil
+        }
     }
 }

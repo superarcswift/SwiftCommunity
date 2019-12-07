@@ -15,6 +15,7 @@ protocol ContentTableViewModelInput {}
 
 protocol ContentTableViewModelOutput {
     var section: BehaviorRelay<Section?> { get set }
+    var isReady: BehaviorSubject<Bool> { get set }
 }
 
 protocol ContentTableViewModelApi {

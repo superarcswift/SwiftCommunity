@@ -51,17 +51,7 @@ class ContentTableViewController: TableViewController<ContentTableViewModel>, St
             .bind(to: self.rx.toogleStateView)
             .disposed(by: disposeBag)
 
-        viewModel.outputs.section.asObservable()
-            .observeOn(MainScheduler.instance)
-            .bind { [unowned self] section in
-                guard let section = section else {
-                    return
-                }
-                self.title = section.title
-            }
-            .disposed(by: disposeBag)
-
-        viewModel.isReady
+        viewModel.outputs.isReady
             .subscribe( onNext: { [weak self] isReady in
                 guard isReady else {
                     return
@@ -78,6 +68,16 @@ class ContentTableViewController: TableViewController<ContentTableViewModel>, St
                     return self.makeSectionsCell(with: section, from: tableView, for: indexPath)
             }
         })
+
+        viewModel.outputs.section.asObservable()
+            .observeOn(MainScheduler.instance)
+            .bind { [unowned self] section in
+                guard let section = section else {
+                    return
+                }
+                self.title = section.title
+            }
+            .disposed(by: disposeBag)
 
         viewModel.outputs.section.asObservable()
             .flatMap({ section -> Observable<[AlgorithmSectionModel]> in

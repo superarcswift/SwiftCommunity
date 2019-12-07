@@ -11,6 +11,7 @@
 		F606251423801DBE00A03CA9 /* Promise+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6507770237CB4620076AE6B /* Promise+Extensions.swift */; };
 		F60ED7372376FBAD00E3E3B9 /* Continuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED7362376FBAD00E3E3B9 /* Continuation.swift */; };
 		F60ED740237713F700E3E3B9 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60ED73F237713F700E3E3B9 /* DispatchQueue+Extension.swift */; };
+		F61C4A5E23908C4A00939F72 /* Comparable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C4A5D23908C4A00939F72 /* Comparable+Extensions.swift */; };
 		F64238A522CD3BF4000F5CE3 /* ClassNameDerivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */; };
 		F6507750237C8B030076AE6B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650774D237C8B020076AE6B /* Endpoint.swift */; };
 		F6507751237C8B030076AE6B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650774E237C8B030076AE6B /* Configuration.swift */; };
@@ -41,6 +42,7 @@
 		F60337AE23801B4A00C3CFEC /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = ../../Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F60ED7362376FBAD00E3E3B9 /* Continuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continuation.swift; sourceTree = "<group>"; };
 		F60ED73F237713F700E3E3B9 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		F61C4A5D23908C4A00939F72 /* Comparable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable+Extensions.swift"; sourceTree = "<group>"; };
 		F64238A422CD3BF4000F5CE3 /* ClassNameDerivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameDerivable.swift; sourceTree = "<group>"; };
 		F650774D237C8B020076AE6B /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F650774E237C8B030076AE6B /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				F60ED73F237713F700E3E3B9 /* DispatchQueue+Extension.swift */,
 				F650775D237C90460076AE6B /* Dictionary+Extensions.swift */,
 				F6C41DF4237EDB6A009C3419 /* Date+Extensions.swift */,
+				F61C4A5D23908C4A00939F72 /* Comparable+Extensions.swift */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				F6507751237C8B030076AE6B /* Configuration.swift in Sources */,
 				F60ED740237713F700E3E3B9 /* DispatchQueue+Extension.swift in Sources */,
 				F6507752237C8B030076AE6B /* ConfigurationRegistry.swift in Sources */,
+				F61C4A5E23908C4A00939F72 /* Comparable+Extensions.swift in Sources */,
 				F6C41DF5237EDB6A009C3419 /* Date+Extensions.swift in Sources */,
 				F6CAFA8F22CC0B82007476D4 /* Registry.swift in Sources */,
 				F6CAFA8D22CC097C007476D4 /* NSObject+Extensions.swift in Sources */,
