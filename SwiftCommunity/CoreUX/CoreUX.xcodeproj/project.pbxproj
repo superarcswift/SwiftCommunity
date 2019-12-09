@@ -30,7 +30,6 @@
 		F6B5779D23204ABD0069E79F /* SuperArcCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5779C23204ABD0069E79F /* SuperArcCoreUI.framework */; };
 		F6D2D368238321640046A8D1 /* MarkdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2D367238321640046A8D1 /* MarkdownViewController.swift */; };
 		F6D2D36A238321940046A8D1 /* MarkdownView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D2D369238321940046A8D1 /* MarkdownView.framework */; };
-		F6D2D36B238321940046A8D1 /* MarkdownView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6D2D369238321940046A8D1 /* MarkdownView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6D2D36F238321EC0046A8D1 /* MarkdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2D36E238321EC0046A8D1 /* MarkdownViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,20 +42,6 @@
 			remoteInfo = CoreUI;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F6D2D36C238321940046A8D1 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F6D2D36B238321940046A8D1 /* MarkdownView.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F68204C5231F0C2500098C20 /* CoreUX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreUX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,7 +281,6 @@
 				F68204C2231F0C2500098C20 /* Frameworks */,
 				F68204C3231F0C2500098C20 /* Resources */,
 				F64C7FB22380278900ED0A30 /* Swiftlint */,
-				F6D2D36C238321940046A8D1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

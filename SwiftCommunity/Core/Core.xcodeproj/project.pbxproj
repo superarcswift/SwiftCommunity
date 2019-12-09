@@ -31,7 +31,6 @@
 		F6C8A156231EB3F000DD6BFD /* ConferencesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8A155231EB3F000DD6BFD /* ConferencesServiceProtocol.swift */; };
 		F6C8A167231EE81700DD6BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C8A166231EE81700DD6BFD /* Assets.xcassets */; };
 		F6D2D35B2382C70D0046A8D1 /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D2D35A2382C70D0046A8D1 /* XCoordinator.framework */; };
-		F6D2D35C2382C70D0046A8D1 /* XCoordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6D2D35A2382C70D0046A8D1 /* XCoordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6E2938323165BE000F759FF /* CoordinatedDIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E2938223165BE000F759FF /* CoordinatedDIViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,20 +43,6 @@
 			remoteInfo = SwiftVideos_Core;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F6D2D35D2382C70D0046A8D1 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F6D2D35C2382C70D0046A8D1 /* XCoordinator.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F61C4A3D238C8DC300939F72 /* ConferencesGitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencesGitService.swift; sourceTree = "<group>"; };
@@ -309,7 +294,6 @@
 				F669800623102E4200FCEC14 /* Frameworks */,
 				F669800723102E4200FCEC14 /* Resources */,
 				F604E3B0231719FD00BFFE6A /* SwiftLint */,
-				F6D2D35D2382C70D0046A8D1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
