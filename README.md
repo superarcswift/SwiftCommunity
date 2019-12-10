@@ -123,11 +123,10 @@ swift run --package-path Tools/Bootstrap/ Bootstrap .
 
 After this, you can open `SwiftCommunity.xcworkspace` and run the `SwiftCommunity` target to start the app.
 
-## Authors
+## Contributors
 
-The app is developed by [An Tran](https://twitter.com/peacemoon).
-
-The app icon is designed by [Khalid](https://github.com/ka95dev).
+- [An Tran](https://twitter.com/peacemoon)
+- [Khalid Almutlaq](https://github.com/ka95dev)
 
 ## Contributing
 
