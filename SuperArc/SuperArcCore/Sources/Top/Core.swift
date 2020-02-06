@@ -16,7 +16,6 @@ public class Core: HasApplicationContext {
     // MARK: Initialization
 
     public init(endpoint: Endpoint, configurations: AnyRegistry<Configuration>) {
-
         let serviceContext = ServiceContext(endpoint: endpoint, configurations: configurations)
         let engine = Engine(serviceContext: serviceContext)
         context = ApplicationContext(engine: engine)

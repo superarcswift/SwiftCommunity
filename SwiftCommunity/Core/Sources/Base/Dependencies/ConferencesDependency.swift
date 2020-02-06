@@ -3,4 +3,4 @@
 //
 
 /// Protocol defining all dependencies required by this component.
-public typealias ConferencesDependency = HasConferencesService & HasVideosService & HasAuthorsService
+public typealias ConferencesDependency = HasConferencesService & HasConferencesGitService & HasVideosService & HasAuthorsService

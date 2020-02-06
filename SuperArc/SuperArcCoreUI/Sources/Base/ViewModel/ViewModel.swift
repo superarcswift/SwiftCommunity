@@ -10,5 +10,11 @@ open class ViewModel: ViewModelProtocol {
 
     // MARK: Initialization
 
-    public init() {}
+    public init() {
+        setup()
+    }
+
+    open func setup() {
+        // Override if you want to setup this viewModel such as data bindings etc...
+    }
 }

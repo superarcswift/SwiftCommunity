@@ -13,8 +13,7 @@ import Action
 import RxCocoa
 import RxSwift
 
-protocol OpenConferencesViewModelInput {
-}
+protocol OpenConferencesViewModelInput {}
 
 protocol OpenConferencesViewModelOutput {
     var conferences: BehaviorRelay<[OpenConferenceSectionModel]> { get set }
