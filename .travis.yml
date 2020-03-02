@@ -10,7 +10,7 @@ cache:
 osx_image: xcode11
 
 install:
-  - npm install -g danger@7.1.4
+  - npm install -g danger@9.2.10
 
 script:
   - swift run danger-swift ci --dangerfile Dangerfile.swift --id swiftlint
