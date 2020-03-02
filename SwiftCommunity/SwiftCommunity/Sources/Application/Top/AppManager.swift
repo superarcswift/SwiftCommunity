@@ -37,7 +37,7 @@ class AppManager: HasConfigurations {
 
     // Private
 
-    lazy internal var navigator: Navigator = Navigator(context: core.context)
+    lazy internal var navigator = Navigator(context: core.context)
     lazy internal var configurations = AnyRegistry(ConfigurationsRegistry(endpoint: .current))
 
     // MARK: Intialization

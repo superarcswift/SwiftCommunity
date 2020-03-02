@@ -17,7 +17,7 @@ class FeatureBViewController: TableViewController<ViewModel>, StoryboardInitiabl
     // Private
 
     private lazy var componentsRouter: AnyComponentRouter<FeatureBComponentRoute> = {
-        return (storedComponentsRouter as! HasFeatureBComponentRouter).featureBRouter
+        return (navigator as! HasFeatureBComponentRouter).featureBRouter
     }()
 
     // MARK: Overriden

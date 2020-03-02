@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F615AC8A23F4094E004B8C59 /* DataModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F615AC8923F4094E004B8C59 /* DataModels.framework */; };
 		F61C4A40238CA0A600939F72 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C4A3F238CA0A600939F72 /* ContentViewModel.swift */; };
 		F63845022389B4C400060D2F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845012389B4C400060D2F /* Section.swift */; };
 		F63845062389B8DF00060D2F /* AlgorithmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63845052389B8DF00060D2F /* AlgorithmService.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F615AC8923F4094E004B8C59 /* DataModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61C4A3F238CA0A600939F72 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		F63845012389B4C400060D2F /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		F63845052389B8DF00060D2F /* AlgorithmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmService.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6CA7F82238A968700D07F2A /* RxSwift.framework in Frameworks */,
+				F615AC8A23F4094E004B8C59 /* DataModels.framework in Frameworks */,
 				F638451A2389F91200060D2F /* MarkdownView.framework in Frameworks */,
 				F6CA7F73238A965800D07F2A /* SuperArcFoundation.framework in Frameworks */,
 				F6CA7F80238A968700D07F2A /* RxRelay.framework in Frameworks */,
@@ -147,6 +150,7 @@
 		F638450E2389D3D200060D2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F615AC8923F4094E004B8C59 /* DataModels.framework */,
 				F6CA7F7B238A968700D07F2A /* RxCocoa.framework */,
 				F6CA7F7C238A968700D07F2A /* RxRelay.framework */,
 				F6CA7F7D238A968700D07F2A /* RxSwift.framework */,

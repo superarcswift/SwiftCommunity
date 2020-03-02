@@ -5,8 +5,10 @@
 import SuperArcCore
 import SuperArcFoundation
 
+/// Protocol responsible to identify a router.
 public protocol ComponentRouterIdentifiable: ClassNameDerivable {}
 
+/// Protocol responsible to trigger some routings.
 public protocol ComponentRouter: ComponentRouterIdentifiable {
     associatedtype ComponentRouteType: ComponentRoute
 

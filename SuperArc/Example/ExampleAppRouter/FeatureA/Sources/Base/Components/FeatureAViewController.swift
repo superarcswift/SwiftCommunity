@@ -17,7 +17,7 @@ class FeatureAViewController: ViewController<ViewModel>, ViewControllerRoutable,
     // Private
 
     lazy var componentsRouter: AnyComponentRouter<FeatureAComponentRoute> = {
-        guard let router = storedComponentsRouter as? HasFeatureAComponentRouter else {
+        guard let router = navigator as? HasFeatureAComponentRouter else {
             fatalError("invalid router type")
         }
 

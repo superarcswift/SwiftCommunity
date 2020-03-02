@@ -1,4 +1,0 @@
-framework module LXVimeoKit {
-  header "LXVimeoKit-Swift.h"
-  requires objc
-}

@@ -1,4 +1,0 @@
-framework module MarqueeLabel {
-  header "MarqueeLabel-Swift.h"
-  requires objc
-}
