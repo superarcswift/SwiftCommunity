@@ -31,7 +31,7 @@ class PresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let containerView = transitionContext.containerView
 
         // Assuming transition from `ConferencesCollectionViewController` to `ConferenceDetailViewController`.
-        guard let listViewController = transitionContext.viewController(forKey: .from) as? ConferencesCollectionViewController,
+        guard let _ = transitionContext.viewController(forKey: .from) as? ConferencesCollectionViewController,
               let detailViewController = transitionContext.viewController(forKey: .to) as? ConferenceDetailViewController,
               let detailView = detailViewController.view else {
             return

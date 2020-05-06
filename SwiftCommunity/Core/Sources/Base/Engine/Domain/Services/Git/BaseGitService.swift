@@ -7,7 +7,6 @@ import SuperArcFoundation
 import PromiseKit
 import ObjectiveGit
 import RxSwift
-import Foundation
 
 public protocol GitServiceProtocol {
 

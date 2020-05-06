@@ -11,7 +11,7 @@ class BaseGitServiceMock: GitServiceProtocol {
 
     var baseLocalRepositoryPath: String = ""
     var localRepository: GTRepository?
-    var didUpdate: PublishSubject<Void>
+    var didUpdate = PublishSubject<Void>()
 
     var openResult = true
     var cloneResult = Result.fulfilled(())
@@ -20,8 +20,7 @@ class BaseGitServiceMock: GitServiceProtocol {
 
     var isReset = false
 
-    init() {
-    }
+    init() {}
 
     func open() -> Bool {
         return openResult
