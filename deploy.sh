@@ -3,7 +3,7 @@
 directory=_site
 branch=gh-pages
 build_command() {
-  bundle exec jekyll build
+    bundle exec jekyll build
 }
 
 echo -e "\033[0;32mDeleting old content...\033[0m"
@@ -17,10 +17,11 @@ build_command
 
 echo -e "\033[0;32mDeploying $branch branch...\033[0m"
 cd $directory &&
-  git pull origin $branch
-  git add --all &&
-  git commit -m "Deploy updates" &&
-  git push origin $branch
+    echo "swiftcommunity.app" > CNAME &&
+    git pull origin $branch &&
+    git add --all &&
+    git commit -m "Deploy updates" &&
+    git push origin $branch
 
 echo -e "\033[0;32mCleaning up...\033[0m"
 git worktree remove $directory
