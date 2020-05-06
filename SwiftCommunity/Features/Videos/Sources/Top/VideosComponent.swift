@@ -101,7 +101,7 @@ public class VideosInterface: VideosInterfaceProtocol {
 
 public protocol VideosComponentRouterProtocol: ComponentRouter where ComponentRouteType == VideosComponentRoute {}
 
-extension VideosComponentRouterProtocol where ComponentRouteType == VideosComponentRoute {
+extension VideosComponentRouterProtocol {
 
     public var anyVideosRouter: AnyComponentRouter<VideosComponentRoute> {
         return AnyComponentRouter(self)

@@ -15,7 +15,6 @@
 		F6594AB7235365BB00F1F8EA /* AuthorsDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6820513231F120C00098C20 /* AuthorsDependency.swift */; };
 		F669801323102E4200FCEC14 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F669800923102E4200FCEC14 /* Core.framework */; };
 		F669801A23102E4200FCEC14 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F669800C23102E4200FCEC14 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F66980502310493300FCEC14 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66980272310493300FCEC14 /* ContentService.swift */; };
 		F66980522310493300FCEC14 /* ContentDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F669802A2310493300FCEC14 /* ContentDataProvider.swift */; };
 		F66980552310493300FCEC14 /* BaseGitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66980302310493300FCEC14 /* BaseGitService.swift */; };
 		F66980632310493300FCEC14 /* FilesystemContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F669804F2310493300FCEC14 /* FilesystemContentProvider.swift */; };
@@ -53,7 +52,6 @@
 		F669800D23102E4200FCEC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F669801223102E4200FCEC14 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F669801923102E4200FCEC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F66980272310493300FCEC14 /* ContentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
 		F669802A2310493300FCEC14 /* ContentDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentDataProvider.swift; sourceTree = "<group>"; };
 		F66980302310493300FCEC14 /* BaseGitService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGitService.swift; sourceTree = "<group>"; };
 		F669804F2310493300FCEC14 /* FilesystemContentProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesystemContentProvider.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 		F66980262310493300FCEC14 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F66980272310493300FCEC14 /* ContentService.swift */,
 				F669802A2310493300FCEC14 /* ContentDataProvider.swift */,
 				F6C8A155231EB3F000DD6BFD /* ConferencesServiceProtocol.swift */,
 				F6C8A142231EAFBC00DD6BFD /* VideosServiceProtocol.swift */,
@@ -415,7 +412,6 @@
 				F61C4A3E238C8DC300939F72 /* ConferencesGitService.swift in Sources */,
 				F6C8A154231EB39800DD6BFD /* AuthorsServiceProtocol.swift in Sources */,
 				F68F7255231B2C5C00D424CB /* FilePathProvider.swift in Sources */,
-				F66980502310493300FCEC14 /* ContentService.swift in Sources */,
 				F6C8A143231EAFBC00DD6BFD /* VideosServiceProtocol.swift in Sources */,
 				F6594AB7235365BB00F1F8EA /* AuthorsDependency.swift in Sources */,
 			);

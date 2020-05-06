@@ -6,7 +6,7 @@ import SuperArcCoreUI
 
 extension CommonViewControllerProtocol {
 
-    public var storedComponentsRouter: NavigatorProtocol {
+    public var navigator: NavigatorProtocol {
         return viewControllerContext.resolve(type: Navigator.self)
     }
 }

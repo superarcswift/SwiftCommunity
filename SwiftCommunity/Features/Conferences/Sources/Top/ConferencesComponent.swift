@@ -54,7 +54,7 @@ protocol ConferencesViewBuilder {
 
 public protocol ConferencesComponentRouterProtocol: ComponentRouter where ComponentRouteType == ConferencesComponentRoute {}
 
-extension ConferencesComponentRouterProtocol where ComponentRouteType == ConferencesComponentRoute {
+extension ConferencesComponentRouterProtocol {
 
     public var anyConferencesRouter: AnyComponentRouter<ConferencesComponentRoute> {
         return AnyComponentRouter(self)

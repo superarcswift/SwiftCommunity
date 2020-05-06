@@ -5,11 +5,13 @@
 import Core
 import ObjectiveGit
 import PromiseKit
+import RxSwift
 
 class BaseGitServiceMock: GitServiceProtocol {
 
     var baseLocalRepositoryPath: String = ""
     var localRepository: GTRepository?
+    var didUpdate: PublishSubject<Void>
 
     var openResult = true
     var cloneResult = Result.fulfilled(())

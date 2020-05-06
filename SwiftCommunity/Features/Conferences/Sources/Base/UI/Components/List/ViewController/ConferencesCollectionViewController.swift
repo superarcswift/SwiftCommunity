@@ -69,9 +69,11 @@ public class ConferencesCollectionViewController: ViewController<ConferencesColl
                 conferenceCell.conferenceView.viewModel = conferenceViewModel
             }.disposed(by: disposeBag)
 
-//        collectionView.rx.modelSelected(ConferenceViewModel.self)
-//            .bind(to: viewModel.inputs.didSelectConferenceTrigger)
-//            .disposed(by: disposeBag)
+        viewModel.didUpdate
+            .observeOn(MainScheduler.instance)
+            .bind { [unowned self] _ in
+                self.collectionView.reloadData()
+            }.disposed(by: disposeBag)
     }
 
     override public func loadData() {
@@ -135,51 +137,3 @@ extension ConferencesCollectionViewController: UICollectionViewDelegateFlowLayou
         return CGSize(width: cellWidth, height: 150)
     }
 }
-
-//extension ConferencesCollectionViewController: UIViewControllerTransitioningDelegate {
-//
-//    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//
-//        return FadePushAnimator()
-//        guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first,
-//              let selectedCell = collectionView.cellForItem(at: selectedIndexPath) as? ConferenceCollectionViewCell,
-//              let selectedCellSuperView = selectedCell.superview else {
-//            return nil
-//        }
-//
-//        // Freeze highlighted state (or else it will bounce back)
-//        selectedCell.freezeAnimations()
-//
-//        // Get current frame on screen
-//        let currentCellFrame = selectedCell.layer.presentation()!.frame
-//
-//        // Convert current frame to screen's coordinates
-//        let cardPresentationFrameOnScreen = selectedCellSuperView.convert(currentCellFrame, to: nil)
-//
-//        // Get card frame without transform in screen's coordinates  (for the dismissing back later to original location)
-//        let cardFrameWithoutTransform = { () -> CGRect in
-//            let center = selectedCell.center
-//            let size = selectedCell.bounds.size
-//            let r = CGRect(
-//                x: center.x - size.width / 2,
-//                y: center.y - size.height / 2,
-//                width: size.width,
-//                height: size.height
-//            )
-//            return selectedCellSuperView.convert(r, to: nil)
-//        }()
-//
-//        let params = CardTransition.Params(fromCardFrame: cardPresentationFrameOnScreen,
-//                                           fromCardFrameWithoutTransform: cardFrameWithoutTransform,
-//                                           fromCell: selectedCell)
-//        transition = CardTransition(params: params)
-//
-//        return nil
-//    }
-
-//    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        transition.presenting = false
-//        return transition
-//    }
-
-//}

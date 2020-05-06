@@ -54,6 +54,14 @@ public class Container<T> {
         return instance
     }
 
+    /// Deregister any instance registered to a specific type.
+    public func deregister<T>(_ type: T.Type) {
+        lock.lock()
+        let key = String(describing: type)
+        store[key] = nil
+        lock.unlock()
+    }
+
     /// Find and return an instance for a specific type.
     /// Throws an error when not found.
     public func resolve<T>(_ type: T.Type) throws -> T {

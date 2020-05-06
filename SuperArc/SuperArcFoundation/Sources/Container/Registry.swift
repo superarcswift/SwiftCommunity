@@ -28,6 +28,10 @@ extension Registry {
         }
     }
 
+    public func deregister<ElementType>(type: ElementType.Type) {
+        container.deregister(type)
+    }
+
     public func resolve<ElementType>(type: ElementType.Type) -> ElementType {
         do {
             return try container.resolve(type)

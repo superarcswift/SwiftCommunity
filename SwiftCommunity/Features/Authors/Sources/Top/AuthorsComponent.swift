@@ -81,7 +81,7 @@ public class AuthorsInterface: AuthorsInterfaceProtocol {
 
 public protocol AuthorsComponentRouterProtocol: ComponentRouter where ComponentRouteType == AuthorsComponentRoute {}
 
-extension AuthorsComponentRouterProtocol where ComponentRouteType == AuthorsComponentRoute {
+extension AuthorsComponentRouterProtocol {
 
     public var anyAuthorsRouter: AnyComponentRouter<AuthorsComponentRoute> {
         return AnyComponentRouter(self)

@@ -61,20 +61,31 @@ public class ConferencesCollectionViewModel: CoordinatedDIViewModel<ConferencesR
         self.router.rx.trigger(.conferenceDetail(conference.conferenceMetaData))
     }
 
+    private let disposeBag = DisposeBag()
+
     // Public
 
     lazy var didSelectConferenceTrigger: AnyObserver<ConferenceViewModel> = showConferenceAction.inputs
     var conferences = BehaviorRelay<[ConferenceViewModel]>(value: [])
+    var didUpdate = PublishSubject<Void>()
 
     var toggleEmptyState = PublishSubject<StandardStateViewContext?>()
     var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
+
+    // MARK: Initialization
+
+    public override func setup() {
+        dependency.conferencesGitService.didUpdate.bind(to: didUpdate).disposed(by: disposeBag)
+    }
 
     // MARK: APIs
 
     func loadData() {
         dependency.conferencesService.fetchList()
             .mapValues {
-                ConferenceViewModel(conferenceMetaData: $0, conferencesService: self.dependency.conferencesService)
+                ConferenceViewModel(
+                    conferenceMetaData: $0,
+                    conferencesService: self.dependency.conferencesService)
             }
             .done { [weak self] conferences in
                 self?.conferences.accept(conferences)

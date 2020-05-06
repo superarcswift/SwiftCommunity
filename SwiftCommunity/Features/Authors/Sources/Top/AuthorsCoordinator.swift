@@ -54,7 +54,6 @@ public class AuthorsCoordinator: NavigationCoordinator<AuthorsRoute> {
             return .dismissToRoot()
         }
     }
-
 }
 
 public enum AuthorsRoute: Route {

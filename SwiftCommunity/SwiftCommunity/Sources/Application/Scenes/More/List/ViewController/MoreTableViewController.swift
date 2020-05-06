@@ -21,6 +21,7 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
         case about
         case licenses
         case contact
+        case update
         case reset
 
         enum LicensesRows: Int {
@@ -45,6 +46,11 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
 
     override func setupBindings() {
         super.setupBindings()
+
+        viewModel.activity.active
+            .observeOn(MainScheduler.instance)
+            .bind(to: self.rx.activity)
+            .disposed(by: disposeBag)
 
         viewModel.notification
             .observeOn(MainScheduler.instance)
@@ -76,6 +82,8 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
                 }
             case .contact?:
                 UIApplication.shared.open(URL(string: "https://twitter.com/swift_community")!, completionHandler: nil)
+            case .update?:
+                confirmUpdate()
             case .reset?:
                 confirmReset()
             default:
@@ -99,4 +107,18 @@ class MoreTableViewController: TableViewController<MoreViewModel>, StoryboardIni
 
         present(alert, animated: true, completion: nil)
     }
+
+    func confirmUpdate() {
+        let alert = UIAlertController(title: "Confirmation", message: "Do you really want to update the local repository?", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Yes", style: .destructive) { [weak self] _ in
+            self?.viewModel.update()
+        }
+        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+
+        alert.addAction(confirmAction)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true, completion: nil)
+    }
+
 }

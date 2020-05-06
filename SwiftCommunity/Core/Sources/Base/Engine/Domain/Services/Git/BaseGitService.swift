@@ -6,6 +6,7 @@ import SuperArcCore
 import SuperArcFoundation
 import PromiseKit
 import ObjectiveGit
+import RxSwift
 import Foundation
 
 public protocol GitServiceProtocol {
@@ -13,16 +14,24 @@ public protocol GitServiceProtocol {
     var baseLocalRepositoryPath: String { get }
     var localRepository: GTRepository? { get set }
 
+    var didUpdate: PublishSubject<Void> { get }
+
     func open() -> Bool
 
     /// Clone the content repository to disk.
     /// - Returns: Promise<Void>
     func clone(progressHandler: @escaping (Float, Bool) -> Void) -> Promise<Void>
 
+    /// Update the content of a local repository from the remote.
+    /// - Returns: Promise<Void>
     func update() -> Promise<Void>
 
+    /// Delete the local repository.
+    /// - Returns: Promise<Bool>
     func reset() -> Promise<Bool>
 
+    /// Return URL to a local file inside the local repository.
+    /// - Returns: URL?
     func localURL(for filePath: String) -> URL?
 }
 
@@ -42,6 +51,8 @@ open class BaseGitService: Service, GitServiceProtocol {
     public var context: ServiceContext
 
     public var localRepository: GTRepository?
+
+    public var didUpdate = PublishSubject<Void>()
 
     // Private
 
@@ -94,6 +105,9 @@ open class BaseGitService: Service, GitServiceProtocol {
                         let progress = Float(progress.pointee.received_objects)/Float(progress.pointee.total_objects)
                         progressHandler(progress, isFinished.pointee.boolValue)
                     })
+
+                    self.didUpdate.onNext(())
+
                     DispatchQueue.main.async {
                         resolver.fulfill(())
                     }
@@ -120,6 +134,9 @@ open class BaseGitService: Service, GitServiceProtocol {
                     let branch = try localRepository.currentBranch()
                     let remoteRepository = try GTRemote(name: "origin", in: localRepository)
                     try localRepository.pull(branch, from: remoteRepository, withOptions: nil, progress: nil)
+
+                    self.didUpdate.onNext(())
+
                     DispatchQueue.main.async {
                         resolver.fulfill(())
                     }
@@ -143,6 +160,9 @@ open class BaseGitService: Service, GitServiceProtocol {
             queue.async {
                 do {
                     try self.fileManager.removeItem(atPath: self.baseLocalPath)
+
+                    self.didUpdate.onNext(())
+
                     DispatchQueue.main.async {
                         resolver.fulfill(true)
                     }

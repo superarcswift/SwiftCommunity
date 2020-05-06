@@ -4,7 +4,6 @@
 
 import Core
 import DataModels
-import SuperArcCoreUI
 import SuperArcCore
 
 struct ConferenceViewModel {

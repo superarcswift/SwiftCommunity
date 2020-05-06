@@ -13,13 +13,13 @@ import Action
 import RxSwift
 import RxCocoa
 
-protocol MoreViewModelInput {
-}
+protocol MoreViewModelInput {}
 
-protocol MoreViewModelOutput {
-}
+protocol MoreViewModelOutput {}
 
 protocol MoreViewModelApi {
+    func update()
+    func reset()
 }
 
 protocol MoreViewModelType {
@@ -52,11 +52,10 @@ class MoreViewModel: CoordinatedDIViewModel<MoreRoute, MoreDependency>, MoreView
     var toogleStateView = PublishSubject<StandardStateViewContext?>()
     var notification = PublishSubject<SuperArcNotificationBanner.Notification?>()
 
-    // Private
-
     // MARK: APIs
 
     func reset() {
+        activity.start()
         dependency.conferencesGitService.reset()
             .done { [weak self] isSuccessful in
                 guard isSuccessful else {
@@ -66,9 +65,22 @@ class MoreViewModel: CoordinatedDIViewModel<MoreRoute, MoreDependency>, MoreView
                 self?.router.trigger(.reset)
             }.catch { [weak self] error in
                 self?.notification.onNext(StandardNotification(error: error))
+            }.finally { [weak self] in
+                self?.activity.stop()
             }
 
     }
 
-    // MARK: Private helpers
+    func update() {
+        activity.start()
+        dependency.conferencesGitService.update()
+            .done { [weak self] _ in
+                self?.notification.onNext(StandardNotification(message: "Git repository is updated sucessfully", style: .success))
+            }.catch { [weak self] error in
+                self?.notification.onNext(StandardNotification(error: error))
+            }.finally { [weak self] in
+                self?.activity.stop()
+            }
+
+    }
 }
