@@ -5,7 +5,7 @@
 import SuperArcCoreComponent
 import XCoordinator
 
-// Wrapper to abstract XCoordinator's specific implementation.
+/// Wrapper to abstract XCoordinator's specific implementation.
 public struct ComponentPresentableWrapper: ComponentPresentable {
 
     // MARK: Properties
