@@ -138,7 +138,7 @@ The goal for a stable version in the future is to have separated repositories fo
 ### Getting started
 - Please make sure that you have [Carthage](https://github.com/Carthage/Carthage) installed.
 - Fork the repository.
-- From the root workspace folder, run  `swift run --package-path Tools/Bootstrap/ Bootstrap .`  to install all dependencies.
+- From the root workspace folder, run  `carthage update --no-use-binaries --platform iOS --cache-builds`  to install all dependencies.
 - Open the workspace in Xcode and you are good to go.
 - Change code in any components you think it should be implemented differently.
 - Commit the code changes to a separated branch in your cloned repository.

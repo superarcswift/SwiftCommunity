@@ -22,7 +22,7 @@ jobs:
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          carthage update --platform iOS --cache-builds && exit ${PIPESTATUS[0]}
+          carthage update  --no-use-binaries --platform iOS --cache-builds && exit ${PIPESTATUS[0]}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_ACTION_TOKEN }}
 
